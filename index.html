@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inflation Nowcasts – EXAMPLE DATA</title>
+<meta name="color-scheme" content="light dark">
+<style>
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f9fafc; --border:#e2e7ee; --border-strong:#cfd7e2;
+  --text:#0f1c30; --text-2:#56657c; --text-3:#8391a6; --grid:#e8ecf2;
+  --navy:#14305a; --navy-ink:#ffffff; --accent:#2f5d9e;
+  --green:#2e8b5a; --green-bg:#e7f4ec; --red:#c4514c; --red-bg:#fbebea; --amber:#a9741a; --amber-bg:#fdf2d9; --neutral-bg:#eef1f5;
+  --c-actual:#14305a; --c-nowcast:#3d85c6; --c-cons:#94a3b8;
+  --s-cpi:#1f4e8c; --s-pce:#2a9d8f; --s-ppi:#c08a2e;
+  --shadow:0 1px 2px rgba(15,28,48,.04);
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#0a111e; --surface:#111a2b; --surface-2:#0e1626; --border:#223149; --border-strong:#2f4262;
+  --text:#e5ebf4; --text-2:#9aabc3; --text-3:#6f819b; --grid:#1d2a40;
+  --navy:#3d6cb3; --navy-ink:#ffffff; --accent:#7ba5e6;
+  --green:#4cc08a; --green-bg:#12301f; --red:#ec7b76; --red-bg:#3a1a1a; --amber:#e3b25a; --amber-bg:#33280f; --neutral-bg:#18233a;
+  --c-actual:#dbe6f6; --c-nowcast:#5fb0f2; --c-cons:#7d8da6;
+  --s-cpi:#6f9fe6; --s-pce:#4fc4b4; --s-ppi:#e0aa52;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1360px;margin:0 auto;padding:0 28px}
+/* Header */
+header.top{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--border)}
+.top-inner{display:flex;align-items:center;gap:20px;padding:14px 28px;max-width:1360px;margin:0 auto;flex-wrap:wrap}
+.brand{flex:1 1 260px;min-width:220px}
+.brand h1{margin:0;font-size:22px;font-weight:650;letter-spacing:-.01em;color:var(--text)}
+.brand .sub{color:var(--text-2);font-size:12.5px;margin-top:2px}
+.meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:var(--text-2);font-size:12.5px}
+.meta .lbl{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)}
+.meta .val{color:var(--text);font-weight:550}
+.fresh{display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--text-3);flex:none;box-shadow:0 0 0 3px rgba(128,140,160,.18)}
+.dot.green{background:var(--green);box-shadow:0 0 0 3px rgba(46,139,90,.18)}
+.dot.amber{background:#d9a21b;box-shadow:0 0 0 3px rgba(217,162,27,.2)}
+.dot.red{background:var(--red);box-shadow:0 0 0 3px rgba(196,81,76,.2)}
+.actions{display:flex;align-items:center;gap:10px}
+button{font:inherit;cursor:pointer}
+.btn-primary{background:var(--navy);color:var(--navy-ink);border:1px solid transparent;border-radius:8px;padding:10px 18px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:9px;transition:filter .15s}
+.btn-primary:hover{filter:brightness(1.12)}
+.btn-primary:disabled{opacity:.75;cursor:progress}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border-strong);border-radius:8px;padding:9px 12px;font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.btn-ghost:hover{background:var(--neutral-bg)}
+.spinner{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .7s linear infinite;display:none}
+.loading .spinner{display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* Banner */
+.banner{background:var(--amber-bg);border-bottom:1px solid var(--amber);color:var(--amber);font-weight:700;letter-spacing:.04em;text-align:center;padding:9px 16px;font-size:13px}
+.banner small{font-weight:500;letter-spacing:0;margin-left:8px;opacity:.9}
+/* Layout */
+main{padding:32px 0 20px}
+section{margin-bottom:44px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{margin:0;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-2);font-weight:650}
+.sec-head .hint{color:var(--text-3);font-size:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:20px}
+.card h3{margin:0;font-size:15px;font-weight:620}
+.card .sub{color:var(--text-2);font-size:12px}
+/* Overview cards */
+.ov-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px}
+.ov-title{display:flex;flex-direction:column}
+.ov-title b{font-size:18px;letter-spacing:-.01em}
+.ov-title span{font-size:12px;color:var(--text-2)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:650;padding:3px 9px;border-radius:999px;border:1px solid var(--border-strong);color:var(--text-2);background:var(--neutral-bg);white-space:nowrap}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--text-3)}
+.badge.YELLOW{color:var(--amber);background:var(--amber-bg);border-color:transparent}.badge.YELLOW::before{background:#d9a21b}
+.badge.GREEN{color:var(--green);background:var(--green-bg);border-color:transparent}.badge.GREEN::before{background:var(--green)}
+.badge.RED{color:var(--red);background:var(--red-bg);border-color:transparent}.badge.RED::before{background:var(--red)}
+.ov-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;border-top:1px solid var(--border);padding-top:14px}
+.ov-col .k{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px}
+.ov-col .big{font-size:30px;font-weight:650;letter-spacing:-.02em;line-height:1.1}
+.ov-col .big small{font-size:13px;font-weight:500;color:var(--text-2);margin-left:3px;letter-spacing:0}
+.ov-col .yy{color:var(--text-2);font-size:13px;margin-top:2px}
+.ov-col .yy b{color:var(--text);font-weight:600}
+.chip{white-space:nowrap;display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:6px;background:var(--neutral-bg);color:var(--text-2)}
+.chip.below{background:var(--green-bg);color:var(--green)}
+.chip.above{background:var(--red-bg);color:var(--red)}
+.spark-wrap{border-top:1px solid var(--border);margin-top:16px;padding-top:10px}
+.spark-wrap .cap{display:flex;justify-content:space-between;font-size:11px;color:var(--text-3);margin-bottom:2px}
+.spark{position:relative;height:52px}
+.pulse{margin-top:16px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:8px;padding:11px 16px;font-size:13px;color:var(--text)}
+.pulse b{font-weight:650}
+.legend-note{font-size:11.5px;color:var(--text-3);margin-top:8px}
+.sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin:0 4px 0 8px;vertical-align:-1px}
+.sw.g{background:var(--green)}.sw.r{background:var(--red)}
+/* Controls */
+.seg{display:inline-flex;border:1px solid var(--border-strong);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{background:transparent;border:0;padding:6px 13px;font-size:12.5px;color:var(--text-2);font-weight:550;border-right:1px solid var(--border)}
+.seg button:last-child{border-right:0}
+.seg button:hover{background:var(--neutral-bg)}
+.seg button.active{background:var(--navy);color:var(--navy-ink)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.chart-box{position:relative;height:360px}
+.chart-box.sm{height:300px}
+.chart-box.xs{height:360px}
+.bt-grid{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:22px}
+.perf{border-left:1px solid var(--border);padding-left:22px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.perf .t{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3)}
+.perf .row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed var(--border);padding-bottom:8px}
+.perf .row span{color:var(--text-2);font-size:12.5px}
+.perf .row b{font-size:19px;font-weight:650}
+.perf .row em{font-style:normal;font-size:11px;color:var(--text-3);margin-left:4px;font-weight:500}
+.perf .ref{font-size:11.5px;color:var(--text-3);line-height:1.5}
+.tag{font-size:10px;font-weight:700;color:var(--text-3);border:1px solid var(--border-strong);border-radius:4px;padding:0 4px;margin-left:6px;vertical-align:1px}
+.cap-line{font-size:11.5px;color:var(--text-3);margin-top:8px}
+/* Explanations */
+.expl h3{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-2);margin-bottom:8px}
+.expl p{margin:0;color:var(--text);font-size:13.5px;line-height:1.6}
+/* Tables */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);font-weight:650;text-align:right;padding:8px 12px;border-bottom:1px solid var(--border-strong);white-space:nowrap}
+td{padding:11px 12px;border-bottom:1px solid var(--border);text-align:right;white-space:nowrap}
+th:first-child,td:first-child,th.l,td.l{text-align:left}
+tbody tr:last-child td{border-bottom:0}
+tr.top-move td{font-weight:650;background:var(--surface-2)}
+tr.group td{background:var(--surface-2);font-weight:650;color:var(--text-2);font-size:11px;letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:7px 12px}
+tfoot td{border-top:1px solid var(--border-strong);font-weight:650}
+.pos{color:var(--red)}.neg{color:var(--green)}.flat{color:var(--text-2)}
+.dir{font-size:12px;font-weight:600}
+.divbar{position:relative;width:150px;height:14px;margin-left:auto;background:linear-gradient(var(--border),var(--border)) center/1px 100% no-repeat}
+.divbar i{position:absolute;top:2px;height:10px;border-radius:2px}
+.divbar i.p{left:50%;background:var(--red)}
+.divbar i.n{right:50%;background:var(--green)}
+.cons-sum{margin-top:14px}
+/* Footer */
+footer{margin:10px 0 48px}
+.caveat{border:1px solid var(--amber);background:var(--amber-bg);border-radius:12px;padding:18px 22px;color:var(--text)}
+.caveat h2{margin:0 0 8px;font-size:15px;color:var(--amber);letter-spacing:.01em}
+.caveat ul{margin:0;padding-left:18px;font-size:13px;line-height:1.65}
+.caveat .fine{margin-top:10px;font-size:11.5px;color:var(--text-2)}
+.notice{color:var(--text-2);font-size:13px;display:flex;align-items:center;justify-content:center;height:100%;text-align:center;padding:10px}
+/* Responsive */
+@media (max-width:1100px){
+  .grid3{grid-template-columns:minmax(0,1fr)}
+  .bt-grid{grid-template-columns:1fr}
+  .perf{border-left:0;border-top:1px solid var(--border);padding:16px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .perf .t,.perf .ref{grid-column:1/-1}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 14px}
+  .top-inner{padding:12px 14px;gap:12px}
+  .brand h1{font-size:19px}
+  .meta{gap:14px;width:100%}
+  .actions{width:100%}.actions .btn-primary{flex:1;justify-content:center}
+  main{padding-top:22px}
+  .card{padding:16px}
+  .chart-box{height:280px}.chart-box.sm{height:280px}.chart-box.xs{height:370px}
+  .chip{white-space:normal;line-height:1.3}
+  .bt-grid{grid-template-columns:minmax(0,1fr)}
+  .ov-col .big{font-size:26px}
+  .perf{grid-template-columns:1fr}
+  .seg button{padding:6px 10px}
+  .controls{width:100%}
+  .banner small{display:block;margin:2px 0 0}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <h1 id="hdrTitle">Inflation Nowcasts</h1>
+      <div class="sub" id="hdrSub">US CPI · PCE · PPI</div>
+    </div>
+    <div class="meta">
+      <div><span class="lbl">Last update</span><span class="val" id="lastUpdate">–</span></div>
+      <div class="fresh"><i class="dot" id="freshDot"></i><div><span class="lbl">Data freshness</span><span class="val" id="freshText">–</span></div></div>
+    </div>
+    <div class="actions">
+      <button class="btn-ghost" id="themeBtn" type="button" aria-label="Toggle dark mode">◐ <span id="themeLbl">Dark</span></button>
+      <button class="btn-primary" id="refreshBtn" type="button"><span class="spinner" aria-hidden="true"></span><span id="refreshLbl">Refresh Nowcasts</span></button>
+    </div>
+  </div>
+</header>
+<div class="banner" id="banner" role="alert"></div>
+
+<main class="wrap" id="app">
+  <!-- 1. Overview -->
+  <section id="overview">
+    <div class="sec-head"><h2>1 · Overview</h2><span class="hint" id="ovHint"></span></div>
+    <div class="grid3" id="ovCards"></div>
+    <div class="pulse" id="pulse"></div>
+    <div class="legend-note">Signal vs consensus (m/m): <span class="sw g"></span>nowcast below consensus <span class="sw r"></span>nowcast above consensus</div>
+  </section>
+
+  <!-- 2. Charts -->
+  <section id="charts">
+    <div class="sec-head"><h2>2 · Charts</h2><span class="hint">All series are placeholders</span></div>
+
+    <div class="card" style="margin-bottom:18px">
+      <div class="panel-head">
+        <div><h3>Nowcast vs actuals (backtest)</h3><div class="sub" id="btSub">Last 30 months · official prints vs our nowcast</div></div>
+        <div class="controls">
+          <div class="seg" data-state="btSeries"><button data-val="CPI" class="active">CPI</button><button data-val="PCE">PCE</button><button data-val="PPI">PPI</button></div>
+          <div class="seg" data-state="btMeasure"><button data-val="headline" class="active">Headline</button><button data-val="core">Core</button></div>
+          <div class="seg" data-state="btUnit"><button data-val="mm" class="active">m/m</button><button data-val="yy">y/y</button></div>
+        </div>
+      </div>
+      <div class="bt-grid">
+        <div class="chart-box"><canvas id="btChart" role="img" aria-label="Backtest line chart: official prints versus nowcast"></canvas></div>
+        <div class="perf" id="perf"></div>
+      </div>
+      <div class="cap-line">Solid line = official print (placeholder) · dashed line = our nowcast · consensus line hidden by default (click legend to show).</div>
+    </div>
+
+    <div class="sec-head" style="margin-top:26px"><h2 style="text-transform:none;letter-spacing:0;font-size:14px;color:var(--text)">Contribution to current headline nowcast (pp, m/m)</h2><span class="hint"><span class="sw r" style="margin-left:0"></span>adds to inflation <span class="sw g"></span>subtracts · top 8 by absolute contribution</span></div>
+    <div class="grid3" style="margin-bottom:18px" id="contribGrid">
+      <div class="card"><div class="panel-head" style="margin-bottom:8px"><div><h3>CPI</h3><div class="sub">Headline m/m nowcast build</div></div></div><div class="chart-box xs"><canvas id="ctChart_CPI" role="img" aria-label="CPI contributions"></canvas></div></div>
+      <div class="card"><div class="panel-head" style="margin-bottom:8px"><div><h3>PCE</h3><div class="sub">Headline m/m nowcast build</div></div></div><div class="chart-box xs"><canvas id="ctChart_PCE" role="img" aria-label="PCE contributions"></canvas></div></div>
+      <div class="card"><div class="panel-head" style="margin-bottom:8px"><div><h3>PPI</h3><div class="sub">Final demand m/m nowcast build</div></div></div><div class="chart-box xs"><canvas id="ctChart_PPI" role="img" aria-label="PPI contributions"></canvas></div></div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <div class="panel-head">
+          <div><h3>Nowcast evolution</h3><div class="sub" id="evoSub">Current-month nowcast, last ~6 weeks</div></div>
+          <div class="seg" data-state="evoMeasure"><button data-val="headline" class="active">Headline</button><button data-val="core">Core</button></div>
+        </div>
+        <div class="chart-box sm"><canvas id="evoChart" role="img" aria-label="Nowcast evolution multi-line chart"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="panel-head">
+          <div><h3>Consensus comparison</h3><div class="sub">Our nowcast vs consensus, upcoming release (illustrative consensus)</div></div>
+          <div class="seg" data-state="consUnit"><button data-val="mm" class="active">m/m</button><button data-val="yy">y/y</button></div>
+        </div>
+        <div class="chart-box sm"><canvas id="consChartA" role="img" aria-label="Grouped bar chart nowcast versus consensus"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Explanations -->
+  <section id="explain">
+    <div class="sec-head"><h2>3 · Short explanations</h2><span class="hint">Placeholder wording</span></div>
+    <div class="grid3" id="explGrid"></div>
+  </section>
+
+  <!-- 4. Contributors -->
+  <section id="contributors">
+    <div class="sec-head"><h2>4 · Largest input contributors</h2>
+      <div class="seg" data-state="tblSeries"><button data-val="CPI" class="active">CPI</button><button data-val="PCE">PCE</button><button data-val="PPI">PPI</button></div>
+    </div>
+    <div class="card"><div class="tbl-wrap" id="contribTbl"></div></div>
+  </section>
+
+  <!-- 5. Consensus -->
+  <section id="consensus">
+    <div class="sec-head"><h2>5 · Consensus view</h2><span class="hint">Consensus is illustrative · bias/hit-rate derived (d) from the placeholder backtest</span></div>
+    <div class="card"><div class="tbl-wrap" id="consTbl"></div></div>
+    <div class="card" style="margin-top:18px">
+      <div class="panel-head">
+        <div><h3>Consensus comparison</h3><div class="sub">Same chart as in section 2</div></div>
+        <div class="seg" data-state="consUnit"><button data-val="mm" class="active">m/m</button><button data-val="yy">y/y</button></div>
+      </div>
+      <div class="chart-box sm"><canvas id="consChartB" role="img" aria-label="Grouped bar chart nowcast versus consensus (section 5)"></canvas></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="caveat" id="caveat">
+      <h2>Datenlage und Quellen – Vorbehalte</h2>
+      <ul>
+        <li><b>All figures are placeholders</b> (label U = unverified): nowcasts, backtest actuals, contributors, weights and timestamps are generated example values, not real prints.</li>
+        <li><b>Consensus is illustrative</b> – not taken from any survey or vendor.</li>
+        <li><b>No live feed connected.</b> The page runs on an inline data object; an optional <code>./nowcast_data.json</code> is loaded only when served over http(s).</li>
+        <li><b>Real wiring pending:</b> US CPI nowcast status YELLOW per Auditor; PCE and PPI nowcasts not yet audited.</li>
+        <li>Figures marked (d) – MAE, bias, hit rate, differences, pulse line – are derived in the browser from the placeholder data.</li>
+      </ul>
+      <div class="fine" id="srcLine"></div>
+    </div>
+  </footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" integrity="sha384-9nhczxUqK87bcKHh20fSQcTGD4qq5GhayNYSYWqwBkINBhOfQLg/P5HG5lF1urn4" crossorigin="anonymous"></script>
+<script>
+/* ==========================================================================
+ * NOWCAST_DATA – single source for ALL numbers on the page.   *** PLACEHOLDER ***
+ *
+ * SCHEMA (replace this object, or drop a file ./nowcast_data.json with the same
+ * shape next to index.html; the JSON is used when the page is served via http/https):
+ *
+ * meta: {
+ *   title, banner, isPlaceholder (bool; banner shown unless false),
+ *   asOf (ISO-8601 with offset), asOfNote, targetMonth ("Oct 2026"),
+ *   freshness:{greenMaxHours, amberMaxHours}   // dot colour by data age
+ *   hitTolerancePP (0.1), source (free text for footer)
+ * }
+ * explanations: { measures, headlineVsCore, narrative }          // 1-2 sentences each
+ * evolution: { dates:["YYYY-MM-DD",...], note }                  // shared x-axis for evolution chart
+ * series: {  CPI | PCE | PPI : {
+ *   label, fullName, coreLabel,
+ *   status:{ flag:"GREEN"|"YELLOW"|"RED"|"UNAUDITED", label, note },
+ *   release:{ reference, dateLabel },
+ *   nowcast:   { headline:{mm,yy}, core:{mm,yy} },               // % (m/m, y/y)
+ *   consensus: { headline:{mm,yy}, core:{mm,yy} },
+ *   evolution: { headline:[m/m per evolution.dates], core:[...] },// last value = current nowcast
+ *   backtest:  { months:["YYYY-MM",...],                          // 24-36 months
+ *       headline:{ actual:{mm:[],yy:[]}, nowcast:{mm:[],yy:[]}, consensus:{mm:[],yy:[]} },
+ *       core:    { same } },
+ *   contributors:[ { name, weight (% of index), mm (component m/m %), contrib (pp to headline m/m;
+ *                    optional – defaults to weight*mm/100) } ]
+ * } }
+ * MAE / bias / hit-rate are NOT stored: they are computed in JS from backtest arrays.
+ * ========================================================================== */
+const NOWCAST_DATA = {
+  "meta": {
+    "title": "Inflation Nowcasts",
+    "isPlaceholder": true,
+    "banner": "EXAMPLE DATA – not real nowcasts, prints or consensus",
+    "asOf": "2026-11-11T06:30:00+01:00",
+    "asOfNote": "placeholder timestamp",
+    "targetMonth": "Oct 2026",
+    "freshness": {
+      "greenMaxHours": 6,
+      "amberMaxHours": 24
+    },
+    "hitTolerancePP": 0.1,
+    "source": "inline placeholder (no live feed connected)"
+  },
+  "explanations": {
+    "measures": "Each nowcast is a model estimate of the next official monthly price-index change (m/m) and the implied year-on-year rate, built from component-level inputs before the statistical agency publishes. Placeholder wording.",
+    "headlineVsCore": "Headline covers all items, including volatile food and energy; core excludes them and is the cleaner read on underlying trend. For PPI, core is final demand ex food and energy.",
+    "narrative": "Illustrative narrative only: shelter and services keep core near 0.3% m/m while energy and used cars pull headline lower. Replace with the live desk view once the feed is wired."
+  },
+  "evolution": {
+    "dates": ["2026-09-30", "2026-10-05", "2026-10-08", "2026-10-13", "2026-10-16", "2026-10-21", "2026-10-26", "2026-10-29", "2026-11-03", "2026-11-06", "2026-11-09", "2026-11-11"],
+    "note": "Nowcast of the current reference month (m/m, %) as inputs arrived. Placeholder path."
+  },
+  "series": {
+    "CPI": {
+      "label": "CPI",
+      "fullName": "US CPI-U (all items)",
+      "coreLabel": "Core CPI (ex food & energy)",
+      "status": {
+        "flag": "YELLOW",
+        "label": "Auditor: YELLOW",
+        "note": "US CPI nowcast status YELLOW per Auditor"
+      },
+      "release": {
+        "reference": "Oct 2026",
+        "dateLabel": "release date: placeholder (not a real calendar)"
+      },
+      "nowcast": {
+        "headline": {
+          "mm": 0.28,
+          "yy": 2.6
+        },
+        "core": {
+          "mm": 0.31,
+          "yy": 3.1
+        }
+      },
+      "consensus": {
+        "headline": {
+          "mm": 0.3,
+          "yy": 2.6
+        },
+        "core": {
+          "mm": 0.3,
+          "yy": 3
+        }
+      },
+      "evolution": {
+        "headline": [0.44, 0.46, 0.41, 0.41, 0.38, 0.31, 0.34, 0.32, 0.36, 0.32, 0.24, 0.28],
+        "core": [0.18, 0.17, 0.24, 0.24, 0.24, 0.28, 0.31, 0.29, 0.29, 0.28, 0.24, 0.31]
+      },
+      "backtest": {
+        "months": ["2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"],
+        "headline": {
+          "actual": {
+            "mm": [0.3, 0.3, 0.2, 0.4, 0.4, 0.4, 0.2, 0.2, 0.3, 0.3, 0.4, 0.4, 0.1, 0.1, 0.3, 0.3, 0.1, 0.2, 0.1, 0.2, 0.2, 0.1, 0.3, 0.3, 0.1, 0.1, 0.3, 0.2, 0.3, 0.2],
+            "yy": [2.3, 2.5, 2.6, 3, 3.4, 3.5, 3.5, 3.3, 3.5, 3.6, 3.7, 3.9, 3.7, 3.5, 3.6, 3.5, 3.1, 2.9, 2.8, 2.8, 2.7, 2.5, 2.4, 2.3, 2.3, 2.3, 2.3, 2.2, 2.4, 2.4]
+          },
+          "nowcast": {
+            "mm": [0.21, 0.22, 0.16, 0.35, 0.35, 0.32, 0.23, 0.19, 0.27, 0.25, 0.38, 0.43, 0.15, 0.08, 0.23, 0.42, 0.13, 0.27, 0.02, 0.19, 0.16, 0.1, 0.28, 0.44, 0.15, 0.1, 0.3, 0.27, 0.26, 0.21],
+            "yy": [2.23, 2.45, 2.59, 2.99, 3.3, 3.37, 3.48, 3.34, 3.42, 3.51, 3.64, 3.9, 3.71, 3.43, 3.49, 3.57, 3.17, 3.01, 2.76, 2.83, 2.69, 2.53, 2.41, 2.46, 2.37, 2.32, 2.32, 2.29, 2.39, 2.44]
+          },
+          "consensus": {
+            "mm": [0.5, 0.4, 0.3, 0.4, 0.3, 0.5, 0.1, 0.2, 0.3, 0.3, 0.2, 0.4, 0.2, 0.2, 0.4, 0.3, 0.1, 0.1, 0.3, 0.2, 0.1, 0.1, 0.2, 0.4, 0, 0.1, 0.4, 0.2, 0.3, 0.2],
+            "yy": [2.5, 2.6, 2.7, 3, 3.3, 3.6, 3.4, 3.3, 3.5, 3.6, 3.5, 3.9, 3.8, 3.6, 3.7, 3.5, 3.1, 2.8, 3, 2.8, 2.6, 2.5, 2.3, 2.4, 2.2, 2.3, 2.4, 2.2, 2.4, 2.4]
+          }
+        },
+        "core": {
+          "actual": {
+            "mm": [0.3, 0.3, 0.2, 0.3, 0.2, 0.2, 0.2, 0.2, 0.3, 0.1, 0.3, 0.2, 0.1, 0.2, 0.2, 0.2, 0.2, 0.2, 0.1, 0.1, 0.2, 0.1, 0.3, 0.2, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3],
+            "yy": [3.2, 3.2, 3.1, 3.2, 3.2, 3, 3, 3, 3, 2.8, 2.8, 2.8, 2.6, 2.5, 2.5, 2.4, 2.4, 2.4, 2.3, 2.2, 2.1, 2.1, 2.1, 2.1, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8]
+          },
+          "nowcast": {
+            "mm": [0.28, 0.32, 0.22, 0.31, 0.13, 0.21, 0.22, 0.18, 0.26, 0.02, 0.34, 0.22, 0.14, 0.28, 0.18, 0.3, 0.2, 0.15, 0.01, 0.08, 0.27, 0.07, 0.25, 0.19, 0.32, 0.35, 0.24, 0.27, 0.25, 0.29],
+            "yy": [3.23, 3.27, 3.16, 3.26, 3.18, 3.05, 3.06, 3.02, 3, 2.76, 2.88, 2.86, 2.67, 2.61, 2.51, 2.53, 2.43, 2.38, 2.23, 2.2, 2.19, 2.09, 2.07, 2.11, 2.34, 2.48, 2.47, 2.6, 2.68, 2.83]
+          },
+          "consensus": {
+            "mm": [0.2, 0.3, 0.1, 0.3, 0.2, 0.3, 0.1, 0.1, 0.3, 0, 0.4, 0.2, 0.2, 0.3, 0.1, 0.2, 0.3, 0.3, 0.1, 0.1, 0.2, 0, 0.3, 0.2, 0.3, 0.2, 0.2, 0.3, 0.2, 0.3],
+            "yy": [3.1, 3.2, 3, 3.2, 3.2, 3.1, 2.9, 2.9, 3, 2.7, 2.9, 2.8, 2.7, 2.6, 2.4, 2.4, 2.5, 2.5, 2.3, 2.2, 2.1, 2, 2.1, 2.1, 2.3, 2.3, 2.4, 2.6, 2.6, 2.8]
+          }
+        }
+      },
+      "contributors": [
+        {
+          "name": "Shelter",
+          "weight": 35.5,
+          "mm": 0.36,
+          "contrib": 0.13
+        },
+        {
+          "name": "Energy",
+          "weight": 6.4,
+          "mm": -0.2,
+          "contrib": -0.01
+        },
+        {
+          "name": "Food",
+          "weight": 13.6,
+          "mm": 0.3,
+          "contrib": 0.04
+        },
+        {
+          "name": "Used cars & trucks",
+          "weight": 2,
+          "mm": -0.5,
+          "contrib": -0.01
+        },
+        {
+          "name": "New vehicles",
+          "weight": 4.3,
+          "mm": 0.1,
+          "contrib": 0
+        },
+        {
+          "name": "Apparel & other goods",
+          "weight": 12.7,
+          "mm": 0.1,
+          "contrib": 0.01
+        },
+        {
+          "name": "Medical care services",
+          "weight": 6.8,
+          "mm": 0.4,
+          "contrib": 0.03
+        },
+        {
+          "name": "Airline fares",
+          "weight": 0.9,
+          "mm": 2.5,
+          "contrib": 0.02
+        },
+        {
+          "name": "Services ex-shelter (other)",
+          "weight": 17.8,
+          "mm": 0.4,
+          "contrib": 0.07
+        }
+      ]
+    },
+    "PCE": {
+      "label": "PCE",
+      "fullName": "US PCE price index",
+      "coreLabel": "Core PCE (ex food & energy)",
+      "status": {
+        "flag": "UNAUDITED",
+        "label": "Not yet audited",
+        "note": "PCE nowcast not yet audited"
+      },
+      "release": {
+        "reference": "Oct 2026",
+        "dateLabel": "release date: placeholder (not a real calendar)"
+      },
+      "nowcast": {
+        "headline": {
+          "mm": 0.22,
+          "yy": 2.2
+        },
+        "core": {
+          "mm": 0.19,
+          "yy": 2.7
+        }
+      },
+      "consensus": {
+        "headline": {
+          "mm": 0.2,
+          "yy": 2.3
+        },
+        "core": {
+          "mm": 0.2,
+          "yy": 2.7
+        }
+      },
+      "evolution": {
+        "headline": [0.25, 0.23, 0.26, 0.27, 0.24, 0.24, 0.17, 0.15, 0.19, 0.19, 0.26, 0.22],
+        "core": [0.21, 0.21, 0.21, 0.22, 0.24, 0.22, 0.22, 0.17, 0.14, 0.16, 0.14, 0.19]
+      },
+      "backtest": {
+        "months": ["2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"],
+        "headline": {
+          "actual": {
+            "mm": [0.3, 0.2, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.3, 0.2, 0.3, 0.1, 0.3, 0.3, 0.3, 0.1, 0.2, 0.3, 0.2, 0.2, 0.2, 0.2, 0.1, 0.1, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2],
+            "yy": [2.3, 2.4, 2.3, 2.4, 2.5, 2.6, 2.6, 2.6, 2.7, 2.8, 2.9, 2.8, 2.8, 2.9, 3.1, 2.9, 2.8, 2.8, 2.7, 2.8, 2.7, 2.7, 2.5, 2.5, 2.5, 2.4, 2.3, 2.3, 2.3, 2.2]
+          },
+          "nowcast": {
+            "mm": [0.19, 0.14, 0.07, 0.32, 0.24, 0.24, 0.42, 0.22, 0.28, 0.2, 0.31, 0.02, 0.45, 0.22, 0.3, 0.1, 0.23, 0.29, 0.24, 0.26, 0.23, 0.14, 0.21, 0.16, 0.3, 0.27, 0.18, 0.07, 0.16, 0.1],
+            "yy": [2.21, 2.37, 2.29, 2.45, 2.47, 2.57, 2.75, 2.75, 2.71, 2.84, 2.95, 2.76, 2.99, 2.86, 3.14, 2.94, 2.87, 2.83, 2.77, 2.9, 2.76, 2.67, 2.64, 2.59, 2.53, 2.5, 2.3, 2.29, 2.28, 2.12]
+          },
+          "consensus": {
+            "mm": [0.3, 0.4, 0.1, 0.3, 0.3, 0.3, 0.4, 0, 0.4, 0.3, 0.4, 0, 0.2, 0.4, 0.2, 0, 0.3, 0.3, 0.2, 0.2, 0.2, 0.3, 0.2, 0.2, 0.4, 0.2, 0.2, 0, 0.2, 0.3],
+            "yy": [2.3, 2.6, 2.3, 2.4, 2.5, 2.6, 2.7, 2.5, 2.8, 2.9, 3, 2.7, 2.7, 3, 3, 2.8, 2.9, 2.8, 2.7, 2.8, 2.7, 2.8, 2.6, 2.6, 2.6, 2.4, 2.3, 2.2, 2.3, 2.3]
+          }
+        },
+        "core": {
+          "actual": {
+            "mm": [0.3, 0.3, 0.3, 0.3, 0.3, 0.2, 0.3, 0.2, 0.2, 0.2, 0.2, 0.2, 0.3, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.2, 0.2, 0.2, 0.3, 0.3, 0.2, 0.1, 0.3, 0.2, 0.3],
+            "yy": [2.5, 2.6, 2.7, 2.9, 3, 3, 3.2, 3.2, 3.1, 3.1, 3.1, 3, 3, 2.9, 2.8, 2.7, 2.6, 2.5, 2.4, 2.4, 2.4, 2.4, 2.4, 2.5, 2.5, 2.5, 2.4, 2.5, 2.5, 2.7]
+          },
+          "nowcast": {
+            "mm": [0.34, 0.28, 0.29, 0.28, 0.28, 0.22, 0.24, 0.15, 0.25, 0.14, 0.17, 0.21, 0.38, 0.18, 0.23, 0.21, 0.15, 0.09, 0.11, 0.29, 0.22, 0.15, 0.21, 0.26, 0.36, 0.21, 0.08, 0.27, 0.22, 0.36],
+            "yy": [2.57, 2.61, 2.72, 2.92, 3.02, 3.06, 3.19, 3.2, 3.19, 3.08, 3.11, 3.05, 3.12, 2.92, 2.87, 2.74, 2.58, 2.52, 2.34, 2.52, 2.45, 2.38, 2.44, 2.49, 2.59, 2.54, 2.41, 2.5, 2.55, 2.79]
+          },
+          "consensus": {
+            "mm": [0.3, 0.2, 0.3, 0.4, 0.4, 0.2, 0.3, 0.3, 0.2, 0.2, 0.3, 0.2, 0.3, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.3, 0.3, 0.2, 0.3, 0.3, 0.2, 0.1, 0.3, 0.1, 0.2],
+            "yy": [2.5, 2.5, 2.7, 3, 3.1, 3, 3.2, 3.3, 3.1, 3.1, 3.2, 3, 3, 2.9, 2.8, 2.7, 2.6, 2.6, 2.4, 2.4, 2.5, 2.5, 2.4, 2.5, 2.5, 2.5, 2.4, 2.5, 2.4, 2.6]
+          }
+        }
+      },
+      "contributors": [
+        {
+          "name": "Healthcare",
+          "weight": 17,
+          "mm": 0.35,
+          "contrib": 0.06
+        },
+        {
+          "name": "Housing & utilities",
+          "weight": 15.5,
+          "mm": 0.3,
+          "contrib": 0.05
+        },
+        {
+          "name": "Financial services (incl. portfolio mgmt)",
+          "weight": 8,
+          "mm": 0.6,
+          "contrib": 0.05
+        },
+        {
+          "name": "Food & beverages (off-premises)",
+          "weight": 7.5,
+          "mm": 0.2,
+          "contrib": 0.02
+        },
+        {
+          "name": "Food services & accommodation",
+          "weight": 6.5,
+          "mm": 0.3,
+          "contrib": 0.02
+        },
+        {
+          "name": "Energy goods & services",
+          "weight": 3.9,
+          "mm": -0.4,
+          "contrib": -0.02
+        },
+        {
+          "name": "Motor vehicles & parts",
+          "weight": 3.7,
+          "mm": -0.2,
+          "contrib": -0.01
+        },
+        {
+          "name": "Transportation services",
+          "weight": 3.2,
+          "mm": 0.5,
+          "contrib": 0.02
+        },
+        {
+          "name": "Other goods & services",
+          "weight": 34.7,
+          "mm": 0.12,
+          "contrib": 0.04
+        }
+      ]
+    },
+    "PPI": {
+      "label": "PPI",
+      "fullName": "US PPI final demand",
+      "coreLabel": "Core PPI (final demand ex food & energy)",
+      "status": {
+        "flag": "UNAUDITED",
+        "label": "Not yet audited",
+        "note": "PPI nowcast not yet audited"
+      },
+      "release": {
+        "reference": "Oct 2026",
+        "dateLabel": "release date: placeholder (not a real calendar)"
+      },
+      "nowcast": {
+        "headline": {
+          "mm": 0.17,
+          "yy": 3
+        },
+        "core": {
+          "mm": 0.24,
+          "yy": 3.3
+        }
+      },
+      "consensus": {
+        "headline": {
+          "mm": 0.2,
+          "yy": 3.1
+        },
+        "core": {
+          "mm": 0.2,
+          "yy": 3.2
+        }
+      },
+      "evolution": {
+        "headline": [0.28, 0.21, 0.16, 0.15, 0.22, 0.25, 0.22, 0.18, 0.18, 0.18, 0.17, 0.17],
+        "core": [0.25, 0.26, 0.25, 0.29, 0.3, 0.27, 0.28, 0.27, 0.27, 0.27, 0.24, 0.24]
+      },
+      "backtest": {
+        "months": ["2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"],
+        "headline": {
+          "actual": {
+            "mm": [0.3, 0.1, 0, 0.2, 0, 0.6, 0.3, -0.1, 0.1, 0.2, 0, -0.3, 0.2, 0, 0.4, 0, 0.2, 0.1, 0.4, 0.2, 0.5, 0, 0.4, 0.3, 0, 0.1, 0.4, 0.2, 0.5, 0.2],
+            "yy": [2.3, 2.2, 2.3, 1.9, 1.9, 2.2, 2.3, 1.9, 1.7, 1.6, 1.8, 1.4, 1.3, 1.2, 1.6, 1.4, 1.6, 1.1, 1.2, 1.5, 1.9, 1.7, 2.1, 2.7, 2.5, 2.6, 2.6, 2.8, 3.1, 3.2]
+          },
+          "nowcast": {
+            "mm": [0.73, -0.14, 0.01, 0.35, 0.08, 0.55, 0.29, -0.06, -0.07, -0.06, -0.08, -0.36, -0.09, -0.41, 0.17, 0.04, 0.11, 0.03, 0.35, 0.35, 0.84, 0.26, 0.44, 0.23, 0, -0.03, 0.38, 0.05, 0.32, 0.48],
+            "yy": [2.75, 1.98, 2.33, 2.07, 2, 2.17, 2.31, 1.95, 1.54, 1.35, 1.73, 1.35, 1.01, 0.79, 1.38, 1.45, 1.52, 1.03, 1.15, 1.66, 2.25, 1.97, 2.16, 2.66, 2.53, 2.5, 2.61, 2.68, 2.96, 3.53]
+          },
+          "consensus": {
+            "mm": [0.2, -0.1, 0.1, 0.1, -0.1, 0.5, 0.2, 0, 0.3, 0.3, -0.1, -0.3, 0.2, 0.1, 0.4, -0.2, 0.1, 0.1, 0.5, 0.2, 0.6, 0, 0.3, 0.2, 0, 0.1, 0.3, 0.2, 0.9, 0.3],
+            "yy": [2.2, 2, 2.4, 1.8, 1.8, 2.1, 2.2, 2, 1.9, 1.7, 1.7, 1.4, 1.3, 1.3, 1.6, 1.2, 1.5, 1.1, 1.3, 1.5, 2, 1.7, 2, 2.6, 2.5, 2.6, 2.5, 2.8, 3.5, 3.3]
+          }
+        },
+        "core": {
+          "actual": {
+            "mm": [0.1, 0.2, 0.2, 0.1, 0.2, 0.1, 0, 0.5, 0.1, -0.1, 0.1, 0, 0.1, 0.1, 0.2, 0, 0.2, 0.2, -0.2, 0.4, 0.1, 0.5, 0.3, 0.3, 0.1, 0.2, 0.5, 0.3, 0, 0.3],
+            "yy": [2.4, 2.3, 2.3, 2.1, 2.1, 1.9, 1.8, 2, 2, 1.7, 1.6, 1.5, 1.5, 1.4, 1.4, 1.3, 1.3, 1.4, 1.2, 1.1, 1.1, 1.7, 1.9, 2.2, 2.2, 2.3, 2.6, 2.9, 2.7, 2.8]
+          },
+          "nowcast": {
+            "mm": [0.2, 0.37, 0.33, 0.24, 0.25, 0.13, -0.06, 0.55, 0.03, 0.03, 0.17, -0.01, 0.17, 0.03, 0.14, -0.13, 0.21, 0.12, -0.25, 0.33, 0.11, 0.66, 0.45, 0.22, 0.34, 0.04, 0.43, 0.28, -0.1, 0.36],
+            "yy": [2.53, 2.49, 2.45, 2.26, 2.17, 1.95, 1.75, 2.07, 1.95, 1.84, 1.68, 1.5, 1.58, 1.34, 1.35, 1.18, 1.32, 1.33, 1.15, 1.03, 1.11, 1.87, 2.06, 2.14, 2.46, 2.16, 2.56, 2.92, 2.63, 2.89]
+          },
+          "consensus": {
+            "mm": [0.2, 0.3, 0.3, 0, 0.1, 0, -0.1, 0.6, 0, -0.1, 0, 0.1, 0.1, 0.1, 0.3, -0.1, 0.3, 0.1, -0.1, 0.3, 0.1, 0.5, 0.2, 0.2, -0.1, 0.4, 0.5, 0.3, -0.2, 0.4],
+            "yy": [2.5, 2.4, 2.4, 2, 2, 1.8, 1.7, 2.1, 1.9, 1.7, 1.5, 1.6, 1.5, 1.4, 1.5, 1.2, 1.4, 1.3, 1.3, 1, 1.1, 1.7, 1.8, 2.1, 2, 2.5, 2.6, 2.9, 2.5, 2.9]
+          }
+        }
+      },
+      "contributors": [
+        {
+          "name": "Trade services",
+          "weight": 20,
+          "mm": 0.5,
+          "contrib": 0.1
+        },
+        {
+          "name": "Energy goods",
+          "weight": 5.5,
+          "mm": -1.5,
+          "contrib": -0.08
+        },
+        {
+          "name": "Portfolio management",
+          "weight": 1.6,
+          "mm": 1.2,
+          "contrib": 0.02
+        },
+        {
+          "name": "Transportation & warehousing",
+          "weight": 5,
+          "mm": 0.5,
+          "contrib": 0.03
+        },
+        {
+          "name": "Food goods",
+          "weight": 5.5,
+          "mm": 0.4,
+          "contrib": 0.02
+        },
+        {
+          "name": "Final demand goods ex food & energy",
+          "weight": 20.5,
+          "mm": 0.1,
+          "contrib": 0.02
+        },
+        {
+          "name": "Health care services",
+          "weight": 8.5,
+          "mm": 0.2,
+          "contrib": 0.02
+        },
+        {
+          "name": "Other services",
+          "weight": 33.4,
+          "mm": 0.15,
+          "contrib": 0.05
+        }
+      ]
+    }
+  }
+};
+
+/* ---------- App ---------- */
+(function(){
+'use strict';
+const SERIES_KEYS=['CPI','PCE','PPI'];
+const state={btSeries:'CPI',btMeasure:'headline',btUnit:'mm',evoMeasure:'headline',consUnit:'mm',tblSeries:'CPI',theme:'light'};
+let baseData=null, data=null, dataSource='inline', charts={}, refreshing=false;
+const $=id=>document.getElementById(id);
+const hasChart=()=>typeof Chart!=='undefined';
+const MINUS='\u2212';
+const nz=(v,d)=>Math.abs(v).toFixed(d);
+const isz=(v,d)=>Number(nz(v,d))===0;
+const fmt=(v,d=2)=>(v==null||isNaN(v))?'–':(v<0&&!isz(v,d)?MINUS:'')+nz(v,d);
+const sgn=(v,d=2)=>(v==null||isNaN(v))?'–':(isz(v,d)?'':v>0?'+':MINUS)+nz(v,d);
+const r2=x=>Math.round(x*100)/100;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const monLbl=m=>{const [y,mo]=m.split('-');return MON[+mo-1]+" '"+y.slice(2)};
+const dayLbl=d=>{const [,mo,da]=d.split('-');return (+da)+' '+MON[+mo-1]};
+const contribOf=c=>c.contrib!=null?c.contrib:r2(c.weight*c.mm/100);
+const signal=d=>{const x=r2(d);return x<=-0.005?'below':x>=0.005?'above':'inline'};
+
+/* ---------- Data loading ---------- */
+function validate(j){
+  if(!j||!j.meta||!j.series) throw new Error('missing meta/series');
+  SERIES_KEYS.forEach(k=>{const s=j.series[k];if(!s||!s.nowcast||!s.consensus||!s.backtest||!s.contributors||!s.evolution) throw new Error('series '+k+' incomplete')});
+  if(!j.evolution||!j.evolution.dates||!j.explanations) throw new Error('missing evolution/explanations');
+}
+async function loadData(){
+  // Optional live file; only attempted over http(s) (browsers block fetch() on file://).
+  if(location.protocol==='http:'||location.protocol==='https:'){
+    try{
+      const r=await fetch('./nowcast_data.json',{cache:'no-store'});
+      if(r.ok){const j=await r.json();validate(j);dataSource='./nowcast_data.json';return j}
+    }catch(e){console.warn('nowcast_data.json present but unusable, falling back to inline data:',e.message)}
+  }
+  dataSource='inline NOWCAST_DATA';
+  return NOWCAST_DATA;
+}
+
+/* Simulated refresh: there is no backend. The perturbation below (small random shifts of
+ * component m/m, core nowcasts and the last evolution point; headline m/m is recomputed as the sum of
+ * contributions) only exists to show that the page re-renders. It is NOT a model update. */
+function perturb(src){
+  const d=JSON.parse(JSON.stringify(src));
+  const j=(a)=>(Math.random()-0.5)*2*a;
+  SERIES_KEYS.forEach(k=>{
+    const s=d.series[k];
+    const h0=s.nowcast.headline.mm, c0=s.nowcast.core.mm;
+    s.contributors.forEach(c=>{c.mm=r2(c.mm+j(0.06));c.contrib=r2(c.weight*c.mm/100)});
+    const hs=r2(s.contributors.reduce((a,c)=>a+contribOf(c),0));
+    // keep any non-contributor remainder of the original headline
+    const orig=r2(src.series[k].contributors.reduce((a,c)=>a+contribOf(c),0));
+    const hmm=r2(h0+(hs-orig));
+    const cmm=r2(c0+j(0.03));
+    s.nowcast.headline.yy=r2(s.nowcast.headline.yy+(hmm-h0));
+    s.nowcast.core.yy=r2(s.nowcast.core.yy+(cmm-c0));
+    s.nowcast.headline.mm=hmm; s.nowcast.core.mm=cmm;
+    s.evolution.headline[s.evolution.headline.length-1]=hmm;
+    s.evolution.core[s.evolution.core.length-1]=cmm;
+  });
+  d.meta.asOf=new Date().toISOString();
+  d.meta.asOfNote='simulated refresh – placeholder data';
+  return d;
+}
+
+/* ---------- Stats (derived, computed from backtest arrays) ---------- */
+function stats(actual,pred,tol){
+  const n=Math.min(actual.length,pred.length);let ae=0,e=0,hit=0;
+  for(let i=0;i<n;i++){const d=pred[i]-actual[i];ae+=Math.abs(d);e+=d;if(Math.abs(d)<=tol+1e-9)hit++}
+  return {n,mae:ae/n,bias:e/n,hit:hit/n};
+}
+function btStats(key,measure,unit){
+  const bt=data.series[key].backtest[measure];const tol=data.meta.hitTolerancePP??0.1;
+  return {nowcast:stats(bt.actual[unit],bt.nowcast[unit],tol),consensus:stats(bt.actual[unit],bt.consensus[unit],tol)};
+}
+
+/* ---------- Theme ---------- */
+function themeColors(){
+  const s=getComputedStyle(document.documentElement);const g=n=>s.getPropertyValue(n).trim();
+  return {text:g('--text'),text2:g('--text-2'),text3:g('--text-3'),grid:g('--grid'),surface:g('--surface'),border:g('--border-strong'),
+    actual:g('--c-actual'),nowcast:g('--c-nowcast'),cons:g('--c-cons'),up:g('--red'),down:g('--green'),
+    CPI:g('--s-cpi'),PCE:g('--s-pce'),PPI:g('--s-ppi'),navy:g('--navy')};
+}
+function setTheme(t,persist){
+  state.theme=t;document.documentElement.setAttribute('data-theme',t);
+  $('themeLbl').textContent=t==='dark'?'Light':'Dark';
+  if(persist){try{localStorage.setItem('nowcast-theme',t)}catch(e){}}
+  if(data) renderCharts(); // charts re-theme: destroy + recreate
+}
+
+/* ---------- Chart helpers ---------- */
+function destroyChart(id){if(charts[id]){charts[id].destroy();delete charts[id]}}
+function destroyAll(){Object.keys(charts).forEach(destroyChart)}
+function mk(id,cfg){
+  const el=$(id)||document.querySelector('[data-canvas="'+id+'"]');if(!el)return;
+  destroyChart(id);charts[id]=new Chart(el,cfg);
+}
+function noChartMsg(){
+  document.querySelectorAll('.chart-box').forEach(b=>{b.innerHTML='<div class="notice">Chart.js could not be loaded (CDN unreachable). Tables remain available.</div>'});
+}
+const valueLabels={id:'valueLabels',afterDatasetsDraw(chart,args,opt){
+  if(!opt||!opt.enabled)return;const {ctx}=chart;const horiz=chart.options.indexAxis==='y';
+  ctx.save();ctx.font='600 '+(chart.width<520?9.5:11)+'px '+getComputedStyle(document.body).fontFamily;
+  chart.data.datasets.forEach((ds,di)=>{
+    if(!chart.isDatasetVisible(di))return;
+    chart.getDatasetMeta(di).data.forEach((el,i)=>{
+      const v=ds.data[i];if(v==null)return;const txt=(opt.signed?sgn(v,opt.dec):fmt(v,opt.dec))+(opt.suffix||'');
+      ctx.fillStyle=opt.color;
+      if(horiz){ctx.textBaseline='middle';ctx.textAlign=v>=0?'left':'right';ctx.fillText(txt,el.x+(v>=0?6:-6),el.y)}
+      else{ctx.textAlign='center';ctx.textBaseline=v>=0?'bottom':'top';ctx.fillText(txt,el.x,el.y+(v>=0?-5:5))}
+    });
+  });ctx.restore();
+}};
+function baseOpts(T){
+  return {responsive:true,maintainAspectRatio:false,animation:{duration:350},
+    interaction:{mode:'index',intersect:false},
+    plugins:{legend:{labels:{color:T.text2,usePointStyle:true,boxWidth:8,boxHeight:8,font:{size:12}}},
+      tooltip:{backgroundColor:T.surface,titleColor:T.text,bodyColor:T.text2,borderColor:T.border,borderWidth:1,padding:10,cornerRadius:6,boxPadding:4,titleFont:{weight:'600'},
+        usePointStyle:true}}};
+}
+const axisBase=T=>({grid:{color:T.grid,drawTicks:false},border:{display:false},ticks:{color:T.text3,font:{size:11},padding:8}});
+const axisTitle=(T,t)=>({display:true,text:t,color:T.text3,font:{size:11,weight:'500'}});
+
+/* ---------- Header ---------- */
+function zurich(iso){
+  const d=new Date(iso);
+  const f=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Zurich',day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(d);
+  return f.replace(',','')+' (Zurich)';
+}
+function renderHeader(){
+  const m=data.meta;
+  $('hdrTitle').textContent=m.title||'Inflation Nowcasts';
+  $('hdrSub').textContent='US CPI · PCE · PPI · reference month '+m.targetMonth;
+  $('lastUpdate').textContent=zurich(m.asOf)+(m.asOfNote?' · '+m.asOfNote:'');
+  const b=$('banner');
+  if(m.isPlaceholder!==false){b.style.display='';b.innerHTML=esc(m.banner||'EXAMPLE DATA')+'<small>All numbers on this page are placeholders</small>'}else b.style.display='none';
+  $('srcLine').textContent='Data source: '+dataSource+(m.source?' · '+m.source:'')+' · Charts: Chart.js 4 via CDN.';
+  updateFreshness();
+}
+function updateFreshness(){
+  if(!data)return;
+  const h=(Date.now()-new Date(data.meta.asOf).getTime())/36e5;
+  const f=data.meta.freshness||{greenMaxHours:6,amberMaxHours:24};
+  const cls=h<=f.greenMaxHours?'green':h<=f.amberMaxHours?'amber':'red';
+  $('freshDot').className='dot '+cls;
+  let age;if(h<0)age='just now';else if(h<1)age=Math.max(1,Math.round(h*60))+' min old';else if(h<48)age=Math.floor(h)+' h '+Math.round((h%1)*60)+' min old';else age=Math.round(h/24)+' days old';
+  $('freshText').textContent=({green:'Fresh',amber:'Ageing',red:'Stale'})[cls]+' · '+age;
+}
+
+/* ---------- 1. Overview ---------- */
+function chipHTML(nc,cons){
+  const d=r2(nc-cons),s=signal(d);
+  const txt=s==='inline'?'In line · cons. '+fmt(cons):(s==='below'?'▼ ':'▲ ')+fmt(Math.abs(d))+'pp '+s+' cons. '+fmt(cons);
+  return '<span class="chip '+s+'">'+txt+'</span>';
+}
+function renderOverview(){
+  $('ovHint').textContent='Nowcast of '+data.meta.targetMonth+' · m/m and y/y in %';
+  $('ovCards').innerHTML=SERIES_KEYS.map(k=>{
+    const s=data.series[k],n=s.nowcast,c=s.consensus;
+    const col=(lab,nn,cc)=>'<div class="ov-col"><div class="k">'+lab+'</div><div class="big">'+fmt(nn.mm)+'<small>% m/m</small></div><div class="yy"><b>'+fmt(nn.yy,1)+'%</b> y/y</div>'+chipHTML(nn.mm,cc.mm)+'</div>';
+    return '<div class="card"><div class="ov-head"><div class="ov-title"><b>'+esc(s.label)+'</b><span>'+esc(s.fullName)+'</span></div>'+
+      '<span class="badge '+esc(s.status.flag)+'" title="'+esc(s.status.note||'')+'">'+esc(s.status.label)+'</span></div>'+
+      '<div class="ov-cols">'+col('Headline',n.headline,c.headline)+col('Core',n.core,c.core)+'</div>'+
+      '<div class="spark-wrap"><div class="cap"><span>Nowcast path (m/m, last ~6 wks)</span><span>headline — · core ···</span></div><div class="spark"><canvas data-canvas="spark_'+k+'" aria-label="'+esc(k)+' sparkline"></canvas></div></div></div>';
+  }).join('');
+  // pulse (derived)
+  const rows=[];SERIES_KEYS.forEach(k=>['headline','core'].forEach(m=>{const s=data.series[k];rows.push({k,m,d:r2(s.nowcast[m].mm-s.consensus[m].mm)})}));
+  const a=rows.filter(r=>signal(r.d)==='above').length,b=rows.filter(r=>signal(r.d)==='below').length,e=rows.length-a-b;
+  const big=rows.reduce((x,y)=>Math.abs(y.d)>Math.abs(x.d)?y:x);
+  const topC=[...data.series.CPI.contributors].sort((x,y)=>Math.abs(contribOf(y))-Math.abs(contribOf(x)))[0];
+  $('pulse').innerHTML='<b>Inflation pulse</b> · '+a+' of '+rows.length+' nowcasts above consensus, '+b+' below'+(e?', '+e+' in line':'')+
+    ' · widest gap: <b>'+big.k+(big.m==='core'?' core':' headline')+' '+sgn(big.d)+'pp</b> · largest CPI driver: <b>'+esc(topC.name)+' ('+sgn(contribOf(topC))+'pp)</b> <span class="tag">(d)</span> <span class="tag">U</span>';
+}
+
+/* ---------- 2a. Backtest ---------- */
+function renderBacktest(){
+  const k=state.btSeries,m=state.btMeasure,u=state.btUnit,s=data.series[k],bt=s.backtest[m];
+  const lab=k+(m==='core'?' core':' headline')+' · '+(u==='mm'?'m/m':'y/y');
+  $('btSub').textContent='Last '+s.backtest.months.length+' months · official prints (placeholder) vs our nowcast · '+lab;
+  const st=btStats(k,m,u);
+  const row=(l,v,u2,x)=>'<div class="row"><span>'+l+'</span><b>'+v+'<em>'+u2+'</em></b></div>';
+  const tol=data.meta.hitTolerancePP??0.1;
+  $('perf').innerHTML='<div class="t">Nowcast performance <span class="tag">(d)</span></div>'+
+    row('MAE',fmt(st.nowcast.mae),'pp')+row('Bias (nowcast − actual)',sgn(st.nowcast.bias),'pp')+row('Hit rate ≤ '+tol.toFixed(1)+'pp',Math.round(st.nowcast.hit*100),'%')+
+    '<div class="ref">n = '+st.nowcast.n+' months<br>Consensus (illustrative) for reference: MAE '+fmt(st.consensus.mae)+'pp · bias '+sgn(st.consensus.bias)+'pp · hit '+Math.round(st.consensus.hit*100)+'%</div>';
+  if(!hasChart())return;
+  const T=themeColors(),o=baseOpts(T);
+  mk('btChart',{type:'line',data:{labels:s.backtest.months.map(monLbl),datasets:[
+    {label:'Official print',data:bt.actual[u],borderColor:T.actual,backgroundColor:T.actual,borderWidth:2.5,pointRadius:2.5,pointHoverRadius:5,tension:.15,order:2},
+    {label:'Our nowcast',data:bt.nowcast[u],borderColor:T.nowcast,backgroundColor:T.surface,borderWidth:2,borderDash:[7,4],pointRadius:3,pointStyle:'rectRot',pointBorderWidth:1.5,pointHoverRadius:5,tension:.15,order:1},
+    {label:'Consensus (illustrative)',data:bt.consensus[u],borderColor:T.cons,backgroundColor:T.cons,borderWidth:1.5,borderDash:[2,3],pointRadius:0,hidden:true,tension:.15,order:3}]},
+    options:{...o,scales:{x:{...axisBase(T),grid:{display:false},ticks:{...axisBase(T).ticks,maxRotation:0,autoSkipPadding:14}},
+      y:{...axisBase(T),title:axisTitle(T,(u==='mm'?'m/m':'y/y')+', %'),ticks:{...axisBase(T).ticks,callback:v=>fmt(v,u==='mm'?2:1)+'%'}}},
+      plugins:{...o.plugins,tooltip:{...o.plugins.tooltip,callbacks:{
+        label:c=>' '+c.dataset.label+': '+fmt(c.parsed.y,2)+'%',
+        afterBody:items=>{const a=items.find(i=>i.datasetIndex===0),n=items.find(i=>i.datasetIndex===1);return a&&n?'Nowcast error: '+sgn(n.parsed.y-a.parsed.y)+'pp':''}}}}}});
+}
+
+/* ---------- 2b. Contribution bars ---------- */
+function wrapLabel(t,max=22){const w=t.split(' '),L=[];let c='';w.forEach(x=>{if((c+' '+x).trim().length>max&&c){L.push(c);c=x}else c=(c+' '+x).trim()});if(c)L.push(c);return L.length>2?[L[0],L.slice(1).join(' ')]:L}
+function topContrib(k,n=8){return [...data.series[k].contributors].map(c=>({...c,v:contribOf(c)})).sort((a,b)=>Math.abs(b.v)-Math.abs(a.v)).slice(0,n)}
+function renderContribCharts(){
+  if(!hasChart())return;const T=themeColors(),o=baseOpts(T);
+  SERIES_KEYS.forEach(k=>{
+    const rows=topContrib(k);
+    mk('ctChart_'+k,{type:'bar',data:{labels:rows.map(r=>wrapLabel(r.name)),datasets:[{label:'Contribution (pp)',data:rows.map(r=>r.v),
+        backgroundColor:rows.map(r=>r.v>=0?T.up:T.down),borderRadius:3,maxBarThickness:20,barPercentage:.78,categoryPercentage:.9}]},
+      options:{...o,indexAxis:'y',layout:{padding:{right:34,left:0}},interaction:{mode:'nearest',intersect:true,axis:'y'},
+        scales:{x:{...axisBase(T),title:axisTitle(T,'pp of headline m/m'),grace:'30%',ticks:{...axisBase(T).ticks,callback:v=>fmt(v,2)}},
+          y:{...axisBase(T),grid:{display:false},ticks:{color:T.text,font:{size:11},padding:6,autoSkip:false}}},
+        plugins:{...o.plugins,legend:{display:false},valueLabels:{enabled:true,dec:2,signed:true,color:T.text2},
+          tooltip:{...o.plugins.tooltip,callbacks:{title:i=>rows[i[0].dataIndex].name,label:c=>{const r=rows[c.dataIndex];return ['Contribution: '+sgn(r.v)+'pp','Weight: '+fmt(r.weight,1)+'% · component m/m: '+sgn(r.mm)+'%']}}}}},
+      plugins:[valueLabels]});
+  });
+}
+
+/* ---------- 2c. Evolution ---------- */
+function renderEvolution(){
+  const m=state.evoMeasure;$('evoSub').textContent=(data.evolution.note||'Current-month nowcast')+' · '+(m==='core'?'core':'headline')+' m/m';
+  if(!hasChart())return;const T=themeColors(),o=baseOpts(T);
+  const dates=data.evolution.dates;
+  mk('evoChart',{type:'line',data:{labels:dates.map(dayLbl),datasets:SERIES_KEYS.map(k=>({label:k,data:data.series[k].evolution[m],borderColor:T[k],backgroundColor:T[k],borderWidth:2.25,pointRadius:2.5,pointHoverRadius:5,tension:.25}))},
+    options:{...o,scales:{x:{...axisBase(T),grid:{display:false},ticks:{...axisBase(T).ticks,maxRotation:0,autoSkipPadding:12}},
+      y:{...axisBase(T),title:axisTitle(T,'Nowcast m/m, %'),ticks:{...axisBase(T).ticks,callback:v=>fmt(v,2)}}},
+      plugins:{...o.plugins,tooltip:{...o.plugins.tooltip,callbacks:{label:c=>' '+c.dataset.label+': '+fmt(c.parsed.y,2)+'%'}}}}});
+}
+
+/* ---------- 2d. Consensus comparison (rendered twice: section 2 and 5) ---------- */
+let lastNarrow=null;
+function renderConsCharts(){
+  if(!hasChart())return;const T=themeColors(),o=baseOpts(T),u=state.consUnit;
+  const cats=[],now=[],con=[];
+  SERIES_KEYS.forEach(k=>['headline','core'].forEach(m=>{cats.push([k,m==='core'?'Core':'Headline']);now.push(data.series[k].nowcast[m][u]);con.push(data.series[k].consensus[m][u])}));
+  const dec=u==='mm'?2:1;
+  ['consChartA','consChartB'].forEach(id=>{
+    const box=$(id).parentElement,narrow=box.clientWidth<520; lastNarrow=narrow; // phones: horizontal bars
+    box.style.height=narrow?'430px':'';
+    const valAxis={...axisBase(T),beginAtZero:true,grace:'12%',title:axisTitle(T,(u==='mm'?'m/m':'y/y')+', %'),ticks:{...axisBase(T).ticks,callback:v=>fmt(v,u==='mm'?2:1)}};
+    const catAxis={...axisBase(T),grid:{display:false},ticks:{color:T.text2,font:{size:11.5},padding:8,autoSkip:false,maxRotation:0}};
+    mk(id,{type:'bar',data:{labels:narrow?cats.map(c=>c.join(' ')):cats,datasets:[
+      {label:'Our nowcast',data:now,backgroundColor:T.nowcast,borderRadius:3,maxBarThickness:30},
+      {label:'Consensus (illustrative)',data:con,backgroundColor:T.cons,borderRadius:3,maxBarThickness:30}]},
+    options:{...o,indexAxis:narrow?'y':'x',layout:{padding:narrow?{right:34}:{top:20}},scales:narrow?{x:valAxis,y:catAxis}:{x:catAxis,y:valAxis},
+      plugins:{...o.plugins,valueLabels:{enabled:true,dec,color:T.text2},tooltip:{...o.plugins.tooltip,callbacks:{title:i=>cats[i[0].dataIndex].join(' '),label:c=>' '+c.dataset.label+': '+fmt(c.parsed[narrow?'x':'y'],dec)+'%',
+        afterBody:items=>items.length>1?'Difference: '+sgn(r2(items[0].parsed[narrow?'x':'y']-items[1].parsed[narrow?'x':'y']),dec)+'pp':''}}}},
+    plugins:[valueLabels]});
+  });
+}
+
+/* ---------- Sparklines ---------- */
+function renderSparks(){
+  if(!hasChart())return;const T=themeColors();
+  SERIES_KEYS.forEach(k=>{
+    const s=data.series[k],n=data.evolution.dates.length;
+    mk('spark_'+k,{type:'line',data:{labels:data.evolution.dates.map(dayLbl),datasets:[
+      {data:s.evolution.headline,borderColor:T[k],borderWidth:2,pointRadius:s.evolution.headline.map((_,i)=>i===n-1?3.5:0),pointBackgroundColor:T[k],tension:.3},
+      {data:s.evolution.core,borderColor:T.text3,borderWidth:1.5,borderDash:[2,3],pointRadius:0,tension:.3}]},
+      options:{responsive:true,maintainAspectRatio:false,animation:{duration:300},layout:{padding:{top:4,bottom:2,right:4}},
+        scales:{x:{display:false},y:{display:false,grace:'15%'}},
+        plugins:{legend:{display:false},tooltip:{enabled:true,backgroundColor:T.surface,titleColor:T.text,bodyColor:T.text2,borderColor:T.border,borderWidth:1,displayColors:false,callbacks:{label:c=>(c.datasetIndex?'Core ':'Headline ')+fmt(c.parsed.y,2)+'%'}}},
+        interaction:{mode:'index',intersect:false}}});
+  });
+}
+
+/* ---------- 3. Explanations ---------- */
+function renderExplain(){
+  const e=data.explanations;
+  $('explGrid').innerHTML=[['What the nowcast measures',e.measures],['Headline vs core',e.headlineVsCore],['Current narrative',e.narrative]]
+    .map(([t,p])=>'<div class="card expl"><h3>'+t+'</h3><p>'+esc(p)+'</p></div>').join('');
+}
+
+/* ---------- 4. Contributor tables ---------- */
+function renderContribTable(){
+  const k=state.tblSeries,s=data.series[k];
+  const all=[...s.contributors].map(c=>({...c,v:contribOf(c)})).sort((a,b)=>Math.abs(b.v)-Math.abs(a.v));
+  const max=Math.max(...all.map(r=>Math.abs(r.v)),0.0001);
+  const sum=r2(all.reduce((a,r)=>a+r.v,0));
+  $('contribTbl').innerHTML='<table><thead><tr><th>#</th><th class="l">Component</th><th>Weight %</th><th>Component m/m %</th><th>Contribution (pp)</th><th>Direction</th><th style="text-align:right">Relative size</th></tr></thead><tbody>'+
+    all.map((r,i)=>{const dir=r.v>0?'<span class="dir pos">▲ Adds</span>':r.v<0?'<span class="dir neg">▼ Subtracts</span>':'<span class="dir flat">– Neutral</span>';
+      const w=Math.abs(r.v)/max*50;
+      return '<tr class="'+(i<2?'top-move':'')+'"><td class="flat">'+(i+1)+'</td><td class="l">'+esc(r.name)+'</td><td>'+fmt(r.weight,1)+'</td><td>'+sgn(r.mm)+'</td><td class="'+(r.v>0?'pos':r.v<0?'neg':'flat')+'">'+sgn(r.v)+'</td><td>'+dir+'</td><td><div class="divbar"><i class="'+(r.v>=0?'p':'n')+'" style="width:'+w+'%"></i></div></td></tr>'}).join('')+
+    '</tbody><tfoot><tr><td></td><td class="l">Sum of listed components</td><td>'+fmt(all.reduce((a,r)=>a+r.weight,0),1)+'</td><td></td><td>'+sgn(sum)+'</td><td colspan="2" class="l" style="text-align:left;font-weight:500;color:var(--text-2)">vs headline nowcast '+fmt(s.nowcast.headline.mm)+'% m/m <span class="tag">(d)</span></td></tr></tfoot></table>'+
+    '<div class="cap-line" style="padding:0 12px 4px">Contribution = weight × component m/m. Top two moves highlighted. Red = pushes inflation up, green = pulls down. Placeholder components and weights.</div>';
+}
+
+/* ---------- 5. Consensus table ---------- */
+function renderConsTable(){
+  const dcls=d=>{const s=signal(d);return s==='above'?'pos':s==='below'?'neg':'flat'};
+  let html='<table><thead><tr><th class="l">Series</th><th>Our nowcast m/m</th><th>Consensus m/m</th><th>Diff (pp)</th><th>Our nowcast y/y</th><th>Consensus y/y</th><th>Diff (pp)</th><th>Hist. bias m/m (pp)</th><th>Hit ≤0.1pp (nowcast)</th><th>Hit ≤0.1pp (cons.)</th></tr></thead><tbody>';
+  SERIES_KEYS.forEach(k=>{const s=data.series[k];
+    html+='<tr class="group"><td colspan="10">'+esc(s.label)+' · '+esc(s.release.reference)+' <span class="badge '+esc(s.status.flag)+'" style="margin-left:8px;text-transform:none;letter-spacing:0">'+esc(s.status.label)+'</span></td></tr>';
+    ['headline','core'].forEach(m=>{
+      const n=s.nowcast[m],c=s.consensus[m],dm=r2(n.mm-c.mm),dy=r2(n.yy-c.yy),st=btStats(k,m,'mm');
+      html+='<tr><td class="l">'+(m==='core'?'Core':'Headline')+'</td><td><b>'+fmt(n.mm)+'</b></td><td>'+fmt(c.mm)+'</td><td class="'+dcls(dm)+'"><b>'+sgn(dm)+'</b></td><td>'+fmt(n.yy,1)+'</td><td>'+fmt(c.yy,1)+'</td><td class="'+dcls(dy)+'">'+sgn(dy,1)+'</td><td>'+sgn(st.nowcast.bias)+'</td><td>'+Math.round(st.nowcast.hit*100)+'%</td><td>'+Math.round(st.consensus.hit*100)+'%</td></tr>'});
+  });
+  html+='</tbody></table><div class="cap-line" style="padding:0 12px 4px">Diff = nowcast − consensus; green = below, red = above. Bias and hit rates (d) are computed from the '+data.series.CPI.backtest.months.length+'-month placeholder backtest; consensus values are illustrative, not sourced.</div>';
+  $('consTbl').innerHTML=html;
+}
+
+/* ---------- Render orchestration ---------- */
+function renderCharts(){
+  destroyAll();
+  if(!hasChart()){noChartMsg();return}
+  renderSparks();renderBacktest();renderContribCharts();renderEvolution();renderConsCharts();
+}
+function renderAll(){
+  destroyAll();
+  renderHeader();renderOverview();renderExplain();renderContribTable();renderConsTable();
+  if(hasChart()){renderSparks();renderBacktest();renderContribCharts();renderEvolution();renderConsCharts()}
+  else{noChartMsg();renderBacktest()}
+  document.documentElement.setAttribute('data-rendered',String(++renderCount));
+}
+let renderCount=0;
+
+/* ---------- Events ---------- */
+const handlers={
+  btSeries:renderBacktest,btMeasure:renderBacktest,btUnit:renderBacktest,
+  evoMeasure:renderEvolution,consUnit:renderConsCharts,tblSeries:renderContribTable
+};
+document.querySelectorAll('.seg').forEach(seg=>seg.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b||!data)return;
+  const key=seg.dataset.state;state[key]=b.dataset.val;
+  document.querySelectorAll('.seg[data-state="'+key+'"] button').forEach(x=>x.classList.toggle('active',x.dataset.val===b.dataset.val));
+  handlers[key]();
+}));
+$('themeBtn').addEventListener('click',()=>setTheme(state.theme==='dark'?'light':'dark',true));
+$('refreshBtn').addEventListener('click',async()=>{
+  if(refreshing)return;refreshing=true;
+  const btn=$('refreshBtn');btn.classList.add('loading');btn.disabled=true;btn.setAttribute('aria-busy','true');$('refreshLbl').textContent='Refreshing…';
+  await new Promise(r=>setTimeout(r,800)); // simulated async load
+  data=perturb(baseData);
+  renderAll();
+  btn.classList.remove('loading');btn.disabled=false;btn.removeAttribute('aria-busy');$('refreshLbl').textContent='Refresh Nowcasts';
+  refreshing=false;
+});
+setInterval(updateFreshness,60000);
+let rzT=null;window.addEventListener('resize',()=>{clearTimeout(rzT);rzT=setTimeout(()=>{if(!data||!hasChart())return;const n=$('consChartA').parentElement.clientWidth<520;if(n!==lastNarrow)renderConsCharts()},200)});
+
+(async function init(){
+  let t='light';try{t=localStorage.getItem('nowcast-theme')||'light'}catch(e){}
+  state.theme=t;document.documentElement.setAttribute('data-theme',t);$('themeLbl').textContent=t==='dark'?'Light':'Dark';
+  baseData=await loadData();data=baseData;
+  renderAll();
+})();
+})();
+</script>
+</body>
+</html>
