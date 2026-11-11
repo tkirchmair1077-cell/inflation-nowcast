@@ -28,7 +28,7 @@ There is no refresh button. Nothing on the page randomises numbers. If a browser
 
 Every feed must include:
 
-- `schema_version` (currently `"1.0"`)
+- `schema_version` (currently `"1.1"` for `circular_financing`, `"1.0"` for `token_demand`)
 - `feed`: `"circular_financing"` or `"token_demand"`
 - `bot.name`, `bot.id`
 - `as_of`: ISO 8601 with offset, e.g. `"2026-11-11T07:50:00+01:00"`
@@ -48,7 +48,8 @@ Do not put licensed bank or broker research, paid or licensed datasets, or other
 
 Recommended top-level keys:
 
-- `status`: `current_user_alert`, `summary`, `last_scan`, `last_independent_check`, `outstanding_watches[]`
+- `status`: `current_user_alert`, `summary` (short pulse string), `last_scan`, `last_independent_check`, `outstanding_watches[]`
+- `summary`: object written by the AI Circular Financing Alert Bot for the overview box **AI Circular Financing – current state**. Shape: `{ "text", "as_of", "source" }`. `text` is a 4–6 sentence current-state summary from the latest scan and independent check, with V / U / (d) labels on figures and no invented facts. `as_of` is ISO 8601 with a Europe/Zurich offset. `source` names the scan or check used. The page renders this object from the JSON; the bot overwrites it on later scans.
 
 Required date order: circular-financing alerts must **always** be listed newest first.
 
@@ -57,7 +58,9 @@ Required date order: circular-financing alerts must **always** be listed newest 
 - The page sorts at **render time** in `index.html`. Do not rely on JSON array order.
 - Still write `items[]` (and `outstanding_watches[]`) newest-first in this feed so other readers of the file follow the same rule. Date is the first column on the deals table.
 
-- `items[]`: deals and relationships. Each item has `id`, `node`, `type`, `title`, `as_of`, `tier_relevance`, `relationship`, `counterparties[]`, `figures[]` (`label`, `value`, `unit`, `quality`, optional `note`), `sources[]` (`title`, `url`, `kind` = `primary` | `secondary`), `notes`
+- `items[]`: deals and relationships. Each item has `id`, `node`, `type`, `title`, `as_of`, `tier_relevance`, `tone`, `tone_source`, `relationship`, `counterparties[]`, `figures[]` (`label`, `value`, `unit`, `quality`, optional `note`), `sources[]` (`title`, `url`, `kind` = `primary` | `secondary`), `notes`
+  - `tone`: `positive` | `neutral` | `negative`, from the perspective of AI circular-financing risk. **Positive** (green) = de-risking or healthy financing news. **Negative** (red) = rising circularity, stress or credit risk. **Neutral** (yellow) = mixed or informational. The page shows a badge and a left border, plus a legend in section 2. Outstanding watches may carry the same fields.
+  - `tone_source`: `bot` if the AI Alert bot supplied the tone in its saved output; `derived` if it was classified from the item text and the latest scan notes (the bot has no per-item tone field in the 11 Nov 2026 files). Prefer the bot's own tone when it exists.
 - `combined_links[]`: short connections to the token-demand feed (`id`, `title`, `text`)
 - `source_files[]` (optional, box paths; not shown on the page)
 
@@ -93,9 +96,22 @@ Recommended top-level keys:
 
 The page charts whatever series are present and leaves a “no data” notice if a series is missing. It does not invent points. Public-safe Token Demand pack charts are redrawn in Chart.js from these series; screenshots of third-party documents or sites and charts built on credit-terminal or licensed prints are not included.
 
+The overview (section 1) also shows the Hyperliquid implied-valuation and per-share charts, plus pack charts 01 and 04, on separate canvas IDs. Pack chart 01 is OpenRouter weekly token volume and growth. Pack chart 04 is Ramp price per million tokens and heavy-user PEPM. The same charts remain in section 3.
+
+## Public-page leak check
+
+Before publishing, grep the four publish files (`index.html`, `README.md`, `data/circular_financing.json`, `data/token_demand.json`) so they do not contain licensed or internal-only material. Do not publish `_build/excluded_internal.json`. From this folder:
+
+```
+rg -n -i -f _build/leak_patterns.txt index.html README.md data/circular_financing.json data/token_demand.json
+```
+
+`_build/leak_patterns.txt` (not published) lists standing-rule source names and distinctive excluded figures from `_build/excluded_internal.json`. Hits must be resolved or justified (for example a generic “excluded” category with no figure).
+
 ## This edition (built 11 Nov 2026)
 
 - Circular financing: last scan 11 Nov 2026 ~07:45 Europe/Zurich; independent check ~07:50–08:00. No new Watch-or-higher user alert that morning. Outstanding Watch: Anthropic supplier placement (10 Nov, V). Bank-reluctance item (9 Nov) remains U.
-- Token demand: weekly pack dated Sun 8 Nov 2026, 18:32 Europe/Zurich (OpenRouter snapshot 17:42). No later saved pack was found on the box. Section 3 redraws the seven pack charts in Chart.js from the public series. The same section also shows Hyperliquid HIP-3 quotes and curated Polymarket/Kalshi markets for Anthropic and OpenAI, fetched 11 Nov 2026 (Europe/Zurich) from the public APIs; those blocks have their own `as_of` and do not refresh the 8 Nov pack.
+- Token demand: weekly pack dated Sun 8 Nov 2026, 18:32 Europe/Zurich (OpenRouter snapshot 17:42). No later saved pack was found on the box. Section 3 redraws the seven pack charts in Chart.js from the public series. The same section also shows Hyperliquid HIP-3 quotes and curated Polymarket/Kalshi markets for Anthropic and OpenAI, fetched 11 Nov 2026 (Europe/Zurich) from the public APIs; those blocks have their own `as_of` and do not refresh the 8 Nov pack. Section 1 repeats the Hyperliquid charts and pack charts 01 and 04.
+- Circular-financing tones on the 11 Nov 2026 items are `tone_source: derived` (the bot files had no per-item tone field). The overview current-state box is the top-level `summary` object, as of the 11 Nov independent check (~08:00 Europe/Zurich).
 
 Internal and licensed material was left out of both JSON files. Public `excluded` entries are generic categories only; the detailed list is not published.
