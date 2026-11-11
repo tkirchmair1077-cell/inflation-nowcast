@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "feed": "circular_financing",
   "bot": {
     "name": "AI Circular Financing Alert Bot",
@@ -22,7 +22,9 @@
         "node": "Anthropic",
         "headline": "Supplier equity placement funding a customer that has ~$900.9bn compute and infrastructure commitments to the same supplier set.",
         "quality": "V",
-        "note": "Independently checked the same afternoon. IPO liquidity reduces near-term funding risk; this is a circularity-structure signal, not a default signal."
+        "note": "Independently checked the same afternoon. IPO liquidity reduces near-term funding risk; this is a circularity-structure signal, not a default signal.",
+        "tone": "negative",
+        "tone_source": "derived"
       },
       {
         "date": "2026-11-09",
@@ -31,9 +33,16 @@
         "node": "Lenders / neoclouds",
         "headline": "Some banks reportedly reluctant to finance additional AI deals even with big-tech guarantees (Anthropic, Google named as backstops; lenders unnamed).",
         "quality": "U",
-        "note": "Reuters via Investing.com, anonymous sources. No named lender withdrawal from a guaranteed deal was found in subsequent checks through 11 Nov morning."
+        "note": "Reuters via Investing.com, anonymous sources. No named lender withdrawal from a guaranteed deal was found in subsequent checks through 11 Nov morning.",
+        "tone": "negative",
+        "tone_source": "derived"
       }
     ]
+  },
+  "summary": {
+    "text": "The 11 Nov morning scan (~07:45 Europe/Zurich) found no new or materially changed verified Watch-or-higher signal. An outstanding Watch remains on Anthropic’s 10 Nov supplier equity placement: a $26bn concurrent Class N purchase by compute and chip suppliers (V), while Anthropic has $900.9bn of compute and infrastructure commitments to the same supplier set (V). IPO liquidity reduces near-term funding risk; this is a circularity-structure signal, not a default signal. CoreWeave’s Q3 8-K, accepted 10 Nov 22:05 Europe/Zurich, showed revenue of $3.661bn (V), a raised FY26 revenue guide of $13.0–13.3bn (V), about $9bn of customer prepayments or deposits expected in the next three months (V), interest expense at 4.1× GAAP operating income (d), and recourse plus non-recourse debt of $46.873bn (d); the scan treated this as mixed, net near-term de-risking at that node and below a new-Watch threshold. The Q3 10-Q had not been filed as of 11 Nov 07:50 Europe/Zurich, and no dated post-earnings CoreWeave CDS or bond print was obtained (data gap). The 9 Nov item on banks reluctant to fund guaranteed AI deals remains unverified (U); no named lender withdrawal was found through the 11 Nov morning check.",
+    "as_of": "2026-11-11T08:00:00+01:00",
+    "source": "AI Circular Financing Alert Bot; 11 Nov 2026 morning delta (~07:45 Europe/Zurich) and independent check (~08:00), plus items in this feed"
   },
   "items": [
     {
@@ -44,6 +53,8 @@
       "as_of": "2026-11-10",
       "event_time": "2026-11-10T22:05:53+01:00",
       "tier_relevance": "Below new-Watch threshold (11 Nov morning). Stress elements are continuations, not a new node signal. No post-earnings CDS or bond print was obtained.",
+      "tone": "neutral",
+      "tone_source": "derived",
       "relationship": "Neocloud node in the OpenAI / Microsoft / Nvidia financing loop. Q3 10-Q (customer concentration, Nvidia arrangements) had not been filed as of 11 Nov 07:50 Europe/Zurich.",
       "counterparties": [
         "OpenAI",
@@ -221,6 +232,8 @@
       "as_of": "2026-11-10",
       "event_time": "2026-11-10T12:29:00+01:00",
       "tier_relevance": "Watch (10 Nov PM)",
+      "tone": "negative",
+      "tone_source": "derived",
       "relationship": "Compute and chip suppliers commit to buy $26bn of Class N stock at the IPO price, while Anthropic has large committed spend with the same group.",
       "counterparties": [
         "Google",
@@ -339,6 +352,8 @@
       "title": "Q2 FY2026 results, LTV/NAV, and OpenAI-linked financing",
       "as_of": "2026-11-10",
       "tier_relevance": "Morning pending item closed on 10 Nov PM; below Watch on its own. Links SoftBank liquidity to OpenAI's valuation via a guaranteed share-backed loan.",
+      "tone": "negative",
+      "tone_source": "derived",
       "relationship": "SoftBank is an OpenAI investor; a $10bn SVF2 share-backed loan is guaranteed by SBG and can require early repayment or cash collateral if OpenAI preferred-share value falls significantly.",
       "counterparties": [
         "OpenAI",
@@ -452,6 +467,8 @@
       "title": "Reported bank reluctance to fund additional guaranteed AI deals",
       "as_of": "2026-11-09",
       "tier_relevance": "Provisional Watch, 9 Nov PM. Still unverified through the 11 Nov morning check.",
+      "tone": "negative",
+      "tone_source": "derived",
       "relationship": "If accurate, weakens the guarantee / residual-backstop channel that funds neocloud capex.",
       "counterparties": [
         "Anthropic (named as a backstop, declined comment)",
@@ -479,6 +496,8 @@
       "title": "ECB letter on circular financing in the AI ecosystem",
       "as_of": "2026-11-06",
       "tier_relevance": "Official qualitative flag. No new quantified euro-area exposures.",
+      "tone": "neutral",
+      "tone_source": "derived",
       "relationship": "Flags interlinked ownership and mutual commitments, and debt-like off-balance-sheet lease or purchase commitments.",
       "counterparties": [],
       "figures": [],
@@ -498,6 +517,8 @@
       "title": "Reported funding-round cut and first close (secondary)",
       "as_of": "2026-11-06",
       "tier_relevance": "On the exposure map since the 6 Nov baseline. Not re-verified from an issuer primary document.",
+      "tone": "neutral",
+      "tone_source": "derived",
       "relationship": "Private-lab funding conditions feed offtake credibility at Oracle, CoreWeave and other suppliers. SoftBank is a disclosed investor (see SoftBank item, V).",
       "counterparties": [
         "SoftBank",
@@ -537,6 +558,8 @@
       "title": "$20bn common stock and senior notes (priced 2 Nov, closed 4 Nov)",
       "as_of": "2026-11-04",
       "tier_relevance": "On the exposure map; not a new 11 Nov alert.",
+      "tone": "positive",
+      "tone_source": "derived",
       "relationship": "Issuer financing of the AI build-out. Official OpenAI share of remaining performance obligations has not been published by Oracle in the sources used here.",
       "counterparties": [
         "OpenAI (reported customer concentration, not issuer-primary)"
@@ -590,6 +613,8 @@
       "title": "BIS Bulletin 140: building AI on credit",
       "as_of": "2026-10-27",
       "tier_relevance": "Structural context.",
+      "tone": "neutral",
+      "tone_source": "derived",
       "relationship": "Describes credit structures, vendor backstops, lease commitments and spillovers.",
       "counterparties": [],
       "figures": [
@@ -637,6 +662,8 @@
       "title": "Residual-value backstop for an AI-rack lease SPV",
       "as_of": "2026-10-27",
       "tier_relevance": "On the exposure map; not a new 11 Nov alert.",
+      "tone": "negative",
+      "tone_source": "derived",
       "relationship": "Vendor residual-value support on leases, analogous in form (not in legal terms or caps) to Nvidia's disclosed capacity/guarantee structures. The 8-K does not name the customer.",
       "counterparties": [
         "Unnamed customer (secondary reports name Anthropic, U)"
@@ -666,6 +693,8 @@
       "title": "BIS Bulletin 137: circular relationships among AI firms",
       "as_of": "2026-10-01",
       "tier_relevance": "Structural context. Not a current stress print and not a reason, on its own, to escalate a tier.",
+      "tone": "neutral",
+      "tone_source": "derived",
       "relationship": "Documents overlap between financial and supplier-customer relationships among AI firms, 2021–2025.",
       "counterparties": [],
       "figures": [
@@ -718,6 +747,8 @@
       "title": "SB Energy / OpenAI residual-value guarantees and other AI-cloud commitments (Q2 FY27 10-Q / 8-K)",
       "as_of": "2026-07-26",
       "tier_relevance": "On the exposure map; filings as of 26 Jul / 17 Aug 2026. Next 10-Q expected around 17 Nov (secondary timing).",
+      "tone": "negative",
+      "tone_source": "derived",
       "relationship": "Nvidia provides residual-value credit support on SB Energy leases in Ohio where an OpenAI affiliate is the tenant, plus other AI-cloud offtake and lease commitments.",
       "counterparties": [
         "OpenAI",
@@ -811,7 +842,8 @@
     "BIS 137 percentages are document findings; the proprietary PitchBook/FactSet microdata were not replicated. 'Circular' there is a relational classification over 2021–2025, not proof of a closed cash loop on one deal.",
     "Call quotes use the official CoreWeave IR transcript. Press paraphrases that say 'financing' instead of 'capital', or that collapse two different 75% denominators, are not used.",
     "This page is a research compilation, not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich.",
-    "Saved review packs include screenshots of third-party documents or sites and charts built on credit-terminal or licensed prints; those images are not shown. Official-flag figures appear as a table."
+    "Saved review packs include screenshots of third-party documents or sites and charts built on credit-terminal or licensed prints; those images are not shown. Official-flag figures appear as a table.",
+    "Item tone (positive / neutral / negative) is a derived classification of circular-financing risk for this page (positive = de-risking or healthy financing; negative = rising circularity, stress or credit risk; neutral = mixed or informational). It is not a credit rating."
   ],
   "excluded": [
     {
