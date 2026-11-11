@@ -49,6 +49,14 @@ Do not put licensed bank or broker research, paid or licensed datasets, or other
 Recommended top-level keys:
 
 - `status`: `current_user_alert`, `summary`, `last_scan`, `last_independent_check`, `outstanding_watches[]`
+
+Required date order: circular-financing alerts must **always** be listed newest first.
+
+- Prefer `event_time` when present, otherwise `as_of` (or `date` on outstanding watches). Date-only values (`YYYY-MM-DD`) sort as the start of that calendar day in Europe/Zurich, so a same-day item that carries a time appears first.
+- Items with no date go last and must be flagged (`No date`).
+- The page sorts at **render time** in `index.html`. Do not rely on JSON array order.
+- Still write `items[]` (and `outstanding_watches[]`) newest-first in this feed so other readers of the file follow the same rule. Date is the first column on the deals table.
+
 - `items[]`: deals and relationships. Each item has `id`, `node`, `type`, `title`, `as_of`, `tier_relevance`, `relationship`, `counterparties[]`, `figures[]` (`label`, `value`, `unit`, `quality`, optional `note`), `sources[]` (`title`, `url`, `kind` = `primary` | `secondary`), `notes`
 - `combined_links[]`: short connections to the token-demand feed (`id`, `title`, `text`)
 - `source_files[]` (optional, box paths; not shown on the page)
@@ -77,6 +85,10 @@ Recommended top-level keys:
   - `vercel_open_weight_preference.points[]`: `date`, `share_pct`, `share_7d`
   - `ramp_tokenomics_table.points[]`: `metric`, `week_ending_latest`, `week_ending_compare`, `value_latest`, `change`, `retrieved`
   - `npm_coding_agent_windows.points[]`: `package`, `window`, `downloads`, `compare_window`, `change_pct`
+
+- `hyperliquid`: live HIP-3 perpetual quotes for Anthropic and OpenAI confirmed from the public Hyperliquid info API (`as_of`, `markets[]`, `series`, `notes`, `source`). Do not invent tickers. Implied fully diluted valuation is derived only for Entropy `io:` markets, where official docs define $1 as $1 billion of FD valuation. Per-share contracts (`xyz:ANT`, `para:ANTH`) are stored as USD marks only. Flag thin markets. Delisted and unrelated spot tokens are not live issuer quotes.
+- `prediction_markets`: curated public Polymarket and Kalshi contracts on OpenAI and Anthropic (`as_of`, `markets[]` with yes-probability, volume, resolution date, link, thin flag; `series` for chart history). Confirm titles and tickers from the APIs. Yes-probabilities are API-read contract prices, not forecasts. Do not include contracts whose titles name underwriting banks.
+
 - `bot_charts`: catalog of the 8 Nov 2026 pack charts redrawn on the page (`intro`, `items[]` with `id`, `pack_file`, `title`, `caption`, `source`, `quality`, `derived`, `as_of`)
 
 The page charts whatever series are present and leaves a “no data” notice if a series is missing. It does not invent points. Public-safe Token Demand pack charts are redrawn in Chart.js from these series; screenshots of third-party documents or sites and charts built on credit-terminal or licensed prints are not included.
@@ -84,6 +96,6 @@ The page charts whatever series are present and leaves a “no data” notice if
 ## This edition (built 11 Nov 2026)
 
 - Circular financing: last scan 11 Nov 2026 ~07:45 Europe/Zurich; independent check ~07:50–08:00. No new Watch-or-higher user alert that morning. Outstanding Watch: Anthropic supplier placement (10 Nov, V). Bank-reluctance item (9 Nov) remains U.
-- Token demand: weekly pack dated Sun 8 Nov 2026, 18:32 Europe/Zurich (OpenRouter snapshot 17:42). No later saved pack was found on the box. Section 3 redraws the seven pack charts in Chart.js from the public series.
+- Token demand: weekly pack dated Sun 8 Nov 2026, 18:32 Europe/Zurich (OpenRouter snapshot 17:42). No later saved pack was found on the box. Section 3 redraws the seven pack charts in Chart.js from the public series. The same section also shows Hyperliquid HIP-3 quotes and curated Polymarket/Kalshi markets for Anthropic and OpenAI, fetched 11 Nov 2026 (Europe/Zurich) from the public APIs; those blocks have their own `as_of` and do not refresh the 8 Nov pack.
 
 Internal and licensed material was left out of both JSON files. Public `excluded` entries are generic categories only; the detailed list is not published.
