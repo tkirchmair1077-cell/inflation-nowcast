@@ -8708,7 +8708,9 @@
     "Portkey: chart-array sums do not match the page headline cards (weekly card spend was −0.0% vs chart +4.4%). Use within-series changes only.",
     "npm includes CI installs; tokensperday.com is stale since 16 Jul 2026 and is not shown.",
     "This edition's bottom line on financing/credit uses only the circular-financing feed and public filings on this page. Broker forecasts and terminal credit prints cited in the original pack are excluded from this public page (see excluded).",
-    "Charts in section 3 are Chart.js redraws of the 8 Nov 2026 pack from public OpenRouter, Ramp, Vercel and Portkey series already in this feed. Earlier edition images of the same public series are not shown separately."
+    "Charts in section 3 are Chart.js redraws of the 8 Nov 2026 pack from public OpenRouter, Ramp, Vercel and Portkey series already in this feed. Earlier edition images of the same public series are not shown separately.",
+    "Hyperliquid figures are public HIP-3 perpetual marks from the official info API, not equity or IPO prices. Contract units and oracles differ by deployer (official docs). Implied fully diluted valuation is derived only where the official contract defines a price of $1 as $1 billion of fully diluted valuation. 24-hour change is versus the API previous-day reference, not an official equity close. Annualised funding is a simple 24×365 scaling of the hourly rate and is not a forecast. Some builder-deployed markets are thin. Not investment advice.",
+    "Prediction-market yes-probabilities are API-read contract prices from Polymarket and Kalshi, not forecasts. Resolution rules can differ from headlines. Thin markets are flagged. Not investment advice."
   ],
   "excluded": [
     {
@@ -8734,6 +8736,14 @@
     {
       "item": "Earlier edition images of the same public token series",
       "reason": "Not shown separately; the 8 Nov 2026 pack is redrawn instead."
+    },
+    {
+      "item": "Delisted pre-IPO perpetual markets and unrelated spot tokens",
+      "reason": "Not shown as live issuer quotes."
+    },
+    {
+      "item": "Prediction-market contracts whose titles name underwriting banks",
+      "reason": "Omitted from the public table."
     }
   ],
   "bot_charts": {
@@ -8813,5 +8823,7170 @@
         "as_of": "2026-11-08"
       }
     ]
+  },
+  "hyperliquid": {
+    "as_of": "2026-11-11T12:33:27.530340+01:00",
+    "timezone": "Europe/Zurich",
+    "source": "https://api.hyperliquid.xyz/info",
+    "spec_docs": [
+      "https://docs.entropy.io/market-types/pre-ipo-perpetuals.md",
+      "https://docs.trade.xyz/",
+      "https://docs.paragon.trade/"
+    ],
+    "notes": [
+      "Prices are cash-settled HIP-3 perpetual marks, not equity, IPO allocations or claims on the issuer.",
+      "Implied fully diluted valuation is derived only for Entropy io: markets, where official docs state that a price of $1 represents $1 billion of fully diluted valuation.",
+      "xyz:ANT and para:ANTH are official per-share (expected share price) contracts; no implied valuation is derived for them.",
+      "24h change is markPx / prevDayPx - 1, against the API previous-day reference, not an official equity close.",
+      "Funding from the API is an hourly rate; annualisation is funding × 24 × 365 and is not a forecast.",
+      "Open-interest notional is openInterest × markPx (one side).",
+      "Ventuals vntl:OPENAI and vntl:ANTHROPIC are delisted (API isDelisted). They are not live quotes.",
+      "Spot tickers ANT (ANT POWER) and OPENAI are not issuer equity markets and are not shown as quotes."
+    ],
+    "markets": [
+      {
+        "coin": "io:ANTH",
+        "dex": "io",
+        "dex_full_name": "EntropyIO",
+        "deployer_address": "0x320c8988e3d1b5198f335802d7bfd2728a8fcac6",
+        "issuer": "Anthropic PBC",
+        "unit": "Fully diluted valuation; a price of $1 represents $1 billion (Entropy Pre-IPO Perpetuals docs).",
+        "unit_kind": "valuation_usd_per_billion",
+        "spec_docs": "https://docs.entropy.io/asset-directory/pre-ipo-assets.md",
+        "oracle_methodology": "Blended internal EMA of the io order-book mid and an external private-market aggregate delivered onchain by RedStone (docs.entropy.io/pre-ipo-perp-mechanics/oracle-price.md and market-types/pre-ipo-perpetuals.md).",
+        "bounds": "Published mark/oracle clipped to 300–4,200 before listing.",
+        "no_ipo_resolution": "2028-08-18",
+        "margin_mode_docs": "Cross (docs); API does not set onlyIsolated.",
+        "max_leverage": 15,
+        "only_isolated": false,
+        "growth_mode": "enabled",
+        "mark_px": 1811.2,
+        "oracle_px": 1811.3,
+        "mid_px": 1813.4,
+        "prev_day_px": 1637.0,
+        "chg_24h_vs_prevDayPx": 0.10641417226634098,
+        "funding_hourly": -6.6574e-06,
+        "funding_annualized_simple": -0.058318824,
+        "open_interest_units": 108042.1680000001,
+        "open_interest_notional_usd": 195685974.6816002,
+        "volume_24h_usd": 139307747.23430005,
+        "implied_valuation_usd": 1811200000000.0,
+        "implied_valuation_tn": 1.8112,
+        "thin_liquidity": false,
+        "quality_api": "V",
+        "quality_derived": "(d)"
+      },
+      {
+        "coin": "xyz:ANT",
+        "dex": "xyz",
+        "dex_full_name": "XYZ",
+        "deployer_address": "0x88806a71d74ad0a510b350545c9ae490912f0888",
+        "issuer": "Anthropic PBC",
+        "unit": "References 1 share of Anthropic, PBC Class A common stock (expected Nasdaq: ANT), quoted in USD (trade.xyz Pre-IPO Specification Index).",
+        "unit_kind": "usd_per_share",
+        "spec_docs": "https://docs.trade.xyz/perpetuals/specifications-and-schedules/pre-ipo-specification-index.md",
+        "oracle_methodology": "trade.xyz pre-IPO / internal discovery mechanics (see official pre-IPO perpetuals docs). Anticipated listing 20 Nov 2026, grace period to 19 Jan 2027.",
+        "bounds": "Discovery bound ±50%, max 3 resets per direction; initial reference $125.",
+        "no_ipo_resolution": null,
+        "margin_mode_docs": "Cross margin (docs).",
+        "max_leverage": 10,
+        "only_isolated": false,
+        "growth_mode": "enabled",
+        "mark_px": 104.65,
+        "oracle_px": 104.65,
+        "mid_px": 104.665,
+        "prev_day_px": 95.401,
+        "chg_24h_vs_prevDayPx": 0.09694866930116053,
+        "funding_hourly": -1.3978e-06,
+        "funding_annualized_simple": -0.012244727999999998,
+        "open_interest_units": 1025026.3800000001,
+        "open_interest_notional_usd": 107269010.66700003,
+        "volume_24h_usd": 105417882.11653017,
+        "implied_valuation_usd": null,
+        "implied_valuation_tn": null,
+        "thin_liquidity": false,
+        "quality_api": "V",
+        "quality_derived": "(d)"
+      },
+      {
+        "coin": "io:OAI",
+        "dex": "io",
+        "dex_full_name": "EntropyIO",
+        "deployer_address": "0x320c8988e3d1b5198f335802d7bfd2728a8fcac6",
+        "issuer": "OpenAI Group PBC",
+        "unit": "Fully diluted valuation; a price of $1 represents $1 billion (Entropy Pre-IPO Perpetuals docs).",
+        "unit_kind": "valuation_usd_per_billion",
+        "spec_docs": "https://docs.entropy.io/asset-directory/pre-ipo-assets.md",
+        "oracle_methodology": "Blended internal EMA of the io order-book mid and an external private-market aggregate delivered onchain by RedStone (docs.entropy.io/pre-ipo-perp-mechanics/oracle-price.md and market-types/pre-ipo-perpetuals.md).",
+        "bounds": "Published mark/oracle clipped to 200–3,000 before listing.",
+        "no_ipo_resolution": "2028-09-02",
+        "margin_mode_docs": "Cross (docs); API does not set onlyIsolated.",
+        "max_leverage": 6,
+        "only_isolated": false,
+        "growth_mode": "enabled",
+        "mark_px": 1332.5,
+        "oracle_px": 1330.7,
+        "mid_px": 1330.35,
+        "prev_day_px": 1326.3,
+        "chg_24h_vs_prevDayPx": 0.00467465882530349,
+        "funding_hourly": -4.3874e-06,
+        "funding_annualized_simple": -0.038433624,
+        "open_interest_units": 5772.304,
+        "open_interest_notional_usd": 7691595.08,
+        "volume_24h_usd": 4079578.5804000017,
+        "implied_valuation_usd": 1332500000000.0,
+        "implied_valuation_tn": 1.3325,
+        "thin_liquidity": false,
+        "quality_api": "V",
+        "quality_derived": "(d)"
+      },
+      {
+        "coin": "para:ANTH",
+        "dex": "para",
+        "dex_full_name": "Paragon",
+        "deployer_address": "0x8888888c43cbb7e1c4132542e46831bffd866ed3",
+        "issuer": "Anthropic PBC",
+        "unit": "Tracks the expected value of one share of Anthropic, PBC, quoted in USD (Paragon Contract Specifications).",
+        "unit_kind": "usd_per_share",
+        "spec_docs": "https://docs.paragon.trade/resources/specifications.md",
+        "oracle_methodology": "Internal pre-listing EMA of the market's impact price (docs.paragon.trade/markets/equities/pre-listing-pricing.md). No qualifying external public-equity price while Pre-Listing.",
+        "bounds": "±10% bounds, 15 re-anchors per direction; launch reference $110.",
+        "no_ipo_resolution": null,
+        "margin_mode_docs": "Isolated (docs and API onlyIsolated / strictIsolated).",
+        "max_leverage": 10,
+        "only_isolated": true,
+        "growth_mode": "enabled",
+        "mark_px": 104.13,
+        "oracle_px": 104.39,
+        "mid_px": 104.235,
+        "prev_day_px": 93.019,
+        "chg_24h_vs_prevDayPx": 0.11944871477870111,
+        "funding_hourly": 4.427e-07,
+        "funding_annualized_simple": 0.0038780520000000003,
+        "open_interest_units": 778.572,
+        "open_interest_notional_usd": 81072.70236,
+        "volume_24h_usd": 17931.01017,
+        "implied_valuation_usd": null,
+        "implied_valuation_tn": null,
+        "thin_liquidity": true,
+        "quality_api": "V",
+        "quality_derived": "(d)"
+      }
+    ],
+    "series": {
+      "io:ANTH": {
+        "coin": "io:ANTH",
+        "interval": "1d",
+        "n": 85,
+        "start": "2026-08-19",
+        "end": "2026-11-11",
+        "points": [
+          {
+            "date": "2026-08-19",
+            "close": 1801.5,
+            "implied_valuation_tn": 1.8015
+          },
+          {
+            "date": "2026-08-20",
+            "close": 1829.1,
+            "implied_valuation_tn": 1.8291
+          },
+          {
+            "date": "2026-08-21",
+            "close": 1880.6,
+            "implied_valuation_tn": 1.8806
+          },
+          {
+            "date": "2026-08-22",
+            "close": 1894.0,
+            "implied_valuation_tn": 1.894
+          },
+          {
+            "date": "2026-08-23",
+            "close": 1911.5,
+            "implied_valuation_tn": 1.9115
+          },
+          {
+            "date": "2026-08-24",
+            "close": 1963.0,
+            "implied_valuation_tn": 1.963
+          },
+          {
+            "date": "2026-08-25",
+            "close": 2006.7,
+            "implied_valuation_tn": 2.0067
+          },
+          {
+            "date": "2026-08-26",
+            "close": 1987.1,
+            "implied_valuation_tn": 1.9871
+          },
+          {
+            "date": "2026-08-27",
+            "close": 1952.1,
+            "implied_valuation_tn": 1.9521
+          },
+          {
+            "date": "2026-08-28",
+            "close": 1945.3,
+            "implied_valuation_tn": 1.9453
+          },
+          {
+            "date": "2026-08-29",
+            "close": 1913.4,
+            "implied_valuation_tn": 1.9134
+          },
+          {
+            "date": "2026-08-30",
+            "close": 1877.0,
+            "implied_valuation_tn": 1.877
+          },
+          {
+            "date": "2026-08-31",
+            "close": 1939.5,
+            "implied_valuation_tn": 1.9395
+          },
+          {
+            "date": "2026-09-01",
+            "close": 1966.5,
+            "implied_valuation_tn": 1.9665
+          },
+          {
+            "date": "2026-09-02",
+            "close": 1967.6,
+            "implied_valuation_tn": 1.9676
+          },
+          {
+            "date": "2026-09-03",
+            "close": 1962.3,
+            "implied_valuation_tn": 1.9623
+          },
+          {
+            "date": "2026-09-04",
+            "close": 1949.5,
+            "implied_valuation_tn": 1.9495
+          },
+          {
+            "date": "2026-09-05",
+            "close": 1979.6,
+            "implied_valuation_tn": 1.9796
+          },
+          {
+            "date": "2026-09-06",
+            "close": 1983.3,
+            "implied_valuation_tn": 1.9833
+          },
+          {
+            "date": "2026-09-07",
+            "close": 2023.3,
+            "implied_valuation_tn": 2.0233
+          },
+          {
+            "date": "2026-09-08",
+            "close": 2191.2,
+            "implied_valuation_tn": 2.1912
+          },
+          {
+            "date": "2026-09-09",
+            "close": 2279.5,
+            "implied_valuation_tn": 2.2795
+          },
+          {
+            "date": "2026-09-10",
+            "close": 2153.7,
+            "implied_valuation_tn": 2.1536999999999997
+          },
+          {
+            "date": "2026-09-11",
+            "close": 2178.3,
+            "implied_valuation_tn": 2.1783
+          },
+          {
+            "date": "2026-09-12",
+            "close": 2103.6,
+            "implied_valuation_tn": 2.1036
+          },
+          {
+            "date": "2026-09-13",
+            "close": 2142.5,
+            "implied_valuation_tn": 2.1425
+          },
+          {
+            "date": "2026-09-14",
+            "close": 2204.9,
+            "implied_valuation_tn": 2.2049
+          },
+          {
+            "date": "2026-09-15",
+            "close": 2184.4,
+            "implied_valuation_tn": 2.1844
+          },
+          {
+            "date": "2026-09-16",
+            "close": 2170.6,
+            "implied_valuation_tn": 2.1706
+          },
+          {
+            "date": "2026-09-17",
+            "close": 2155.6,
+            "implied_valuation_tn": 2.1556
+          },
+          {
+            "date": "2026-09-18",
+            "close": 2170.1,
+            "implied_valuation_tn": 2.1701
+          },
+          {
+            "date": "2026-09-19",
+            "close": 2154.8,
+            "implied_valuation_tn": 2.1548000000000003
+          },
+          {
+            "date": "2026-09-20",
+            "close": 2143.7,
+            "implied_valuation_tn": 2.1437
+          },
+          {
+            "date": "2026-09-21",
+            "close": 2166.1,
+            "implied_valuation_tn": 2.1661
+          },
+          {
+            "date": "2026-09-22",
+            "close": 2189.5,
+            "implied_valuation_tn": 2.1895
+          },
+          {
+            "date": "2026-09-23",
+            "close": 2164.5,
+            "implied_valuation_tn": 2.1645
+          },
+          {
+            "date": "2026-09-24",
+            "close": 2092.6,
+            "implied_valuation_tn": 2.0926
+          },
+          {
+            "date": "2026-09-25",
+            "close": 2092.4,
+            "implied_valuation_tn": 2.0924
+          },
+          {
+            "date": "2026-09-26",
+            "close": 2066.4,
+            "implied_valuation_tn": 2.0664
+          },
+          {
+            "date": "2026-09-27",
+            "close": 2116.0,
+            "implied_valuation_tn": 2.116
+          },
+          {
+            "date": "2026-09-28",
+            "close": 2077.2,
+            "implied_valuation_tn": 2.0772
+          },
+          {
+            "date": "2026-09-29",
+            "close": 2037.4,
+            "implied_valuation_tn": 2.0374
+          },
+          {
+            "date": "2026-09-30",
+            "close": 2083.4,
+            "implied_valuation_tn": 2.0834
+          },
+          {
+            "date": "2026-10-01",
+            "close": 2087.5,
+            "implied_valuation_tn": 2.0875
+          },
+          {
+            "date": "2026-10-02",
+            "close": 2075.8,
+            "implied_valuation_tn": 2.0758
+          },
+          {
+            "date": "2026-10-03",
+            "close": 2076.7,
+            "implied_valuation_tn": 2.0766999999999998
+          },
+          {
+            "date": "2026-10-04",
+            "close": 2083.7,
+            "implied_valuation_tn": 2.0837
+          },
+          {
+            "date": "2026-10-05",
+            "close": 2088.6,
+            "implied_valuation_tn": 2.0886
+          },
+          {
+            "date": "2026-10-06",
+            "close": 2138.4,
+            "implied_valuation_tn": 2.1384
+          },
+          {
+            "date": "2026-10-07",
+            "close": 2115.4,
+            "implied_valuation_tn": 2.1154
+          },
+          {
+            "date": "2026-10-08",
+            "close": 2066.1,
+            "implied_valuation_tn": 2.0661
+          },
+          {
+            "date": "2026-10-09",
+            "close": 2071.1,
+            "implied_valuation_tn": 2.0711
+          },
+          {
+            "date": "2026-10-10",
+            "close": 2090.6,
+            "implied_valuation_tn": 2.0906
+          },
+          {
+            "date": "2026-10-11",
+            "close": 2082.5,
+            "implied_valuation_tn": 2.0825
+          },
+          {
+            "date": "2026-10-12",
+            "close": 2057.9,
+            "implied_valuation_tn": 2.0579
+          },
+          {
+            "date": "2026-10-13",
+            "close": 2031.4,
+            "implied_valuation_tn": 2.0314
+          },
+          {
+            "date": "2026-10-14",
+            "close": 1940.9,
+            "implied_valuation_tn": 1.9409
+          },
+          {
+            "date": "2026-10-15",
+            "close": 1857.7,
+            "implied_valuation_tn": 1.8577
+          },
+          {
+            "date": "2026-10-16",
+            "close": 1924.6,
+            "implied_valuation_tn": 1.9246
+          },
+          {
+            "date": "2026-10-17",
+            "close": 1889.1,
+            "implied_valuation_tn": 1.8891
+          },
+          {
+            "date": "2026-10-18",
+            "close": 1925.8,
+            "implied_valuation_tn": 1.9258
+          },
+          {
+            "date": "2026-10-19",
+            "close": 1982.8,
+            "implied_valuation_tn": 1.9828
+          },
+          {
+            "date": "2026-10-20",
+            "close": 1953.2,
+            "implied_valuation_tn": 1.9532
+          },
+          {
+            "date": "2026-10-21",
+            "close": 1965.8,
+            "implied_valuation_tn": 1.9658
+          },
+          {
+            "date": "2026-10-22",
+            "close": 1937.8,
+            "implied_valuation_tn": 1.9378
+          },
+          {
+            "date": "2026-10-23",
+            "close": 1938.2,
+            "implied_valuation_tn": 1.9382
+          },
+          {
+            "date": "2026-10-24",
+            "close": 1912.8,
+            "implied_valuation_tn": 1.9128
+          },
+          {
+            "date": "2026-10-25",
+            "close": 1901.2,
+            "implied_valuation_tn": 1.9012
+          },
+          {
+            "date": "2026-10-26",
+            "close": 1880.8,
+            "implied_valuation_tn": 1.8808
+          },
+          {
+            "date": "2026-10-27",
+            "close": 1884.7,
+            "implied_valuation_tn": 1.8847
+          },
+          {
+            "date": "2026-10-28",
+            "close": 1872.8,
+            "implied_valuation_tn": 1.8728
+          },
+          {
+            "date": "2026-10-29",
+            "close": 1811.1,
+            "implied_valuation_tn": 1.8111
+          },
+          {
+            "date": "2026-10-30",
+            "close": 1726.6,
+            "implied_valuation_tn": 1.7266
+          },
+          {
+            "date": "2026-10-31",
+            "close": 1794.7,
+            "implied_valuation_tn": 1.7947
+          },
+          {
+            "date": "2026-11-01",
+            "close": 1804.4,
+            "implied_valuation_tn": 1.8044
+          },
+          {
+            "date": "2026-11-02",
+            "close": 1731.4,
+            "implied_valuation_tn": 1.7314
+          },
+          {
+            "date": "2026-11-03",
+            "close": 1788.4,
+            "implied_valuation_tn": 1.7884
+          },
+          {
+            "date": "2026-11-04",
+            "close": 1865.4,
+            "implied_valuation_tn": 1.8654
+          },
+          {
+            "date": "2026-11-05",
+            "close": 1718.6,
+            "implied_valuation_tn": 1.7186
+          },
+          {
+            "date": "2026-11-06",
+            "close": 1526.5,
+            "implied_valuation_tn": 1.5265
+          },
+          {
+            "date": "2026-11-07",
+            "close": 1587.0,
+            "implied_valuation_tn": 1.587
+          },
+          {
+            "date": "2026-11-08",
+            "close": 1593.2,
+            "implied_valuation_tn": 1.5932
+          },
+          {
+            "date": "2026-11-09",
+            "close": 1684.4,
+            "implied_valuation_tn": 1.6844
+          },
+          {
+            "date": "2026-11-10",
+            "close": 1736.7,
+            "implied_valuation_tn": 1.7367
+          },
+          {
+            "date": "2026-11-11",
+            "close": 1813.4,
+            "implied_valuation_tn": 1.8134
+          }
+        ]
+      },
+      "io:OAI": {
+        "coin": "io:OAI",
+        "interval": "1d",
+        "n": 71,
+        "start": "2026-09-02",
+        "end": "2026-11-11",
+        "points": [
+          {
+            "date": "2026-09-02",
+            "close": 1360.1,
+            "implied_valuation_tn": 1.3601
+          },
+          {
+            "date": "2026-09-03",
+            "close": 1455.5,
+            "implied_valuation_tn": 1.4555
+          },
+          {
+            "date": "2026-09-04",
+            "close": 1469.0,
+            "implied_valuation_tn": 1.469
+          },
+          {
+            "date": "2026-09-05",
+            "close": 1494.2,
+            "implied_valuation_tn": 1.4942
+          },
+          {
+            "date": "2026-09-06",
+            "close": 1485.4,
+            "implied_valuation_tn": 1.4854
+          },
+          {
+            "date": "2026-09-07",
+            "close": 1516.8,
+            "implied_valuation_tn": 1.5168
+          },
+          {
+            "date": "2026-09-08",
+            "close": 1619.9,
+            "implied_valuation_tn": 1.6199
+          },
+          {
+            "date": "2026-09-09",
+            "close": 1644.8,
+            "implied_valuation_tn": 1.6448
+          },
+          {
+            "date": "2026-09-10",
+            "close": 1629.1,
+            "implied_valuation_tn": 1.6291
+          },
+          {
+            "date": "2026-09-11",
+            "close": 1681.6,
+            "implied_valuation_tn": 1.6816
+          },
+          {
+            "date": "2026-09-12",
+            "close": 1565.2,
+            "implied_valuation_tn": 1.5652
+          },
+          {
+            "date": "2026-09-13",
+            "close": 1493.9,
+            "implied_valuation_tn": 1.4939
+          },
+          {
+            "date": "2026-09-14",
+            "close": 1569.8,
+            "implied_valuation_tn": 1.5698
+          },
+          {
+            "date": "2026-09-15",
+            "close": 1534.0,
+            "implied_valuation_tn": 1.534
+          },
+          {
+            "date": "2026-09-16",
+            "close": 1569.6,
+            "implied_valuation_tn": 1.5696
+          },
+          {
+            "date": "2026-09-17",
+            "close": 1572.6,
+            "implied_valuation_tn": 1.5726
+          },
+          {
+            "date": "2026-09-18",
+            "close": 1580.5,
+            "implied_valuation_tn": 1.5805
+          },
+          {
+            "date": "2026-09-19",
+            "close": 1617.5,
+            "implied_valuation_tn": 1.6175
+          },
+          {
+            "date": "2026-09-20",
+            "close": 1616.0,
+            "implied_valuation_tn": 1.616
+          },
+          {
+            "date": "2026-09-21",
+            "close": 1678.0,
+            "implied_valuation_tn": 1.678
+          },
+          {
+            "date": "2026-09-22",
+            "close": 1701.1,
+            "implied_valuation_tn": 1.7011
+          },
+          {
+            "date": "2026-09-23",
+            "close": 1650.4,
+            "implied_valuation_tn": 1.6504
+          },
+          {
+            "date": "2026-09-24",
+            "close": 1628.1,
+            "implied_valuation_tn": 1.6281
+          },
+          {
+            "date": "2026-09-25",
+            "close": 1632.4,
+            "implied_valuation_tn": 1.6324
+          },
+          {
+            "date": "2026-09-26",
+            "close": 1637.9,
+            "implied_valuation_tn": 1.6379
+          },
+          {
+            "date": "2026-09-27",
+            "close": 1658.2,
+            "implied_valuation_tn": 1.6582
+          },
+          {
+            "date": "2026-09-28",
+            "close": 1623.2,
+            "implied_valuation_tn": 1.6232
+          },
+          {
+            "date": "2026-09-29",
+            "close": 1680.8,
+            "implied_valuation_tn": 1.6808
+          },
+          {
+            "date": "2026-09-30",
+            "close": 1636.8,
+            "implied_valuation_tn": 1.6368
+          },
+          {
+            "date": "2026-10-01",
+            "close": 1589.7,
+            "implied_valuation_tn": 1.5897
+          },
+          {
+            "date": "2026-10-02",
+            "close": 1616.2,
+            "implied_valuation_tn": 1.6162
+          },
+          {
+            "date": "2026-10-03",
+            "close": 1631.7,
+            "implied_valuation_tn": 1.6317
+          },
+          {
+            "date": "2026-10-04",
+            "close": 1640.2,
+            "implied_valuation_tn": 1.6402
+          },
+          {
+            "date": "2026-10-05",
+            "close": 1646.3,
+            "implied_valuation_tn": 1.6463
+          },
+          {
+            "date": "2026-10-06",
+            "close": 1694.0,
+            "implied_valuation_tn": 1.694
+          },
+          {
+            "date": "2026-10-07",
+            "close": 1730.9,
+            "implied_valuation_tn": 1.7309
+          },
+          {
+            "date": "2026-10-08",
+            "close": 1674.2,
+            "implied_valuation_tn": 1.6742
+          },
+          {
+            "date": "2026-10-09",
+            "close": 1690.3,
+            "implied_valuation_tn": 1.6903
+          },
+          {
+            "date": "2026-10-10",
+            "close": 1713.7,
+            "implied_valuation_tn": 1.7137
+          },
+          {
+            "date": "2026-10-11",
+            "close": 1696.5,
+            "implied_valuation_tn": 1.6965
+          },
+          {
+            "date": "2026-10-12",
+            "close": 1681.3,
+            "implied_valuation_tn": 1.6813
+          },
+          {
+            "date": "2026-10-13",
+            "close": 1655.1,
+            "implied_valuation_tn": 1.6551
+          },
+          {
+            "date": "2026-10-14",
+            "close": 1624.8,
+            "implied_valuation_tn": 1.6248
+          },
+          {
+            "date": "2026-10-15",
+            "close": 1529.5,
+            "implied_valuation_tn": 1.5295
+          },
+          {
+            "date": "2026-10-16",
+            "close": 1529.8,
+            "implied_valuation_tn": 1.5298
+          },
+          {
+            "date": "2026-10-17",
+            "close": 1499.1,
+            "implied_valuation_tn": 1.4991
+          },
+          {
+            "date": "2026-10-18",
+            "close": 1517.7,
+            "implied_valuation_tn": 1.5177
+          },
+          {
+            "date": "2026-10-19",
+            "close": 1534.5,
+            "implied_valuation_tn": 1.5345
+          },
+          {
+            "date": "2026-10-20",
+            "close": 1517.4,
+            "implied_valuation_tn": 1.5174
+          },
+          {
+            "date": "2026-10-21",
+            "close": 1537.8,
+            "implied_valuation_tn": 1.5378
+          },
+          {
+            "date": "2026-10-22",
+            "close": 1501.0,
+            "implied_valuation_tn": 1.501
+          },
+          {
+            "date": "2026-10-23",
+            "close": 1467.9,
+            "implied_valuation_tn": 1.4679
+          },
+          {
+            "date": "2026-10-24",
+            "close": 1420.3,
+            "implied_valuation_tn": 1.4203
+          },
+          {
+            "date": "2026-10-25",
+            "close": 1419.0,
+            "implied_valuation_tn": 1.419
+          },
+          {
+            "date": "2026-10-26",
+            "close": 1435.9,
+            "implied_valuation_tn": 1.4359
+          },
+          {
+            "date": "2026-10-27",
+            "close": 1499.2,
+            "implied_valuation_tn": 1.4992
+          },
+          {
+            "date": "2026-10-28",
+            "close": 1496.9,
+            "implied_valuation_tn": 1.4969
+          },
+          {
+            "date": "2026-10-29",
+            "close": 1458.2,
+            "implied_valuation_tn": 1.4582
+          },
+          {
+            "date": "2026-10-30",
+            "close": 1428.5,
+            "implied_valuation_tn": 1.4285
+          },
+          {
+            "date": "2026-10-31",
+            "close": 1400.5,
+            "implied_valuation_tn": 1.4005
+          },
+          {
+            "date": "2026-11-01",
+            "close": 1404.1,
+            "implied_valuation_tn": 1.4041
+          },
+          {
+            "date": "2026-11-02",
+            "close": 1395.3,
+            "implied_valuation_tn": 1.3953
+          },
+          {
+            "date": "2026-11-03",
+            "close": 1398.7,
+            "implied_valuation_tn": 1.3987
+          },
+          {
+            "date": "2026-11-04",
+            "close": 1401.5,
+            "implied_valuation_tn": 1.4015
+          },
+          {
+            "date": "2026-11-05",
+            "close": 1351.4,
+            "implied_valuation_tn": 1.3514
+          },
+          {
+            "date": "2026-11-06",
+            "close": 1288.1,
+            "implied_valuation_tn": 1.2881
+          },
+          {
+            "date": "2026-11-07",
+            "close": 1324.2,
+            "implied_valuation_tn": 1.3242
+          },
+          {
+            "date": "2026-11-08",
+            "close": 1344.2,
+            "implied_valuation_tn": 1.3442
+          },
+          {
+            "date": "2026-11-09",
+            "close": 1372.1,
+            "implied_valuation_tn": 1.3721
+          },
+          {
+            "date": "2026-11-10",
+            "close": 1291.9,
+            "implied_valuation_tn": 1.2919
+          },
+          {
+            "date": "2026-11-11",
+            "close": 1330.5,
+            "implied_valuation_tn": 1.3305
+          }
+        ]
+      },
+      "xyz:ANT": {
+        "coin": "xyz:ANT",
+        "interval": "1d",
+        "n": 17,
+        "start": "2026-10-26",
+        "end": "2026-11-11",
+        "points": [
+          {
+            "date": "2026-10-26",
+            "close": 114.35,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-10-27",
+            "close": 116.96,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-10-28",
+            "close": 117.45,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-10-29",
+            "close": 111.52,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-10-30",
+            "close": 113.01,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-10-31",
+            "close": 110.6,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-01",
+            "close": 111.73,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-02",
+            "close": 106.49,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-03",
+            "close": 112.18,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-04",
+            "close": 117.41,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-05",
+            "close": 107.86,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-06",
+            "close": 94.29,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-07",
+            "close": 97.82,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-08",
+            "close": 98.032,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-09",
+            "close": 102.36,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-10",
+            "close": 100.24,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-11",
+            "close": 104.65,
+            "implied_valuation_tn": null
+          }
+        ]
+      },
+      "para:ANTH": {
+        "coin": "para:ANTH",
+        "interval": "1d",
+        "n": 16,
+        "start": "2026-10-27",
+        "end": "2026-11-11",
+        "points": [
+          {
+            "date": "2026-10-27",
+            "close": 115.1,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-10-28",
+            "close": 117.33,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-10-29",
+            "close": 111.53,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-10-30",
+            "close": 113.16,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-10-31",
+            "close": 111.67,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-01",
+            "close": 111.86,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-02",
+            "close": 107.52,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-03",
+            "close": 111.77,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-04",
+            "close": 116.31,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-05",
+            "close": 107.92,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-06",
+            "close": 93.469,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-07",
+            "close": 97.528,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-08",
+            "close": 97.52,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-09",
+            "close": 102.26,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-10",
+            "close": 96.809,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-11",
+            "close": 103.71,
+            "implied_valuation_tn": null
+          }
+        ]
+      }
+    },
+    "delisted": [
+      {
+        "coin": "vntl:ANTHROPIC",
+        "dex_full_name": "Ventuals",
+        "note": "API isDelisted; not a live quote."
+      },
+      {
+        "coin": "vntl:OPENAI",
+        "dex_full_name": "Ventuals",
+        "note": "API isDelisted; not a live quote."
+      }
+    ]
+  },
+  "prediction_markets": {
+    "as_of": "2026-11-11T12:34:20.491752+01:00",
+    "timezone": "Europe/Zurich",
+    "sources": [
+      "https://gamma-api.polymarket.com",
+      "https://clob.polymarket.com/prices-history",
+      "https://api.elections.kalshi.com/trade-api/v2"
+    ],
+    "notes": [
+      "Yes-probabilities are API-read contract prices (Polymarket outcomePrices or Kalshi yes bid/ask mid), not forecasts.",
+      "These contracts have their own resolution rules, which can differ from headlines.",
+      "The table is a curated subset of open, relevant markets confirmed from the public APIs. Thin markets are flagged.",
+      "Not investment advice."
+    ],
+    "markets": [
+      {
+        "platform": "Polymarket",
+        "ticker": "will-anthropic-ipo-by-december-31-2026-546-128-719",
+        "title": "Will Anthropic IPO by December 31, 2026?",
+        "event_title": "Anthropic IPO by __?",
+        "yes_probability": 0.9815,
+        "volume_usd": 1985819.3823870001,
+        "liquidity_usd": 42006.06803,
+        "volume_24h_usd": 69926.97091200002,
+        "end_date": "2027-01-01T04:59:00Z",
+        "url": "https://polymarket.com/event/anthropic-ipo-by/will-anthropic-ipo-by-december-31-2026-546-128-719",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": true
+      },
+      {
+        "platform": "Polymarket",
+        "ticker": "will-anthropic-ipo-by-november-30-2026",
+        "title": "Will Anthropic IPO by November 30, 2026?",
+        "event_title": "Anthropic IPO by __?",
+        "yes_probability": 0.968,
+        "volume_usd": 821582.5939430001,
+        "liquidity_usd": 37759.64791,
+        "volume_24h_usd": 24948.110775999998,
+        "end_date": "2026-12-01T04:59:00Z",
+        "url": "https://polymarket.com/event/anthropic-ipo-by/will-anthropic-ipo-by-november-30-2026",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": false
+      },
+      {
+        "platform": "Kalshi",
+        "ticker": "KXIPOANTHROPIC-DATE-26NOV16",
+        "title": "When will Anthropic officially announce an IPO? (Before Nov 16, 2026)",
+        "event_title": "When will Anthropic officially announce an IPO?",
+        "yes_probability": 0.005,
+        "volume_usd": 1085189.31,
+        "liquidity_usd": null,
+        "volume_24h_usd": 502624.12,
+        "end_date": "2026-11-16T04:59:00Z",
+        "url": "https://kalshi.com/markets/kxipoanthropic-date/kxipoanthropic-date-26nov16",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": false
+      },
+      {
+        "platform": "Kalshi",
+        "ticker": "KXIPOANTHROPIC-DATE-26DEC01",
+        "title": "When will Anthropic officially announce an IPO? (Before Dec 1, 2026)",
+        "event_title": "When will Anthropic officially announce an IPO?",
+        "yes_probability": 0.975,
+        "volume_usd": 633021.41,
+        "liquidity_usd": null,
+        "volume_24h_usd": 70724.84,
+        "end_date": "2026-12-01T04:59:00Z",
+        "url": "https://kalshi.com/markets/kxipoanthropic-date/kxipoanthropic-date-26dec01",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": true
+      },
+      {
+        "platform": "Polymarket",
+        "ticker": "will-anthropics-valuation-hit-high-1pt5t-by-december-31-797",
+        "title": "Will Anthropic's valuation hit (HIGH) $1.5T by December 31?",
+        "event_title": "Will Anthropic’s valuation hit __ by December 31?",
+        "yes_probability": 0.7555,
+        "volume_usd": 498247.68542999995,
+        "liquidity_usd": 66099.05995,
+        "volume_24h_usd": 50778.103988,
+        "end_date": "2027-01-05T04:59:00Z",
+        "url": "https://polymarket.com/event/will-anthropics-valuation-hit-by-december-31/will-anthropics-valuation-hit-high-1pt5t-by-december-31-797",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": false
+      },
+      {
+        "platform": "Polymarket",
+        "ticker": "will-anthropics-valuation-hit-high-2pt0t-by-december-31-922",
+        "title": "Will Anthropic's valuation hit (HIGH) $2.0T by December 31?",
+        "event_title": "Will Anthropic’s valuation hit __ by December 31?",
+        "yes_probability": 0.215,
+        "volume_usd": 1066063.7768179998,
+        "liquidity_usd": 38651.5024,
+        "volume_24h_usd": 69365.84096399999,
+        "end_date": "2027-01-05T04:59:00Z",
+        "url": "https://polymarket.com/event/will-anthropics-valuation-hit-by-december-31/will-anthropics-valuation-hit-high-2pt0t-by-december-31-922",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": true
+      },
+      {
+        "platform": "Polymarket",
+        "ticker": "will-anthropics-valuation-hit-high-3pt0t-by-december-31",
+        "title": "Will Anthropic's valuation hit (HIGH) $3.0T by December 31?",
+        "event_title": "Will Anthropic’s valuation hit __ by December 31?",
+        "yes_probability": 0.045,
+        "volume_usd": 1867591.1234379997,
+        "liquidity_usd": 61647.3258,
+        "volume_24h_usd": 54871.28,
+        "end_date": "2027-01-05T04:59:00Z",
+        "url": "https://polymarket.com/event/will-anthropics-valuation-hit-by-december-31/will-anthropics-valuation-hit-high-3pt0t-by-december-31",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": false
+      },
+      {
+        "platform": "Polymarket",
+        "ticker": "will-anthropics-market-cap-be-1pt8t-or-greater-at-market-close-on-ipo-day-by-december-31-2027",
+        "title": "Will Anthropic’s market cap be 1.8T or greater at market close on IPO day by December 31 2027?",
+        "event_title": "Anthropic IPO Closing Market Cap (Middle Brackets)",
+        "yes_probability": 0.19,
+        "volume_usd": 415381.59082100005,
+        "liquidity_usd": 14059.0272,
+        "volume_24h_usd": 26768.835343,
+        "end_date": "2028-01-01T04:59:00Z",
+        "url": "https://polymarket.com/event/anthropic-ipo-closing-market-cap-979/will-anthropics-market-cap-be-1pt8t-or-greater-at-market-close-on-ipo-day-by-december-31-2027",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": false
+      },
+      {
+        "platform": "Polymarket",
+        "ticker": "will-openai-ipo-by-december-31-2026",
+        "title": "Will OpenAI IPO by December 31 2026?",
+        "event_title": "OpenAI IPO by...?",
+        "yes_probability": 0.015,
+        "volume_usd": 1125357.9773950004,
+        "liquidity_usd": 30857.92093,
+        "volume_24h_usd": 5.0,
+        "end_date": "2027-01-01T04:59:00Z",
+        "url": "https://polymarket.com/event/openai-ipo-by/will-openai-ipo-by-december-31-2026",
+        "thin": true,
+        "thin_reasons": [
+          "24h volume very low versus lifetime volume"
+        ],
+        "quality": "V",
+        "chart": true
+      },
+      {
+        "platform": "Kalshi",
+        "ticker": "KXIPOOPENAI-27JAN01",
+        "title": "When will OpenAI IPO? (Before Jan 1, 2027)",
+        "event_title": "When will OpenAI IPO?",
+        "yes_probability": 0.015,
+        "volume_usd": 158867.91,
+        "liquidity_usd": null,
+        "volume_24h_usd": 1.0,
+        "end_date": "2027-01-01T04:59:00Z",
+        "url": "https://kalshi.com/markets/kxipoopenai/kxipoopenai-27jan01",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": true
+      },
+      {
+        "platform": "Kalshi",
+        "ticker": "KXIPOOPENAI-26DEC01",
+        "title": "When will OpenAI IPO? (Before Dec 1, 2026)",
+        "event_title": "When will OpenAI IPO?",
+        "yes_probability": 0.005,
+        "volume_usd": 102724.19,
+        "liquidity_usd": null,
+        "volume_24h_usd": 0.0,
+        "end_date": "2026-12-01T04:59:00Z",
+        "url": "https://kalshi.com/markets/kxipoopenai/kxipoopenai-26dec01",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": false
+      },
+      {
+        "platform": "Kalshi",
+        "ticker": "KXOAIANTH-40-ANTH",
+        "title": "Will Open AI or Anthropic IPO first?",
+        "event_title": "Will Open AI or Anthropic IPO first?",
+        "yes_probability": 0.985,
+        "volume_usd": 235864.75,
+        "liquidity_usd": null,
+        "volume_24h_usd": 299.33,
+        "end_date": "2040-01-01T04:59:00Z",
+        "url": "https://kalshi.com/markets/kxoaianth-40/kxoaianth-40-anth",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": false
+      },
+      {
+        "platform": "Polymarket",
+        "ticker": "openai-ipo-closing-market-cap-above-1t",
+        "title": "OpenAI IPO closing market cap above $1T?",
+        "event_title": "OpenAI IPO closing market cap above ___ ?",
+        "yes_probability": 0.665,
+        "volume_usd": 1061990.50992,
+        "liquidity_usd": 3317.4807,
+        "volume_24h_usd": 97.0582,
+        "end_date": "2028-01-01T04:59:00Z",
+        "url": "https://polymarket.com/event/openai-ipo-closing-market-cap-above/openai-ipo-closing-market-cap-above-1t",
+        "thin": true,
+        "thin_reasons": [
+          "liquidity under $5k",
+          "24h volume very low versus lifetime volume"
+        ],
+        "quality": "V",
+        "chart": false
+      },
+      {
+        "platform": "Polymarket",
+        "ticker": "will-openais-market-cap-be-1pt5t-or-greater-at-market-close-on-ipo-day-by-december-31-2027-911",
+        "title": "Will OpenAI’s market cap be $1.5T or greater at market close on IPO day by December 31, 2027?",
+        "event_title": "OpenAI IPO Closing Market Cap",
+        "yes_probability": 0.29,
+        "volume_usd": 176702.934908,
+        "liquidity_usd": 10601.47283,
+        "volume_24h_usd": 2451.519219,
+        "end_date": "2028-01-01T04:59:00Z",
+        "url": "https://polymarket.com/event/openai-ipo-closing-market-cap-554/will-openais-market-cap-be-1pt5t-or-greater-at-market-close-on-ipo-day-by-december-31-2027-911",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": false
+      },
+      {
+        "platform": "Polymarket",
+        "ticker": "next-astra-model-6pt1-released-by-december-31-2026",
+        "title": "Next Astra Model (6.1+) released by December 31, 2026?",
+        "event_title": "GPT Astra 6.1+ released by...?",
+        "yes_probability": 0.977,
+        "volume_usd": 188206.812684,
+        "liquidity_usd": 9420.98061,
+        "volume_24h_usd": 1443.1618520000002,
+        "end_date": "2027-01-01T04:59:00Z",
+        "url": "https://polymarket.com/event/gpt-astra-6pt1-released-byptptpt/next-astra-model-6pt1-released-by-december-31-2026",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": true
+      },
+      {
+        "platform": "Polymarket",
+        "ticker": "will-openai-launch-a-new-consumer-hardware-product-by-december-31-2026-538",
+        "title": "Will OpenAI launch a new consumer hardware product by December 31, 2026?",
+        "event_title": "Will OpenAI launch a consumer hardware product by...?",
+        "yes_probability": 0.155,
+        "volume_usd": 110233.892774,
+        "liquidity_usd": 5079.3276,
+        "volume_24h_usd": 903.003334,
+        "end_date": "2027-01-01T04:59:00Z",
+        "url": "https://polymarket.com/event/will-openai-launch-a-consumer-hardware-product-by/will-openai-launch-a-new-consumer-hardware-product-by-december-31-2026-538",
+        "thin": false,
+        "thin_reasons": [],
+        "quality": "V",
+        "chart": false
+      }
+    ],
+    "series": {
+      "will-anthropic-ipo-by-december-31-2026-546-128-719": {
+        "platform": "Polymarket",
+        "ticker": "will-anthropic-ipo-by-december-31-2026-546-128-719",
+        "title": "Will Anthropic IPO by December 31, 2026?",
+        "event_title": "Anthropic IPO by __?",
+        "n": 155,
+        "start": "2026-06-02",
+        "end": "2026-11-11",
+        "points": [
+          {
+            "date": "2026-06-02",
+            "yes_probability": 0.89
+          },
+          {
+            "date": "2026-06-03",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-06-04",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-06-05",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-06-06",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-06-07",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-06-08",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-06-09",
+            "yes_probability": 0.895
+          },
+          {
+            "date": "2026-06-10",
+            "yes_probability": 0.895
+          },
+          {
+            "date": "2026-06-11",
+            "yes_probability": 0.895
+          },
+          {
+            "date": "2026-06-12",
+            "yes_probability": 0.895
+          },
+          {
+            "date": "2026-06-13",
+            "yes_probability": 0.895
+          },
+          {
+            "date": "2026-06-14",
+            "yes_probability": 0.775
+          },
+          {
+            "date": "2026-06-15",
+            "yes_probability": 0.765
+          },
+          {
+            "date": "2026-06-16",
+            "yes_probability": 0.775
+          },
+          {
+            "date": "2026-06-17",
+            "yes_probability": 0.775
+          },
+          {
+            "date": "2026-06-18",
+            "yes_probability": 0.765
+          },
+          {
+            "date": "2026-06-19",
+            "yes_probability": 0.75
+          },
+          {
+            "date": "2026-06-20",
+            "yes_probability": 0.685
+          },
+          {
+            "date": "2026-06-21",
+            "yes_probability": 0.72
+          },
+          {
+            "date": "2026-06-22",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-06-23",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-06-24",
+            "yes_probability": 0.745
+          },
+          {
+            "date": "2026-06-25",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-06-26",
+            "yes_probability": 0.78
+          },
+          {
+            "date": "2026-06-27",
+            "yes_probability": 0.76
+          },
+          {
+            "date": "2026-06-28",
+            "yes_probability": 0.76
+          },
+          {
+            "date": "2026-06-29",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-06-30",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-07-01",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-07-02",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-07-03",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-07-04",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-07-05",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-07-06",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-07-07",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-07-08",
+            "yes_probability": 0.61
+          },
+          {
+            "date": "2026-07-09",
+            "yes_probability": 0.615
+          },
+          {
+            "date": "2026-07-10",
+            "yes_probability": 0.625
+          },
+          {
+            "date": "2026-07-11",
+            "yes_probability": 0.625
+          },
+          {
+            "date": "2026-07-12",
+            "yes_probability": 0.625
+          },
+          {
+            "date": "2026-07-13",
+            "yes_probability": 0.655
+          },
+          {
+            "date": "2026-07-14",
+            "yes_probability": 0.655
+          },
+          {
+            "date": "2026-07-15",
+            "yes_probability": 0.665
+          },
+          {
+            "date": "2026-07-16",
+            "yes_probability": 0.745
+          },
+          {
+            "date": "2026-07-17",
+            "yes_probability": 0.77
+          },
+          {
+            "date": "2026-07-18",
+            "yes_probability": 0.765
+          },
+          {
+            "date": "2026-07-19",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-07-20",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-07-21",
+            "yes_probability": 0.685
+          },
+          {
+            "date": "2026-07-22",
+            "yes_probability": 0.645
+          },
+          {
+            "date": "2026-07-23",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-07-24",
+            "yes_probability": 0.695
+          },
+          {
+            "date": "2026-07-25",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-07-26",
+            "yes_probability": 0.705
+          },
+          {
+            "date": "2026-07-27",
+            "yes_probability": 0.71
+          },
+          {
+            "date": "2026-07-28",
+            "yes_probability": 0.71
+          },
+          {
+            "date": "2026-07-30",
+            "yes_probability": 0.705
+          },
+          {
+            "date": "2026-07-31",
+            "yes_probability": 0.675
+          },
+          {
+            "date": "2026-08-01",
+            "yes_probability": 0.625
+          },
+          {
+            "date": "2026-08-02",
+            "yes_probability": 0.685
+          },
+          {
+            "date": "2026-08-03",
+            "yes_probability": 0.68
+          },
+          {
+            "date": "2026-08-04",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-08-05",
+            "yes_probability": 0.665
+          },
+          {
+            "date": "2026-08-06",
+            "yes_probability": 0.675
+          },
+          {
+            "date": "2026-08-07",
+            "yes_probability": 0.68
+          },
+          {
+            "date": "2026-08-08",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-08-09",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-08-10",
+            "yes_probability": 0.735
+          },
+          {
+            "date": "2026-08-11",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-08-12",
+            "yes_probability": 0.835
+          },
+          {
+            "date": "2026-08-13",
+            "yes_probability": 0.8
+          },
+          {
+            "date": "2026-08-14",
+            "yes_probability": 0.815
+          },
+          {
+            "date": "2026-08-15",
+            "yes_probability": 0.825
+          },
+          {
+            "date": "2026-08-16",
+            "yes_probability": 0.825
+          },
+          {
+            "date": "2026-08-17",
+            "yes_probability": 0.825
+          },
+          {
+            "date": "2026-08-18",
+            "yes_probability": 0.845
+          },
+          {
+            "date": "2026-08-19",
+            "yes_probability": 0.85
+          },
+          {
+            "date": "2026-08-20",
+            "yes_probability": 0.895
+          },
+          {
+            "date": "2026-08-21",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-08-22",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-08-23",
+            "yes_probability": 0.9
+          },
+          {
+            "date": "2026-08-24",
+            "yes_probability": 0.905
+          },
+          {
+            "date": "2026-08-25",
+            "yes_probability": 0.91
+          },
+          {
+            "date": "2026-08-26",
+            "yes_probability": 0.925
+          },
+          {
+            "date": "2026-08-27",
+            "yes_probability": 0.915
+          },
+          {
+            "date": "2026-08-28",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-08-29",
+            "yes_probability": 0.955
+          },
+          {
+            "date": "2026-08-30",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-08-31",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-09-01",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-09-02",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-09-03",
+            "yes_probability": 0.955
+          },
+          {
+            "date": "2026-09-04",
+            "yes_probability": 0.955
+          },
+          {
+            "date": "2026-09-05",
+            "yes_probability": 0.95
+          },
+          {
+            "date": "2026-09-06",
+            "yes_probability": 0.91
+          },
+          {
+            "date": "2026-09-07",
+            "yes_probability": 0.895
+          },
+          {
+            "date": "2026-09-08",
+            "yes_probability": 0.865
+          },
+          {
+            "date": "2026-09-09",
+            "yes_probability": 0.895
+          },
+          {
+            "date": "2026-09-10",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-09-11",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-09-12",
+            "yes_probability": 0.91
+          },
+          {
+            "date": "2026-09-13",
+            "yes_probability": 0.875
+          },
+          {
+            "date": "2026-09-14",
+            "yes_probability": 0.855
+          },
+          {
+            "date": "2026-09-15",
+            "yes_probability": 0.855
+          },
+          {
+            "date": "2026-09-16",
+            "yes_probability": 0.855
+          },
+          {
+            "date": "2026-09-17",
+            "yes_probability": 0.855
+          },
+          {
+            "date": "2026-09-18",
+            "yes_probability": 0.865
+          },
+          {
+            "date": "2026-09-19",
+            "yes_probability": 0.805
+          },
+          {
+            "date": "2026-09-20",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-09-21",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-09-22",
+            "yes_probability": 0.785
+          },
+          {
+            "date": "2026-09-23",
+            "yes_probability": 0.785
+          },
+          {
+            "date": "2026-09-24",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-09-25",
+            "yes_probability": 0.775
+          },
+          {
+            "date": "2026-09-26",
+            "yes_probability": 0.76
+          },
+          {
+            "date": "2026-09-27",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-09-28",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-09-29",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-09-30",
+            "yes_probability": 0.815
+          },
+          {
+            "date": "2026-10-01",
+            "yes_probability": 0.805
+          },
+          {
+            "date": "2026-10-02",
+            "yes_probability": 0.82
+          },
+          {
+            "date": "2026-10-03",
+            "yes_probability": 0.83
+          },
+          {
+            "date": "2026-10-04",
+            "yes_probability": 0.855
+          },
+          {
+            "date": "2026-10-05",
+            "yes_probability": 0.83
+          },
+          {
+            "date": "2026-10-06",
+            "yes_probability": 0.815
+          },
+          {
+            "date": "2026-10-07",
+            "yes_probability": 0.825
+          },
+          {
+            "date": "2026-10-08",
+            "yes_probability": 0.825
+          },
+          {
+            "date": "2026-10-09",
+            "yes_probability": 0.815
+          },
+          {
+            "date": "2026-10-10",
+            "yes_probability": 0.765
+          },
+          {
+            "date": "2026-10-11",
+            "yes_probability": 0.745
+          },
+          {
+            "date": "2026-10-12",
+            "yes_probability": 0.745
+          },
+          {
+            "date": "2026-10-13",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-10-14",
+            "yes_probability": 0.695
+          },
+          {
+            "date": "2026-10-15",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-10-16",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-10-17",
+            "yes_probability": 0.705
+          },
+          {
+            "date": "2026-10-19",
+            "yes_probability": 0.735
+          },
+          {
+            "date": "2026-10-20",
+            "yes_probability": 0.775
+          },
+          {
+            "date": "2026-10-21",
+            "yes_probability": 0.785
+          },
+          {
+            "date": "2026-10-24",
+            "yes_probability": 0.795
+          },
+          {
+            "date": "2026-10-27",
+            "yes_probability": 0.94
+          },
+          {
+            "date": "2026-10-28",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-10-30",
+            "yes_probability": 0.9475
+          },
+          {
+            "date": "2026-11-01",
+            "yes_probability": 0.8585
+          },
+          {
+            "date": "2026-11-02",
+            "yes_probability": 0.92
+          },
+          {
+            "date": "2026-11-03",
+            "yes_probability": 0.9205
+          },
+          {
+            "date": "2026-11-04",
+            "yes_probability": 0.919
+          },
+          {
+            "date": "2026-11-05",
+            "yes_probability": 0.8955
+          },
+          {
+            "date": "2026-11-06",
+            "yes_probability": 0.721
+          },
+          {
+            "date": "2026-11-07",
+            "yes_probability": 0.906
+          },
+          {
+            "date": "2026-11-08",
+            "yes_probability": 0.873
+          },
+          {
+            "date": "2026-11-09",
+            "yes_probability": 0.871
+          },
+          {
+            "date": "2026-11-10",
+            "yes_probability": 0.968
+          },
+          {
+            "date": "2026-11-11",
+            "yes_probability": 0.9815
+          }
+        ],
+        "chart": true
+      },
+      "will-anthropics-valuation-hit-high-2pt0t-by-december-31-922": {
+        "platform": "Polymarket",
+        "ticker": "will-anthropics-valuation-hit-high-2pt0t-by-december-31-922",
+        "title": "Will Anthropic's valuation hit (HIGH) $2.0T by December 31?",
+        "event_title": "Will Anthropic’s valuation hit __ by December 31?",
+        "n": 170,
+        "start": "2026-05-20",
+        "end": "2026-11-11",
+        "points": [
+          {
+            "date": "2026-05-20",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2026-05-21",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2026-05-22",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-05-23",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-05-24",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-05-25",
+            "yes_probability": 0.44
+          },
+          {
+            "date": "2026-05-26",
+            "yes_probability": 0.45
+          },
+          {
+            "date": "2026-05-27",
+            "yes_probability": 0.465
+          },
+          {
+            "date": "2026-05-28",
+            "yes_probability": 0.465
+          },
+          {
+            "date": "2026-05-29",
+            "yes_probability": 0.455
+          },
+          {
+            "date": "2026-05-30",
+            "yes_probability": 0.455
+          },
+          {
+            "date": "2026-05-31",
+            "yes_probability": 0.45
+          },
+          {
+            "date": "2026-06-01",
+            "yes_probability": 0.455
+          },
+          {
+            "date": "2026-06-02",
+            "yes_probability": 0.455
+          },
+          {
+            "date": "2026-06-03",
+            "yes_probability": 0.445
+          },
+          {
+            "date": "2026-06-04",
+            "yes_probability": 0.42
+          },
+          {
+            "date": "2026-06-05",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-06-06",
+            "yes_probability": 0.41
+          },
+          {
+            "date": "2026-06-07",
+            "yes_probability": 0.405
+          },
+          {
+            "date": "2026-06-08",
+            "yes_probability": 0.41
+          },
+          {
+            "date": "2026-06-09",
+            "yes_probability": 0.41
+          },
+          {
+            "date": "2026-06-10",
+            "yes_probability": 0.415
+          },
+          {
+            "date": "2026-06-11",
+            "yes_probability": 0.415
+          },
+          {
+            "date": "2026-06-12",
+            "yes_probability": 0.415
+          },
+          {
+            "date": "2026-06-13",
+            "yes_probability": 0.49
+          },
+          {
+            "date": "2026-06-14",
+            "yes_probability": 0.435
+          },
+          {
+            "date": "2026-06-15",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-06-16",
+            "yes_probability": 0.395
+          },
+          {
+            "date": "2026-06-17",
+            "yes_probability": 0.465
+          },
+          {
+            "date": "2026-06-18",
+            "yes_probability": 0.465
+          },
+          {
+            "date": "2026-06-19",
+            "yes_probability": 0.455
+          },
+          {
+            "date": "2026-06-20",
+            "yes_probability": 0.445
+          },
+          {
+            "date": "2026-06-21",
+            "yes_probability": 0.445
+          },
+          {
+            "date": "2026-06-22",
+            "yes_probability": 0.425
+          },
+          {
+            "date": "2026-06-23",
+            "yes_probability": 0.43
+          },
+          {
+            "date": "2026-06-24",
+            "yes_probability": 0.4
+          },
+          {
+            "date": "2026-06-25",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-06-26",
+            "yes_probability": 0.395
+          },
+          {
+            "date": "2026-06-27",
+            "yes_probability": 0.395
+          },
+          {
+            "date": "2026-06-28",
+            "yes_probability": 0.395
+          },
+          {
+            "date": "2026-06-29",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-06-30",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-07-01",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2026-07-02",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2026-07-03",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-07-04",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2026-07-05",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-07-06",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-07-07",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-07-08",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-07-09",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2026-07-10",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-07-11",
+            "yes_probability": 0.465
+          },
+          {
+            "date": "2026-07-12",
+            "yes_probability": 0.475
+          },
+          {
+            "date": "2026-07-13",
+            "yes_probability": 0.465
+          },
+          {
+            "date": "2026-07-14",
+            "yes_probability": 0.4
+          },
+          {
+            "date": "2026-07-15",
+            "yes_probability": 0.445
+          },
+          {
+            "date": "2026-07-16",
+            "yes_probability": 0.43
+          },
+          {
+            "date": "2026-07-17",
+            "yes_probability": 0.415
+          },
+          {
+            "date": "2026-07-18",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2026-07-19",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2026-07-20",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2026-07-21",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2026-07-22",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-07-23",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-07-24",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-07-25",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-07-26",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-07-27",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-07-28",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-07-30",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-07-31",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2026-08-01",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-08-02",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2026-08-03",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2026-08-04",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2026-08-05",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2026-08-06",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-08-07",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2026-08-08",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-08-09",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2026-08-10",
+            "yes_probability": 0.395
+          },
+          {
+            "date": "2026-08-11",
+            "yes_probability": 0.395
+          },
+          {
+            "date": "2026-08-12",
+            "yes_probability": 0.405
+          },
+          {
+            "date": "2026-08-13",
+            "yes_probability": 0.435
+          },
+          {
+            "date": "2026-08-14",
+            "yes_probability": 0.585
+          },
+          {
+            "date": "2026-08-15",
+            "yes_probability": 0.665
+          },
+          {
+            "date": "2026-08-16",
+            "yes_probability": 0.665
+          },
+          {
+            "date": "2026-08-17",
+            "yes_probability": 0.665
+          },
+          {
+            "date": "2026-08-18",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-08-19",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-08-20",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-08-21",
+            "yes_probability": 0.665
+          },
+          {
+            "date": "2026-08-22",
+            "yes_probability": 0.645
+          },
+          {
+            "date": "2026-08-23",
+            "yes_probability": 0.665
+          },
+          {
+            "date": "2026-08-24",
+            "yes_probability": 0.665
+          },
+          {
+            "date": "2026-08-25",
+            "yes_probability": 0.695
+          },
+          {
+            "date": "2026-08-26",
+            "yes_probability": 0.695
+          },
+          {
+            "date": "2026-08-27",
+            "yes_probability": 0.735
+          },
+          {
+            "date": "2026-08-28",
+            "yes_probability": 0.72
+          },
+          {
+            "date": "2026-08-29",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-08-30",
+            "yes_probability": 0.765
+          },
+          {
+            "date": "2026-08-31",
+            "yes_probability": 0.775
+          },
+          {
+            "date": "2026-09-01",
+            "yes_probability": 0.815
+          },
+          {
+            "date": "2026-09-02",
+            "yes_probability": 0.77
+          },
+          {
+            "date": "2026-09-03",
+            "yes_probability": 0.79
+          },
+          {
+            "date": "2026-09-04",
+            "yes_probability": 0.79
+          },
+          {
+            "date": "2026-09-05",
+            "yes_probability": 0.815
+          },
+          {
+            "date": "2026-09-06",
+            "yes_probability": 0.815
+          },
+          {
+            "date": "2026-09-07",
+            "yes_probability": 0.815
+          },
+          {
+            "date": "2026-09-08",
+            "yes_probability": 0.81
+          },
+          {
+            "date": "2026-09-09",
+            "yes_probability": 0.805
+          },
+          {
+            "date": "2026-09-10",
+            "yes_probability": 0.86
+          },
+          {
+            "date": "2026-09-11",
+            "yes_probability": 0.845
+          },
+          {
+            "date": "2026-09-12",
+            "yes_probability": 0.835
+          },
+          {
+            "date": "2026-09-13",
+            "yes_probability": 0.815
+          },
+          {
+            "date": "2026-09-14",
+            "yes_probability": 0.815
+          },
+          {
+            "date": "2026-09-15",
+            "yes_probability": 0.81
+          },
+          {
+            "date": "2026-09-16",
+            "yes_probability": 0.8
+          },
+          {
+            "date": "2026-09-17",
+            "yes_probability": 0.805
+          },
+          {
+            "date": "2026-09-18",
+            "yes_probability": 0.785
+          },
+          {
+            "date": "2026-09-19",
+            "yes_probability": 0.79
+          },
+          {
+            "date": "2026-09-20",
+            "yes_probability": 0.795
+          },
+          {
+            "date": "2026-09-21",
+            "yes_probability": 0.76
+          },
+          {
+            "date": "2026-09-22",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-09-23",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-09-24",
+            "yes_probability": 0.665
+          },
+          {
+            "date": "2026-09-25",
+            "yes_probability": 0.665
+          },
+          {
+            "date": "2026-09-26",
+            "yes_probability": 0.685
+          },
+          {
+            "date": "2026-09-27",
+            "yes_probability": 0.685
+          },
+          {
+            "date": "2026-09-28",
+            "yes_probability": 0.685
+          },
+          {
+            "date": "2026-09-29",
+            "yes_probability": 0.655
+          },
+          {
+            "date": "2026-09-30",
+            "yes_probability": 0.76
+          },
+          {
+            "date": "2026-10-01",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-10-02",
+            "yes_probability": 0.735
+          },
+          {
+            "date": "2026-10-03",
+            "yes_probability": 0.735
+          },
+          {
+            "date": "2026-10-04",
+            "yes_probability": 0.735
+          },
+          {
+            "date": "2026-10-05",
+            "yes_probability": 0.735
+          },
+          {
+            "date": "2026-10-06",
+            "yes_probability": 0.735
+          },
+          {
+            "date": "2026-10-07",
+            "yes_probability": 0.765
+          },
+          {
+            "date": "2026-10-08",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-10-09",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-10-10",
+            "yes_probability": 0.765
+          },
+          {
+            "date": "2026-10-11",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-10-12",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-10-13",
+            "yes_probability": 0.695
+          },
+          {
+            "date": "2026-10-14",
+            "yes_probability": 0.685
+          },
+          {
+            "date": "2026-10-15",
+            "yes_probability": 0.595
+          },
+          {
+            "date": "2026-10-16",
+            "yes_probability": 0.585
+          },
+          {
+            "date": "2026-10-17",
+            "yes_probability": 0.565
+          },
+          {
+            "date": "2026-10-19",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-10-20",
+            "yes_probability": 0.565
+          },
+          {
+            "date": "2026-10-21",
+            "yes_probability": 0.605
+          },
+          {
+            "date": "2026-10-23",
+            "yes_probability": 0.605
+          },
+          {
+            "date": "2026-10-24",
+            "yes_probability": 0.605
+          },
+          {
+            "date": "2026-10-27",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-10-28",
+            "yes_probability": 0.705
+          },
+          {
+            "date": "2026-10-30",
+            "yes_probability": 0.695
+          },
+          {
+            "date": "2026-10-31",
+            "yes_probability": 0.705
+          },
+          {
+            "date": "2026-11-01",
+            "yes_probability": 0.695
+          },
+          {
+            "date": "2026-11-02",
+            "yes_probability": 0.66
+          },
+          {
+            "date": "2026-11-03",
+            "yes_probability": 0.655
+          },
+          {
+            "date": "2026-11-04",
+            "yes_probability": 0.64
+          },
+          {
+            "date": "2026-11-05",
+            "yes_probability": 0.615
+          },
+          {
+            "date": "2026-11-06",
+            "yes_probability": 0.435
+          },
+          {
+            "date": "2026-11-07",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2026-11-08",
+            "yes_probability": 0.325
+          },
+          {
+            "date": "2026-11-09",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2026-11-10",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2026-11-11",
+            "yes_probability": 0.215
+          }
+        ],
+        "chart": true
+      },
+      "will-openai-ipo-by-december-31-2026": {
+        "platform": "Polymarket",
+        "ticker": "will-openai-ipo-by-december-31-2026",
+        "title": "Will OpenAI IPO by December 31 2026?",
+        "event_title": "OpenAI IPO by...?",
+        "n": 345,
+        "start": "2025-10-31",
+        "end": "2026-11-11",
+        "points": [
+          {
+            "date": "2025-10-31",
+            "yes_probability": 0.455
+          },
+          {
+            "date": "2025-11-01",
+            "yes_probability": 0.455
+          },
+          {
+            "date": "2025-11-02",
+            "yes_probability": 0.41
+          },
+          {
+            "date": "2025-11-03",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2025-11-04",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2025-11-05",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2025-11-06",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-11-07",
+            "yes_probability": 0.395
+          },
+          {
+            "date": "2025-11-08",
+            "yes_probability": 0.4
+          },
+          {
+            "date": "2025-11-09",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2025-11-10",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2025-11-11",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2025-11-12",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2025-11-13",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2025-11-14",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2025-11-15",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-11-16",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-11-17",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-11-18",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-11-19",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-11-20",
+            "yes_probability": 0.335
+          },
+          {
+            "date": "2025-11-21",
+            "yes_probability": 0.335
+          },
+          {
+            "date": "2025-11-22",
+            "yes_probability": 0.335
+          },
+          {
+            "date": "2025-11-23",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-11-24",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-11-25",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-11-26",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-11-27",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-11-28",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-11-29",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-11-30",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-12-01",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-02",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-12-03",
+            "yes_probability": 0.325
+          },
+          {
+            "date": "2025-12-04",
+            "yes_probability": 0.335
+          },
+          {
+            "date": "2025-12-05",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-06",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-07",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-08",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2025-12-09",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-10",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2025-12-11",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-12",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-13",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-14",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-15",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-16",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-17",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-18",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-19",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-12-20",
+            "yes_probability": 0.335
+          },
+          {
+            "date": "2025-12-21",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-12-22",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-12-23",
+            "yes_probability": 0.335
+          },
+          {
+            "date": "2025-12-24",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2025-12-25",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-12-26",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2025-12-27",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2025-12-28",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2025-12-29",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2025-12-30",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2025-12-31",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2026-01-01",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2026-01-02",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2026-01-03",
+            "yes_probability": 0.335
+          },
+          {
+            "date": "2026-01-04",
+            "yes_probability": 0.295
+          },
+          {
+            "date": "2026-01-05",
+            "yes_probability": 0.305
+          },
+          {
+            "date": "2026-01-06",
+            "yes_probability": 0.3
+          },
+          {
+            "date": "2026-01-07",
+            "yes_probability": 0.31
+          },
+          {
+            "date": "2026-01-08",
+            "yes_probability": 0.31
+          },
+          {
+            "date": "2026-01-09",
+            "yes_probability": 0.305
+          },
+          {
+            "date": "2026-01-10",
+            "yes_probability": 0.275
+          },
+          {
+            "date": "2026-01-11",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-01-12",
+            "yes_probability": 0.285
+          },
+          {
+            "date": "2026-01-13",
+            "yes_probability": 0.29
+          },
+          {
+            "date": "2026-01-14",
+            "yes_probability": 0.275
+          },
+          {
+            "date": "2026-01-15",
+            "yes_probability": 0.29
+          },
+          {
+            "date": "2026-01-16",
+            "yes_probability": 0.285
+          },
+          {
+            "date": "2026-01-17",
+            "yes_probability": 0.29
+          },
+          {
+            "date": "2026-01-18",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-01-19",
+            "yes_probability": 0.245
+          },
+          {
+            "date": "2026-01-20",
+            "yes_probability": 0.275
+          },
+          {
+            "date": "2026-01-21",
+            "yes_probability": 0.275
+          },
+          {
+            "date": "2026-01-22",
+            "yes_probability": 0.265
+          },
+          {
+            "date": "2026-01-23",
+            "yes_probability": 0.265
+          },
+          {
+            "date": "2026-01-24",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-01-25",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2026-01-26",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2026-01-27",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2026-01-28",
+            "yes_probability": 0.31
+          },
+          {
+            "date": "2026-01-29",
+            "yes_probability": 0.305
+          },
+          {
+            "date": "2026-01-30",
+            "yes_probability": 0.46
+          },
+          {
+            "date": "2026-01-31",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2026-02-01",
+            "yes_probability": 0.41
+          },
+          {
+            "date": "2026-02-02",
+            "yes_probability": 0.415
+          },
+          {
+            "date": "2026-02-03",
+            "yes_probability": 0.495
+          },
+          {
+            "date": "2026-02-04",
+            "yes_probability": 0.545
+          },
+          {
+            "date": "2026-02-05",
+            "yes_probability": 0.525
+          },
+          {
+            "date": "2026-02-06",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-02-07",
+            "yes_probability": 0.51
+          },
+          {
+            "date": "2026-02-08",
+            "yes_probability": 0.485
+          },
+          {
+            "date": "2026-02-09",
+            "yes_probability": 0.475
+          },
+          {
+            "date": "2026-02-10",
+            "yes_probability": 0.475
+          },
+          {
+            "date": "2026-02-11",
+            "yes_probability": 0.47
+          },
+          {
+            "date": "2026-02-12",
+            "yes_probability": 0.48
+          },
+          {
+            "date": "2026-02-13",
+            "yes_probability": 0.485
+          },
+          {
+            "date": "2026-02-14",
+            "yes_probability": 0.515
+          },
+          {
+            "date": "2026-02-15",
+            "yes_probability": 0.535
+          },
+          {
+            "date": "2026-02-16",
+            "yes_probability": 0.535
+          },
+          {
+            "date": "2026-02-17",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-02-18",
+            "yes_probability": 0.515
+          },
+          {
+            "date": "2026-02-19",
+            "yes_probability": 0.51
+          },
+          {
+            "date": "2026-02-20",
+            "yes_probability": 0.515
+          },
+          {
+            "date": "2026-02-21",
+            "yes_probability": 0.47
+          },
+          {
+            "date": "2026-02-22",
+            "yes_probability": 0.475
+          },
+          {
+            "date": "2026-02-23",
+            "yes_probability": 0.465
+          },
+          {
+            "date": "2026-02-24",
+            "yes_probability": 0.505
+          },
+          {
+            "date": "2026-02-25",
+            "yes_probability": 0.495
+          },
+          {
+            "date": "2026-02-26",
+            "yes_probability": 0.475
+          },
+          {
+            "date": "2026-02-27",
+            "yes_probability": 0.455
+          },
+          {
+            "date": "2026-02-28",
+            "yes_probability": 0.41
+          },
+          {
+            "date": "2026-03-01",
+            "yes_probability": 0.41
+          },
+          {
+            "date": "2026-03-02",
+            "yes_probability": 0.4
+          },
+          {
+            "date": "2026-03-03",
+            "yes_probability": 0.445
+          },
+          {
+            "date": "2026-03-04",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2026-03-05",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-03-06",
+            "yes_probability": 0.455
+          },
+          {
+            "date": "2026-03-07",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-03-08",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-03-09",
+            "yes_probability": 0.385
+          },
+          {
+            "date": "2026-03-10",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-03-11",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2026-03-12",
+            "yes_probability": 0.42
+          },
+          {
+            "date": "2026-03-13",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-03-14",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-03-15",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2026-03-17",
+            "yes_probability": 0.3
+          },
+          {
+            "date": "2026-03-18",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2026-03-19",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2026-03-20",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2026-03-21",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2026-03-22",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2026-03-23",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2026-03-24",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2026-03-25",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2026-03-26",
+            "yes_probability": 0.345
+          },
+          {
+            "date": "2026-03-27",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2026-03-28",
+            "yes_probability": 0.405
+          },
+          {
+            "date": "2026-03-29",
+            "yes_probability": 0.4
+          },
+          {
+            "date": "2026-04-09",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2026-04-18",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2026-04-22",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2026-04-23",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2026-04-24",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-04-25",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2026-04-26",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2026-04-27",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2026-04-28",
+            "yes_probability": 0.305
+          },
+          {
+            "date": "2026-04-29",
+            "yes_probability": 0.3
+          },
+          {
+            "date": "2026-04-30",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2026-05-01",
+            "yes_probability": 0.325
+          },
+          {
+            "date": "2026-05-02",
+            "yes_probability": 0.24
+          },
+          {
+            "date": "2026-05-03",
+            "yes_probability": 0.295
+          },
+          {
+            "date": "2026-05-04",
+            "yes_probability": 0.295
+          },
+          {
+            "date": "2026-05-05",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2026-05-06",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2026-05-07",
+            "yes_probability": 0.29
+          },
+          {
+            "date": "2026-05-08",
+            "yes_probability": 0.29
+          },
+          {
+            "date": "2026-05-09",
+            "yes_probability": 0.255
+          },
+          {
+            "date": "2026-05-10",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-05-11",
+            "yes_probability": 0.26
+          },
+          {
+            "date": "2026-05-12",
+            "yes_probability": 0.285
+          },
+          {
+            "date": "2026-05-13",
+            "yes_probability": 0.29
+          },
+          {
+            "date": "2026-05-14",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-05-15",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-05-16",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-05-17",
+            "yes_probability": 0.265
+          },
+          {
+            "date": "2026-05-18",
+            "yes_probability": 0.285
+          },
+          {
+            "date": "2026-05-19",
+            "yes_probability": 0.28
+          },
+          {
+            "date": "2026-05-20",
+            "yes_probability": 0.275
+          },
+          {
+            "date": "2026-05-21",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-05-22",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-05-23",
+            "yes_probability": 0.695
+          },
+          {
+            "date": "2026-05-24",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-05-25",
+            "yes_probability": 0.735
+          },
+          {
+            "date": "2026-05-26",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-05-27",
+            "yes_probability": 0.7
+          },
+          {
+            "date": "2026-05-28",
+            "yes_probability": 0.695
+          },
+          {
+            "date": "2026-05-29",
+            "yes_probability": 0.7
+          },
+          {
+            "date": "2026-05-30",
+            "yes_probability": 0.705
+          },
+          {
+            "date": "2026-05-31",
+            "yes_probability": 0.695
+          },
+          {
+            "date": "2026-06-01",
+            "yes_probability": 0.66
+          },
+          {
+            "date": "2026-06-02",
+            "yes_probability": 0.745
+          },
+          {
+            "date": "2026-06-03",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-06-04",
+            "yes_probability": 0.735
+          },
+          {
+            "date": "2026-06-05",
+            "yes_probability": 0.725
+          },
+          {
+            "date": "2026-06-06",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-06-07",
+            "yes_probability": 0.73
+          },
+          {
+            "date": "2026-06-08",
+            "yes_probability": 0.73
+          },
+          {
+            "date": "2026-06-09",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-06-10",
+            "yes_probability": 0.72
+          },
+          {
+            "date": "2026-06-11",
+            "yes_probability": 0.475
+          },
+          {
+            "date": "2026-06-12",
+            "yes_probability": 0.465
+          },
+          {
+            "date": "2026-06-13",
+            "yes_probability": 0.49
+          },
+          {
+            "date": "2026-06-14",
+            "yes_probability": 0.48
+          },
+          {
+            "date": "2026-06-15",
+            "yes_probability": 0.56
+          },
+          {
+            "date": "2026-06-16",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-06-17",
+            "yes_probability": 0.465
+          },
+          {
+            "date": "2026-06-18",
+            "yes_probability": 0.52
+          },
+          {
+            "date": "2026-06-19",
+            "yes_probability": 0.565
+          },
+          {
+            "date": "2026-06-20",
+            "yes_probability": 0.565
+          },
+          {
+            "date": "2026-06-21",
+            "yes_probability": 0.555
+          },
+          {
+            "date": "2026-06-22",
+            "yes_probability": 0.51
+          },
+          {
+            "date": "2026-06-23",
+            "yes_probability": 0.525
+          },
+          {
+            "date": "2026-06-24",
+            "yes_probability": 0.535
+          },
+          {
+            "date": "2026-06-25",
+            "yes_probability": 0.535
+          },
+          {
+            "date": "2026-06-26",
+            "yes_probability": 0.31
+          },
+          {
+            "date": "2026-06-27",
+            "yes_probability": 0.21
+          },
+          {
+            "date": "2026-06-28",
+            "yes_probability": 0.235
+          },
+          {
+            "date": "2026-06-29",
+            "yes_probability": 0.235
+          },
+          {
+            "date": "2026-06-30",
+            "yes_probability": 0.235
+          },
+          {
+            "date": "2026-07-01",
+            "yes_probability": 0.235
+          },
+          {
+            "date": "2026-07-02",
+            "yes_probability": 0.235
+          },
+          {
+            "date": "2026-07-03",
+            "yes_probability": 0.23
+          },
+          {
+            "date": "2026-07-04",
+            "yes_probability": 0.225
+          },
+          {
+            "date": "2026-07-05",
+            "yes_probability": 0.235
+          },
+          {
+            "date": "2026-07-06",
+            "yes_probability": 0.21
+          },
+          {
+            "date": "2026-07-07",
+            "yes_probability": 0.215
+          },
+          {
+            "date": "2026-07-08",
+            "yes_probability": 0.21
+          },
+          {
+            "date": "2026-07-09",
+            "yes_probability": 0.23
+          },
+          {
+            "date": "2026-07-10",
+            "yes_probability": 0.235
+          },
+          {
+            "date": "2026-07-11",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-07-12",
+            "yes_probability": 0.21
+          },
+          {
+            "date": "2026-07-13",
+            "yes_probability": 0.22
+          },
+          {
+            "date": "2026-07-14",
+            "yes_probability": 0.195
+          },
+          {
+            "date": "2026-07-15",
+            "yes_probability": 0.195
+          },
+          {
+            "date": "2026-07-16",
+            "yes_probability": 0.195
+          },
+          {
+            "date": "2026-07-17",
+            "yes_probability": 0.175
+          },
+          {
+            "date": "2026-07-18",
+            "yes_probability": 0.2
+          },
+          {
+            "date": "2026-07-19",
+            "yes_probability": 0.2
+          },
+          {
+            "date": "2026-07-20",
+            "yes_probability": 0.19
+          },
+          {
+            "date": "2026-07-21",
+            "yes_probability": 0.175
+          },
+          {
+            "date": "2026-07-22",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2026-07-23",
+            "yes_probability": 0.19
+          },
+          {
+            "date": "2026-07-24",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-07-25",
+            "yes_probability": 0.175
+          },
+          {
+            "date": "2026-07-26",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-07-27",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-07-28",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-07-30",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-07-31",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-08-01",
+            "yes_probability": 0.19
+          },
+          {
+            "date": "2026-08-02",
+            "yes_probability": 0.175
+          },
+          {
+            "date": "2026-08-03",
+            "yes_probability": 0.175
+          },
+          {
+            "date": "2026-08-04",
+            "yes_probability": 0.175
+          },
+          {
+            "date": "2026-08-05",
+            "yes_probability": 0.175
+          },
+          {
+            "date": "2026-08-06",
+            "yes_probability": 0.175
+          },
+          {
+            "date": "2026-08-07",
+            "yes_probability": 0.14
+          },
+          {
+            "date": "2026-08-08",
+            "yes_probability": 0.15
+          },
+          {
+            "date": "2026-08-09",
+            "yes_probability": 0.15
+          },
+          {
+            "date": "2026-08-10",
+            "yes_probability": 0.15
+          },
+          {
+            "date": "2026-08-11",
+            "yes_probability": 0.145
+          },
+          {
+            "date": "2026-08-12",
+            "yes_probability": 0.14
+          },
+          {
+            "date": "2026-08-13",
+            "yes_probability": 0.14
+          },
+          {
+            "date": "2026-08-14",
+            "yes_probability": 0.165
+          },
+          {
+            "date": "2026-08-15",
+            "yes_probability": 0.19
+          },
+          {
+            "date": "2026-08-16",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-08-17",
+            "yes_probability": 0.205
+          },
+          {
+            "date": "2026-08-18",
+            "yes_probability": 0.21
+          },
+          {
+            "date": "2026-08-19",
+            "yes_probability": 0.225
+          },
+          {
+            "date": "2026-08-20",
+            "yes_probability": 0.175
+          },
+          {
+            "date": "2026-08-21",
+            "yes_probability": 0.195
+          },
+          {
+            "date": "2026-08-22",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-08-23",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2026-08-24",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2026-08-25",
+            "yes_probability": 0.155
+          },
+          {
+            "date": "2026-08-26",
+            "yes_probability": 0.155
+          },
+          {
+            "date": "2026-08-27",
+            "yes_probability": 0.165
+          },
+          {
+            "date": "2026-08-28",
+            "yes_probability": 0.15
+          },
+          {
+            "date": "2026-08-29",
+            "yes_probability": 0.155
+          },
+          {
+            "date": "2026-08-30",
+            "yes_probability": 0.145
+          },
+          {
+            "date": "2026-08-31",
+            "yes_probability": 0.15
+          },
+          {
+            "date": "2026-09-01",
+            "yes_probability": 0.14
+          },
+          {
+            "date": "2026-09-02",
+            "yes_probability": 0.125
+          },
+          {
+            "date": "2026-09-03",
+            "yes_probability": 0.1
+          },
+          {
+            "date": "2026-09-04",
+            "yes_probability": 0.095
+          },
+          {
+            "date": "2026-09-05",
+            "yes_probability": 0.095
+          },
+          {
+            "date": "2026-09-06",
+            "yes_probability": 0.085
+          },
+          {
+            "date": "2026-09-07",
+            "yes_probability": 0.07
+          },
+          {
+            "date": "2026-09-08",
+            "yes_probability": 0.065
+          },
+          {
+            "date": "2026-09-09",
+            "yes_probability": 0.075
+          },
+          {
+            "date": "2026-09-10",
+            "yes_probability": 0.075
+          },
+          {
+            "date": "2026-09-11",
+            "yes_probability": 0.085
+          },
+          {
+            "date": "2026-09-12",
+            "yes_probability": 0.085
+          },
+          {
+            "date": "2026-09-13",
+            "yes_probability": 0.0375
+          },
+          {
+            "date": "2026-09-14",
+            "yes_probability": 0.05
+          },
+          {
+            "date": "2026-09-15",
+            "yes_probability": 0.052
+          },
+          {
+            "date": "2026-09-16",
+            "yes_probability": 0.047
+          },
+          {
+            "date": "2026-09-17",
+            "yes_probability": 0.0475
+          },
+          {
+            "date": "2026-09-18",
+            "yes_probability": 0.046
+          },
+          {
+            "date": "2026-09-19",
+            "yes_probability": 0.0385
+          },
+          {
+            "date": "2026-09-20",
+            "yes_probability": 0.0335
+          },
+          {
+            "date": "2026-09-21",
+            "yes_probability": 0.041
+          },
+          {
+            "date": "2026-09-22",
+            "yes_probability": 0.037
+          },
+          {
+            "date": "2026-09-23",
+            "yes_probability": 0.0365
+          },
+          {
+            "date": "2026-09-24",
+            "yes_probability": 0.0365
+          },
+          {
+            "date": "2026-09-25",
+            "yes_probability": 0.0365
+          },
+          {
+            "date": "2026-09-26",
+            "yes_probability": 0.0325
+          },
+          {
+            "date": "2026-09-27",
+            "yes_probability": 0.0335
+          },
+          {
+            "date": "2026-09-28",
+            "yes_probability": 0.048
+          },
+          {
+            "date": "2026-09-29",
+            "yes_probability": 0.039
+          },
+          {
+            "date": "2026-09-30",
+            "yes_probability": 0.0395
+          },
+          {
+            "date": "2026-10-01",
+            "yes_probability": 0.0375
+          },
+          {
+            "date": "2026-10-02",
+            "yes_probability": 0.0375
+          },
+          {
+            "date": "2026-10-03",
+            "yes_probability": 0.0375
+          },
+          {
+            "date": "2026-10-04",
+            "yes_probability": 0.0375
+          },
+          {
+            "date": "2026-10-05",
+            "yes_probability": 0.0375
+          },
+          {
+            "date": "2026-10-06",
+            "yes_probability": 0.0385
+          },
+          {
+            "date": "2026-10-07",
+            "yes_probability": 0.038
+          },
+          {
+            "date": "2026-10-08",
+            "yes_probability": 0.037
+          },
+          {
+            "date": "2026-10-09",
+            "yes_probability": 0.0395
+          },
+          {
+            "date": "2026-10-10",
+            "yes_probability": 0.0425
+          },
+          {
+            "date": "2026-10-11",
+            "yes_probability": 0.0425
+          },
+          {
+            "date": "2026-10-12",
+            "yes_probability": 0.0445
+          },
+          {
+            "date": "2026-10-13",
+            "yes_probability": 0.0435
+          },
+          {
+            "date": "2026-10-14",
+            "yes_probability": 0.0425
+          },
+          {
+            "date": "2026-10-16",
+            "yes_probability": 0.0425
+          },
+          {
+            "date": "2026-10-17",
+            "yes_probability": 0.0425
+          },
+          {
+            "date": "2026-10-19",
+            "yes_probability": 0.0425
+          },
+          {
+            "date": "2026-10-20",
+            "yes_probability": 0.0465
+          },
+          {
+            "date": "2026-10-21",
+            "yes_probability": 0.046
+          },
+          {
+            "date": "2026-10-24",
+            "yes_probability": 0.0355
+          },
+          {
+            "date": "2026-10-25",
+            "yes_probability": 0.0355
+          },
+          {
+            "date": "2026-10-28",
+            "yes_probability": 0.036
+          },
+          {
+            "date": "2026-10-30",
+            "yes_probability": 0.0385
+          },
+          {
+            "date": "2026-11-02",
+            "yes_probability": 0.0295
+          },
+          {
+            "date": "2026-11-03",
+            "yes_probability": 0.0275
+          },
+          {
+            "date": "2026-11-04",
+            "yes_probability": 0.021
+          },
+          {
+            "date": "2026-11-05",
+            "yes_probability": 0.0215
+          },
+          {
+            "date": "2026-11-06",
+            "yes_probability": 0.0185
+          },
+          {
+            "date": "2026-11-07",
+            "yes_probability": 0.016
+          },
+          {
+            "date": "2026-11-08",
+            "yes_probability": 0.016
+          },
+          {
+            "date": "2026-11-09",
+            "yes_probability": 0.0155
+          },
+          {
+            "date": "2026-11-10",
+            "yes_probability": 0.015
+          },
+          {
+            "date": "2026-11-11",
+            "yes_probability": 0.015
+          }
+        ],
+        "chart": true
+      },
+      "next-astra-model-6pt1-released-by-december-31-2026": {
+        "platform": "Polymarket",
+        "ticker": "next-astra-model-6pt1-released-by-december-31-2026",
+        "title": "Next Astra Model (6.1+) released by December 31, 2026?",
+        "event_title": "GPT Astra 6.1+ released by...?",
+        "n": 59,
+        "start": "2026-09-05",
+        "end": "2026-11-11",
+        "points": [
+          {
+            "date": "2026-09-05",
+            "yes_probability": 0.595
+          },
+          {
+            "date": "2026-09-06",
+            "yes_probability": 0.82
+          },
+          {
+            "date": "2026-09-07",
+            "yes_probability": 0.855
+          },
+          {
+            "date": "2026-09-08",
+            "yes_probability": 0.85
+          },
+          {
+            "date": "2026-09-09",
+            "yes_probability": 0.86
+          },
+          {
+            "date": "2026-09-10",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-09-11",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-09-12",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-09-13",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-09-14",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-09-15",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-09-16",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-09-17",
+            "yes_probability": 0.95
+          },
+          {
+            "date": "2026-09-18",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-09-19",
+            "yes_probability": 0.94
+          },
+          {
+            "date": "2026-09-20",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-09-21",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-09-22",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-09-23",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-09-24",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-09-25",
+            "yes_probability": 0.94
+          },
+          {
+            "date": "2026-09-26",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-09-27",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-09-28",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-09-29",
+            "yes_probability": 0.77
+          },
+          {
+            "date": "2026-09-30",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-10-01",
+            "yes_probability": 0.88
+          },
+          {
+            "date": "2026-10-02",
+            "yes_probability": 0.915
+          },
+          {
+            "date": "2026-10-03",
+            "yes_probability": 0.905
+          },
+          {
+            "date": "2026-10-04",
+            "yes_probability": 0.94
+          },
+          {
+            "date": "2026-10-05",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-10-06",
+            "yes_probability": 0.925
+          },
+          {
+            "date": "2026-10-07",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-10-08",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-10-09",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-10-10",
+            "yes_probability": 0.845
+          },
+          {
+            "date": "2026-10-11",
+            "yes_probability": 0.875
+          },
+          {
+            "date": "2026-10-12",
+            "yes_probability": 0.895
+          },
+          {
+            "date": "2026-10-13",
+            "yes_probability": 0.855
+          },
+          {
+            "date": "2026-10-14",
+            "yes_probability": 0.91
+          },
+          {
+            "date": "2026-10-16",
+            "yes_probability": 0.925
+          },
+          {
+            "date": "2026-10-17",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-10-19",
+            "yes_probability": 0.91
+          },
+          {
+            "date": "2026-10-20",
+            "yes_probability": 0.865
+          },
+          {
+            "date": "2026-10-21",
+            "yes_probability": 0.87
+          },
+          {
+            "date": "2026-10-24",
+            "yes_probability": 0.84
+          },
+          {
+            "date": "2026-10-25",
+            "yes_probability": 0.84
+          },
+          {
+            "date": "2026-10-28",
+            "yes_probability": 0.805
+          },
+          {
+            "date": "2026-10-30",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-11-02",
+            "yes_probability": 0.955
+          },
+          {
+            "date": "2026-11-03",
+            "yes_probability": 0.976
+          },
+          {
+            "date": "2026-11-04",
+            "yes_probability": 0.9735
+          },
+          {
+            "date": "2026-11-05",
+            "yes_probability": 0.9935
+          },
+          {
+            "date": "2026-11-06",
+            "yes_probability": 0.977
+          },
+          {
+            "date": "2026-11-07",
+            "yes_probability": 0.976
+          },
+          {
+            "date": "2026-11-08",
+            "yes_probability": 0.9695
+          },
+          {
+            "date": "2026-11-09",
+            "yes_probability": 0.981
+          },
+          {
+            "date": "2026-11-10",
+            "yes_probability": 0.9865
+          },
+          {
+            "date": "2026-11-11",
+            "yes_probability": 0.977
+          }
+        ],
+        "chart": true
+      },
+      "KXIPOANTHROPIC-DATE-26DEC01": {
+        "platform": "Kalshi",
+        "ticker": "KXIPOANTHROPIC-DATE-26DEC01",
+        "title": "When will Anthropic officially announce an IPO? (Before Dec 1, 2026)",
+        "event_title": "When will Anthropic officially announce an IPO?",
+        "n": 221,
+        "start": "2026-04-02",
+        "end": "2026-11-11",
+        "points": [
+          {
+            "date": "2026-04-02",
+            "yes_probability": 0.49
+          },
+          {
+            "date": "2026-04-03",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-04-04",
+            "yes_probability": 0.48
+          },
+          {
+            "date": "2026-04-05",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-04-06",
+            "yes_probability": 0.46
+          },
+          {
+            "date": "2026-04-07",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-04-08",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-04-09",
+            "yes_probability": 0.455
+          },
+          {
+            "date": "2026-04-10",
+            "yes_probability": 0.45
+          },
+          {
+            "date": "2026-04-11",
+            "yes_probability": 0.49
+          },
+          {
+            "date": "2026-04-12",
+            "yes_probability": 0.49
+          },
+          {
+            "date": "2026-04-13",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-04-14",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-04-15",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-04-16",
+            "yes_probability": 0.5
+          },
+          {
+            "date": "2026-04-17",
+            "yes_probability": 0.5
+          },
+          {
+            "date": "2026-04-18",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-04-19",
+            "yes_probability": 0.56
+          },
+          {
+            "date": "2026-04-20",
+            "yes_probability": 0.56
+          },
+          {
+            "date": "2026-04-21",
+            "yes_probability": 0.51
+          },
+          {
+            "date": "2026-04-22",
+            "yes_probability": 0.5549999999999999
+          },
+          {
+            "date": "2026-04-23",
+            "yes_probability": 0.585
+          },
+          {
+            "date": "2026-04-24",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-04-25",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-04-26",
+            "yes_probability": 0.565
+          },
+          {
+            "date": "2026-04-28",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-04-30",
+            "yes_probability": 0.5900000000000001
+          },
+          {
+            "date": "2026-05-01",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-05-02",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-05-03",
+            "yes_probability": 0.95
+          },
+          {
+            "date": "2026-05-04",
+            "yes_probability": 0.81
+          },
+          {
+            "date": "2026-05-05",
+            "yes_probability": 0.825
+          },
+          {
+            "date": "2026-05-06",
+            "yes_probability": 0.715
+          },
+          {
+            "date": "2026-05-07",
+            "yes_probability": 0.75
+          },
+          {
+            "date": "2026-05-08",
+            "yes_probability": 0.7
+          },
+          {
+            "date": "2026-05-09",
+            "yes_probability": 0.73
+          },
+          {
+            "date": "2026-05-10",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-05-11",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-05-12",
+            "yes_probability": 0.685
+          },
+          {
+            "date": "2026-05-13",
+            "yes_probability": 0.685
+          },
+          {
+            "date": "2026-05-14",
+            "yes_probability": 0.64
+          },
+          {
+            "date": "2026-05-15",
+            "yes_probability": 0.635
+          },
+          {
+            "date": "2026-05-17",
+            "yes_probability": 0.65
+          },
+          {
+            "date": "2026-05-18",
+            "yes_probability": 0.62
+          },
+          {
+            "date": "2026-05-19",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-05-20",
+            "yes_probability": 0.77
+          },
+          {
+            "date": "2026-05-21",
+            "yes_probability": 0.755
+          },
+          {
+            "date": "2026-05-22",
+            "yes_probability": 0.7
+          },
+          {
+            "date": "2026-05-23",
+            "yes_probability": 0.79
+          },
+          {
+            "date": "2026-05-24",
+            "yes_probability": 0.855
+          },
+          {
+            "date": "2026-05-25",
+            "yes_probability": 0.78
+          },
+          {
+            "date": "2026-05-26",
+            "yes_probability": 0.71
+          },
+          {
+            "date": "2026-05-27",
+            "yes_probability": 0.745
+          },
+          {
+            "date": "2026-05-28",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-05-29",
+            "yes_probability": 0.7749999999999999
+          },
+          {
+            "date": "2026-05-30",
+            "yes_probability": 0.8
+          },
+          {
+            "date": "2026-05-31",
+            "yes_probability": 0.765
+          },
+          {
+            "date": "2026-06-01",
+            "yes_probability": 0.77
+          },
+          {
+            "date": "2026-06-02",
+            "yes_probability": 0.95
+          },
+          {
+            "date": "2026-06-03",
+            "yes_probability": 0.92
+          },
+          {
+            "date": "2026-06-04",
+            "yes_probability": 0.91
+          },
+          {
+            "date": "2026-06-05",
+            "yes_probability": 0.94
+          },
+          {
+            "date": "2026-06-06",
+            "yes_probability": 0.935
+          },
+          {
+            "date": "2026-06-07",
+            "yes_probability": 0.93
+          },
+          {
+            "date": "2026-06-08",
+            "yes_probability": 0.95
+          },
+          {
+            "date": "2026-06-09",
+            "yes_probability": 0.92
+          },
+          {
+            "date": "2026-06-10",
+            "yes_probability": 0.9450000000000001
+          },
+          {
+            "date": "2026-06-11",
+            "yes_probability": 0.95
+          },
+          {
+            "date": "2026-06-12",
+            "yes_probability": 0.945
+          },
+          {
+            "date": "2026-06-13",
+            "yes_probability": 0.93
+          },
+          {
+            "date": "2026-06-14",
+            "yes_probability": 0.92
+          },
+          {
+            "date": "2026-06-15",
+            "yes_probability": 0.9
+          },
+          {
+            "date": "2026-06-16",
+            "yes_probability": 0.915
+          },
+          {
+            "date": "2026-06-17",
+            "yes_probability": 0.915
+          },
+          {
+            "date": "2026-06-18",
+            "yes_probability": 0.84
+          },
+          {
+            "date": "2026-06-19",
+            "yes_probability": 0.94
+          },
+          {
+            "date": "2026-06-20",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-06-21",
+            "yes_probability": 0.87
+          },
+          {
+            "date": "2026-06-22",
+            "yes_probability": 0.9
+          },
+          {
+            "date": "2026-06-23",
+            "yes_probability": 0.93
+          },
+          {
+            "date": "2026-06-24",
+            "yes_probability": 0.1
+          },
+          {
+            "date": "2026-06-25",
+            "yes_probability": 0.8
+          },
+          {
+            "date": "2026-06-26",
+            "yes_probability": 0.7
+          },
+          {
+            "date": "2026-06-27",
+            "yes_probability": 0.6799999999999999
+          },
+          {
+            "date": "2026-06-28",
+            "yes_probability": 0.675
+          },
+          {
+            "date": "2026-06-29",
+            "yes_probability": 0.6699999999999999
+          },
+          {
+            "date": "2026-06-30",
+            "yes_probability": 0.65
+          },
+          {
+            "date": "2026-07-01",
+            "yes_probability": 0.65
+          },
+          {
+            "date": "2026-07-02",
+            "yes_probability": 0.56
+          },
+          {
+            "date": "2026-07-03",
+            "yes_probability": 0.56
+          },
+          {
+            "date": "2026-07-04",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-07-05",
+            "yes_probability": 0.65
+          },
+          {
+            "date": "2026-07-06",
+            "yes_probability": 0.62
+          },
+          {
+            "date": "2026-07-07",
+            "yes_probability": 0.615
+          },
+          {
+            "date": "2026-07-08",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-07-09",
+            "yes_probability": 0.52
+          },
+          {
+            "date": "2026-07-10",
+            "yes_probability": 0.5549999999999999
+          },
+          {
+            "date": "2026-07-11",
+            "yes_probability": 0.61
+          },
+          {
+            "date": "2026-07-12",
+            "yes_probability": 0.58
+          },
+          {
+            "date": "2026-07-13",
+            "yes_probability": 0.62
+          },
+          {
+            "date": "2026-07-14",
+            "yes_probability": 0.605
+          },
+          {
+            "date": "2026-07-15",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-07-16",
+            "yes_probability": 0.68
+          },
+          {
+            "date": "2026-07-17",
+            "yes_probability": 0.68
+          },
+          {
+            "date": "2026-07-18",
+            "yes_probability": 0.66
+          },
+          {
+            "date": "2026-07-19",
+            "yes_probability": 0.58
+          },
+          {
+            "date": "2026-07-20",
+            "yes_probability": 0.79
+          },
+          {
+            "date": "2026-07-21",
+            "yes_probability": 0.73
+          },
+          {
+            "date": "2026-07-22",
+            "yes_probability": 0.74
+          },
+          {
+            "date": "2026-07-23",
+            "yes_probability": 0.75
+          },
+          {
+            "date": "2026-07-24",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-07-25",
+            "yes_probability": 0.78
+          },
+          {
+            "date": "2026-07-26",
+            "yes_probability": 0.58
+          },
+          {
+            "date": "2026-07-27",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-07-28",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-07-29",
+            "yes_probability": 0.66
+          },
+          {
+            "date": "2026-07-30",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-07-31",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-08-01",
+            "yes_probability": 0.65
+          },
+          {
+            "date": "2026-08-02",
+            "yes_probability": 0.61
+          },
+          {
+            "date": "2026-08-03",
+            "yes_probability": 0.625
+          },
+          {
+            "date": "2026-08-04",
+            "yes_probability": 0.65
+          },
+          {
+            "date": "2026-08-05",
+            "yes_probability": 0.64
+          },
+          {
+            "date": "2026-08-06",
+            "yes_probability": 0.62
+          },
+          {
+            "date": "2026-08-07",
+            "yes_probability": 0.62
+          },
+          {
+            "date": "2026-08-08",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-08-09",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-08-10",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-08-11",
+            "yes_probability": 0.7
+          },
+          {
+            "date": "2026-08-12",
+            "yes_probability": 0.72
+          },
+          {
+            "date": "2026-08-13",
+            "yes_probability": 0.72
+          },
+          {
+            "date": "2026-08-14",
+            "yes_probability": 0.72
+          },
+          {
+            "date": "2026-08-15",
+            "yes_probability": 0.77
+          },
+          {
+            "date": "2026-08-16",
+            "yes_probability": 0.83
+          },
+          {
+            "date": "2026-08-17",
+            "yes_probability": 0.81
+          },
+          {
+            "date": "2026-08-18",
+            "yes_probability": 0.77
+          },
+          {
+            "date": "2026-08-19",
+            "yes_probability": 0.73
+          },
+          {
+            "date": "2026-08-20",
+            "yes_probability": 0.83
+          },
+          {
+            "date": "2026-08-21",
+            "yes_probability": 0.95
+          },
+          {
+            "date": "2026-08-22",
+            "yes_probability": 0.94
+          },
+          {
+            "date": "2026-08-23",
+            "yes_probability": 0.89
+          },
+          {
+            "date": "2026-08-24",
+            "yes_probability": 0.88
+          },
+          {
+            "date": "2026-08-25",
+            "yes_probability": 0.83
+          },
+          {
+            "date": "2026-08-26",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-08-27",
+            "yes_probability": 0.84
+          },
+          {
+            "date": "2026-08-28",
+            "yes_probability": 0.885
+          },
+          {
+            "date": "2026-08-29",
+            "yes_probability": 0.92
+          },
+          {
+            "date": "2026-08-30",
+            "yes_probability": 0.95
+          },
+          {
+            "date": "2026-08-31",
+            "yes_probability": 0.93
+          },
+          {
+            "date": "2026-09-01",
+            "yes_probability": 0.92
+          },
+          {
+            "date": "2026-09-02",
+            "yes_probability": 0.92
+          },
+          {
+            "date": "2026-09-03",
+            "yes_probability": 0.9
+          },
+          {
+            "date": "2026-09-04",
+            "yes_probability": 0.89
+          },
+          {
+            "date": "2026-09-05",
+            "yes_probability": 0.95
+          },
+          {
+            "date": "2026-09-06",
+            "yes_probability": 0.88
+          },
+          {
+            "date": "2026-09-07",
+            "yes_probability": 0.905
+          },
+          {
+            "date": "2026-09-08",
+            "yes_probability": 0.89
+          },
+          {
+            "date": "2026-09-09",
+            "yes_probability": 0.91
+          },
+          {
+            "date": "2026-09-10",
+            "yes_probability": 0.86
+          },
+          {
+            "date": "2026-09-11",
+            "yes_probability": 0.89
+          },
+          {
+            "date": "2026-09-12",
+            "yes_probability": 0.91
+          },
+          {
+            "date": "2026-09-13",
+            "yes_probability": 0.74
+          },
+          {
+            "date": "2026-09-14",
+            "yes_probability": 0.7
+          },
+          {
+            "date": "2026-09-15",
+            "yes_probability": 0.72
+          },
+          {
+            "date": "2026-09-16",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-09-17",
+            "yes_probability": 0.75
+          },
+          {
+            "date": "2026-09-18",
+            "yes_probability": 0.73
+          },
+          {
+            "date": "2026-09-19",
+            "yes_probability": 0.7
+          },
+          {
+            "date": "2026-09-20",
+            "yes_probability": 0.5
+          },
+          {
+            "date": "2026-09-21",
+            "yes_probability": 0.52
+          },
+          {
+            "date": "2026-09-22",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-09-23",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-09-24",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-09-25",
+            "yes_probability": 0.58
+          },
+          {
+            "date": "2026-09-26",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-09-27",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-09-28",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-09-29",
+            "yes_probability": 0.64
+          },
+          {
+            "date": "2026-09-30",
+            "yes_probability": 0.62
+          },
+          {
+            "date": "2026-10-01",
+            "yes_probability": 0.64
+          },
+          {
+            "date": "2026-10-02",
+            "yes_probability": 0.76
+          },
+          {
+            "date": "2026-10-03",
+            "yes_probability": 0.66
+          },
+          {
+            "date": "2026-10-04",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-10-05",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-10-06",
+            "yes_probability": 0.64
+          },
+          {
+            "date": "2026-10-07",
+            "yes_probability": 0.66
+          },
+          {
+            "date": "2026-10-08",
+            "yes_probability": 0.64
+          },
+          {
+            "date": "2026-10-09",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-10-10",
+            "yes_probability": 0.68
+          },
+          {
+            "date": "2026-10-11",
+            "yes_probability": 0.61
+          },
+          {
+            "date": "2026-10-12",
+            "yes_probability": 0.68
+          },
+          {
+            "date": "2026-10-13",
+            "yes_probability": 0.62
+          },
+          {
+            "date": "2026-10-14",
+            "yes_probability": 0.65
+          },
+          {
+            "date": "2026-10-15",
+            "yes_probability": 0.66
+          },
+          {
+            "date": "2026-10-16",
+            "yes_probability": 0.65
+          },
+          {
+            "date": "2026-10-17",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-10-18",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-10-19",
+            "yes_probability": 0.61
+          },
+          {
+            "date": "2026-10-20",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-10-21",
+            "yes_probability": 0.74
+          },
+          {
+            "date": "2026-10-22",
+            "yes_probability": 0.79
+          },
+          {
+            "date": "2026-10-23",
+            "yes_probability": 0.83
+          },
+          {
+            "date": "2026-10-24",
+            "yes_probability": 0.7
+          },
+          {
+            "date": "2026-10-25",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-10-26",
+            "yes_probability": 0.69
+          },
+          {
+            "date": "2026-10-27",
+            "yes_probability": 0.87
+          },
+          {
+            "date": "2026-10-28",
+            "yes_probability": 0.9
+          },
+          {
+            "date": "2026-10-29",
+            "yes_probability": 0.86
+          },
+          {
+            "date": "2026-10-30",
+            "yes_probability": 0.83
+          },
+          {
+            "date": "2026-10-31",
+            "yes_probability": 0.81
+          },
+          {
+            "date": "2026-11-01",
+            "yes_probability": 0.85
+          },
+          {
+            "date": "2026-11-02",
+            "yes_probability": 0.83
+          },
+          {
+            "date": "2026-11-03",
+            "yes_probability": 0.86
+          },
+          {
+            "date": "2026-11-04",
+            "yes_probability": 0.82
+          },
+          {
+            "date": "2026-11-05",
+            "yes_probability": 0.8
+          },
+          {
+            "date": "2026-11-06",
+            "yes_probability": 0.6
+          },
+          {
+            "date": "2026-11-07",
+            "yes_probability": 0.8
+          },
+          {
+            "date": "2026-11-08",
+            "yes_probability": 0.74
+          },
+          {
+            "date": "2026-11-09",
+            "yes_probability": 0.76
+          },
+          {
+            "date": "2026-11-10",
+            "yes_probability": 0.94
+          },
+          {
+            "date": "2026-11-11",
+            "yes_probability": 0.98
+          }
+        ],
+        "chart": true
+      },
+      "KXIPOOPENAI-27JAN01": {
+        "platform": "Kalshi",
+        "ticker": "KXIPOOPENAI-27JAN01",
+        "title": "When will OpenAI IPO? (Before Jan 1, 2027)",
+        "event_title": "When will OpenAI IPO?",
+        "n": 467,
+        "start": "2025-07-31",
+        "end": "2026-11-11",
+        "points": [
+          {
+            "date": "2025-07-31",
+            "yes_probability": 0.11
+          },
+          {
+            "date": "2025-08-01",
+            "yes_probability": 0.11
+          },
+          {
+            "date": "2025-08-02",
+            "yes_probability": 0.11
+          },
+          {
+            "date": "2025-08-03",
+            "yes_probability": 0.11
+          },
+          {
+            "date": "2025-08-04",
+            "yes_probability": 0.49
+          },
+          {
+            "date": "2025-08-05",
+            "yes_probability": 0.13
+          },
+          {
+            "date": "2025-08-06",
+            "yes_probability": 0.13
+          },
+          {
+            "date": "2025-08-07",
+            "yes_probability": 0.13
+          },
+          {
+            "date": "2025-08-08",
+            "yes_probability": 0.13
+          },
+          {
+            "date": "2025-08-09",
+            "yes_probability": 0.13
+          },
+          {
+            "date": "2025-08-10",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-11",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-12",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-13",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-14",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-15",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-16",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-17",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-18",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-19",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-20",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-21",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-22",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-23",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-24",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-25",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-26",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-27",
+            "yes_probability": 0.18
+          },
+          {
+            "date": "2025-08-28",
+            "yes_probability": 0.17
+          },
+          {
+            "date": "2025-08-29",
+            "yes_probability": 0.495
+          },
+          {
+            "date": "2025-08-30",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-08-31",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-01",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-02",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-03",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-04",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-05",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-06",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-07",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-08",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-09",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-10",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-11",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-12",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-13",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-14",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-15",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-16",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-17",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-18",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-19",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-20",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-21",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-22",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-23",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-24",
+            "yes_probability": 0.495
+          },
+          {
+            "date": "2025-09-25",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-26",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-27",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-28",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-29",
+            "yes_probability": 0.16999999999999998
+          },
+          {
+            "date": "2025-09-30",
+            "yes_probability": 0.25
+          },
+          {
+            "date": "2025-10-01",
+            "yes_probability": 0.21000000000000002
+          },
+          {
+            "date": "2025-10-02",
+            "yes_probability": 0.21000000000000002
+          },
+          {
+            "date": "2025-10-03",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-04",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-05",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-06",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-07",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-08",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-09",
+            "yes_probability": 0.225
+          },
+          {
+            "date": "2025-10-10",
+            "yes_probability": 0.225
+          },
+          {
+            "date": "2025-10-11",
+            "yes_probability": 0.225
+          },
+          {
+            "date": "2025-10-12",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-13",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-14",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-15",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-16",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-17",
+            "yes_probability": 0.16
+          },
+          {
+            "date": "2025-10-18",
+            "yes_probability": 0.20500000000000002
+          },
+          {
+            "date": "2025-10-19",
+            "yes_probability": 0.28
+          },
+          {
+            "date": "2025-10-20",
+            "yes_probability": 0.23
+          },
+          {
+            "date": "2025-10-21",
+            "yes_probability": 0.2
+          },
+          {
+            "date": "2025-10-22",
+            "yes_probability": 0.24
+          },
+          {
+            "date": "2025-10-23",
+            "yes_probability": 0.2
+          },
+          {
+            "date": "2025-10-24",
+            "yes_probability": 0.195
+          },
+          {
+            "date": "2025-10-25",
+            "yes_probability": 0.195
+          },
+          {
+            "date": "2025-10-26",
+            "yes_probability": 0.14
+          },
+          {
+            "date": "2025-10-27",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2025-10-28",
+            "yes_probability": 0.23
+          },
+          {
+            "date": "2025-10-29",
+            "yes_probability": 0.44
+          },
+          {
+            "date": "2025-10-30",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2025-10-31",
+            "yes_probability": 0.5
+          },
+          {
+            "date": "2025-11-01",
+            "yes_probability": 0.28
+          },
+          {
+            "date": "2025-11-02",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2025-11-03",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2025-11-04",
+            "yes_probability": 0.625
+          },
+          {
+            "date": "2025-11-05",
+            "yes_probability": 0.625
+          },
+          {
+            "date": "2025-11-06",
+            "yes_probability": 0.22
+          },
+          {
+            "date": "2025-11-07",
+            "yes_probability": 0.305
+          },
+          {
+            "date": "2025-11-08",
+            "yes_probability": 0.30500000000000005
+          },
+          {
+            "date": "2025-11-09",
+            "yes_probability": 0.30500000000000005
+          },
+          {
+            "date": "2025-11-10",
+            "yes_probability": 0.30500000000000005
+          },
+          {
+            "date": "2025-11-11",
+            "yes_probability": 0.30500000000000005
+          },
+          {
+            "date": "2025-11-12",
+            "yes_probability": 0.30000000000000004
+          },
+          {
+            "date": "2025-11-13",
+            "yes_probability": 0.30000000000000004
+          },
+          {
+            "date": "2025-11-14",
+            "yes_probability": 0.495
+          },
+          {
+            "date": "2025-11-15",
+            "yes_probability": 0.49
+          },
+          {
+            "date": "2025-11-17",
+            "yes_probability": 0.3
+          },
+          {
+            "date": "2025-11-18",
+            "yes_probability": 0.30000000000000004
+          },
+          {
+            "date": "2025-11-19",
+            "yes_probability": 0.30000000000000004
+          },
+          {
+            "date": "2025-11-20",
+            "yes_probability": 0.29500000000000004
+          },
+          {
+            "date": "2025-11-21",
+            "yes_probability": 0.29500000000000004
+          },
+          {
+            "date": "2025-11-22",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-11-23",
+            "yes_probability": 0.29500000000000004
+          },
+          {
+            "date": "2025-11-24",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2025-11-25",
+            "yes_probability": 0.31
+          },
+          {
+            "date": "2025-11-26",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2025-11-27",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2025-11-28",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2025-11-29",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2025-11-30",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2025-12-01",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2025-12-02",
+            "yes_probability": 0.315
+          },
+          {
+            "date": "2025-12-03",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2025-12-04",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2025-12-05",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2025-12-06",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2025-12-07",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2025-12-08",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2025-12-09",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2025-12-10",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2025-12-11",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2025-12-12",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2025-12-13",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2025-12-14",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2025-12-15",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2025-12-16",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-12-17",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2025-12-18",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2025-12-19",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2025-12-20",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2025-12-21",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2025-12-22",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2025-12-23",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2025-12-24",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2025-12-25",
+            "yes_probability": 0.365
+          },
+          {
+            "date": "2025-12-26",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2025-12-27",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2025-12-28",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2025-12-29",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2025-12-30",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2025-12-31",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2026-01-01",
+            "yes_probability": 0.355
+          },
+          {
+            "date": "2026-01-02",
+            "yes_probability": 0.4
+          },
+          {
+            "date": "2026-01-03",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-01-04",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-01-05",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2026-01-06",
+            "yes_probability": 0.375
+          },
+          {
+            "date": "2026-01-07",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-01-08",
+            "yes_probability": 0.42500000000000004
+          },
+          {
+            "date": "2026-01-09",
+            "yes_probability": 0.41500000000000004
+          },
+          {
+            "date": "2026-01-10",
+            "yes_probability": 0.41500000000000004
+          },
+          {
+            "date": "2026-01-11",
+            "yes_probability": 0.41500000000000004
+          },
+          {
+            "date": "2026-01-12",
+            "yes_probability": 0.44
+          },
+          {
+            "date": "2026-01-13",
+            "yes_probability": 0.43
+          },
+          {
+            "date": "2026-01-14",
+            "yes_probability": 0.5
+          },
+          {
+            "date": "2026-01-15",
+            "yes_probability": 0.46
+          },
+          {
+            "date": "2026-01-16",
+            "yes_probability": 0.4
+          },
+          {
+            "date": "2026-01-17",
+            "yes_probability": 0.44
+          },
+          {
+            "date": "2026-01-18",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-01-19",
+            "yes_probability": 0.43
+          },
+          {
+            "date": "2026-01-20",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-01-21",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-01-22",
+            "yes_probability": 0.45
+          },
+          {
+            "date": "2026-01-23",
+            "yes_probability": 0.44
+          },
+          {
+            "date": "2026-01-24",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-01-25",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-01-26",
+            "yes_probability": 0.44
+          },
+          {
+            "date": "2026-01-27",
+            "yes_probability": 0.36
+          },
+          {
+            "date": "2026-01-28",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2026-01-29",
+            "yes_probability": 0.35
+          },
+          {
+            "date": "2026-01-30",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-01-31",
+            "yes_probability": 0.58
+          },
+          {
+            "date": "2026-02-01",
+            "yes_probability": 0.51
+          },
+          {
+            "date": "2026-02-02",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-02-03",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-02-04",
+            "yes_probability": 0.52
+          },
+          {
+            "date": "2026-02-05",
+            "yes_probability": 0.51
+          },
+          {
+            "date": "2026-02-06",
+            "yes_probability": 0.58
+          },
+          {
+            "date": "2026-02-07",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-02-08",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-02-09",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-02-10",
+            "yes_probability": 0.5549999999999999
+          },
+          {
+            "date": "2026-02-11",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-02-13",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-02-14",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-02-15",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-02-16",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-02-17",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-02-18",
+            "yes_probability": 0.58
+          },
+          {
+            "date": "2026-02-19",
+            "yes_probability": 0.56
+          },
+          {
+            "date": "2026-02-20",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-02-21",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-02-22",
+            "yes_probability": 0.545
+          },
+          {
+            "date": "2026-02-23",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-02-24",
+            "yes_probability": 0.56
+          },
+          {
+            "date": "2026-02-25",
+            "yes_probability": 0.535
+          },
+          {
+            "date": "2026-02-26",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-02-27",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-02-28",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-03-01",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-03-02",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-03-03",
+            "yes_probability": 0.49
+          },
+          {
+            "date": "2026-03-04",
+            "yes_probability": 0.51
+          },
+          {
+            "date": "2026-03-05",
+            "yes_probability": 0.61
+          },
+          {
+            "date": "2026-03-06",
+            "yes_probability": 0.61
+          },
+          {
+            "date": "2026-03-07",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-03-08",
+            "yes_probability": 0.5800000000000001
+          },
+          {
+            "date": "2026-03-09",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-03-10",
+            "yes_probability": 0.45
+          },
+          {
+            "date": "2026-03-11",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-03-12",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-03-13",
+            "yes_probability": 0.52
+          },
+          {
+            "date": "2026-03-14",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-03-15",
+            "yes_probability": 0.6
+          },
+          {
+            "date": "2026-03-16",
+            "yes_probability": 0.51
+          },
+          {
+            "date": "2026-03-17",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-03-18",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-03-19",
+            "yes_probability": 0.56
+          },
+          {
+            "date": "2026-03-20",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-03-21",
+            "yes_probability": 0.525
+          },
+          {
+            "date": "2026-03-22",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-03-23",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-03-24",
+            "yes_probability": 0.52
+          },
+          {
+            "date": "2026-03-25",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-03-26",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-03-27",
+            "yes_probability": 0.52
+          },
+          {
+            "date": "2026-03-28",
+            "yes_probability": 0.58
+          },
+          {
+            "date": "2026-03-29",
+            "yes_probability": 0.55
+          },
+          {
+            "date": "2026-03-30",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-03-31",
+            "yes_probability": 0.5
+          },
+          {
+            "date": "2026-04-01",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-04-02",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-04-03",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-04-04",
+            "yes_probability": 0.575
+          },
+          {
+            "date": "2026-04-05",
+            "yes_probability": 0.575
+          },
+          {
+            "date": "2026-04-06",
+            "yes_probability": 0.57
+          },
+          {
+            "date": "2026-04-07",
+            "yes_probability": 0.52
+          },
+          {
+            "date": "2026-04-08",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-04-09",
+            "yes_probability": 0.515
+          },
+          {
+            "date": "2026-04-10",
+            "yes_probability": 0.515
+          },
+          {
+            "date": "2026-04-11",
+            "yes_probability": 0.5
+          },
+          {
+            "date": "2026-04-12",
+            "yes_probability": 0.45
+          },
+          {
+            "date": "2026-04-13",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-04-14",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-04-15",
+            "yes_probability": 0.54
+          },
+          {
+            "date": "2026-04-16",
+            "yes_probability": 0.48
+          },
+          {
+            "date": "2026-04-17",
+            "yes_probability": 0.49
+          },
+          {
+            "date": "2026-04-18",
+            "yes_probability": 0.48
+          },
+          {
+            "date": "2026-04-19",
+            "yes_probability": 0.53
+          },
+          {
+            "date": "2026-04-20",
+            "yes_probability": 0.505
+          },
+          {
+            "date": "2026-04-21",
+            "yes_probability": 0.5
+          },
+          {
+            "date": "2026-04-22",
+            "yes_probability": 0.51
+          },
+          {
+            "date": "2026-04-23",
+            "yes_probability": 0.51
+          },
+          {
+            "date": "2026-04-24",
+            "yes_probability": 0.48
+          },
+          {
+            "date": "2026-04-25",
+            "yes_probability": 0.65
+          },
+          {
+            "date": "2026-04-26",
+            "yes_probability": 0.44
+          },
+          {
+            "date": "2026-04-27",
+            "yes_probability": 0.44
+          },
+          {
+            "date": "2026-04-28",
+            "yes_probability": 0.42
+          },
+          {
+            "date": "2026-04-29",
+            "yes_probability": 0.41
+          },
+          {
+            "date": "2026-04-30",
+            "yes_probability": 0.4
+          },
+          {
+            "date": "2026-05-01",
+            "yes_probability": 0.4
+          },
+          {
+            "date": "2026-05-02",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-05-03",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-05-04",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-05-05",
+            "yes_probability": 0.41
+          },
+          {
+            "date": "2026-05-06",
+            "yes_probability": 0.34
+          },
+          {
+            "date": "2026-05-07",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-05-08",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-05-09",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-05-10",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-05-11",
+            "yes_probability": 0.42
+          },
+          {
+            "date": "2026-05-12",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-05-13",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-05-14",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-05-15",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-05-16",
+            "yes_probability": 0.37
+          },
+          {
+            "date": "2026-05-17",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-05-18",
+            "yes_probability": 0.39
+          },
+          {
+            "date": "2026-05-19",
+            "yes_probability": 0.38
+          },
+          {
+            "date": "2026-05-20",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2026-05-21",
+            "yes_probability": 0.84
+          },
+          {
+            "date": "2026-05-22",
+            "yes_probability": 0.88
+          },
+          {
+            "date": "2026-05-23",
+            "yes_probability": 0.865
+          },
+          {
+            "date": "2026-05-24",
+            "yes_probability": 0.87
+          },
+          {
+            "date": "2026-05-25",
+            "yes_probability": 0.87
+          },
+          {
+            "date": "2026-05-26",
+            "yes_probability": 0.88
+          },
+          {
+            "date": "2026-05-27",
+            "yes_probability": 0.86
+          },
+          {
+            "date": "2026-05-28",
+            "yes_probability": 0.86
+          },
+          {
+            "date": "2026-05-29",
+            "yes_probability": 0.86
+          },
+          {
+            "date": "2026-05-30",
+            "yes_probability": 0.83
+          },
+          {
+            "date": "2026-05-31",
+            "yes_probability": 0.84
+          },
+          {
+            "date": "2026-06-01",
+            "yes_probability": 0.8
+          },
+          {
+            "date": "2026-06-02",
+            "yes_probability": 0.86
+          },
+          {
+            "date": "2026-06-03",
+            "yes_probability": 0.78
+          },
+          {
+            "date": "2026-06-04",
+            "yes_probability": 0.83
+          },
+          {
+            "date": "2026-06-05",
+            "yes_probability": 0.75
+          },
+          {
+            "date": "2026-06-06",
+            "yes_probability": 0.74
+          },
+          {
+            "date": "2026-06-07",
+            "yes_probability": 0.81
+          },
+          {
+            "date": "2026-06-08",
+            "yes_probability": 0.75
+          },
+          {
+            "date": "2026-06-09",
+            "yes_probability": 0.84
+          },
+          {
+            "date": "2026-06-10",
+            "yes_probability": 0.88
+          },
+          {
+            "date": "2026-06-11",
+            "yes_probability": 0.67
+          },
+          {
+            "date": "2026-06-12",
+            "yes_probability": 0.59
+          },
+          {
+            "date": "2026-06-13",
+            "yes_probability": 0.6
+          },
+          {
+            "date": "2026-06-14",
+            "yes_probability": 0.6
+          },
+          {
+            "date": "2026-06-15",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-06-16",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-06-17",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-06-18",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-06-19",
+            "yes_probability": 0.62
+          },
+          {
+            "date": "2026-06-20",
+            "yes_probability": 0.62
+          },
+          {
+            "date": "2026-06-21",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-06-22",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-06-23",
+            "yes_probability": 0.63
+          },
+          {
+            "date": "2026-06-24",
+            "yes_probability": 0.62
+          },
+          {
+            "date": "2026-06-25",
+            "yes_probability": 0.64
+          },
+          {
+            "date": "2026-06-26",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2026-06-27",
+            "yes_probability": 0.33
+          },
+          {
+            "date": "2026-06-28",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2026-06-29",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2026-06-30",
+            "yes_probability": 0.29
+          },
+          {
+            "date": "2026-07-01",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2026-07-02",
+            "yes_probability": 0.29
+          },
+          {
+            "date": "2026-07-03",
+            "yes_probability": 0.31
+          },
+          {
+            "date": "2026-07-04",
+            "yes_probability": 0.3
+          },
+          {
+            "date": "2026-07-05",
+            "yes_probability": 0.31
+          },
+          {
+            "date": "2026-07-06",
+            "yes_probability": 0.28
+          },
+          {
+            "date": "2026-07-07",
+            "yes_probability": 0.28
+          },
+          {
+            "date": "2026-07-08",
+            "yes_probability": 0.28
+          },
+          {
+            "date": "2026-07-09",
+            "yes_probability": 0.28
+          },
+          {
+            "date": "2026-07-10",
+            "yes_probability": 0.28500000000000003
+          },
+          {
+            "date": "2026-07-11",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-07-12",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-07-13",
+            "yes_probability": 0.25
+          },
+          {
+            "date": "2026-07-14",
+            "yes_probability": 0.23
+          },
+          {
+            "date": "2026-07-15",
+            "yes_probability": 0.21
+          },
+          {
+            "date": "2026-07-16",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-07-17",
+            "yes_probability": 0.22999999999999998
+          },
+          {
+            "date": "2026-07-18",
+            "yes_probability": 0.23
+          },
+          {
+            "date": "2026-07-19",
+            "yes_probability": 0.215
+          },
+          {
+            "date": "2026-07-20",
+            "yes_probability": 0.25
+          },
+          {
+            "date": "2026-07-21",
+            "yes_probability": 0.22999999999999998
+          },
+          {
+            "date": "2026-07-22",
+            "yes_probability": 0.24
+          },
+          {
+            "date": "2026-07-23",
+            "yes_probability": 0.24
+          },
+          {
+            "date": "2026-07-24",
+            "yes_probability": 0.25
+          },
+          {
+            "date": "2026-07-25",
+            "yes_probability": 0.265
+          },
+          {
+            "date": "2026-07-26",
+            "yes_probability": 0.26
+          },
+          {
+            "date": "2026-07-27",
+            "yes_probability": 0.26
+          },
+          {
+            "date": "2026-07-28",
+            "yes_probability": 0.24
+          },
+          {
+            "date": "2026-07-29",
+            "yes_probability": 0.27
+          },
+          {
+            "date": "2026-07-30",
+            "yes_probability": 0.29
+          },
+          {
+            "date": "2026-07-31",
+            "yes_probability": 0.255
+          },
+          {
+            "date": "2026-08-01",
+            "yes_probability": 0.245
+          },
+          {
+            "date": "2026-08-02",
+            "yes_probability": 0.28
+          },
+          {
+            "date": "2026-08-03",
+            "yes_probability": 0.32
+          },
+          {
+            "date": "2026-08-04",
+            "yes_probability": 0.29
+          },
+          {
+            "date": "2026-08-05",
+            "yes_probability": 0.23
+          },
+          {
+            "date": "2026-08-06",
+            "yes_probability": 0.23
+          },
+          {
+            "date": "2026-08-07",
+            "yes_probability": 0.22
+          },
+          {
+            "date": "2026-08-08",
+            "yes_probability": 0.26
+          },
+          {
+            "date": "2026-08-09",
+            "yes_probability": 0.24
+          },
+          {
+            "date": "2026-08-10",
+            "yes_probability": 0.225
+          },
+          {
+            "date": "2026-08-11",
+            "yes_probability": 0.22
+          },
+          {
+            "date": "2026-08-12",
+            "yes_probability": 0.22
+          },
+          {
+            "date": "2026-08-13",
+            "yes_probability": 0.24
+          },
+          {
+            "date": "2026-08-14",
+            "yes_probability": 0.24
+          },
+          {
+            "date": "2026-08-15",
+            "yes_probability": 0.23
+          },
+          {
+            "date": "2026-08-16",
+            "yes_probability": 0.24
+          },
+          {
+            "date": "2026-08-17",
+            "yes_probability": 0.24
+          },
+          {
+            "date": "2026-08-18",
+            "yes_probability": 0.25
+          },
+          {
+            "date": "2026-08-19",
+            "yes_probability": 0.25
+          },
+          {
+            "date": "2026-08-20",
+            "yes_probability": 0.2
+          },
+          {
+            "date": "2026-08-21",
+            "yes_probability": 0.25
+          },
+          {
+            "date": "2026-08-22",
+            "yes_probability": 0.19
+          },
+          {
+            "date": "2026-08-23",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-08-24",
+            "yes_probability": 0.17
+          },
+          {
+            "date": "2026-08-25",
+            "yes_probability": 0.22
+          },
+          {
+            "date": "2026-08-26",
+            "yes_probability": 0.185
+          },
+          {
+            "date": "2026-08-27",
+            "yes_probability": 0.17
+          },
+          {
+            "date": "2026-08-28",
+            "yes_probability": 0.21
+          },
+          {
+            "date": "2026-08-29",
+            "yes_probability": 0.17
+          },
+          {
+            "date": "2026-08-30",
+            "yes_probability": 0.19
+          },
+          {
+            "date": "2026-08-31",
+            "yes_probability": 0.19
+          },
+          {
+            "date": "2026-09-01",
+            "yes_probability": 0.19
+          },
+          {
+            "date": "2026-09-02",
+            "yes_probability": 0.17
+          },
+          {
+            "date": "2026-09-03",
+            "yes_probability": 0.16
+          },
+          {
+            "date": "2026-09-04",
+            "yes_probability": 0.14500000000000002
+          },
+          {
+            "date": "2026-09-05",
+            "yes_probability": 0.17
+          },
+          {
+            "date": "2026-09-06",
+            "yes_probability": 0.13
+          },
+          {
+            "date": "2026-09-07",
+            "yes_probability": 0.135
+          },
+          {
+            "date": "2026-09-08",
+            "yes_probability": 0.135
+          },
+          {
+            "date": "2026-09-09",
+            "yes_probability": 0.16
+          },
+          {
+            "date": "2026-09-10",
+            "yes_probability": 0.1
+          },
+          {
+            "date": "2026-09-11",
+            "yes_probability": 0.08
+          },
+          {
+            "date": "2026-09-12",
+            "yes_probability": 0.07
+          },
+          {
+            "date": "2026-09-13",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-09-14",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-09-15",
+            "yes_probability": 0.05
+          },
+          {
+            "date": "2026-09-16",
+            "yes_probability": 0.05
+          },
+          {
+            "date": "2026-09-17",
+            "yes_probability": 0.06
+          },
+          {
+            "date": "2026-09-18",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-09-19",
+            "yes_probability": 0.01
+          },
+          {
+            "date": "2026-09-20",
+            "yes_probability": 0.05
+          },
+          {
+            "date": "2026-09-21",
+            "yes_probability": 0.05
+          },
+          {
+            "date": "2026-09-22",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-09-23",
+            "yes_probability": 0.025
+          },
+          {
+            "date": "2026-09-24",
+            "yes_probability": 0.025
+          },
+          {
+            "date": "2026-09-25",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-09-26",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-09-27",
+            "yes_probability": 0.01
+          },
+          {
+            "date": "2026-09-28",
+            "yes_probability": 0.025
+          },
+          {
+            "date": "2026-09-29",
+            "yes_probability": 0.05
+          },
+          {
+            "date": "2026-09-30",
+            "yes_probability": 0.01
+          },
+          {
+            "date": "2026-10-01",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-10-02",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-10-03",
+            "yes_probability": 0.035
+          },
+          {
+            "date": "2026-10-04",
+            "yes_probability": 0.05
+          },
+          {
+            "date": "2026-10-05",
+            "yes_probability": 0.035
+          },
+          {
+            "date": "2026-10-06",
+            "yes_probability": 0.06
+          },
+          {
+            "date": "2026-10-07",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-10-08",
+            "yes_probability": 0.06
+          },
+          {
+            "date": "2026-10-09",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-10-10",
+            "yes_probability": 0.05
+          },
+          {
+            "date": "2026-10-11",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-10-12",
+            "yes_probability": 0.02
+          },
+          {
+            "date": "2026-10-13",
+            "yes_probability": 0.02
+          },
+          {
+            "date": "2026-10-14",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-10-15",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-10-16",
+            "yes_probability": 0.035
+          },
+          {
+            "date": "2026-10-17",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-10-18",
+            "yes_probability": 0.035
+          },
+          {
+            "date": "2026-10-19",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-10-20",
+            "yes_probability": 0.035
+          },
+          {
+            "date": "2026-10-21",
+            "yes_probability": 0.035
+          },
+          {
+            "date": "2026-10-22",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-10-23",
+            "yes_probability": 0.035
+          },
+          {
+            "date": "2026-10-24",
+            "yes_probability": 0.035
+          },
+          {
+            "date": "2026-10-25",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-10-26",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-10-27",
+            "yes_probability": 0.07
+          },
+          {
+            "date": "2026-10-28",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-10-29",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-10-30",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-10-31",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-11-01",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-11-02",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-11-03",
+            "yes_probability": 0.04
+          },
+          {
+            "date": "2026-11-04",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-11-05",
+            "yes_probability": 0.03
+          },
+          {
+            "date": "2026-11-06",
+            "yes_probability": 0.02
+          },
+          {
+            "date": "2026-11-07",
+            "yes_probability": 0.02
+          },
+          {
+            "date": "2026-11-08",
+            "yes_probability": 0.01
+          },
+          {
+            "date": "2026-11-09",
+            "yes_probability": 0.01
+          },
+          {
+            "date": "2026-11-10",
+            "yes_probability": 0.015
+          },
+          {
+            "date": "2026-11-11",
+            "yes_probability": 0.01
+          }
+        ],
+        "chart": true
+      }
+    }
   }
 }
