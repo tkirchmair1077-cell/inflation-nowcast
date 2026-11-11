@@ -273,15 +273,16 @@ footer{margin:10px 0 48px}
     <div class="caveat" id="caveat">
       <h2>Datenlage und Quellen – Vorbehalte</h2>
       <ul>
-        <li><b>Model status.</b> US CPI nowcast: <b>YELLOW</b> – Auditor recheck pending, not validated for trading. PPI and PCE: <b>status not audited</b>. Research output, no trade authorization.</li>
+        <li><b>Model status.</b> US CPI nowcast: <b>YELLOW</b> – Auditor recheck pending, not validated for trading. PPI and PCE: <b>status not audited</b> (PCE: Auditor review pending). Research output, no trade authorization.</li>
+        <li><b>Seals.</b> The CPI, PPI and PCE seals are entries in a local append-only hash chain. They detect accidental edits but are not an external timestamp and do not protect against the owner rewriting the whole chain.</li>
         <li><b>CPI (Oct 2026).</b> Own model in mode «research provisional workaround», not certified: weights (Dec-2025 relative importance), seasonal factors and as-of cut-off stamps are workarounds (d). Auditor cross-check on 10 Nov (d): with Sep-2026 relative importance the same chain gives headline 0.307 instead of 0.348. Nowcast frozen 10 Nov 10:11 Zurich, before the BLS release (V as ledger record); BLS first release headline +0.4, core +0.3 (V).</li>
         <li><b>CPI y/y: n/a.</b> BLS could not publish a 12-month change for Oct 2026 (no Oct-2025 index) (V). Our analytical y/y (d: headline 4.06, core 2.87, interpolated base) is not official and not comparable, so it is not shown. Headline band withheld (sequential 80% coverage 4/6, d); core 80% band 0.17–0.48, actual inside (d).</li>
-        <li><b>Consensus (U).</b> Trading Economics consensus column, a substitute – not Bloomberg/Reuters (m/m 0.3 headline, 0.2 core, fetched 9 Nov). y/y consensus and all consensus history: no data. PPI and PCE consensus: none available.</li>
-        <li><b>Backtests (d).</b> CPI: 30 quasi-real-time targets Jan 2024–Sep 2026, not certified, release-timing of weights unknown (U), Oct–Dec 2025 missing; last point is the sealed Oct 2026 nowcast. PPI: 34 post-CPI targets Apr 2023–Sep 2026, pseudo-real-time, actuals = BLS first prints (V); bands under-cover slightly since 2024; trade services is baseline-only and the largest error source; energy extrapolates beyond the training range. PCE: no data.</li>
-        <li><b>PPI (Oct 2026).</b> UNSEALED run of 11 Nov 08:09 Zurich (stage B1, post-CPI): not scored, not an official forecast. BLS release 13 Nov (V). No y/y model.</li>
-        <li><b>PCE: no nowcast available.</b> No live run exists; nothing is filled in. An ex-post reconstruction of Oct B1 in a backtest report (unsealed, not scored, U) gave headline ≈0.41 and core ≈0.40 m/m – shown here for transparency only, not as a nowcast.</li>
-        <li><b>No data:</b> nowcast evolution/path (history not archived), y/y nowcasts, PCE everything. The former simulated «Refresh» button was removed because it would have altered real figures.</li>
-        <li><b>Not shown on purpose:</b> licensed third-party shadow indicators (used-car and rent data; internal research use only), any internal or broker-sourced content, and EA HICP (model status RED, not validated – this page covers the US only).</li>
+        <li><b>Consensus (U).</b> CPI only: Trading Economics consensus column, a substitute – not Bloomberg/Reuters (m/m 0.3 headline, 0.2 core, fetched 9 Nov). CPI y/y consensus and all consensus history: no data. PPI and PCE: no consensus shown.</li>
+        <li><b>PPI (Oct 2026), sealed 11 Nov 09:44 Zurich, stage B1 (post-CPI).</b> Final demand +0.446 (80% band 0.02…1.00), core FD +0.305 (−0.00…0.80), FD ex food, energy &amp; trade +0.305 (0.11…0.68) (d). BLS release 13 Nov (V). Only the CPI predictors are point-in-time tested; EIA, Brent, jet fuel, Henry Hub and equity inputs are latest-vintage, so it is not a full real-time test. Trade services is baseline-only and the largest error source. Backtest (26 CPI-first months 2024–26, d): RMSE final demand 0.367 / core 0.309 vs random walk 0.513 / 0.416. The 80% band covered only 73% of outcomes (nominal 80%): bands under-cover. Energy blocks are a statistical bridge that extrapolates beyond the training range. No y/y model. A refresh before release would be a separate, later record.</li>
+        <li><b>PCE (Oct 2026), sealed 11 Nov 09:48 Zurich, stage B1 (post-CPI, pre-PPI).</b> Headline +0.407 (80% band 0.321…0.492), derived y/y 3.92; core +0.398 (0.308…0.488), derived y/y 3.35 (d). Roughly 30% of the weight is not CPI-driven in B1: PPI-mapped units are AR(1) placeholders (21.5% of headline weight) and 7.8% are imputed, so B1 can differ noticeably from B2. The B2 record after the 13 Nov PPI will be a separate record and never replaces this one. The backtest uses latest-vintage CPI items and weights and BEA first releases as targets, not fully real-time; Oct/Nov 2025 are excluded. Backtest RMSE (d): B1 0.077 headline / 0.068 core (n=185); real-time BEA vintages 0.071 / 0.068 (n=154); about 0.07pp means a 0.1-rounded print is hit only about half the time. The 80% band is exploratory with no coverage guarantee (backtest coverage 0.82). y/y is derived (d) and the BEA Oct/Nov 2025 values may rest on estimates. BEA release 25 Nov (V).</li>
+        <li><b>Backtests.</b> CPI: 30 quasi-real-time targets Jan 2024–Sep 2026 (d, not certified), release timing of weights unknown (U), Oct–Dec 2025 missing; last point is the sealed Oct 2026 nowcast. PPI chart: 34 post-CPI targets Apr 2023–Sep 2026, pseudo-real-time, actuals = BLS first prints (V). PCE: per-month backtest series not available in the public files; RMSE stated only.</li>
+        <li><b>No data:</b> nowcast evolution/path (history not archived), CPI and PPI y/y nowcasts, PCE per-month backtest series, consensus history. The former simulated «Refresh» button was removed because it would have altered real figures.</li>
+        <li><b>Not shown on purpose:</b> licensed third-party shadow indicators (used-car and rent data; internal research use only), internal or licensed benchmark and consensus comparisons, any broker-sourced content, and EA HICP (model status RED, not validated – this page covers the US only).</li>
       </ul>
       <div class="fine" id="srcLine"></div>
     </div>
@@ -325,20 +326,20 @@ const NOWCAST_DATA = {
   "isPlaceholder": false,
   "banner": "Model status YELLOW – Auditor recheck pending, not validated for trading",
   "bannerSmall": "US CPI = YELLOW. PCE and PPI: status not audited. Research output only – no trade authorization. Figures labelled V (verified), U (unverified), (d) (own calculation).",
-  "asOf": "2026-11-11T08:09:30+01:00",
-  "asOfNote": "PPI run 11 Nov 08:09 · CPI nowcast frozen 10 Nov 10:11 (before BLS release)",
+  "asOf": "2026-11-11T09:48:32+01:00",
+  "asOfNote": "PCE sealed 11 Nov 09:48 · PPI sealed 11 Nov 09:44 · CPI nowcast frozen 10 Nov 10:11 (before BLS release)",
   "targetMonth": "Oct 2026",
   "freshness": {
    "greenMaxHours": 6,
    "amberMaxHours": 24
   },
   "hitTolerancePP": 0.1,
-  "source": "Inflation Nowcast Specialist research outputs (CPI: sealed freeze us:2026-10 + score; PPI: unsealed run 20261111T070935Z) · BLS CPI first release USDL-26-1685"
+  "source": "Inflation Nowcast Specialist research outputs (CPI: sealed freeze us:2026-10 + score; PPI: sealed 11 Nov, SHA daddf981…; PCE: sealed 11 Nov, SHA de1e6c24…; local hash chains) · BLS CPI first release USDL-26-1685"
  },
  "explanations": {
-  "measures": "Each nowcast is a model estimate of the next official monthly price-index change (m/m, seasonally adjusted) built from component inputs before the agency publishes. CPI and PPI are our own research models; PCE has no nowcast yet. All model figures are own calculations (d).",
+  "measures": "Each nowcast is a model estimate of the next official monthly price-index change (m/m, seasonally adjusted) built from component inputs before the agency publishes. CPI and PPI are our own research models, labelled (d). All model figures are own calculations (d).",
   "headlineVsCore": "Headline covers all items including food and energy; core excludes them and is the cleaner read on trend. For PPI, core here is final demand less foods and energy.",
-  "narrative": "CPI Oct 2026: BLS published headline +0.4% and core +0.3% m/m on 10 Nov (V). Our nowcast, frozen before the release, was +0.35 / +0.33 (d); the energy leg added 0.08pp. PPI Oct 2026 (BLS release 13 Nov): our unsealed final-demand nowcast is +0.45% (core +0.30%), with the energy block the largest contributor (0.17pp, d). PCE: no nowcast available yet."
+  "narrative": "CPI Oct 2026: BLS published headline +0.4% and core +0.3% m/m on 10 Nov (V). Our nowcast, frozen before the release, was +0.35 / +0.33 (d); the energy leg added 0.08pp. PPI Oct 2026 (BLS release 13 Nov): our sealed final-demand nowcast is +0.45% (core +0.30%), with the energy block the largest contributor (0.17pp, d). PCE Oct 2026 (BEA release 25 Nov): sealed stage-B1 nowcast +0.41% headline and +0.40% core, services contributing 0.27pp (d). CPI, PPI and PCE seals are local hash-chain records."
  },
  "evolution": {
   "dates": [],
@@ -865,20 +866,20 @@ const NOWCAST_DATA = {
    "status": {
     "flag": "UNAUDITED",
     "label": "Status not audited",
-    "note": "No live nowcast; model not audited"
+    "note": "Sealed research nowcast, Auditor review pending"
    },
    "release": {
     "reference": "Oct 2026",
-    "dateLabel": "BEA release 25 Nov 2026 (to verify)"
+    "dateLabel": "BEA release 25 Nov 2026"
    },
    "nowcast": {
     "headline": {
-     "mm": null,
-     "yy": null
+     "mm": 0.41,
+     "yy": 3.9163
     },
     "core": {
-     "mm": null,
-     "yy": null
+     "mm": 0.4,
+     "yy": 3.3487
     }
    },
    "consensus": {
@@ -926,14 +927,42 @@ const NOWCAST_DATA = {
      }
     }
    },
-   "contributors": [],
-   "cardCaption": "No nowcast available",
-   "cardNotes": [
-    "No live PCE nowcast exists yet: the model was designed on 10 Nov 2026 and its first live run is planned after the PPI release (13 Nov). Nothing is shown rather than a placeholder.",
-    "BEA release for Oct 2026: 25 Nov 2026 (design document, not yet verified)."
+   "contributors": [
+    {
+     "name": "Services",
+     "weight": 69.0,
+     "mm": null,
+     "contrib": 0.267
+    },
+    {
+     "name": "Nondurable goods",
+     "weight": 20.2,
+     "mm": null,
+     "contrib": 0.107
+    },
+    {
+     "name": "Durable goods",
+     "weight": 10.8,
+     "mm": null,
+     "contrib": 0.036
+    },
+    {
+     "name": "Fisher gap (formula term)",
+     "weight": 0,
+     "mm": null,
+     "contrib": -0.003
+    }
    ],
-   "contribNote": "",
-   "backtestNote": "no PCE nowcast available"
+   "cardCaption": "Stage B1 (post-CPI) · SEALED",
+   "cardNotes": [
+    "SEALED 11 Nov 2026 09:48 Zurich, stage B1 (after CPI, before PPI); local hash chain, SHA de1e6c24… (d). Not certified, not an official forecast.",
+    "Unrounded: headline 0.4066 (80% band 0.321 … 0.492), core 0.3983 (band 0.308 … 0.488). y/y derived (d): headline 3.92, core 3.35.",
+    "About 30% of the weight is not CPI-driven in B1 (PPI units are AR(1) placeholders until the 13 Nov PPI). A separate B2 record follows after the PPI. BEA release: 25 Nov 2026 14:30 Zurich (V)."
+   ],
+   "perfNote": "Backtest RMSE vs BEA first release (d): B1 headline 0.077 / core 0.068 (latest-vintage, n=185); real-time BEA vintages 0.071 / 0.068 (n=154). 80% band coverage 0.82 (target 0.80).",
+   "contribNote": "Services, nondurable and durable goods groups of the sealed stage-B1 nowcast (weights % of PCE, contributions pp, d); the small Fisher-formula term closes the sum. Component m/m is not published in the public report.",
+   "backtestNoData": "backtest series not available (RMSE only: headline 0.077 / core 0.068, d)",
+   "backtestNote": "per-month backtest series not in the public files; RMSE ~0.07pp, coverage ~0.82 (d)"
   },
   "PPI": {
    "label": "PPI",
@@ -942,7 +971,7 @@ const NOWCAST_DATA = {
    "status": {
     "flag": "UNAUDITED",
     "label": "Status not audited",
-    "note": "Unsealed research nowcast, not audited"
+    "note": "Sealed research nowcast, not audited"
    },
    "release": {
     "reference": "Oct 2026",
@@ -1502,14 +1531,15 @@ const NOWCAST_DATA = {
      "contrib": 0.0105
     }
    ],
-   "cardCaption": "Stage B1 (post-CPI) · y/y n/a",
+   "cardCaption": "Stage B1 (post-CPI) · SEALED · y/y n/a",
    "cardNotes": [
-    "Run 11 Nov 2026 08:09 Zurich, stage B1 (after the CPI release). UNSEALED, pseudo-real-time, not scored, not an official forecast (d).",
-    "Pre-CPI stage A: final demand 0.48, core 0.33. 80% band B1: final demand 0.02 … 1.00, core 0.00 … 0.80 (d).",
-    "BLS release: 13 Nov 2026 14:30 Zurich (V). No consensus available; y/y not modelled."
+    "SEALED 11 Nov 2026 09:44 Zurich, stage B1; local hash chain, SHA daddf981… (d). Research nowcast, not an official forecast.",
+    "Unrounded: final demand 0.446 (80% band 0.02 … 1.00), core FD 0.305 (band 0.00 … 0.80), FD ex food, energy & trade 0.305 (band 0.11 … 0.68) (d). Stage A (pre-CPI): FD 0.48, core 0.33.",
+    "BLS release: 13 Nov 2026 14:30 Zurich (V). y/y not modelled."
    ],
+   "perfNote": "Backtest RMSE 2024-01…2026-09, 26 CPI-first months, vs BLS first prints (d): final demand 0.367 (random walk 0.513), core 0.309 (0.416). 80% band coverage 0.73 (nominal 0.80: bands under-cover).",
    "contribNote": "Seven final-demand blocks, stage B1; weights = relative importance price-updated with the as-seen path (d). Contributions sum to the headline nowcast.",
-   "backtestNote": "34 stage-B1 targets Apr 2023–Sep 2026 (months with CPI released first); pseudo-real-time (d). Actuals = BLS first prints (V, one decimal). y/y and consensus history: no data."
+   "backtestNote": "chart: 34 stage-B1 targets Apr 2023–Sep 2026 (months with CPI released first); pseudo-real-time (d). Actuals = BLS first prints (V, one decimal). y/y and consensus history: no data."
   }
  }
 };
@@ -1684,9 +1714,9 @@ function renderBacktest(){
   const tol=data.meta.hitTolerancePP??0.1;
   $('perf').innerHTML='<div class="t">Nowcast performance <span class="tag">(d)</span></div>'+
     row('MAE',fmt(st.nowcast.mae),'pp')+row('Bias (nowcast − actual)',sgn(st.nowcast.bias),'pp')+row('Hit rate ≤ '+tol.toFixed(1)+'pp',st.nowcast.hit==null?'–':Math.round(st.nowcast.hit*100),st.nowcast.hit==null?'':'%')+
-    '<div class="ref">n = '+st.nowcast.n+' targets<br>Consensus history: '+(st.consensus.n?'MAE '+fmt(st.consensus.mae)+'pp · bias '+sgn(st.consensus.bias)+'pp · hit '+pct(st.consensus.hit):'no data')+'</div>';
+    '<div class="ref">n = '+st.nowcast.n+' targets<br>Consensus history: '+(st.consensus.n?'MAE '+fmt(st.consensus.mae)+'pp · bias '+sgn(st.consensus.bias)+'pp · hit '+pct(st.consensus.hit):'no data')+(s.perfNote?'<br><br>'+esc(s.perfNote):'')+'</div>';
   const has=bt.actual[u].some(v=>v!=null)&&bt.nowcast[u].some(v=>v!=null);
-  noData('btChart',has?null:'no data'+(u==='yy'&&s.backtest.months.length?' – no y/y nowcast history':''));
+  noData('btChart',has?null:(s.backtestNoData&&!s.backtest.months.length?s.backtestNoData:'no data'+(u==='yy'&&s.backtest.months.length?' – no y/y nowcast history':'')));
   if(!has){destroyChart('btChart');return}
   if(!hasChart())return;
   const T=themeColors(),o=baseOpts(T);
