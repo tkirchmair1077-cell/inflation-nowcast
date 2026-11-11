@@ -1,0 +1,2232 @@
+{
+  "schema_version": "1.0",
+  "feed": "token_demand",
+  "bot": {
+    "name": "Token Demand Bot",
+    "id": "1ff4ca99-21f4-48d1-a702-c2ad3bc5fe5d"
+  },
+  "as_of": "2026-11-08T18:32:00+01:00",
+  "timezone": "Europe/Zurich",
+  "edition": "2026-11-08",
+  "title": "AI Token Demand Monitor, as of Sun 8 Nov 2026 (Europe/Zurich)",
+  "sources_retrieved": "2026-11-08T17:42:00+01:00",
+  "bottom_line": "Token volume still supports the capex trajectory. The constraint has moved to financing cost, permitting and revenue per token: credit, not demand, is the transmission risk this week.",
+  "readings": [
+    {
+      "id": "openrouter_complete_week",
+      "label": "OpenRouter weekly tokens (complete week of 26 Oct)",
+      "value": 193.6,
+      "unit": "trillion tokens",
+      "quality": "(d)",
+      "wow_pct": 3.0,
+      "g4_pct": 16.7,
+      "note": "Series high for a complete week. Derived from OpenRouter weekly chart snapshots. WoW after +14.6% the prior week.",
+      "source_url": "https://openrouter.ai/rankings",
+      "as_of": "2026-10-26"
+    },
+    {
+      "id": "openrouter_partial_week",
+      "label": "OpenRouter week of 2 Nov (partial)",
+      "value": 202.3,
+      "unit": "trillion tokens",
+      "quality": "(d)",
+      "note": "8 Nov 17:42 Europe/Zurich snapshot; Sunday incomplete. Shown only as a light bar, not used as a reading.",
+      "source_url": "https://openrouter.ai/rankings",
+      "as_of": "2026-11-08T17:42:00+01:00"
+    },
+    {
+      "id": "openrouter_trailing7d",
+      "label": "OpenRouter 7 days to 7 Nov",
+      "value": 207.5,
+      "unit": "trillion tokens",
+      "quality": "(d)",
+      "wow_pct": 6.9,
+      "note": "Versus the 7 days to 31 Oct. Paid 195.6T (+5.8%); free/stealth 11.9T (5.7% of the window).",
+      "source_url": "https://openrouter.ai/rankings",
+      "as_of": "2026-11-07"
+    },
+    {
+      "id": "openrouter_deepseek_share",
+      "label": "DeepSeek share of OpenRouter 7-day tokens",
+      "value": 39.1,
+      "unit": "%",
+      "quality": "(d)",
+      "note": "31 Oct reading was 36.6%. Spend shares unpublished since the 7 days to 10 Oct.",
+      "source_url": "https://openrouter.ai/rankings",
+      "as_of": "2026-11-07"
+    },
+    {
+      "id": "openrouter_frontier_trio_share",
+      "label": "Anthropic + OpenAI + Google share of OpenRouter 7-day tokens",
+      "value": 18.8,
+      "unit": "%",
+      "quality": "(d)",
+      "note": "31 Oct reading was 22.3%. Individual shares: OpenAI 9.17%, Anthropic 6.57%, Google 3.09%.",
+      "source_url": "https://openrouter.ai/rankings",
+      "as_of": "2026-11-07"
+    },
+    {
+      "id": "portkey_week",
+      "label": "Portkey weekly tokens (week of 1 Nov)",
+      "value": 52.3,
+      "unit": "trillion tokens",
+      "quality": "(d)",
+      "wow_pct": 15.3,
+      "note": "Chart-array sum (top models + Other). Cost $25.4M (+4.4% WoW). Chart sums differ from the page headline cards.",
+      "source_url": "https://portkey.ai/rankings/weekly",
+      "as_of": "2026-11-01"
+    },
+    {
+      "id": "ramp_tokenomics",
+      "label": "Ramp Tokenomics table (week to 23 Oct vs 25 Sep)",
+      "value": null,
+      "unit": null,
+      "quality": "V",
+      "note": "Spend +8.9%, volume +37.1%, blended price OpenAI & Anthropic $0.56/M. Table unchanged at the 1, 4 and 8 Nov checks. Latest vintage retrieved 1 Nov (blended-price rows were restated that day vs the 28 Oct vintage).",
+      "source_url": "https://ramp.com/data/ai-index",
+      "as_of": "2026-10-23",
+      "retrieved": "2026-11-01"
+    },
+    {
+      "id": "ramp_tsm_charts",
+      "label": "Ramp TSM sample, week of 5 Oct (chart vintage 18 Oct)",
+      "value": 72.5,
+      "unit": "trillion tokens",
+      "quality": "(d)",
+      "note": "Spend $33.7M; effective price $0.464/M (derived spend/tokens). Since the week of 27 Jul, volume +64.6%, spend +1.5%. No newer chart data on the 8 Nov page. Not spliced with the Tokenomics table.",
+      "source_url": "https://ramp.com/data/ai-index",
+      "as_of": "2026-10-05",
+      "retrieved": "2026-10-18"
+    },
+    {
+      "id": "vercel_frozen_split",
+      "label": "Vercel AI Gateway open-weight share of tokens (frozen)",
+      "value": 56.3,
+      "unit": "% of tokens (7-day average)",
+      "quality": "V",
+      "note": "Spend share 32.8%. Last published day 17 Oct 2026; Vercel stopped publishing the traffic split after that. Team-preference open-weight share (a different measure, not spliced): 12.65% on 29 Oct; no newer day as of 8 Nov.",
+      "source_url": "https://vercel.com/ai-gateway/leaderboards/models",
+      "as_of": "2026-10-17"
+    },
+    {
+      "id": "npm_claude_code",
+      "label": "npm @anthropic-ai/claude-code downloads, Mon–Sat 2–7 Nov vs prior week",
+      "value": 10.3,
+      "unit": "% change",
+      "quality": "(d)",
+      "note": "12,920,219 vs 11,714,793. Indicative only; includes CI installs. @openai/codex −7.2% in the same window.",
+      "source_url": "https://api.npmjs.org/downloads/range/2026-07-01:2026-11-08/@anthropic-ai/claude-code",
+      "as_of": "2026-11-08"
+    },
+    {
+      "id": "anthropic_q3_unit_econ",
+      "label": "Anthropic Q3 compute / revenue",
+      "value": 58.2,
+      "unit": "%",
+      "quality": "(d)",
+      "note": "Q3 revenue $17.0bn and compute and infrastructure expense $9.9bn (Q2 $5.6bn) from the S-1/A filed 2 Nov, as recorded in the 4 Nov and 8 Nov packs. 9.9/17.0 = 58.2% (d); Q2 was 48% (d). Commitments in that filing were ~$895.4bn; Amendment 2 on 10 Nov raised the aggregate to $900.9bn (see circular-financing feed).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+      "as_of": "2026-11-02"
+    }
+  ],
+  "crack_watch": [
+    {
+      "id": 1,
+      "title": "Volume stall",
+      "status": "Eased",
+      "text": "WoW slowed (+3.0% from +14.6%) but at a series high; the partial week was already above the complete-week high."
+    },
+    {
+      "id": 2,
+      "title": "Volume up, spend lags",
+      "status": "Flag",
+      "text": "Portkey tokens +15.3% vs cost +4.4%; Ramp Tokenomics volume +37.1% vs spend +8.9% (week to 23 Oct vs 25 Sep)."
+    },
+    {
+      "id": 3,
+      "title": "Heavy users / adoption",
+      "status": "Watch",
+      "text": "No new Ramp adoption month after Sep 2026."
+    },
+    {
+      "id": 4,
+      "title": "Cheap / open-weight share",
+      "status": "Flag",
+      "text": "DeepSeek 39.1% of OpenRouter 7-day tokens; frontier trio 18.8%. Contrary: Anthropic 60.5% of Ramp Tokenomics spend."
+    },
+    {
+      "id": 5,
+      "title": "Developer vs enterprise",
+      "status": "Watch",
+      "text": "npm mixed (claude-code +10.3%, codex −7.2%, Mon–Sat windows); enterprise adoption data stale."
+    },
+    {
+      "id": 6,
+      "title": "Unit economics",
+      "status": "Flag",
+      "text": "Anthropic compute/revenue 58% in Q3 vs 48% in Q2 (d). Contrary: Portkey cost +18.5% since week of 27 Sep, tokens +81.4% (d)."
+    }
+  ],
+  "series": {
+    "openrouter_weekly": {
+      "id": "openrouter_weekly",
+      "title": "OpenRouter weekly tokens",
+      "unit": "trillion tokens",
+      "quality": "(d)",
+      "source_url": "https://openrouter.ai/rankings",
+      "retrieved": "2026-11-08T17:42:00+01:00",
+      "notes": "Derived from OpenRouter weekly chart snapshots. History uses, per week, the retrieval with the largest weekly total. Orange/free is stealth or free models named in that week's top-9 only. Spend unpublished in the API since 14 Oct. The week of 2 Nov is partial and is supplied separately.",
+      "points": [
+        {
+          "week_start": "2025-10-06",
+          "total_tn": 1.19736631358,
+          "free_tn": 0.0,
+          "paid_tn": 1.19736631358,
+          "wow_pct": null,
+          "g4_pct": null,
+          "complete": true
+        },
+        {
+          "week_start": "2025-10-13",
+          "total_tn": 4.644497398186,
+          "free_tn": 0.079039878033,
+          "paid_tn": 4.565457520153,
+          "wow_pct": 287.89277312299185,
+          "g4_pct": null,
+          "complete": true
+        },
+        {
+          "week_start": "2025-10-20",
+          "total_tn": 4.886312194357,
+          "free_tn": 0.0,
+          "paid_tn": 4.886312194357,
+          "wow_pct": 5.206479311743095,
+          "g4_pct": null,
+          "complete": true
+        },
+        {
+          "week_start": "2025-10-27",
+          "total_tn": 5.511159006188,
+          "free_tn": 0.241892814799,
+          "paid_tn": 5.269266191389,
+          "wow_pct": 12.787697285339439,
+          "g4_pct": null,
+          "complete": true
+        },
+        {
+          "week_start": "2025-11-03",
+          "total_tn": 5.828207285497,
+          "free_tn": 0.33751443103,
+          "paid_tn": 5.490692854467,
+          "wow_pct": 5.752842169006822,
+          "g4_pct": 386.75223441615543,
+          "complete": true
+        },
+        {
+          "week_start": "2025-11-10",
+          "total_tn": 5.927714421614,
+          "free_tn": 0.0,
+          "paid_tn": 5.927714421614,
+          "wow_pct": 1.7073369432932584,
+          "g4_pct": 27.628759657163027,
+          "complete": true
+        },
+        {
+          "week_start": "2025-11-17",
+          "total_tn": 6.271832101668,
+          "free_tn": 0.0,
+          "paid_tn": 6.271832101668,
+          "wow_pct": 5.805233781156138,
+          "g4_pct": 28.355124523379406,
+          "complete": true
+        },
+        {
+          "week_start": "2025-11-24",
+          "total_tn": 7.184885909341,
+          "free_tn": 1.579566240397,
+          "paid_tn": 5.605319668944,
+          "wow_pct": 14.558007817686525,
+          "g4_pct": 30.369780680864377,
+          "complete": true
+        },
+        {
+          "week_start": "2025-12-01",
+          "total_tn": 6.183689082546,
+          "free_tn": 0.58501542347,
+          "paid_tn": 5.598673659076,
+          "wow_pct": -13.93476304882384,
+          "g4_pct": 6.0993334594256154,
+          "complete": true
+        },
+        {
+          "week_start": "2025-12-08",
+          "total_tn": 5.772746635719,
+          "free_tn": 0.0,
+          "paid_tn": 5.772746635719,
+          "wow_pct": -6.645587146140974,
+          "g4_pct": -2.614292370933835,
+          "complete": true
+        },
+        {
+          "week_start": "2025-12-15",
+          "total_tn": 5.840500610903,
+          "free_tn": 0.170776227913,
+          "paid_tn": 5.66972438299,
+          "wow_pct": 1.1736869718960152,
+          "g4_pct": -6.877280574049283,
+          "complete": true
+        },
+        {
+          "week_start": "2025-12-22",
+          "total_tn": 5.6649492085,
+          "free_tn": 0.378754384454,
+          "paid_tn": 5.286194824046,
+          "wow_pct": -3.005759507588812,
+          "g4_pct": -21.154639336234204,
+          "complete": true
+        },
+        {
+          "week_start": "2025-12-29",
+          "total_tn": 5.566541388683,
+          "free_tn": 0.351029002678,
+          "paid_tn": 5.215512386005001,
+          "wow_pct": -1.7371350773868088,
+          "g4_pct": -9.98025103825081,
+          "complete": true
+        },
+        {
+          "week_start": "2026-01-05",
+          "total_tn": 6.419683711082,
+          "free_tn": 0.397319307841,
+          "paid_tn": 6.022364403241,
+          "wow_pct": 15.326254900996016,
+          "g4_pct": 11.206746392784028,
+          "complete": true
+        },
+        {
+          "week_start": "2026-01-12",
+          "total_tn": 7.643272557692,
+          "free_tn": 0.546049737672,
+          "paid_tn": 7.09722282002,
+          "wow_pct": 19.05995531365159,
+          "g4_pct": 30.86673672156801,
+          "complete": true
+        },
+        {
+          "week_start": "2026-01-19",
+          "total_tn": 7.493679593018,
+          "free_tn": 0.575094656309,
+          "paid_tn": 6.918584936709,
+          "wow_pct": -1.9571847470420622,
+          "g4_pct": 32.281496571479806,
+          "complete": true
+        },
+        {
+          "week_start": "2026-01-26",
+          "total_tn": 8.249934351918,
+          "free_tn": 0.0,
+          "paid_tn": 8.249934351918,
+          "wow_pct": 10.091901441911343,
+          "g4_pct": 48.205748881889996,
+          "complete": true
+        },
+        {
+          "week_start": "2026-02-02",
+          "total_tn": 9.804326929861,
+          "free_tn": 0.0,
+          "paid_tn": 9.804326929861,
+          "wow_pct": 18.84127208335451,
+          "g4_pct": 52.72289681400111,
+          "complete": true
+        },
+        {
+          "week_start": "2026-02-09",
+          "total_tn": 13.014630127221,
+          "free_tn": 0.0,
+          "paid_tn": 13.014630127221,
+          "wow_pct": 32.743738762753736,
+          "g4_pct": 70.27562511981075,
+          "complete": true
+        },
+        {
+          "week_start": "2026-02-16",
+          "total_tn": 13.947727801492,
+          "free_tn": 0.449290564622,
+          "paid_tn": 13.49843723687,
+          "wow_pct": 7.169605783258959,
+          "g4_pct": 86.1265567650818,
+          "complete": true
+        },
+        {
+          "week_start": "2026-02-23",
+          "total_tn": 13.615671189056,
+          "free_tn": 0.537106865199,
+          "paid_tn": 13.078564323857,
+          "wow_pct": -2.38072191515295,
+          "g4_pct": 65.03975193318401,
+          "complete": true
+        },
+        {
+          "week_start": "2026-03-02",
+          "total_tn": 14.788910154996,
+          "free_tn": 1.273655066101,
+          "paid_tn": 13.515255088895,
+          "wow_pct": 8.616827989229247,
+          "g4_pct": 50.84064679599243,
+          "complete": true
+        },
+        {
+          "week_start": "2026-03-09",
+          "total_tn": 16.874474880619,
+          "free_tn": 1.340325199219,
+          "paid_tn": 15.5341496814,
+          "wow_pct": 14.102220540696543,
+          "g4_pct": 29.657736836676342,
+          "complete": true
+        },
+        {
+          "week_start": "2026-03-16",
+          "total_tn": 20.296794834531,
+          "free_tn": 1.478698121257,
+          "paid_tn": 18.818096713274,
+          "wow_pct": 20.281045651042252,
+          "g4_pct": 45.52043976912019,
+          "complete": true
+        },
+        {
+          "week_start": "2026-03-23",
+          "total_tn": 22.639924441575,
+          "free_tn": 1.484868226097,
+          "paid_tn": 21.155056215478,
+          "wow_pct": 11.54433311341172,
+          "g4_pct": 66.27843113435725,
+          "complete": true
+        },
+        {
+          "week_start": "2026-03-30",
+          "total_tn": 27.005556400914,
+          "free_tn": 7.497847070613,
+          "paid_tn": 19.507709330300997,
+          "wow_pct": 19.282891029981243,
+          "g4_pct": 82.60680549060584,
+          "complete": true
+        },
+        {
+          "week_start": "2026-04-06",
+          "total_tn": 20.990845815775,
+          "free_tn": 2.322208766999,
+          "paid_tn": 18.668637048776,
+          "wow_pct": -22.272122432313346,
+          "g4_pct": 24.39406834451372,
+          "complete": true
+        },
+        {
+          "week_start": "2026-04-13",
+          "total_tn": 20.469273117201,
+          "free_tn": 0.0,
+          "paid_tn": 20.469273117201,
+          "wow_pct": -2.4847626586920524,
+          "g4_pct": 0.8497808844998511,
+          "complete": true
+        },
+        {
+          "week_start": "2026-04-20",
+          "total_tn": 21.883269650188,
+          "free_tn": 0.0,
+          "paid_tn": 21.883269650188,
+          "wow_pct": 6.907898120714284,
+          "g4_pct": -3.342125956911368,
+          "complete": true
+        },
+        {
+          "week_start": "2026-04-27",
+          "total_tn": 23.79775681357,
+          "free_tn": 3.031227447921,
+          "paid_tn": 20.766529365649,
+          "wow_pct": 8.748633974656306,
+          "g4_pct": -11.878294746911532,
+          "complete": true
+        },
+        {
+          "week_start": "2026-05-04",
+          "total_tn": 25.731788579578,
+          "free_tn": 2.676587886276,
+          "paid_tn": 23.055200693302,
+          "wow_pct": 8.126949868254707,
+          "g4_pct": 22.58576336280884,
+          "complete": true
+        },
+        {
+          "week_start": "2026-05-11",
+          "total_tn": 26.905682372472,
+          "free_tn": 0.0,
+          "paid_tn": 26.905682372472,
+          "wow_pct": 4.562037299753263,
+          "g4_pct": 31.444249233561084,
+          "complete": true
+        },
+        {
+          "week_start": "2026-05-18",
+          "total_tn": 28.920204910828,
+          "free_tn": 0.0,
+          "paid_tn": 28.920204910828,
+          "wow_pct": 7.487349737009907,
+          "g4_pct": 32.15669035353474,
+          "complete": true
+        },
+        {
+          "week_start": "2026-05-25",
+          "total_tn": 31.807747787522,
+          "free_tn": 0.0,
+          "paid_tn": 31.807747787522,
+          "wow_pct": 9.984517349020837,
+          "g4_pct": 33.658596634555614,
+          "complete": true
+        },
+        {
+          "week_start": "2026-06-01",
+          "total_tn": 36.126105262907,
+          "free_tn": 0.0,
+          "paid_tn": 36.126105262907,
+          "wow_pct": 13.576432711400788,
+          "g4_pct": 40.39484721858173,
+          "complete": true
+        },
+        {
+          "week_start": "2026-06-08",
+          "total_tn": 44.60581202287,
+          "free_tn": 0.0,
+          "paid_tn": 44.60581202287,
+          "wow_pct": 23.472518552033517,
+          "g4_pct": 65.78584183580314,
+          "complete": true
+        },
+        {
+          "week_start": "2026-06-15",
+          "total_tn": 46.647905566215,
+          "free_tn": 0.0,
+          "paid_tn": 46.647905566215,
+          "wow_pct": 4.578088483845999,
+          "g4_pct": 61.29866890655944,
+          "complete": true
+        },
+        {
+          "week_start": "2026-06-22",
+          "total_tn": 46.720348192435,
+          "free_tn": 0.0,
+          "paid_tn": 46.720348192435,
+          "wow_pct": 0.1552966319509519,
+          "g4_pct": 46.88354706699205,
+          "complete": true
+        },
+        {
+          "week_start": "2026-06-29",
+          "total_tn": 46.719738264038,
+          "free_tn": 0.0,
+          "paid_tn": 46.719738264038,
+          "wow_pct": -0.0013054876956131167,
+          "g4_pct": 29.32403845926943,
+          "complete": true
+        },
+        {
+          "week_start": "2026-07-06",
+          "total_tn": 52.619668699308,
+          "free_tn": 8.17446882128,
+          "paid_tn": 44.445199878028,
+          "wow_pct": 12.62834650726501,
+          "g4_pct": 17.96594729029748,
+          "complete": true
+        },
+        {
+          "week_start": "2026-07-13",
+          "total_tn": 62.773944339618,
+          "free_tn": 14.66221391894,
+          "paid_tn": 48.111730420678,
+          "wow_pct": 19.297490636697102,
+          "g4_pct": 34.56969520424165,
+          "complete": true
+        },
+        {
+          "week_start": "2026-07-20",
+          "total_tn": 58.04149741598,
+          "free_tn": 4.098879698442,
+          "paid_tn": 53.942617717538,
+          "wow_pct": -7.5388713795562,
+          "g4_pct": 24.23173127245257,
+          "complete": true
+        },
+        {
+          "week_start": "2026-07-27",
+          "total_tn": 56.788588911921,
+          "free_tn": 2.427355339353,
+          "paid_tn": 54.361233572568004,
+          "wow_pct": -2.158642626118812,
+          "g4_pct": 21.55159900720889,
+          "complete": true
+        },
+        {
+          "week_start": "2026-08-03",
+          "total_tn": 69.046537847932,
+          "free_tn": 2.406946248889,
+          "paid_tn": 66.639591599043,
+          "wow_pct": 21.585232475177452,
+          "g4_pct": 31.218115876962994,
+          "complete": true
+        },
+        {
+          "week_start": "2026-08-10",
+          "total_tn": 75.340581084831,
+          "free_tn": 0.0,
+          "paid_tn": 75.340581084831,
+          "wow_pct": 9.115653634597853,
+          "g4_pct": 20.018873877392984,
+          "complete": true
+        },
+        {
+          "week_start": "2026-08-17",
+          "total_tn": 93.377577206324,
+          "free_tn": 16.315385849654,
+          "paid_tn": 77.06219135667001,
+          "wow_pct": 23.940611901020436,
+          "g4_pct": 60.88071701026665,
+          "complete": true
+        },
+        {
+          "week_start": "2026-08-24",
+          "total_tn": 112.996824136069,
+          "free_tn": 21.007059535182,
+          "paid_tn": 91.98976460088699,
+          "wow_pct": 21.010661784889706,
+          "g4_pct": 98.97804523955836,
+          "complete": true
+        },
+        {
+          "week_start": "2026-08-31",
+          "total_tn": 115.463303706156,
+          "free_tn": 8.652131587623,
+          "paid_tn": 106.811172118533,
+          "wow_pct": 2.1827866304604315,
+          "g4_pct": 67.22533425275026,
+          "complete": true
+        },
+        {
+          "week_start": "2026-09-07",
+          "total_tn": 126.763022044183,
+          "free_tn": 3.560545223417,
+          "paid_tn": 123.20247682076601,
+          "wow_pct": 9.786415229191615,
+          "g4_pct": 68.25331079070394,
+          "complete": true
+        },
+        {
+          "week_start": "2026-09-14",
+          "total_tn": 128.895269979077,
+          "free_tn": 4.493945596793,
+          "paid_tn": 124.401324382284,
+          "wow_pct": 1.6820740784728283,
+          "g4_pct": 38.03663988226453,
+          "complete": true
+        },
+        {
+          "week_start": "2026-09-21",
+          "total_tn": 145.845105335054,
+          "free_tn": 19.533046742252,
+          "paid_tn": 126.312058592802,
+          "wow_pct": 13.150083287562374,
+          "g4_pct": 29.07009241200409,
+          "complete": true
+        },
+        {
+          "week_start": "2026-09-28",
+          "total_tn": 165.856049857563,
+          "free_tn": 44.310270574431,
+          "paid_tn": 121.54577928313199,
+          "wow_pct": 13.720682964668086,
+          "g4_pct": 43.64394966529983,
+          "complete": true
+        },
+        {
+          "week_start": "2026-10-05",
+          "total_tn": 171.842501724714,
+          "free_tn": 6.873214466397,
+          "paid_tn": 164.969287258317,
+          "wow_pct": 3.6094262900220775,
+          "g4_pct": 35.56201087160784,
+          "complete": true
+        },
+        {
+          "week_start": "2026-10-12",
+          "total_tn": 164.043985914931,
+          "free_tn": 4.96893432055,
+          "paid_tn": 159.075051594381,
+          "wow_pct": -4.538176371684788,
+          "g4_pct": 27.26920541115243,
+          "complete": true
+        },
+        {
+          "week_start": "2026-10-19",
+          "total_tn": 188.039304051712,
+          "free_tn": 19.530634924646,
+          "paid_tn": 168.508669127066,
+          "wow_pct": 14.627368387174133,
+          "g4_pct": 28.93082947125589,
+          "complete": true
+        },
+        {
+          "week_start": "2026-10-26",
+          "total_tn": 193.593270018919,
+          "free_tn": 0.0,
+          "paid_tn": 193.593270018919,
+          "wow_pct": 2.9536197207364667,
+          "g4_pct": 16.723671029894117,
+          "complete": true
+        }
+      ],
+      "partial_week": {
+        "week_start": "2026-11-02",
+        "total_tn": 202.319692180098,
+        "free_tn": 0.0,
+        "paid_tn": 202.319692180098,
+        "wow_pct": null,
+        "g4_pct": null,
+        "complete": false,
+        "note": "Partial week at the 8 Nov 17:42 Europe/Zurich OpenRouter snapshot; Sunday incomplete. Not a final reading."
+      }
+    },
+    "openrouter_trailing7d_paid_free": {
+      "id": "openrouter_trailing7d_paid_free",
+      "title": "OpenRouter trailing 7-day paid vs free/stealth tokens",
+      "unit": "trillion tokens",
+      "quality": "(d)",
+      "source_url": "https://openrouter.ai/rankings",
+      "retrieved": "2026-11-08T17:42:00+01:00",
+      "notes": "Free = variant=='free' or stealth/ prefix. Consecutive daily runs overlap 6 of 7 days. Windows as recorded in the 8 Nov pack.",
+      "points": [
+        {
+          "window_end": "2026-10-20",
+          "paid_tn": 148.97312890767,
+          "free_tn": 14.789992857136,
+          "total_tn": 163.763121764806
+        },
+        {
+          "window_end": "2026-10-24",
+          "paid_tn": 159.426399783214,
+          "free_tn": 24.582424566307,
+          "total_tn": 184.008824349521
+        },
+        {
+          "window_end": "2026-10-27",
+          "paid_tn": 169.57827465749,
+          "free_tn": 18.835444322423,
+          "total_tn": 188.413718979913
+        },
+        {
+          "window_end": "2026-10-31",
+          "paid_tn": 184.873095509469,
+          "free_tn": 9.159128610475,
+          "total_tn": 194.032224119944
+        },
+        {
+          "window_end": "2026-11-03",
+          "paid_tn": 195.390408327228,
+          "free_tn": 9.078590973458,
+          "total_tn": 204.468999300686
+        },
+        {
+          "window_end": "2026-11-07",
+          "paid_tn": 195.61915401701,
+          "free_tn": 11.87264970346,
+          "total_tn": 207.49180372047002
+        }
+      ]
+    },
+    "openrouter_author_share_7d": {
+      "id": "openrouter_author_share_7d",
+      "title": "OpenRouter token share by author, 7 days to 7 Nov",
+      "unit": "% of tokens",
+      "quality": "(d)",
+      "source_url": "https://openrouter.ai/rankings",
+      "retrieved": "2026-11-08T17:42:00+01:00",
+      "window_end": "2026-11-07",
+      "notes": "Spend shares are empty: OpenRouter has not published spend since the 7 days to 10 Oct.",
+      "points": [
+        {
+          "author": "deepseek",
+          "tokens": 81222127263460,
+          "token_share_pct": 39.144740084712595,
+          "spend_share_pct": null
+        },
+        {
+          "author": "openai",
+          "tokens": 19034810052722,
+          "token_share_pct": 9.173764800061898,
+          "spend_share_pct": null
+        },
+        {
+          "author": "z-ai",
+          "tokens": 18335829140334,
+          "token_share_pct": 8.836893222556283,
+          "spend_share_pct": null
+        },
+        {
+          "author": "tencent",
+          "tokens": 16896936193623,
+          "token_share_pct": 8.143423446444329,
+          "spend_share_pct": null
+        },
+        {
+          "author": "anthropic",
+          "tokens": 13624254458369,
+          "token_share_pct": 6.566165127526387,
+          "spend_share_pct": null
+        },
+        {
+          "author": "nvidia",
+          "tokens": 8089828396935,
+          "token_share_pct": 3.898866486231669,
+          "spend_share_pct": null
+        },
+        {
+          "author": "stepfun",
+          "tokens": 7281645417998,
+          "token_share_pct": 3.509365327898797,
+          "spend_share_pct": null
+        },
+        {
+          "author": "google",
+          "tokens": 6411105769440,
+          "token_share_pct": 3.0898115754379147,
+          "spend_share_pct": null
+        },
+        {
+          "author": "moonshotai",
+          "tokens": 6298065376774,
+          "token_share_pct": 3.03533212582154,
+          "spend_share_pct": null
+        },
+        {
+          "author": "minimax",
+          "tokens": 6076490692477,
+          "token_share_pct": 2.928544927327906,
+          "spend_share_pct": null
+        },
+        {
+          "author": "typesafe",
+          "tokens": 4868647912355,
+          "token_share_pct": 2.346429027584132,
+          "spend_share_pct": null
+        },
+        {
+          "author": "xiaomi",
+          "tokens": 3444397622476,
+          "token_share_pct": 1.6600162323116354,
+          "spend_share_pct": null
+        },
+        {
+          "author": "qwen",
+          "tokens": 3377790037437,
+          "token_share_pct": 1.6279149233227115,
+          "spend_share_pct": null
+        },
+        {
+          "author": "stealth",
+          "tokens": 3329579849190,
+          "token_share_pct": 1.6046801798858343,
+          "spend_share_pct": null
+        },
+        {
+          "author": "meta",
+          "tokens": 3082954481061,
+          "token_share_pct": 1.4858198857889886,
+          "spend_share_pct": null
+        },
+        {
+          "author": "upstage",
+          "tokens": 1914729656831,
+          "token_share_pct": 0.9227977310421844,
+          "spend_share_pct": null
+        },
+        {
+          "author": "dots-studio",
+          "tokens": 738661027299,
+          "token_share_pct": 0.3559952798396382,
+          "spend_share_pct": null
+        },
+        {
+          "author": "mistralai",
+          "tokens": 529350483900,
+          "token_share_pct": 0.2551187441664604,
+          "spend_share_pct": null
+        },
+        {
+          "author": "perplexity",
+          "tokens": 452679699489,
+          "token_share_pct": 0.21816750896765236,
+          "spend_share_pct": null
+        },
+        {
+          "author": "x-ai",
+          "tokens": 440519621676,
+          "token_share_pct": 0.21230699901257868,
+          "spend_share_pct": null
+        },
+        {
+          "author": "thinkingmachines",
+          "tokens": 289578658102,
+          "token_share_pct": 0.13956149250700825,
+          "spend_share_pct": null
+        },
+        {
+          "author": "cohere",
+          "tokens": 217107560869,
+          "token_share_pct": 0.10463428288545037,
+          "spend_share_pct": null
+        },
+        {
+          "author": "inclusionai",
+          "tokens": 169267364544,
+          "token_share_pct": 0.0815778558520965,
+          "spend_share_pct": null
+        },
+        {
+          "author": "liquid",
+          "tokens": 167188770004,
+          "token_share_pct": 0.080576083973531,
+          "spend_share_pct": null
+        },
+        {
+          "author": "voyageai",
+          "tokens": 163883237798,
+          "token_share_pct": 0.07898299347707304,
+          "spend_share_pct": null
+        },
+        {
+          "author": "inception",
+          "tokens": 123528488344,
+          "token_share_pct": 0.05953415321909092,
+          "spend_share_pct": null
+        },
+        {
+          "author": "particle-ai",
+          "tokens": 121779701924,
+          "token_share_pct": 0.05869133129136025,
+          "spend_share_pct": null
+        },
+        {
+          "author": "reflection",
+          "tokens": 100359234858,
+          "token_share_pct": 0.048367806852362485,
+          "spend_share_pct": null
+        },
+        {
+          "author": "xingchen-agi",
+          "tokens": 98956296070,
+          "token_share_pct": 0.047691665066111485,
+          "spend_share_pct": null
+        },
+        {
+          "author": "meta-llama",
+          "tokens": 98830960057,
+          "token_share_pct": 0.04763125978226285,
+          "spend_share_pct": null
+        },
+        {
+          "author": "recursive",
+          "tokens": 85627934167,
+          "token_share_pct": 0.04126810439334593,
+          "spend_share_pct": null
+        },
+        {
+          "author": "nace-ai",
+          "tokens": 59300713867,
+          "token_share_pct": 0.02857978619092303,
+          "spend_share_pct": null
+        },
+        {
+          "author": "baai",
+          "tokens": 47236580783,
+          "token_share_pct": 0.022765516485960306,
+          "spend_share_pct": null
+        },
+        {
+          "author": "respan",
+          "tokens": 43887290379,
+          "token_share_pct": 0.021151336868286293,
+          "spend_share_pct": null
+        },
+        {
+          "author": "cloudflare",
+          "tokens": 39079316077,
+          "token_share_pct": 0.01883414928989055,
+          "spend_share_pct": null
+        },
+        {
+          "author": "microsoft",
+          "tokens": 38155621011,
+          "token_share_pct": 0.018388977456865095,
+          "spend_share_pct": null
+        },
+        {
+          "author": "bytedance-seed",
+          "tokens": 26629380053,
+          "token_share_pct": 0.012833943112699872,
+          "spend_share_pct": null
+        },
+        {
+          "author": "baseten",
+          "tokens": 25593595512,
+          "token_share_pct": 0.012334750121734605,
+          "spend_share_pct": null
+        },
+        {
+          "author": "scaledown",
+          "tokens": 23286844598,
+          "token_share_pct": 0.01122301902072802,
+          "spend_share_pct": null
+        },
+        {
+          "author": "amazon",
+          "tokens": 18722937301,
+          "token_share_pct": 0.009023458741639392,
+          "spend_share_pct": null
+        },
+        {
+          "author": "fireworks",
+          "tokens": 12039860100,
+          "token_share_pct": 0.005802571419264314,
+          "spend_share_pct": null
+        },
+        {
+          "author": "unbiased",
+          "tokens": 11528232294,
+          "token_share_pct": 0.005555994062074215,
+          "spend_share_pct": null
+        },
+        {
+          "author": "aion-labs",
+          "tokens": 6966338792,
+          "token_share_pct": 0.0033574043249365903,
+          "spend_share_pct": null
+        },
+        {
+          "author": "meituan",
+          "tokens": 6737386720,
+          "token_share_pct": 0.0032470616184321725,
+          "spend_share_pct": null
+        },
+        {
+          "author": "ibm-granite",
+          "tokens": 6460867827,
+          "token_share_pct": 0.003113794237243216,
+          "spend_share_pct": null
+        },
+        {
+          "author": "sao10k",
+          "tokens": 5215839929,
+          "token_share_pct": 0.002513757090871264,
+          "spend_share_pct": null
+        },
+        {
+          "author": "sakana",
+          "tokens": 4127352782,
+          "token_share_pct": 0.001989164250343262,
+          "spend_share_pct": null
+        },
+        {
+          "author": "ricursiveai",
+          "tokens": 3674813935,
+          "token_share_pct": 0.001771064624774604,
+          "spend_share_pct": null
+        },
+        {
+          "author": "nex-agi",
+          "tokens": 3000873831,
+          "token_share_pct": 0.0014462613834340823,
+          "spend_share_pct": null
+        },
+        {
+          "author": "morph",
+          "tokens": 2980300578,
+          "token_share_pct": 0.0014363461710588908,
+          "spend_share_pct": null
+        },
+        {
+          "author": "black-forest-labs",
+          "tokens": 2584534755,
+          "token_share_pct": 0.0012456081197702866,
+          "spend_share_pct": null
+        },
+        {
+          "author": "intfloat",
+          "tokens": 2230018532,
+          "token_share_pct": 0.001074750179050084,
+          "spend_share_pct": null
+        },
+        {
+          "author": "thedrummer",
+          "tokens": 1971715840,
+          "token_share_pct": 0.0009502620366905034,
+          "spend_share_pct": null
+        },
+        {
+          "author": "sentence-transformers",
+          "tokens": 1831338639,
+          "token_share_pct": 0.0008826077012020934,
+          "spend_share_pct": null
+        },
+        {
+          "author": "venice",
+          "tokens": 1775115625,
+          "token_share_pct": 0.0008555112024528018,
+          "spend_share_pct": null
+        },
+        {
+          "author": "parallel",
+          "tokens": 1414231642,
+          "token_share_pct": 0.0006815843405097739,
+          "spend_share_pct": null
+        },
+        {
+          "author": "nousresearch",
+          "tokens": 1358760301,
+          "token_share_pct": 0.0006548501081182477,
+          "spend_share_pct": null
+        },
+        {
+          "author": "jaredpalmer",
+          "tokens": 1180136522,
+          "token_share_pct": 0.0005687629587479336,
+          "spend_share_pct": null
+        },
+        {
+          "author": "togethercomputer",
+          "tokens": 1022830566,
+          "token_share_pct": 0.0004929498648428267,
+          "spend_share_pct": null
+        },
+        {
+          "author": "recraft",
+          "tokens": 803780986,
+          "token_share_pct": 0.0003873796321530089,
+          "spend_share_pct": null
+        },
+        {
+          "author": "gryphe",
+          "tokens": 745108698,
+          "token_share_pct": 0.0003591027137649253,
+          "spend_share_pct": null
+        },
+        {
+          "author": "elorian",
+          "tokens": 636756547,
+          "token_share_pct": 0.00030688274697241987,
+          "spend_share_pct": null
+        },
+        {
+          "author": "perceptron",
+          "tokens": 589592593,
+          "token_share_pct": 0.0002841522327283302,
+          "spend_share_pct": null
+        },
+        {
+          "author": "bytedance",
+          "tokens": 534025173,
+          "token_share_pct": 0.0002573716953752212,
+          "spend_share_pct": null
+        },
+        {
+          "author": "krea",
+          "tokens": 296412578,
+          "token_share_pct": 0.00014285507797663315,
+          "spend_share_pct": null
+        },
+        {
+          "author": "prism-ml",
+          "tokens": 248191964,
+          "token_share_pct": 0.00011961530988200414,
+          "spend_share_pct": null
+        },
+        {
+          "author": "moondream",
+          "tokens": 221038027,
+          "token_share_pct": 0.00010652855825465728,
+          "spend_share_pct": null
+        },
+        {
+          "author": "anthracite-org",
+          "tokens": 218978581,
+          "token_share_pct": 0.00010553601495267004,
+          "spend_share_pct": null
+        },
+        {
+          "author": "rekaai",
+          "tokens": 169498104,
+          "token_share_pct": 8.168905998250679e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "undi95",
+          "tokens": 144471299,
+          "token_share_pct": 6.96274727047193e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "writer",
+          "tokens": 129952664,
+          "token_share_pct": 6.263026378385065e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "sourceful",
+          "tokens": 98932639,
+          "token_share_pct": 4.7680263618162304e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "inference-net",
+          "tokens": 95350083,
+          "token_share_pct": 4.595366240512048e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "fish-audio",
+          "tokens": 80252671,
+          "token_share_pct": 3.867751379139547e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "thenlper",
+          "tokens": 76710607,
+          "token_share_pct": 3.6970427566065906e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "elevenlabs",
+          "tokens": 71223643,
+          "token_share_pct": 3.432600311092359e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "relace",
+          "tokens": 55264072,
+          "token_share_pct": 2.663433977105475e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "hexgrad",
+          "tokens": 37550548,
+          "token_share_pct": 1.809736448702695e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "heygen",
+          "tokens": 36537153,
+          "token_share_pct": 1.7608962062531553e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "mancer",
+          "tokens": 8142846,
+          "token_share_pct": 3.924418147605448e-06,
+          "spend_share_pct": null
+        },
+        {
+          "author": "deepgram",
+          "tokens": 916664,
+          "token_share_pct": 4.4178323363313024e-07,
+          "spend_share_pct": null
+        },
+        {
+          "author": "canopylabs",
+          "tokens": 283363,
+          "token_share_pct": 1.3656587629925982e-07,
+          "spend_share_pct": null
+        },
+        {
+          "author": "Qwen",
+          "tokens": 264787,
+          "token_share_pct": 1.2761323351196912e-07,
+          "spend_share_pct": null
+        },
+        {
+          "author": "assemblyai",
+          "tokens": 214295,
+          "token_share_pct": 1.0327877832162238e-07,
+          "spend_share_pct": null
+        },
+        {
+          "author": "gmicloud",
+          "tokens": 50025,
+          "token_share_pct": 2.4109386059120178e-08,
+          "spend_share_pct": null
+        },
+        {
+          "author": "sesame",
+          "tokens": 19645,
+          "token_share_pct": 9.46784386069797e-09,
+          "spend_share_pct": null
+        },
+        {
+          "author": "kt",
+          "tokens": 5406,
+          "token_share_pct": 2.6054041186527472e-09,
+          "spend_share_pct": null
+        },
+        {
+          "author": "text-embedding-3-large",
+          "tokens": 5206,
+          "token_share_pct": 2.5090147690910478e-09,
+          "spend_share_pct": null
+        },
+        {
+          "author": "text-embedding-3-small",
+          "tokens": 188,
+          "token_share_pct": 9.060598858799788e-11,
+          "spend_share_pct": null
+        },
+        {
+          "author": "motif-technologies",
+          "tokens": 41,
+          "token_share_pct": 1.9759816660148473e-11,
+          "spend_share_pct": null
+        },
+        {
+          "author": "",
+          "tokens": 0,
+          "token_share_pct": 0.0,
+          "spend_share_pct": null
+        },
+        {
+          "author": "alibaba",
+          "tokens": 0,
+          "token_share_pct": 0.0,
+          "spend_share_pct": null
+        },
+        {
+          "author": "kwaivgi",
+          "tokens": 0,
+          "token_share_pct": 0.0,
+          "spend_share_pct": null
+        },
+        {
+          "author": "tbc",
+          "tokens": 0,
+          "token_share_pct": 0.0,
+          "spend_share_pct": null
+        },
+        {
+          "author": "runway",
+          "tokens": 0,
+          "token_share_pct": 0.0,
+          "spend_share_pct": null
+        }
+      ]
+    },
+    "portkey_weekly": {
+      "id": "portkey_weekly",
+      "title": "Portkey AI Gateway weekly tokens and cost",
+      "unit": "trillion tokens / USD",
+      "quality": "(d)",
+      "source_url": "https://portkey.ai/rankings/weekly",
+      "retrieved": "2026-11-08",
+      "notes": "Sums of the top-model + Other chart arrays. Weeks start Sunday. Chart-array sums do not match the headline cards; use within-series changes only. Complete weekly buckets through the week of 1 Nov.",
+      "points": [
+        {
+          "week_start": "2026-08-09",
+          "tokens_tn": 19.649885680329,
+          "cost_usd": 20822072.669999994,
+          "requests": 2087289722.0,
+          "usd_per_mtok": 1.0596536289696812
+        },
+        {
+          "week_start": "2026-08-16",
+          "tokens_tn": 20.509630429854,
+          "cost_usd": 19144485.11000001,
+          "requests": 2425719438.0,
+          "usd_per_mtok": 0.9334388142915109
+        },
+        {
+          "week_start": "2026-08-23",
+          "tokens_tn": 24.063865561651,
+          "cost_usd": 20996189.32999997,
+          "requests": 2229662947.0,
+          "usd_per_mtok": 0.872519391209541
+        },
+        {
+          "week_start": "2026-08-30",
+          "tokens_tn": 25.746189269675,
+          "cost_usd": 21686209.47,
+          "requests": 2927480810.0,
+          "usd_per_mtok": 0.842307544734124
+        },
+        {
+          "week_start": "2026-09-06",
+          "tokens_tn": 23.829239901911,
+          "cost_usd": 22749779.91,
+          "requests": 2071081080.0,
+          "usd_per_mtok": 0.9547001920181083
+        },
+        {
+          "week_start": "2026-09-13",
+          "tokens_tn": 27.533242685305,
+          "cost_usd": 25580613.87999999,
+          "requests": 2355871930.0,
+          "usd_per_mtok": 0.929081044771121
+        },
+        {
+          "week_start": "2026-09-20",
+          "tokens_tn": 25.948707445556,
+          "cost_usd": 22638409.339999966,
+          "requests": 1957035372.0,
+          "usd_per_mtok": 0.8724291715685069
+        },
+        {
+          "week_start": "2026-09-27",
+          "tokens_tn": 28.830541182568,
+          "cost_usd": 21420958.57999997,
+          "requests": 2266724236.0,
+          "usd_per_mtok": 0.7429953688469735
+        },
+        {
+          "week_start": "2026-10-04",
+          "tokens_tn": 32.359855894982,
+          "cost_usd": 21583028.21999998,
+          "requests": 2124738700.0,
+          "usd_per_mtok": 0.6669692315702442
+        },
+        {
+          "week_start": "2026-10-11",
+          "tokens_tn": 35.51624062457,
+          "cost_usd": 21203201.38999999,
+          "requests": 2173480945.0,
+          "usd_per_mtok": 0.5970001615354441
+        },
+        {
+          "week_start": "2026-10-18",
+          "tokens_tn": 40.029797850092,
+          "cost_usd": 23060946.13999998,
+          "requests": 2350752433.0,
+          "usd_per_mtok": 0.5760944940656746
+        },
+        {
+          "week_start": "2026-10-25",
+          "tokens_tn": 45.370246760797,
+          "cost_usd": 24316422.18999999,
+          "requests": 2578435362.0,
+          "usd_per_mtok": 0.5359552553946223
+        },
+        {
+          "week_start": "2026-11-01",
+          "tokens_tn": 52.307820251469,
+          "cost_usd": 25392289.809999984,
+          "requests": 2687451258.0,
+          "usd_per_mtok": 0.4854396472253472
+        }
+      ]
+    },
+    "ramp_tsm_weekly": {
+      "id": "ramp_tsm_weekly",
+      "title": "Ramp TSM weekly token volume and spend",
+      "unit": "tokens / USD",
+      "quality": "(d)",
+      "source_url": "https://ramp.com/data/ai-index",
+      "retrieved": "2026-10-18",
+      "vintage": "2026-10-18",
+      "notes": "18 Oct vintage. No newer tokenPrices/tokenVolumes on the 1, 4 or 8 Nov pages. Sample composition can change. Do not splice with the Tokenomics table (different cut and later week).",
+      "points": [
+        {
+          "week_start": "2025-01-06",
+          "token_volume": 536602990618.0,
+          "token_spend_usd": 508628.76139326533,
+          "usd_per_mtok": 0.9478679215102452
+        },
+        {
+          "week_start": "2025-01-13",
+          "token_volume": 561645145202.0,
+          "token_spend_usd": 554788.2248941832,
+          "usd_per_mtok": 0.9877913654797983
+        },
+        {
+          "week_start": "2025-01-20",
+          "token_volume": 538959510108.0,
+          "token_spend_usd": 668330.341075219,
+          "usd_per_mtok": 1.2400381263173088
+        },
+        {
+          "week_start": "2025-01-27",
+          "token_volume": 583937018766.0,
+          "token_spend_usd": 699707.5777172399,
+          "usd_per_mtok": 1.1982586395976247
+        },
+        {
+          "week_start": "2025-02-03",
+          "token_volume": 616460468634.0,
+          "token_spend_usd": 655573.9874725273,
+          "usd_per_mtok": 1.0634485434649168
+        },
+        {
+          "week_start": "2025-02-10",
+          "token_volume": 723965764348.0,
+          "token_spend_usd": 715052.192765421,
+          "usd_per_mtok": 0.9876878548385412
+        },
+        {
+          "week_start": "2025-02-17",
+          "token_volume": 734898598330.0,
+          "token_spend_usd": 824920.3408558582,
+          "usd_per_mtok": 1.1224954609117852
+        },
+        {
+          "week_start": "2025-02-24",
+          "token_volume": 927886006534.0,
+          "token_spend_usd": 925439.6758986061,
+          "usd_per_mtok": 0.9973635439933706
+        },
+        {
+          "week_start": "2025-03-03",
+          "token_volume": 836161238196.0,
+          "token_spend_usd": 986103.7441793549,
+          "usd_per_mtok": 1.1793224788879866
+        },
+        {
+          "week_start": "2025-03-10",
+          "token_volume": 821524575812.0,
+          "token_spend_usd": 921822.8991517834,
+          "usd_per_mtok": 1.1220880376471367
+        },
+        {
+          "week_start": "2025-03-17",
+          "token_volume": 832896320203.0,
+          "token_spend_usd": 1070386.3537864545,
+          "usd_per_mtok": 1.2851375709350854
+        },
+        {
+          "week_start": "2025-03-24",
+          "token_volume": 818567732057.0,
+          "token_spend_usd": 1137964.1683362534,
+          "usd_per_mtok": 1.3901893805130014
+        },
+        {
+          "week_start": "2025-03-31",
+          "token_volume": 898352354333.0,
+          "token_spend_usd": 1207545.8270289951,
+          "usd_per_mtok": 1.344178396377179
+        },
+        {
+          "week_start": "2025-04-07",
+          "token_volume": 834580075030.0,
+          "token_spend_usd": 1162044.0322836621,
+          "usd_per_mtok": 1.3923697282635115
+        },
+        {
+          "week_start": "2025-04-14",
+          "token_volume": 804478294838.0,
+          "token_spend_usd": 1117338.6374802575,
+          "usd_per_mtok": 1.3888984260355453
+        },
+        {
+          "week_start": "2025-04-21",
+          "token_volume": 1041435838472.0,
+          "token_spend_usd": 1367695.4054466928,
+          "usd_per_mtok": 1.3132786052891963
+        },
+        {
+          "week_start": "2025-04-28",
+          "token_volume": 1012475223220.0,
+          "token_spend_usd": 1337617.69587982,
+          "usd_per_mtok": 1.3211362265495854
+        },
+        {
+          "week_start": "2025-05-05",
+          "token_volume": 1072212410556.0,
+          "token_spend_usd": 1336119.5714033707,
+          "usd_per_mtok": 1.2461332831528416
+        },
+        {
+          "week_start": "2025-05-12",
+          "token_volume": 1122442645116.0,
+          "token_spend_usd": 1412293.0828435894,
+          "usd_per_mtok": 1.2582318472919696
+        },
+        {
+          "week_start": "2025-05-19",
+          "token_volume": 1185083806256.0,
+          "token_spend_usd": 1411159.55707245,
+          "usd_per_mtok": 1.190767732731649
+        },
+        {
+          "week_start": "2025-05-26",
+          "token_volume": 1146396522585.0,
+          "token_spend_usd": 1436620.5412617216,
+          "usd_per_mtok": 1.2531619844958166
+        },
+        {
+          "week_start": "2025-06-02",
+          "token_volume": 1228416200833.0,
+          "token_spend_usd": 1527405.1400555403,
+          "usd_per_mtok": 1.2433938424288065
+        },
+        {
+          "week_start": "2025-06-09",
+          "token_volume": 1234758152051.0,
+          "token_spend_usd": 1608045.0825075621,
+          "usd_per_mtok": 1.3023158258453387
+        },
+        {
+          "week_start": "2025-06-16",
+          "token_volume": 1405970300534.0,
+          "token_spend_usd": 1646061.2384094142,
+          "usd_per_mtok": 1.1707652983738175
+        },
+        {
+          "week_start": "2025-06-23",
+          "token_volume": 1599192722622.0,
+          "token_spend_usd": 1742569.9579444856,
+          "usd_per_mtok": 1.0896560078683997
+        },
+        {
+          "week_start": "2025-06-30",
+          "token_volume": 1566931251494.0,
+          "token_spend_usd": 1786839.0488600242,
+          "usd_per_mtok": 1.1403429774958869
+        },
+        {
+          "week_start": "2025-07-07",
+          "token_volume": 2019547106567.0,
+          "token_spend_usd": 2050207.9802685322,
+          "usd_per_mtok": 1.0151820542347498
+        },
+        {
+          "week_start": "2025-07-14",
+          "token_volume": 2157865717066.0,
+          "token_spend_usd": 2451196.702048016,
+          "usd_per_mtok": 1.1359356991781913
+        },
+        {
+          "week_start": "2025-07-21",
+          "token_volume": 2120468527124.0,
+          "token_spend_usd": 2319890.794484718,
+          "usd_per_mtok": 1.0940463226922756
+        },
+        {
+          "week_start": "2025-07-28",
+          "token_volume": 2061992265739.0,
+          "token_spend_usd": 2230783.110141529,
+          "usd_per_mtok": 1.0818581365250832
+        },
+        {
+          "week_start": "2025-08-04",
+          "token_volume": 1940793221445.0,
+          "token_spend_usd": 2541250.568215685,
+          "usd_per_mtok": 1.3093875947915872
+        },
+        {
+          "week_start": "2025-08-11",
+          "token_volume": 2058882696174.0,
+          "token_spend_usd": 2559788.0905176713,
+          "usd_per_mtok": 1.2432899141240532
+        },
+        {
+          "week_start": "2025-08-18",
+          "token_volume": 2290298268873.0,
+          "token_spend_usd": 2577353.8407083973,
+          "usd_per_mtok": 1.1253354533497728
+        },
+        {
+          "week_start": "2025-08-25",
+          "token_volume": 2731184000814.0,
+          "token_spend_usd": 2604229.345481853,
+          "usd_per_mtok": 0.9535166230856985
+        },
+        {
+          "week_start": "2025-09-01",
+          "token_volume": 2678277871887.0,
+          "token_spend_usd": 2707066.3194006295,
+          "usd_per_mtok": 1.010748865088202
+        },
+        {
+          "week_start": "2025-09-08",
+          "token_volume": 2810974838551.0,
+          "token_spend_usd": 2776736.2071565455,
+          "usd_per_mtok": 0.9878196592424484
+        },
+        {
+          "week_start": "2025-09-15",
+          "token_volume": 3424518266906.0,
+          "token_spend_usd": 3344036.270495545,
+          "usd_per_mtok": 0.9764983013265778
+        },
+        {
+          "week_start": "2025-09-22",
+          "token_volume": 3342623187407.0,
+          "token_spend_usd": 3440094.7942393245,
+          "usd_per_mtok": 1.0291602138103808
+        },
+        {
+          "week_start": "2025-09-29",
+          "token_volume": 4167248543786.0,
+          "token_spend_usd": 4141064.923085197,
+          "usd_per_mtok": 0.9937168084826985
+        },
+        {
+          "week_start": "2025-10-06",
+          "token_volume": 4681704631796.0,
+          "token_spend_usd": 4861202.091998663,
+          "usd_per_mtok": 1.0383401932244076
+        },
+        {
+          "week_start": "2025-10-13",
+          "token_volume": 4695904456119.0,
+          "token_spend_usd": 4823612.435618933,
+          "usd_per_mtok": 1.0271956085762186
+        },
+        {
+          "week_start": "2025-10-20",
+          "token_volume": 4563751750184.0,
+          "token_spend_usd": 4577442.679317496,
+          "usd_per_mtok": 1.002999928541894
+        },
+        {
+          "week_start": "2025-10-27",
+          "token_volume": 4774399103891.0,
+          "token_spend_usd": 4789593.46867257,
+          "usd_per_mtok": 1.0031824664111526
+        },
+        {
+          "week_start": "2025-11-03",
+          "token_volume": 5171726925662.0,
+          "token_spend_usd": 5118704.48852985,
+          "usd_per_mtok": 0.9897476340312839
+        },
+        {
+          "week_start": "2025-11-10",
+          "token_volume": 5112267429588.0,
+          "token_spend_usd": 4988889.07458439,
+          "usd_per_mtok": 0.9758662165657571
+        },
+        {
+          "week_start": "2025-11-17",
+          "token_volume": 4964785960002.0,
+          "token_spend_usd": 5084698.62547779,
+          "usd_per_mtok": 1.0241526354694537
+        },
+        {
+          "week_start": "2025-11-24",
+          "token_volume": 4667790893571.0,
+          "token_spend_usd": 4797228.958623983,
+          "usd_per_mtok": 1.027730047897231
+        },
+        {
+          "week_start": "2025-12-01",
+          "token_volume": 5940823255649.0,
+          "token_spend_usd": 6010810.900524912,
+          "usd_per_mtok": 1.0117807990347738
+        },
+        {
+          "week_start": "2025-12-08",
+          "token_volume": 5894220929938.0,
+          "token_spend_usd": 5967506.581818329,
+          "usd_per_mtok": 1.012433475560459
+        },
+        {
+          "week_start": "2025-12-15",
+          "token_volume": 5651130864406.0,
+          "token_spend_usd": 5399618.5374173615,
+          "usd_per_mtok": 0.9554934520145686
+        },
+        {
+          "week_start": "2025-12-22",
+          "token_volume": 3961563697278.0,
+          "token_spend_usd": 3562602.727248405,
+          "usd_per_mtok": 0.8992920471520571
+        },
+        {
+          "week_start": "2025-12-29",
+          "token_volume": 3983924682639.0,
+          "token_spend_usd": 3409507.2237680675,
+          "usd_per_mtok": 0.8558161851367051
+        },
+        {
+          "week_start": "2026-01-05",
+          "token_volume": 5921047046596.0,
+          "token_spend_usd": 5482412.270790939,
+          "usd_per_mtok": 0.9259193902103461
+        },
+        {
+          "week_start": "2026-01-12",
+          "token_volume": 6589886041810.0,
+          "token_spend_usd": 6119311.153677262,
+          "usd_per_mtok": 0.9285913466261568
+        },
+        {
+          "week_start": "2026-01-19",
+          "token_volume": 7156267868487.0,
+          "token_spend_usd": 6835807.001650686,
+          "usd_per_mtok": 0.9552195540013978
+        },
+        {
+          "week_start": "2026-01-26",
+          "token_volume": 7967809471126.0,
+          "token_spend_usd": 7836593.975844822,
+          "usd_per_mtok": 0.9835317980736511
+        },
+        {
+          "week_start": "2026-02-02",
+          "token_volume": 8681039070002.0,
+          "token_spend_usd": 8524496.639800493,
+          "usd_per_mtok": 0.9819673164768429
+        },
+        {
+          "week_start": "2026-02-09",
+          "token_volume": 9241702496864.0,
+          "token_spend_usd": 9788260.360050729,
+          "usd_per_mtok": 1.059140387106401
+        },
+        {
+          "week_start": "2026-02-16",
+          "token_volume": 9385275568896.0,
+          "token_spend_usd": 10197189.602997314,
+          "usd_per_mtok": 1.086509344146708
+        },
+        {
+          "week_start": "2026-02-23",
+          "token_volume": 11427223872567.0,
+          "token_spend_usd": 12630138.991774738,
+          "usd_per_mtok": 1.1052674851409485
+        },
+        {
+          "week_start": "2026-03-02",
+          "token_volume": 12889580945001.0,
+          "token_spend_usd": 13452051.889621567,
+          "usd_per_mtok": 1.0436376440025934
+        },
+        {
+          "week_start": "2026-03-09",
+          "token_volume": 13170050800644.0,
+          "token_spend_usd": 14231566.421615688,
+          "usd_per_mtok": 1.080600723341157
+        },
+        {
+          "week_start": "2026-03-16",
+          "token_volume": 13086670989136.0,
+          "token_spend_usd": 12956741.20384829,
+          "usd_per_mtok": 0.9900715938075029
+        },
+        {
+          "week_start": "2026-03-23",
+          "token_volume": 14070453429041.0,
+          "token_spend_usd": 12747926.824411776,
+          "usd_per_mtok": 0.9060068240658422
+        },
+        {
+          "week_start": "2026-03-30",
+          "token_volume": 14449299663547.0,
+          "token_spend_usd": 12875676.268731026,
+          "usd_per_mtok": 0.8910934487166915
+        },
+        {
+          "week_start": "2026-04-06",
+          "token_volume": 15516624193231.0,
+          "token_spend_usd": 13156736.934341863,
+          "usd_per_mtok": 0.8479123274817328
+        },
+        {
+          "week_start": "2026-04-13",
+          "token_volume": 17518262878416.0,
+          "token_spend_usd": 14021387.649700388,
+          "usd_per_mtok": 0.80038687323136
+        },
+        {
+          "week_start": "2026-04-20",
+          "token_volume": 19853187286424.0,
+          "token_spend_usd": 15384695.711009415,
+          "usd_per_mtok": 0.7749232145475086
+        },
+        {
+          "week_start": "2026-04-27",
+          "token_volume": 20658146552346.0,
+          "token_spend_usd": 16146945.048320245,
+          "usd_per_mtok": 0.7816260286180684
+        },
+        {
+          "week_start": "2026-05-04",
+          "token_volume": 21635431839574.0,
+          "token_spend_usd": 16570320.359865267,
+          "usd_per_mtok": 0.7658881266033253
+        },
+        {
+          "week_start": "2026-05-11",
+          "token_volume": 23010849301723.0,
+          "token_spend_usd": 18468787.560810458,
+          "usd_per_mtok": 0.8026121643162278
+        },
+        {
+          "week_start": "2026-05-18",
+          "token_volume": 24078054566717.0,
+          "token_spend_usd": 18254575.50662852,
+          "usd_per_mtok": 0.7581416287618913
+        },
+        {
+          "week_start": "2026-05-25",
+          "token_volume": 23256748182650.0,
+          "token_spend_usd": 17711732.473279554,
+          "usd_per_mtok": 0.7615739025154369
+        },
+        {
+          "week_start": "2026-06-01",
+          "token_volume": 27237084816645.0,
+          "token_spend_usd": 20545788.99189103,
+          "usd_per_mtok": 0.7543314246073495
+        },
+        {
+          "week_start": "2026-06-08",
+          "token_volume": 27162183939285.0,
+          "token_spend_usd": 21043286.725823272,
+          "usd_per_mtok": 0.7747273478767703
+        },
+        {
+          "week_start": "2026-06-15",
+          "token_volume": 26961560980017.0,
+          "token_spend_usd": 19674991.392472215,
+          "usd_per_mtok": 0.7297422952274408
+        },
+        {
+          "week_start": "2026-06-22",
+          "token_volume": 30834003797597.0,
+          "token_spend_usd": 21608833.995467268,
+          "usd_per_mtok": 0.7008118094981658
+        },
+        {
+          "week_start": "2026-06-29",
+          "token_volume": 27029348031085.0,
+          "token_spend_usd": 20188228.63181662,
+          "usd_per_mtok": 0.7469003177064879
+        },
+        {
+          "week_start": "2026-07-06",
+          "token_volume": 35067262855653.0,
+          "token_spend_usd": 27259697.81737439,
+          "usd_per_mtok": 0.77735459221848
+        },
+        {
+          "week_start": "2026-07-13",
+          "token_volume": 35642861961102.0,
+          "token_spend_usd": 27944164.237618312,
+          "usd_per_mtok": 0.784004501886367
+        },
+        {
+          "week_start": "2026-07-20",
+          "token_volume": 38170482660559.0,
+          "token_spend_usd": 31155491.65444971,
+          "usd_per_mtok": 0.816219483822305
+        },
+        {
+          "week_start": "2026-07-27",
+          "token_volume": 44055657064741.0,
+          "token_spend_usd": 33156563.355842557,
+          "usd_per_mtok": 0.7526062613733822
+        },
+        {
+          "week_start": "2026-08-03",
+          "token_volume": 45454802295195.0,
+          "token_spend_usd": 31612881.95296489,
+          "usd_per_mtok": 0.6954794731624357
+        },
+        {
+          "week_start": "2026-08-10",
+          "token_volume": 46426062985310.0,
+          "token_spend_usd": 30322563.427282874,
+          "usd_per_mtok": 0.6531366537989114
+        },
+        {
+          "week_start": "2026-08-17",
+          "token_volume": 48131010939706.0,
+          "token_spend_usd": 29640440.261831477,
+          "usd_per_mtok": 0.6158283336072503
+        },
+        {
+          "week_start": "2026-08-24",
+          "token_volume": 50213765056990.0,
+          "token_spend_usd": 28439201.6552029,
+          "usd_per_mtok": 0.5663626621689469
+        },
+        {
+          "week_start": "2026-08-31",
+          "token_volume": 51321010587440.0,
+          "token_spend_usd": 28872191.436346583,
+          "usd_per_mtok": 0.5625803370951661
+        },
+        {
+          "week_start": "2026-09-07",
+          "token_volume": 47566733336863.0,
+          "token_spend_usd": 27358077.37569063,
+          "usd_per_mtok": 0.5751514862696872
+        },
+        {
+          "week_start": "2026-09-14",
+          "token_volume": 56099863178868.0,
+          "token_spend_usd": 32294544.67245353,
+          "usd_per_mtok": 0.5756617368118362
+        },
+        {
+          "week_start": "2026-09-21",
+          "token_volume": 59177584339642.0,
+          "token_spend_usd": 30727573.848036334,
+          "usd_per_mtok": 0.5192434633978881
+        },
+        {
+          "week_start": "2026-09-28",
+          "token_volume": 64807041823209.0,
+          "token_spend_usd": 29247702.554933503,
+          "usd_per_mtok": 0.45130439119131616
+        },
+        {
+          "week_start": "2026-10-05",
+          "token_volume": 72511167139027.0,
+          "token_spend_usd": 33662423.56375468,
+          "usd_per_mtok": 0.4642377842189892
+        }
+      ]
+    },
+    "ramp_tokenomics_table": {
+      "id": "ramp_tokenomics_table",
+      "title": "Ramp Tokenomics table, week ending 23 Oct vs 25 Sep",
+      "quality": "V",
+      "source_url": "https://ramp.com/data/ai-index",
+      "retrieved": "2026-11-01",
+      "confirmed_unchanged_on": [
+        "2026-11-04",
+        "2026-11-08"
+      ],
+      "notes": "Latest vintage is 1 Nov (blended-price rows were restated that day under the same week label). Cell-by-cell identical at the 4 Nov and 8 Nov checks; no new vintage appended.",
+      "points": [
+        {
+          "metric": "Total token spending (change only)",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": null,
+          "value_compare": null,
+          "change": "+8.9%",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Total token volume (change only)",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": null,
+          "value_compare": null,
+          "change": "+37.1%",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Share of token spend: Anthropic",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "60.5%",
+          "value_compare": "51.3%",
+          "change": "+9.2 pts",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Share of token spend: OpenAI",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "35.1%",
+          "value_compare": "44.2%",
+          "change": "-9.0 pts",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Share of token spend: xAI",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "2.2%",
+          "value_compare": "2.5%",
+          "change": "-0.3 pts",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Share of token spend: Google",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "1.9%",
+          "value_compare": "1.6%",
+          "change": "+0.3 pts",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Share of token spend: Cursor",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "0.1%",
+          "value_compare": "0.2%",
+          "change": "-0.1 pts",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Share of token volume: Anthropic",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "59.8%",
+          "value_compare": "56.1%",
+          "change": "+3.7 pts",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Share of token volume: OpenAI",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "37.2%",
+          "value_compare": "40.2%",
+          "change": "-3.1 pts",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Share of token volume: xAI",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "1.5%",
+          "value_compare": "1.6%",
+          "change": "-0.2 pts",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Share of token volume: Google",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "1.3%",
+          "value_compare": "1.5%",
+          "change": "-0.2 pts",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Share of token volume: DeepSeek",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "0.2%",
+          "value_compare": "0.1%",
+          "change": "+0.1 pts",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Blended price per million tokens: OpenAI & Anthropic",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "$0.56",
+          "value_compare": "$0.76",
+          "change": "-26.8%",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Blended price per million tokens: OpenAI",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "$0.46",
+          "value_compare": "$0.80",
+          "change": "-42.4%",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        },
+        {
+          "metric": "Blended price per million tokens: Anthropic",
+          "week_ending_latest": "2026-10-23",
+          "week_ending_compare": "2026-09-25",
+          "value_latest": "$0.61",
+          "value_compare": "$0.73",
+          "change": "-15.7%",
+          "source_url": "https://ramp.com/data/ai-index",
+          "retrieved": "2026-11-01"
+        }
+      ]
+    },
+    "npm_coding_agent_windows": {
+      "id": "npm_coding_agent_windows",
+      "title": "npm coding-agent download windows",
+      "quality": "(d)",
+      "source_url": "https://api.npmjs.org/downloads/range/2026-07-01:2026-11-08/@anthropic-ai/claude-code",
+      "retrieved": "2026-11-08",
+      "notes": "Indicative developer-activity proxy. Includes CI installs. Last calendar day of a fetch is often 0/partial and is excluded from these windows.",
+      "points": [
+        {
+          "package": "@anthropic-ai/claude-code",
+          "window": "Mon-Sat 2-7 Nov 2026",
+          "downloads": 12920219,
+          "compare_window": "Mon-Sat 26-31 Oct 2026",
+          "compare_downloads": 11714793,
+          "change_pct": 10.289776353709357,
+          "method": "derived: sum of daily npm downloads (api.npmjs.org range 2026-07-01:2026-11-08, retrieved 2026-11-08); no zero days in either window; indicative (CI installs included)"
+        },
+        {
+          "package": "@openai/codex",
+          "window": "Mon-Sat 2-7 Nov 2026",
+          "downloads": 23309755,
+          "compare_window": "Mon-Sat 26-31 Oct 2026",
+          "compare_downloads": 25127358,
+          "change_pct": -7.233561920835452,
+          "method": "derived: sum of daily npm downloads (api.npmjs.org range 2026-07-01:2026-11-08, retrieved 2026-11-08); no zero days in either window; indicative (CI installs included)"
+        },
+        {
+          "package": "@anthropic-ai/claude-code",
+          "window": "Mon-Sun 26 Oct-1 Nov 2026",
+          "downloads": 12886034,
+          "compare_window": "Mon-Sun 28 Sep-4 Oct 2026",
+          "compare_downloads": 14786283,
+          "change_pct": -12.851431289391657,
+          "method": "derived: sum of daily npm downloads (api.npmjs.org range 2026-07-01:2026-11-08, retrieved 2026-11-08); no zero days in either window; indicative (CI installs included)"
+        },
+        {
+          "package": "@openai/codex",
+          "window": "Mon-Sun 26 Oct-1 Nov 2026",
+          "downloads": 27839068,
+          "compare_window": "Mon-Sun 28 Sep-4 Oct 2026",
+          "compare_downloads": 25613321,
+          "change_pct": 8.689802466458762,
+          "method": "derived: sum of daily npm downloads (api.npmjs.org range 2026-07-01:2026-11-08, retrieved 2026-11-08); no zero days in either window; indicative (CI installs included)"
+        }
+      ]
+    }
+  },
+  "caveats": [
+    "OpenRouter: no spend in the API since 14 Oct; the week of 2 Nov is partial (Sunday incomplete at the 8 Nov 17:42 Europe/Zurich snapshot) and is not used as a reading. OpenRouter excludes first-party apps. Changes, shares and ratios are derived (d).",
+    "Ramp: Tokenomics table unchanged since the 1 Nov vintage (week to 23 Oct vs 25 Sep). Weekly chart series end at the week of 5 Oct (18 Oct vintage). Chart and table are different cuts and are not spliced. Ramp is a US-corporate, API-heavy sample whose composition can change.",
+    "Vercel: open/closed traffic split stopped on 17 Oct; team-preference series stuck at 29 Oct (12.65%). The two measures are not comparable and are not spliced.",
+    "Portkey: chart-array sums do not match the page headline cards (weekly card spend was −0.0% vs chart +4.4%). Use within-series changes only.",
+    "npm includes CI installs; tokensperday.com is stale since 16 Jul 2026 and is not shown.",
+    "This edition's bottom line on financing/credit uses only the circular-financing feed and public filings on this page. Broker forecasts and terminal credit prints cited in the original pack are excluded from this public page (see excluded)."
+  ],
+  "excluded": [
+    {
+      "item": "Broker and bank research forecasts and commentary",
+      "reason": "Excluded (licensed research)."
+    },
+    {
+      "item": "Credit-market prints from commercial terminals or broker-sourced media",
+      "reason": "Excluded; shown as a data gap."
+    },
+    {
+      "item": "Secondary market-colour figures not required for the token series",
+      "reason": "Excluded."
+    },
+    {
+      "item": "Stale modelled aggregates from a source that has not updated",
+      "reason": "Not shown."
+    },
+    {
+      "item": "Internal working files",
+      "reason": "Not published."
+    }
+  ]
+}
