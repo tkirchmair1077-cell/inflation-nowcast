@@ -61,20 +61,29 @@ Recommended top-level keys:
 - `readings[]`: headline numbers (`id`, `label`, `value`, `unit`, `quality`, optional `wow_pct`, `note`, `source_url`, `as_of`)
 - `crack_watch[]`: `{ id, title, status, text }`
 - `series`: named objects, each with `id`, `title`, `unit`, `quality`, `source_url`, `retrieved`, `notes`, `points[]`
-  - `openrouter_weekly.points[]`: `week_start`, `total_tn`, `free_tn`, `paid_tn`, `wow_pct`, `complete`
+  - `openrouter_weekly.points[]`: `week_start`, `total_tn`, `free_tn`, `paid_tn`, `wow_pct`, `g4_pct`, `paid_wow_pct`, `complete`
   - `openrouter_weekly.partial_week`: same shape, `complete: false`
   - `openrouter_trailing7d_paid_free.points[]`: `window_end`, `paid_tn`, `free_tn`, `total_tn`
   - `openrouter_author_share_7d.points[]`: `author`, `tokens`, `token_share_pct`, `spend_share_pct`
+  - `openrouter_weekly_author_share.points[]`: `week_start`, `complete`, `shares_pct` (by author); `authors[]` gives stack order
+  - `openrouter_token_vs_spend_share.points[]`: `author`, `token_share_pct`, `prior_token_share_pct`, `last_spend_share_pct`
   - `portkey_weekly.points[]`: `week_start`, `tokens_tn`, `cost_usd`, `usd_per_mtok`
   - `ramp_tsm_weekly.points[]`: `week_start`, `token_volume`, `token_spend_usd`, `usd_per_mtok`
+  - `ramp_tsm_daily_7d.points[]`: `date`, `tokens_tn`, `spend_usd`
+  - `ramp_tsm_ppm_daily.points[]`: `date`, `usd_per_mtok`
+  - `ramp_pepm_monthly.points[]`: `month`, `top_1_percent_median`, `top_10_percent_median`, `p90`, `median`
+  - `ramp_adoption_monthly.points[]`: `month`, `total_pct`, `mom_change_pp`, `openai_pct`, `anthropic_pct`
+  - `vercel_open_weight_traffic.points[]`: `date`, `tokens_daily`, `cost_daily`, `requests_daily`, `tokens_7d`, `cost_7d`, `requests_7d`
+  - `vercel_open_weight_preference.points[]`: `date`, `share_pct`, `share_7d`
   - `ramp_tokenomics_table.points[]`: `metric`, `week_ending_latest`, `week_ending_compare`, `value_latest`, `change`, `retrieved`
   - `npm_coding_agent_windows.points[]`: `package`, `window`, `downloads`, `compare_window`, `change_pct`
+- `bot_charts`: catalog of the 8 Nov 2026 pack charts redrawn on the page (`intro`, `items[]` with `id`, `pack_file`, `title`, `caption`, `source`, `quality`, `derived`, `as_of`)
 
-The page charts whatever series are present and leaves a “no data” notice if a series is missing. It does not invent points.
+The page charts whatever series are present and leaves a “no data” notice if a series is missing. It does not invent points. Public-safe Token Demand pack charts are redrawn in Chart.js from these series; screenshots of third-party documents or sites and charts built on credit-terminal or licensed prints are not included.
 
 ## This edition (built 11 Nov 2026)
 
 - Circular financing: last scan 11 Nov 2026 ~07:45 Europe/Zurich; independent check ~07:50–08:00. No new Watch-or-higher user alert that morning. Outstanding Watch: Anthropic supplier placement (10 Nov, V). Bank-reluctance item (9 Nov) remains U.
-- Token demand: weekly pack dated Sun 8 Nov 2026, 18:32 Europe/Zurich (OpenRouter snapshot 17:42). No later saved pack was found on the box.
+- Token demand: weekly pack dated Sun 8 Nov 2026, 18:32 Europe/Zurich (OpenRouter snapshot 17:42). No later saved pack was found on the box. Section 3 redraws the seven pack charts in Chart.js from the public series.
 
 Internal and licensed material was left out of both JSON files. Public `excluded` entries are generic categories only; the detailed list is not published.

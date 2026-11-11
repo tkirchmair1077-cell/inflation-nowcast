@@ -810,7 +810,8 @@
     "OpenAI funding size and valuation are still secondary. Issuer-primary confirmation was not in the saved files.",
     "BIS 137 percentages are document findings; the proprietary PitchBook/FactSet microdata were not replicated. 'Circular' there is a relational classification over 2021–2025, not proof of a closed cash loop on one deal.",
     "Call quotes use the official CoreWeave IR transcript. Press paraphrases that say 'financing' instead of 'capital', or that collapse two different 75% denominators, are not used.",
-    "This page is a research compilation, not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich."
+    "This page is a research compilation, not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich.",
+    "Saved review packs include screenshots of third-party documents or sites and charts built on credit-terminal or licensed prints; those images are not shown. Official-flag figures appear as a table."
   ],
   "excluded": [
     {
@@ -836,6 +837,14 @@
     {
       "item": "Internal working files",
       "reason": "Not published."
+    },
+    {
+      "item": "Screenshots of third-party documents or sites",
+      "reason": "Not shown."
+    },
+    {
+      "item": "Charts built on credit-terminal or licensed market prints",
+      "reason": "Excluded."
     }
   ]
 }

@@ -184,7 +184,8 @@
           "paid_tn": 1.19736631358,
           "wow_pct": null,
           "g4_pct": null,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": null
         },
         {
           "week_start": "2025-10-13",
@@ -193,7 +194,8 @@
           "paid_tn": 4.565457520153,
           "wow_pct": 287.89277312299185,
           "g4_pct": null,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 281.29162883351546
         },
         {
           "week_start": "2025-10-20",
@@ -202,7 +204,8 @@
           "paid_tn": 4.886312194357,
           "wow_pct": 5.206479311743095,
           "g4_pct": null,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 7.0278755806547855
         },
         {
           "week_start": "2025-10-27",
@@ -211,7 +214,8 @@
           "paid_tn": 5.269266191389,
           "wow_pct": 12.787697285339439,
           "g4_pct": null,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 7.837280587070494
         },
         {
           "week_start": "2025-11-03",
@@ -220,7 +224,8 @@
           "paid_tn": 5.490692854467,
           "wow_pct": 5.752842169006822,
           "g4_pct": 386.75223441615543,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 4.202229590143958
         },
         {
           "week_start": "2025-11-10",
@@ -229,7 +234,8 @@
           "paid_tn": 5.927714421614,
           "wow_pct": 1.7073369432932584,
           "g4_pct": 27.628759657163027,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 7.959315494973573
         },
         {
           "week_start": "2025-11-17",
@@ -238,7 +244,8 @@
           "paid_tn": 6.271832101668,
           "wow_pct": 5.805233781156138,
           "g4_pct": 28.355124523379406,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 5.805233781156138
         },
         {
           "week_start": "2025-11-24",
@@ -247,7 +254,8 @@
           "paid_tn": 5.605319668944,
           "wow_pct": 14.558007817686525,
           "g4_pct": 30.369780680864377,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -10.627077095171922
         },
         {
           "week_start": "2025-12-01",
@@ -256,7 +264,8 @@
           "paid_tn": 5.598673659076,
           "wow_pct": -13.93476304882384,
           "g4_pct": 6.0993334594256154,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -0.1185661168411567
         },
         {
           "week_start": "2025-12-08",
@@ -265,7 +274,8 @@
           "paid_tn": 5.772746635719,
           "wow_pct": -6.645587146140974,
           "g4_pct": -2.614292370933835,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 3.109182410744915
         },
         {
           "week_start": "2025-12-15",
@@ -274,7 +284,8 @@
           "paid_tn": 5.66972438299,
           "wow_pct": 1.1736869718960152,
           "g4_pct": -6.877280574049283,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -1.7846314628039872
         },
         {
           "week_start": "2025-12-22",
@@ -283,7 +294,8 @@
           "paid_tn": 5.286194824046,
           "wow_pct": -3.005759507588812,
           "g4_pct": -21.154639336234204,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -6.76451857333038
         },
         {
           "week_start": "2025-12-29",
@@ -292,7 +304,8 @@
           "paid_tn": 5.215512386005001,
           "wow_pct": -1.7371350773868088,
           "g4_pct": -9.98025103825081,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -1.3371137537246502
         },
         {
           "week_start": "2026-01-05",
@@ -301,7 +314,8 @@
           "paid_tn": 6.022364403241,
           "wow_pct": 15.326254900996016,
           "g4_pct": 11.206746392784028,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 15.470234897745794
         },
         {
           "week_start": "2026-01-12",
@@ -310,7 +324,8 @@
           "paid_tn": 7.09722282002,
           "wow_pct": 19.05995531365159,
           "g4_pct": 30.86673672156801,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 17.84778111733911
         },
         {
           "week_start": "2026-01-19",
@@ -319,7 +334,8 @@
           "paid_tn": 6.918584936709,
           "wow_pct": -1.9571847470420622,
           "g4_pct": 32.281496571479806,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -2.5170110596935746
         },
         {
           "week_start": "2026-01-26",
@@ -328,7 +344,8 @@
           "paid_tn": 8.249934351918,
           "wow_pct": 10.091901441911343,
           "g4_pct": 48.205748881889996,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 19.24308839723936
         },
         {
           "week_start": "2026-02-02",
@@ -337,7 +354,8 @@
           "paid_tn": 9.804326929861,
           "wow_pct": 18.84127208335451,
           "g4_pct": 52.72289681400111,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 18.84127208335451
         },
         {
           "week_start": "2026-02-09",
@@ -346,7 +364,8 @@
           "paid_tn": 13.014630127221,
           "wow_pct": 32.743738762753736,
           "g4_pct": 70.27562511981075,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 32.743738762753736
         },
         {
           "week_start": "2026-02-16",
@@ -355,7 +374,8 @@
           "paid_tn": 13.49843723687,
           "wow_pct": 7.169605783258959,
           "g4_pct": 86.1265567650818,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 3.71740959919471
         },
         {
           "week_start": "2026-02-23",
@@ -364,7 +384,8 @@
           "paid_tn": 13.078564323857,
           "wow_pct": -2.38072191515295,
           "g4_pct": 65.03975193318401,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -3.110529801673245
         },
         {
           "week_start": "2026-03-02",
@@ -373,7 +394,8 @@
           "paid_tn": 13.515255088895,
           "wow_pct": 8.616827989229247,
           "g4_pct": 50.84064679599243,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 3.338980902065969
         },
         {
           "week_start": "2026-03-09",
@@ -382,7 +404,8 @@
           "paid_tn": 15.5341496814,
           "wow_pct": 14.102220540696543,
           "g4_pct": 29.657736836676342,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 14.937894839764109
         },
         {
           "week_start": "2026-03-16",
@@ -391,7 +414,8 @@
           "paid_tn": 18.818096713274,
           "wow_pct": 20.281045651042252,
           "g4_pct": 45.52043976912019,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 21.140178891195262
         },
         {
           "week_start": "2026-03-23",
@@ -400,7 +424,8 @@
           "paid_tn": 21.155056215478,
           "wow_pct": 11.54433311341172,
           "g4_pct": 66.27843113435725,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 12.418681537307364
         },
         {
           "week_start": "2026-03-30",
@@ -409,7 +434,8 @@
           "paid_tn": 19.507709330300997,
           "wow_pct": 19.282891029981243,
           "g4_pct": 82.60680549060584,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -7.787012562848828
         },
         {
           "week_start": "2026-04-06",
@@ -418,7 +444,8 @@
           "paid_tn": 18.668637048776,
           "wow_pct": -22.272122432313346,
           "g4_pct": 24.39406834451372,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -4.301234282908251
         },
         {
           "week_start": "2026-04-13",
@@ -427,7 +454,8 @@
           "paid_tn": 20.469273117201,
           "wow_pct": -2.4847626586920524,
           "g4_pct": 0.8497808844998511,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 9.64524653685448
         },
         {
           "week_start": "2026-04-20",
@@ -436,7 +464,8 @@
           "paid_tn": 21.883269650188,
           "wow_pct": 6.907898120714284,
           "g4_pct": -3.342125956911368,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 6.907898120714284
         },
         {
           "week_start": "2026-04-27",
@@ -445,7 +474,8 @@
           "paid_tn": 20.766529365649,
           "wow_pct": 8.748633974656306,
           "g4_pct": -11.878294746911532,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -5.103169235632976
         },
         {
           "week_start": "2026-05-04",
@@ -454,7 +484,8 @@
           "paid_tn": 23.055200693302,
           "wow_pct": 8.126949868254707,
           "g4_pct": 22.58576336280884,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 11.020962084491659
         },
         {
           "week_start": "2026-05-11",
@@ -463,7 +494,8 @@
           "paid_tn": 26.905682372472,
           "wow_pct": 4.562037299753263,
           "g4_pct": 31.444249233561084,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 16.701141449133594
         },
         {
           "week_start": "2026-05-18",
@@ -472,7 +504,8 @@
           "paid_tn": 28.920204910828,
           "wow_pct": 7.487349737009907,
           "g4_pct": 32.15669035353474,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 7.487349737009907
         },
         {
           "week_start": "2026-05-25",
@@ -481,7 +514,8 @@
           "paid_tn": 31.807747787522,
           "wow_pct": 9.984517349020837,
           "g4_pct": 33.658596634555614,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 9.984517349020837
         },
         {
           "week_start": "2026-06-01",
@@ -490,7 +524,8 @@
           "paid_tn": 36.126105262907,
           "wow_pct": 13.576432711400788,
           "g4_pct": 40.39484721858173,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 13.576432711400788
         },
         {
           "week_start": "2026-06-08",
@@ -499,7 +534,8 @@
           "paid_tn": 44.60581202287,
           "wow_pct": 23.472518552033517,
           "g4_pct": 65.78584183580314,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 23.472518552033517
         },
         {
           "week_start": "2026-06-15",
@@ -508,7 +544,8 @@
           "paid_tn": 46.647905566215,
           "wow_pct": 4.578088483845999,
           "g4_pct": 61.29866890655944,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 4.578088483845999
         },
         {
           "week_start": "2026-06-22",
@@ -517,7 +554,8 @@
           "paid_tn": 46.720348192435,
           "wow_pct": 0.1552966319509519,
           "g4_pct": 46.88354706699205,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 0.1552966319509519
         },
         {
           "week_start": "2026-06-29",
@@ -526,7 +564,8 @@
           "paid_tn": 46.719738264038,
           "wow_pct": -0.0013054876956131167,
           "g4_pct": 29.32403845926943,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -0.0013054876956131167
         },
         {
           "week_start": "2026-07-06",
@@ -535,7 +574,8 @@
           "paid_tn": 44.445199878028,
           "wow_pct": 12.62834650726501,
           "g4_pct": 17.96594729029748,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -4.86847416215258
         },
         {
           "week_start": "2026-07-13",
@@ -544,7 +584,8 @@
           "paid_tn": 48.111730420678,
           "wow_pct": 19.297490636697102,
           "g4_pct": 34.56969520424165,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 8.249553501192807
         },
         {
           "week_start": "2026-07-20",
@@ -553,7 +594,8 @@
           "paid_tn": 53.942617717538,
           "wow_pct": -7.5388713795562,
           "g4_pct": 24.23173127245257,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 12.11947116820793
         },
         {
           "week_start": "2026-07-27",
@@ -562,7 +604,8 @@
           "paid_tn": 54.361233572568004,
           "wow_pct": -2.158642626118812,
           "g4_pct": 21.55159900720889,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 0.7760391926510124
         },
         {
           "week_start": "2026-08-03",
@@ -571,7 +614,8 @@
           "paid_tn": 66.639591599043,
           "wow_pct": 21.585232475177452,
           "g4_pct": 31.218115876962994,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 22.586606703993105
         },
         {
           "week_start": "2026-08-10",
@@ -580,7 +624,8 @@
           "paid_tn": 75.340581084831,
           "wow_pct": 9.115653634597853,
           "g4_pct": 20.018873877392984,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 13.056786929517973
         },
         {
           "week_start": "2026-08-17",
@@ -589,7 +634,8 @@
           "paid_tn": 77.06219135667001,
           "wow_pct": 23.940611901020436,
           "g4_pct": 60.88071701026665,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 2.2851035219658478
         },
         {
           "week_start": "2026-08-24",
@@ -598,7 +644,8 @@
           "paid_tn": 91.98976460088699,
           "wow_pct": 21.010661784889706,
           "g4_pct": 98.97804523955836,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 19.37081334104176
         },
         {
           "week_start": "2026-08-31",
@@ -607,7 +654,8 @@
           "paid_tn": 106.811172118533,
           "wow_pct": 2.1827866304604315,
           "g4_pct": 67.22533425275026,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 16.112018094568636
         },
         {
           "week_start": "2026-09-07",
@@ -616,7 +664,8 @@
           "paid_tn": 123.20247682076601,
           "wow_pct": 9.786415229191615,
           "g4_pct": 68.25331079070394,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 15.346058260687245
         },
         {
           "week_start": "2026-09-14",
@@ -625,7 +674,8 @@
           "paid_tn": 124.401324382284,
           "wow_pct": 1.6820740784728283,
           "g4_pct": 38.03663988226453,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 0.9730709904980817
         },
         {
           "week_start": "2026-09-21",
@@ -634,7 +684,8 @@
           "paid_tn": 126.312058592802,
           "wow_pct": 13.150083287562374,
           "g4_pct": 29.07009241200409,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 1.5359436243993052
         },
         {
           "week_start": "2026-09-28",
@@ -643,7 +694,8 @@
           "paid_tn": 121.54577928313199,
           "wow_pct": 13.720682964668086,
           "g4_pct": 43.64394966529983,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -3.7734159056304284
         },
         {
           "week_start": "2026-10-05",
@@ -652,7 +704,8 @@
           "paid_tn": 164.969287258317,
           "wow_pct": 3.6094262900220775,
           "g4_pct": 35.56201087160784,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 35.72605172412702
         },
         {
           "week_start": "2026-10-12",
@@ -661,7 +714,8 @@
           "paid_tn": 159.075051594381,
           "wow_pct": -4.538176371684788,
           "g4_pct": 27.26920541115243,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": -3.5729290960119897
         },
         {
           "week_start": "2026-10-19",
@@ -670,7 +724,8 @@
           "paid_tn": 168.508669127066,
           "wow_pct": 14.627368387174133,
           "g4_pct": 28.93082947125589,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 5.930293555232913
         },
         {
           "week_start": "2026-10-26",
@@ -679,7 +734,8 @@
           "paid_tn": 193.593270018919,
           "wow_pct": 2.9536197207364667,
           "g4_pct": 16.723671029894117,
-          "complete": true
+          "complete": true,
+          "paid_wow_pct": 14.88623761720984
         }
       ],
       "partial_week": {
@@ -2197,6 +2253,6452 @@
           "method": "derived: sum of daily npm downloads (api.npmjs.org range 2026-07-01:2026-11-08, retrieved 2026-11-08); no zero days in either window; indicative (CI installs included)"
         }
       ]
+    },
+    "openrouter_weekly_author_share": {
+      "id": "openrouter_weekly_author_share",
+      "title": "OpenRouter weekly token share by author",
+      "unit": "percent",
+      "quality": "V",
+      "source_url": "https://openrouter.ai/rankings",
+      "retrieved": "2026-11-08",
+      "notes": "Share of weekly tokens by model author (author = slug before '/'; Others is the residual outside the weekly top-9). History uses, per week, the retrieval with the largest weekly total. The week of 2 Nov is partial.",
+      "authors": [
+        "deepseek",
+        "tencent",
+        "z-ai",
+        "openai",
+        "xiaomi",
+        "stealth",
+        "nvidia",
+        "anthropic",
+        "stepfun",
+        "minimax",
+        "google",
+        "moonshotai",
+        "Others"
+      ],
+      "points": [
+        {
+          "week_start": "2026-08-10",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 24.882,
+            "tencent": 13.211,
+            "z-ai": 5.746,
+            "openai": 7.05,
+            "xiaomi": 5.033,
+            "stealth": 0.0,
+            "nvidia": 0.0,
+            "anthropic": 3.539,
+            "stepfun": 0.0,
+            "minimax": 0.0,
+            "google": 3.032,
+            "moonshotai": 0.0,
+            "Others": 37.509
+          }
+        },
+        {
+          "week_start": "2026-08-17",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 20.225,
+            "tencent": 8.788,
+            "z-ai": 3.659,
+            "openai": 5.258,
+            "xiaomi": 10.644,
+            "stealth": 12.389,
+            "nvidia": 5.084,
+            "anthropic": 0.0,
+            "stepfun": 0.0,
+            "minimax": 0.0,
+            "google": 0.0,
+            "moonshotai": 0.0,
+            "Others": 33.954
+          }
+        },
+        {
+          "week_start": "2026-08-24",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 15.496,
+            "tencent": 5.891,
+            "z-ai": 5.45,
+            "openai": 6.896,
+            "xiaomi": 8.086,
+            "stealth": 13.877,
+            "nvidia": 4.713,
+            "anthropic": 0.0,
+            "stepfun": 0.0,
+            "minimax": 0.0,
+            "google": 3.494,
+            "moonshotai": 0.0,
+            "Others": 36.097
+          }
+        },
+        {
+          "week_start": "2026-08-31",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 15.198,
+            "tencent": 16.166,
+            "z-ai": 13.352,
+            "openai": 11.205,
+            "xiaomi": 0.0,
+            "stealth": 0.0,
+            "nvidia": 3.149,
+            "anthropic": 0.0,
+            "stepfun": 0.0,
+            "minimax": 4.345,
+            "google": 0.0,
+            "moonshotai": 0.0,
+            "Others": 36.586
+          }
+        },
+        {
+          "week_start": "2026-09-07",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 16.455,
+            "tencent": 16.261,
+            "z-ai": 9.38,
+            "openai": 14.342,
+            "xiaomi": 6.131,
+            "stealth": 0.0,
+            "nvidia": 2.809,
+            "anthropic": 0.0,
+            "stepfun": 0.0,
+            "minimax": 0.0,
+            "google": 0.0,
+            "moonshotai": 0.0,
+            "Others": 34.623
+          }
+        },
+        {
+          "week_start": "2026-09-14",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 22.485,
+            "tencent": 13.42,
+            "z-ai": 10.917,
+            "openai": 7.54,
+            "xiaomi": 5.482,
+            "stealth": 0.0,
+            "nvidia": 3.487,
+            "anthropic": 0.0,
+            "stepfun": 0.0,
+            "minimax": 0.0,
+            "google": 0.0,
+            "moonshotai": 0.0,
+            "Others": 36.669
+          }
+        },
+        {
+          "week_start": "2026-09-21",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 21.084,
+            "tencent": 6.611,
+            "z-ai": 11.188,
+            "openai": 5.847,
+            "xiaomi": 3.775,
+            "stealth": 9.502,
+            "nvidia": 3.891,
+            "anthropic": 0.0,
+            "stepfun": 0.0,
+            "minimax": 0.0,
+            "google": 0.0,
+            "moonshotai": 0.0,
+            "Others": 38.102
+          }
+        },
+        {
+          "week_start": "2026-09-28",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 19.053,
+            "tencent": 3.925,
+            "z-ai": 5.868,
+            "openai": 6.364,
+            "xiaomi": 5.804,
+            "stealth": 23.31,
+            "nvidia": 3.406,
+            "anthropic": 0.0,
+            "stepfun": 0.0,
+            "minimax": 0.0,
+            "google": 0.0,
+            "moonshotai": 0.0,
+            "Others": 32.27
+          }
+        },
+        {
+          "week_start": "2026-10-05",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 26.704,
+            "tencent": 4.818,
+            "z-ai": 7.12,
+            "openai": 4.12,
+            "xiaomi": 6.667,
+            "stealth": 0.0,
+            "nvidia": 4.0,
+            "anthropic": 2.921,
+            "stepfun": 5.142,
+            "minimax": 0.0,
+            "google": 0.0,
+            "moonshotai": 0.0,
+            "Others": 38.508
+          }
+        },
+        {
+          "week_start": "2026-10-12",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 20.014,
+            "tencent": 4.605,
+            "z-ai": 10.621,
+            "openai": 3.784,
+            "xiaomi": 6.059,
+            "stealth": 0.0,
+            "nvidia": 3.029,
+            "anthropic": 3.769,
+            "stepfun": 6.99,
+            "minimax": 0.0,
+            "google": 0.0,
+            "moonshotai": 0.0,
+            "Others": 41.128
+          }
+        },
+        {
+          "week_start": "2026-10-19",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 27.416,
+            "tencent": 4.771,
+            "z-ai": 7.039,
+            "openai": 4.443,
+            "xiaomi": 3.23,
+            "stealth": 0.0,
+            "nvidia": 3.112,
+            "anthropic": 4.397,
+            "stepfun": 0.0,
+            "minimax": 7.274,
+            "google": 0.0,
+            "moonshotai": 0.0,
+            "Others": 38.318
+          }
+        },
+        {
+          "week_start": "2026-10-26",
+          "complete": true,
+          "shares_pct": {
+            "deepseek": 32.52,
+            "tencent": 4.685,
+            "z-ai": 7.752,
+            "openai": 7.203,
+            "xiaomi": 0.0,
+            "stealth": 0.0,
+            "nvidia": 0.0,
+            "anthropic": 3.478,
+            "stepfun": 3.227,
+            "minimax": 3.22,
+            "google": 0.0,
+            "moonshotai": 0.0,
+            "Others": 37.916
+          }
+        },
+        {
+          "week_start": "2026-11-02",
+          "complete": false,
+          "shares_pct": {
+            "deepseek": 35.079,
+            "tencent": 6.191,
+            "z-ai": 6.364,
+            "openai": 3.444,
+            "xiaomi": 0.0,
+            "stealth": 0.0,
+            "nvidia": 0.0,
+            "anthropic": 3.244,
+            "stepfun": 3.466,
+            "minimax": 2.393,
+            "google": 0.0,
+            "moonshotai": 2.038,
+            "Others": 37.781
+          }
+        }
+      ]
+    },
+    "openrouter_token_vs_spend_share": {
+      "id": "openrouter_token_vs_spend_share",
+      "title": "OpenRouter 7-day token share vs last published spend share",
+      "unit": "percent",
+      "quality": "V",
+      "source_url": "https://openrouter.ai/rankings",
+      "retrieved": "2026-11-08",
+      "window_end": "2026-11-07",
+      "prior_window_end": "2026-10-31",
+      "last_spend_window_end": "2026-10-10",
+      "notes": "Token share is the trailing 7 days to 7 Nov. The prior-window marker is the non-overlapping 7 days to 31 Oct. Spend share is the last published window (7 days to 10 Oct); spend has been unpublished in the API since 14 Oct.",
+      "points": [
+        {
+          "author": "deepseek",
+          "token_share_pct": 39.14,
+          "prior_token_share_pct": 36.63,
+          "last_spend_share_pct": 9.09
+        },
+        {
+          "author": "openai",
+          "token_share_pct": 9.17,
+          "prior_token_share_pct": 11.56,
+          "last_spend_share_pct": 20.47
+        },
+        {
+          "author": "z-ai",
+          "token_share_pct": 8.84,
+          "prior_token_share_pct": 11.02,
+          "last_spend_share_pct": 8.77
+        },
+        {
+          "author": "tencent",
+          "token_share_pct": 8.14,
+          "prior_token_share_pct": 6.38,
+          "last_spend_share_pct": 0.5
+        },
+        {
+          "author": "anthropic",
+          "token_share_pct": 6.57,
+          "prior_token_share_pct": 7.45,
+          "last_spend_share_pct": 35.79
+        },
+        {
+          "author": "nvidia",
+          "token_share_pct": 3.9,
+          "prior_token_share_pct": 3.49,
+          "last_spend_share_pct": 0.05
+        },
+        {
+          "author": "stepfun",
+          "token_share_pct": 3.51,
+          "prior_token_share_pct": 3.49,
+          "last_spend_share_pct": 0.03
+        },
+        {
+          "author": "google",
+          "token_share_pct": 3.09,
+          "prior_token_share_pct": 3.33,
+          "last_spend_share_pct": 11.21
+        },
+        {
+          "author": "moonshotai",
+          "token_share_pct": 3.04,
+          "prior_token_share_pct": 1.99,
+          "last_spend_share_pct": 5.31
+        },
+        {
+          "author": "minimax",
+          "token_share_pct": 2.93,
+          "prior_token_share_pct": 3.32,
+          "last_spend_share_pct": 0.2
+        },
+        {
+          "author": "typesafe",
+          "token_share_pct": 2.35,
+          "prior_token_share_pct": 2.5,
+          "last_spend_share_pct": 0.47
+        },
+        {
+          "author": "xiaomi",
+          "token_share_pct": 1.66,
+          "prior_token_share_pct": 2.31,
+          "last_spend_share_pct": 0.68
+        }
+      ]
+    },
+    "ramp_tsm_daily_7d": {
+      "id": "ramp_tsm_daily_7d",
+      "title": "Ramp TSM daily rolling-7-day tokens vs spend",
+      "unit": "tokens_tn / usd",
+      "quality": "V",
+      "source_url": "https://ramp.com/data/ai-index",
+      "retrieved": "2026-10-18",
+      "notes": "TSM sample, all_tokens summed across model makers. 18 Oct vintage; no newer chart data as of 8 Nov. Daily series from 1 Jul 2026.",
+      "points": [
+        {
+          "date": "2026-07-01",
+          "tokens_tn": 22.6171,
+          "spend_usd": 20873634.5
+        },
+        {
+          "date": "2026-07-02",
+          "tokens_tn": 22.2295,
+          "spend_usd": 20948959.74
+        },
+        {
+          "date": "2026-07-03",
+          "tokens_tn": 20.767,
+          "spend_usd": 20126941.04
+        },
+        {
+          "date": "2026-07-04",
+          "tokens_tn": 19.7601,
+          "spend_usd": 19892468.73
+        },
+        {
+          "date": "2026-07-05",
+          "tokens_tn": 18.9675,
+          "spend_usd": 19737455.8
+        },
+        {
+          "date": "2026-07-06",
+          "tokens_tn": 19.009,
+          "spend_usd": 20025596.15
+        },
+        {
+          "date": "2026-07-07",
+          "tokens_tn": 19.4091,
+          "spend_usd": 20460528.19
+        },
+        {
+          "date": "2026-07-08",
+          "tokens_tn": 20.2374,
+          "spend_usd": 21593878.51
+        },
+        {
+          "date": "2026-07-09",
+          "tokens_tn": 21.125,
+          "spend_usd": 22638871.58
+        },
+        {
+          "date": "2026-07-10",
+          "tokens_tn": 22.9885,
+          "spend_usd": 24831928.52
+        },
+        {
+          "date": "2026-07-11",
+          "tokens_tn": 24.0929,
+          "spend_usd": 26249826.16
+        },
+        {
+          "date": "2026-07-12",
+          "tokens_tn": 24.2324,
+          "spend_usd": 26741083.91
+        },
+        {
+          "date": "2026-07-13",
+          "tokens_tn": 24.4133,
+          "spend_usd": 27256433.89
+        },
+        {
+          "date": "2026-07-14",
+          "tokens_tn": 24.8703,
+          "spend_usd": 27960781.1
+        },
+        {
+          "date": "2026-07-15",
+          "tokens_tn": 24.9341,
+          "spend_usd": 28071770.92
+        },
+        {
+          "date": "2026-07-16",
+          "tokens_tn": 24.9345,
+          "spend_usd": 28285189.96
+        },
+        {
+          "date": "2026-07-17",
+          "tokens_tn": 24.5176,
+          "spend_usd": 27972041.95
+        },
+        {
+          "date": "2026-07-18",
+          "tokens_tn": 23.9181,
+          "spend_usd": 27321721.68
+        },
+        {
+          "date": "2026-07-19",
+          "tokens_tn": 24.0194,
+          "spend_usd": 27429609.16
+        },
+        {
+          "date": "2026-07-20",
+          "tokens_tn": 24.0343,
+          "spend_usd": 27767804.95
+        },
+        {
+          "date": "2026-07-21",
+          "tokens_tn": 24.1132,
+          "spend_usd": 27968906.57
+        },
+        {
+          "date": "2026-07-22",
+          "tokens_tn": 24.6341,
+          "spend_usd": 28491822.87
+        },
+        {
+          "date": "2026-07-23",
+          "tokens_tn": 25.1376,
+          "spend_usd": 29237742.62
+        },
+        {
+          "date": "2026-07-24",
+          "tokens_tn": 25.3412,
+          "spend_usd": 29473279.46
+        },
+        {
+          "date": "2026-07-25",
+          "tokens_tn": 25.6989,
+          "spend_usd": 29898660.14
+        },
+        {
+          "date": "2026-07-26",
+          "tokens_tn": 26.184,
+          "spend_usd": 30574899.61
+        },
+        {
+          "date": "2026-07-27",
+          "tokens_tn": 27.0073,
+          "spend_usd": 31187655.44
+        },
+        {
+          "date": "2026-07-28",
+          "tokens_tn": 27.9229,
+          "spend_usd": 31955118.45
+        },
+        {
+          "date": "2026-07-29",
+          "tokens_tn": 28.5901,
+          "spend_usd": 32601155.74
+        },
+        {
+          "date": "2026-07-30",
+          "tokens_tn": 28.9664,
+          "spend_usd": 32487799.68
+        },
+        {
+          "date": "2026-07-31",
+          "tokens_tn": 29.8535,
+          "spend_usd": 33140155.92
+        },
+        {
+          "date": "2026-08-01",
+          "tokens_tn": 29.951,
+          "spend_usd": 32893501.15
+        },
+        {
+          "date": "2026-08-02",
+          "tokens_tn": 29.9821,
+          "spend_usd": 32494594.63
+        },
+        {
+          "date": "2026-08-03",
+          "tokens_tn": 30.2588,
+          "spend_usd": 32193359.38
+        },
+        {
+          "date": "2026-08-04",
+          "tokens_tn": 30.5702,
+          "spend_usd": 31954688.44
+        },
+        {
+          "date": "2026-08-05",
+          "tokens_tn": 30.7926,
+          "spend_usd": 31480689.4
+        },
+        {
+          "date": "2026-08-06",
+          "tokens_tn": 30.8967,
+          "spend_usd": 30942083.73
+        },
+        {
+          "date": "2026-08-07",
+          "tokens_tn": 30.8205,
+          "spend_usd": 30418720.29
+        },
+        {
+          "date": "2026-08-08",
+          "tokens_tn": 30.953,
+          "spend_usd": 30579395.62
+        },
+        {
+          "date": "2026-08-09",
+          "tokens_tn": 30.9966,
+          "spend_usd": 30783907.73
+        },
+        {
+          "date": "2026-08-10",
+          "tokens_tn": 31.0149,
+          "spend_usd": 30662404.1
+        },
+        {
+          "date": "2026-08-11",
+          "tokens_tn": 30.9465,
+          "spend_usd": 30321179.72
+        },
+        {
+          "date": "2026-08-12",
+          "tokens_tn": 30.8412,
+          "spend_usd": 29923127.3
+        },
+        {
+          "date": "2026-08-13",
+          "tokens_tn": 31.4221,
+          "spend_usd": 30127935.78
+        },
+        {
+          "date": "2026-08-14",
+          "tokens_tn": 31.4687,
+          "spend_usd": 30007812.12
+        },
+        {
+          "date": "2026-08-15",
+          "tokens_tn": 31.3391,
+          "spend_usd": 29808988.24
+        },
+        {
+          "date": "2026-08-16",
+          "tokens_tn": 31.3577,
+          "spend_usd": 29493781.57
+        },
+        {
+          "date": "2026-08-17",
+          "tokens_tn": 31.3901,
+          "spend_usd": 29349022.49
+        },
+        {
+          "date": "2026-08-18",
+          "tokens_tn": 31.3493,
+          "spend_usd": 29256767.05
+        },
+        {
+          "date": "2026-08-19",
+          "tokens_tn": 31.5953,
+          "spend_usd": 29350847.74
+        },
+        {
+          "date": "2026-08-20",
+          "tokens_tn": 31.3585,
+          "spend_usd": 28985571.13
+        },
+        {
+          "date": "2026-08-21",
+          "tokens_tn": 31.5322,
+          "spend_usd": 28807875.09
+        },
+        {
+          "date": "2026-08-22",
+          "tokens_tn": 31.6999,
+          "spend_usd": 28571006.07
+        },
+        {
+          "date": "2026-08-23",
+          "tokens_tn": 31.8923,
+          "spend_usd": 28580750.06
+        },
+        {
+          "date": "2026-08-24",
+          "tokens_tn": 32.0914,
+          "spend_usd": 28311618.3
+        },
+        {
+          "date": "2026-08-25",
+          "tokens_tn": 32.5605,
+          "spend_usd": 28111260.81
+        },
+        {
+          "date": "2026-08-26",
+          "tokens_tn": 32.3819,
+          "spend_usd": 27555201.19
+        },
+        {
+          "date": "2026-08-27",
+          "tokens_tn": 32.9075,
+          "spend_usd": 27558929.15
+        },
+        {
+          "date": "2026-08-28",
+          "tokens_tn": 33.0926,
+          "spend_usd": 27515379.41
+        },
+        {
+          "date": "2026-08-29",
+          "tokens_tn": 33.1748,
+          "spend_usd": 27530973.79
+        },
+        {
+          "date": "2026-08-30",
+          "tokens_tn": 33.0752,
+          "spend_usd": 27265786.52
+        },
+        {
+          "date": "2026-08-31",
+          "tokens_tn": 33.0514,
+          "spend_usd": 27141938.78
+        },
+        {
+          "date": "2026-09-01",
+          "tokens_tn": 32.8406,
+          "spend_usd": 26958662.3
+        },
+        {
+          "date": "2026-09-02",
+          "tokens_tn": 33.1405,
+          "spend_usd": 27113941.56
+        },
+        {
+          "date": "2026-09-03",
+          "tokens_tn": 32.9894,
+          "spend_usd": 27067068.01
+        },
+        {
+          "date": "2026-09-04",
+          "tokens_tn": 33.0586,
+          "spend_usd": 27337397.52
+        },
+        {
+          "date": "2026-09-05",
+          "tokens_tn": 32.9878,
+          "spend_usd": 27547680.91
+        },
+        {
+          "date": "2026-09-06",
+          "tokens_tn": 32.9359,
+          "spend_usd": 27703315.29
+        },
+        {
+          "date": "2026-09-07",
+          "tokens_tn": 31.2286,
+          "spend_usd": 26354703.22
+        },
+        {
+          "date": "2026-09-08",
+          "tokens_tn": 30.7311,
+          "spend_usd": 26063162.67
+        },
+        {
+          "date": "2026-09-09",
+          "tokens_tn": 30.5419,
+          "spend_usd": 26012098.07
+        },
+        {
+          "date": "2026-09-10",
+          "tokens_tn": 30.3773,
+          "spend_usd": 26201381.93
+        },
+        {
+          "date": "2026-09-11",
+          "tokens_tn": 30.331,
+          "spend_usd": 26050590.86
+        },
+        {
+          "date": "2026-09-12",
+          "tokens_tn": 30.575,
+          "spend_usd": 26239103.47
+        },
+        {
+          "date": "2026-09-13",
+          "tokens_tn": 30.6651,
+          "spend_usd": 26312898.79
+        },
+        {
+          "date": "2026-09-14",
+          "tokens_tn": 32.5421,
+          "spend_usd": 28007718.65
+        },
+        {
+          "date": "2026-09-15",
+          "tokens_tn": 33.6037,
+          "spend_usd": 29100685.51
+        },
+        {
+          "date": "2026-09-16",
+          "tokens_tn": 34.4396,
+          "spend_usd": 30022147.73
+        },
+        {
+          "date": "2026-09-17",
+          "tokens_tn": 35.2014,
+          "spend_usd": 30455483.34
+        },
+        {
+          "date": "2026-09-18",
+          "tokens_tn": 35.8183,
+          "spend_usd": 30637291.09
+        },
+        {
+          "date": "2026-09-19",
+          "tokens_tn": 36.1088,
+          "spend_usd": 30697316.12
+        },
+        {
+          "date": "2026-09-20",
+          "tokens_tn": 36.5896,
+          "spend_usd": 31058613.86
+        },
+        {
+          "date": "2026-09-21",
+          "tokens_tn": 37.1,
+          "spend_usd": 31237697.43
+        },
+        {
+          "date": "2026-09-22",
+          "tokens_tn": 37.4071,
+          "spend_usd": 31076812.63
+        },
+        {
+          "date": "2026-09-23",
+          "tokens_tn": 37.5672,
+          "spend_usd": 30386246.0
+        },
+        {
+          "date": "2026-09-24",
+          "tokens_tn": 37.6608,
+          "spend_usd": 29590404.48
+        },
+        {
+          "date": "2026-09-25",
+          "tokens_tn": 38.1991,
+          "spend_usd": 29453073.17
+        },
+        {
+          "date": "2026-09-26",
+          "tokens_tn": 38.6365,
+          "spend_usd": 29331474.54
+        },
+        {
+          "date": "2026-09-27",
+          "tokens_tn": 39.0158,
+          "spend_usd": 29360368.03
+        },
+        {
+          "date": "2026-09-28",
+          "tokens_tn": 39.8346,
+          "spend_usd": 29227203.42
+        },
+        {
+          "date": "2026-09-29",
+          "tokens_tn": 40.5263,
+          "spend_usd": 28538681.51
+        },
+        {
+          "date": "2026-09-30",
+          "tokens_tn": 40.9927,
+          "spend_usd": 28155474.08
+        },
+        {
+          "date": "2026-10-01",
+          "tokens_tn": 41.88,
+          "spend_usd": 28312608.44
+        },
+        {
+          "date": "2026-10-02",
+          "tokens_tn": 42.5676,
+          "spend_usd": 28252320.82
+        },
+        {
+          "date": "2026-10-03",
+          "tokens_tn": 42.8555,
+          "spend_usd": 28126542.93
+        },
+        {
+          "date": "2026-10-04",
+          "tokens_tn": 43.1828,
+          "spend_usd": 28012163.14
+        },
+        {
+          "date": "2026-10-05",
+          "tokens_tn": 43.4977,
+          "spend_usd": 27780082.74
+        },
+        {
+          "date": "2026-10-06",
+          "tokens_tn": 44.5718,
+          "spend_usd": 28451191.62
+        },
+        {
+          "date": "2026-10-07",
+          "tokens_tn": 46.4627,
+          "spend_usd": 29629807.68
+        },
+        {
+          "date": "2026-10-08",
+          "tokens_tn": 47.8924,
+          "spend_usd": 30497422.36
+        },
+        {
+          "date": "2026-10-09",
+          "tokens_tn": 48.731,
+          "spend_usd": 30980097.38
+        },
+        {
+          "date": "2026-10-10",
+          "tokens_tn": 49.7622,
+          "spend_usd": 31811666.08
+        },
+        {
+          "date": "2026-10-11",
+          "tokens_tn": 50.7165,
+          "spend_usd": 32465455.31
+        }
+      ]
+    },
+    "ramp_tsm_ppm_daily": {
+      "id": "ramp_tsm_ppm_daily",
+      "title": "Ramp TSM effective price, daily rolling 7 days",
+      "unit": "usd_per_mtok",
+      "quality": "V",
+      "source_url": "https://ramp.com/data/ai-index",
+      "retrieved": "2026-10-18",
+      "notes": "Derived spend / tokens on the rolling-7-day TSM series. 18 Oct vintage.",
+      "points": [
+        {
+          "date": "2025-03-01",
+          "usd_per_mtok": 1.1631
+        },
+        {
+          "date": "2025-03-02",
+          "usd_per_mtok": 1.1816
+        },
+        {
+          "date": "2025-03-03",
+          "usd_per_mtok": 1.1851
+        },
+        {
+          "date": "2025-03-04",
+          "usd_per_mtok": 1.2829
+        },
+        {
+          "date": "2025-03-05",
+          "usd_per_mtok": 1.4003
+        },
+        {
+          "date": "2025-03-06",
+          "usd_per_mtok": 1.4493
+        },
+        {
+          "date": "2025-03-07",
+          "usd_per_mtok": 1.455
+        },
+        {
+          "date": "2025-03-08",
+          "usd_per_mtok": 1.4495
+        },
+        {
+          "date": "2025-03-09",
+          "usd_per_mtok": 1.4437
+        },
+        {
+          "date": "2025-03-10",
+          "usd_per_mtok": 1.4429
+        },
+        {
+          "date": "2025-03-11",
+          "usd_per_mtok": 1.3961
+        },
+        {
+          "date": "2025-03-12",
+          "usd_per_mtok": 1.3662
+        },
+        {
+          "date": "2025-03-13",
+          "usd_per_mtok": 1.3465
+        },
+        {
+          "date": "2025-03-14",
+          "usd_per_mtok": 1.3292
+        },
+        {
+          "date": "2025-03-15",
+          "usd_per_mtok": 1.3554
+        },
+        {
+          "date": "2025-03-16",
+          "usd_per_mtok": 1.3605
+        },
+        {
+          "date": "2025-03-17",
+          "usd_per_mtok": 1.3784
+        },
+        {
+          "date": "2025-03-18",
+          "usd_per_mtok": 1.4179
+        },
+        {
+          "date": "2025-03-19",
+          "usd_per_mtok": 1.4222
+        },
+        {
+          "date": "2025-03-20",
+          "usd_per_mtok": 1.4519
+        },
+        {
+          "date": "2025-03-21",
+          "usd_per_mtok": 1.4828
+        },
+        {
+          "date": "2025-03-22",
+          "usd_per_mtok": 1.4649
+        },
+        {
+          "date": "2025-03-23",
+          "usd_per_mtok": 1.459
+        },
+        {
+          "date": "2025-03-24",
+          "usd_per_mtok": 1.4766
+        },
+        {
+          "date": "2025-03-25",
+          "usd_per_mtok": 1.5015
+        },
+        {
+          "date": "2025-03-26",
+          "usd_per_mtok": 1.5124
+        },
+        {
+          "date": "2025-03-27",
+          "usd_per_mtok": 1.4997
+        },
+        {
+          "date": "2025-03-28",
+          "usd_per_mtok": 1.4839
+        },
+        {
+          "date": "2025-03-29",
+          "usd_per_mtok": 1.4983
+        },
+        {
+          "date": "2025-03-30",
+          "usd_per_mtok": 1.5055
+        },
+        {
+          "date": "2025-03-31",
+          "usd_per_mtok": 1.4869
+        },
+        {
+          "date": "2025-04-01",
+          "usd_per_mtok": 1.4665
+        },
+        {
+          "date": "2025-04-02",
+          "usd_per_mtok": 1.4763
+        },
+        {
+          "date": "2025-04-03",
+          "usd_per_mtok": 1.4485
+        },
+        {
+          "date": "2025-04-04",
+          "usd_per_mtok": 1.4383
+        },
+        {
+          "date": "2025-04-05",
+          "usd_per_mtok": 1.4358
+        },
+        {
+          "date": "2025-04-06",
+          "usd_per_mtok": 1.4328
+        },
+        {
+          "date": "2025-04-07",
+          "usd_per_mtok": 1.4414
+        },
+        {
+          "date": "2025-04-08",
+          "usd_per_mtok": 1.4477
+        },
+        {
+          "date": "2025-04-09",
+          "usd_per_mtok": 1.4369
+        },
+        {
+          "date": "2025-04-10",
+          "usd_per_mtok": 1.4582
+        },
+        {
+          "date": "2025-04-11",
+          "usd_per_mtok": 1.4884
+        },
+        {
+          "date": "2025-04-12",
+          "usd_per_mtok": 1.4955
+        },
+        {
+          "date": "2025-04-13",
+          "usd_per_mtok": 1.4984
+        },
+        {
+          "date": "2025-04-14",
+          "usd_per_mtok": 1.493
+        },
+        {
+          "date": "2025-04-15",
+          "usd_per_mtok": 1.4926
+        },
+        {
+          "date": "2025-04-16",
+          "usd_per_mtok": 1.5105
+        },
+        {
+          "date": "2025-04-17",
+          "usd_per_mtok": 1.5254
+        },
+        {
+          "date": "2025-04-18",
+          "usd_per_mtok": 1.4965
+        },
+        {
+          "date": "2025-04-19",
+          "usd_per_mtok": 1.4886
+        },
+        {
+          "date": "2025-04-20",
+          "usd_per_mtok": 1.4654
+        },
+        {
+          "date": "2025-04-21",
+          "usd_per_mtok": 1.4227
+        },
+        {
+          "date": "2025-04-22",
+          "usd_per_mtok": 1.406
+        },
+        {
+          "date": "2025-04-23",
+          "usd_per_mtok": 1.386
+        },
+        {
+          "date": "2025-04-24",
+          "usd_per_mtok": 1.3694
+        },
+        {
+          "date": "2025-04-25",
+          "usd_per_mtok": 1.3868
+        },
+        {
+          "date": "2025-04-26",
+          "usd_per_mtok": 1.3507
+        },
+        {
+          "date": "2025-04-27",
+          "usd_per_mtok": 1.3568
+        },
+        {
+          "date": "2025-04-28",
+          "usd_per_mtok": 1.3763
+        },
+        {
+          "date": "2025-04-29",
+          "usd_per_mtok": 1.3714
+        },
+        {
+          "date": "2025-04-30",
+          "usd_per_mtok": 1.3798
+        },
+        {
+          "date": "2025-05-01",
+          "usd_per_mtok": 1.3707
+        },
+        {
+          "date": "2025-05-02",
+          "usd_per_mtok": 1.3524
+        },
+        {
+          "date": "2025-05-03",
+          "usd_per_mtok": 1.3655
+        },
+        {
+          "date": "2025-05-04",
+          "usd_per_mtok": 1.3704
+        },
+        {
+          "date": "2025-05-05",
+          "usd_per_mtok": 1.3782
+        },
+        {
+          "date": "2025-05-06",
+          "usd_per_mtok": 1.3669
+        },
+        {
+          "date": "2025-05-07",
+          "usd_per_mtok": 1.3447
+        },
+        {
+          "date": "2025-05-08",
+          "usd_per_mtok": 1.3556
+        },
+        {
+          "date": "2025-05-09",
+          "usd_per_mtok": 1.3465
+        },
+        {
+          "date": "2025-05-10",
+          "usd_per_mtok": 1.3434
+        },
+        {
+          "date": "2025-05-11",
+          "usd_per_mtok": 1.3289
+        },
+        {
+          "date": "2025-05-12",
+          "usd_per_mtok": 1.3065
+        },
+        {
+          "date": "2025-05-13",
+          "usd_per_mtok": 1.3036
+        },
+        {
+          "date": "2025-05-14",
+          "usd_per_mtok": 1.2806
+        },
+        {
+          "date": "2025-05-15",
+          "usd_per_mtok": 1.281
+        },
+        {
+          "date": "2025-05-16",
+          "usd_per_mtok": 1.2963
+        },
+        {
+          "date": "2025-05-17",
+          "usd_per_mtok": 1.2995
+        },
+        {
+          "date": "2025-05-18",
+          "usd_per_mtok": 1.3052
+        },
+        {
+          "date": "2025-05-19",
+          "usd_per_mtok": 1.2999
+        },
+        {
+          "date": "2025-05-20",
+          "usd_per_mtok": 1.3031
+        },
+        {
+          "date": "2025-05-21",
+          "usd_per_mtok": 1.2872
+        },
+        {
+          "date": "2025-05-22",
+          "usd_per_mtok": 1.2542
+        },
+        {
+          "date": "2025-05-23",
+          "usd_per_mtok": 1.2366
+        },
+        {
+          "date": "2025-05-24",
+          "usd_per_mtok": 1.2405
+        },
+        {
+          "date": "2025-05-25",
+          "usd_per_mtok": 1.24
+        },
+        {
+          "date": "2025-05-26",
+          "usd_per_mtok": 1.2422
+        },
+        {
+          "date": "2025-05-27",
+          "usd_per_mtok": 1.2361
+        },
+        {
+          "date": "2025-05-28",
+          "usd_per_mtok": 1.2567
+        },
+        {
+          "date": "2025-05-29",
+          "usd_per_mtok": 1.2787
+        },
+        {
+          "date": "2025-05-30",
+          "usd_per_mtok": 1.3122
+        },
+        {
+          "date": "2025-05-31",
+          "usd_per_mtok": 1.2988
+        },
+        {
+          "date": "2025-06-01",
+          "usd_per_mtok": 1.3055
+        },
+        {
+          "date": "2025-06-02",
+          "usd_per_mtok": 1.328
+        },
+        {
+          "date": "2025-06-03",
+          "usd_per_mtok": 1.3457
+        },
+        {
+          "date": "2025-06-04",
+          "usd_per_mtok": 1.3254
+        },
+        {
+          "date": "2025-06-05",
+          "usd_per_mtok": 1.3243
+        },
+        {
+          "date": "2025-06-06",
+          "usd_per_mtok": 1.3039
+        },
+        {
+          "date": "2025-06-07",
+          "usd_per_mtok": 1.3072
+        },
+        {
+          "date": "2025-06-08",
+          "usd_per_mtok": 1.2934
+        },
+        {
+          "date": "2025-06-09",
+          "usd_per_mtok": 1.2769
+        },
+        {
+          "date": "2025-06-10",
+          "usd_per_mtok": 1.2913
+        },
+        {
+          "date": "2025-06-11",
+          "usd_per_mtok": 1.3522
+        },
+        {
+          "date": "2025-06-12",
+          "usd_per_mtok": 1.3583
+        },
+        {
+          "date": "2025-06-13",
+          "usd_per_mtok": 1.3629
+        },
+        {
+          "date": "2025-06-14",
+          "usd_per_mtok": 1.3672
+        },
+        {
+          "date": "2025-06-15",
+          "usd_per_mtok": 1.3746
+        },
+        {
+          "date": "2025-06-16",
+          "usd_per_mtok": 1.3762
+        },
+        {
+          "date": "2025-06-17",
+          "usd_per_mtok": 1.3593
+        },
+        {
+          "date": "2025-06-18",
+          "usd_per_mtok": 1.3187
+        },
+        {
+          "date": "2025-06-19",
+          "usd_per_mtok": 1.278
+        },
+        {
+          "date": "2025-06-20",
+          "usd_per_mtok": 1.2474
+        },
+        {
+          "date": "2025-06-21",
+          "usd_per_mtok": 1.2364
+        },
+        {
+          "date": "2025-06-22",
+          "usd_per_mtok": 1.2279
+        },
+        {
+          "date": "2025-06-23",
+          "usd_per_mtok": 1.2127
+        },
+        {
+          "date": "2025-06-24",
+          "usd_per_mtok": 1.1794
+        },
+        {
+          "date": "2025-06-25",
+          "usd_per_mtok": 1.1505
+        },
+        {
+          "date": "2025-06-26",
+          "usd_per_mtok": 1.1714
+        },
+        {
+          "date": "2025-06-27",
+          "usd_per_mtok": 1.1731
+        },
+        {
+          "date": "2025-06-28",
+          "usd_per_mtok": 1.1538
+        },
+        {
+          "date": "2025-06-29",
+          "usd_per_mtok": 1.1548
+        },
+        {
+          "date": "2025-06-30",
+          "usd_per_mtok": 1.1657
+        },
+        {
+          "date": "2025-07-01",
+          "usd_per_mtok": 1.1657
+        },
+        {
+          "date": "2025-07-02",
+          "usd_per_mtok": 1.1942
+        },
+        {
+          "date": "2025-07-03",
+          "usd_per_mtok": 1.1569
+        },
+        {
+          "date": "2025-07-04",
+          "usd_per_mtok": 1.1817
+        },
+        {
+          "date": "2025-07-05",
+          "usd_per_mtok": 1.2075
+        },
+        {
+          "date": "2025-07-06",
+          "usd_per_mtok": 1.1994
+        },
+        {
+          "date": "2025-07-07",
+          "usd_per_mtok": 1.1837
+        },
+        {
+          "date": "2025-07-08",
+          "usd_per_mtok": 1.188
+        },
+        {
+          "date": "2025-07-09",
+          "usd_per_mtok": 1.1381
+        },
+        {
+          "date": "2025-07-10",
+          "usd_per_mtok": 1.1793
+        },
+        {
+          "date": "2025-07-11",
+          "usd_per_mtok": 1.1498
+        },
+        {
+          "date": "2025-07-12",
+          "usd_per_mtok": 1.0684
+        },
+        {
+          "date": "2025-07-13",
+          "usd_per_mtok": 1.059
+        },
+        {
+          "date": "2025-07-14",
+          "usd_per_mtok": 1.0621
+        },
+        {
+          "date": "2025-07-15",
+          "usd_per_mtok": 1.0738
+        },
+        {
+          "date": "2025-07-16",
+          "usd_per_mtok": 1.1022
+        },
+        {
+          "date": "2025-07-17",
+          "usd_per_mtok": 1.0939
+        },
+        {
+          "date": "2025-07-18",
+          "usd_per_mtok": 1.1024
+        },
+        {
+          "date": "2025-07-19",
+          "usd_per_mtok": 1.1772
+        },
+        {
+          "date": "2025-07-20",
+          "usd_per_mtok": 1.1963
+        },
+        {
+          "date": "2025-07-21",
+          "usd_per_mtok": 1.2062
+        },
+        {
+          "date": "2025-07-22",
+          "usd_per_mtok": 1.1756
+        },
+        {
+          "date": "2025-07-23",
+          "usd_per_mtok": 1.1797
+        },
+        {
+          "date": "2025-07-24",
+          "usd_per_mtok": 1.2018
+        },
+        {
+          "date": "2025-07-25",
+          "usd_per_mtok": 1.197
+        },
+        {
+          "date": "2025-07-26",
+          "usd_per_mtok": 1.1734
+        },
+        {
+          "date": "2025-07-27",
+          "usd_per_mtok": 1.1425
+        },
+        {
+          "date": "2025-07-28",
+          "usd_per_mtok": 1.1161
+        },
+        {
+          "date": "2025-07-29",
+          "usd_per_mtok": 1.139
+        },
+        {
+          "date": "2025-07-30",
+          "usd_per_mtok": 1.1143
+        },
+        {
+          "date": "2025-07-31",
+          "usd_per_mtok": 1.0734
+        },
+        {
+          "date": "2025-08-01",
+          "usd_per_mtok": 1.0866
+        },
+        {
+          "date": "2025-08-02",
+          "usd_per_mtok": 1.0996
+        },
+        {
+          "date": "2025-08-03",
+          "usd_per_mtok": 1.1298
+        },
+        {
+          "date": "2025-08-04",
+          "usd_per_mtok": 1.1682
+        },
+        {
+          "date": "2025-08-05",
+          "usd_per_mtok": 1.2029
+        },
+        {
+          "date": "2025-08-06",
+          "usd_per_mtok": 1.2625
+        },
+        {
+          "date": "2025-08-07",
+          "usd_per_mtok": 1.297
+        },
+        {
+          "date": "2025-08-08",
+          "usd_per_mtok": 1.3221
+        },
+        {
+          "date": "2025-08-09",
+          "usd_per_mtok": 1.3465
+        },
+        {
+          "date": "2025-08-10",
+          "usd_per_mtok": 1.3622
+        },
+        {
+          "date": "2025-08-11",
+          "usd_per_mtok": 1.3708
+        },
+        {
+          "date": "2025-08-12",
+          "usd_per_mtok": 1.3624
+        },
+        {
+          "date": "2025-08-13",
+          "usd_per_mtok": 1.3595
+        },
+        {
+          "date": "2025-08-14",
+          "usd_per_mtok": 1.3445
+        },
+        {
+          "date": "2025-08-15",
+          "usd_per_mtok": 1.3269
+        },
+        {
+          "date": "2025-08-16",
+          "usd_per_mtok": 1.2996
+        },
+        {
+          "date": "2025-08-17",
+          "usd_per_mtok": 1.2741
+        },
+        {
+          "date": "2025-08-18",
+          "usd_per_mtok": 1.2473
+        },
+        {
+          "date": "2025-08-19",
+          "usd_per_mtok": 1.2244
+        },
+        {
+          "date": "2025-08-20",
+          "usd_per_mtok": 1.2078
+        },
+        {
+          "date": "2025-08-21",
+          "usd_per_mtok": 1.2046
+        },
+        {
+          "date": "2025-08-22",
+          "usd_per_mtok": 1.1835
+        },
+        {
+          "date": "2025-08-23",
+          "usd_per_mtok": 1.1592
+        },
+        {
+          "date": "2025-08-24",
+          "usd_per_mtok": 1.1396
+        },
+        {
+          "date": "2025-08-25",
+          "usd_per_mtok": 1.1
+        },
+        {
+          "date": "2025-08-26",
+          "usd_per_mtok": 1.0604
+        },
+        {
+          "date": "2025-08-27",
+          "usd_per_mtok": 0.9992
+        },
+        {
+          "date": "2025-08-28",
+          "usd_per_mtok": 0.9774
+        },
+        {
+          "date": "2025-08-29",
+          "usd_per_mtok": 0.9681
+        },
+        {
+          "date": "2025-08-30",
+          "usd_per_mtok": 0.9707
+        },
+        {
+          "date": "2025-08-31",
+          "usd_per_mtok": 0.9646
+        },
+        {
+          "date": "2025-09-01",
+          "usd_per_mtok": 0.9631
+        },
+        {
+          "date": "2025-09-02",
+          "usd_per_mtok": 0.969
+        },
+        {
+          "date": "2025-09-03",
+          "usd_per_mtok": 1.0009
+        },
+        {
+          "date": "2025-09-04",
+          "usd_per_mtok": 1.0018
+        },
+        {
+          "date": "2025-09-05",
+          "usd_per_mtok": 1.0029
+        },
+        {
+          "date": "2025-09-06",
+          "usd_per_mtok": 1.0065
+        },
+        {
+          "date": "2025-09-07",
+          "usd_per_mtok": 1.0211
+        },
+        {
+          "date": "2025-09-08",
+          "usd_per_mtok": 1.0327
+        },
+        {
+          "date": "2025-09-09",
+          "usd_per_mtok": 1.0348
+        },
+        {
+          "date": "2025-09-10",
+          "usd_per_mtok": 1.0345
+        },
+        {
+          "date": "2025-09-11",
+          "usd_per_mtok": 1.0414
+        },
+        {
+          "date": "2025-09-12",
+          "usd_per_mtok": 1.0327
+        },
+        {
+          "date": "2025-09-13",
+          "usd_per_mtok": 1.02
+        },
+        {
+          "date": "2025-09-14",
+          "usd_per_mtok": 1.0016
+        },
+        {
+          "date": "2025-09-15",
+          "usd_per_mtok": 1.0117
+        },
+        {
+          "date": "2025-09-16",
+          "usd_per_mtok": 1.0236
+        },
+        {
+          "date": "2025-09-17",
+          "usd_per_mtok": 1.0239
+        },
+        {
+          "date": "2025-09-18",
+          "usd_per_mtok": 0.9897
+        },
+        {
+          "date": "2025-09-19",
+          "usd_per_mtok": 0.9748
+        },
+        {
+          "date": "2025-09-20",
+          "usd_per_mtok": 0.9785
+        },
+        {
+          "date": "2025-09-21",
+          "usd_per_mtok": 0.99
+        },
+        {
+          "date": "2025-09-22",
+          "usd_per_mtok": 0.9747
+        },
+        {
+          "date": "2025-09-23",
+          "usd_per_mtok": 0.9588
+        },
+        {
+          "date": "2025-09-24",
+          "usd_per_mtok": 0.9511
+        },
+        {
+          "date": "2025-09-25",
+          "usd_per_mtok": 0.9898
+        },
+        {
+          "date": "2025-09-26",
+          "usd_per_mtok": 1.04
+        },
+        {
+          "date": "2025-09-27",
+          "usd_per_mtok": 1.0489
+        },
+        {
+          "date": "2025-09-28",
+          "usd_per_mtok": 1.0408
+        },
+        {
+          "date": "2025-09-29",
+          "usd_per_mtok": 1.0338
+        },
+        {
+          "date": "2025-09-30",
+          "usd_per_mtok": 1.027
+        },
+        {
+          "date": "2025-10-01",
+          "usd_per_mtok": 1.033
+        },
+        {
+          "date": "2025-10-02",
+          "usd_per_mtok": 1.0145
+        },
+        {
+          "date": "2025-10-03",
+          "usd_per_mtok": 0.985
+        },
+        {
+          "date": "2025-10-04",
+          "usd_per_mtok": 0.9922
+        },
+        {
+          "date": "2025-10-05",
+          "usd_per_mtok": 1.0031
+        },
+        {
+          "date": "2025-10-06",
+          "usd_per_mtok": 1.0165
+        },
+        {
+          "date": "2025-10-07",
+          "usd_per_mtok": 1.0265
+        },
+        {
+          "date": "2025-10-08",
+          "usd_per_mtok": 1.0202
+        },
+        {
+          "date": "2025-10-09",
+          "usd_per_mtok": 1.03
+        },
+        {
+          "date": "2025-10-10",
+          "usd_per_mtok": 1.0373
+        },
+        {
+          "date": "2025-10-11",
+          "usd_per_mtok": 1.0345
+        },
+        {
+          "date": "2025-10-12",
+          "usd_per_mtok": 1.047
+        },
+        {
+          "date": "2025-10-13",
+          "usd_per_mtok": 1.0529
+        },
+        {
+          "date": "2025-10-14",
+          "usd_per_mtok": 1.0498
+        },
+        {
+          "date": "2025-10-15",
+          "usd_per_mtok": 1.0658
+        },
+        {
+          "date": "2025-10-16",
+          "usd_per_mtok": 1.0703
+        },
+        {
+          "date": "2025-10-17",
+          "usd_per_mtok": 1.0675
+        },
+        {
+          "date": "2025-10-18",
+          "usd_per_mtok": 1.0552
+        },
+        {
+          "date": "2025-10-19",
+          "usd_per_mtok": 1.0349
+        },
+        {
+          "date": "2025-10-20",
+          "usd_per_mtok": 1.0287
+        },
+        {
+          "date": "2025-10-21",
+          "usd_per_mtok": 1.0367
+        },
+        {
+          "date": "2025-10-22",
+          "usd_per_mtok": 1.0217
+        },
+        {
+          "date": "2025-10-23",
+          "usd_per_mtok": 1.0169
+        },
+        {
+          "date": "2025-10-24",
+          "usd_per_mtok": 1.0142
+        },
+        {
+          "date": "2025-10-25",
+          "usd_per_mtok": 1.0147
+        },
+        {
+          "date": "2025-10-26",
+          "usd_per_mtok": 1.0136
+        },
+        {
+          "date": "2025-10-27",
+          "usd_per_mtok": 1.0079
+        },
+        {
+          "date": "2025-10-28",
+          "usd_per_mtok": 1.0044
+        },
+        {
+          "date": "2025-10-29",
+          "usd_per_mtok": 1.0046
+        },
+        {
+          "date": "2025-10-30",
+          "usd_per_mtok": 1.0091
+        },
+        {
+          "date": "2025-10-31",
+          "usd_per_mtok": 1.0102
+        },
+        {
+          "date": "2025-11-01",
+          "usd_per_mtok": 1.0105
+        },
+        {
+          "date": "2025-11-02",
+          "usd_per_mtok": 1.0116
+        },
+        {
+          "date": "2025-11-03",
+          "usd_per_mtok": 1.0145
+        },
+        {
+          "date": "2025-11-04",
+          "usd_per_mtok": 1.0238
+        },
+        {
+          "date": "2025-11-05",
+          "usd_per_mtok": 1.0251
+        },
+        {
+          "date": "2025-11-06",
+          "usd_per_mtok": 1.0254
+        },
+        {
+          "date": "2025-11-07",
+          "usd_per_mtok": 1.0135
+        },
+        {
+          "date": "2025-11-08",
+          "usd_per_mtok": 1.0043
+        },
+        {
+          "date": "2025-11-09",
+          "usd_per_mtok": 1.0036
+        },
+        {
+          "date": "2025-11-10",
+          "usd_per_mtok": 1.003
+        },
+        {
+          "date": "2025-11-11",
+          "usd_per_mtok": 0.9834
+        },
+        {
+          "date": "2025-11-12",
+          "usd_per_mtok": 0.9923
+        },
+        {
+          "date": "2025-11-13",
+          "usd_per_mtok": 0.9811
+        },
+        {
+          "date": "2025-11-14",
+          "usd_per_mtok": 0.9907
+        },
+        {
+          "date": "2025-11-15",
+          "usd_per_mtok": 0.998
+        },
+        {
+          "date": "2025-11-16",
+          "usd_per_mtok": 0.9925
+        },
+        {
+          "date": "2025-11-17",
+          "usd_per_mtok": 0.9953
+        },
+        {
+          "date": "2025-11-18",
+          "usd_per_mtok": 1.0105
+        },
+        {
+          "date": "2025-11-19",
+          "usd_per_mtok": 1.0057
+        },
+        {
+          "date": "2025-11-20",
+          "usd_per_mtok": 1.019
+        },
+        {
+          "date": "2025-11-21",
+          "usd_per_mtok": 1.0238
+        },
+        {
+          "date": "2025-11-22",
+          "usd_per_mtok": 1.0298
+        },
+        {
+          "date": "2025-11-23",
+          "usd_per_mtok": 1.0365
+        },
+        {
+          "date": "2025-11-24",
+          "usd_per_mtok": 1.0397
+        },
+        {
+          "date": "2025-11-25",
+          "usd_per_mtok": 1.0431
+        },
+        {
+          "date": "2025-11-26",
+          "usd_per_mtok": 1.0432
+        },
+        {
+          "date": "2025-11-27",
+          "usd_per_mtok": 1.0378
+        },
+        {
+          "date": "2025-11-28",
+          "usd_per_mtok": 1.0371
+        },
+        {
+          "date": "2025-11-29",
+          "usd_per_mtok": 1.0375
+        },
+        {
+          "date": "2025-11-30",
+          "usd_per_mtok": 1.038
+        },
+        {
+          "date": "2025-12-01",
+          "usd_per_mtok": 1.0334
+        },
+        {
+          "date": "2025-12-02",
+          "usd_per_mtok": 1.0271
+        },
+        {
+          "date": "2025-12-03",
+          "usd_per_mtok": 1.0374
+        },
+        {
+          "date": "2025-12-04",
+          "usd_per_mtok": 1.0432
+        },
+        {
+          "date": "2025-12-05",
+          "usd_per_mtok": 1.0335
+        },
+        {
+          "date": "2025-12-06",
+          "usd_per_mtok": 1.0271
+        },
+        {
+          "date": "2025-12-07",
+          "usd_per_mtok": 1.0246
+        },
+        {
+          "date": "2025-12-08",
+          "usd_per_mtok": 1.0211
+        },
+        {
+          "date": "2025-12-09",
+          "usd_per_mtok": 1.0174
+        },
+        {
+          "date": "2025-12-10",
+          "usd_per_mtok": 1.0118
+        },
+        {
+          "date": "2025-12-11",
+          "usd_per_mtok": 1.0111
+        },
+        {
+          "date": "2025-12-12",
+          "usd_per_mtok": 1.0264
+        },
+        {
+          "date": "2025-12-13",
+          "usd_per_mtok": 1.0333
+        },
+        {
+          "date": "2025-12-14",
+          "usd_per_mtok": 1.0267
+        },
+        {
+          "date": "2025-12-15",
+          "usd_per_mtok": 1.0285
+        },
+        {
+          "date": "2025-12-16",
+          "usd_per_mtok": 1.0264
+        },
+        {
+          "date": "2025-12-17",
+          "usd_per_mtok": 1.0176
+        },
+        {
+          "date": "2025-12-18",
+          "usd_per_mtok": 0.9988
+        },
+        {
+          "date": "2025-12-19",
+          "usd_per_mtok": 0.9742
+        },
+        {
+          "date": "2025-12-20",
+          "usd_per_mtok": 0.9653
+        },
+        {
+          "date": "2025-12-21",
+          "usd_per_mtok": 0.9695
+        },
+        {
+          "date": "2025-12-22",
+          "usd_per_mtok": 0.9597
+        },
+        {
+          "date": "2025-12-23",
+          "usd_per_mtok": 0.9551
+        },
+        {
+          "date": "2025-12-24",
+          "usd_per_mtok": 0.9516
+        },
+        {
+          "date": "2025-12-25",
+          "usd_per_mtok": 0.9465
+        },
+        {
+          "date": "2025-12-26",
+          "usd_per_mtok": 0.9492
+        },
+        {
+          "date": "2025-12-27",
+          "usd_per_mtok": 0.9309
+        },
+        {
+          "date": "2025-12-28",
+          "usd_per_mtok": 0.9155
+        },
+        {
+          "date": "2025-12-29",
+          "usd_per_mtok": 0.9037
+        },
+        {
+          "date": "2025-12-30",
+          "usd_per_mtok": 0.8837
+        },
+        {
+          "date": "2025-12-31",
+          "usd_per_mtok": 0.8553
+        },
+        {
+          "date": "2026-01-01",
+          "usd_per_mtok": 0.8403
+        },
+        {
+          "date": "2026-01-02",
+          "usd_per_mtok": 0.8451
+        },
+        {
+          "date": "2026-01-03",
+          "usd_per_mtok": 0.8626
+        },
+        {
+          "date": "2026-01-04",
+          "usd_per_mtok": 0.8778
+        },
+        {
+          "date": "2026-01-05",
+          "usd_per_mtok": 0.9007
+        },
+        {
+          "date": "2026-01-06",
+          "usd_per_mtok": 0.9244
+        },
+        {
+          "date": "2026-01-07",
+          "usd_per_mtok": 0.9538
+        },
+        {
+          "date": "2026-01-08",
+          "usd_per_mtok": 0.9733
+        },
+        {
+          "date": "2026-01-09",
+          "usd_per_mtok": 0.9662
+        },
+        {
+          "date": "2026-01-10",
+          "usd_per_mtok": 0.9621
+        },
+        {
+          "date": "2026-01-11",
+          "usd_per_mtok": 0.9611
+        },
+        {
+          "date": "2026-01-12",
+          "usd_per_mtok": 0.9612
+        },
+        {
+          "date": "2026-01-13",
+          "usd_per_mtok": 0.9612
+        },
+        {
+          "date": "2026-01-14",
+          "usd_per_mtok": 0.9569
+        },
+        {
+          "date": "2026-01-15",
+          "usd_per_mtok": 0.9568
+        },
+        {
+          "date": "2026-01-16",
+          "usd_per_mtok": 0.9685
+        },
+        {
+          "date": "2026-01-17",
+          "usd_per_mtok": 0.9686
+        },
+        {
+          "date": "2026-01-18",
+          "usd_per_mtok": 0.9694
+        },
+        {
+          "date": "2026-01-19",
+          "usd_per_mtok": 0.9647
+        },
+        {
+          "date": "2026-01-20",
+          "usd_per_mtok": 0.9681
+        },
+        {
+          "date": "2026-01-21",
+          "usd_per_mtok": 0.9737
+        },
+        {
+          "date": "2026-01-22",
+          "usd_per_mtok": 0.9803
+        },
+        {
+          "date": "2026-01-23",
+          "usd_per_mtok": 0.9928
+        },
+        {
+          "date": "2026-01-24",
+          "usd_per_mtok": 0.997
+        },
+        {
+          "date": "2026-01-25",
+          "usd_per_mtok": 0.9957
+        },
+        {
+          "date": "2026-01-26",
+          "usd_per_mtok": 1.0027
+        },
+        {
+          "date": "2026-01-27",
+          "usd_per_mtok": 1.014
+        },
+        {
+          "date": "2026-01-28",
+          "usd_per_mtok": 1.025
+        },
+        {
+          "date": "2026-01-29",
+          "usd_per_mtok": 1.0335
+        },
+        {
+          "date": "2026-01-30",
+          "usd_per_mtok": 1.027
+        },
+        {
+          "date": "2026-01-31",
+          "usd_per_mtok": 1.0318
+        },
+        {
+          "date": "2026-02-01",
+          "usd_per_mtok": 1.0311
+        },
+        {
+          "date": "2026-02-02",
+          "usd_per_mtok": 1.0355
+        },
+        {
+          "date": "2026-02-03",
+          "usd_per_mtok": 1.037
+        },
+        {
+          "date": "2026-02-04",
+          "usd_per_mtok": 1.0308
+        },
+        {
+          "date": "2026-02-05",
+          "usd_per_mtok": 1.0278
+        },
+        {
+          "date": "2026-02-06",
+          "usd_per_mtok": 1.0305
+        },
+        {
+          "date": "2026-02-07",
+          "usd_per_mtok": 1.0295
+        },
+        {
+          "date": "2026-02-08",
+          "usd_per_mtok": 1.035
+        },
+        {
+          "date": "2026-02-09",
+          "usd_per_mtok": 1.0449
+        },
+        {
+          "date": "2026-02-10",
+          "usd_per_mtok": 1.0645
+        },
+        {
+          "date": "2026-02-11",
+          "usd_per_mtok": 1.0677
+        },
+        {
+          "date": "2026-02-12",
+          "usd_per_mtok": 1.0844
+        },
+        {
+          "date": "2026-02-13",
+          "usd_per_mtok": 1.1002
+        },
+        {
+          "date": "2026-02-14",
+          "usd_per_mtok": 1.1072
+        },
+        {
+          "date": "2026-02-15",
+          "usd_per_mtok": 1.1321
+        },
+        {
+          "date": "2026-02-16",
+          "usd_per_mtok": 1.1263
+        },
+        {
+          "date": "2026-02-17",
+          "usd_per_mtok": 1.1141
+        },
+        {
+          "date": "2026-02-18",
+          "usd_per_mtok": 1.1441
+        },
+        {
+          "date": "2026-02-19",
+          "usd_per_mtok": 1.1588
+        },
+        {
+          "date": "2026-02-20",
+          "usd_per_mtok": 1.1744
+        },
+        {
+          "date": "2026-02-21",
+          "usd_per_mtok": 1.1804
+        },
+        {
+          "date": "2026-02-22",
+          "usd_per_mtok": 1.1758
+        },
+        {
+          "date": "2026-02-23",
+          "usd_per_mtok": 1.2029
+        },
+        {
+          "date": "2026-02-24",
+          "usd_per_mtok": 1.2169
+        },
+        {
+          "date": "2026-02-25",
+          "usd_per_mtok": 1.2138
+        },
+        {
+          "date": "2026-02-26",
+          "usd_per_mtok": 1.2118
+        },
+        {
+          "date": "2026-02-27",
+          "usd_per_mtok": 1.2087
+        },
+        {
+          "date": "2026-02-28",
+          "usd_per_mtok": 1.2076
+        },
+        {
+          "date": "2026-03-01",
+          "usd_per_mtok": 1.2044
+        },
+        {
+          "date": "2026-03-02",
+          "usd_per_mtok": 1.1941
+        },
+        {
+          "date": "2026-03-03",
+          "usd_per_mtok": 1.1898
+        },
+        {
+          "date": "2026-03-04",
+          "usd_per_mtok": 1.1843
+        },
+        {
+          "date": "2026-03-05",
+          "usd_per_mtok": 1.1805
+        },
+        {
+          "date": "2026-03-06",
+          "usd_per_mtok": 1.1658
+        },
+        {
+          "date": "2026-03-07",
+          "usd_per_mtok": 1.1569
+        },
+        {
+          "date": "2026-03-08",
+          "usd_per_mtok": 1.1447
+        },
+        {
+          "date": "2026-03-09",
+          "usd_per_mtok": 1.1394
+        },
+        {
+          "date": "2026-03-10",
+          "usd_per_mtok": 1.1407
+        },
+        {
+          "date": "2026-03-11",
+          "usd_per_mtok": 1.1407
+        },
+        {
+          "date": "2026-03-12",
+          "usd_per_mtok": 1.1375
+        },
+        {
+          "date": "2026-03-13",
+          "usd_per_mtok": 1.1523
+        },
+        {
+          "date": "2026-03-14",
+          "usd_per_mtok": 1.1778
+        },
+        {
+          "date": "2026-03-15",
+          "usd_per_mtok": 1.2025
+        },
+        {
+          "date": "2026-03-16",
+          "usd_per_mtok": 1.2094
+        },
+        {
+          "date": "2026-03-17",
+          "usd_per_mtok": 1.2054
+        },
+        {
+          "date": "2026-03-18",
+          "usd_per_mtok": 1.2034
+        },
+        {
+          "date": "2026-03-19",
+          "usd_per_mtok": 1.1889
+        },
+        {
+          "date": "2026-03-20",
+          "usd_per_mtok": 1.1778
+        },
+        {
+          "date": "2026-03-21",
+          "usd_per_mtok": 1.1536
+        },
+        {
+          "date": "2026-03-22",
+          "usd_per_mtok": 1.1323
+        },
+        {
+          "date": "2026-03-23",
+          "usd_per_mtok": 1.1156
+        },
+        {
+          "date": "2026-03-24",
+          "usd_per_mtok": 1.0996
+        },
+        {
+          "date": "2026-03-25",
+          "usd_per_mtok": 1.0855
+        },
+        {
+          "date": "2026-03-26",
+          "usd_per_mtok": 1.0859
+        },
+        {
+          "date": "2026-03-27",
+          "usd_per_mtok": 1.0706
+        },
+        {
+          "date": "2026-03-28",
+          "usd_per_mtok": 1.0709
+        },
+        {
+          "date": "2026-03-29",
+          "usd_per_mtok": 1.0733
+        },
+        {
+          "date": "2026-03-30",
+          "usd_per_mtok": 1.0779
+        },
+        {
+          "date": "2026-03-31",
+          "usd_per_mtok": 1.0769
+        },
+        {
+          "date": "2026-04-01",
+          "usd_per_mtok": 1.0712
+        },
+        {
+          "date": "2026-04-02",
+          "usd_per_mtok": 1.0692
+        },
+        {
+          "date": "2026-04-03",
+          "usd_per_mtok": 1.0756
+        },
+        {
+          "date": "2026-04-04",
+          "usd_per_mtok": 1.0796
+        },
+        {
+          "date": "2026-04-05",
+          "usd_per_mtok": 1.0775
+        },
+        {
+          "date": "2026-04-06",
+          "usd_per_mtok": 1.0736
+        },
+        {
+          "date": "2026-04-07",
+          "usd_per_mtok": 1.0761
+        },
+        {
+          "date": "2026-04-08",
+          "usd_per_mtok": 1.0766
+        },
+        {
+          "date": "2026-04-09",
+          "usd_per_mtok": 1.0779
+        },
+        {
+          "date": "2026-04-10",
+          "usd_per_mtok": 1.0721
+        },
+        {
+          "date": "2026-04-11",
+          "usd_per_mtok": 1.0673
+        },
+        {
+          "date": "2026-04-12",
+          "usd_per_mtok": 1.0618
+        },
+        {
+          "date": "2026-04-13",
+          "usd_per_mtok": 1.0542
+        },
+        {
+          "date": "2026-04-14",
+          "usd_per_mtok": 1.0471
+        },
+        {
+          "date": "2026-04-15",
+          "usd_per_mtok": 1.0485
+        },
+        {
+          "date": "2026-04-16",
+          "usd_per_mtok": 1.041
+        },
+        {
+          "date": "2026-04-17",
+          "usd_per_mtok": 1.0322
+        },
+        {
+          "date": "2026-04-18",
+          "usd_per_mtok": 1.0186
+        },
+        {
+          "date": "2026-04-19",
+          "usd_per_mtok": 1.0056
+        },
+        {
+          "date": "2026-04-20",
+          "usd_per_mtok": 0.9894
+        },
+        {
+          "date": "2026-04-21",
+          "usd_per_mtok": 0.9801
+        },
+        {
+          "date": "2026-04-22",
+          "usd_per_mtok": 0.9657
+        },
+        {
+          "date": "2026-04-23",
+          "usd_per_mtok": 0.9587
+        },
+        {
+          "date": "2026-04-24",
+          "usd_per_mtok": 0.9609
+        },
+        {
+          "date": "2026-04-25",
+          "usd_per_mtok": 0.9711
+        },
+        {
+          "date": "2026-04-26",
+          "usd_per_mtok": 0.9724
+        },
+        {
+          "date": "2026-04-27",
+          "usd_per_mtok": 0.9798
+        },
+        {
+          "date": "2026-04-28",
+          "usd_per_mtok": 0.9888
+        },
+        {
+          "date": "2026-04-29",
+          "usd_per_mtok": 1.002
+        },
+        {
+          "date": "2026-04-30",
+          "usd_per_mtok": 1.0107
+        },
+        {
+          "date": "2026-05-01",
+          "usd_per_mtok": 1.0147
+        },
+        {
+          "date": "2026-05-02",
+          "usd_per_mtok": 1.01
+        },
+        {
+          "date": "2026-05-03",
+          "usd_per_mtok": 1.0135
+        },
+        {
+          "date": "2026-05-04",
+          "usd_per_mtok": 1.0177
+        },
+        {
+          "date": "2026-05-05",
+          "usd_per_mtok": 1.0089
+        },
+        {
+          "date": "2026-05-06",
+          "usd_per_mtok": 0.9993
+        },
+        {
+          "date": "2026-05-07",
+          "usd_per_mtok": 0.9945
+        },
+        {
+          "date": "2026-05-08",
+          "usd_per_mtok": 0.9981
+        },
+        {
+          "date": "2026-05-09",
+          "usd_per_mtok": 1.0028
+        },
+        {
+          "date": "2026-05-10",
+          "usd_per_mtok": 1.0096
+        },
+        {
+          "date": "2026-05-11",
+          "usd_per_mtok": 1.0205
+        },
+        {
+          "date": "2026-05-12",
+          "usd_per_mtok": 1.0356
+        },
+        {
+          "date": "2026-05-13",
+          "usd_per_mtok": 1.0535
+        },
+        {
+          "date": "2026-05-14",
+          "usd_per_mtok": 1.07
+        },
+        {
+          "date": "2026-05-15",
+          "usd_per_mtok": 1.0671
+        },
+        {
+          "date": "2026-05-16",
+          "usd_per_mtok": 1.0719
+        },
+        {
+          "date": "2026-05-17",
+          "usd_per_mtok": 1.0737
+        },
+        {
+          "date": "2026-05-18",
+          "usd_per_mtok": 1.0604
+        },
+        {
+          "date": "2026-05-19",
+          "usd_per_mtok": 1.0554
+        },
+        {
+          "date": "2026-05-20",
+          "usd_per_mtok": 1.0482
+        },
+        {
+          "date": "2026-05-21",
+          "usd_per_mtok": 1.0331
+        },
+        {
+          "date": "2026-05-22",
+          "usd_per_mtok": 1.0312
+        },
+        {
+          "date": "2026-05-23",
+          "usd_per_mtok": 1.0215
+        },
+        {
+          "date": "2026-05-24",
+          "usd_per_mtok": 1.0118
+        },
+        {
+          "date": "2026-05-25",
+          "usd_per_mtok": 1.002
+        },
+        {
+          "date": "2026-05-26",
+          "usd_per_mtok": 0.9918
+        },
+        {
+          "date": "2026-05-27",
+          "usd_per_mtok": 0.9826
+        },
+        {
+          "date": "2026-05-28",
+          "usd_per_mtok": 0.9972
+        },
+        {
+          "date": "2026-05-29",
+          "usd_per_mtok": 1.0056
+        },
+        {
+          "date": "2026-05-30",
+          "usd_per_mtok": 1.0091
+        },
+        {
+          "date": "2026-05-31",
+          "usd_per_mtok": 1.0156
+        },
+        {
+          "date": "2026-06-01",
+          "usd_per_mtok": 1.0336
+        },
+        {
+          "date": "2026-06-02",
+          "usd_per_mtok": 1.0455
+        },
+        {
+          "date": "2026-06-03",
+          "usd_per_mtok": 1.0482
+        },
+        {
+          "date": "2026-06-04",
+          "usd_per_mtok": 1.0406
+        },
+        {
+          "date": "2026-06-05",
+          "usd_per_mtok": 1.0255
+        },
+        {
+          "date": "2026-06-06",
+          "usd_per_mtok": 1.033
+        },
+        {
+          "date": "2026-06-07",
+          "usd_per_mtok": 1.0266
+        },
+        {
+          "date": "2026-06-08",
+          "usd_per_mtok": 1.0154
+        },
+        {
+          "date": "2026-06-09",
+          "usd_per_mtok": 1.0188
+        },
+        {
+          "date": "2026-06-10",
+          "usd_per_mtok": 1.0367
+        },
+        {
+          "date": "2026-06-11",
+          "usd_per_mtok": 1.0474
+        },
+        {
+          "date": "2026-06-12",
+          "usd_per_mtok": 1.0694
+        },
+        {
+          "date": "2026-06-13",
+          "usd_per_mtok": 1.0603
+        },
+        {
+          "date": "2026-06-14",
+          "usd_per_mtok": 1.0533
+        },
+        {
+          "date": "2026-06-15",
+          "usd_per_mtok": 1.0603
+        },
+        {
+          "date": "2026-06-16",
+          "usd_per_mtok": 1.0555
+        },
+        {
+          "date": "2026-06-17",
+          "usd_per_mtok": 1.0389
+        },
+        {
+          "date": "2026-06-18",
+          "usd_per_mtok": 0.9786
+        },
+        {
+          "date": "2026-06-19",
+          "usd_per_mtok": 0.9602
+        },
+        {
+          "date": "2026-06-20",
+          "usd_per_mtok": 0.9614
+        },
+        {
+          "date": "2026-06-21",
+          "usd_per_mtok": 0.9757
+        },
+        {
+          "date": "2026-06-22",
+          "usd_per_mtok": 0.9603
+        },
+        {
+          "date": "2026-06-23",
+          "usd_per_mtok": 0.962
+        },
+        {
+          "date": "2026-06-24",
+          "usd_per_mtok": 0.9612
+        },
+        {
+          "date": "2026-06-25",
+          "usd_per_mtok": 0.9985
+        },
+        {
+          "date": "2026-06-26",
+          "usd_per_mtok": 0.9743
+        },
+        {
+          "date": "2026-06-27",
+          "usd_per_mtok": 0.9437
+        },
+        {
+          "date": "2026-06-28",
+          "usd_per_mtok": 0.9139
+        },
+        {
+          "date": "2026-06-29",
+          "usd_per_mtok": 0.9156
+        },
+        {
+          "date": "2026-06-30",
+          "usd_per_mtok": 0.9159
+        },
+        {
+          "date": "2026-07-01",
+          "usd_per_mtok": 0.9229
+        },
+        {
+          "date": "2026-07-02",
+          "usd_per_mtok": 0.9424
+        },
+        {
+          "date": "2026-07-03",
+          "usd_per_mtok": 0.9692
+        },
+        {
+          "date": "2026-07-04",
+          "usd_per_mtok": 1.0067
+        },
+        {
+          "date": "2026-07-05",
+          "usd_per_mtok": 1.0406
+        },
+        {
+          "date": "2026-07-06",
+          "usd_per_mtok": 1.0535
+        },
+        {
+          "date": "2026-07-07",
+          "usd_per_mtok": 1.0542
+        },
+        {
+          "date": "2026-07-08",
+          "usd_per_mtok": 1.067
+        },
+        {
+          "date": "2026-07-09",
+          "usd_per_mtok": 1.0717
+        },
+        {
+          "date": "2026-07-10",
+          "usd_per_mtok": 1.0802
+        },
+        {
+          "date": "2026-07-11",
+          "usd_per_mtok": 1.0895
+        },
+        {
+          "date": "2026-07-12",
+          "usd_per_mtok": 1.1035
+        },
+        {
+          "date": "2026-07-13",
+          "usd_per_mtok": 1.1165
+        },
+        {
+          "date": "2026-07-14",
+          "usd_per_mtok": 1.1243
+        },
+        {
+          "date": "2026-07-15",
+          "usd_per_mtok": 1.1258
+        },
+        {
+          "date": "2026-07-16",
+          "usd_per_mtok": 1.1344
+        },
+        {
+          "date": "2026-07-17",
+          "usd_per_mtok": 1.1409
+        },
+        {
+          "date": "2026-07-18",
+          "usd_per_mtok": 1.1423
+        },
+        {
+          "date": "2026-07-19",
+          "usd_per_mtok": 1.142
+        },
+        {
+          "date": "2026-07-20",
+          "usd_per_mtok": 1.1553
+        },
+        {
+          "date": "2026-07-21",
+          "usd_per_mtok": 1.1599
+        },
+        {
+          "date": "2026-07-22",
+          "usd_per_mtok": 1.1566
+        },
+        {
+          "date": "2026-07-23",
+          "usd_per_mtok": 1.1631
+        },
+        {
+          "date": "2026-07-24",
+          "usd_per_mtok": 1.1631
+        },
+        {
+          "date": "2026-07-25",
+          "usd_per_mtok": 1.1634
+        },
+        {
+          "date": "2026-07-26",
+          "usd_per_mtok": 1.1677
+        },
+        {
+          "date": "2026-07-27",
+          "usd_per_mtok": 1.1548
+        },
+        {
+          "date": "2026-07-28",
+          "usd_per_mtok": 1.1444
+        },
+        {
+          "date": "2026-07-29",
+          "usd_per_mtok": 1.1403
+        },
+        {
+          "date": "2026-07-30",
+          "usd_per_mtok": 1.1216
+        },
+        {
+          "date": "2026-07-31",
+          "usd_per_mtok": 1.1101
+        },
+        {
+          "date": "2026-08-01",
+          "usd_per_mtok": 1.0982
+        },
+        {
+          "date": "2026-08-02",
+          "usd_per_mtok": 1.0838
+        },
+        {
+          "date": "2026-08-03",
+          "usd_per_mtok": 1.0639
+        },
+        {
+          "date": "2026-08-04",
+          "usd_per_mtok": 1.0453
+        },
+        {
+          "date": "2026-08-05",
+          "usd_per_mtok": 1.0223
+        },
+        {
+          "date": "2026-08-06",
+          "usd_per_mtok": 1.0015
+        },
+        {
+          "date": "2026-08-07",
+          "usd_per_mtok": 0.987
+        },
+        {
+          "date": "2026-08-08",
+          "usd_per_mtok": 0.9879
+        },
+        {
+          "date": "2026-08-09",
+          "usd_per_mtok": 0.9931
+        },
+        {
+          "date": "2026-08-10",
+          "usd_per_mtok": 0.9886
+        },
+        {
+          "date": "2026-08-11",
+          "usd_per_mtok": 0.9798
+        },
+        {
+          "date": "2026-08-12",
+          "usd_per_mtok": 0.9702
+        },
+        {
+          "date": "2026-08-13",
+          "usd_per_mtok": 0.9588
+        },
+        {
+          "date": "2026-08-14",
+          "usd_per_mtok": 0.9536
+        },
+        {
+          "date": "2026-08-15",
+          "usd_per_mtok": 0.9512
+        },
+        {
+          "date": "2026-08-16",
+          "usd_per_mtok": 0.9406
+        },
+        {
+          "date": "2026-08-17",
+          "usd_per_mtok": 0.935
+        },
+        {
+          "date": "2026-08-18",
+          "usd_per_mtok": 0.9333
+        },
+        {
+          "date": "2026-08-19",
+          "usd_per_mtok": 0.929
+        },
+        {
+          "date": "2026-08-20",
+          "usd_per_mtok": 0.9243
+        },
+        {
+          "date": "2026-08-21",
+          "usd_per_mtok": 0.9136
+        },
+        {
+          "date": "2026-08-22",
+          "usd_per_mtok": 0.9013
+        },
+        {
+          "date": "2026-08-23",
+          "usd_per_mtok": 0.8962
+        },
+        {
+          "date": "2026-08-24",
+          "usd_per_mtok": 0.8822
+        },
+        {
+          "date": "2026-08-25",
+          "usd_per_mtok": 0.8634
+        },
+        {
+          "date": "2026-08-26",
+          "usd_per_mtok": 0.8509
+        },
+        {
+          "date": "2026-08-27",
+          "usd_per_mtok": 0.8375
+        },
+        {
+          "date": "2026-08-28",
+          "usd_per_mtok": 0.8315
+        },
+        {
+          "date": "2026-08-29",
+          "usd_per_mtok": 0.8299
+        },
+        {
+          "date": "2026-08-30",
+          "usd_per_mtok": 0.8244
+        },
+        {
+          "date": "2026-08-31",
+          "usd_per_mtok": 0.8212
+        },
+        {
+          "date": "2026-09-01",
+          "usd_per_mtok": 0.8209
+        },
+        {
+          "date": "2026-09-02",
+          "usd_per_mtok": 0.8182
+        },
+        {
+          "date": "2026-09-03",
+          "usd_per_mtok": 0.8205
+        },
+        {
+          "date": "2026-09-04",
+          "usd_per_mtok": 0.8269
+        },
+        {
+          "date": "2026-09-05",
+          "usd_per_mtok": 0.8351
+        },
+        {
+          "date": "2026-09-06",
+          "usd_per_mtok": 0.8411
+        },
+        {
+          "date": "2026-09-07",
+          "usd_per_mtok": 0.8439
+        },
+        {
+          "date": "2026-09-08",
+          "usd_per_mtok": 0.8481
+        },
+        {
+          "date": "2026-09-09",
+          "usd_per_mtok": 0.8517
+        },
+        {
+          "date": "2026-09-10",
+          "usd_per_mtok": 0.8625
+        },
+        {
+          "date": "2026-09-11",
+          "usd_per_mtok": 0.8589
+        },
+        {
+          "date": "2026-09-12",
+          "usd_per_mtok": 0.8582
+        },
+        {
+          "date": "2026-09-13",
+          "usd_per_mtok": 0.8581
+        },
+        {
+          "date": "2026-09-14",
+          "usd_per_mtok": 0.8607
+        },
+        {
+          "date": "2026-09-15",
+          "usd_per_mtok": 0.866
+        },
+        {
+          "date": "2026-09-16",
+          "usd_per_mtok": 0.8717
+        },
+        {
+          "date": "2026-09-17",
+          "usd_per_mtok": 0.8652
+        },
+        {
+          "date": "2026-09-18",
+          "usd_per_mtok": 0.8554
+        },
+        {
+          "date": "2026-09-19",
+          "usd_per_mtok": 0.8501
+        },
+        {
+          "date": "2026-09-20",
+          "usd_per_mtok": 0.8488
+        },
+        {
+          "date": "2026-09-21",
+          "usd_per_mtok": 0.842
+        },
+        {
+          "date": "2026-09-22",
+          "usd_per_mtok": 0.8308
+        },
+        {
+          "date": "2026-09-23",
+          "usd_per_mtok": 0.8089
+        },
+        {
+          "date": "2026-09-24",
+          "usd_per_mtok": 0.7857
+        },
+        {
+          "date": "2026-09-25",
+          "usd_per_mtok": 0.771
+        },
+        {
+          "date": "2026-09-26",
+          "usd_per_mtok": 0.7592
+        },
+        {
+          "date": "2026-09-27",
+          "usd_per_mtok": 0.7525
+        },
+        {
+          "date": "2026-09-28",
+          "usd_per_mtok": 0.7337
+        },
+        {
+          "date": "2026-09-29",
+          "usd_per_mtok": 0.7042
+        },
+        {
+          "date": "2026-09-30",
+          "usd_per_mtok": 0.6868
+        },
+        {
+          "date": "2026-10-01",
+          "usd_per_mtok": 0.676
+        },
+        {
+          "date": "2026-10-02",
+          "usd_per_mtok": 0.6637
+        },
+        {
+          "date": "2026-10-03",
+          "usd_per_mtok": 0.6563
+        },
+        {
+          "date": "2026-10-04",
+          "usd_per_mtok": 0.6487
+        },
+        {
+          "date": "2026-10-05",
+          "usd_per_mtok": 0.6387
+        },
+        {
+          "date": "2026-10-06",
+          "usd_per_mtok": 0.6383
+        },
+        {
+          "date": "2026-10-07",
+          "usd_per_mtok": 0.6377
+        },
+        {
+          "date": "2026-10-08",
+          "usd_per_mtok": 0.6368
+        },
+        {
+          "date": "2026-10-09",
+          "usd_per_mtok": 0.6357
+        },
+        {
+          "date": "2026-10-10",
+          "usd_per_mtok": 0.6393
+        },
+        {
+          "date": "2026-10-11",
+          "usd_per_mtok": 0.6401
+        }
+      ]
+    },
+    "ramp_pepm_monthly": {
+      "id": "ramp_pepm_monthly",
+      "title": "Ramp AI spend per employee per month",
+      "unit": "usd",
+      "quality": "V",
+      "source_url": "https://ramp.com/data/ai-index",
+      "retrieved": "2026-10-18",
+      "notes": "PEPM is card/invoice/ACH AI spend per employee per month; percentiles across businesses on Ramp. Latest month Sep 2026; 18 Oct vintage.",
+      "points": [
+        {
+          "month": "2023-10",
+          "top_1_percent_median": 933.17,
+          "top_10_percent_median": 67.73,
+          "p90": 30.88,
+          "median": 2.61
+        },
+        {
+          "month": "2023-11",
+          "top_1_percent_median": 883.55,
+          "top_10_percent_median": 78.3,
+          "p90": 35.14,
+          "median": 2.73
+        },
+        {
+          "month": "2023-12",
+          "top_1_percent_median": 1105.91,
+          "top_10_percent_median": 74.23,
+          "p90": 32.34,
+          "median": 2.67
+        },
+        {
+          "month": "2024-01",
+          "top_1_percent_median": 1000.0,
+          "top_10_percent_median": 85.93,
+          "p90": 38.57,
+          "median": 2.86
+        },
+        {
+          "month": "2024-02",
+          "top_1_percent_median": 982.25,
+          "top_10_percent_median": 83.06,
+          "p90": 38.76,
+          "median": 3.04
+        },
+        {
+          "month": "2024-03",
+          "top_1_percent_median": 1225.47,
+          "top_10_percent_median": 107.49,
+          "p90": 44.94,
+          "median": 3.14
+        },
+        {
+          "month": "2024-04",
+          "top_1_percent_median": 1572.79,
+          "top_10_percent_median": 93.28,
+          "p90": 42.8,
+          "median": 3.11
+        },
+        {
+          "month": "2024-05",
+          "top_1_percent_median": 1406.16,
+          "top_10_percent_median": 104.58,
+          "p90": 46.01,
+          "median": 3.13
+        },
+        {
+          "month": "2024-06",
+          "top_1_percent_median": 1400.7,
+          "top_10_percent_median": 99.45,
+          "p90": 44.46,
+          "median": 3.0
+        },
+        {
+          "month": "2024-07",
+          "top_1_percent_median": 1767.04,
+          "top_10_percent_median": 104.29,
+          "p90": 44.81,
+          "median": 3.06
+        },
+        {
+          "month": "2024-08",
+          "top_1_percent_median": 1692.13,
+          "top_10_percent_median": 103.13,
+          "p90": 45.07,
+          "median": 3.04
+        },
+        {
+          "month": "2024-09",
+          "top_1_percent_median": 1605.19,
+          "top_10_percent_median": 103.33,
+          "p90": 44.57,
+          "median": 3.04
+        },
+        {
+          "month": "2024-10",
+          "top_1_percent_median": 1471.82,
+          "top_10_percent_median": 108.34,
+          "p90": 46.13,
+          "median": 3.17
+        },
+        {
+          "month": "2024-11",
+          "top_1_percent_median": 1673.21,
+          "top_10_percent_median": 105.66,
+          "p90": 46.16,
+          "median": 3.32
+        },
+        {
+          "month": "2024-12",
+          "top_1_percent_median": 1871.76,
+          "top_10_percent_median": 117.98,
+          "p90": 52.23,
+          "median": 3.26
+        },
+        {
+          "month": "2025-01",
+          "top_1_percent_median": 2069.15,
+          "top_10_percent_median": 142.86,
+          "p90": 60.0,
+          "median": 3.52
+        },
+        {
+          "month": "2025-02",
+          "top_1_percent_median": 2322.67,
+          "top_10_percent_median": 133.29,
+          "p90": 64.15,
+          "median": 3.87
+        },
+        {
+          "month": "2025-03",
+          "top_1_percent_median": 2437.46,
+          "top_10_percent_median": 143.98,
+          "p90": 66.1,
+          "median": 4.0
+        },
+        {
+          "month": "2025-04",
+          "top_1_percent_median": 2565.99,
+          "top_10_percent_median": 149.52,
+          "p90": 66.05,
+          "median": 4.0
+        },
+        {
+          "month": "2025-05",
+          "top_1_percent_median": 2447.36,
+          "top_10_percent_median": 160.51,
+          "p90": 73.09,
+          "median": 4.15
+        },
+        {
+          "month": "2025-06",
+          "top_1_percent_median": 2194.45,
+          "top_10_percent_median": 165.61,
+          "p90": 77.0,
+          "median": 4.29
+        },
+        {
+          "month": "2025-07",
+          "top_1_percent_median": 2467.38,
+          "top_10_percent_median": 192.41,
+          "p90": 85.05,
+          "median": 4.6
+        },
+        {
+          "month": "2025-08",
+          "top_1_percent_median": 2642.2,
+          "top_10_percent_median": 200.0,
+          "p90": 93.76,
+          "median": 5.0
+        },
+        {
+          "month": "2025-09",
+          "top_1_percent_median": 2515.49,
+          "top_10_percent_median": 209.91,
+          "p90": 99.14,
+          "median": 5.0
+        },
+        {
+          "month": "2025-10",
+          "top_1_percent_median": 3334.32,
+          "top_10_percent_median": 238.42,
+          "p90": 110.17,
+          "median": 5.45
+        },
+        {
+          "month": "2025-11",
+          "top_1_percent_median": 3063.05,
+          "top_10_percent_median": 229.65,
+          "p90": 107.9,
+          "median": 5.37
+        },
+        {
+          "month": "2025-12",
+          "top_1_percent_median": 4288.43,
+          "top_10_percent_median": 260.34,
+          "p90": 119.49,
+          "median": 5.56
+        },
+        {
+          "month": "2026-01",
+          "top_1_percent_median": 3390.4,
+          "top_10_percent_median": 296.72,
+          "p90": 145.34,
+          "median": 6.32
+        },
+        {
+          "month": "2026-02",
+          "top_1_percent_median": 3348.02,
+          "top_10_percent_median": 351.76,
+          "p90": 168.73,
+          "median": 7.5
+        },
+        {
+          "month": "2026-03",
+          "top_1_percent_median": 4812.03,
+          "top_10_percent_median": 424.9,
+          "p90": 205.82,
+          "median": 9.68
+        },
+        {
+          "month": "2026-04",
+          "top_1_percent_median": 4715.01,
+          "top_10_percent_median": 472.21,
+          "p90": 229.11,
+          "median": 10.97
+        },
+        {
+          "month": "2026-05",
+          "top_1_percent_median": 5133.59,
+          "top_10_percent_median": 520.9,
+          "p90": 248.23,
+          "median": 12.05
+        },
+        {
+          "month": "2026-06",
+          "top_1_percent_median": 6563.82,
+          "top_10_percent_median": 579.07,
+          "p90": 269.73,
+          "median": 12.84
+        },
+        {
+          "month": "2026-07",
+          "top_1_percent_median": 9873.12,
+          "top_10_percent_median": 721.14,
+          "p90": 317.39,
+          "median": 14.19
+        },
+        {
+          "month": "2026-08",
+          "top_1_percent_median": 8568.17,
+          "top_10_percent_median": 740.47,
+          "p90": 330.94,
+          "median": 14.74
+        },
+        {
+          "month": "2026-09",
+          "top_1_percent_median": 9567.53,
+          "top_10_percent_median": 813.43,
+          "p90": 357.45,
+          "median": 15.7
+        }
+      ]
+    },
+    "vercel_open_weight_traffic": {
+      "id": "vercel_open_weight_traffic",
+      "title": "Vercel AI Gateway open-weight share of traffic",
+      "unit": "percent",
+      "quality": "V",
+      "source_url": "https://vercel.com/ai-gateway/leaderboards/models",
+      "retrieved": "2026-10-18",
+      "last_day": "2026-10-17",
+      "notes": "Open-weight share of tokens, spend and requests. Traffic split frozen at the last published day (17 Oct). 7-day averages are derived. Shares only; Vercel does not publish absolute volumes.",
+      "points": [
+        {
+          "date": "2026-04-01",
+          "tokens_daily": 7.91,
+          "cost_daily": 2.66,
+          "requests_daily": 6.67,
+          "tokens_7d": null,
+          "cost_7d": null,
+          "requests_7d": null
+        },
+        {
+          "date": "2026-04-02",
+          "tokens_daily": 8.65,
+          "cost_daily": 2.46,
+          "requests_daily": 7.25,
+          "tokens_7d": null,
+          "cost_7d": null,
+          "requests_7d": null
+        },
+        {
+          "date": "2026-04-03",
+          "tokens_daily": 7.78,
+          "cost_daily": 1.6,
+          "requests_daily": 6.99,
+          "tokens_7d": null,
+          "cost_7d": null,
+          "requests_7d": null
+        },
+        {
+          "date": "2026-04-04",
+          "tokens_daily": 8.66,
+          "cost_daily": 1.98,
+          "requests_daily": 7.0,
+          "tokens_7d": null,
+          "cost_7d": null,
+          "requests_7d": null
+        },
+        {
+          "date": "2026-04-05",
+          "tokens_daily": 10.48,
+          "cost_daily": 2.77,
+          "requests_daily": 8.0,
+          "tokens_7d": null,
+          "cost_7d": null,
+          "requests_7d": null
+        },
+        {
+          "date": "2026-04-06",
+          "tokens_daily": 9.05,
+          "cost_daily": 2.22,
+          "requests_daily": 7.03,
+          "tokens_7d": null,
+          "cost_7d": null,
+          "requests_7d": null
+        },
+        {
+          "date": "2026-04-07",
+          "tokens_daily": 8.36,
+          "cost_daily": 1.97,
+          "requests_daily": 6.48,
+          "tokens_7d": 8.7,
+          "cost_7d": 2.24,
+          "requests_7d": 7.06
+        },
+        {
+          "date": "2026-04-08",
+          "tokens_daily": 11.84,
+          "cost_daily": 2.49,
+          "requests_daily": 7.52,
+          "tokens_7d": 9.26,
+          "cost_7d": 2.21,
+          "requests_7d": 7.18
+        },
+        {
+          "date": "2026-04-09",
+          "tokens_daily": 9.69,
+          "cost_daily": 2.17,
+          "requests_daily": 6.65,
+          "tokens_7d": 9.41,
+          "cost_7d": 2.17,
+          "requests_7d": 7.1
+        },
+        {
+          "date": "2026-04-10",
+          "tokens_daily": 9.95,
+          "cost_daily": 2.28,
+          "requests_daily": 7.4,
+          "tokens_7d": 9.72,
+          "cost_7d": 2.27,
+          "requests_7d": 7.16
+        },
+        {
+          "date": "2026-04-11",
+          "tokens_daily": 11.92,
+          "cost_daily": 2.73,
+          "requests_daily": 7.61,
+          "tokens_7d": 10.18,
+          "cost_7d": 2.37,
+          "requests_7d": 7.24
+        },
+        {
+          "date": "2026-04-12",
+          "tokens_daily": 11.44,
+          "cost_daily": 2.69,
+          "requests_daily": 7.58,
+          "tokens_7d": 10.32,
+          "cost_7d": 2.36,
+          "requests_7d": 7.18
+        },
+        {
+          "date": "2026-04-13",
+          "tokens_daily": 9.98,
+          "cost_daily": 2.57,
+          "requests_daily": 6.77,
+          "tokens_7d": 10.45,
+          "cost_7d": 2.41,
+          "requests_7d": 7.14
+        },
+        {
+          "date": "2026-04-14",
+          "tokens_daily": 10.01,
+          "cost_daily": 2.35,
+          "requests_daily": 6.33,
+          "tokens_7d": 10.69,
+          "cost_7d": 2.47,
+          "requests_7d": 7.12
+        },
+        {
+          "date": "2026-04-15",
+          "tokens_daily": 10.65,
+          "cost_daily": 2.56,
+          "requests_daily": 7.42,
+          "tokens_7d": 10.52,
+          "cost_7d": 2.48,
+          "requests_7d": 7.11
+        },
+        {
+          "date": "2026-04-16",
+          "tokens_daily": 12.99,
+          "cost_daily": 2.84,
+          "requests_daily": 7.22,
+          "tokens_7d": 10.99,
+          "cost_7d": 2.57,
+          "requests_7d": 7.19
+        },
+        {
+          "date": "2026-04-17",
+          "tokens_daily": 10.68,
+          "cost_daily": 2.73,
+          "requests_daily": 7.42,
+          "tokens_7d": 11.09,
+          "cost_7d": 2.64,
+          "requests_7d": 7.19
+        },
+        {
+          "date": "2026-04-18",
+          "tokens_daily": 13.31,
+          "cost_daily": 3.81,
+          "requests_daily": 9.24,
+          "tokens_7d": 11.29,
+          "cost_7d": 2.79,
+          "requests_7d": 7.43
+        },
+        {
+          "date": "2026-04-19",
+          "tokens_daily": 13.37,
+          "cost_daily": 4.03,
+          "requests_daily": 8.63,
+          "tokens_7d": 11.57,
+          "cost_7d": 2.99,
+          "requests_7d": 7.58
+        },
+        {
+          "date": "2026-04-20",
+          "tokens_daily": 9.76,
+          "cost_daily": 2.8,
+          "requests_daily": 7.15,
+          "tokens_7d": 11.54,
+          "cost_7d": 3.02,
+          "requests_7d": 7.63
+        },
+        {
+          "date": "2026-04-21",
+          "tokens_daily": 10.13,
+          "cost_daily": 2.69,
+          "requests_daily": 7.12,
+          "tokens_7d": 11.55,
+          "cost_7d": 3.07,
+          "requests_7d": 7.74
+        },
+        {
+          "date": "2026-04-22",
+          "tokens_daily": 10.57,
+          "cost_daily": 3.17,
+          "requests_daily": 6.37,
+          "tokens_7d": 11.54,
+          "cost_7d": 3.15,
+          "requests_7d": 7.59
+        },
+        {
+          "date": "2026-04-23",
+          "tokens_daily": 22.05,
+          "cost_daily": 9.01,
+          "requests_daily": 10.21,
+          "tokens_7d": 12.84,
+          "cost_7d": 4.03,
+          "requests_7d": 8.02
+        },
+        {
+          "date": "2026-04-24",
+          "tokens_daily": 17.6,
+          "cost_daily": 6.08,
+          "requests_daily": 10.96,
+          "tokens_7d": 13.83,
+          "cost_7d": 4.51,
+          "requests_7d": 8.52
+        },
+        {
+          "date": "2026-04-25",
+          "tokens_daily": 18.85,
+          "cost_daily": 6.74,
+          "requests_daily": 13.18,
+          "tokens_7d": 14.62,
+          "cost_7d": 4.93,
+          "requests_7d": 9.09
+        },
+        {
+          "date": "2026-04-26",
+          "tokens_daily": 16.08,
+          "cost_daily": 5.47,
+          "requests_daily": 9.3,
+          "tokens_7d": 15.01,
+          "cost_7d": 5.14,
+          "requests_7d": 9.18
+        },
+        {
+          "date": "2026-04-27",
+          "tokens_daily": 15.23,
+          "cost_daily": 4.35,
+          "requests_daily": 9.49,
+          "tokens_7d": 15.79,
+          "cost_7d": 5.36,
+          "requests_7d": 9.52
+        },
+        {
+          "date": "2026-04-28",
+          "tokens_daily": 14.0,
+          "cost_daily": 3.52,
+          "requests_daily": 9.26,
+          "tokens_7d": 16.34,
+          "cost_7d": 5.48,
+          "requests_7d": 9.82
+        },
+        {
+          "date": "2026-04-29",
+          "tokens_daily": 18.85,
+          "cost_daily": 5.05,
+          "requests_daily": 11.25,
+          "tokens_7d": 17.52,
+          "cost_7d": 5.75,
+          "requests_7d": 10.52
+        },
+        {
+          "date": "2026-04-30",
+          "tokens_daily": 15.59,
+          "cost_daily": 4.1,
+          "requests_daily": 10.07,
+          "tokens_7d": 16.6,
+          "cost_7d": 5.05,
+          "requests_7d": 10.5
+        },
+        {
+          "date": "2026-05-01",
+          "tokens_daily": 13.01,
+          "cost_daily": 3.65,
+          "requests_daily": 10.5,
+          "tokens_7d": 15.94,
+          "cost_7d": 4.7,
+          "requests_7d": 10.43
+        },
+        {
+          "date": "2026-05-02",
+          "tokens_daily": 14.33,
+          "cost_daily": 4.44,
+          "requests_daily": 10.27,
+          "tokens_7d": 15.3,
+          "cost_7d": 4.37,
+          "requests_7d": 10.02
+        },
+        {
+          "date": "2026-05-03",
+          "tokens_daily": 12.87,
+          "cost_daily": 3.87,
+          "requests_daily": 8.46,
+          "tokens_7d": 14.84,
+          "cost_7d": 4.14,
+          "requests_7d": 9.9
+        },
+        {
+          "date": "2026-05-04",
+          "tokens_daily": 11.03,
+          "cost_daily": 2.96,
+          "requests_daily": 8.15,
+          "tokens_7d": 14.24,
+          "cost_7d": 3.94,
+          "requests_7d": 9.71
+        },
+        {
+          "date": "2026-05-05",
+          "tokens_daily": 14.41,
+          "cost_daily": 3.17,
+          "requests_daily": 9.34,
+          "tokens_7d": 14.3,
+          "cost_7d": 3.89,
+          "requests_7d": 9.72
+        },
+        {
+          "date": "2026-05-06",
+          "tokens_daily": 14.91,
+          "cost_daily": 3.06,
+          "requests_daily": 9.85,
+          "tokens_7d": 13.73,
+          "cost_7d": 3.61,
+          "requests_7d": 9.52
+        },
+        {
+          "date": "2026-05-07",
+          "tokens_daily": 14.87,
+          "cost_daily": 2.58,
+          "requests_daily": 9.69,
+          "tokens_7d": 13.63,
+          "cost_7d": 3.39,
+          "requests_7d": 9.47
+        },
+        {
+          "date": "2026-05-08",
+          "tokens_daily": 14.54,
+          "cost_daily": 2.22,
+          "requests_daily": 10.07,
+          "tokens_7d": 13.85,
+          "cost_7d": 3.19,
+          "requests_7d": 9.4
+        },
+        {
+          "date": "2026-05-09",
+          "tokens_daily": 19.23,
+          "cost_daily": 2.8,
+          "requests_daily": 11.78,
+          "tokens_7d": 14.55,
+          "cost_7d": 2.95,
+          "requests_7d": 9.62
+        },
+        {
+          "date": "2026-05-10",
+          "tokens_daily": 19.18,
+          "cost_daily": 2.75,
+          "requests_daily": 10.92,
+          "tokens_7d": 15.45,
+          "cost_7d": 2.79,
+          "requests_7d": 9.97
+        },
+        {
+          "date": "2026-05-11",
+          "tokens_daily": 14.46,
+          "cost_daily": 2.21,
+          "requests_daily": 10.28,
+          "tokens_7d": 15.94,
+          "cost_7d": 2.68,
+          "requests_7d": 10.27
+        },
+        {
+          "date": "2026-05-12",
+          "tokens_daily": 17.85,
+          "cost_daily": 2.35,
+          "requests_daily": 9.61,
+          "tokens_7d": 16.44,
+          "cost_7d": 2.57,
+          "requests_7d": 10.31
+        },
+        {
+          "date": "2026-05-13",
+          "tokens_daily": 20.6,
+          "cost_daily": 2.29,
+          "requests_daily": 9.76,
+          "tokens_7d": 17.25,
+          "cost_7d": 2.46,
+          "requests_7d": 10.3
+        },
+        {
+          "date": "2026-05-14",
+          "tokens_daily": 22.5,
+          "cost_daily": 2.45,
+          "requests_daily": 10.84,
+          "tokens_7d": 18.34,
+          "cost_7d": 2.44,
+          "requests_7d": 10.46
+        },
+        {
+          "date": "2026-05-15",
+          "tokens_daily": 23.52,
+          "cost_daily": 2.36,
+          "requests_daily": 11.46,
+          "tokens_7d": 19.62,
+          "cost_7d": 2.46,
+          "requests_7d": 10.66
+        },
+        {
+          "date": "2026-05-16",
+          "tokens_daily": 28.24,
+          "cost_daily": 3.23,
+          "requests_daily": 13.6,
+          "tokens_7d": 20.91,
+          "cost_7d": 2.52,
+          "requests_7d": 10.92
+        },
+        {
+          "date": "2026-05-17",
+          "tokens_daily": 27.56,
+          "cost_daily": 3.09,
+          "requests_daily": 13.08,
+          "tokens_7d": 22.1,
+          "cost_7d": 2.57,
+          "requests_7d": 11.23
+        },
+        {
+          "date": "2026-05-18",
+          "tokens_daily": 25.05,
+          "cost_daily": 2.55,
+          "requests_daily": 12.57,
+          "tokens_7d": 23.62,
+          "cost_7d": 2.62,
+          "requests_7d": 11.56
+        },
+        {
+          "date": "2026-05-19",
+          "tokens_daily": 24.46,
+          "cost_daily": 2.63,
+          "requests_daily": 13.44,
+          "tokens_7d": 24.56,
+          "cost_7d": 2.66,
+          "requests_7d": 12.11
+        },
+        {
+          "date": "2026-05-20",
+          "tokens_daily": 25.34,
+          "cost_daily": 2.48,
+          "requests_daily": 13.8,
+          "tokens_7d": 25.24,
+          "cost_7d": 2.68,
+          "requests_7d": 12.68
+        },
+        {
+          "date": "2026-05-21",
+          "tokens_daily": 25.25,
+          "cost_daily": 2.39,
+          "requests_daily": 13.51,
+          "tokens_7d": 25.63,
+          "cost_7d": 2.68,
+          "requests_7d": 13.07
+        },
+        {
+          "date": "2026-05-22",
+          "tokens_daily": 26.98,
+          "cost_daily": 2.46,
+          "requests_daily": 13.83,
+          "tokens_7d": 26.13,
+          "cost_7d": 2.69,
+          "requests_7d": 13.4
+        },
+        {
+          "date": "2026-05-23",
+          "tokens_daily": 28.25,
+          "cost_daily": 2.96,
+          "requests_daily": 13.62,
+          "tokens_7d": 26.13,
+          "cost_7d": 2.65,
+          "requests_7d": 13.41
+        },
+        {
+          "date": "2026-05-24",
+          "tokens_daily": 26.88,
+          "cost_daily": 2.94,
+          "requests_daily": 13.97,
+          "tokens_7d": 26.03,
+          "cost_7d": 2.63,
+          "requests_7d": 13.54
+        },
+        {
+          "date": "2026-05-25",
+          "tokens_daily": 26.02,
+          "cost_daily": 2.58,
+          "requests_daily": 14.97,
+          "tokens_7d": 26.17,
+          "cost_7d": 2.63,
+          "requests_7d": 13.88
+        },
+        {
+          "date": "2026-05-26",
+          "tokens_daily": 23.95,
+          "cost_daily": 2.23,
+          "requests_daily": 14.29,
+          "tokens_7d": 26.1,
+          "cost_7d": 2.58,
+          "requests_7d": 14.0
+        },
+        {
+          "date": "2026-05-27",
+          "tokens_daily": 24.54,
+          "cost_daily": 2.18,
+          "requests_daily": 13.96,
+          "tokens_7d": 25.98,
+          "cost_7d": 2.54,
+          "requests_7d": 14.02
+        },
+        {
+          "date": "2026-05-28",
+          "tokens_daily": 27.84,
+          "cost_daily": 2.79,
+          "requests_daily": 15.57,
+          "tokens_7d": 26.35,
+          "cost_7d": 2.59,
+          "requests_7d": 14.32
+        },
+        {
+          "date": "2026-05-29",
+          "tokens_daily": 32.63,
+          "cost_daily": 3.6,
+          "requests_daily": 18.5,
+          "tokens_7d": 27.16,
+          "cost_7d": 2.76,
+          "requests_7d": 14.98
+        },
+        {
+          "date": "2026-05-30",
+          "tokens_daily": 33.7,
+          "cost_daily": 3.22,
+          "requests_daily": 18.19,
+          "tokens_7d": 27.94,
+          "cost_7d": 2.79,
+          "requests_7d": 15.64
+        },
+        {
+          "date": "2026-05-31",
+          "tokens_daily": 34.43,
+          "cost_daily": 4.27,
+          "requests_daily": 21.13,
+          "tokens_7d": 29.02,
+          "cost_7d": 2.98,
+          "requests_7d": 16.66
+        },
+        {
+          "date": "2026-06-01",
+          "tokens_daily": 26.79,
+          "cost_daily": 3.42,
+          "requests_daily": 19.74,
+          "tokens_7d": 29.13,
+          "cost_7d": 3.1,
+          "requests_7d": 17.34
+        },
+        {
+          "date": "2026-06-02",
+          "tokens_daily": 28.82,
+          "cost_daily": 3.36,
+          "requests_daily": 25.71,
+          "tokens_7d": 29.82,
+          "cost_7d": 3.26,
+          "requests_7d": 18.97
+        },
+        {
+          "date": "2026-06-03",
+          "tokens_daily": 29.91,
+          "cost_daily": 3.48,
+          "requests_daily": 20.73,
+          "tokens_7d": 30.59,
+          "cost_7d": 3.45,
+          "requests_7d": 19.94
+        },
+        {
+          "date": "2026-06-04",
+          "tokens_daily": 32.14,
+          "cost_daily": 3.46,
+          "requests_daily": 21.61,
+          "tokens_7d": 31.2,
+          "cost_7d": 3.54,
+          "requests_7d": 20.8
+        },
+        {
+          "date": "2026-06-05",
+          "tokens_daily": 32.53,
+          "cost_daily": 4.24,
+          "requests_daily": 23.96,
+          "tokens_7d": 31.19,
+          "cost_7d": 3.63,
+          "requests_7d": 21.58
+        },
+        {
+          "date": "2026-06-06",
+          "tokens_daily": 43.85,
+          "cost_daily": 6.66,
+          "requests_daily": 26.11,
+          "tokens_7d": 32.64,
+          "cost_7d": 4.13,
+          "requests_7d": 22.71
+        },
+        {
+          "date": "2026-06-07",
+          "tokens_daily": 42.34,
+          "cost_daily": 6.38,
+          "requests_daily": 23.31,
+          "tokens_7d": 33.77,
+          "cost_7d": 4.43,
+          "requests_7d": 23.02
+        },
+        {
+          "date": "2026-06-08",
+          "tokens_daily": 35.07,
+          "cost_daily": 4.09,
+          "requests_daily": 21.52,
+          "tokens_7d": 34.95,
+          "cost_7d": 4.52,
+          "requests_7d": 23.28
+        },
+        {
+          "date": "2026-06-09",
+          "tokens_daily": 36.27,
+          "cost_daily": 3.73,
+          "requests_daily": 23.68,
+          "tokens_7d": 36.02,
+          "cost_7d": 4.58,
+          "requests_7d": 22.99
+        },
+        {
+          "date": "2026-06-10",
+          "tokens_daily": 33.22,
+          "cost_daily": 3.13,
+          "requests_daily": 24.27,
+          "tokens_7d": 36.49,
+          "cost_7d": 4.53,
+          "requests_7d": 23.49
+        },
+        {
+          "date": "2026-06-11",
+          "tokens_daily": 34.26,
+          "cost_daily": 3.76,
+          "requests_daily": 25.69,
+          "tokens_7d": 36.79,
+          "cost_7d": 4.57,
+          "requests_7d": 24.08
+        },
+        {
+          "date": "2026-06-12",
+          "tokens_daily": 36.2,
+          "cost_daily": 3.98,
+          "requests_daily": 27.18,
+          "tokens_7d": 37.32,
+          "cost_7d": 4.53,
+          "requests_7d": 24.54
+        },
+        {
+          "date": "2026-06-13",
+          "tokens_daily": 44.51,
+          "cost_daily": 5.42,
+          "requests_daily": 30.56,
+          "tokens_7d": 37.41,
+          "cost_7d": 4.36,
+          "requests_7d": 25.17
+        },
+        {
+          "date": "2026-06-14",
+          "tokens_daily": 41.53,
+          "cost_daily": 6.87,
+          "requests_daily": 28.24,
+          "tokens_7d": 37.29,
+          "cost_7d": 4.43,
+          "requests_7d": 25.88
+        },
+        {
+          "date": "2026-06-15",
+          "tokens_daily": 33.58,
+          "cost_daily": 3.57,
+          "requests_daily": 25.75,
+          "tokens_7d": 37.08,
+          "cost_7d": 4.35,
+          "requests_7d": 26.48
+        },
+        {
+          "date": "2026-06-16",
+          "tokens_daily": 38.18,
+          "cost_daily": 4.25,
+          "requests_daily": 25.87,
+          "tokens_7d": 37.35,
+          "cost_7d": 4.43,
+          "requests_7d": 26.79
+        },
+        {
+          "date": "2026-06-17",
+          "tokens_daily": 38.37,
+          "cost_daily": 5.12,
+          "requests_daily": 23.01,
+          "tokens_7d": 38.09,
+          "cost_7d": 4.71,
+          "requests_7d": 26.61
+        },
+        {
+          "date": "2026-06-18",
+          "tokens_daily": 29.77,
+          "cost_daily": 3.64,
+          "requests_daily": 21.38,
+          "tokens_7d": 37.45,
+          "cost_7d": 4.69,
+          "requests_7d": 26.0
+        },
+        {
+          "date": "2026-06-19",
+          "tokens_daily": 26.8,
+          "cost_daily": 3.59,
+          "requests_daily": 26.18,
+          "tokens_7d": 36.11,
+          "cost_7d": 4.64,
+          "requests_7d": 25.86
+        },
+        {
+          "date": "2026-06-20",
+          "tokens_daily": 29.96,
+          "cost_daily": 4.17,
+          "requests_daily": 26.09,
+          "tokens_7d": 34.03,
+          "cost_7d": 4.46,
+          "requests_7d": 25.22
+        },
+        {
+          "date": "2026-06-21",
+          "tokens_daily": 29.86,
+          "cost_daily": 6.27,
+          "requests_daily": 26.62,
+          "tokens_7d": 32.36,
+          "cost_7d": 4.37,
+          "requests_7d": 24.99
+        },
+        {
+          "date": "2026-06-22",
+          "tokens_daily": 30.81,
+          "cost_daily": 5.05,
+          "requests_daily": 25.55,
+          "tokens_7d": 31.97,
+          "cost_7d": 4.58,
+          "requests_7d": 24.96
+        },
+        {
+          "date": "2026-06-23",
+          "tokens_daily": 30.85,
+          "cost_daily": 4.21,
+          "requests_daily": 24.57,
+          "tokens_7d": 30.92,
+          "cost_7d": 4.58,
+          "requests_7d": 24.77
+        },
+        {
+          "date": "2026-06-24",
+          "tokens_daily": 28.42,
+          "cost_daily": 4.6,
+          "requests_daily": 20.52,
+          "tokens_7d": 29.5,
+          "cost_7d": 4.5,
+          "requests_7d": 24.42
+        },
+        {
+          "date": "2026-06-25",
+          "tokens_daily": 30.22,
+          "cost_daily": 5.78,
+          "requests_daily": 25.23,
+          "tokens_7d": 29.56,
+          "cost_7d": 4.81,
+          "requests_7d": 24.97
+        },
+        {
+          "date": "2026-06-26",
+          "tokens_daily": 33.04,
+          "cost_daily": 6.44,
+          "requests_daily": 27.12,
+          "tokens_7d": 30.45,
+          "cost_7d": 5.22,
+          "requests_7d": 25.1
+        },
+        {
+          "date": "2026-06-27",
+          "tokens_daily": 38.27,
+          "cost_daily": 6.48,
+          "requests_daily": 29.54,
+          "tokens_7d": 31.64,
+          "cost_7d": 5.55,
+          "requests_7d": 25.59
+        },
+        {
+          "date": "2026-06-28",
+          "tokens_daily": 35.64,
+          "cost_daily": 5.72,
+          "requests_daily": 31.44,
+          "tokens_7d": 32.46,
+          "cost_7d": 5.47,
+          "requests_7d": 26.28
+        },
+        {
+          "date": "2026-06-29",
+          "tokens_daily": 34.87,
+          "cost_daily": 5.8,
+          "requests_daily": 26.88,
+          "tokens_7d": 33.04,
+          "cost_7d": 5.58,
+          "requests_7d": 26.47
+        },
+        {
+          "date": "2026-06-30",
+          "tokens_daily": 34.1,
+          "cost_daily": 6.25,
+          "requests_daily": 25.54,
+          "tokens_7d": 33.51,
+          "cost_7d": 5.87,
+          "requests_7d": 26.61
+        },
+        {
+          "date": "2026-07-01",
+          "tokens_daily": 27.5,
+          "cost_daily": 4.38,
+          "requests_daily": 23.43,
+          "tokens_7d": 33.38,
+          "cost_7d": 5.84,
+          "requests_7d": 27.03
+        },
+        {
+          "date": "2026-07-02",
+          "tokens_daily": 31.32,
+          "cost_daily": 4.35,
+          "requests_daily": 25.91,
+          "tokens_7d": 33.53,
+          "cost_7d": 5.63,
+          "requests_7d": 27.12
+        },
+        {
+          "date": "2026-07-03",
+          "tokens_daily": 41.37,
+          "cost_daily": 8.55,
+          "requests_daily": 29.11,
+          "tokens_7d": 34.72,
+          "cost_7d": 5.93,
+          "requests_7d": 27.41
+        },
+        {
+          "date": "2026-07-04",
+          "tokens_daily": 43.02,
+          "cost_daily": 7.8,
+          "requests_daily": 30.45,
+          "tokens_7d": 35.4,
+          "cost_7d": 6.12,
+          "requests_7d": 27.54
+        },
+        {
+          "date": "2026-07-05",
+          "tokens_daily": 46.61,
+          "cost_daily": 9.58,
+          "requests_daily": 32.24,
+          "tokens_7d": 36.97,
+          "cost_7d": 6.67,
+          "requests_7d": 27.65
+        },
+        {
+          "date": "2026-07-06",
+          "tokens_daily": 44.64,
+          "cost_daily": 7.96,
+          "requests_daily": 30.58,
+          "tokens_7d": 38.37,
+          "cost_7d": 6.98,
+          "requests_7d": 28.18
+        },
+        {
+          "date": "2026-07-07",
+          "tokens_daily": 46.72,
+          "cost_daily": 10.36,
+          "requests_daily": 30.39,
+          "tokens_7d": 40.17,
+          "cost_7d": 7.57,
+          "requests_7d": 28.87
+        },
+        {
+          "date": "2026-07-08",
+          "tokens_daily": 44.17,
+          "cost_daily": 8.1,
+          "requests_daily": 30.34,
+          "tokens_7d": 42.55,
+          "cost_7d": 8.1,
+          "requests_7d": 29.86
+        },
+        {
+          "date": "2026-07-09",
+          "tokens_daily": 46.3,
+          "cost_daily": 9.28,
+          "requests_daily": 32.09,
+          "tokens_7d": 44.69,
+          "cost_7d": 8.81,
+          "requests_7d": 30.74
+        },
+        {
+          "date": "2026-07-10",
+          "tokens_daily": 46.53,
+          "cost_daily": 10.29,
+          "requests_daily": 31.83,
+          "tokens_7d": 45.43,
+          "cost_7d": 9.05,
+          "requests_7d": 31.13
+        },
+        {
+          "date": "2026-07-11",
+          "tokens_daily": 50.71,
+          "cost_daily": 10.61,
+          "requests_daily": 32.64,
+          "tokens_7d": 46.53,
+          "cost_7d": 9.45,
+          "requests_7d": 31.44
+        },
+        {
+          "date": "2026-07-12",
+          "tokens_daily": 49.83,
+          "cost_daily": 9.43,
+          "requests_daily": 33.28,
+          "tokens_7d": 46.98,
+          "cost_7d": 9.43,
+          "requests_7d": 31.59
+        },
+        {
+          "date": "2026-07-13",
+          "tokens_daily": 46.4,
+          "cost_daily": 8.55,
+          "requests_daily": 31.74,
+          "tokens_7d": 47.24,
+          "cost_7d": 9.52,
+          "requests_7d": 31.76
+        },
+        {
+          "date": "2026-07-14",
+          "tokens_daily": 49.02,
+          "cost_daily": 11.13,
+          "requests_daily": 31.07,
+          "tokens_7d": 47.56,
+          "cost_7d": 9.63,
+          "requests_7d": 31.86
+        },
+        {
+          "date": "2026-07-15",
+          "tokens_daily": 45.71,
+          "cost_daily": 9.74,
+          "requests_daily": 28.59,
+          "tokens_7d": 47.78,
+          "cost_7d": 9.86,
+          "requests_7d": 31.6
+        },
+        {
+          "date": "2026-07-16",
+          "tokens_daily": 44.45,
+          "cost_daily": 11.21,
+          "requests_daily": 22.95,
+          "tokens_7d": 47.52,
+          "cost_7d": 10.14,
+          "requests_7d": 30.3
+        },
+        {
+          "date": "2026-07-17",
+          "tokens_daily": 42.61,
+          "cost_daily": 8.42,
+          "requests_daily": 21.36,
+          "tokens_7d": 46.96,
+          "cost_7d": 9.87,
+          "requests_7d": 28.8
+        },
+        {
+          "date": "2026-07-18",
+          "tokens_daily": 46.29,
+          "cost_daily": 10.18,
+          "requests_daily": 22.11,
+          "tokens_7d": 46.33,
+          "cost_7d": 9.81,
+          "requests_7d": 27.3
+        },
+        {
+          "date": "2026-07-19",
+          "tokens_daily": 49.6,
+          "cost_daily": 12.41,
+          "requests_daily": 23.96,
+          "tokens_7d": 46.3,
+          "cost_7d": 10.24,
+          "requests_7d": 25.97
+        },
+        {
+          "date": "2026-07-20",
+          "tokens_daily": 49.07,
+          "cost_daily": 10.55,
+          "requests_daily": 25.45,
+          "tokens_7d": 46.68,
+          "cost_7d": 10.52,
+          "requests_7d": 25.07
+        },
+        {
+          "date": "2026-07-21",
+          "tokens_daily": 51.02,
+          "cost_daily": 12.84,
+          "requests_daily": 25.07,
+          "tokens_7d": 46.96,
+          "cost_7d": 10.77,
+          "requests_7d": 24.21
+        },
+        {
+          "date": "2026-07-22",
+          "tokens_daily": 40.57,
+          "cost_daily": 8.94,
+          "requests_daily": 19.92,
+          "tokens_7d": 46.23,
+          "cost_7d": 10.65,
+          "requests_7d": 22.97
+        },
+        {
+          "date": "2026-07-23",
+          "tokens_daily": 42.18,
+          "cost_daily": 9.19,
+          "requests_daily": 21.84,
+          "tokens_7d": 45.9,
+          "cost_7d": 10.36,
+          "requests_7d": 22.81
+        },
+        {
+          "date": "2026-07-24",
+          "tokens_daily": 49.04,
+          "cost_daily": 8.89,
+          "requests_daily": 25.44,
+          "tokens_7d": 46.82,
+          "cost_7d": 10.43,
+          "requests_7d": 23.4
+        },
+        {
+          "date": "2026-07-25",
+          "tokens_daily": 49.28,
+          "cost_daily": 10.41,
+          "requests_daily": 26.39,
+          "tokens_7d": 47.25,
+          "cost_7d": 10.46,
+          "requests_7d": 24.01
+        },
+        {
+          "date": "2026-07-26",
+          "tokens_daily": 54.12,
+          "cost_daily": 14.69,
+          "requests_daily": 29.93,
+          "tokens_7d": 47.9,
+          "cost_7d": 10.79,
+          "requests_7d": 24.86
+        },
+        {
+          "date": "2026-07-27",
+          "tokens_daily": 48.33,
+          "cost_daily": 9.9,
+          "requests_daily": 28.27,
+          "tokens_7d": 47.79,
+          "cost_7d": 10.7,
+          "requests_7d": 25.27
+        },
+        {
+          "date": "2026-07-28",
+          "tokens_daily": 47.57,
+          "cost_daily": 8.89,
+          "requests_daily": 27.41,
+          "tokens_7d": 47.3,
+          "cost_7d": 10.13,
+          "requests_7d": 25.6
+        },
+        {
+          "date": "2026-07-29",
+          "tokens_daily": 45.39,
+          "cost_daily": 8.84,
+          "requests_daily": 24.01,
+          "tokens_7d": 47.99,
+          "cost_7d": 10.12,
+          "requests_7d": 26.19
+        },
+        {
+          "date": "2026-07-30",
+          "tokens_daily": 50.05,
+          "cost_daily": 12.66,
+          "requests_daily": 25.84,
+          "tokens_7d": 49.11,
+          "cost_7d": 10.61,
+          "requests_7d": 26.76
+        },
+        {
+          "date": "2026-07-31",
+          "tokens_daily": 45.8,
+          "cost_daily": 11.52,
+          "requests_daily": 22.72,
+          "tokens_7d": 48.65,
+          "cost_7d": 10.99,
+          "requests_7d": 26.37
+        },
+        {
+          "date": "2026-08-01",
+          "tokens_daily": 52.79,
+          "cost_daily": 13.87,
+          "requests_daily": 24.09,
+          "tokens_7d": 49.15,
+          "cost_7d": 11.48,
+          "requests_7d": 26.04
+        },
+        {
+          "date": "2026-08-02",
+          "tokens_daily": 53.5,
+          "cost_daily": 14.64,
+          "requests_daily": 21.75,
+          "tokens_7d": 49.06,
+          "cost_7d": 11.47,
+          "requests_7d": 24.87
+        },
+        {
+          "date": "2026-08-03",
+          "tokens_daily": 48.99,
+          "cost_daily": 12.04,
+          "requests_daily": 23.7,
+          "tokens_7d": 49.16,
+          "cost_7d": 11.78,
+          "requests_7d": 24.22
+        },
+        {
+          "date": "2026-08-04",
+          "tokens_daily": 47.99,
+          "cost_daily": 11.77,
+          "requests_daily": 20.44,
+          "tokens_7d": 49.22,
+          "cost_7d": 12.19,
+          "requests_7d": 23.22
+        },
+        {
+          "date": "2026-08-05",
+          "tokens_daily": 48.59,
+          "cost_daily": 11.94,
+          "requests_daily": 23.48,
+          "tokens_7d": 49.67,
+          "cost_7d": 12.63,
+          "requests_7d": 23.14
+        },
+        {
+          "date": "2026-08-06",
+          "tokens_daily": 54.07,
+          "cost_daily": 14.04,
+          "requests_daily": 23.33,
+          "tokens_7d": 50.25,
+          "cost_7d": 12.83,
+          "requests_7d": 22.79
+        },
+        {
+          "date": "2026-08-07",
+          "tokens_daily": 56.67,
+          "cost_daily": 17.63,
+          "requests_daily": 24.63,
+          "tokens_7d": 51.8,
+          "cost_7d": 13.7,
+          "requests_7d": 23.06
+        },
+        {
+          "date": "2026-08-08",
+          "tokens_daily": 61.43,
+          "cost_daily": 18.35,
+          "requests_daily": 26.47,
+          "tokens_7d": 53.03,
+          "cost_7d": 14.34,
+          "requests_7d": 23.4
+        },
+        {
+          "date": "2026-08-09",
+          "tokens_daily": 60.18,
+          "cost_daily": 20.87,
+          "requests_daily": 24.55,
+          "tokens_7d": 53.99,
+          "cost_7d": 15.23,
+          "requests_7d": 23.8
+        },
+        {
+          "date": "2026-08-10",
+          "tokens_daily": 54.01,
+          "cost_daily": 15.07,
+          "requests_daily": 23.65,
+          "tokens_7d": 54.71,
+          "cost_7d": 15.67,
+          "requests_7d": 23.79
+        },
+        {
+          "date": "2026-08-11",
+          "tokens_daily": 53.65,
+          "cost_daily": 15.54,
+          "requests_daily": 24.71,
+          "tokens_7d": 55.51,
+          "cost_7d": 16.2,
+          "requests_7d": 24.4
+        },
+        {
+          "date": "2026-08-12",
+          "tokens_daily": 50.55,
+          "cost_daily": 11.26,
+          "requests_daily": 24.03,
+          "tokens_7d": 55.79,
+          "cost_7d": 16.11,
+          "requests_7d": 24.48
+        },
+        {
+          "date": "2026-08-13",
+          "tokens_daily": 52.7,
+          "cost_daily": 12.15,
+          "requests_daily": 26.23,
+          "tokens_7d": 55.6,
+          "cost_7d": 15.84,
+          "requests_7d": 24.9
+        },
+        {
+          "date": "2026-08-14",
+          "tokens_daily": 52.33,
+          "cost_daily": 12.2,
+          "requests_daily": 25.85,
+          "tokens_7d": 54.98,
+          "cost_7d": 15.06,
+          "requests_7d": 25.07
+        },
+        {
+          "date": "2026-08-15",
+          "tokens_daily": 50.82,
+          "cost_daily": 12.9,
+          "requests_daily": 25.82,
+          "tokens_7d": 53.46,
+          "cost_7d": 14.28,
+          "requests_7d": 24.98
+        },
+        {
+          "date": "2026-08-16",
+          "tokens_daily": 55.78,
+          "cost_daily": 10.36,
+          "requests_daily": 24.39,
+          "tokens_7d": 52.83,
+          "cost_7d": 12.78,
+          "requests_7d": 24.95
+        },
+        {
+          "date": "2026-08-17",
+          "tokens_daily": 52.4,
+          "cost_daily": 13.27,
+          "requests_daily": 25.69,
+          "tokens_7d": 52.6,
+          "cost_7d": 12.52,
+          "requests_7d": 25.25
+        },
+        {
+          "date": "2026-08-18",
+          "tokens_daily": 51.76,
+          "cost_daily": 10.3,
+          "requests_daily": 25.71,
+          "tokens_7d": 52.33,
+          "cost_7d": 11.78,
+          "requests_7d": 25.39
+        },
+        {
+          "date": "2026-08-19",
+          "tokens_daily": 56.36,
+          "cost_daily": 15.54,
+          "requests_daily": 30.61,
+          "tokens_7d": 53.16,
+          "cost_7d": 12.39,
+          "requests_7d": 26.33
+        },
+        {
+          "date": "2026-08-20",
+          "tokens_daily": 56.56,
+          "cost_daily": 15.73,
+          "requests_daily": 31.29,
+          "tokens_7d": 53.71,
+          "cost_7d": 12.9,
+          "requests_7d": 27.05
+        },
+        {
+          "date": "2026-08-21",
+          "tokens_daily": 56.84,
+          "cost_daily": 17.03,
+          "requests_daily": 31.59,
+          "tokens_7d": 54.36,
+          "cost_7d": 13.59,
+          "requests_7d": 27.87
+        },
+        {
+          "date": "2026-08-22",
+          "tokens_daily": 61.62,
+          "cost_daily": 19.27,
+          "requests_daily": 46.59,
+          "tokens_7d": 55.9,
+          "cost_7d": 14.5,
+          "requests_7d": 30.84
+        },
+        {
+          "date": "2026-08-23",
+          "tokens_daily": 60.7,
+          "cost_daily": 12.13,
+          "requests_daily": 43.45,
+          "tokens_7d": 56.6,
+          "cost_7d": 14.75,
+          "requests_7d": 33.56
+        },
+        {
+          "date": "2026-08-24",
+          "tokens_daily": 50.13,
+          "cost_daily": 11.89,
+          "requests_daily": 28.6,
+          "tokens_7d": 56.28,
+          "cost_7d": 14.56,
+          "requests_7d": 33.98
+        },
+        {
+          "date": "2026-08-25",
+          "tokens_daily": 52.54,
+          "cost_daily": 14.82,
+          "requests_daily": 37.37,
+          "tokens_7d": 56.39,
+          "cost_7d": 15.2,
+          "requests_7d": 35.64
+        },
+        {
+          "date": "2026-08-26",
+          "tokens_daily": 57.55,
+          "cost_daily": 17.48,
+          "requests_daily": 38.03,
+          "tokens_7d": 56.56,
+          "cost_7d": 15.48,
+          "requests_7d": 36.7
+        },
+        {
+          "date": "2026-08-27",
+          "tokens_daily": 60.09,
+          "cost_daily": 11.77,
+          "requests_daily": 35.48,
+          "tokens_7d": 57.07,
+          "cost_7d": 14.91,
+          "requests_7d": 37.3
+        },
+        {
+          "date": "2026-08-28",
+          "tokens_daily": 62.58,
+          "cost_daily": 11.12,
+          "requests_daily": 37.0,
+          "tokens_7d": 57.89,
+          "cost_7d": 14.07,
+          "requests_7d": 38.07
+        },
+        {
+          "date": "2026-08-29",
+          "tokens_daily": 69.88,
+          "cost_daily": 13.8,
+          "requests_daily": 45.52,
+          "tokens_7d": 59.07,
+          "cost_7d": 13.28,
+          "requests_7d": 37.92
+        },
+        {
+          "date": "2026-08-30",
+          "tokens_daily": 71.3,
+          "cost_daily": 18.49,
+          "requests_daily": 43.29,
+          "tokens_7d": 60.58,
+          "cost_7d": 14.19,
+          "requests_7d": 37.9
+        },
+        {
+          "date": "2026-08-31",
+          "tokens_daily": 61.77,
+          "cost_daily": 11.58,
+          "requests_daily": 36.48,
+          "tokens_7d": 62.24,
+          "cost_7d": 14.15,
+          "requests_7d": 39.03
+        },
+        {
+          "date": "2026-09-01",
+          "tokens_daily": 61.3,
+          "cost_daily": 15.57,
+          "requests_daily": 38.28,
+          "tokens_7d": 63.49,
+          "cost_7d": 14.26,
+          "requests_7d": 39.16
+        },
+        {
+          "date": "2026-09-02",
+          "tokens_daily": 60.99,
+          "cost_daily": 19.11,
+          "requests_daily": 34.71,
+          "tokens_7d": 63.99,
+          "cost_7d": 14.49,
+          "requests_7d": 38.68
+        },
+        {
+          "date": "2026-09-03",
+          "tokens_daily": 60.94,
+          "cost_daily": 25.36,
+          "requests_daily": 34.7,
+          "tokens_7d": 64.11,
+          "cost_7d": 16.43,
+          "requests_7d": 38.57
+        },
+        {
+          "date": "2026-09-04",
+          "tokens_daily": 58.9,
+          "cost_daily": 19.64,
+          "requests_daily": 33.41,
+          "tokens_7d": 63.58,
+          "cost_7d": 17.65,
+          "requests_7d": 38.05
+        },
+        {
+          "date": "2026-09-05",
+          "tokens_daily": 67.3,
+          "cost_daily": 25.27,
+          "requests_daily": 39.15,
+          "tokens_7d": 63.21,
+          "cost_7d": 19.29,
+          "requests_7d": 37.14
+        },
+        {
+          "date": "2026-09-06",
+          "tokens_daily": 65.27,
+          "cost_daily": 13.84,
+          "requests_daily": 37.05,
+          "tokens_7d": 62.35,
+          "cost_7d": 18.62,
+          "requests_7d": 36.25
+        },
+        {
+          "date": "2026-09-07",
+          "tokens_daily": 61.76,
+          "cost_daily": 13.47,
+          "requests_daily": 35.48,
+          "tokens_7d": 62.35,
+          "cost_7d": 18.9,
+          "requests_7d": 36.11
+        },
+        {
+          "date": "2026-09-08",
+          "tokens_daily": 57.98,
+          "cost_daily": 13.0,
+          "requests_daily": 33.58,
+          "tokens_7d": 61.88,
+          "cost_7d": 18.53,
+          "requests_7d": 35.44
+        },
+        {
+          "date": "2026-09-09",
+          "tokens_daily": 56.02,
+          "cost_daily": 12.14,
+          "requests_daily": 30.42,
+          "tokens_7d": 61.17,
+          "cost_7d": 17.53,
+          "requests_7d": 34.83
+        },
+        {
+          "date": "2026-09-10",
+          "tokens_daily": 66.35,
+          "cost_daily": 12.02,
+          "requests_daily": 35.39,
+          "tokens_7d": 61.94,
+          "cost_7d": 15.63,
+          "requests_7d": 34.93
+        },
+        {
+          "date": "2026-09-11",
+          "tokens_daily": 73.35,
+          "cost_daily": 19.94,
+          "requests_daily": 41.35,
+          "tokens_7d": 64.0,
+          "cost_7d": 15.67,
+          "requests_7d": 36.06
+        },
+        {
+          "date": "2026-09-12",
+          "tokens_daily": 78.0,
+          "cost_daily": 21.41,
+          "requests_daily": 43.59,
+          "tokens_7d": 65.53,
+          "cost_7d": 15.12,
+          "requests_7d": 36.69
+        },
+        {
+          "date": "2026-09-13",
+          "tokens_daily": 79.51,
+          "cost_daily": 17.29,
+          "requests_daily": 42.28,
+          "tokens_7d": 67.57,
+          "cost_7d": 15.61,
+          "requests_7d": 37.44
+        },
+        {
+          "date": "2026-09-14",
+          "tokens_daily": 72.62,
+          "cost_daily": 15.73,
+          "requests_daily": 38.46,
+          "tokens_7d": 69.12,
+          "cost_7d": 15.93,
+          "requests_7d": 37.87
+        },
+        {
+          "date": "2026-09-15",
+          "tokens_daily": 74.8,
+          "cost_daily": 25.77,
+          "requests_daily": 42.79,
+          "tokens_7d": 71.52,
+          "cost_7d": 17.76,
+          "requests_7d": 39.18
+        },
+        {
+          "date": "2026-09-16",
+          "tokens_daily": 74.86,
+          "cost_daily": 16.29,
+          "requests_daily": 38.25,
+          "tokens_7d": 74.21,
+          "cost_7d": 18.35,
+          "requests_7d": 40.3
+        },
+        {
+          "date": "2026-09-17",
+          "tokens_daily": 76.3,
+          "cost_daily": 19.26,
+          "requests_daily": 38.9,
+          "tokens_7d": 75.63,
+          "cost_7d": 19.38,
+          "requests_7d": 40.8
+        },
+        {
+          "date": "2026-09-18",
+          "tokens_daily": 78.37,
+          "cost_daily": 24.74,
+          "requests_daily": 39.44,
+          "tokens_7d": 76.35,
+          "cost_7d": 20.07,
+          "requests_7d": 40.53
+        },
+        {
+          "date": "2026-09-19",
+          "tokens_daily": 80.05,
+          "cost_daily": 24.21,
+          "requests_daily": 33.38,
+          "tokens_7d": 76.64,
+          "cost_7d": 20.47,
+          "requests_7d": 39.07
+        },
+        {
+          "date": "2026-09-20",
+          "tokens_daily": 80.61,
+          "cost_daily": 23.05,
+          "requests_daily": 32.11,
+          "tokens_7d": 76.8,
+          "cost_7d": 21.29,
+          "requests_7d": 37.62
+        },
+        {
+          "date": "2026-09-21",
+          "tokens_daily": 76.43,
+          "cost_daily": 25.62,
+          "requests_daily": 35.17,
+          "tokens_7d": 77.34,
+          "cost_7d": 22.71,
+          "requests_7d": 37.15
+        },
+        {
+          "date": "2026-09-22",
+          "tokens_daily": 77.1,
+          "cost_daily": 32.6,
+          "requests_daily": 37.5,
+          "tokens_7d": 77.67,
+          "cost_7d": 23.68,
+          "requests_7d": 36.39
+        },
+        {
+          "date": "2026-09-23",
+          "tokens_daily": 75.39,
+          "cost_daily": 28.52,
+          "requests_daily": 32.36,
+          "tokens_7d": 77.75,
+          "cost_7d": 25.43,
+          "requests_7d": 35.55
+        },
+        {
+          "date": "2026-09-24",
+          "tokens_daily": 73.09,
+          "cost_daily": 25.34,
+          "requests_daily": 29.74,
+          "tokens_7d": 77.29,
+          "cost_7d": 26.3,
+          "requests_7d": 34.24
+        },
+        {
+          "date": "2026-09-25",
+          "tokens_daily": 70.05,
+          "cost_daily": 23.71,
+          "requests_daily": 28.61,
+          "tokens_7d": 76.1,
+          "cost_7d": 26.15,
+          "requests_7d": 32.7
+        },
+        {
+          "date": "2026-09-26",
+          "tokens_daily": 77.74,
+          "cost_daily": 26.56,
+          "requests_daily": 34.58,
+          "tokens_7d": 75.77,
+          "cost_7d": 26.48,
+          "requests_7d": 32.87
+        },
+        {
+          "date": "2026-09-27",
+          "tokens_daily": 75.49,
+          "cost_daily": 30.16,
+          "requests_daily": 33.05,
+          "tokens_7d": 75.04,
+          "cost_7d": 27.5,
+          "requests_7d": 33.0
+        },
+        {
+          "date": "2026-09-28",
+          "tokens_daily": 56.72,
+          "cost_daily": 21.94,
+          "requests_daily": 25.15,
+          "tokens_7d": 72.23,
+          "cost_7d": 26.98,
+          "requests_7d": 31.57
+        },
+        {
+          "date": "2026-09-29",
+          "tokens_daily": 58.75,
+          "cost_daily": 28.42,
+          "requests_daily": 24.78,
+          "tokens_7d": 69.61,
+          "cost_7d": 26.38,
+          "requests_7d": 29.75
+        },
+        {
+          "date": "2026-09-30",
+          "tokens_daily": 61.25,
+          "cost_daily": 30.27,
+          "requests_daily": 24.91,
+          "tokens_7d": 67.59,
+          "cost_7d": 26.63,
+          "requests_7d": 28.69
+        },
+        {
+          "date": "2026-10-01",
+          "tokens_daily": 55.84,
+          "cost_daily": 17.14,
+          "requests_daily": 22.38,
+          "tokens_7d": 65.12,
+          "cost_7d": 25.46,
+          "requests_7d": 27.64
+        },
+        {
+          "date": "2026-10-02",
+          "tokens_daily": 46.17,
+          "cost_daily": 16.16,
+          "requests_daily": 20.95,
+          "tokens_7d": 61.71,
+          "cost_7d": 24.38,
+          "requests_7d": 26.54
+        },
+        {
+          "date": "2026-10-03",
+          "tokens_daily": 57.51,
+          "cost_daily": 23.21,
+          "requests_daily": 24.31,
+          "tokens_7d": 58.82,
+          "cost_7d": 23.9,
+          "requests_7d": 25.08
+        },
+        {
+          "date": "2026-10-04",
+          "tokens_daily": 62.7,
+          "cost_daily": 26.89,
+          "requests_daily": 26.23,
+          "tokens_7d": 56.99,
+          "cost_7d": 23.43,
+          "requests_7d": 24.1
+        },
+        {
+          "date": "2026-10-05",
+          "tokens_daily": 51.82,
+          "cost_daily": 19.04,
+          "requests_daily": 23.52,
+          "tokens_7d": 56.29,
+          "cost_7d": 23.02,
+          "requests_7d": 23.87
+        },
+        {
+          "date": "2026-10-06",
+          "tokens_daily": 50.43,
+          "cost_daily": 21.66,
+          "requests_daily": 23.38,
+          "tokens_7d": 55.1,
+          "cost_7d": 22.05,
+          "requests_7d": 23.67
+        },
+        {
+          "date": "2026-10-07",
+          "tokens_daily": 51.45,
+          "cost_daily": 21.4,
+          "requests_daily": 21.58,
+          "tokens_7d": 53.7,
+          "cost_7d": 20.78,
+          "requests_7d": 23.19
+        },
+        {
+          "date": "2026-10-08",
+          "tokens_daily": 53.03,
+          "cost_daily": 22.17,
+          "requests_daily": 22.8,
+          "tokens_7d": 53.3,
+          "cost_7d": 21.5,
+          "requests_7d": 23.25
+        },
+        {
+          "date": "2026-10-09",
+          "tokens_daily": 55.17,
+          "cost_daily": 24.22,
+          "requests_daily": 24.46,
+          "tokens_7d": 54.59,
+          "cost_7d": 22.65,
+          "requests_7d": 23.76
+        },
+        {
+          "date": "2026-10-10",
+          "tokens_daily": 61.27,
+          "cost_daily": 29.97,
+          "requests_daily": 25.44,
+          "tokens_7d": 55.12,
+          "cost_7d": 23.62,
+          "requests_7d": 23.92
+        },
+        {
+          "date": "2026-10-11",
+          "tokens_daily": 63.4,
+          "cost_daily": 32.32,
+          "requests_daily": 27.64,
+          "tokens_7d": 55.22,
+          "cost_7d": 24.4,
+          "requests_7d": 24.12
+        },
+        {
+          "date": "2026-10-12",
+          "tokens_daily": 57.1,
+          "cost_daily": 27.18,
+          "requests_daily": 28.32,
+          "tokens_7d": 55.98,
+          "cost_7d": 25.56,
+          "requests_7d": 24.8
+        },
+        {
+          "date": "2026-10-13",
+          "tokens_daily": 56.25,
+          "cost_daily": 35.32,
+          "requests_daily": 26.01,
+          "tokens_7d": 56.81,
+          "cost_7d": 27.51,
+          "requests_7d": 25.18
+        },
+        {
+          "date": "2026-10-14",
+          "tokens_daily": 52.19,
+          "cost_daily": 31.67,
+          "requests_daily": 25.1,
+          "tokens_7d": 56.91,
+          "cost_7d": 28.98,
+          "requests_7d": 25.68
+        },
+        {
+          "date": "2026-10-15",
+          "tokens_daily": 49.28,
+          "cost_daily": 33.72,
+          "requests_daily": 23.6,
+          "tokens_7d": 56.38,
+          "cost_7d": 30.63,
+          "requests_7d": 25.8
+        },
+        {
+          "date": "2026-10-16",
+          "tokens_daily": 55.01,
+          "cost_daily": 33.04,
+          "requests_daily": 25.39,
+          "tokens_7d": 56.36,
+          "cost_7d": 31.89,
+          "requests_7d": 25.93
+        },
+        {
+          "date": "2026-10-17",
+          "tokens_daily": 60.77,
+          "cost_daily": 36.08,
+          "requests_daily": 27.47,
+          "tokens_7d": 56.29,
+          "cost_7d": 32.76,
+          "requests_7d": 26.22
+        }
+      ]
+    },
+    "vercel_open_weight_preference": {
+      "id": "vercel_open_weight_preference",
+      "title": "Vercel team preference: open-weight as primary model",
+      "unit": "percent",
+      "quality": "V",
+      "source_url": "https://vercel.com/ai-gateway/leaderboards/models",
+      "retrieved": "2026-11-01",
+      "last_day": "2026-10-29",
+      "notes": "Share of teams whose primary model is open-weight. Different measure from the traffic split; not spliced. Last published day 29 Oct; no newer day as of 8 Nov. Same-day readings excluded as incomplete.",
+      "points": [
+        {
+          "date": "2026-04-23",
+          "share_pct": 10.68,
+          "share_7d": 10.68
+        },
+        {
+          "date": "2026-04-24",
+          "share_pct": 17.01,
+          "share_7d": 13.85
+        },
+        {
+          "date": "2026-04-25",
+          "share_pct": 20.77,
+          "share_7d": 16.15
+        },
+        {
+          "date": "2026-04-26",
+          "share_pct": 19.88,
+          "share_7d": 17.09
+        },
+        {
+          "date": "2026-04-27",
+          "share_pct": 23.07,
+          "share_7d": 18.28
+        },
+        {
+          "date": "2026-04-28",
+          "share_pct": 23.49,
+          "share_7d": 19.15
+        },
+        {
+          "date": "2026-04-29",
+          "share_pct": 20.88,
+          "share_7d": 19.4
+        },
+        {
+          "date": "2026-04-30",
+          "share_pct": 23.98,
+          "share_7d": 21.3
+        },
+        {
+          "date": "2026-05-01",
+          "share_pct": 26.63,
+          "share_7d": 22.67
+        },
+        {
+          "date": "2026-05-02",
+          "share_pct": 32.29,
+          "share_7d": 24.32
+        },
+        {
+          "date": "2026-05-03",
+          "share_pct": 23.77,
+          "share_7d": 24.87
+        },
+        {
+          "date": "2026-05-04",
+          "share_pct": 18.61,
+          "share_7d": 24.24
+        },
+        {
+          "date": "2026-05-05",
+          "share_pct": 18.18,
+          "share_7d": 23.48
+        },
+        {
+          "date": "2026-05-06",
+          "share_pct": 13.71,
+          "share_7d": 22.45
+        },
+        {
+          "date": "2026-05-07",
+          "share_pct": 14.54,
+          "share_7d": 21.1
+        },
+        {
+          "date": "2026-05-08",
+          "share_pct": 13.94,
+          "share_7d": 19.29
+        },
+        {
+          "date": "2026-05-09",
+          "share_pct": 15.45,
+          "share_7d": 16.89
+        },
+        {
+          "date": "2026-05-10",
+          "share_pct": 14.26,
+          "share_7d": 15.53
+        },
+        {
+          "date": "2026-05-11",
+          "share_pct": 11.97,
+          "share_7d": 14.58
+        },
+        {
+          "date": "2026-05-12",
+          "share_pct": 12.04,
+          "share_7d": 13.7
+        },
+        {
+          "date": "2026-05-13",
+          "share_pct": 11.07,
+          "share_7d": 13.32
+        },
+        {
+          "date": "2026-05-14",
+          "share_pct": 14.99,
+          "share_7d": 13.39
+        },
+        {
+          "date": "2026-05-15",
+          "share_pct": 13.81,
+          "share_7d": 13.37
+        },
+        {
+          "date": "2026-05-16",
+          "share_pct": 13.07,
+          "share_7d": 13.03
+        },
+        {
+          "date": "2026-05-17",
+          "share_pct": 12.02,
+          "share_7d": 12.71
+        },
+        {
+          "date": "2026-05-18",
+          "share_pct": 13.23,
+          "share_7d": 12.89
+        },
+        {
+          "date": "2026-05-19",
+          "share_pct": 14.2,
+          "share_7d": 13.2
+        },
+        {
+          "date": "2026-05-20",
+          "share_pct": 12.51,
+          "share_7d": 13.4
+        },
+        {
+          "date": "2026-05-21",
+          "share_pct": 11.36,
+          "share_7d": 12.89
+        },
+        {
+          "date": "2026-05-22",
+          "share_pct": 13.41,
+          "share_7d": 12.83
+        },
+        {
+          "date": "2026-05-23",
+          "share_pct": 15.33,
+          "share_7d": 13.15
+        },
+        {
+          "date": "2026-05-24",
+          "share_pct": 17.69,
+          "share_7d": 13.96
+        },
+        {
+          "date": "2026-05-25",
+          "share_pct": 13.56,
+          "share_7d": 14.01
+        },
+        {
+          "date": "2026-05-26",
+          "share_pct": 12.55,
+          "share_7d": 13.77
+        },
+        {
+          "date": "2026-05-27",
+          "share_pct": 12.32,
+          "share_7d": 13.75
+        },
+        {
+          "date": "2026-05-28",
+          "share_pct": 10.47,
+          "share_7d": 13.62
+        },
+        {
+          "date": "2026-05-29",
+          "share_pct": 12.23,
+          "share_7d": 13.45
+        },
+        {
+          "date": "2026-05-30",
+          "share_pct": 14.85,
+          "share_7d": 13.38
+        },
+        {
+          "date": "2026-05-31",
+          "share_pct": 14.74,
+          "share_7d": 12.96
+        },
+        {
+          "date": "2026-06-01",
+          "share_pct": 14.69,
+          "share_7d": 13.12
+        },
+        {
+          "date": "2026-06-02",
+          "share_pct": 18.09,
+          "share_7d": 13.91
+        },
+        {
+          "date": "2026-06-03",
+          "share_pct": 18.47,
+          "share_7d": 14.79
+        },
+        {
+          "date": "2026-06-04",
+          "share_pct": 16.88,
+          "share_7d": 15.71
+        },
+        {
+          "date": "2026-06-05",
+          "share_pct": 16.96,
+          "share_7d": 16.38
+        },
+        {
+          "date": "2026-06-06",
+          "share_pct": 20.85,
+          "share_7d": 17.24
+        },
+        {
+          "date": "2026-06-07",
+          "share_pct": 18.1,
+          "share_7d": 17.72
+        },
+        {
+          "date": "2026-06-08",
+          "share_pct": 16.07,
+          "share_7d": 17.92
+        },
+        {
+          "date": "2026-06-09",
+          "share_pct": 16.46,
+          "share_7d": 17.68
+        },
+        {
+          "date": "2026-06-10",
+          "share_pct": 16.87,
+          "share_7d": 17.46
+        },
+        {
+          "date": "2026-06-11",
+          "share_pct": 16.42,
+          "share_7d": 17.39
+        },
+        {
+          "date": "2026-06-12",
+          "share_pct": 19.15,
+          "share_7d": 17.7
+        },
+        {
+          "date": "2026-06-13",
+          "share_pct": 20.24,
+          "share_7d": 17.62
+        },
+        {
+          "date": "2026-06-14",
+          "share_pct": 19.23,
+          "share_7d": 17.78
+        },
+        {
+          "date": "2026-06-15",
+          "share_pct": 17.29,
+          "share_7d": 17.95
+        },
+        {
+          "date": "2026-06-16",
+          "share_pct": 17.15,
+          "share_7d": 18.05
+        },
+        {
+          "date": "2026-06-17",
+          "share_pct": 23.7,
+          "share_7d": 19.03
+        },
+        {
+          "date": "2026-06-18",
+          "share_pct": 21.82,
+          "share_7d": 19.8
+        },
+        {
+          "date": "2026-06-19",
+          "share_pct": 22.54,
+          "share_7d": 20.28
+        },
+        {
+          "date": "2026-06-20",
+          "share_pct": 24.67,
+          "share_7d": 20.91
+        },
+        {
+          "date": "2026-06-21",
+          "share_pct": 34.64,
+          "share_7d": 23.12
+        },
+        {
+          "date": "2026-06-22",
+          "share_pct": 30.98,
+          "share_7d": 25.07
+        },
+        {
+          "date": "2026-06-23",
+          "share_pct": 34.94,
+          "share_7d": 27.61
+        },
+        {
+          "date": "2026-06-24",
+          "share_pct": 36.93,
+          "share_7d": 29.5
+        },
+        {
+          "date": "2026-06-25",
+          "share_pct": 43.23,
+          "share_7d": 32.56
+        },
+        {
+          "date": "2026-06-26",
+          "share_pct": 44.87,
+          "share_7d": 35.75
+        },
+        {
+          "date": "2026-06-27",
+          "share_pct": 55.21,
+          "share_7d": 40.11
+        },
+        {
+          "date": "2026-06-28",
+          "share_pct": 59.84,
+          "share_7d": 43.71
+        },
+        {
+          "date": "2026-06-29",
+          "share_pct": 51.58,
+          "share_7d": 46.66
+        },
+        {
+          "date": "2026-06-30",
+          "share_pct": 56.29,
+          "share_7d": 49.71
+        },
+        {
+          "date": "2026-07-01",
+          "share_pct": 55.87,
+          "share_7d": 52.41
+        },
+        {
+          "date": "2026-07-02",
+          "share_pct": 44.69,
+          "share_7d": 52.62
+        },
+        {
+          "date": "2026-07-03",
+          "share_pct": 45.58,
+          "share_7d": 52.72
+        },
+        {
+          "date": "2026-07-04",
+          "share_pct": 64.01,
+          "share_7d": 53.98
+        },
+        {
+          "date": "2026-07-05",
+          "share_pct": 64.71,
+          "share_7d": 54.68
+        },
+        {
+          "date": "2026-07-06",
+          "share_pct": 47.84,
+          "share_7d": 54.14
+        },
+        {
+          "date": "2026-07-07",
+          "share_pct": 49.43,
+          "share_7d": 53.16
+        },
+        {
+          "date": "2026-07-08",
+          "share_pct": 48.97,
+          "share_7d": 52.18
+        },
+        {
+          "date": "2026-07-09",
+          "share_pct": 50.29,
+          "share_7d": 52.98
+        },
+        {
+          "date": "2026-07-10",
+          "share_pct": 50.58,
+          "share_7d": 53.69
+        },
+        {
+          "date": "2026-07-11",
+          "share_pct": 50.37,
+          "share_7d": 51.74
+        },
+        {
+          "date": "2026-07-12",
+          "share_pct": 50.62,
+          "share_7d": 49.73
+        },
+        {
+          "date": "2026-07-13",
+          "share_pct": 44.33,
+          "share_7d": 49.23
+        },
+        {
+          "date": "2026-07-14",
+          "share_pct": 48.51,
+          "share_7d": 49.1
+        },
+        {
+          "date": "2026-07-15",
+          "share_pct": 57.39,
+          "share_7d": 50.3
+        },
+        {
+          "date": "2026-07-16",
+          "share_pct": 57.91,
+          "share_7d": 51.39
+        },
+        {
+          "date": "2026-07-17",
+          "share_pct": 58.04,
+          "share_7d": 52.45
+        },
+        {
+          "date": "2026-07-18",
+          "share_pct": 59.0,
+          "share_7d": 53.69
+        },
+        {
+          "date": "2026-07-19",
+          "share_pct": 66.23,
+          "share_7d": 55.92
+        },
+        {
+          "date": "2026-07-20",
+          "share_pct": 58.0,
+          "share_7d": 57.87
+        },
+        {
+          "date": "2026-07-21",
+          "share_pct": 60.72,
+          "share_7d": 59.61
+        },
+        {
+          "date": "2026-07-22",
+          "share_pct": 63.69,
+          "share_7d": 60.51
+        },
+        {
+          "date": "2026-07-23",
+          "share_pct": 62.46,
+          "share_7d": 61.16
+        },
+        {
+          "date": "2026-07-24",
+          "share_pct": 26.59,
+          "share_7d": 56.67
+        },
+        {
+          "date": "2026-07-25",
+          "share_pct": 30.61,
+          "share_7d": 52.61
+        },
+        {
+          "date": "2026-07-26",
+          "share_pct": 29.59,
+          "share_7d": 47.38
+        },
+        {
+          "date": "2026-07-27",
+          "share_pct": 24.65,
+          "share_7d": 42.62
+        },
+        {
+          "date": "2026-07-28",
+          "share_pct": 27.79,
+          "share_7d": 37.91
+        },
+        {
+          "date": "2026-07-29",
+          "share_pct": 26.71,
+          "share_7d": 32.63
+        },
+        {
+          "date": "2026-07-30",
+          "share_pct": 25.73,
+          "share_7d": 27.38
+        },
+        {
+          "date": "2026-07-31",
+          "share_pct": 13.74,
+          "share_7d": 25.55
+        },
+        {
+          "date": "2026-08-01",
+          "share_pct": 17.06,
+          "share_7d": 23.61
+        },
+        {
+          "date": "2026-08-02",
+          "share_pct": 18.03,
+          "share_7d": 21.96
+        },
+        {
+          "date": "2026-08-03",
+          "share_pct": 14.77,
+          "share_7d": 20.55
+        },
+        {
+          "date": "2026-08-04",
+          "share_pct": 13.89,
+          "share_7d": 18.56
+        },
+        {
+          "date": "2026-08-05",
+          "share_pct": 12.81,
+          "share_7d": 16.58
+        },
+        {
+          "date": "2026-08-06",
+          "share_pct": 14.36,
+          "share_7d": 14.95
+        },
+        {
+          "date": "2026-08-07",
+          "share_pct": 12.94,
+          "share_7d": 14.84
+        },
+        {
+          "date": "2026-08-08",
+          "share_pct": 11.47,
+          "share_7d": 14.04
+        },
+        {
+          "date": "2026-08-09",
+          "share_pct": 16.64,
+          "share_7d": 13.84
+        },
+        {
+          "date": "2026-08-10",
+          "share_pct": 17.97,
+          "share_7d": 14.3
+        },
+        {
+          "date": "2026-08-11",
+          "share_pct": 14.72,
+          "share_7d": 14.42
+        },
+        {
+          "date": "2026-08-12",
+          "share_pct": 18.48,
+          "share_7d": 15.23
+        },
+        {
+          "date": "2026-08-13",
+          "share_pct": 18.12,
+          "share_7d": 15.76
+        },
+        {
+          "date": "2026-08-14",
+          "share_pct": 21.74,
+          "share_7d": 17.02
+        },
+        {
+          "date": "2026-08-15",
+          "share_pct": 32.9,
+          "share_7d": 20.08
+        },
+        {
+          "date": "2026-08-16",
+          "share_pct": 32.1,
+          "share_7d": 22.29
+        },
+        {
+          "date": "2026-08-17",
+          "share_pct": 25.0,
+          "share_7d": 23.29
+        },
+        {
+          "date": "2026-08-18",
+          "share_pct": 19.02,
+          "share_7d": 23.91
+        },
+        {
+          "date": "2026-08-19",
+          "share_pct": 27.57,
+          "share_7d": 25.21
+        },
+        {
+          "date": "2026-08-20",
+          "share_pct": 46.26,
+          "share_7d": 29.23
+        },
+        {
+          "date": "2026-08-21",
+          "share_pct": 48.06,
+          "share_7d": 32.99
+        },
+        {
+          "date": "2026-08-22",
+          "share_pct": 45.09,
+          "share_7d": 34.73
+        },
+        {
+          "date": "2026-08-23",
+          "share_pct": 42.7,
+          "share_7d": 36.24
+        },
+        {
+          "date": "2026-08-24",
+          "share_pct": 35.79,
+          "share_7d": 37.78
+        },
+        {
+          "date": "2026-08-25",
+          "share_pct": 35.66,
+          "share_7d": 40.16
+        },
+        {
+          "date": "2026-08-26",
+          "share_pct": 38.77,
+          "share_7d": 41.76
+        },
+        {
+          "date": "2026-08-27",
+          "share_pct": 40.39,
+          "share_7d": 40.92
+        },
+        {
+          "date": "2026-08-28",
+          "share_pct": 47.9,
+          "share_7d": 40.9
+        },
+        {
+          "date": "2026-08-29",
+          "share_pct": 44.16,
+          "share_7d": 40.77
+        },
+        {
+          "date": "2026-08-30",
+          "share_pct": 43.93,
+          "share_7d": 40.94
+        },
+        {
+          "date": "2026-08-31",
+          "share_pct": 41.15,
+          "share_7d": 41.71
+        },
+        {
+          "date": "2026-09-01",
+          "share_pct": 39.72,
+          "share_7d": 42.29
+        },
+        {
+          "date": "2026-09-02",
+          "share_pct": 43.14,
+          "share_7d": 42.91
+        },
+        {
+          "date": "2026-09-03",
+          "share_pct": 42.52,
+          "share_7d": 43.22
+        },
+        {
+          "date": "2026-09-04",
+          "share_pct": 45.67,
+          "share_7d": 42.9
+        },
+        {
+          "date": "2026-09-05",
+          "share_pct": 46.46,
+          "share_7d": 43.23
+        },
+        {
+          "date": "2026-09-06",
+          "share_pct": 48.61,
+          "share_7d": 43.9
+        },
+        {
+          "date": "2026-09-07",
+          "share_pct": 45.38,
+          "share_7d": 44.5
+        },
+        {
+          "date": "2026-09-08",
+          "share_pct": 40.25,
+          "share_7d": 44.58
+        },
+        {
+          "date": "2026-09-09",
+          "share_pct": 42.52,
+          "share_7d": 44.49
+        },
+        {
+          "date": "2026-09-10",
+          "share_pct": 41.13,
+          "share_7d": 44.29
+        },
+        {
+          "date": "2026-09-11",
+          "share_pct": 43.1,
+          "share_7d": 43.92
+        },
+        {
+          "date": "2026-09-12",
+          "share_pct": 35.49,
+          "share_7d": 42.35
+        },
+        {
+          "date": "2026-09-13",
+          "share_pct": 21.92,
+          "share_7d": 38.54
+        },
+        {
+          "date": "2026-09-14",
+          "share_pct": 16.17,
+          "share_7d": 34.37
+        },
+        {
+          "date": "2026-09-15",
+          "share_pct": 15.57,
+          "share_7d": 30.84
+        },
+        {
+          "date": "2026-09-16",
+          "share_pct": 15.83,
+          "share_7d": 27.03
+        },
+        {
+          "date": "2026-09-17",
+          "share_pct": 13.89,
+          "share_7d": 23.14
+        },
+        {
+          "date": "2026-09-18",
+          "share_pct": 13.33,
+          "share_7d": 18.89
+        },
+        {
+          "date": "2026-09-19",
+          "share_pct": 12.8,
+          "share_7d": 15.64
+        },
+        {
+          "date": "2026-09-20",
+          "share_pct": 11.94,
+          "share_7d": 14.22
+        },
+        {
+          "date": "2026-09-21",
+          "share_pct": 12.01,
+          "share_7d": 13.62
+        },
+        {
+          "date": "2026-09-22",
+          "share_pct": 12.04,
+          "share_7d": 13.12
+        },
+        {
+          "date": "2026-09-23",
+          "share_pct": 10.12,
+          "share_7d": 12.3
+        },
+        {
+          "date": "2026-09-24",
+          "share_pct": 10.57,
+          "share_7d": 11.83
+        },
+        {
+          "date": "2026-09-25",
+          "share_pct": 9.88,
+          "share_7d": 11.34
+        },
+        {
+          "date": "2026-09-26",
+          "share_pct": 10.16,
+          "share_7d": 10.96
+        },
+        {
+          "date": "2026-09-27",
+          "share_pct": 11.74,
+          "share_7d": 10.93
+        },
+        {
+          "date": "2026-09-28",
+          "share_pct": 11.64,
+          "share_7d": 10.88
+        },
+        {
+          "date": "2026-09-29",
+          "share_pct": 11.25,
+          "share_7d": 10.77
+        },
+        {
+          "date": "2026-09-30",
+          "share_pct": 11.85,
+          "share_7d": 11.01
+        },
+        {
+          "date": "2026-10-01",
+          "share_pct": 12.6,
+          "share_7d": 11.3
+        },
+        {
+          "date": "2026-10-02",
+          "share_pct": 12.82,
+          "share_7d": 11.72
+        },
+        {
+          "date": "2026-10-03",
+          "share_pct": 13.15,
+          "share_7d": 12.15
+        },
+        {
+          "date": "2026-10-04",
+          "share_pct": 13.19,
+          "share_7d": 12.36
+        },
+        {
+          "date": "2026-10-05",
+          "share_pct": 12.94,
+          "share_7d": 12.54
+        },
+        {
+          "date": "2026-10-06",
+          "share_pct": 12.53,
+          "share_7d": 12.73
+        },
+        {
+          "date": "2026-10-07",
+          "share_pct": 18.45,
+          "share_7d": 13.67
+        },
+        {
+          "date": "2026-10-08",
+          "share_pct": 12.05,
+          "share_7d": 13.59
+        },
+        {
+          "date": "2026-10-09",
+          "share_pct": 12.03,
+          "share_7d": 13.48
+        },
+        {
+          "date": "2026-10-10",
+          "share_pct": 12.57,
+          "share_7d": 13.39
+        },
+        {
+          "date": "2026-10-11",
+          "share_pct": 12.44,
+          "share_7d": 13.29
+        },
+        {
+          "date": "2026-10-12",
+          "share_pct": 11.63,
+          "share_7d": 13.1
+        },
+        {
+          "date": "2026-10-13",
+          "share_pct": 11.72,
+          "share_7d": 12.98
+        },
+        {
+          "date": "2026-10-14",
+          "share_pct": 11.59,
+          "share_7d": 12.0
+        },
+        {
+          "date": "2026-10-15",
+          "share_pct": 11.52,
+          "share_7d": 11.93
+        },
+        {
+          "date": "2026-10-16",
+          "share_pct": 11.39,
+          "share_7d": 11.84
+        },
+        {
+          "date": "2026-10-17",
+          "share_pct": 13.37,
+          "share_7d": 11.95
+        },
+        {
+          "date": "2026-10-18",
+          "share_pct": 14.03,
+          "share_7d": 12.18
+        },
+        {
+          "date": "2026-10-19",
+          "share_pct": 12.85,
+          "share_7d": 12.35
+        },
+        {
+          "date": "2026-10-20",
+          "share_pct": 13.65,
+          "share_7d": 12.63
+        },
+        {
+          "date": "2026-10-21",
+          "share_pct": 13.77,
+          "share_7d": 12.94
+        },
+        {
+          "date": "2026-10-22",
+          "share_pct": 13.83,
+          "share_7d": 13.27
+        },
+        {
+          "date": "2026-10-23",
+          "share_pct": 14.24,
+          "share_7d": 13.68
+        },
+        {
+          "date": "2026-10-24",
+          "share_pct": 13.72,
+          "share_7d": 13.73
+        },
+        {
+          "date": "2026-10-26",
+          "share_pct": 12.92,
+          "share_7d": 13.57
+        },
+        {
+          "date": "2026-10-27",
+          "share_pct": 12.83,
+          "share_7d": 13.57
+        },
+        {
+          "date": "2026-10-28",
+          "share_pct": 12.61,
+          "share_7d": 13.42
+        },
+        {
+          "date": "2026-10-29",
+          "share_pct": 12.65,
+          "share_7d": 13.26
+        }
+      ]
+    },
+    "ramp_adoption_monthly": {
+      "id": "ramp_adoption_monthly",
+      "title": "Ramp AI Index: share of US businesses paying for AI",
+      "unit": "percent",
+      "quality": "V",
+      "source_url": "https://ramp.com/data/ai-index",
+      "retrieved": "2026-10-18",
+      "notes": "Paid AI transactions of US businesses on Ramp; free or personal-account use is not captured. Latest month Sep 2026; 18 Oct vintage. No newer month as of 8 Nov. Vendor lines are OpenAI and Anthropic only.",
+      "points": [
+        {
+          "month": "2025-01",
+          "total_pct": 35.56,
+          "mom_change_pp": 1.06,
+          "openai_pct": 33.79,
+          "anthropic_pct": 10.63
+        },
+        {
+          "month": "2025-02",
+          "total_pct": 36.66,
+          "mom_change_pp": 1.1,
+          "openai_pct": 34.82,
+          "anthropic_pct": 11.03
+        },
+        {
+          "month": "2025-03",
+          "total_pct": 37.49,
+          "mom_change_pp": 0.83,
+          "openai_pct": 35.46,
+          "anthropic_pct": 11.95
+        },
+        {
+          "month": "2025-04",
+          "total_pct": 39.0,
+          "mom_change_pp": 1.51,
+          "openai_pct": 37.2,
+          "anthropic_pct": 11.86
+        },
+        {
+          "month": "2025-05",
+          "total_pct": 40.3,
+          "mom_change_pp": 1.3,
+          "openai_pct": 38.49,
+          "anthropic_pct": 12.39
+        },
+        {
+          "month": "2025-06",
+          "total_pct": 41.18,
+          "mom_change_pp": 0.89,
+          "openai_pct": 39.17,
+          "anthropic_pct": 13.61
+        },
+        {
+          "month": "2025-07",
+          "total_pct": 42.54,
+          "mom_change_pp": 1.36,
+          "openai_pct": 40.06,
+          "anthropic_pct": 14.93
+        },
+        {
+          "month": "2025-08",
+          "total_pct": 43.49,
+          "mom_change_pp": 0.95,
+          "openai_pct": 40.77,
+          "anthropic_pct": 15.66
+        },
+        {
+          "month": "2025-09",
+          "total_pct": 43.8,
+          "mom_change_pp": 0.31,
+          "openai_pct": 41.02,
+          "anthropic_pct": 16.02
+        },
+        {
+          "month": "2025-10",
+          "total_pct": 43.61,
+          "mom_change_pp": -0.19,
+          "openai_pct": 40.67,
+          "anthropic_pct": 16.65
+        },
+        {
+          "month": "2025-11",
+          "total_pct": 44.43,
+          "mom_change_pp": 0.82,
+          "openai_pct": 41.13,
+          "anthropic_pct": 17.25
+        },
+        {
+          "month": "2025-12",
+          "total_pct": 44.5,
+          "mom_change_pp": 0.07,
+          "openai_pct": 41.0,
+          "anthropic_pct": 17.84
+        },
+        {
+          "month": "2026-01",
+          "total_pct": 45.52,
+          "mom_change_pp": 1.02,
+          "openai_pct": 40.85,
+          "anthropic_pct": 21.16
+        },
+        {
+          "month": "2026-02",
+          "total_pct": 47.74,
+          "mom_change_pp": 2.22,
+          "openai_pct": 40.88,
+          "anthropic_pct": 26.98
+        },
+        {
+          "month": "2026-03",
+          "total_pct": 50.15,
+          "mom_change_pp": 2.41,
+          "openai_pct": 40.05,
+          "anthropic_pct": 33.73
+        },
+        {
+          "month": "2026-04",
+          "total_pct": 51.98,
+          "mom_change_pp": 1.83,
+          "openai_pct": 39.39,
+          "anthropic_pct": 38.19
+        },
+        {
+          "month": "2026-05",
+          "total_pct": 53.24,
+          "mom_change_pp": 1.26,
+          "openai_pct": 39.32,
+          "anthropic_pct": 40.7
+        },
+        {
+          "month": "2026-06",
+          "total_pct": 53.98,
+          "mom_change_pp": 0.73,
+          "openai_pct": 39.15,
+          "anthropic_pct": 42.08
+        },
+        {
+          "month": "2026-07",
+          "total_pct": 54.84,
+          "mom_change_pp": 0.86,
+          "openai_pct": 39.45,
+          "anthropic_pct": 43.21
+        },
+        {
+          "month": "2026-08",
+          "total_pct": 55.24,
+          "mom_change_pp": 0.4,
+          "openai_pct": 39.51,
+          "anthropic_pct": 43.53
+        },
+        {
+          "month": "2026-09",
+          "total_pct": 55.86,
+          "mom_change_pp": 0.62,
+          "openai_pct": 40.63,
+          "anthropic_pct": 43.77
+        }
+      ]
     }
   },
   "caveats": [
@@ -2205,7 +8707,8 @@
     "Vercel: open/closed traffic split stopped on 17 Oct; team-preference series stuck at 29 Oct (12.65%). The two measures are not comparable and are not spliced.",
     "Portkey: chart-array sums do not match the page headline cards (weekly card spend was −0.0% vs chart +4.4%). Use within-series changes only.",
     "npm includes CI installs; tokensperday.com is stale since 16 Jul 2026 and is not shown.",
-    "This edition's bottom line on financing/credit uses only the circular-financing feed and public filings on this page. Broker forecasts and terminal credit prints cited in the original pack are excluded from this public page (see excluded)."
+    "This edition's bottom line on financing/credit uses only the circular-financing feed and public filings on this page. Broker forecasts and terminal credit prints cited in the original pack are excluded from this public page (see excluded).",
+    "Charts in section 3 are Chart.js redraws of the 8 Nov 2026 pack from public OpenRouter, Ramp, Vercel and Portkey series already in this feed. Earlier edition images of the same public series are not shown separately."
   ],
   "excluded": [
     {
@@ -2227,6 +8730,88 @@
     {
       "item": "Internal working files",
       "reason": "Not published."
+    },
+    {
+      "item": "Earlier edition images of the same public token series",
+      "reason": "Not shown separately; the 8 Nov 2026 pack is redrawn instead."
     }
-  ]
+  ],
+  "bot_charts": {
+    "as_of": "2026-11-08T18:32:00+01:00",
+    "timezone": "Europe/Zurich",
+    "pack": "2026-11-08",
+    "intro": "Charts from the Token Demand Bot weekly pack of Sunday 8 Nov 2026, 18:32 Europe/Zurich. Redrawn in Chart.js from the same public OpenRouter, Ramp, Vercel and Portkey series already in this feed. Captions, source lines and V / (d) labels follow the pack. The Circular Financing Alert Bot did not produce a public-safe native chart in the saved files; official-flag figures are tabulated in section 2. Screenshots of third-party documents or sites, and charts built on credit-terminal or licensed prints, are not shown.",
+    "items": [
+      {
+        "id": "01",
+        "pack_file": "01_openrouter_weekly_tokens_growth.png",
+        "title": "OpenRouter: weekly token volume and growth",
+        "caption": "OpenRouter weekly tokens, trailing 12 complete weeks plus the partial week of 2 Nov (202.3T at the 8 Nov 17:42 snapshot; Sunday incomplete, not a final reading). The week of 26 Oct closed at 193.6T (+3.0% WoW after +14.6%, +16.7% over 4 weeks; derived), the highest complete week in the series. Orange = stealth/free models named in the weekly top-9 only; none were in the top-9 in the last two weeks.",
+        "source": "openrouter.ai/rankings (JSON /api/frontend/v1/rankings/model-rankings-chart; top-9 models + Others). Snapshot 8 Nov 2026, 17:42 Europe/Zurich.",
+        "quality": "V",
+        "derived": true,
+        "as_of": "2026-11-08"
+      },
+      {
+        "id": "02",
+        "pack_file": "02_openrouter_author_share_and_spend_mix.png",
+        "title": "OpenRouter: model-author mix, tokens vs spend",
+        "caption": "Weekly token share by model author (left) and trailing-7-day token share to 7 Nov against the last published spend share (right); the prior-window marker is the non-overlapping 7 days to 31 Oct. DeepSeek 39.1% of tokens (36.6%); Anthropic, OpenAI and Google together 18.8% (22.3%). Free/stealth 5.7% of 7-day tokens (derived). Spend has not been published since the 7 days to 10 Oct.",
+        "source": "openrouter.ai/rankings JSON (model-rankings-chart; rankings/models?view=week). Spend share only from own snapshots to 10 Oct; spend unpublished in the API since 14 Oct.",
+        "quality": "V",
+        "derived": true,
+        "as_of": "2026-11-08"
+      },
+      {
+        "id": "03",
+        "pack_file": "03_ramp_token_volume_vs_spend.png",
+        "title": "Ramp: corporate token volume vs spend",
+        "caption": "Ramp TSM sample, 18 Oct vintage (no newer chart data on the 8 Nov page): weekly token volume against spend, indexed (left), and daily rolling-7-day tokens vs spend (right). Week of 5 Oct: 72.5T tokens, $33.7M spend; since the week of 27 Jul volume +64.6%, spend +1.5% (derived). The Tokenomics table (week to 23 Oct vs 25 Sep: spend +8.9%, volume +37.1%; unchanged since 1 Nov) is a different cut and is not charted.",
+        "source": "ramp.com/data/ai-index (Token Spend Management sample: US businesses connecting provider billing, OpenAI + Anthropic; sample composition can change). 18 Oct 2026 vintage; no newer chart data as of 8 Nov. The weekly index on this page is linear, 27 Jul 2026 = 100 (same series as the pack, shorter window than the pack's January log-scale panel).",
+        "quality": "V",
+        "derived": true,
+        "as_of": "2026-11-08"
+      },
+      {
+        "id": "04",
+        "pack_file": "04_ramp_price_per_mtok_and_top_user_pepm.png",
+        "title": "Ramp: price per million tokens and heavy-user spend",
+        "caption": "Effective price per million tokens in the Ramp TSM sample ($0.464/M in the week of 5 Oct; derived spend/tokens) and monthly AI spend per employee by percentile (latest Sep 2026). 18 Oct vintage. Ramp's Tokenomics blended price ($0.56/M, week to 23 Oct) is a different measure and is not spliced in.",
+        "source": "ramp.com/data/ai-index. Price = TSM spend / tokens (sample; mix-sensitive). PEPM = card/invoice/ACH AI spend per employee per month. 18 Oct 2026 vintage.",
+        "quality": "V",
+        "derived": true,
+        "as_of": "2026-11-08"
+      },
+      {
+        "id": "05",
+        "pack_file": "05_crosscheck_vercel_open_weight_share.png",
+        "title": "Cross-check: Vercel AI Gateway, open-weight models",
+        "caption": "Panel A: Vercel AI Gateway open-weight share of tokens (56.3%, 7-day average) and spend (32.8%), frozen at 17 Oct when Vercel stopped publishing the split. Panel B: team-based measure (share of teams whose primary model is open-weight): 12.65% on 29 Oct; Vercel has published no newer day as of 8 Nov. Different measures; not spliced.",
+        "source": "vercel.com/ai-gateway/leaderboards/models. Panel A: Open vs Closed daily shares, frozen at 17 Oct. Panel B: team preference by primary-model weight class, last day 29 Oct. Shares only; the two measures are not spliced.",
+        "quality": "V",
+        "derived": true,
+        "as_of": "2026-11-08"
+      },
+      {
+        "id": "06",
+        "pack_file": "06_ramp_adoption_rate.png",
+        "title": "Ramp AI Index: business AI adoption",
+        "caption": "Share of US businesses on Ramp paying for AI, total and by vendor, with monthly momentum. Latest month Sep 2026; no newer month published as of 8 Nov.",
+        "source": "ramp.com/data/ai-index (paid AI transactions of US businesses on Ramp; free or personal-account use is not captured). Latest month Sep 2026; 18 Oct 2026 vintage.",
+        "quality": "V",
+        "derived": true,
+        "as_of": "2026-11-08"
+      },
+      {
+        "id": "07",
+        "pack_file": "07_portkey_gateway_tokens_vs_cost.png",
+        "title": "Portkey AI Gateway: token volume vs cost",
+        "caption": "Portkey AI Gateway weekly tokens and cost (sums of the top-model + Other chart arrays on portkey.ai/rankings/weekly; weeks start Sunday; derived). W/c 1 Nov 52.3T tokens (+15.3% WoW) and $25.4M cost (+4.4%). Since w/c 27 Sep tokens +81.4%, cost +18.5%, cost per million tokens $0.49 vs $0.74 (derived). Chart sums differ from the page headline cards.",
+        "source": "portkey.ai/rankings/weekly (embedded chart arrays: top models + Other per week, summed; derived). Snapshot in the 8 Nov 2026 pack. Chart sums differ from the page headline cards.",
+        "quality": "V",
+        "derived": true,
+        "as_of": "2026-11-08"
+      }
+    ]
+  }
 }
