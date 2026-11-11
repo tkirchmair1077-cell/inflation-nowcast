@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inflation Nowcasts – EXAMPLE DATA</title>
+<title>Inflation Nowcasts – US CPI · PCE · PPI (research, CPI status YELLOW)</title>
 <meta name="color-scheme" content="light dark">
 <style>
 :root{
@@ -182,7 +182,7 @@ footer{margin:10px 0 48px}
     </div>
     <div class="actions">
       <button class="btn-ghost" id="themeBtn" type="button" aria-label="Toggle dark mode">◐ <span id="themeLbl">Dark</span></button>
-      <button class="btn-primary" id="refreshBtn" type="button"><span class="spinner" aria-hidden="true"></span><span id="refreshLbl">Refresh Nowcasts</span></button>
+      <button class="btn-primary" id="refreshBtn" type="button" style="display:none" hidden aria-hidden="true"><span class="spinner" aria-hidden="true"></span><span id="refreshLbl">Refresh Nowcasts</span></button>
     </div>
   </div>
 </header>
@@ -199,7 +199,7 @@ footer{margin:10px 0 48px}
 
   <!-- 2. Charts -->
   <section id="charts">
-    <div class="sec-head"><h2>2 · Charts</h2><span class="hint">All series are placeholders</span></div>
+    <div class="sec-head"><h2>2 · Charts</h2><span class="hint">Real data where it exists · "no data" where it does not</span></div>
 
     <div class="card" style="margin-bottom:18px">
       <div class="panel-head">
@@ -214,7 +214,7 @@ footer{margin:10px 0 48px}
         <div class="chart-box"><canvas id="btChart" role="img" aria-label="Backtest line chart: official prints versus nowcast"></canvas></div>
         <div class="perf" id="perf"></div>
       </div>
-      <div class="cap-line">Solid line = official print (placeholder) · dashed line = our nowcast · consensus line hidden by default (click legend to show).</div>
+      <div class="cap-line">Solid line = first-release actual · dashed line = our nowcast (quasi-real-time, d) · consensus history: no data.</div>
     </div>
 
     <div class="sec-head" style="margin-top:26px"><h2 style="text-transform:none;letter-spacing:0;font-size:14px;color:var(--text)">Contribution to current headline nowcast (pp, m/m)</h2><span class="hint"><span class="sw r" style="margin-left:0"></span>adds to inflation <span class="sw g"></span>subtracts · top 8 by absolute contribution</span></div>
@@ -234,7 +234,7 @@ footer{margin:10px 0 48px}
       </div>
       <div class="card">
         <div class="panel-head">
-          <div><h3>Consensus comparison</h3><div class="sub">Our nowcast vs consensus, upcoming release (illustrative consensus)</div></div>
+          <div><h3>Consensus comparison</h3><div class="sub">Oct 2026 · consensus = Trading Economics substitute (U)</div></div>
           <div class="seg" data-state="consUnit"><button data-val="mm" class="active">m/m</button><button data-val="yy">y/y</button></div>
         </div>
         <div class="chart-box sm"><canvas id="consChartA" role="img" aria-label="Grouped bar chart nowcast versus consensus"></canvas></div>
@@ -244,7 +244,7 @@ footer{margin:10px 0 48px}
 
   <!-- 3. Explanations -->
   <section id="explain">
-    <div class="sec-head"><h2>3 · Short explanations</h2><span class="hint">Placeholder wording</span></div>
+    <div class="sec-head"><h2>3 · Short explanations</h2><span class="hint">Own wording · labels V / U / (d)</span></div>
     <div class="grid3" id="explGrid"></div>
   </section>
 
@@ -258,7 +258,7 @@ footer{margin:10px 0 48px}
 
   <!-- 5. Consensus -->
   <section id="consensus">
-    <div class="sec-head"><h2>5 · Consensus view</h2><span class="hint">Consensus is illustrative · bias/hit-rate derived (d) from the placeholder backtest</span></div>
+    <div class="sec-head"><h2>5 · Consensus view</h2><span class="hint">Consensus = Trading Economics substitute (U) · bias/hit-rate derived (d) from the backtest</span></div>
     <div class="card"><div class="tbl-wrap" id="consTbl"></div></div>
     <div class="card" style="margin-top:18px">
       <div class="panel-head">
@@ -273,11 +273,15 @@ footer{margin:10px 0 48px}
     <div class="caveat" id="caveat">
       <h2>Datenlage und Quellen – Vorbehalte</h2>
       <ul>
-        <li><b>All figures are placeholders</b> (label U = unverified): nowcasts, backtest actuals, contributors, weights and timestamps are generated example values, not real prints.</li>
-        <li><b>Consensus is illustrative</b> – not taken from any survey or vendor.</li>
-        <li><b>No live feed connected.</b> The page runs on an inline data object; an optional <code>./nowcast_data.json</code> is loaded only when served over http(s).</li>
-        <li><b>Real wiring pending:</b> US CPI nowcast status YELLOW per Auditor; PCE and PPI nowcasts not yet audited.</li>
-        <li>Figures marked (d) – MAE, bias, hit rate, differences, pulse line – are derived in the browser from the placeholder data.</li>
+        <li><b>Model status.</b> US CPI nowcast: <b>YELLOW</b> – Auditor recheck pending, not validated for trading. PPI and PCE: <b>status not audited</b>. Research output, no trade authorization.</li>
+        <li><b>CPI (Oct 2026).</b> Own model in mode «research provisional workaround», not certified: weights (Dec-2025 relative importance), seasonal factors and as-of cut-off stamps are workarounds (d). Auditor cross-check on 10 Nov (d): with Sep-2026 relative importance the same chain gives headline 0.307 instead of 0.348. Nowcast frozen 10 Nov 10:11 Zurich, before the BLS release (V as ledger record); BLS first release headline +0.4, core +0.3 (V).</li>
+        <li><b>CPI y/y: n/a.</b> BLS could not publish a 12-month change for Oct 2026 (no Oct-2025 index) (V). Our analytical y/y (d: headline 4.06, core 2.87, interpolated base) is not official and not comparable, so it is not shown. Headline band withheld (sequential 80% coverage 4/6, d); core 80% band 0.17–0.48, actual inside (d).</li>
+        <li><b>Consensus (U).</b> Trading Economics consensus column, a substitute – not Bloomberg/Reuters (m/m 0.3 headline, 0.2 core, fetched 9 Nov). y/y consensus and all consensus history: no data. PPI and PCE consensus: none available.</li>
+        <li><b>Backtests (d).</b> CPI: 30 quasi-real-time targets Jan 2024–Sep 2026, not certified, release-timing of weights unknown (U), Oct–Dec 2025 missing; last point is the sealed Oct 2026 nowcast. PPI: 34 post-CPI targets Apr 2023–Sep 2026, pseudo-real-time, actuals = BLS first prints (V); bands under-cover slightly since 2024; trade services is baseline-only and the largest error source; energy extrapolates beyond the training range. PCE: no data.</li>
+        <li><b>PPI (Oct 2026).</b> UNSEALED run of 11 Nov 08:09 Zurich (stage B1, post-CPI): not scored, not an official forecast. BLS release 13 Nov (V). No y/y model.</li>
+        <li><b>PCE: no nowcast available.</b> No live run exists; nothing is filled in. An ex-post reconstruction of Oct B1 in a backtest report (unsealed, not scored, U) gave headline ≈0.41 and core ≈0.40 m/m – shown here for transparency only, not as a nowcast.</li>
+        <li><b>No data:</b> nowcast evolution/path (history not archived), y/y nowcasts, PCE everything. The former simulated «Refresh» button was removed because it would have altered real figures.</li>
+        <li><b>Not shown on purpose:</b> licensed third-party shadow indicators (used-car and rent data; internal research use only), any internal or broker-sourced content, and EA HICP (model status RED, not validated – this page covers the US only).</li>
       </ul>
       <div class="fine" id="srcLine"></div>
     </div>
@@ -287,20 +291,20 @@ footer{margin:10px 0 48px}
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" integrity="sha384-9nhczxUqK87bcKHh20fSQcTGD4qq5GhayNYSYWqwBkINBhOfQLg/P5HG5lF1urn4" crossorigin="anonymous"></script>
 <script>
 /* ==========================================================================
- * NOWCAST_DATA – single source for ALL numbers on the page.   *** PLACEHOLDER ***
+ * NOWCAST_DATA – single source for ALL numbers on the page.   (REAL DATA, 11 Nov 2026; null / empty = "no data")
  *
  * SCHEMA (replace this object, or drop a file ./nowcast_data.json with the same
  * shape next to index.html; the JSON is used when the page is served via http/https):
  *
  * meta: {
- *   title, banner, isPlaceholder (bool; banner shown unless false),
+ *   title, banner, bannerSmall (status banner shown when banner is set), isPlaceholder (legacy, unused),
  *   asOf (ISO-8601 with offset), asOfNote, targetMonth ("Oct 2026"),
  *   freshness:{greenMaxHours, amberMaxHours}   // dot colour by data age
  *   hitTolerancePP (0.1), source (free text for footer)
  * }
  * explanations: { measures, headlineVsCore, narrative }          // 1-2 sentences each
  * evolution: { dates:["YYYY-MM-DD",...], note }                  // shared x-axis for evolution chart
- * series: {  CPI | PCE | PPI : {
+ * series: {  CPI | PCE | PPI : {   (extra text fields: cardCaption, cardNotes[], contribNote, backtestNote)
  *   label, fullName, coreLabel,
  *   status:{ flag:"GREEN"|"YELLOW"|"RED"|"UNAUDITED", label, note },
  *   release:{ reference, dateLabel },
@@ -316,400 +320,1198 @@ footer{margin:10px 0 48px}
  * MAE / bias / hit-rate are NOT stored: they are computed in JS from backtest arrays.
  * ========================================================================== */
 const NOWCAST_DATA = {
-  "meta": {
-    "title": "Inflation Nowcasts",
-    "isPlaceholder": true,
-    "banner": "EXAMPLE DATA – not real nowcasts, prints or consensus",
-    "asOf": "2026-11-11T06:30:00+01:00",
-    "asOfNote": "placeholder timestamp",
-    "targetMonth": "Oct 2026",
-    "freshness": {
-      "greenMaxHours": 6,
-      "amberMaxHours": 24
-    },
-    "hitTolerancePP": 0.1,
-    "source": "inline placeholder (no live feed connected)"
+ "meta": {
+  "title": "Inflation Nowcasts",
+  "isPlaceholder": false,
+  "banner": "Model status YELLOW – Auditor recheck pending, not validated for trading",
+  "bannerSmall": "US CPI = YELLOW. PCE and PPI: status not audited. Research output only – no trade authorization. Figures labelled V (verified), U (unverified), (d) (own calculation).",
+  "asOf": "2026-11-11T08:09:30+01:00",
+  "asOfNote": "PPI run 11 Nov 08:09 · CPI nowcast frozen 10 Nov 10:11 (before BLS release)",
+  "targetMonth": "Oct 2026",
+  "freshness": {
+   "greenMaxHours": 6,
+   "amberMaxHours": 24
   },
-  "explanations": {
-    "measures": "Each nowcast is a model estimate of the next official monthly price-index change (m/m) and the implied year-on-year rate, built from component-level inputs before the statistical agency publishes. Placeholder wording.",
-    "headlineVsCore": "Headline covers all items, including volatile food and energy; core excludes them and is the cleaner read on underlying trend. For PPI, core is final demand ex food and energy.",
-    "narrative": "Illustrative narrative only: shelter and services keep core near 0.3% m/m while energy and used cars pull headline lower. Replace with the live desk view once the feed is wired."
-  },
-  "evolution": {
-    "dates": ["2026-09-30", "2026-10-05", "2026-10-08", "2026-10-13", "2026-10-16", "2026-10-21", "2026-10-26", "2026-10-29", "2026-11-03", "2026-11-06", "2026-11-09", "2026-11-11"],
-    "note": "Nowcast of the current reference month (m/m, %) as inputs arrived. Placeholder path."
-  },
-  "series": {
-    "CPI": {
-      "label": "CPI",
-      "fullName": "US CPI-U (all items)",
-      "coreLabel": "Core CPI (ex food & energy)",
-      "status": {
-        "flag": "YELLOW",
-        "label": "Auditor: YELLOW",
-        "note": "US CPI nowcast status YELLOW per Auditor"
-      },
-      "release": {
-        "reference": "Oct 2026",
-        "dateLabel": "release date: placeholder (not a real calendar)"
-      },
-      "nowcast": {
-        "headline": {
-          "mm": 0.28,
-          "yy": 2.6
-        },
-        "core": {
-          "mm": 0.31,
-          "yy": 3.1
-        }
-      },
-      "consensus": {
-        "headline": {
-          "mm": 0.3,
-          "yy": 2.6
-        },
-        "core": {
-          "mm": 0.3,
-          "yy": 3
-        }
-      },
-      "evolution": {
-        "headline": [0.44, 0.46, 0.41, 0.41, 0.38, 0.31, 0.34, 0.32, 0.36, 0.32, 0.24, 0.28],
-        "core": [0.18, 0.17, 0.24, 0.24, 0.24, 0.28, 0.31, 0.29, 0.29, 0.28, 0.24, 0.31]
-      },
-      "backtest": {
-        "months": ["2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"],
-        "headline": {
-          "actual": {
-            "mm": [0.3, 0.3, 0.2, 0.4, 0.4, 0.4, 0.2, 0.2, 0.3, 0.3, 0.4, 0.4, 0.1, 0.1, 0.3, 0.3, 0.1, 0.2, 0.1, 0.2, 0.2, 0.1, 0.3, 0.3, 0.1, 0.1, 0.3, 0.2, 0.3, 0.2],
-            "yy": [2.3, 2.5, 2.6, 3, 3.4, 3.5, 3.5, 3.3, 3.5, 3.6, 3.7, 3.9, 3.7, 3.5, 3.6, 3.5, 3.1, 2.9, 2.8, 2.8, 2.7, 2.5, 2.4, 2.3, 2.3, 2.3, 2.3, 2.2, 2.4, 2.4]
-          },
-          "nowcast": {
-            "mm": [0.21, 0.22, 0.16, 0.35, 0.35, 0.32, 0.23, 0.19, 0.27, 0.25, 0.38, 0.43, 0.15, 0.08, 0.23, 0.42, 0.13, 0.27, 0.02, 0.19, 0.16, 0.1, 0.28, 0.44, 0.15, 0.1, 0.3, 0.27, 0.26, 0.21],
-            "yy": [2.23, 2.45, 2.59, 2.99, 3.3, 3.37, 3.48, 3.34, 3.42, 3.51, 3.64, 3.9, 3.71, 3.43, 3.49, 3.57, 3.17, 3.01, 2.76, 2.83, 2.69, 2.53, 2.41, 2.46, 2.37, 2.32, 2.32, 2.29, 2.39, 2.44]
-          },
-          "consensus": {
-            "mm": [0.5, 0.4, 0.3, 0.4, 0.3, 0.5, 0.1, 0.2, 0.3, 0.3, 0.2, 0.4, 0.2, 0.2, 0.4, 0.3, 0.1, 0.1, 0.3, 0.2, 0.1, 0.1, 0.2, 0.4, 0, 0.1, 0.4, 0.2, 0.3, 0.2],
-            "yy": [2.5, 2.6, 2.7, 3, 3.3, 3.6, 3.4, 3.3, 3.5, 3.6, 3.5, 3.9, 3.8, 3.6, 3.7, 3.5, 3.1, 2.8, 3, 2.8, 2.6, 2.5, 2.3, 2.4, 2.2, 2.3, 2.4, 2.2, 2.4, 2.4]
-          }
-        },
-        "core": {
-          "actual": {
-            "mm": [0.3, 0.3, 0.2, 0.3, 0.2, 0.2, 0.2, 0.2, 0.3, 0.1, 0.3, 0.2, 0.1, 0.2, 0.2, 0.2, 0.2, 0.2, 0.1, 0.1, 0.2, 0.1, 0.3, 0.2, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3],
-            "yy": [3.2, 3.2, 3.1, 3.2, 3.2, 3, 3, 3, 3, 2.8, 2.8, 2.8, 2.6, 2.5, 2.5, 2.4, 2.4, 2.4, 2.3, 2.2, 2.1, 2.1, 2.1, 2.1, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8]
-          },
-          "nowcast": {
-            "mm": [0.28, 0.32, 0.22, 0.31, 0.13, 0.21, 0.22, 0.18, 0.26, 0.02, 0.34, 0.22, 0.14, 0.28, 0.18, 0.3, 0.2, 0.15, 0.01, 0.08, 0.27, 0.07, 0.25, 0.19, 0.32, 0.35, 0.24, 0.27, 0.25, 0.29],
-            "yy": [3.23, 3.27, 3.16, 3.26, 3.18, 3.05, 3.06, 3.02, 3, 2.76, 2.88, 2.86, 2.67, 2.61, 2.51, 2.53, 2.43, 2.38, 2.23, 2.2, 2.19, 2.09, 2.07, 2.11, 2.34, 2.48, 2.47, 2.6, 2.68, 2.83]
-          },
-          "consensus": {
-            "mm": [0.2, 0.3, 0.1, 0.3, 0.2, 0.3, 0.1, 0.1, 0.3, 0, 0.4, 0.2, 0.2, 0.3, 0.1, 0.2, 0.3, 0.3, 0.1, 0.1, 0.2, 0, 0.3, 0.2, 0.3, 0.2, 0.2, 0.3, 0.2, 0.3],
-            "yy": [3.1, 3.2, 3, 3.2, 3.2, 3.1, 2.9, 2.9, 3, 2.7, 2.9, 2.8, 2.7, 2.6, 2.4, 2.4, 2.5, 2.5, 2.3, 2.2, 2.1, 2, 2.1, 2.1, 2.3, 2.3, 2.4, 2.6, 2.6, 2.8]
-          }
-        }
-      },
-      "contributors": [
-        {
-          "name": "Shelter",
-          "weight": 35.5,
-          "mm": 0.36,
-          "contrib": 0.13
-        },
-        {
-          "name": "Energy",
-          "weight": 6.4,
-          "mm": -0.2,
-          "contrib": -0.01
-        },
-        {
-          "name": "Food",
-          "weight": 13.6,
-          "mm": 0.3,
-          "contrib": 0.04
-        },
-        {
-          "name": "Used cars & trucks",
-          "weight": 2,
-          "mm": -0.5,
-          "contrib": -0.01
-        },
-        {
-          "name": "New vehicles",
-          "weight": 4.3,
-          "mm": 0.1,
-          "contrib": 0
-        },
-        {
-          "name": "Apparel & other goods",
-          "weight": 12.7,
-          "mm": 0.1,
-          "contrib": 0.01
-        },
-        {
-          "name": "Medical care services",
-          "weight": 6.8,
-          "mm": 0.4,
-          "contrib": 0.03
-        },
-        {
-          "name": "Airline fares",
-          "weight": 0.9,
-          "mm": 2.5,
-          "contrib": 0.02
-        },
-        {
-          "name": "Services ex-shelter (other)",
-          "weight": 17.8,
-          "mm": 0.4,
-          "contrib": 0.07
-        }
-      ]
+  "hitTolerancePP": 0.1,
+  "source": "Inflation Nowcast Specialist research outputs (CPI: sealed freeze us:2026-10 + score; PPI: unsealed run 20261111T070935Z) · BLS CPI first release USDL-26-1685"
+ },
+ "explanations": {
+  "measures": "Each nowcast is a model estimate of the next official monthly price-index change (m/m, seasonally adjusted) built from component inputs before the agency publishes. CPI and PPI are our own research models; PCE has no nowcast yet. All model figures are own calculations (d).",
+  "headlineVsCore": "Headline covers all items including food and energy; core excludes them and is the cleaner read on trend. For PPI, core here is final demand less foods and energy.",
+  "narrative": "CPI Oct 2026: BLS published headline +0.4% and core +0.3% m/m on 10 Nov (V). Our nowcast, frozen before the release, was +0.35 / +0.33 (d); the energy leg added 0.08pp. PPI Oct 2026 (BLS release 13 Nov): our unsealed final-demand nowcast is +0.45% (core +0.30%), with the energy block the largest contributor (0.17pp, d). PCE: no nowcast available yet."
+ },
+ "evolution": {
+  "dates": [],
+  "note": "No data – nowcast path history is not archived"
+ },
+ "series": {
+  "CPI": {
+   "label": "CPI",
+   "fullName": "US CPI-U (all items)",
+   "coreLabel": "Core CPI (ex food & energy)",
+   "status": {
+    "flag": "YELLOW",
+    "label": "Status YELLOW",
+    "note": "Auditor recheck pending, not validated for trading"
+   },
+   "release": {
+    "reference": "Oct 2026",
+    "dateLabel": "BLS first release 10 Nov 2026"
+   },
+   "nowcast": {
+    "headline": {
+     "mm": 0.35,
+     "yy": null
     },
-    "PCE": {
-      "label": "PCE",
-      "fullName": "US PCE price index",
-      "coreLabel": "Core PCE (ex food & energy)",
-      "status": {
-        "flag": "UNAUDITED",
-        "label": "Not yet audited",
-        "note": "PCE nowcast not yet audited"
-      },
-      "release": {
-        "reference": "Oct 2026",
-        "dateLabel": "release date: placeholder (not a real calendar)"
-      },
-      "nowcast": {
-        "headline": {
-          "mm": 0.22,
-          "yy": 2.2
-        },
-        "core": {
-          "mm": 0.19,
-          "yy": 2.7
-        }
-      },
-      "consensus": {
-        "headline": {
-          "mm": 0.2,
-          "yy": 2.3
-        },
-        "core": {
-          "mm": 0.2,
-          "yy": 2.7
-        }
-      },
-      "evolution": {
-        "headline": [0.25, 0.23, 0.26, 0.27, 0.24, 0.24, 0.17, 0.15, 0.19, 0.19, 0.26, 0.22],
-        "core": [0.21, 0.21, 0.21, 0.22, 0.24, 0.22, 0.22, 0.17, 0.14, 0.16, 0.14, 0.19]
-      },
-      "backtest": {
-        "months": ["2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"],
-        "headline": {
-          "actual": {
-            "mm": [0.3, 0.2, 0.1, 0.3, 0.3, 0.3, 0.3, 0.1, 0.3, 0.2, 0.3, 0.1, 0.3, 0.3, 0.3, 0.1, 0.2, 0.3, 0.2, 0.2, 0.2, 0.2, 0.1, 0.1, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2],
-            "yy": [2.3, 2.4, 2.3, 2.4, 2.5, 2.6, 2.6, 2.6, 2.7, 2.8, 2.9, 2.8, 2.8, 2.9, 3.1, 2.9, 2.8, 2.8, 2.7, 2.8, 2.7, 2.7, 2.5, 2.5, 2.5, 2.4, 2.3, 2.3, 2.3, 2.2]
-          },
-          "nowcast": {
-            "mm": [0.19, 0.14, 0.07, 0.32, 0.24, 0.24, 0.42, 0.22, 0.28, 0.2, 0.31, 0.02, 0.45, 0.22, 0.3, 0.1, 0.23, 0.29, 0.24, 0.26, 0.23, 0.14, 0.21, 0.16, 0.3, 0.27, 0.18, 0.07, 0.16, 0.1],
-            "yy": [2.21, 2.37, 2.29, 2.45, 2.47, 2.57, 2.75, 2.75, 2.71, 2.84, 2.95, 2.76, 2.99, 2.86, 3.14, 2.94, 2.87, 2.83, 2.77, 2.9, 2.76, 2.67, 2.64, 2.59, 2.53, 2.5, 2.3, 2.29, 2.28, 2.12]
-          },
-          "consensus": {
-            "mm": [0.3, 0.4, 0.1, 0.3, 0.3, 0.3, 0.4, 0, 0.4, 0.3, 0.4, 0, 0.2, 0.4, 0.2, 0, 0.3, 0.3, 0.2, 0.2, 0.2, 0.3, 0.2, 0.2, 0.4, 0.2, 0.2, 0, 0.2, 0.3],
-            "yy": [2.3, 2.6, 2.3, 2.4, 2.5, 2.6, 2.7, 2.5, 2.8, 2.9, 3, 2.7, 2.7, 3, 3, 2.8, 2.9, 2.8, 2.7, 2.8, 2.7, 2.8, 2.6, 2.6, 2.6, 2.4, 2.3, 2.2, 2.3, 2.3]
-          }
-        },
-        "core": {
-          "actual": {
-            "mm": [0.3, 0.3, 0.3, 0.3, 0.3, 0.2, 0.3, 0.2, 0.2, 0.2, 0.2, 0.2, 0.3, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.2, 0.2, 0.2, 0.3, 0.3, 0.2, 0.1, 0.3, 0.2, 0.3],
-            "yy": [2.5, 2.6, 2.7, 2.9, 3, 3, 3.2, 3.2, 3.1, 3.1, 3.1, 3, 3, 2.9, 2.8, 2.7, 2.6, 2.5, 2.4, 2.4, 2.4, 2.4, 2.4, 2.5, 2.5, 2.5, 2.4, 2.5, 2.5, 2.7]
-          },
-          "nowcast": {
-            "mm": [0.34, 0.28, 0.29, 0.28, 0.28, 0.22, 0.24, 0.15, 0.25, 0.14, 0.17, 0.21, 0.38, 0.18, 0.23, 0.21, 0.15, 0.09, 0.11, 0.29, 0.22, 0.15, 0.21, 0.26, 0.36, 0.21, 0.08, 0.27, 0.22, 0.36],
-            "yy": [2.57, 2.61, 2.72, 2.92, 3.02, 3.06, 3.19, 3.2, 3.19, 3.08, 3.11, 3.05, 3.12, 2.92, 2.87, 2.74, 2.58, 2.52, 2.34, 2.52, 2.45, 2.38, 2.44, 2.49, 2.59, 2.54, 2.41, 2.5, 2.55, 2.79]
-          },
-          "consensus": {
-            "mm": [0.3, 0.2, 0.3, 0.4, 0.4, 0.2, 0.3, 0.3, 0.2, 0.2, 0.3, 0.2, 0.3, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.3, 0.3, 0.2, 0.3, 0.3, 0.2, 0.1, 0.3, 0.1, 0.2],
-            "yy": [2.5, 2.5, 2.7, 3, 3.1, 3, 3.2, 3.3, 3.1, 3.1, 3.2, 3, 3, 2.9, 2.8, 2.7, 2.6, 2.6, 2.4, 2.4, 2.5, 2.5, 2.4, 2.5, 2.5, 2.5, 2.4, 2.5, 2.4, 2.6]
-          }
-        }
-      },
-      "contributors": [
-        {
-          "name": "Healthcare",
-          "weight": 17,
-          "mm": 0.35,
-          "contrib": 0.06
-        },
-        {
-          "name": "Housing & utilities",
-          "weight": 15.5,
-          "mm": 0.3,
-          "contrib": 0.05
-        },
-        {
-          "name": "Financial services (incl. portfolio mgmt)",
-          "weight": 8,
-          "mm": 0.6,
-          "contrib": 0.05
-        },
-        {
-          "name": "Food & beverages (off-premises)",
-          "weight": 7.5,
-          "mm": 0.2,
-          "contrib": 0.02
-        },
-        {
-          "name": "Food services & accommodation",
-          "weight": 6.5,
-          "mm": 0.3,
-          "contrib": 0.02
-        },
-        {
-          "name": "Energy goods & services",
-          "weight": 3.9,
-          "mm": -0.4,
-          "contrib": -0.02
-        },
-        {
-          "name": "Motor vehicles & parts",
-          "weight": 3.7,
-          "mm": -0.2,
-          "contrib": -0.01
-        },
-        {
-          "name": "Transportation services",
-          "weight": 3.2,
-          "mm": 0.5,
-          "contrib": 0.02
-        },
-        {
-          "name": "Other goods & services",
-          "weight": 34.7,
-          "mm": 0.12,
-          "contrib": 0.04
-        }
-      ]
-    },
-    "PPI": {
-      "label": "PPI",
-      "fullName": "US PPI final demand",
-      "coreLabel": "Core PPI (final demand ex food & energy)",
-      "status": {
-        "flag": "UNAUDITED",
-        "label": "Not yet audited",
-        "note": "PPI nowcast not yet audited"
-      },
-      "release": {
-        "reference": "Oct 2026",
-        "dateLabel": "release date: placeholder (not a real calendar)"
-      },
-      "nowcast": {
-        "headline": {
-          "mm": 0.17,
-          "yy": 3
-        },
-        "core": {
-          "mm": 0.24,
-          "yy": 3.3
-        }
-      },
-      "consensus": {
-        "headline": {
-          "mm": 0.2,
-          "yy": 3.1
-        },
-        "core": {
-          "mm": 0.2,
-          "yy": 3.2
-        }
-      },
-      "evolution": {
-        "headline": [0.28, 0.21, 0.16, 0.15, 0.22, 0.25, 0.22, 0.18, 0.18, 0.18, 0.17, 0.17],
-        "core": [0.25, 0.26, 0.25, 0.29, 0.3, 0.27, 0.28, 0.27, 0.27, 0.27, 0.24, 0.24]
-      },
-      "backtest": {
-        "months": ["2024-04", "2024-05", "2024-06", "2024-07", "2024-08", "2024-09", "2024-10", "2024-11", "2024-12", "2025-01", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"],
-        "headline": {
-          "actual": {
-            "mm": [0.3, 0.1, 0, 0.2, 0, 0.6, 0.3, -0.1, 0.1, 0.2, 0, -0.3, 0.2, 0, 0.4, 0, 0.2, 0.1, 0.4, 0.2, 0.5, 0, 0.4, 0.3, 0, 0.1, 0.4, 0.2, 0.5, 0.2],
-            "yy": [2.3, 2.2, 2.3, 1.9, 1.9, 2.2, 2.3, 1.9, 1.7, 1.6, 1.8, 1.4, 1.3, 1.2, 1.6, 1.4, 1.6, 1.1, 1.2, 1.5, 1.9, 1.7, 2.1, 2.7, 2.5, 2.6, 2.6, 2.8, 3.1, 3.2]
-          },
-          "nowcast": {
-            "mm": [0.73, -0.14, 0.01, 0.35, 0.08, 0.55, 0.29, -0.06, -0.07, -0.06, -0.08, -0.36, -0.09, -0.41, 0.17, 0.04, 0.11, 0.03, 0.35, 0.35, 0.84, 0.26, 0.44, 0.23, 0, -0.03, 0.38, 0.05, 0.32, 0.48],
-            "yy": [2.75, 1.98, 2.33, 2.07, 2, 2.17, 2.31, 1.95, 1.54, 1.35, 1.73, 1.35, 1.01, 0.79, 1.38, 1.45, 1.52, 1.03, 1.15, 1.66, 2.25, 1.97, 2.16, 2.66, 2.53, 2.5, 2.61, 2.68, 2.96, 3.53]
-          },
-          "consensus": {
-            "mm": [0.2, -0.1, 0.1, 0.1, -0.1, 0.5, 0.2, 0, 0.3, 0.3, -0.1, -0.3, 0.2, 0.1, 0.4, -0.2, 0.1, 0.1, 0.5, 0.2, 0.6, 0, 0.3, 0.2, 0, 0.1, 0.3, 0.2, 0.9, 0.3],
-            "yy": [2.2, 2, 2.4, 1.8, 1.8, 2.1, 2.2, 2, 1.9, 1.7, 1.7, 1.4, 1.3, 1.3, 1.6, 1.2, 1.5, 1.1, 1.3, 1.5, 2, 1.7, 2, 2.6, 2.5, 2.6, 2.5, 2.8, 3.5, 3.3]
-          }
-        },
-        "core": {
-          "actual": {
-            "mm": [0.1, 0.2, 0.2, 0.1, 0.2, 0.1, 0, 0.5, 0.1, -0.1, 0.1, 0, 0.1, 0.1, 0.2, 0, 0.2, 0.2, -0.2, 0.4, 0.1, 0.5, 0.3, 0.3, 0.1, 0.2, 0.5, 0.3, 0, 0.3],
-            "yy": [2.4, 2.3, 2.3, 2.1, 2.1, 1.9, 1.8, 2, 2, 1.7, 1.6, 1.5, 1.5, 1.4, 1.4, 1.3, 1.3, 1.4, 1.2, 1.1, 1.1, 1.7, 1.9, 2.2, 2.2, 2.3, 2.6, 2.9, 2.7, 2.8]
-          },
-          "nowcast": {
-            "mm": [0.2, 0.37, 0.33, 0.24, 0.25, 0.13, -0.06, 0.55, 0.03, 0.03, 0.17, -0.01, 0.17, 0.03, 0.14, -0.13, 0.21, 0.12, -0.25, 0.33, 0.11, 0.66, 0.45, 0.22, 0.34, 0.04, 0.43, 0.28, -0.1, 0.36],
-            "yy": [2.53, 2.49, 2.45, 2.26, 2.17, 1.95, 1.75, 2.07, 1.95, 1.84, 1.68, 1.5, 1.58, 1.34, 1.35, 1.18, 1.32, 1.33, 1.15, 1.03, 1.11, 1.87, 2.06, 2.14, 2.46, 2.16, 2.56, 2.92, 2.63, 2.89]
-          },
-          "consensus": {
-            "mm": [0.2, 0.3, 0.3, 0, 0.1, 0, -0.1, 0.6, 0, -0.1, 0, 0.1, 0.1, 0.1, 0.3, -0.1, 0.3, 0.1, -0.1, 0.3, 0.1, 0.5, 0.2, 0.2, -0.1, 0.4, 0.5, 0.3, -0.2, 0.4],
-            "yy": [2.5, 2.4, 2.4, 2, 2, 1.8, 1.7, 2.1, 1.9, 1.7, 1.5, 1.6, 1.5, 1.4, 1.5, 1.2, 1.4, 1.3, 1.3, 1, 1.1, 1.7, 1.8, 2.1, 2, 2.5, 2.6, 2.9, 2.5, 2.9]
-          }
-        }
-      },
-      "contributors": [
-        {
-          "name": "Trade services",
-          "weight": 20,
-          "mm": 0.5,
-          "contrib": 0.1
-        },
-        {
-          "name": "Energy goods",
-          "weight": 5.5,
-          "mm": -1.5,
-          "contrib": -0.08
-        },
-        {
-          "name": "Portfolio management",
-          "weight": 1.6,
-          "mm": 1.2,
-          "contrib": 0.02
-        },
-        {
-          "name": "Transportation & warehousing",
-          "weight": 5,
-          "mm": 0.5,
-          "contrib": 0.03
-        },
-        {
-          "name": "Food goods",
-          "weight": 5.5,
-          "mm": 0.4,
-          "contrib": 0.02
-        },
-        {
-          "name": "Final demand goods ex food & energy",
-          "weight": 20.5,
-          "mm": 0.1,
-          "contrib": 0.02
-        },
-        {
-          "name": "Health care services",
-          "weight": 8.5,
-          "mm": 0.2,
-          "contrib": 0.02
-        },
-        {
-          "name": "Other services",
-          "weight": 33.4,
-          "mm": 0.15,
-          "contrib": 0.05
-        }
-      ]
+    "core": {
+     "mm": 0.33,
+     "yy": null
     }
+   },
+   "consensus": {
+    "headline": {
+     "mm": 0.3,
+     "yy": null
+    },
+    "core": {
+     "mm": 0.2,
+     "yy": null
+    }
+   },
+   "evolution": {
+    "headline": [],
+    "core": []
+   },
+   "backtest": {
+    "months": [
+     "2024-01",
+     "2024-02",
+     "2024-03",
+     "2024-04",
+     "2024-05",
+     "2024-06",
+     "2024-07",
+     "2024-08",
+     "2024-09",
+     "2024-10",
+     "2024-11",
+     "2024-12",
+     "2025-01",
+     "2025-02",
+     "2025-03",
+     "2025-04",
+     "2025-05",
+     "2025-06",
+     "2025-07",
+     "2025-08",
+     "2025-09",
+     "2026-01",
+     "2026-02",
+     "2026-03",
+     "2026-04",
+     "2026-05",
+     "2026-06",
+     "2026-07",
+     "2026-08",
+     "2026-09",
+     "2026-10"
+    ],
+    "headline": {
+     "actual": {
+      "mm": [
+       0.3054,
+       0.4421,
+       0.3781,
+       0.3129,
+       0.0057,
+       -0.0562,
+       0.1549,
+       0.1872,
+       0.1799,
+       0.2441,
+       0.3129,
+       0.3931,
+       0.4669,
+       0.2159,
+       -0.05,
+       0.2209,
+       0.0809,
+       0.287,
+       0.1966,
+       0.3825,
+       0.3105,
+       0.1708,
+       0.267,
+       0.8651,
+       0.64,
+       0.4729,
+       -0.4225,
+       0.0737,
+       0.396,
+       0.6485,
+       0.3503
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "nowcast": {
+      "mm": [
+       0.1712,
+       0.5308,
+       0.3887,
+       0.3812,
+       0.0986,
+       0.0606,
+       0.1738,
+       0.1845,
+       0.084,
+       0.2813,
+       0.3002,
+       0.3971,
+       0.3037,
+       0.4095,
+       0.1342,
+       0.2181,
+       0.1536,
+       0.2572,
+       0.2593,
+       0.3329,
+       0.4019,
+       0.2755,
+       0.3563,
+       0.8876,
+       0.5213,
+       0.6019,
+       0.0245,
+       -0.0484,
+       0.3559,
+       0.5262,
+       0.3477
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "consensus": {
+      "mm": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    "core": {
+     "actual": {
+      "mm": [
+       0.3924,
+       0.3584,
+       0.359,
+       0.2918,
+       0.1631,
+       0.0648,
+       0.1652,
+       0.281,
+       0.3124,
+       0.2803,
+       0.3081,
+       0.225,
+       0.4463,
+       0.2266,
+       0.0565,
+       0.2368,
+       0.1299,
+       0.2282,
+       0.3223,
+       0.346,
+       0.2271,
+       0.295,
+       0.2161,
+       0.1958,
+       0.3765,
+       0.2081,
+       -0.0167,
+       0.2154,
+       0.2898,
+       0.3348,
+       0.2963
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "nowcast": {
+      "mm": [
+       0.2875,
+       0.3688,
+       0.3472,
+       0.3485,
+       0.306,
+       0.2192,
+       0.1514,
+       0.2183,
+       0.2967,
+       0.3177,
+       0.2969,
+       0.3166,
+       0.2608,
+       0.4076,
+       0.271,
+       0.1926,
+       0.2936,
+       0.2271,
+       0.2725,
+       0.3303,
+       0.3478,
+       0.2937,
+       0.3267,
+       0.2814,
+       0.2525,
+       0.3596,
+       0.2664,
+       0.1162,
+       0.2639,
+       0.3067,
+       0.3262
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "consensus": {
+      "mm": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     }
+    }
+   },
+   "contributors": [
+    {
+     "name": "Core (ex food & energy)",
+     "weight": 79.919,
+     "mm": 0.3262,
+     "contrib": 0.2607
+    },
+    {
+     "name": "Food",
+     "weight": 13.698,
+     "mm": 0.048,
+     "contrib": 0.0066
+    },
+    {
+     "name": "Energy",
+     "weight": 6.383,
+     "mm": 1.2605,
+     "contrib": 0.0805
+    }
+   ],
+   "cardCaption": "Realised vs nowcast · y/y n/a",
+   "cardNotes": [
+    "Nowcast = own model, frozen 10 Nov 2026 10:11 Zurich before the release (d). Not certified.",
+    "BLS first release (10 Nov 2026): headline +0.4, core +0.3 m/m SA (V). y/y n/a: BLS could not publish 12-month change (no Oct-2025 index) (V).",
+    "Error vs unrounded actual (0.350 / 0.296): headline -0.003pp, core +0.030pp (d). Consensus 0.3 / 0.2 = Trading Economics substitute (U)."
+   ],
+   "contribNote": "Core, food and energy legs of the frozen nowcast; weights = Dec-2025 relative importance, held fixed (d). Contributions sum to the headline nowcast.",
+   "backtestNote": "30 quasi-real-time targets Jan 2024–Sep 2026 (d, not certified) plus the sealed Oct 2026 nowcast. Months Oct–Dec 2025 are absent (no Oct-2025 CPI index). Actuals = first release (ALFRED-derived, d; Oct 2026 from BLS). y/y and consensus history: no data."
+  },
+  "PCE": {
+   "label": "PCE",
+   "fullName": "US PCE price index",
+   "coreLabel": "Core PCE (ex food & energy)",
+   "status": {
+    "flag": "UNAUDITED",
+    "label": "Status not audited",
+    "note": "No live nowcast; model not audited"
+   },
+   "release": {
+    "reference": "Oct 2026",
+    "dateLabel": "BEA release 25 Nov 2026 (to verify)"
+   },
+   "nowcast": {
+    "headline": {
+     "mm": null,
+     "yy": null
+    },
+    "core": {
+     "mm": null,
+     "yy": null
+    }
+   },
+   "consensus": {
+    "headline": {
+     "mm": null,
+     "yy": null
+    },
+    "core": {
+     "mm": null,
+     "yy": null
+    }
+   },
+   "evolution": {
+    "headline": [],
+    "core": []
+   },
+   "backtest": {
+    "months": [],
+    "headline": {
+     "actual": {
+      "mm": [],
+      "yy": []
+     },
+     "nowcast": {
+      "mm": [],
+      "yy": []
+     },
+     "consensus": {
+      "mm": [],
+      "yy": []
+     }
+    },
+    "core": {
+     "actual": {
+      "mm": [],
+      "yy": []
+     },
+     "nowcast": {
+      "mm": [],
+      "yy": []
+     },
+     "consensus": {
+      "mm": [],
+      "yy": []
+     }
+    }
+   },
+   "contributors": [],
+   "cardCaption": "No nowcast available",
+   "cardNotes": [
+    "No live PCE nowcast exists yet: the model was designed on 10 Nov 2026 and its first live run is planned after the PPI release (13 Nov). Nothing is shown rather than a placeholder.",
+    "BEA release for Oct 2026: 25 Nov 2026 (design document, not yet verified)."
+   ],
+   "contribNote": "",
+   "backtestNote": "no PCE nowcast available"
+  },
+  "PPI": {
+   "label": "PPI",
+   "fullName": "US PPI final demand",
+   "coreLabel": "FD less foods & energy",
+   "status": {
+    "flag": "UNAUDITED",
+    "label": "Status not audited",
+    "note": "Unsealed research nowcast, not audited"
+   },
+   "release": {
+    "reference": "Oct 2026",
+    "dateLabel": "BLS release 13 Nov 2026"
+   },
+   "nowcast": {
+    "headline": {
+     "mm": 0.45,
+     "yy": null
+    },
+    "core": {
+     "mm": 0.3,
+     "yy": null
+    }
+   },
+   "consensus": {
+    "headline": {
+     "mm": null,
+     "yy": null
+    },
+    "core": {
+     "mm": null,
+     "yy": null
+    }
+   },
+   "evolution": {
+    "headline": [],
+    "core": []
+   },
+   "backtest": {
+    "months": [
+     "2023-04",
+     "2023-05",
+     "2023-06",
+     "2023-07",
+     "2023-08",
+     "2023-10",
+     "2023-11",
+     "2023-12",
+     "2024-01",
+     "2024-02",
+     "2024-03",
+     "2024-05",
+     "2024-06",
+     "2024-08",
+     "2024-09",
+     "2024-10",
+     "2024-11",
+     "2025-01",
+     "2025-02",
+     "2025-03",
+     "2025-04",
+     "2025-05",
+     "2025-06",
+     "2025-07",
+     "2025-09",
+     "2025-12",
+     "2026-01",
+     "2026-02",
+     "2026-03",
+     "2026-04",
+     "2026-05",
+     "2026-06",
+     "2026-07",
+     "2026-09"
+    ],
+    "headline": {
+     "actual": {
+      "mm": [
+       0.2,
+       -0.3,
+       0.1,
+       0.3,
+       0.7,
+       -0.5,
+       0.0,
+       -0.1,
+       0.3,
+       0.6,
+       0.2,
+       -0.2,
+       0.2,
+       0.2,
+       0.0,
+       0.2,
+       0.4,
+       0.4,
+       0.0,
+       -0.4,
+       -0.5,
+       0.1,
+       0.0,
+       0.9,
+       0.3,
+       0.5,
+       0.5,
+       0.7,
+       0.5,
+       1.4,
+       1.1,
+       -0.3,
+       0.0,
+       1.3
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "nowcast": {
+      "mm": [
+       0.154,
+       0.0001,
+       0.1908,
+       0.2367,
+       0.491,
+       0.0732,
+       0.0245,
+       0.0011,
+       0.2025,
+       0.3418,
+       0.2649,
+       0.0646,
+       0.1187,
+       0.1095,
+       0.0721,
+       0.2153,
+       0.2799,
+       0.357,
+       0.252,
+       0.0925,
+       0.201,
+       0.0835,
+       0.3602,
+       0.2633,
+       0.3336,
+       0.2074,
+       0.365,
+       0.4022,
+       0.9814,
+       0.5598,
+       0.5191,
+       -0.1515,
+       0.1672,
+       0.6161
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "consensus": {
+      "mm": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     }
+    },
+    "core": {
+     "actual": {
+      "mm": [
+       0.2,
+       0.2,
+       0.1,
+       0.3,
+       0.2,
+       0.0,
+       0.0,
+       0.0,
+       0.5,
+       0.3,
+       0.2,
+       0.0,
+       0.4,
+       0.3,
+       0.2,
+       0.3,
+       0.2,
+       0.3,
+       -0.1,
+       -0.1,
+       -0.4,
+       0.1,
+       0.0,
+       0.9,
+       0.1,
+       0.7,
+       0.8,
+       0.5,
+       0.1,
+       1.0,
+       0.4,
+       0.2,
+       0.2,
+       0.7
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "nowcast": {
+      "mm": [
+       0.2124,
+       0.2065,
+       0.199,
+       0.2032,
+       0.2585,
+       0.1826,
+       0.1654,
+       0.2006,
+       0.2035,
+       0.2256,
+       0.2431,
+       0.1666,
+       0.1999,
+       0.2045,
+       0.1864,
+       0.2487,
+       0.2466,
+       0.2702,
+       0.2144,
+       0.2257,
+       0.1759,
+       0.1914,
+       0.3088,
+       0.2635,
+       0.2602,
+       0.2247,
+       0.2966,
+       0.3186,
+       0.3474,
+       0.2739,
+       0.426,
+       0.3117,
+       0.2723,
+       0.3692
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     },
+     "consensus": {
+      "mm": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "yy": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     }
+    }
+   },
+   "contributors": [
+    {
+     "name": "Foods",
+     "weight": 5.201,
+     "mm": 0.1449,
+     "contrib": 0.0075
+    },
+    {
+     "name": "Energy",
+     "weight": 6.54,
+     "mm": 2.5821,
+     "contrib": 0.1689
+    },
+    {
+     "name": "Goods ex food & energy",
+     "weight": 18.282,
+     "mm": 0.318,
+     "contrib": 0.0581
+    },
+    {
+     "name": "Trade services",
+     "weight": 19.433,
+     "mm": 0.3051,
+     "contrib": 0.0593
+    },
+    {
+     "name": "Transportation & warehousing",
+     "weight": 5.29,
+     "mm": 0.9498,
+     "contrib": 0.0502
+    },
+    {
+     "name": "Other services (ex trade, transport)",
+     "weight": 42.661,
+     "mm": 0.2132,
+     "contrib": 0.091
+    },
+    {
+     "name": "Construction",
+     "weight": 2.593,
+     "mm": 0.4067,
+     "contrib": 0.0105
+    }
+   ],
+   "cardCaption": "Stage B1 (post-CPI) · y/y n/a",
+   "cardNotes": [
+    "Run 11 Nov 2026 08:09 Zurich, stage B1 (after the CPI release). UNSEALED, pseudo-real-time, not scored, not an official forecast (d).",
+    "Pre-CPI stage A: final demand 0.48, core 0.33. 80% band B1: final demand 0.02 … 1.00, core 0.00 … 0.80 (d).",
+    "BLS release: 13 Nov 2026 14:30 Zurich (V). No consensus available; y/y not modelled."
+   ],
+   "contribNote": "Seven final-demand blocks, stage B1; weights = relative importance price-updated with the as-seen path (d). Contributions sum to the headline nowcast.",
+   "backtestNote": "34 stage-B1 targets Apr 2023–Sep 2026 (months with CPI released first); pseudo-real-time (d). Actuals = BLS first prints (V, one decimal). y/y and consensus history: no data."
   }
+ }
 };
 
 /* ---------- App ---------- */
@@ -751,37 +1553,20 @@ async function loadData(){
   return NOWCAST_DATA;
 }
 
-/* Simulated refresh: there is no backend. The perturbation below (small random shifts of
- * component m/m, core nowcasts and the last evolution point; headline m/m is recomputed as the sum of
- * contributions) only exists to show that the page re-renders. It is NOT a model update. */
-function perturb(src){
-  const d=JSON.parse(JSON.stringify(src));
-  const j=(a)=>(Math.random()-0.5)*2*a;
-  SERIES_KEYS.forEach(k=>{
-    const s=d.series[k];
-    const h0=s.nowcast.headline.mm, c0=s.nowcast.core.mm;
-    s.contributors.forEach(c=>{c.mm=r2(c.mm+j(0.06));c.contrib=r2(c.weight*c.mm/100)});
-    const hs=r2(s.contributors.reduce((a,c)=>a+contribOf(c),0));
-    // keep any non-contributor remainder of the original headline
-    const orig=r2(src.series[k].contributors.reduce((a,c)=>a+contribOf(c),0));
-    const hmm=r2(h0+(hs-orig));
-    const cmm=r2(c0+j(0.03));
-    s.nowcast.headline.yy=r2(s.nowcast.headline.yy+(hmm-h0));
-    s.nowcast.core.yy=r2(s.nowcast.core.yy+(cmm-c0));
-    s.nowcast.headline.mm=hmm; s.nowcast.core.mm=cmm;
-    s.evolution.headline[s.evolution.headline.length-1]=hmm;
-    s.evolution.core[s.evolution.core.length-1]=cmm;
-  });
-  d.meta.asOf=new Date().toISOString();
-  d.meta.asOfNote='simulated refresh – placeholder data';
-  return d;
-}
+/* No simulated refresh: figures are real and are never perturbed. The refresh button is hidden. */
 
 /* ---------- Stats (derived, computed from backtest arrays) ---------- */
 function stats(actual,pred,tol){
-  const n=Math.min(actual.length,pred.length);let ae=0,e=0,hit=0;
-  for(let i=0;i<n;i++){const d=pred[i]-actual[i];ae+=Math.abs(d);e+=d;if(Math.abs(d)<=tol+1e-9)hit++}
-  return {n,mae:ae/n,bias:e/n,hit:hit/n};
+  let n=0,ae=0,e=0,hit=0;const L=Math.min(actual.length,pred.length);
+  for(let i=0;i<L;i++){const a=actual[i],p=pred[i];if(a==null||p==null)continue;const d=p-a;n++;ae+=Math.abs(d);e+=d;if(Math.abs(d)<=tol+1e-9)hit++}
+  return n?{n,mae:ae/n,bias:e/n,hit:hit/n}:{n:0,mae:null,bias:null,hit:null};
+}
+const pct=v=>v==null?'–':Math.round(v*100)+'%';
+const diff=(a,b)=>(a==null||b==null)?null:r2(a-b);
+function noData(id,msg){
+  const c=$(id);if(!c)return;const box=c.parentElement;let n=box.querySelector('.nodata');
+  if(msg){if(!n){n=document.createElement('div');n.className='notice nodata';n.style.cssText='position:absolute;inset:0;background:var(--surface);z-index:2';box.appendChild(n)}n.textContent=msg;n.style.display='flex'}
+  else if(n)n.style.display='none';
 }
 function btStats(key,measure,unit){
   const bt=data.series[key].backtest[measure];const tol=data.meta.hitTolerancePP??0.1;
@@ -847,7 +1632,7 @@ function renderHeader(){
   $('hdrSub').textContent='US CPI · PCE · PPI · reference month '+m.targetMonth;
   $('lastUpdate').textContent=zurich(m.asOf)+(m.asOfNote?' · '+m.asOfNote:'');
   const b=$('banner');
-  if(m.isPlaceholder!==false){b.style.display='';b.innerHTML=esc(m.banner||'EXAMPLE DATA')+'<small>All numbers on this page are placeholders</small>'}else b.style.display='none';
+  if(m.banner){b.style.display='';b.innerHTML=esc(m.banner)+(m.bannerSmall?'<small>'+esc(m.bannerSmall)+'</small>':'')}else b.style.display='none';
   $('srcLine').textContent='Data source: '+dataSource+(m.source?' · '+m.source:'')+' · Charts: Chart.js 4 via CDN.';
   updateFreshness();
 }
@@ -863,6 +1648,8 @@ function updateFreshness(){
 
 /* ---------- 1. Overview ---------- */
 function chipHTML(nc,cons){
+  if(nc==null)return '<span class="chip">no nowcast</span>';
+  if(cons==null)return '<span class="chip">no consensus data</span>';
   const d=r2(nc-cons),s=signal(d);
   const txt=s==='inline'?'In line · cons. '+fmt(cons):(s==='below'?'▼ ':'▲ ')+fmt(Math.abs(d))+'pp '+s+' cons. '+fmt(cons);
   return '<span class="chip '+s+'">'+txt+'</span>';
@@ -871,18 +1658,19 @@ function renderOverview(){
   $('ovHint').textContent='Nowcast of '+data.meta.targetMonth+' · m/m and y/y in %';
   $('ovCards').innerHTML=SERIES_KEYS.map(k=>{
     const s=data.series[k],n=s.nowcast,c=s.consensus;
-    const col=(lab,nn,cc)=>'<div class="ov-col"><div class="k">'+lab+'</div><div class="big">'+fmt(nn.mm)+'<small>% m/m</small></div><div class="yy"><b>'+fmt(nn.yy,1)+'%</b> y/y</div>'+chipHTML(nn.mm,cc.mm)+'</div>';
+    const col=(lab,nn,cc)=>'<div class="ov-col"><div class="k">'+lab+'</div>'+(nn.mm==null?'<div class="big" style="font-size:17px;line-height:1.3;color:var(--text-2)">no nowcast available</div>':'<div class="big">'+fmt(nn.mm)+'<small>% m/m</small></div><div class="yy"><b>'+(nn.yy==null?'n/a':fmt(nn.yy,1)+'%')+'</b> y/y</div>')+chipHTML(nn.mm,cc.mm)+'</div>';
     return '<div class="card"><div class="ov-head"><div class="ov-title"><b>'+esc(s.label)+'</b><span>'+esc(s.fullName)+'</span></div>'+
       '<span class="badge '+esc(s.status.flag)+'" title="'+esc(s.status.note||'')+'">'+esc(s.status.label)+'</span></div>'+
       '<div class="ov-cols">'+col('Headline',n.headline,c.headline)+col('Core',n.core,c.core)+'</div>'+
-      '<div class="spark-wrap"><div class="cap"><span>Nowcast path (m/m, last ~6 wks)</span><span>headline — · core ···</span></div><div class="spark"><canvas data-canvas="spark_'+k+'" aria-label="'+esc(k)+' sparkline"></canvas></div></div></div>';
+      '<div class="spark-wrap"><div class="cap"><span>'+esc(s.cardCaption||'')+'</span><span>nowcast (d)</span></div><div style="font-size:11.5px;color:var(--text-2);line-height:1.55">'+(s.cardNotes||[]).map(t=>'<div style="margin-top:4px">'+esc(t)+'</div>').join('')+'</div></div></div>';
   }).join('');
   // pulse (derived)
-  const rows=[];SERIES_KEYS.forEach(k=>['headline','core'].forEach(m=>{const s=data.series[k];rows.push({k,m,d:r2(s.nowcast[m].mm-s.consensus[m].mm)})}));
+  const rows=[];SERIES_KEYS.forEach(k=>['headline','core'].forEach(m=>{const s=data.series[k],d=diff(s.nowcast[m].mm,s.consensus[m].mm);if(d!=null)rows.push({k,m,d})}));
+  const topC=[...data.series.CPI.contributors].sort((x,y)=>Math.abs(contribOf(y))-Math.abs(contribOf(x)))[0];
+  if(!rows.length){$('pulse').innerHTML='<b>Inflation pulse</b> · no nowcast-vs-consensus comparison available';return}
   const a=rows.filter(r=>signal(r.d)==='above').length,b=rows.filter(r=>signal(r.d)==='below').length,e=rows.length-a-b;
   const big=rows.reduce((x,y)=>Math.abs(y.d)>Math.abs(x.d)?y:x);
-  const topC=[...data.series.CPI.contributors].sort((x,y)=>Math.abs(contribOf(y))-Math.abs(contribOf(x)))[0];
-  $('pulse').innerHTML='<b>Inflation pulse</b> · '+a+' of '+rows.length+' nowcasts above consensus, '+b+' below'+(e?', '+e+' in line':'')+
+  $('pulse').innerHTML='<b>Inflation pulse</b> · '+a+' of '+rows.length+' comparable nowcasts above consensus, '+b+' below'+(e?', '+e+' in line':'')+' (CPI only; PCE and PPI have no nowcast/consensus pair)'+
     ' · widest gap: <b>'+big.k+(big.m==='core'?' core':' headline')+' '+sgn(big.d)+'pp</b> · largest CPI driver: <b>'+esc(topC.name)+' ('+sgn(contribOf(topC))+'pp)</b> <span class="tag">(d)</span> <span class="tag">U</span>';
 }
 
@@ -890,19 +1678,22 @@ function renderOverview(){
 function renderBacktest(){
   const k=state.btSeries,m=state.btMeasure,u=state.btUnit,s=data.series[k],bt=s.backtest[m];
   const lab=k+(m==='core'?' core':' headline')+' · '+(u==='mm'?'m/m':'y/y');
-  $('btSub').textContent='Last '+s.backtest.months.length+' months · official prints (placeholder) vs our nowcast · '+lab;
+  $('btSub').textContent=(s.backtest.months.length?s.backtest.months.length+' targets · first-release actuals vs our nowcast · ':'')+lab+(s.backtestNote?' · '+s.backtestNote:'');
   const st=btStats(k,m,u);
   const row=(l,v,u2,x)=>'<div class="row"><span>'+l+'</span><b>'+v+'<em>'+u2+'</em></b></div>';
   const tol=data.meta.hitTolerancePP??0.1;
   $('perf').innerHTML='<div class="t">Nowcast performance <span class="tag">(d)</span></div>'+
-    row('MAE',fmt(st.nowcast.mae),'pp')+row('Bias (nowcast − actual)',sgn(st.nowcast.bias),'pp')+row('Hit rate ≤ '+tol.toFixed(1)+'pp',Math.round(st.nowcast.hit*100),'%')+
-    '<div class="ref">n = '+st.nowcast.n+' months<br>Consensus (illustrative) for reference: MAE '+fmt(st.consensus.mae)+'pp · bias '+sgn(st.consensus.bias)+'pp · hit '+Math.round(st.consensus.hit*100)+'%</div>';
+    row('MAE',fmt(st.nowcast.mae),'pp')+row('Bias (nowcast − actual)',sgn(st.nowcast.bias),'pp')+row('Hit rate ≤ '+tol.toFixed(1)+'pp',st.nowcast.hit==null?'–':Math.round(st.nowcast.hit*100),st.nowcast.hit==null?'':'%')+
+    '<div class="ref">n = '+st.nowcast.n+' targets<br>Consensus history: '+(st.consensus.n?'MAE '+fmt(st.consensus.mae)+'pp · bias '+sgn(st.consensus.bias)+'pp · hit '+pct(st.consensus.hit):'no data')+'</div>';
+  const has=bt.actual[u].some(v=>v!=null)&&bt.nowcast[u].some(v=>v!=null);
+  noData('btChart',has?null:'no data'+(u==='yy'&&s.backtest.months.length?' – no y/y nowcast history':''));
+  if(!has){destroyChart('btChart');return}
   if(!hasChart())return;
   const T=themeColors(),o=baseOpts(T);
   mk('btChart',{type:'line',data:{labels:s.backtest.months.map(monLbl),datasets:[
-    {label:'Official print',data:bt.actual[u],borderColor:T.actual,backgroundColor:T.actual,borderWidth:2.5,pointRadius:2.5,pointHoverRadius:5,tension:.15,order:2},
+    {label:'First-release actual',data:bt.actual[u],borderColor:T.actual,backgroundColor:T.actual,borderWidth:2.5,pointRadius:2.5,pointHoverRadius:5,tension:.15,order:2},
     {label:'Our nowcast',data:bt.nowcast[u],borderColor:T.nowcast,backgroundColor:T.surface,borderWidth:2,borderDash:[7,4],pointRadius:3,pointStyle:'rectRot',pointBorderWidth:1.5,pointHoverRadius:5,tension:.15,order:1},
-    {label:'Consensus (illustrative)',data:bt.consensus[u],borderColor:T.cons,backgroundColor:T.cons,borderWidth:1.5,borderDash:[2,3],pointRadius:0,hidden:true,tension:.15,order:3}]},
+    {label:'Consensus (no data)',data:bt.consensus[u],borderColor:T.cons,backgroundColor:T.cons,borderWidth:1.5,borderDash:[2,3],pointRadius:0,hidden:true,tension:.15,order:3}]},
     options:{...o,scales:{x:{...axisBase(T),grid:{display:false},ticks:{...axisBase(T).ticks,maxRotation:0,autoSkipPadding:14}},
       y:{...axisBase(T),title:axisTitle(T,(u==='mm'?'m/m':'y/y')+', %'),ticks:{...axisBase(T).ticks,callback:v=>fmt(v,u==='mm'?2:1)+'%'}}},
       plugins:{...o.plugins,tooltip:{...o.plugins.tooltip,callbacks:{
@@ -917,6 +1708,8 @@ function renderContribCharts(){
   if(!hasChart())return;const T=themeColors(),o=baseOpts(T);
   SERIES_KEYS.forEach(k=>{
     const rows=topContrib(k);
+    noData('ctChart_'+k,rows.length?null:'no data – no nowcast available');
+    if(!rows.length){destroyChart('ctChart_'+k);return}
     mk('ctChart_'+k,{type:'bar',data:{labels:rows.map(r=>wrapLabel(r.name)),datasets:[{label:'Contribution (pp)',data:rows.map(r=>r.v),
         backgroundColor:rows.map(r=>r.v>=0?T.up:T.down),borderRadius:3,maxBarThickness:20,barPercentage:.78,categoryPercentage:.9}]},
       options:{...o,indexAxis:'y',layout:{padding:{right:34,left:0}},interaction:{mode:'nearest',intersect:true,axis:'y'},
@@ -931,6 +1724,9 @@ function renderContribCharts(){
 /* ---------- 2c. Evolution ---------- */
 function renderEvolution(){
   const m=state.evoMeasure;$('evoSub').textContent=(data.evolution.note||'Current-month nowcast')+' · '+(m==='core'?'core':'headline')+' m/m';
+  const anyEv=SERIES_KEYS.some(k=>(data.series[k].evolution[m]||[]).some(v=>v!=null));
+  noData('evoChart',anyEv?null:'no data – nowcast path history is not archived');
+  if(!anyEv){destroyChart('evoChart');return}
   if(!hasChart())return;const T=themeColors(),o=baseOpts(T);
   const dates=data.evolution.dates;
   mk('evoChart',{type:'line',data:{labels:dates.map(dayLbl),datasets:SERIES_KEYS.map(k=>({label:k,data:data.series[k].evolution[m],borderColor:T[k],backgroundColor:T[k],borderWidth:2.25,pointRadius:2.5,pointHoverRadius:5,tension:.25}))},
@@ -946,14 +1742,17 @@ function renderConsCharts(){
   const cats=[],now=[],con=[];
   SERIES_KEYS.forEach(k=>['headline','core'].forEach(m=>{cats.push([k,m==='core'?'Core':'Headline']);now.push(data.series[k].nowcast[m][u]);con.push(data.series[k].consensus[m][u])}));
   const dec=u==='mm'?2:1;
+  const anyC=now.concat(con).some(v=>v!=null);
   ['consChartA','consChartB'].forEach(id=>{
+    noData(id,anyC?null:'no data – no y/y nowcast or consensus');
+    if(!anyC){destroyChart(id);return}
     const box=$(id).parentElement,narrow=box.clientWidth<520; lastNarrow=narrow; // phones: horizontal bars
     box.style.height=narrow?'430px':'';
     const valAxis={...axisBase(T),beginAtZero:true,grace:'12%',title:axisTitle(T,(u==='mm'?'m/m':'y/y')+', %'),ticks:{...axisBase(T).ticks,callback:v=>fmt(v,u==='mm'?2:1)}};
     const catAxis={...axisBase(T),grid:{display:false},ticks:{color:T.text2,font:{size:11.5},padding:8,autoSkip:false,maxRotation:0}};
     mk(id,{type:'bar',data:{labels:narrow?cats.map(c=>c.join(' ')):cats,datasets:[
       {label:'Our nowcast',data:now,backgroundColor:T.nowcast,borderRadius:3,maxBarThickness:30},
-      {label:'Consensus (illustrative)',data:con,backgroundColor:T.cons,borderRadius:3,maxBarThickness:30}]},
+      {label:'Consensus (TE substitute, U)',data:con,backgroundColor:T.cons,borderRadius:3,maxBarThickness:30}]},
     options:{...o,indexAxis:narrow?'y':'x',layout:{padding:narrow?{right:34}:{top:20}},scales:narrow?{x:valAxis,y:catAxis}:{x:catAxis,y:valAxis},
       plugins:{...o.plugins,valueLabels:{enabled:true,dec,color:T.text2},tooltip:{...o.plugins.tooltip,callbacks:{title:i=>cats[i[0].dataIndex].join(' '),label:c=>' '+c.dataset.label+': '+fmt(c.parsed[narrow?'x':'y'],dec)+'%',
         afterBody:items=>items.length>1?'Difference: '+sgn(r2(items[0].parsed[narrow?'x':'y']-items[1].parsed[narrow?'x':'y']),dec)+'pp':''}}}},
@@ -986,6 +1785,7 @@ function renderExplain(){
 /* ---------- 4. Contributor tables ---------- */
 function renderContribTable(){
   const k=state.tblSeries,s=data.series[k];
+  if(!s.contributors.length){$('contribTbl').innerHTML='<div class="notice" style="height:120px">no data – no nowcast available for '+esc(s.label)+'</div>';return}
   const all=[...s.contributors].map(c=>({...c,v:contribOf(c)})).sort((a,b)=>Math.abs(b.v)-Math.abs(a.v));
   const max=Math.max(...all.map(r=>Math.abs(r.v)),0.0001);
   const sum=r2(all.reduce((a,r)=>a+r.v,0));
@@ -994,20 +1794,20 @@ function renderContribTable(){
       const w=Math.abs(r.v)/max*50;
       return '<tr class="'+(i<2?'top-move':'')+'"><td class="flat">'+(i+1)+'</td><td class="l">'+esc(r.name)+'</td><td>'+fmt(r.weight,1)+'</td><td>'+sgn(r.mm)+'</td><td class="'+(r.v>0?'pos':r.v<0?'neg':'flat')+'">'+sgn(r.v)+'</td><td>'+dir+'</td><td><div class="divbar"><i class="'+(r.v>=0?'p':'n')+'" style="width:'+w+'%"></i></div></td></tr>'}).join('')+
     '</tbody><tfoot><tr><td></td><td class="l">Sum of listed components</td><td>'+fmt(all.reduce((a,r)=>a+r.weight,0),1)+'</td><td></td><td>'+sgn(sum)+'</td><td colspan="2" class="l" style="text-align:left;font-weight:500;color:var(--text-2)">vs headline nowcast '+fmt(s.nowcast.headline.mm)+'% m/m <span class="tag">(d)</span></td></tr></tfoot></table>'+
-    '<div class="cap-line" style="padding:0 12px 4px">Contribution = weight × component m/m. Top two moves highlighted. Red = pushes inflation up, green = pulls down. Placeholder components and weights.</div>';
+    '<div class="cap-line" style="padding:0 12px 4px">Contribution = weight × component m/m. Top two moves highlighted. Red = pushes inflation up, green = pulls down. '+esc(s.contribNote||'')+'</div>';
 }
 
 /* ---------- 5. Consensus table ---------- */
 function renderConsTable(){
-  const dcls=d=>{const s=signal(d);return s==='above'?'pos':s==='below'?'neg':'flat'};
+  const dcls=d=>{if(d==null)return 'flat';const s=signal(d);return s==='above'?'pos':s==='below'?'neg':'flat'};
   let html='<table><thead><tr><th class="l">Series</th><th>Our nowcast m/m</th><th>Consensus m/m</th><th>Diff (pp)</th><th>Our nowcast y/y</th><th>Consensus y/y</th><th>Diff (pp)</th><th>Hist. bias m/m (pp)</th><th>Hit ≤0.1pp (nowcast)</th><th>Hit ≤0.1pp (cons.)</th></tr></thead><tbody>';
   SERIES_KEYS.forEach(k=>{const s=data.series[k];
     html+='<tr class="group"><td colspan="10">'+esc(s.label)+' · '+esc(s.release.reference)+' <span class="badge '+esc(s.status.flag)+'" style="margin-left:8px;text-transform:none;letter-spacing:0">'+esc(s.status.label)+'</span></td></tr>';
     ['headline','core'].forEach(m=>{
-      const n=s.nowcast[m],c=s.consensus[m],dm=r2(n.mm-c.mm),dy=r2(n.yy-c.yy),st=btStats(k,m,'mm');
-      html+='<tr><td class="l">'+(m==='core'?'Core':'Headline')+'</td><td><b>'+fmt(n.mm)+'</b></td><td>'+fmt(c.mm)+'</td><td class="'+dcls(dm)+'"><b>'+sgn(dm)+'</b></td><td>'+fmt(n.yy,1)+'</td><td>'+fmt(c.yy,1)+'</td><td class="'+dcls(dy)+'">'+sgn(dy,1)+'</td><td>'+sgn(st.nowcast.bias)+'</td><td>'+Math.round(st.nowcast.hit*100)+'%</td><td>'+Math.round(st.consensus.hit*100)+'%</td></tr>'});
+      const n=s.nowcast[m],c=s.consensus[m],dm=diff(n.mm,c.mm),dy=diff(n.yy,c.yy),st=btStats(k,m,'mm');
+      html+='<tr><td class="l">'+(m==='core'?'Core':'Headline')+'</td><td><b>'+(n.mm==null?'no nowcast':fmt(n.mm))+'</b></td><td>'+fmt(c.mm)+'</td><td class="'+dcls(dm)+'"><b>'+sgn(dm)+'</b></td><td>'+fmt(n.yy,1)+'</td><td>'+fmt(c.yy,1)+'</td><td class="'+dcls(dy)+'">'+sgn(dy,1)+'</td><td>'+sgn(st.nowcast.bias)+'</td><td>'+pct(st.nowcast.hit)+'</td><td>'+pct(st.consensus.hit)+'</td></tr>'});
   });
-  html+='</tbody></table><div class="cap-line" style="padding:0 12px 4px">Diff = nowcast − consensus; green = below, red = above. Bias and hit rates (d) are computed from the '+data.series.CPI.backtest.months.length+'-month placeholder backtest; consensus values are illustrative, not sourced.</div>';
+  html+='</tbody></table><div class="cap-line" style="padding:0 12px 4px">Diff = nowcast − consensus; green = below, red = above; – = no data. Consensus = Trading Economics substitute (U), CPI m/m only. Bias (d) = mean nowcast − actual over the backtest targets above; hit rates need consensus history (no data). y/y: n/a.</div>';
   $('consTbl').innerHTML=html;
 }
 
@@ -1042,7 +1842,7 @@ $('refreshBtn').addEventListener('click',async()=>{
   if(refreshing)return;refreshing=true;
   const btn=$('refreshBtn');btn.classList.add('loading');btn.disabled=true;btn.setAttribute('aria-busy','true');$('refreshLbl').textContent='Refreshing…';
   await new Promise(r=>setTimeout(r,800)); // simulated async load
-  data=perturb(baseData);
+  data=JSON.parse(JSON.stringify(baseData));
   renderAll();
   btn.classList.remove('loading');btn.disabled=false;btn.removeAttribute('aria-busy');$('refreshLbl').textContent='Refresh Nowcasts';
   refreshing=false;
