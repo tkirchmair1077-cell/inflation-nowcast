@@ -397,7 +397,12 @@
     "Euro-area GDP excluding Ireland and retail Q3 are derived (d). The Irish GDP figure is an estimate (e) and is volatile. The t+45 GDP release on 13 Nov may revise Q3.",
     "Eurostat and ECB figures (wages, CES, national accounts) date from fetches on 4–6 Nov and were not re-fetched on 12 Nov.",
     "Release coverage gap: national activity data and surveys from 5–11 Nov are not in the Staff Desk files and were not fetched. Survey-consensus values are not shown and, in the note, were missing for every release since 5 Nov other than one item omitted here.",
-    "The euro-area HICP nowcast-versus-actual chart and its error statistics come from the staff inflation-nowcast model’s already-produced pseudo out-of-sample backtest of 6 Nov 2026, 10:46 Europe/Zurich (current vintage, not real-time; n=45; ends at October 2026). It is not a track record of the staff-judgment nowcasts in the table. A seasonal naïve benchmark has a slightly lower RMSE than the model for headline and core, as already recorded in that report. The wage-tracker chart uses the ECB Data Portal series fetched on 6 Nov 2026 (press release 4 Nov 2026) and was not re-fetched; forward-looking observations (E) are the ECB’s path, not a staff forecast, and are revisable as coverage rises."
+    "The euro-area HICP nowcast-versus-actual chart and its error statistics come from the staff inflation-nowcast model’s already-produced pseudo out-of-sample backtest of 6 Nov 2026, 10:46 Europe/Zurich (current vintage, not real-time; n=45; ends at October 2026). It is not a track record of the staff-judgment nowcasts in the table. A seasonal naïve benchmark has a slightly lower RMSE than the model for headline and core, as already recorded in that report. The wage-tracker chart uses the ECB Data Portal series fetched on 6 Nov 2026 (press release 4 Nov 2026) and was not re-fetched; forward-looking observations (E) are the ECB’s path, not a staff forecast, and are revisable as coverage rises.",
+    "Leading-indicator charts on this page are as of 12 Nov 2026, 18:41 Europe/Zurich, from the ECB Staff Desk note leading_indicators_2026-11-12.md. They were not part of the 07:50 cutoff. Every chart carries “Staff view, not ECB staff projections.”",
+    "Computed leading-indicator figures are (d) and pseudo-real-time: Pearson correlations and expanding-window forecasts on final vintages, not a real-time vintage panel. Correlation is not causation.",
+    "October 2026 HICP (headline, HICPX, services, NEIG) is the flash (flag e); the final is due on 18 November 2026.",
+    "The AAA 10y–3m spread is kept as a recession-risk indicator, not a growth lead (staff decision, 12 Nov 2026, 19:31 Europe/Zurich). The linear test versus mean GDP growth is a null: no usable lead, wrong sign at lag 0 (r=−0.145), out-of-sample RMSE ratios 1.10–1.20 (worse than an AR). A recession probit versus CEPR dates is not yet tested (n/a).",
+    "The wage tracker, ESI and Indeed Hiring Lab posted-wage tracker are labelled coincident/diagnostic, not leading."
   ],
   "excluded": [
     {
@@ -415,6 +420,14 @@
     {
       "item": "Licensed bank, broker and private-survey datasets",
       "reason": "Internal-use or licensed material is not shown."
+    },
+    {
+      "item": "EURIBOR (any tenor)",
+      "reason": "Published on the ECB Data Portal, but TITLE_COMPL names Refinitiv as the provider of the benchmark. Not used on this public page. The AAA 3-month spot, or €STR, is the short leg."
+    },
+    {
+      "item": "GSCPI (NY Fed)",
+      "reason": "Internal only, pending NY Fed data-notice clearance, and not shown on this public page."
     }
   ],
   "gaps": [
@@ -423,5 +436,119 @@
     "2027 HICP is pending an energy revision.",
     "Market pricing was not fetched (n/a).",
     "No unemployment nowcast is in the 12 Nov note; labour is represented by the wage tracker and CES."
-  ]
+  ],
+  "leading_indicators": {
+    "hint": "Staff charts and staff reads. As of 12 Nov 2026, 18:41 Europe/Zurich. Source: leading_indicators_2026-11-12.md. Public sources only. Staff view, not ECB staff projections.",
+    "as_of": "2026-11-12T18:41:00+01:00",
+    "as_of_display": "12 Nov 2026, 18:41 Europe/Zurich",
+    "source": "leading_indicators_2026-11-12.md",
+    "note": "Staff view, not ECB staff projections. Computed figures are (d) and pseudo-real-time (final vintages, not a real-time vintage panel). October 2026 HICP is the flash; the final is due on 18 November. A recession probit of the AAA 10y–3m spread versus CEPR dates is not yet tested (n/a).",
+    "blocks": [
+      {
+        "id": "inflation",
+        "title": "Inflation",
+        "read": "Services selling-price expectations lead HICP services by 6 months (r=+0.799); excluding 2020–23 the best lag is 10 months (r=+0.636). Industry selling-price expectations lead HICP NEIG by 10 months (r=+0.822); excluding 2020–23 the lead is pandemic-sensitive (k=12, r=+0.308). Extra-EA import prices, CPA B–D, have a measured 9–10 month lead versus NEIG (d). The ECB wage tracker is coincident/diagnostic, not leading: versus HICP services, k=0, r=+0.881, and out of sample it is worse than an AR. October 2026 HICP is the flash; the final is due on 18 November.",
+        "charts": [
+          {
+            "file": "charts/ea_spe_services.png",
+            "title": "Selling-price expectations in services: leading indicator",
+            "caption": "Role: leading. European Commission BCS, services selling-price expectations (next 3 months), euro area (EA21), advanced 6 months versus HICP services inflation (d, full-sample expected-sign best lag). Unit: Balance (SPE); annual % change (HICP services). Source: European Commission BCS via Eurostat; Eurostat HICP; staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Full-sample lead k=6, r=+0.799 (n=277); ex-2020–23: k=10, r=+0.636. OOS RMSE ratios vs an AR of services inflation: 0.850 at 3 months (p=0.008) and 0.770 at 6 months (p=0.039). Services SPE history on EA21 starts April 2003. October 2026 HICP services is the flash (e); the final is due on 18 November. Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          },
+          {
+            "file": "charts/ea_spe_industry.png",
+            "title": "Selling-price expectations in industry: leading indicator",
+            "caption": "Role: leading. European Commission BCS, industry selling-price expectations (next 3 months), euro area (EA21), advanced 10 months versus HICP non-energy industrial goods (NEIG) inflation (d, full-sample expected-sign best lag). Unit: Balance (SPE); annual % change (NEIG). Source: European Commission BCS via Eurostat; Eurostat HICP; staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Full-sample lead k=10, r=+0.822 (n=311); ex-2020–23: k=12, r=+0.308 (still rising at k=12; the full-sample lead is pandemic-inflated). OOS RMSE ratios vs an AR of NEIG: 0.765 at 3 months (p=0.005) and 0.666 at 6 months (p=0.048). October 2026 NEIG is the flash (e); the final is due on 18 November. Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          },
+          {
+            "file": "charts/ea_import_prices.png",
+            "title": "Extra-euro-area industrial import prices: leading indicator",
+            "caption": "Role: leading. Extra-EA import prices, CPA B–D, year-on-year, euro area (EA21), advanced 10 months versus HICP NEIG inflation (d, full-sample expected-sign best lag). Unit: Annual % change. Source: Eurostat; staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Full-sample lead k=10, r=+0.744 (n=240); ex-2020–23: k=9, r=+0.421. OOS RMSE ratios vs an AR of NEIG: 0.751 at 3 months (p=0.013) and 0.633 at 6 months (p=0.079). Last import-price observation: September 2026 = 12.7% (October empty); no interpolation. October 2026 NEIG is the flash (e); the final is due on 18 November. Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          },
+          {
+            "file": "charts/ea_wage_tracker.png",
+            "title": "ECB wage tracker (negotiated wages, including one-offs): coincident/diagnostic",
+            "caption": "Role: coincident/diagnostic, not leading. Headline INWS, 12-month smoothed, euro area (U2). The backward tracker (observation status A and P only) is shown unshifted against HICP services inflation. Forward (status E) observations are not plotted and were not used in the tests. Unit: Annual % change. Source: ECB Data Portal (EWT); Eurostat HICP; staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Coincident: vs services, k=0, r=+0.881 (n=156); vs official INW, k=0, r=+0.920 (n=52). OOS vs services: RMSE ratios 1.007–1.078 (worse than an AR). Last A: December 2024 = 5.323; last P: December 2025 = 1.792. Forward E values (last September 2027 = 2.179, coverage 22.9%) are not a forecast and are not shown. Forward-as-published path: n/a (no vintages in this file). October 2026 HICP services is the flash (e). Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          }
+        ]
+      },
+      {
+        "id": "labour",
+        "title": "Labour",
+        "read": "The Employment Expectations Indicator leads the unemployment rate by 11 months (r=−0.495; excluding 2020–23: 12 months, r=−0.519). Industry employment expectations also lead the unemployment rate by 11 months (r=−0.413). Consumer unemployment expectations are shown at a 12-month lag, the ex-2020–23 best lag (r=+0.520); the full-sample signed best lag is 9 months (r=+0.412). The Indeed Hiring Lab posted-wage tracker is coincident/diagnostic, not leading, and the sample is short.",
+        "charts": [
+          {
+            "file": "charts/ea_eei.png",
+            "title": "Employment Expectations Indicator: leading indicator",
+            "caption": "Role: leading. European Commission BCS Employment Expectations Indicator, euro area (EA21), advanced 11 months versus the unemployment rate (d, full-sample expected-sign best lag). Dual axis. Unit: Index (EEI); % of the labour force (unemployment, SA). Source: European Commission BCS via Eurostat; Eurostat labour force; staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Full-sample lead k=11, r=−0.495 (n=321); ex-2020–23: k=12, r=−0.519. OOS RMSE ratios vs an AR of the unemployment rate: 0.756 at 1 month (p=0.002) and 0.679 at 3 months (p=0.044). Versus the 3-month change in unemployment the series is nearly coincident (k=1, r=−0.716). Versus employment y/y (d): coincident, k=0, r=+0.867. Last unemployment observation: September 2026 = 6.5%. Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          },
+          {
+            "file": "charts/ea_ue_expectations.png",
+            "title": "Consumer unemployment expectations (next 12 months): leading indicator",
+            "caption": "Role: leading. European Commission BCS consumer unemployment expectations, euro area (EA21), advanced 12 months versus the unemployment rate (d, ex-2020–23 expected-sign best lag). The full-sample signed best lag is 9 months (see footnote). Dual axis. Unit: Balance (UE-NY); % of the labour force (unemployment, SA). Source: European Commission BCS via Eurostat; Eurostat labour force; staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. The chart uses k=12, the ex-2020–23 expected-sign best lag (r=+0.520). Full-sample signed best lag is k=9, r=+0.412. OOS RMSE ratios vs an AR of the unemployment rate: 0.852 at 1 month (p=0.072) and 0.867 at 3 months (p=0.331) — a weaker OOS gain than EEI or industry employment expectations, and not statistically significant at conventional levels at h=3. Last unemployment observation: September 2026 = 6.5%. Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          },
+          {
+            "file": "charts/ea_ieme.png",
+            "title": "Industry employment expectations: leading indicator",
+            "caption": "Role: leading. European Commission BCS industry employment expectations (a component of the EEI), euro area (EA21), advanced 11 months versus the unemployment rate (d, full-sample expected-sign best lag). Dual axis. Unit: Balance (IEME); % of the labour force (unemployment, SA). Source: European Commission BCS via Eurostat; Eurostat labour force; staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Full-sample lead k=11, r=−0.413. OOS RMSE ratios vs an AR of the unemployment rate: 0.716 at 3 months (p=0.007), 0.728 at 6 months (p=0.001) and 0.824 at 12 months (p=0.019). Last unemployment observation: September 2026 = 6.5%. Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          },
+          {
+            "file": "charts/ea_indeed_wages.png",
+            "title": "Indeed Hiring Lab posted-wage tracker: coincident/diagnostic",
+            "caption": "Role: coincident/diagnostic, not leading. Euro-area aggregate (Hiring Lab EA, not Eurostat EA21), 3-month moving average of year-on-year posted-wage growth, shown unshifted against official negotiated wages (INW). Short sample. Unit: Annual % change. Source: Indeed Hiring Lab (CC BY 4.0); ECB Data Portal (INW); staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Attribution: Indeed Hiring Lab. vs INW (quarterly mean of the 3mma, d): full-sample k=2 quarters, r=+0.841 (n=27); ex-2020–23 only k=0 meets n≥12 (r=+0.750, n=13). The chart is unshifted. OOS from 2015: n/a (series starts 2019). Informal delayed-origin OOS, 2022-Q2, h=1: RMSE ratio 0.865 (n=16, p=0.095). Latest: September 2026, EA y/y 2.64%, 3mma 2.96%. Official INW: 2026-Q2 = 2.44 (Q3 empty). Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          }
+        ]
+      },
+      {
+        "id": "growth",
+        "title": "Growth",
+        "read": "The AAA 10y–3m yield spread is a recession-risk indicator, not a growth lead. There is no usable linear lead on GDP growth; the sign at lag 0 is wrong (r=−0.145), and out of sample the series is worse than an AR (RMSE ratios 1.10–1.20). A recession probit versus CEPR dates is not yet tested (n/a). BLS credit standards lead real GDP y/y by 3 quarters (r=−0.379; excluding 2020–23: k=2, r=−0.738). ESI is coincident/diagnostic (versus real GDP y/y, k=0, r=+0.782). New CISS has a short 1–2 quarter lead on mean GDP y/y (k=1, r=−0.432; excluding 2020–23: k=2, r=−0.644).",
+        "charts": [
+          {
+            "file": "charts/ea_aaa_spread.png",
+            "title": "Yield curve slope (AAA 10y–3m): recession-risk indicator",
+            "caption": "Role: recession-risk indicator, not a growth lead. Euro-area AAA 10-year minus 3-month government spot yield (d, inner join, no fill). Monthly average of observed days. Months with a negative monthly average are shaded. GDP is not plotted on this chart. Unit: Percentage points. Source: ECB Data Portal (YC, AAA curve); staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Null result vs mean real GDP y/y (2004-Q4–2026-Q3, d): no usable linear lead; all k=0…6 have r≤0; signed best k=4, r=−0.000; r at lag 0 = −0.145 (wrong sign, n=84). OOS RMSE ratios 1.104–1.198, all worse than an AR. A recession probit versus CEPR dates is not yet tested (n/a). Only inversion in the AAA monthly average: February 2023–December 2024 (minimum −1.566 in January 2024). AAA did not invert in 2008 (monthly-average minimum +0.125, August 2008). Series starts 6 September 2004. Latest: 11 November 2026 = 0.720 pp (10y 3.340, 3m 2.620); November monthly average 0.717 (8 observed days, partial). Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          },
+          {
+            "file": "charts/ea_bls_credit.png",
+            "title": "Bank Lending Survey credit standards (loans to enterprises): leading indicator",
+            "caption": "Role: leading. ECB Bank Lending Survey, net tightening of credit standards on loans to enterprises, euro area (U2), advanced 3 quarters versus real GDP y/y (d, official TIME_PERIOD dating, full-sample expected-sign best lag). Dual axis. Unit: Net percentage, tightening (BLS); annual % change (real GDP). Source: ECB Data Portal (BLS); Eurostat national accounts; staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Full-sample lead k=3, r=−0.379; ex-2020–23: k=2, r=−0.738. OOS vs mean GDP y/y is about 1 (no gain over an AR of GDP). Versus NFC loan growth: k=6, r=−0.384 (EB 8/2022); OOS h=1: 0.862 (p=0.020). Official TIME_PERIOD: 2026-Q4 = October 2026 survey; landing page “Q3 2026 results”; not relabelled. Survey-window sensitivity (−1Q) shifts the best lag 3→4, r unchanged. Latest BLS: 2026-Q4 = 8.55. Real GDP 2026-Q3: q/q 0.4%, y/y 1.3%. 2020–21 GDP y/y extremes (−13.8 in 2020-Q2, +15.3 in 2021-Q2) are truncated on this scale and annotated. Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          },
+          {
+            "file": "charts/ea_esi.png",
+            "title": "Economic Sentiment Indicator: coincident/diagnostic",
+            "caption": "Role: coincident/diagnostic, not leading. European Commission Economic Sentiment Indicator, euro area (EA21), shown unshifted against real GDP y/y (d). Dual axis. Unit: Index (ESI, long-run average = 100); annual % change (real GDP). Source: European Commission BCS via Eurostat; Eurostat national accounts; staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Confirmed coincident: vs GDP y/y, k=0, r=+0.782 (n=123); ex-2020–23: k=0, r=+0.890 (n=107). OOS at a 1-quarter-ahead horizon: RMSE ratio 1.057 (p=0.325) — a one-quarter-ahead AR is not improved by a coincident indicator. Latest: October 2026 = 96.9. EA20 is not spliced (it ends December 2025). 2020–21 GDP y/y extremes (−13.8 in 2020-Q2, +15.3 in 2021-Q2) are truncated on this scale and annotated. Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          },
+          {
+            "file": "charts/ea_new_ciss.png",
+            "title": "ECB New CISS (composite indicator of systemic stress): leading indicator",
+            "caption": "Role: leading (short). ECB New CISS (SS_CIN), quarterly mean of daily observations (d), advanced 1 quarter versus real GDP y/y (d, full-sample expected-sign best lag). Dual axis. Unit: Index, 0–1 (CISS); annual % change (real GDP). Source: ECB Data Portal (CISS); Eurostat national accounts; staff calculations (d). As of: 12 Nov 2026, 18:41 Europe/Zurich. Full-sample lead k=1, r=−0.432; ex-2020–23: k=2, r=−0.644. OOS at h=1 quarter: RMSE ratio 0.977 (p=0.370). A growth-at-risk quantile test was not run. Official key: CISS.D.U2.Z0Z.4F.EC.SS_CIN.IDX (SS_CIN, not the older SS_CI). Latest daily: 11 November 2026 = 0.006449; November monthly average 0.007086 (8 observed days, partial). The last complete quarter on this chart is 2026-Q3 (Q4 is incomplete and is not in the quarterly mean). 2020–21 GDP y/y extremes (−13.8 in 2020-Q2, +15.3 in 2021-Q2) are truncated on this scale and annotated. Staff view, not ECB staff projections.",
+            "width": 2400,
+            "height": 1650
+          }
+        ]
+      }
+    ]
+  }
 }
