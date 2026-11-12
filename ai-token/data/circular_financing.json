@@ -5,16 +5,27 @@
     "name": "AI Circular Financing Alert Bot",
     "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
   },
-  "as_of": "2026-11-11T07:50:00+01:00",
+  "as_of": "2026-11-12T07:50:00+01:00",
   "timezone": "Europe/Zurich",
-  "title": "Circular Financing Watch, as of Wed 11 Nov 2026 ~07:50 Europe/Zurich",
+  "title": "Circular Financing Watch, as of Thu 12 Nov 2026 ~07:50 Europe/Zurich",
   "status": {
-    "current_user_alert": "none",
-    "current_user_alert_as_of": "2026-11-11T07:45:00+01:00",
-    "summary": "The 11 Nov morning scan found no new or materially changed verified Watch-or-higher signal. An outstanding Watch remains on Anthropic’s 10 Nov supplier equity placement (verified structure, not a distress signal). The 9 Nov Reuters item on banks reluctant to fund guaranteed AI deals is still unverified (anonymous sources, no named lender, no dated credit-market confirmation).",
-    "last_scan": "2026-11-11T07:45:00+01:00",
+    "current_user_alert": "Watch: Lambda / Nvidia (Anthropic contract termination right)",
+    "current_user_alert_as_of": "2026-11-12T07:50:00+01:00",
+    "summary": "The 12 Nov morning scan raised a Watch: Anthropic's 10 Nov S-1/A2 says its ~$34.9bn Lambda agreement is now terminable by either party after Lambda missed a facility-lease deadline (V). Anthropic says it does not intend to terminate. The independent check of the reported Nvidia lease and stake is pending. Neocloud equities extended their post-CoreWeave rally.",
+    "last_scan": "2026-11-12T07:50:00+01:00",
     "last_independent_check": "2026-11-11T08:00:00+01:00",
     "outstanding_watches": [
+      {
+        "date": "2026-11-12",
+        "session": "AM",
+        "tier": "Watch",
+        "node": "Lambda / Nvidia",
+        "headline": "Anthropic's ~$34.9bn Lambda compute agreement is currently terminable by either party (missed lease deadline); no notice given.",
+        "quality": "V",
+        "note": "Primary S-1/A2 vs S-1/A1 wording verified. The Nvidia leaseholder and investor role is unverified (U); the independent check is pending.",
+        "tone": "negative",
+        "tone_source": "derived"
+      },
       {
         "date": "2026-11-10",
         "session": "PM",
@@ -40,11 +51,50 @@
     ]
   },
   "summary": {
-    "text": "The 11 Nov morning scan (~07:45 Europe/Zurich) found no new or materially changed verified Watch-or-higher signal. An outstanding Watch remains on Anthropic’s 10 Nov supplier equity placement: a $26bn concurrent Class N purchase by compute and chip suppliers (V), while Anthropic has $900.9bn of compute and infrastructure commitments to the same supplier set (V). IPO liquidity reduces near-term funding risk; this is a circularity-structure signal, not a default signal. CoreWeave’s Q3 8-K, accepted 10 Nov 22:05 Europe/Zurich, showed revenue of $3.661bn (V), a raised FY26 revenue guide of $13.0–13.3bn (V), about $9bn of customer prepayments or deposits expected in the next three months (V), interest expense at 4.1× GAAP operating income (d), and recourse plus non-recourse debt of $46.873bn (d); the scan treated this as mixed, net near-term de-risking at that node and below a new-Watch threshold. The Q3 10-Q had not been filed as of 11 Nov 07:50 Europe/Zurich, and no dated post-earnings CoreWeave CDS or bond print was obtained (data gap). The 9 Nov item on banks reluctant to fund guaranteed AI deals remains unverified (U); no named lender withdrawal was found through the 11 Nov morning check.",
-    "as_of": "2026-11-11T08:00:00+01:00",
-    "source": "AI Circular Financing Alert Bot; 11 Nov 2026 morning delta (~07:45 Europe/Zurich) and independent check (~08:00), plus items in this feed"
+    "text": "Anthropic's S-1/A2 of 10 Nov says the ~$34.9bn August 2026 part of its ~$41.3bn Lambda compute commitment is now terminable by either party because Lambda missed a facility-lease deadline; no notice has been given, and Anthropic says it does not intend to terminate (V). Lambda is a neocloud renting Nvidia GPUs; reports say Nvidia is an investor and holds the lease on the ~350MW Texas site (U), which would make Nvidia the residual holder if the contract lapsed. The same filing puts Anthropic's total compute and infrastructure commitments at $900.9bn, with a $26bn concurrent equity placement by its suppliers (V). CoreWeave's Q3 8-K showed revenue of $3.661bn and interest expense of about 4.1× GAAP operating income (V, d); its shares closed sharply higher on 11 Nov as management ruled out new parent-level unsecured debt through 2027 at current yields (V, call transcript). OpenAI's reported ~$10bn Q3 revenue and the $11bn first close at a $1.25tn valuation remain unverified private figures (U). No dated CoreWeave or Oracle CDS level after 10 Nov was found.",
+    "as_of": "2026-11-12T07:50:00+01:00",
+    "source": "AI Circular Financing Alert Bot; SEC EDGAR (Anthropic S-1/A1 and S-1/A2, CoreWeave Q3 8-K and call transcript), Data Center Dynamics, Bloomberg/TechCrunch, CNBC"
   },
   "items": [
+    {
+      "id": "coreweave-post-earnings-reaction",
+      "node": "CoreWeave / neoclouds",
+      "type": "market_reaction",
+      "title": "Neocloud equities rally after CoreWeave Q3 and financing plan",
+      "as_of": "2026-11-11",
+      "event_time": "2026-11-11T16:17:00+01:00",
+      "tier_relevance": "Below Watch. De-risking reaction; no dated post-earnings CDS or bond print obtained.",
+      "tone": "positive",
+      "tone_source": "derived",
+      "relationship": "Equity market response at the neocloud node of the OpenAI / Microsoft / Nvidia loop; CoreWeave plans a contract-backed, investment-grade-rated loan instead of parent-level unsecured debt.",
+      "counterparties": [
+        "Nebius",
+        "IREN",
+        "Nvidia",
+        "Microsoft",
+        "OpenAI"
+      ],
+      "figures": [
+        {
+          "label": "CoreWeave share price vs 10 Nov close, 11 Nov 16:17 Europe/Zurich",
+          "value": "+19.9",
+          "unit": "%",
+          "quality": "U",
+          "note": "Yahoo 5-min chart, $58.41 vs $48.73 (% derived); intraday high +21.2%. Nebius +14.9% at the same time."
+        },
+        {
+          "label": "Planned IG-rated contract-backed delayed-draw loan, yield talk",
+          "value": "7–7.5",
+          "unit": "%",
+          "quality": "V",
+          "note": "Q3 call transcript: launch 'in the coming weeks', >90% of capex; no amount, banks or customer named; not yet closed."
+        }
+      ],
+      "links": [
+        "https://www.cnbc.com/2026/11/11/coreweave-crwv-outlook-earnings-ai.html",
+        "https://thenextweb.com/news/coreweave-forecast-q3-2026-revenue-unsecured-debt"
+      ]
+    },
     {
       "id": "coreweave-q3",
       "node": "CoreWeave",
@@ -223,6 +273,52 @@
         }
       ],
       "notes": "Q3 10-Q was not on EDGAR as of 11 Nov 07:50 Europe/Zurich. Statutory deadline for a non-accelerated filer is 16 Nov 2026 (d). Last filed customer-concentration figures are therefore still Q2: customers A/B/C 36% / 26% / 10% of Q2 revenue (anonymised; 'other significant customers include Microsoft and OpenAI'). A keyword search of the Q2 10-Q did not find an Nvidia residual capacity backstop; that is a negative finding, not a proof of absence. 'More than 75% of committed capex tied to IG/enterprise customers' is an issuer self-classification with two different denominators in the CEO and CFO remarks, and is not independently confirmed."
+    },
+    {
+      "id": "lambda-termination-right",
+      "node": "Lambda / Nvidia (Anthropic contract)",
+      "type": "contract_contingency",
+      "title": "Anthropic's ~$34.9bn Lambda compute agreement is now terminable by either party",
+      "as_of": "2026-11-10",
+      "event_time": "2026-11-10T12:29:24+01:00",
+      "tier_relevance": "Watch (12 Nov morning scan). Single node; no credit-market confirmation (Lambda is private).",
+      "tone": "negative",
+      "tone_source": "derived",
+      "relationship": "Nvidia-backed neocloud Lambda would supply Nvidia-GPU capacity to Anthropic. Lambda missed a facility-lease deadline, which gives either party a termination right. Nvidia is reportedly a Lambda investor and the site leaseholder (U). Timing of the missed lease deadline is not disclosed; the change in wording between S-1/A1 (2 Nov) and S-1/A2 (10 Nov) does not prove it occurred in that window.",
+      "counterparties": [
+        "Anthropic",
+        "Lambda",
+        "Nvidia",
+        "Hut 8"
+      ],
+      "figures": [
+        {
+          "label": "Lambda Agreements, aggregate commitment through 2034",
+          "value": 41.3,
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "S-1/A2; fees accrue only as capacity is delivered and accepted."
+        },
+        {
+          "label": "August 2026 agreement, currently terminable by either party",
+          "value": 34.9,
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "S-1/A2: no notice given, and Anthropic does 'not currently intend to terminate'. In S-1/A1 (2 Nov) this was only a contingency. Equals 84.5% of the Lambda total and ~3.9% of $900.9bn total commitments (d)."
+        },
+        {
+          "label": "Hut 8 Beacon Point leases (2 × 352 MW, 15 years, one unnamed AA- or better tenant)",
+          "value": 704,
+          "unit": "MW",
+          "quality": "V",
+          "note": "Hut 8 disclosure: ~$19.6bn total; ~350 MW is phase 1 only. Link to the Lambda/Anthropic contract is not in the S-1; Nvidia as tenant only per WSJ/Reuters (U). Nvidia 10-Q shows unnamed 15-year leases >$20bn it expects to reassign and guarantees up to $3.5bn (V), not attributed to a site."
+        }
+      ],
+      "links": [
+        "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
+        "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+        "https://www.datacenterdynamics.com/en/news/anthropic-signs-another-43bn-in-compute-agreements-with-microsoft/"
+      ]
     },
     {
       "id": "anthropic-s1a2",
