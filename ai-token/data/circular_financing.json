@@ -5,24 +5,24 @@
     "name": "AI Circular Financing Alert Bot",
     "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
   },
-  "as_of": "2026-11-12T16:40:00+01:00",
+  "as_of": "2026-11-12T16:45:00+01:00",
   "timezone": "Europe/Zurich",
-  "title": "Circular Financing Watch, as of Thu 12 Nov 2026 ~16:40 Europe/Zurich",
+  "title": "Circular Financing Watch, as of Thu 12 Nov 2026 ~16:45 Europe/Zurich",
   "status": {
     "current_user_alert": "Elevated: Nvidia (CEO resignation) + neoclouds (Nebius guidance, sector sell-off)",
-    "current_user_alert_as_of": "2026-11-12T16:40:00+01:00",
-    "summary": "The 12 Nov US-session scan raised an Elevated alert. Nvidia's 8-K says Jensen Huang resigned as CEO and director effective 11 Nov; the CFO is interim CEO (V). On the same morning Nebius pushed revenue and ARR timing out (V), and neocloud shares fell sharply (U). No credit-market confirmation was found: there was no dated CDS print after 10 Nov.",
-    "last_scan": "2026-11-12T16:40:00+01:00",
-    "last_independent_check": "2026-11-12T07:45:00+01:00",
+    "current_user_alert_as_of": "2026-11-12T16:45:00+01:00",
+    "summary": "The 12 Nov US-session scan raised an Elevated alert. Nvidia's 8-K says Jensen Huang resigned as CEO and director effective 11 Nov; the CFO is interim CEO (V). On the same day Nebius pushed 2026 revenue to the low end of guidance, raised 2026 capex to about $27bn and moved its ARR target from $7–9bn in December to more than $7bn in February (V). At 16:18 CET Nvidia was about 6% lower, Nebius about 19% lower and CoreWeave about 8.8% lower (U); Nvidia's implied market-value loss is about $260–290bn (d). No dated CDS print after 10 Nov was found; a CoreWeave 2032 bond printed around 80.75 (TRACE, U).",
+    "last_scan": "2026-11-12T16:45:00+01:00",
+    "last_independent_check": "2026-11-12T16:25:00+01:00",
     "outstanding_watches": [
       {
         "date": "2026-11-12",
         "session": "PM",
         "tier": "Elevated",
         "node": "Nvidia / neoclouds (CoreWeave, Nebius)",
-        "headline": "Nvidia CEO resigned effective immediately (8-K); Nebius cut 2026 revenue to the low end of guidance and moved its ARR target out by about two months; Nvidia-backed neocloud equities sold off.",
+        "headline": "Nvidia CEO resigned effective immediately (8-K); Nebius cut 2026 revenue to the low end of guidance, raised 2026 capex to about $27bn and moved its ARR target from $7–9bn in December to more than $7bn in February; Nvidia-backed neocloud equities sold off.",
         "quality": "V",
-        "note": "The filings are V. Share moves are U (press reports). There is no dated CDS or bond confirmation, and the independent check is pending.",
+        "note": "The filings are V. Share moves are U (Yahoo and press figures as of 16:18 CET). Nvidia's opening drop is conflicting (about −12% in the press versus −14.1% on Yahoo, U). The implied Nvidia market-value loss is about $260–290bn (d). There is no dated CDS print after 10 Nov. A CoreWeave 2032 bond printed around 80.75 (TRACE, U). The independent check of the PM scan was completed around 16:25 CET.",
         "tone": "negative",
         "tone_source": "bot"
       },
@@ -62,11 +62,128 @@
     ]
   },
   "summary": {
-    "text": "Nvidia's 8-K says Jensen Huang resigned as CEO and director effective 11 Nov 2026, with the CFO as interim CEO and results still due 17 Nov (V). Nvidia sits at the centre of the loop through $99bn of equity investments plus $25bn of commitments and $3.5bn of AI-cloud lease guarantees as of 26 Jul (V). Nebius reported Q3 revenue of $0.98bn and capex of $7.3bn; it now sees 2026 revenue at the low end of $3.0–3.4bn and its ARR target about two months later (V). CoreWeave's Q3 10-Q shows top-customer concentration down to 30%/24% and $11.0bn of debt principal due in 2027 (V). Press reports put Nvidia about 7–12% lower and neoclouds about 7–20% lower in New York trading on 12 Nov (U). No dated CDS print after 10 Nov was available, so credit confirmation is missing.",
-    "as_of": "2026-11-12T16:40:00+01:00",
-    "source": "AI Alert US-session scan 12 Nov 2026 (~16:40 Europe/Zurich); primary SEC filings; independent check pending"
+    "text": "Nvidia's 8-K says Jensen Huang resigned as CEO and director effective 11 Nov 2026, with the CFO as interim CEO and results still due 17 Nov (V). Nvidia sits at the centre of the loop through $99bn of equity investments plus $25bn of commitments and $3.5bn of AI-cloud lease guarantees as of 26 Jul (V). Nebius reported Q3 revenue of $0.98bn and capex of $7.3bn; it now sees 2026 revenue at the low end of $3.0–3.4bn, 2026 capex of about $27bn, and an ARR target of more than $7bn in February rather than $7–9bn in December; its 2027 outlook is $12–13bn of revenue and $40–45bn of capex (V). CoreWeave's Q3 10-Q shows top-customer concentration down to 30%/24% and $11.0bn of debt principal due in 2027 (V). In New York trading on 12 Nov, Nvidia was about 6% lower at 16:18 CET ($163.31) and the implied market-value loss is about $260–290bn (d); the opening drop is conflicting (about −12% in the press versus −14.1% on Yahoo, both U), while Nebius was about 19% lower and CoreWeave about 8.8% lower at the same time (U). No dated CDS print after 10 Nov was available; a CoreWeave 2032 bond printed around 80.75 (TRACE, U), and a CNBC report of an OpenAI $15bn raise at a $1.25tn valuation remains unconfirmed (U).",
+    "as_of": "2026-11-12T16:45:00+01:00",
+    "source": "AI Alert US-session scan 12 Nov 2026 (~16:40 Europe/Zurich), corrected after the independent check (~16:25 Europe/Zurich); primary SEC filings"
   },
   "items": [
+    {
+      "id": "openai-raise-reported-15bn",
+      "node": "OpenAI",
+      "type": "reported_funding",
+      "title": "Reported $15bn raise at a $1.25tn valuation (CNBC, unconfirmed)",
+      "as_of": "2026-11-12",
+      "event_time": "2026-11-12T15:50:00+01:00",
+      "tier_relevance": "Below Watch on its own. Unconfirmed secondary report; not used to change the 12 Nov Elevated tier.",
+      "tone": "neutral",
+      "tone_source": "bot",
+      "relationship": "If confirmed, this would add private-lab funding at the previously reported $1.25tn valuation, which feeds offtake credibility at Oracle, CoreWeave and other suppliers. It has not been confirmed from an issuer primary document or from an opened CNBC original.",
+      "counterparties": [
+        "SoftBank",
+        "Oracle",
+        "CoreWeave",
+        "Nvidia"
+      ],
+      "figures": [
+        {
+          "label": "Reported raise and valuation",
+          "value": "15 at 1.25tn valuation",
+          "unit": "USD billion / USD",
+          "quality": "U",
+          "note": "CNBC, 12 Nov, about 15:50 CET. Not independently confirmed. Earlier 6 Nov secondary reports had described an $11bn first close at the same $1.25tn valuation."
+        }
+      ],
+      "sources": [
+        {
+          "title": "CNBC, 12 Nov 2026 (report not independently opened)",
+          "kind": "secondary"
+        }
+      ],
+      "notes": "Unconfirmed. Not used to tighten or ease the 12 Nov Elevated alert."
+    },
+    {
+      "id": "nebius-q3",
+      "node": "Nebius / neoclouds",
+      "type": "earnings",
+      "title": "Nebius Q3 2026: revenue up, 2026 at the low end, ARR target moved out",
+      "as_of": "2026-11-12",
+      "event_time": "2026-11-12T15:22:11+01:00",
+      "tier_relevance": "Part of the 12 Nov Elevated alert (neocloud node).",
+      "tone": "negative",
+      "tone_source": "bot",
+      "relationship": "Nvidia-backed neocloud. Revenue and capacity timing slipped (Microsoft New Jersey tranches moved to 2Q27). Mitigant: prepayments covered over 100% of capex on Q3 deals.",
+      "counterparties": [
+        "Nvidia",
+        "Microsoft",
+        "Meta"
+      ],
+      "figures": [
+        {
+          "label": "Q3 revenue",
+          "value": 0.981,
+          "unit": "USD billion",
+          "quality": "V"
+        },
+        {
+          "label": "Q3 capex (purchases of PP&E)",
+          "value": 7.3,
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "Cash capex in the quarter, not the PP&E stock (which was $19.34bn)."
+        },
+        {
+          "label": "Q3 operating cash flow (continuing ops)",
+          "value": -0.273,
+          "unit": "USD billion",
+          "quality": "V"
+        },
+        {
+          "label": "2026 revenue guide",
+          "value": "low end of 3.0–3.4",
+          "unit": "USD billion",
+          "quality": "V"
+        },
+        {
+          "label": "2026 capex guide",
+          "value": "about 27",
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "Raised above the prior $20–25bn range."
+        },
+        {
+          "label": "ARR target",
+          "value": "exceed $7bn in February 2027 (was $7–9bn in December 2026)",
+          "unit": null,
+          "quality": "V"
+        },
+        {
+          "label": "2027 initial outlook",
+          "value": "revenue 12–13, capex 40–45",
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "Confirmed in the shareholder-letter text and the slides (V). The $17–20bn slide figure is 2027 customer-prepayment expectations, not revenue."
+        },
+        {
+          "label": "Cash at quarter-end",
+          "value": 7.4,
+          "unit": "USD billion",
+          "quality": "V"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nebius 6-K Ex. 99.1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-1.htm",
+          "kind": "primary"
+        },
+        {
+          "title": "Nebius shareholder letter (Ex. 99.2)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-2.htm",
+          "kind": "primary"
+        }
+      ],
+      "notes": "NBIS was about −19% at 16:18 CET (U)."
+    },
     {
       "id": "nvidia-ceo-resignation",
       "node": "Nvidia",
@@ -108,11 +225,18 @@
           "note": "Q2 FY27 10-Q."
         },
         {
-          "label": "NVDA share move, 12 Nov morning (New York)",
-          "value": "about −12% at the open, about −7% later",
+          "label": "NVDA share move, 12 Nov 16:18 CET",
+          "value": "about −6 ($163.31)",
           "unit": "%",
           "quality": "U",
-          "note": "Reuters via Investing.com and NBC News; intraday, not a close."
+          "note": "Yahoo (U). The opening drop is conflicting: about −12% in the press versus −14.1% ($149.29) on Yahoo (U). Earlier prints near $161.76 were about −7%."
+        },
+        {
+          "label": "Implied NVDA market-value move, 12 Nov session",
+          "value": "about 260–290",
+          "unit": "USD billion",
+          "quality": "(d)",
+          "note": "Derived from unverified intraday prices, not a close."
         }
       ],
       "sources": [
@@ -135,84 +259,14 @@
           "title": "Reuters via Investing.com, 12 Nov",
           "url": "https://www.investing.com/news/stock-market-news/nvidia-ceo-jensen-huang-to-step-down-in-big-blow-to-ai-boom-5021980",
           "kind": "secondary"
+        },
+        {
+          "title": "Yahoo Finance quote, NVDA, 12 Nov 16:18 CET",
+          "url": "https://finance.yahoo.com/quote/NVDA/",
+          "kind": "secondary"
         }
       ],
       "notes": "The filing gives no reason. Press reports link the resignation to personal-conduct reports and an internal investigation (U). The 8-K and press release say nothing about changes to investment or guarantee commitments."
-    },
-    {
-      "id": "nebius-q3",
-      "node": "Nebius / neoclouds",
-      "type": "earnings",
-      "title": "Nebius Q3 2026: revenue up, 2026 at the low end, ARR target moved out",
-      "as_of": "2026-11-12",
-      "event_time": "2026-11-12T15:22:11+01:00",
-      "tier_relevance": "Part of the 12 Nov Elevated alert (neocloud node).",
-      "tone": "negative",
-      "tone_source": "bot",
-      "relationship": "Nvidia-backed neocloud. Revenue and capacity timing slipped (Microsoft New Jersey tranches moved to 2Q27). Mitigant: prepayments covered over 100% of capex on Q3 deals.",
-      "counterparties": [
-        "Nvidia",
-        "Microsoft",
-        "Meta"
-      ],
-      "figures": [
-        {
-          "label": "Q3 revenue",
-          "value": 0.981,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Q3 purchases of PP&E and intangibles",
-          "value": 7.3,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Q3 operating cash flow (continuing ops)",
-          "value": -0.273,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "2026 revenue guide",
-          "value": "low end of 3.0–3.4",
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "ARR >$7bn target timing",
-          "value": "February 2027 (was December 2026)",
-          "unit": null,
-          "quality": "V"
-        },
-        {
-          "label": "2027 initial outlook (shareholder letter text)",
-          "value": "revenue 12–13, capex 40–45",
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "A slide in the same letter appears to show different figures in text extraction; still being checked."
-        },
-        {
-          "label": "Cash at quarter-end",
-          "value": 7.4,
-          "unit": "USD billion",
-          "quality": "V"
-        }
-      ],
-      "sources": [
-        {
-          "title": "Nebius 6-K Ex. 99.1",
-          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-1.htm",
-          "kind": "primary"
-        },
-        {
-          "title": "Nebius shareholder letter (Ex. 99.2)",
-          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-2.htm",
-          "kind": "primary"
-        }
-      ],
-      "notes": "Press reports say NBIS fell about 15–20% in early New York trading (U)."
     },
     {
       "id": "coreweave-10q-q3",
@@ -224,7 +278,7 @@
       "tier_relevance": "Below Watch on its own. Concentration fell versus Q2.",
       "tone": "neutral",
       "tone_source": "bot",
-      "relationship": "Neocloud node. The top-customer share fell; heavy 2027 maturities remain. CRWV shares fell about 7–12% on 12 Nov after the Nvidia news (U).",
+      "relationship": "Neocloud node. The top-customer share fell; heavy 2027 maturities remain. CRWV was about −8.8% at 16:18 CET on 12 Nov after the Nvidia news (U).",
       "counterparties": [
         "OpenAI",
         "Microsoft",
@@ -256,6 +310,13 @@
           "value": 98,
           "unit": "%",
           "quality": "V"
+        },
+        {
+          "label": "CoreWeave 2032 bond, 12 Nov 15:26 CET",
+          "value": "around 80.75",
+          "unit": "price",
+          "quality": "U",
+          "note": "TRACE, U. Not a dated CDS print; no CDS confirmation after 10 Nov."
         }
       ],
       "sources": [
@@ -265,7 +326,7 @@
           "kind": "primary"
         }
       ],
-      "notes": "Covenants were in compliance at 30 Sep. An Nvidia capacity backstop was not found by keyword search (a negative finding, not proof of absence)."
+      "notes": "Covenants were in compliance at 30 Sep. An Nvidia capacity backstop was not found by keyword search (a negative finding, not proof of absence). The 10-Q discloses only the 14 Aug adoption of CEO Michael Intrator's Rule 10b5-1 plan (estimated gross proceeds $325m personally plus $175m via Omnadora; window 14 Nov 2026–31 Mar 2027) (V). A reported cancellation of that plan rests on CNBC (U) and is not in this filing."
     },
     {
       "id": "coreweave-post-earnings-reaction",
@@ -1141,12 +1202,12 @@
     }
   ],
   "caveats": [
-    "12 Nov PM: share-price moves are intraday press figures (U). No dated CDS or bond print for Nvidia, CoreWeave, Oracle or Nebius was obtained after 10 Nov. The independent verification of the PM scan is pending.",
+    "12 Nov PM: share-price moves are intraday figures (U). NVDA's opening drop is conflicting (about −12% in the press versus −14.1% on Yahoo, U). At 16:18 CET Nvidia was about −6%, Nebius about −19% and CoreWeave about −8.8% (U). The implied Nvidia market-value loss is about $260–290bn (d), not a close. No dated CDS print after 10 Nov was obtained. A CoreWeave 2032 bond printed around 80.75 at 15:26 CET (TRACE, U). The 2027 Nebius slide conflict is resolved: $12–13bn is revenue and $17–20bn is prepayments (V). A reported OpenAI $15bn raise at a $1.25tn valuation is CNBC only (U) and is not independently confirmed. The independent check of this PM scan was completed around 16:25 CET.",
     "V means a primary document was opened in the saved independent checks (SEC filings, issuer IR, official BIS/ECB PDFs). U is secondary, anonymous, undated or not independently confirmed. (d) is an arithmetic combination of stated figures.",
-    "No dated post-earnings CoreWeave CDS or 2031/2032 bond print was obtained after the 10 Nov 22:05 Europe/Zurich 8-K. Conflicting or undated secondary credit-market prints from commercial terminals or broker-sourced media are excluded; they are treated as a data gap.",
+    "No dated CoreWeave, Nvidia, Oracle or Nebius CDS print was obtained after 10 Nov. A CoreWeave 2032 bond printed around 80.75 at 15:26 CET on 12 Nov (TRACE, U). Conflicting or undated secondary credit-market prints from commercial terminals or broker-sourced media are excluded; they are treated as a data gap.",
     "Debt totals depend on the definition (recourse vs non-recourse, whether leases are included). CoreWeave's $46.873bn is recourse + non-recourse only (d from V components).",
-    "CoreWeave's Q3 10-Q had not been filed as of 11 Nov 07:50 Europe/Zurich, so customer concentration and any Nvidia backstop language are still at the Q2 10-Q vintage.",
-    "OpenAI funding size and valuation are still secondary. Issuer-primary confirmation was not in the saved files.",
+    "CoreWeave's Q3 10-Q was filed on 12 Nov (accepted 13:20 CET). Customer concentration and debt figures above use that filing (V). The 10-Q discloses the 14 Aug adoption of the CEO's Rule 10b5-1 plan, not a cancellation; the reported cancellation remains CNBC only (U).",
+    "OpenAI funding size and valuation are still secondary. A 12 Nov CNBC report of a $15bn raise at a $1.25tn valuation has not been independently confirmed, and no issuer-primary confirmation was in the saved files.",
     "BIS 137 percentages are document findings; the proprietary PitchBook/FactSet microdata were not replicated. 'Circular' there is a relational classification over 2021–2025, not proof of a closed cash loop on one deal.",
     "Call quotes use the official CoreWeave IR transcript. Press paraphrases that say 'financing' instead of 'capital', or that collapse two different 75% denominators, are not used.",
     "This page is a research compilation, not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich.",
