@@ -1,0 +1,354 @@
+{
+  "schema_version": "1.0",
+  "feed": "staff_desk",
+  "desk": "ecb",
+  "lang": "en",
+  "bot": {
+    "name": "ECB Staff Desk",
+    "id": "f34fbb8c-9754-4270-8659-efbfdee20850"
+  },
+  "title": "ECB Staff Desk — euro-area nowcast (12 Nov 2026)",
+  "short_title": "ECB Staff Desk",
+  "subtitle": "Euro area · staff-style research view · not the Governing Council and not ECB staff projections · public sources only · not investment advice",
+  "as_of": "2026-11-12T07:50:00+01:00",
+  "as_of_display": "12 Nov 2026, 07:50 Europe/Zurich",
+  "timezone": "Europe/Zurich",
+  "source": {
+    "label": "nowcast_ipdeck_2026-11-12.md",
+    "file": "nowcast_ipdeck_2026-11-12.md",
+    "prepared": "12 Nov 2026, ~07:50 CET. Data cut-off 11 Nov 2026, 17:55 CET. Update of existing notes only; no new analysis."
+  },
+  "freshness": {
+    "status": "current",
+    "dot": "green",
+    "label": "Current — note 12 Nov, 07:50; data cut-off 11 Nov, 17:55",
+    "banner": null
+  },
+  "summary": {
+    "heading": "Current state",
+    "text": "GDP holds up at about +0.2–0.3% q/q in Q4 (own estimate, 4 Nov note, unchanged 11 Nov). The Q3 flash was +0.4% q/q (Eurostat, V, 30 Oct); underlying growth excluding Ireland is softer at 0.21 (d). Headline HICP is past the oil peak: the own Q4 view is about 3.8–3.9% y/y (pending; the baseline remains about 4.0), above the September MPE Q4 peak of 3.6, and core shows no second-round signal so far (HICPX October flash 2.5%, V; German CPI core 2.1, U). Deposit facility rate 2.50%. Staff view, not the Governing Council’s or ECB staff projections.",
+    "as_of": "2026-11-12T07:50:00+01:00",
+    "source": "ECB Staff Desk note, 12 Nov 2026 (data cut-off 11 Nov, 17:55 CET)"
+  },
+  "nowcast_hint": "Own estimates carry a judgment band of about ±0.3 pp as stated in the source note. A third-party euro-area GDP tracker used internally by the desk is not shown on this public page.",
+  "nowcast_note": "The Q4 HICP reading of about 3.8–3.9% is an own estimate and is still pending; the baseline table continues to show about 4.0 (4 Nov). The desk’s energy pass-through rule is unverified. Eurostat and ECB figures in the note date from fetches on 4–6 Nov and were not all re-fetched on 12 Nov.",
+  "nowcasts": [
+    {
+      "id": "gdp-q3",
+      "category": "GDP",
+      "variable": "Euro-area GDP, Q3 2026 flash, q/q",
+      "value": "0.4",
+      "unit": "%",
+      "quality": "V",
+      "status": "published flash",
+      "period": "Q3 2026",
+      "interval": "–",
+      "prior": "–",
+      "source": "Eurostat flash, 30 Oct 2026 (fetched 6 Nov)",
+      "as_of": "30 Oct 2026",
+      "rationale": "Official flash. The t+45 release on 13 Nov may revise Q3. Country detail: DE 0.2 (p), FR −0.1, IT 0.0, ES 0.6 (p), IE 5.5 (e) — all V, Eurostat."
+    },
+    {
+      "id": "gdp-ex-ie",
+      "category": "GDP",
+      "variable": "Euro-area GDP excluding Ireland, Q3, q/q",
+      "value": "0.21",
+      "unit": "%",
+      "quality": "d",
+      "status": "derived",
+      "period": "Q3 2026",
+      "interval": "–",
+      "prior": "–",
+      "source": "Euro-area 21 minus Ireland levels (derived)",
+      "as_of": "6 Nov 2026",
+      "rationale": "Own calculation from official levels. Irish GDP is an estimate (e) and is volatile. Underlying growth is softer than the headline 0.4% flash."
+    },
+    {
+      "id": "gdp-staff-q4",
+      "category": "GDP",
+      "variable": "Staff Q4 2026 GDP, q/q",
+      "value": "+0.2–0.3",
+      "unit": "%",
+      "quality": "d",
+      "status": "own estimate, unchanged",
+      "period": "Q4 2026",
+      "interval": "judgment ±0.3 pp",
+      "prior": "same (4 Nov note)",
+      "source": "Staff, 4 Nov note, unchanged 11 Nov",
+      "as_of": "11 Nov 2026",
+      "rationale": "Judgmental staff range. No new analysis in the 12 Nov update. Retail volume in September was weak (EA −0.7% m/m, V).",
+      "headline": true,
+      "kpi_label": "Q4 GDP, staff",
+      "kpi_note": "Own estimate · unchanged since 4 Nov"
+    },
+    {
+      "id": "gdp-2026",
+      "category": "GDP",
+      "variable": "Staff GDP 2026",
+      "value": "1.1",
+      "unit": "%",
+      "quality": "d",
+      "status": "own baseline",
+      "period": "2026",
+      "interval": "–",
+      "prior": "–",
+      "source": "Staff baseline, 4 Nov note (September MPE 0.9)",
+      "as_of": "4 Nov 2026",
+      "rationale": "Own baseline, compared with the September 2026 MPE of 0.9 (official ECB staff projections, V from an earlier fetch)."
+    },
+    {
+      "id": "hicp-oct",
+      "category": "inflation",
+      "variable": "Euro-area HICP / HICPX, October flash, y/y",
+      "value": "4.0 / 2.5",
+      "unit": "%",
+      "quality": "V",
+      "status": "published flash",
+      "period": "Oct 2026",
+      "interval": "–",
+      "prior": "–",
+      "source": "Eurostat flash, 4 Nov 2026",
+      "as_of": "4 Nov 2026",
+      "rationale": "Official flash. HICPX 2.5% shows no second-round signal so far. The final October HICP is due 18 Nov.",
+      "headline": true,
+      "kpi_label": "HICP Oct flash",
+      "kpi_note": "Eurostat, 4 Nov · V · HICPX 2.5%"
+    },
+    {
+      "id": "hicp-q4",
+      "category": "inflation",
+      "variable": "Staff Q4 2026 HICP, y/y",
+      "value": "~3.8–3.9",
+      "unit": "%",
+      "quality": "d",
+      "status": "pending; baseline still ~4.0",
+      "period": "Q4 2026",
+      "interval": "judgment ±0.3 pp",
+      "prior": "Initial energy-check estimate 10 Nov was ~3.7",
+      "source": "Staff own estimate, reconciled 11 Nov",
+      "as_of": "11 Nov 2026",
+      "rationale": "Own estimate, still pending; the baseline table continues to show about 4.0 (4 Nov). Above the September MPE Q4 peak of 3.6 (V). The desk’s pass-through rule (0.3–0.5 pp per 10% in Brent) is unverified and, in the note, is described as likely too high at USD 90+.",
+      "headline": true,
+      "kpi_label": "Q4 HICP, staff",
+      "kpi_note": "Own estimate ~3.8–3.9, pending · baseline still ~4.0"
+    },
+    {
+      "id": "hicp-path",
+      "category": "inflation",
+      "variable": "Staff HICP / HICPX, 2026 and 2027",
+      "value": "HICP 3.1 / ~2.7–2.8; HICPX 2.4 / 2.7",
+      "unit": "%",
+      "quality": "d",
+      "status": "own baseline; 2027 HICP pending energy revision",
+      "period": "2026 / 2027",
+      "interval": "–",
+      "prior": "–",
+      "source": "Staff, 4 Nov note",
+      "as_of": "4 Nov 2026",
+      "rationale": "Own baselines. September 2026 MPE (V, earlier fetch): HICP 3.0 / 2.5 / 2.1; HICPX 2.5 / 2.6 / 2.3; Q4 peak 3.6. 2027 HICP is pending an energy revision."
+    },
+    {
+      "id": "wages",
+      "category": "labour",
+      "variable": "ECB wage tracker",
+      "value": "H2-26 2.7; H1-27 2.8; Q3-27 2.41; Sep-27 2.18",
+      "unit": "%",
+      "quality": "V",
+      "status": "official tracker, 6 Nov fetch",
+      "period": "H2 2026 to Sep 2027",
+      "interval": "–",
+      "prior": "–",
+      "source": "ECB wage tracker, fetched 6 Nov",
+      "as_of": "6 Nov 2026, not re-fetched",
+      "rationale": "Official ECB series. The 12 Nov policy read notes the tracker easing into 2027. Consumer expectations (CES, Sep, V, 6 Nov): 1y 3.1 / 3y 2.9 / 5y 2.5."
+    },
+    {
+      "id": "dfr",
+      "category": "policy",
+      "variable": "Deposit facility rate",
+      "value": "2.50",
+      "unit": "%",
+      "quality": "V",
+      "status": "unchanged vs 4 Nov policy read",
+      "period": "Current",
+      "interval": "–",
+      "prior": "2.50%",
+      "source": "Staff policy read, 4 Nov, unchanged 12 Nov",
+      "as_of": "12 Nov 2026",
+      "rationale": "Inflation outlook: above the September MPE near term, energy-driven, risks balanced to slightly up medium term. Underlying inflation: core stable or easing (German CPI core 2.1, U). Transmission: no new credit data since 27 Oct (NFC loans 4.2% in September). Market pricing: n/a, not fetched.",
+      "headline": true,
+      "kpi_label": "Deposit facility",
+      "kpi_note": "2.50% · policy read unchanged vs 4 Nov"
+    }
+  ],
+  "baseline_hint": "Staff baselines from the 4 Nov note. Official column is the September 2026 ECB staff macroeconomic projections (MPE).",
+  "baseline_note": "Q4 HICP own estimate (~3.8–3.9) has not replaced the ~4.0 baseline. 2027 HICP is pending an energy revision. MPE figures are from an earlier primary fetch (V).",
+  "baseline": [
+    {
+      "variable": "Q4 2026 GDP, q/q",
+      "staff": "+0.2–0.3 — own estimate",
+      "previous": "same (4 Nov)",
+      "change": "0",
+      "official": "n/a in the 12 Nov note",
+      "quality": "d",
+      "source": "Staff, 4 Nov, unchanged 11 Nov",
+      "as_of": "11 Nov 2026"
+    },
+    {
+      "variable": "GDP 2026",
+      "staff": "1.1 — own baseline",
+      "previous": "–",
+      "change": "–",
+      "official": "0.9 (Sept MPE)",
+      "quality": "d",
+      "source": "Staff, 4 Nov; MPE Sept 2026",
+      "as_of": "4 Nov 2026"
+    },
+    {
+      "variable": "Q4 2026 HICP, y/y",
+      "staff": "baseline ~4.0; pending own view ~3.8–3.9",
+      "previous": "~4.0 (4 Nov)",
+      "change": "own view pending, baseline not reset",
+      "official": "Q4 peak 3.6 (Sept MPE)",
+      "quality": "d",
+      "source": "Staff 4 Nov / 11 Nov; MPE Sept 2026",
+      "as_of": "11 Nov 2026"
+    },
+    {
+      "variable": "HICP 2026 / 2027",
+      "staff": "3.1 / ~2.7–2.8",
+      "previous": "–",
+      "change": "2027 pending energy revision",
+      "official": "3.0 / 2.5 (then 2.1 in 2028, Sept MPE)",
+      "quality": "d",
+      "source": "Staff, 4 Nov; MPE Sept 2026",
+      "as_of": "4 Nov 2026"
+    },
+    {
+      "variable": "HICPX 2026 / 2027",
+      "staff": "2.4 / 2.7",
+      "previous": "–",
+      "change": "–",
+      "official": "2.5 / 2.6 (then 2.3 in 2028, Sept MPE)",
+      "quality": "d",
+      "source": "Staff, 4 Nov; MPE Sept 2026",
+      "as_of": "4 Nov 2026"
+    }
+  ],
+  "recent_hint": "Releases since 5 Nov that are in the Staff Desk files. Survey-consensus figures are omitted. National activity data from 5–11 Nov are not in the files.",
+  "recent_note": "German final HICP is from a search-index copy of the Destatis release (U). Energy prices are from a delayed secondary source (U). Retail-sales consensus was not on file and is not estimated.",
+  "recent_data": [
+    {
+      "release": "Euro-area retail volume, September",
+      "date": "Around 6 Nov 2026",
+      "quality": "V",
+      "actual": "EA −0.7% m/m; Germany −2.0% (p). Retail Q3 vs Q2 ≈ −0.48 (d).",
+      "prior": "–",
+      "why": "Soft consumption into Q4. Eurostat short-term statistics, fetched 6 Nov."
+    },
+    {
+      "release": "German HICP final, October",
+      "date": "11 Nov 2026",
+      "quality": "U",
+      "actual": "HICP 2.8% y/y, −0.1% m/m (equal to the flash); CPI core 2.1 (from 2.4).",
+      "prior": "Flash 2.8% y/y",
+      "why": "Core eased. Taken from a search-index copy of Destatis PR 392; the live page timed out."
+    },
+    {
+      "release": "Energy prices (secondary)",
+      "date": "11 Nov 2026, 17:34 / 17:10 CET",
+      "quality": "U",
+      "actual": "Brent 94.04 (+2.6% vs 10 Nov reference 91.63); TTF 86.53 (+1.9% vs 84.90).",
+      "prior": "10 Nov references 91.63 / 84.90",
+      "why": "Near-term HICP energy driver. Delayed secondary quotes, not a primary exchange settlement."
+    }
+  ],
+  "calendar_hint": "As listed in the 12 Nov note. Times not specified there are left blank.",
+  "calendar_note": "The t+45 GDP release on 13 Nov may revise the Q3 flash.",
+  "calendar": [
+    {
+      "date": "13 Nov 2026",
+      "event": "Euro-area GDP t+45 and employment",
+      "time": "–",
+      "why": "May revise the Q3 0.4% flash."
+    },
+    {
+      "date": "18 Nov 2026",
+      "event": "Euro-area HICP final, October",
+      "time": "–",
+      "why": "Confirms or revises the 4.0% / 2.5% flash."
+    },
+    {
+      "date": "20 Nov 2026",
+      "event": "Negotiated wages, Q3",
+      "time": "–",
+      "why": "Wage-pipeline cross-check."
+    },
+    {
+      "date": "Around 23 Nov 2026",
+      "event": "Flash PMI",
+      "time": "–",
+      "why": "Timely activity and price-setting signal (not yet in this note)."
+    },
+    {
+      "date": "26 Nov 2026",
+      "event": "Monetary developments",
+      "time": "–",
+      "why": "Credit and money; last NFC loan reading in the note is 4.2% in September, as of 27 Oct."
+    },
+    {
+      "date": "1 Dec 2026",
+      "event": "Euro-area HICP flash, November",
+      "time": "–",
+      "why": "Next inflation print."
+    },
+    {
+      "date": "16–17 Dec 2026",
+      "event": "Governing Council and December BMPE",
+      "time": "–",
+      "why": "Policy decision and new staff projections."
+    }
+  ],
+  "staff_hint": "Policy read unchanged versus 4 Nov. Staff view, not the Governing Council or ECB staff projections.",
+  "staff_view": {
+    "lead": "Bottom line from the 12 Nov note: growth about +0.2–0.3% q/q in Q4 (own estimate); headline inflation past the oil peak, with a pending own Q4 view of about 3.8–3.9% against a baseline still around 4.0, and no second-round core signal so far.",
+    "bullets": [
+      "Growth: Q3 flash 0.4% (V) is flattered by Ireland (ex-Ireland 0.21, d). Staff Q4 is +0.2–0.3 (own estimate). September retail volume was weak.",
+      "Inflation: October HICP flash 4.0% (V) sits above the September MPE Q4 peak of 3.6. The pending own Q4 view (~3.8–3.9) has not replaced the ~4.0 baseline. HICPX 2.5% (V) and German CPI core 2.1 (U) show no second-round signal so far.",
+      "Wages and expectations: ECB wage tracker easing into 2027 (V, 6 Nov). CES September: 1y 3.1 / 3y 2.9 / 5y 2.5 (V).",
+      "Energy: Brent and TTF quotes on 11 Nov were slightly higher than the 10 Nov references (U, delayed secondary).",
+      "Coverage gap: national activity data and surveys from 5–11 Nov are not in the Staff Desk files."
+    ],
+    "policy": "Deposit facility rate 2.50%. Inflation outlook: above the September MPE near term, energy-driven, risks balanced to slightly up medium term. Underlying inflation: core stable or easing. Transmission: no new credit data since 27 Oct (NFC loans 4.2% in September). Market pricing: n/a, not fetched. Policy read unchanged versus 4 Nov."
+  },
+  "charts": [],
+  "caveats": [
+    "Report date 12 Nov 2026, ~07:50 CET; data cut-off 11 Nov 2026, 17:55 CET. Update of existing notes only; no new analysis. (d) = derived; own estimate = staff judgment, about ±0.3 pp as stated in the note; V = verified from a primary source this cycle; U = unverified or secondary.",
+    "Q4 HICP of about 3.8–3.9% is an own estimate and is still pending; the baseline remains about 4.0 (4 Nov). The energy pass-through rule used in earlier work (0.3–0.5 pp per 10% in Brent) is unverified and, in the note, is described as likely too high at USD 90+.",
+    "Energy prices come from a delayed secondary source (U). The German final HICP is from a search-index copy of Destatis PR 392 (U); the live page timed out.",
+    "Euro-area GDP excluding Ireland and retail Q3 are derived (d). The Irish GDP figure is an estimate (e) and is volatile. The t+45 GDP release on 13 Nov may revise Q3.",
+    "Eurostat and ECB figures (wages, CES, national accounts) date from fetches on 4–6 Nov and were not re-fetched on 12 Nov.",
+    "Release coverage gap: national activity data and surveys from 5–11 Nov are not in the Staff Desk files and were not fetched. Survey-consensus values are not shown and, in the note, were missing for every release since 5 Nov other than one item omitted here."
+  ],
+  "excluded": [
+    {
+      "item": "A third-party euro-area GDP nowcast tracker",
+      "reason": "Marked internal-only by the ECB Staff Desk; figures and the path are not shown."
+    },
+    {
+      "item": "Survey-consensus figures and surprise-versus-consensus calculations",
+      "reason": "Consensus values are not published here."
+    },
+    {
+      "item": "Licensed bank, broker and private-survey datasets",
+      "reason": "Internal-use or licensed material is not shown."
+    }
+  ],
+  "gaps": [
+    "National activity and survey releases from 5–11 Nov are not covered.",
+    "Q4 HICP own estimate is pending and has not replaced the ~4.0 baseline.",
+    "2027 HICP is pending an energy revision.",
+    "Market pricing was not fetched (n/a).",
+    "No unemployment nowcast is in the 12 Nov note; labour is represented by the wage tracker and CES."
+  ]
+}

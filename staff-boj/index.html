@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff Desk</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Staff-style research desk. Public sources only. Not official central-bank staff work. Not investment advice.">
+<style>
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f9fafc; --border:#e2e7ee; --border-strong:#cfd7e2;
+  --text:#0f1c30; --text-2:#56657c; --text-3:#8391a6; --grid:#e8ecf2;
+  --navy:#14305a; --navy-ink:#ffffff; --accent:#2f5d9e;
+  --green:#2e8b5a; --green-bg:#e7f4ec; --red:#c4514c; --red-bg:#fbebea; --amber:#a9741a; --amber-bg:#fdf2d9; --neutral-bg:#eef1f5;
+  --shadow:0 1px 2px rgba(15,28,48,.04);
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#0a111e; --surface:#111a2b; --surface-2:#0e1626; --border:#223149; --border-strong:#2f4262;
+  --text:#e5ebf4; --text-2:#9aabc3; --text-3:#6f819b; --grid:#1d2a40;
+  --navy:#3d6cb3; --navy-ink:#ffffff; --accent:#7ba5e6;
+  --green:#4cc08a; --green-bg:#12301f; --red:#ec7b76; --red-bg:#3a1a1a; --amber:#e3b25a; --amber-bg:#33280f; --neutral-bg:#18233a;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1360px;margin:0 auto;padding:0 28px}
+header.top{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--border)}
+.top-inner{display:flex;align-items:center;gap:20px;padding:14px 28px;max-width:1360px;margin:0 auto;flex-wrap:wrap}
+.brand{flex:1 1 260px;min-width:200px}
+.brand h1{margin:0;font-size:22px;font-weight:650;letter-spacing:-.01em;color:var(--text)}
+.brand .sub{color:var(--text-2);font-size:12.5px;margin-top:2px}
+.meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:var(--text-2);font-size:12.5px}
+.meta .lbl{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)}
+.meta .val{color:var(--text);font-weight:550}
+.fresh{display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--text-3);flex:none;box-shadow:0 0 0 3px rgba(128,140,160,.18)}
+.dot.green{background:var(--green);box-shadow:0 0 0 3px rgba(46,139,90,.18)}
+.dot.amber{background:#d9a21b;box-shadow:0 0 0 3px rgba(217,162,27,.2)}
+.dot.red{background:var(--red);box-shadow:0 0 0 3px rgba(196,81,76,.2)}
+.actions{display:flex;align-items:center;gap:10px}
+button{font:inherit;cursor:pointer}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border-strong);border-radius:8px;padding:9px 12px;font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.btn-ghost:hover{background:var(--neutral-bg)}
+.nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.nav a{display:inline-flex;align-items:center;padding:6px 11px;border-radius:8px;font-size:12.5px;font-weight:550;color:var(--text-2);text-decoration:none;border:1px solid transparent}
+.nav a:hover{background:var(--neutral-bg);color:var(--text)}
+.nav a.on{background:var(--navy);color:var(--navy-ink);border-color:transparent}
+.nav .sep{width:1px;height:16px;background:var(--border-strong);margin:0 4px}
+.banner{background:var(--amber-bg);border-bottom:1px solid var(--amber);color:var(--text);font-weight:600;text-align:center;padding:9px 16px;font-size:13px;line-height:1.45}
+.banner.stale{background:var(--amber-bg);color:var(--text)}
+.banner.very-stale{background:var(--red-bg);border-bottom-color:var(--red);color:var(--text)}
+.banner b{color:var(--amber)}
+.banner.very-stale b{color:var(--red)}
+main{padding:32px 0 20px}
+section{margin-bottom:44px;scroll-margin-top:84px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{margin:0;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-2);font-weight:650}
+.sec-head .hint{color:var(--text-3);font-size:12px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:20px}
+.card h3{margin:0;font-size:15px;font-weight:620}
+.card .sub{color:var(--text-2);font-size:12px}
+.ov-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.ov-title{display:flex;flex-direction:column}
+.ov-title b{font-size:13px;letter-spacing:.02em;color:var(--text-2);font-weight:620}
+.ov-title span{font-size:11.5px;color:var(--text-3)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:650;padding:3px 9px;border-radius:999px;border:1px solid var(--border-strong);color:var(--text-2);background:var(--neutral-bg);white-space:nowrap}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--text-3)}
+.badge.V,.badge.GREEN{color:var(--green);background:var(--green-bg);border-color:transparent}
+.badge.V::before,.badge.GREEN::before{background:var(--green)}
+.badge.U,.badge.YELLOW,.badge.WATCH{color:var(--amber);background:var(--amber-bg);border-color:transparent}
+.badge.U::before,.badge.YELLOW::before,.badge.WATCH::before{background:#d9a21b}
+.badge.d{color:var(--accent);background:var(--neutral-bg);border-color:transparent}
+.badge.d::before{background:var(--accent)}
+.badge.RED,.badge.stale{color:var(--red);background:var(--red-bg);border-color:transparent}
+.badge.RED::before,.badge.stale::before{background:var(--red)}
+.q{display:inline-flex;align-items:center;justify-content:center;min-width:22px;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:6px;vertical-align:1px;letter-spacing:.02em}
+.q.V{background:var(--green-bg);color:var(--green)}
+.q.U{background:var(--amber-bg);color:var(--amber)}
+.q.d{background:var(--neutral-bg);color:var(--accent)}
+.ov-col .k{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px}
+.ov-col .big{font-size:28px;font-weight:650;letter-spacing:-.02em;line-height:1.1}
+.ov-col .big small{font-size:13px;font-weight:500;color:var(--text-2);margin-left:3px;letter-spacing:0}
+.ov-col .yy{color:var(--text-2);font-size:12.5px;margin-top:6px;line-height:1.45}
+.legend-note{font-size:11.5px;color:var(--text-3);margin-top:10px}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);font-weight:650;text-align:left;padding:8px 12px;border-bottom:1px solid var(--border-strong);white-space:nowrap}
+td{padding:11px 12px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.num{font-weight:620;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tr.group td{background:var(--surface-2);font-weight:650;color:var(--text-2);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px}
+.item-title{font-weight:620;color:var(--text)}
+.item-rel{color:var(--text-2);font-size:12px;margin-top:3px;max-width:46rem;white-space:normal}
+.notes{margin-top:10px;font-size:12px;color:var(--text-2);line-height:1.55}
+.state-card{border-left:3px solid var(--navy)}
+.state-card .state-text{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--text)}
+.state-card .state-src{margin:10px 0 0;font-size:11.5px;color:var(--text-3);line-height:1.5}
+.staff-body{font-size:14px;line-height:1.65;margin:0}
+.staff-body p{margin:0 0 12px}
+.staff-body p:last-child{margin-bottom:0}
+.staff-body ul{margin:0 0 14px;padding-left:18px}
+.staff-body li{margin:0 0 6px}
+.chart-img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:var(--surface-2)}
+.cap-line{font-size:11.5px;color:var(--text-3);margin-top:8px;line-height:1.45}
+footer{margin:10px 0 48px}
+.caveat{border:1px solid var(--amber);background:var(--amber-bg);border-radius:12px;padding:18px 22px;color:var(--text)}
+.caveat h2{margin:0 0 8px;font-size:15px;color:var(--amber);letter-spacing:.01em}
+.caveat h3{margin:16px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+.caveat ul{margin:0;padding-left:18px;font-size:13px;line-height:1.65}
+.caveat .fine{margin-top:10px;font-size:11.5px;color:var(--text-2)}
+.notice{color:var(--text-2);font-size:13px;text-align:center;padding:16px}
+.muted{color:var(--text-2)}
+.pill{display:inline-flex;align-items:center;font-size:11px;font-weight:650;padding:2px 8px;border-radius:999px;background:var(--neutral-bg);color:var(--text-2);white-space:nowrap}
+.pill.pending{background:var(--amber-bg);color:var(--amber)}
+.pill.missing{background:var(--red-bg);color:var(--red)}
+.pill.stale{background:var(--red-bg);color:var(--red)}
+.pill.retained,.pill.updated{background:var(--green-bg);color:var(--green)}
+.pill.own{background:var(--neutral-bg);color:var(--accent)}
+.site-foot{margin:16px 0 0;font-size:12px;color:var(--text-3);text-align:center;line-height:1.55}
+.site-foot a{color:var(--accent);text-decoration:none}
+.site-foot a:hover{text-decoration:underline}
+.legend-row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:0 0 12px;font-size:12px;color:var(--text-2)}
+@media (max-width:1100px){
+  .grid4,.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 14px}
+  .top-inner{padding:12px 14px;gap:12px}
+  .brand h1{font-size:18px}
+  .meta{gap:14px;width:100%}
+  main{padding-top:22px}
+  .card{padding:16px}
+  .ov-col .big{font-size:24px}
+  .grid4,.grid3{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <h1 id="brandTitle">Staff Desk</h1>
+      <div class="sub" id="brandSub"></div>
+    </div>
+    <div class="meta">
+      <div><span class="lbl" id="lblAsOf">As of</span><span class="val" id="asOf">–</span></div>
+      <div><span class="lbl" id="lblSrc">Source</span><span class="val" id="srcFile">–</span></div>
+      <div class="fresh"><i class="dot amber" id="freshDot"></i><div><span class="lbl" id="lblFresh">Data freshness</span><span class="val" id="freshText">–</span></div></div>
+    </div>
+    <nav class="nav" id="nav" aria-label="Staff desks"></nav>
+    <div class="actions">
+      <button class="btn-ghost" id="themeBtn" type="button" aria-label="Toggle dark mode">◐ <span id="themeLbl">Dark</span></button>
+    </div>
+  </div>
+</header>
+<div class="banner" id="banner" hidden></div>
+
+<main class="wrap" id="app">
+  <section id="summary">
+    <div class="sec-head"><h2 id="hSummary">1 · Current state</h2><span class="hint" id="hintQuality"></span></div>
+    <div class="grid4" id="kpis"></div>
+    <div class="card state-card" id="stateBox" style="margin-top:18px"></div>
+  </section>
+
+  <section id="nowcasts">
+    <div class="sec-head"><h2 id="hNowcast">2 · Nowcasts</h2><span class="hint" id="hintNowcast"></span></div>
+    <div class="legend-row" id="legend"></div>
+    <div class="card">
+      <div class="tbl-wrap" id="nowcastTbl"></div>
+      <div class="notes" id="nowcastNote"></div>
+    </div>
+  </section>
+
+  <section id="baseline">
+    <div class="sec-head"><h2 id="hBaseline">3 · Baseline</h2><span class="hint" id="hintBaseline"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="baselineTbl"></div>
+      <div class="notes" id="baselineNote"></div>
+    </div>
+  </section>
+
+  <section id="recent">
+    <div class="sec-head"><h2 id="hRecent">4 · Key data since last update</h2><span class="hint" id="hintRecent"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="recentTbl"></div>
+      <div class="notes" id="recentNote"></div>
+    </div>
+  </section>
+
+  <section id="calendar">
+    <div class="sec-head"><h2 id="hCal">5 · Upcoming calendar</h2><span class="hint" id="hintCal"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="calTbl"></div>
+      <div class="notes" id="calNote"></div>
+    </div>
+  </section>
+
+  <section id="staff">
+    <div class="sec-head"><h2 id="hStaff">6 · Staff view</h2><span class="hint" id="hintStaff"></span></div>
+    <div class="card">
+      <div class="staff-body" id="staffBody"></div>
+      <div class="tbl-wrap" id="taylorTbl" style="margin-top:16px"></div>
+    </div>
+  </section>
+
+  <section id="charts" hidden>
+    <div class="sec-head"><h2 id="hCharts">7 · Charts</h2><span class="hint" id="hintCharts"></span></div>
+    <div class="grid2" id="chartGrid"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="caveat" id="caveat">
+    <h2 id="hCaveat">⚠ Datenlage und Quellen – Vorbehalte</h2>
+    <div id="caveatBody"></div>
+    <p class="fine" id="caveatFine"></p>
+  </div>
+  <div class="site-foot" id="siteFoot"></div>
+</footer>
+
+<script>
+const EMBEDDED = /*__EMBEDDED__*/ {"schema_version":"1.0","feed":"staff_desk","desk":"boj","lang":"de","bot":{"name":"BoJ Staff Desk","id":"625ed69c-7d10-479a-a8c1-ce3ee8025861"},"title":"BoJ Staff Desk — Japan-Nowcast (1. Nov. 2026, Erstlauf)","short_title":"BoJ Staff Desk","subtitle":"Japan · Staff-Recherche im BoJ-Stil · keine offizielle Arbeit der Bank of Japan und kein Outlook-Ersatz · nur öffentliche Quellen · keine Anlageberatung","as_of":"2026-11-01","as_of_display":"1. Nov. 2026","timezone":"Europe/Zurich","source":{"label":"Japan-Nowcast im BoJ-Stil, Erstlauf (Page, 1. Nov. 2026) und boj_nowcast_2026-11-01.json","file":"Japan-Nowcast im BoJ-Stil – Stand 1. Nov. 2026 (Erstlauf); boj_nowcast_2026-11-01.json","prepared":"Alle Abrufe am 1.11.2026 (Europe/Zurich); nur bis dahin veröffentlichte Daten. Erstlauf, daher keine Zerlegung gegenüber einem vorherigen Nowcast."},"freshness":{"status":"stale","dot":"red","label":"Stand: 1. Nov. 2026, veraltet","banner":"\u003cb>Stand: 1. November 2026 — veraltet.\u003c/b> Kein neuer Desk-Stand bis zum 12. November. Der Nominallohn-Nowcast für September bezog sich auf die Veröffentlichung am 6.11.; BIP Q3 ist für den 16.11. (08:50 JST) und der nationale VPI Oktober für den 20.11. (08:30 JST) vorgesehen."},"summary":{"heading":"Aktueller Stand (1. Nov. 2026 — veraltet)","text":"Erstlauf vom 1. November 2026, seither nicht aktualisiert. Urteil: Kern-VPI national (ohne Frischwaren) im Oktober etwa 2,1 % J/J (Modell R2 2,0 %; empirisches 68-%-Band um R2 1,8–2,2 %); Kern-Kern etwa 2,2 %. Reales BIP Q3 etwa −0,1 % Q/Q (Szenarioband −0,5 bis +0,3 %); die eigene Bridge-Gegenprobe über den Handel ergibt +0,25 % und dient nicht als Punktschätzung. Arbeitslosenquote Oktober 2,4 % (Urteil; September beobachtet 2,4 %, V). Der Oktober-Nowcast liegt klar unter dem Pfad, den die BoJ-Jahresprojektion impliziert (Outlook 30.10., Median Kern-VPI GJ 2026: 2,5 %). Leitzins am 30.10. unverändert bei etwa 1,25 % (8–1). Staff-Sicht, keine offizielle BoJ-Prognose. Beobachtung, eigene Hilfsrechnung und Urteil sind getrennt ausgewiesen. Keine BoJ-Modelle.","as_of":"2026-11-01","source":"BoJ Staff Desk, Erstlauf 1. Nov. 2026"},"nowcast_hint":"Alle Werte sind Nowcasts für bereits abgelaufene, am 1.11. noch nicht veröffentlichte Zeiträume. Empirische 68-%-Bänder nur beim VPI (n=11) und bei der BIP-Bridge (n=61); übrige Bänder sind Szenariobänder (Urteil).","nowcast_note":"Definitionen (Statistikamt, Basis 2025): Kern-VPI = Gesamtindex ohne Frischwaren. Kern-Kern-VPI = ohne Frischwaren und Energie. Für «ohne Lebensmittel und Energie» gibt es keinen Nowcast, weil die nationale Reihe in dieser Sitzung nicht abgerufen wurde. Vorheriger Nowcast: n/a (Erstlauf).","nowcasts":[{"id":"cpi-core","category":"inflation","variable":"Kern-VPI national (ohne Frischwaren), J/J","value":"2,1","unit":"%","quality":"d","status":"Urteil; Veröffentlichung 20.11.","period":"Okt. 2026 (Veröff. 20.11.2026, 08:30 JST)","interval":"Empirisch 68 % um R2: 1,8–2,2 % (RMSE 0,23 pp, n=11); Szenarioband Urteil 1,9–2,4 %","prior":"n/a (Erstlauf); national Sep. 2,1 % (V)","source":"Staff-Urteil; Modell R2 (Delta-Bridge) 2,0 %; Modell R1 (Persistenz) 2,1 %","as_of":"1. Nov. 2026","rationale":"Tokio-Kern Oktober 2,6 % (Sep. 2,7 %, V). Treiber: Energiesubventionsabbau (+), Reis/Lebensmittel (−). Kleine Stichprobe n=11; das 68-%-Band ist nur grob belastbar.","headline":true,"kpi_label":"Kern-VPI Okt., Urteil","kpi_note":"2,1 % · Modell R2 2,0 % · Stand 1.11., veraltet · Veröff. 20.11."},{"id":"cpi-corecore","category":"inflation","variable":"Kern-Kern-VPI national (ohne Frischwaren und Energie), J/J","value":"2,2","unit":"%","quality":"d","status":"Urteil; Veröffentlichung 20.11.","period":"Okt. 2026 (20.11.2026)","interval":"Empirisch 68 % um R2: 1,9–2,3 % (RMSE 0,20 pp, n=11); Szenarioband Urteil 2,0–2,4 %","prior":"n/a (Erstlauf); national Sep. 2,4 % (V)","source":"Staff-Urteil; Modell R2 2,1 %; Modell R1 2,4 %","as_of":"1. Nov. 2026","rationale":"Tokio-Kern-Kern 2,9 → 2,6 %; Lebensmittel ohne Frischwaren Tokio 3,6 → 3,0 % (V)."},{"id":"gdp-q3","category":"GDP","variable":"Reales BIP, Q/Q","value":"−0,1","unit":"%","quality":"d","status":"Urteil; Veröffentlichung 16.11.","period":"Q3 2026 (1. vorl. Schätzung, 16.11.2026, 08:50 JST)","interval":"Szenarioband −0,5 bis +0,3 %; empirisch 68 % um Bridge −0,2 bis +1,2 % (n=61)","prior":"n/a (Erstlauf)","source":"Staff-Urteil; Bridge (Handel) +0,25 % (eigene Hilfsrechnung, kein BoJ-Modell)","as_of":"1. Nov. 2026","rationale":"Konsum schwach, Importe stark, Industrieproduktion +0,3 % Q/Q (Industrieproduktion aus Sekundärquelle, U). Die Bridge ist kaum besser als ein naiver Mittelwert (RMSE 0,79 pp gegenüber 0,87) und dient nur als Gegenprobe, nicht als Punktschätzung. Annualisiert (nur ergänzend): −0,4 % (Szenarioband −2,0 bis +1,2 %), Umrechnung (1+q)^4−1.","headline":true,"kpi_label":"BIP Q3, Urteil","kpi_note":"−0,1 % Q/Q · Band −0,5 bis +0,3 · Bridge +0,25 % · Veröff. 16.11."},{"id":"cons","category":"GDP","variable":"Privater Konsum, Q/Q","value":"−0,3","unit":"%","quality":"d","status":"Urteil","period":"Q3 2026","interval":"Szenarioband −0,7 bis +0,1 %","prior":"n/a (Erstlauf)","source":"Staff-Urteil; BoJ-Konsumaktivitätsindex Jul.–Aug. −0,6 % gegenüber Q2 (V)","as_of":"1. Nov. 2026","rationale":"Harte Konsumdaten sind schwächer als der qualitative Sakura-Befund. Haushaltsausgaben August real −3,1 % J/J (9. Minus in Folge, V)."},{"id":"nx","category":"GDP","variable":"Außenbeitrag, Beitrag in Prozentpunkten","value":"−0,4","unit":"pp","quality":"d","status":"Urteil; Hilfsrechnung −0,38","period":"Q3 2026","interval":"Szenarioband −0,8 bis 0,0 pp","prior":"n/a (Erstlauf)","source":"Staff-Urteil; eigene Hilfsrechnung −0,38 aus BoJ-Reihen für reale Exporte (+1,0 %) und Importe (+4,0 %) Q/Q","as_of":"1. Nov. 2026","rationale":"Starker Importanstieg. Unternehmensinvestitionen (ohne Wohnbau) +0,5 % Q/Q (Urteil, Band −0,5 bis +1,5); Wohnbau 0,0 % (keine Indikatoren abgerufen); private Lager +0,1 pp (Urteil)."},{"id":"ur","category":"labour","variable":"Arbeitslosenquote (saisonbereinigt)","value":"2,4","unit":"%","quality":"d","status":"Urteil; Veröffentlichung 1.12.","period":"Okt. 2026 (LFS, 01.12.2026, 08:30 JST)","interval":"Szenarioband 2,3–2,6 %","prior":"Sep. 2,4 %, Aug. 2,5 % (V)","source":"Staff-Urteil; LFS September (stat.go.jp, 30.10.)","as_of":"1. Nov. 2026","rationale":"Tankan-Beschäftigungs-DI −38. Erwerbstätige September +0,33 Mio. auf 68,96 Mio. (Höchststand seit 1953, V). Urteil Oktober: +0,30 Mio. (Band +0,15 bis +0,45).","headline":true,"kpi_label":"Arbeitslosenquote Okt., Urteil","kpi_note":"2,4 % · Band 2,3–2,6 · Sep. beobachtet 2,4 % · Veröff. 1.12."},{"id":"jobs","category":"labour","variable":"Stellenangebote je Bewerber (saisonbereinigt)","value":"1,19","unit":"","quality":"d","status":"Urteil; Termin nicht verifiziert","period":"Okt. 2026","interval":"Szenarioband 1,17–1,21","prior":"Sep. 1,19 (+0,01) (V)","source":"Staff-Urteil; MHLW September, 30.10.","as_of":"1. Nov. 2026","rationale":"Neuangebote −0,4 % J/J, drittes Minus in Folge. Veröffentlichungstermin Oktober nicht verifiziert."},{"id":"wages","category":"labour","variable":"Nominallohn, Gesamtbarverdienst, J/J","value":"+3,5","unit":"%","quality":"d","status":"Urteil; Veröffentlichung war am 6.11. — nicht aktualisiert","period":"Sep. 2026 (MLS vorläufig, 06.11.2026, 08:30 JST)","interval":"Szenarioband +2,5 bis +4,5 %","prior":"Aug. final +3,9 % (V, 23.10.)","source":"Staff-Urteil, 1. Nov.","as_of":"1. Nov. 2026","rationale":"Tarifliche Grundvergütung September: Urteil +3,8 % (Band 3,3–4,2); August +3,8 % (V). Reallohn September: Urteil +1,1 % (Band 0,0–2,0), Annahme Deflator etwa 2,4 %. Dieser Nowcast wurde nach der fälligen Veröffentlichung am 6.11. nicht aktualisiert."},{"id":"rate","category":"policy","variable":"Leitzins (Policy-Zinssatz)","value":"etwa 1,25","unit":"%","quality":"V","status":"30.10. unverändert (8–1)","period":"Stand 30.10.2026","interval":"–","prior":"Anhebung auf etwa 1,0 % am 16.6.; auf etwa 1,25 % am 18.9. (7–2)","source":"BoJ-Statement 30.10.2026 (Volltext des Outlook Reports erst 2.11.)","as_of":"30.10.2026, abgerufen 1.11.","rationale":"Am 30.10. unverändert (8–1; ein Mitglied beantragte 1,5 %). Die BoJ will den Leitzins «weiter anheben». ETF-Verkäufe werden ab Jan. 2027 erhöht. Marktpreise aus Sekundärquellen sind auf dieser öffentlichen Seite nicht wiedergegeben.","headline":true,"kpi_label":"Leitzins","kpi_note":"etwa 1,25 % · 30.10. unverändert (8–1) · V"}],"baseline_hint":"Keine eigene Desk-Baseline. Offizielle Spalte: Outlook Report vom 30.10.2026, Median der Mehrheit der Board-Mitglieder (in Klammern Juli 2026).","baseline_note":"Die geplante Senkung der Verbrauchsteuer auf Lebensmittel ist in den BoJ-Projektionen nicht enthalten. Laut BoJ würde sie den Kern-VPI im GJ 2027 um 1,3 pp und den Kern-Kern-VPI um 1,4 pp senken. Eigene Näherung (d): für einen GJ-2026-Median von 2,5 % beim Kern-VPI müsste der Durchschnitt Oktober 2026 bis März 2027 bei etwa 3,3 % liegen (Apr.–Sep. Mittel 1,67 %). Der Oktober-Nowcast (2,1 %) liegt deutlich darunter.","baseline":[{"variable":"Reales BIP (BoJ-Outlook, GJ)","staff":"kein Desk-Pfad","previous":"–","change":"–","official":"GJ 2026: 0,7 % (Juli 0,6); GJ 2027: 0,7 % (Juli 0,8); GJ 2028: 0,8 % (Juli 0,8)","quality":"V","source":"Outlook Report 30.10.2026","as_of":"30.10.2026"},{"variable":"Kern-VPI (BoJ-Outlook, GJ)","staff":"Okt.-Nowcast 2,1 % liegt unter dem implizierten Winterpfad (d)","previous":"–","change":"–","official":"GJ 2026: 2,5 % (Juli 2,5); GJ 2027: 2,6 % (Juli 2,4); GJ 2028: 2,0 % (Juli 2,0)","quality":"V","source":"Outlook Report 30.10.2026","as_of":"30.10.2026"},{"variable":"Kern-Kern-VPI (BoJ-Outlook, GJ)","staff":"Okt.-Nowcast 2,2 %","previous":"–","change":"–","official":"GJ 2026: 2,4 % (Juli 2,5); GJ 2027: 2,7 % (Juli 2,6); GJ 2028: 2,3 % (Juli 2,2)","quality":"V","source":"Outlook Report 30.10.2026","as_of":"30.10.2026"}],"recent_hint":"Beobachtete Daten mit Stand 1. November 2026. Keine Aktualisierung nach den späteren Veröffentlichungsterminen.","recent_note":"Industrieproduktion, Einzelhandel und Shuntō-Endergebnis stammen teilweise aus Sekundärquellen (U), soweit unten so gekennzeichnet. Konsensumfragen und PMI-Werte sind nicht gezeigt.","recent_data":[{"release":"VPI national September (Basis 2025) — Statistikamt","date":"23.10.2026","quality":"V","actual":"Kern 2,1 % J/J; Kern-Kern 2,4 % J/J.","prior":"–","why":"Ausgangspunkt für den Oktober-Nowcast."},{"release":"VPI Tokio Oktober, vorläufig (Monatsmitte) — Statistikamt","date":"30.10.2026","quality":"V","actual":"Kern 2,6 % (Sep. 2,7 %); Kern-Kern 2,6 % (Sep. 2,9 %); Lebensmittel ohne Frischwaren 3,0 % (von 3,6 %). Energie in Tokio −1,9 → +2,2 % J/J (Subventionsabbau).","prior":"September wie angegeben","why":"Leitindikator, kein direkter Ersatz für den nationalen VPI."},{"release":"Arbeitskräfteerhebung September — Statistikamt","date":"30.10.2026","quality":"V","actual":"Arbeitslosenquote 2,4 % (Aug. 2,5 %); Erwerbstätige +0,33 Mio. auf 68,96 Mio.; Erwerbsquote 64,5 % (eigene Rechnung, d).","prior":"August ALQ 2,5 %","why":"Enger Arbeitsmarkt; Ausgangspunkt für den Oktober-Nowcast."},{"release":"Stellenangebote September — MHLW; Tankan September — BoJ","date":"30.10. bzw. 01.10.2026","quality":"V","actual":"Stellenquote 1,19; Neuangebote −0,4 % J/J. Tankan-Beschäftigungs-DI −38 (Prognose −41). Output-Lücke Q2 +0,55 % (BoJ, 5.10.).","prior":"–","why":"Knappheit überwiegend strukturell; leichte zyklische Abkühlung bei Neuangeboten."},{"release":"Monthly Labour Survey August, final — MHLW; Shuntō 2026","date":"MLS 23.10.2026; Shuntō-Endergebnis 3.7.2026 (U, Sekundärquellen)","quality":"V","actual":"MLS Aug.: Gesamtbarverdienst +3,9 %, tarifliche Grundvergütung +3,8 %, Sonderzahlungen +1,8 %, Reallohn +1,6 % (Deflator VPI ohne imputierte Mieten). Shuntō (U): insgesamt 5,01 %, Basislohn 3,50 %.","prior":"–","why":"Lohndynamik stützt eine Inflation um 2 %. Der September-Nowcast (Veröff. 6.11.) wurde nicht aktualisiert."},{"release":"Preise und Außenhandel — BoJ","date":"CGPI 13.10.; SPPI 27.10.; reale Exporte/Importe bis Sep.","quality":"V","actual":"Importpreise in Yen +24,5 % J/J (Vertragswährung +17,9 %); inländischer Erzeugerpreisindex +6,8 % J/J (Aug. 7,6 %); SPPI +3,7 % (ohne internat. Transport +2,9 %). Reale Exporte +1,0 %, reale Importe +4,0 % Q/Q.","prior":"–","why":"Kostendruck überwiegend importiert und energiebedingt; der Dienstleistungskanal trägt ebenfalls."}],"calendar_hint":"Termine laut e-Stat-Kalender, wie im Erstlauf festgehalten. Können kurzfristig geändert werden.","calendar_note":"MLS September war am 6.11. fällig; ein aktualisierter Desk-Stand liegt nicht vor. Der Termin der Stellenquote Oktober ist nicht verifiziert.","calendar":[{"date":"6. Nov. 2026","event":"Monthly Labour Survey, September (vorläufig)","time":"08:30 JST","why":"War am 6.11. fällig. Der Lohn-Nowcast vom 1.11. wurde nicht aktualisiert."},{"date":"10. Nov. 2026","event":"BoJ Summary of Opinions","time":"–","why":"Nach der Sitzung vom 30.10. Im Erstlauf angekündigt; auf dieser Seite nicht ausgewertet."},{"date":"16. Nov. 2026","event":"BIP Q3, 1. vorläufige Schätzung","time":"08:50 JST","why":"Prüft das Urteil von −0,1 % Q/Q. Zweite Schätzung 8.12."},{"date":"20. Nov. 2026","event":"VPI national, Oktober","time":"08:30 JST","why":"Prüft das Urteil von 2,1 % Kern / 2,2 % Kern-Kern."},{"date":"1. Dez. 2026","event":"Arbeitskräfteerhebung, Oktober","time":"08:30 JST","why":"Arbeitslosenquote und Erwerbstätigkeit."},{"date":"18. Dez. 2026","event":"Monetary Policy Meeting","time":"–","why":"Nächste Zinssitzung, im Erstlauf genannt. Keine Empfehlung."}],"staff_hint":"Staff-Sicht, getrennt von der Marktbewertung. Keine Handelsempfehlung. Keine BoJ-Modelle.","staff_view":{"lead":"Makro (Urteil, 1.11.): (1) Die Kerninflation dürfte im Oktober bei etwa 2 % bleiben und damit klar unter dem Pfad liegen, den die BoJ-Jahresprojektion impliziert. Der Aufwärtsimpuls aus Energie und Subventionsabbau wird durch Lebensmittel (Reis) gedämpft. (2) Die Lohndynamik ist mit etwa 3,5–4 % nominal und positiven Reallöhnen stark genug für eine Inflation um 2 %. (3) Die Realwirtschaft stagniert in Q3 (−0,1 % Q/Q) bei schwachem Konsum und negativem Außenbeitrag. Die Output-Lücke bleibt leicht positiv, der Arbeitsmarkt eng.","bullets":["Unterliegende Inflation (BoJ-Indikatoren, Sep., V): getrimmtes Mittel 2,47 %, gewichteter Median 1,62 %, Modalwert 1,6 %. Die Breite der Preisanstiege ist hoch (Anteil steigender Positionen 77,7 %), die Lagemaße liegen aber unter 2 %; die Nachhaltigkeit ist noch nicht eindeutig belegt.","Kostendruck überwiegend importiert und energiebedingt (Importpreise in Yen +24,5 % J/J, V); der Dienstleistungs- und Lohnkanal trägt mit etwa 3 % (SPPI) ebenfalls.","Shuntō 2026: Basislohnerhöhung 3,50 % kommt verzögert in den tariflichen Löhnen an (MLS August tarifliche Grundvergütung +3,8 %, V). Werte gleicher Betriebe (3,1 %) zeigen, dass die Gesamtrate durch Stichprobenrotation überzeichnet sein kann.","Arbeitsmarktenge überwiegend strukturell (Demografie, Dienstleistungen, Pflege); leichte zyklische Abkühlung bei Neuangeboten und stagnierender Stellenquote.","Leitzins etwa 1,25 %, am 30.10. unverändert (8–1). Die Bank will den Leitzins weiter anheben. Marktpreise aus Sekundärquellen sind hier nicht wiedergegeben. Das ist keine Handelsempfehlung."],"policy":"Beobachtung: Anhebungen auf etwa 1,0 % am 16.6.2026 und auf etwa 1,25 % am 18.9.2026 (7–2); am 30.10.2026 unverändert (8–1). JGB-Renditen (MOF, V, eigene Änderung in Basispunkten, bis 29.10.; 30.10. fehlt): 2 J. 1,939 → 1,901 (−3,8 bp), 5 J. 2,407 → 2,285 (−12,2), 10 J. 3,092 → 2,876 (−21,6), 30 J. 4,122 → 3,956 (−16,6). Der Zweijahressatz liegt 65 bp über dem Leitzins (d). Eine Laufzeitprämienzerlegung wurde nicht gerechnet. Keine Anlageempfehlung."},"charts":[],"caveats":["Datenstand: 1. November 2026 (Europe/Zurich). Dieser öffentliche Stand ist am 12. November veraltet; ein neuer Desk-Lauf liegt nicht vor. (d) = eigene Hilfsrechnung; Urteil = ökonomische Einschätzung; V = Primärquelle; U = Sekundärquelle.","Kleine Kalibrierungsstichprobe beim VPI: für die Tokio-Bridge nur n=11 Monatsfehler, weil die Zeitreihen von stat.go.jp nicht erreichbar waren. Das 68-%-Band ist grob. Lokale Tokio-Effekte (Ende der Wassergebührenbefreiung im September) verzerren die Bridge.","BIP-Nowcast schwach fundiert: die Bridge ist kaum besser als ein naiver Mittelwert (Out-of-Sample-RMSE 0,79 pp, n=61, gegenüber 0,87). Für den Wohnbau fehlen Indikatoren. Die öffentlichen Lager (Q2 −0,5 pp) sind ein großer, nicht modellierter Unsicherheitsfaktor. Industrieproduktion Q3 +0,3 % stammt aus einer Sekundärquelle (U).","Nicht abgerufen: nationaler VPI ohne Lebensmittel und Energie, MLS-Überstunden, Kassa-Wechselkurs, MOF-Emissionsplan, Nachfrage von Lebensversicherern und Ausländern, OIS-Kurve aus einer Primärquelle, JGB-Renditen vom 30.10. Eine Laufzeitprämienzerlegung wurde nicht gerechnet.","Annahme Reallohn: Deflator September (VPI ohne imputierte Mieten) etwa 2,4 %. Revisionsrisiken: BIP Q2 (2. vorläufig) und saisonbereinigte Reihen werden mit der Q3-Veröffentlichung revidiert. Die BoJ-Output-Lücke ist revisionsanfällig. Der Volltext des Outlook Reports erschien erst am 2.11.2026 — nach dem Datenstand dieses Laufs. Das Veröffentlichungsdatum der LFS September ist uneinheitlich angegeben (29. vs. 30.10.).","Termin der Stellenquote Oktober nicht verifiziert. Der Nominallohn-Nowcast für September bezog sich auf die Veröffentlichung am 6.11. und wurde nicht aktualisiert."],"excluded":[{"item":"Konsensumfragen und private Prognosemittel","reason":"Konsenswerte werden auf dieser öffentlichen Seite nicht gezeigt."},{"item":"PMI-Flash und andere lizenzierte Umfragedaten","reason":"Sekundär und/oder lizenziert; nicht gezeigt."},{"item":"OIS-Wahrscheinlichkeiten und Marktpreise aus Sekundärquellen","reason":"Instabil und nicht aus einer Primärquelle; im Quellenvermerk ausdrücklich nicht seriös bezifferbar ohne Primärkurve."},{"item":"Lizenzierte Bank-, Broker- und Privatdatensätze","reason":"Nur interne oder lizenzierte Inhalte werden nicht veröffentlicht."}],"gaps":["Stand: 1. November 2026 — veraltet. Kein neuer Desk-Stand bis zum 12. November.","MLS September war am 6.11. fällig; der Lohn-Nowcast wurde nicht aktualisiert.","BIP Q3 (16.11.) und nationaler VPI Oktober (20.11.) waren am 1.11. noch unveröffentlicht und sind es in diesem Stand weiterhin als Nowcast.","Kein Nowcast für den nationalen VPI ohne Lebensmittel und Energie.","Erstlauf: keine Zerlegung gegenüber einem vorherigen Nowcast."]} /*__EMBEDDED__*/;
+const THEME_KEY = "staff-desk-theme";
+
+const I18N = {
+  en: {
+    asOf: "As of", source: "Source", freshness: "Data freshness",
+    summary: "1 · Current state",
+    nowcast: "2 · Nowcasts",
+    baseline: "3 · Baseline",
+    recent: "4 · Key data since last update",
+    cal: "5 · Upcoming calendar",
+    staff: "6 · Staff view",
+    charts: "7 · Charts",
+    caveat: "⚠ Datenlage und Quellen – Vorbehalte",
+    qualityHint: "Figures keep their V / U / (d) labels. This page does not generate or randomise numbers.",
+    legendV: "V — verified from a primary document that was opened",
+    legendU: "U — unverified (secondary, undated, or not independently confirmed)",
+    legendD: "(d) — derived / own arithmetic from stated figures",
+    legendOwn: "own estimate — staff judgment",
+    colVariable: "Variable", colValue: "Nowcast / reading", colPeriod: "Period",
+    colStatus: "Status", colQuality: "Q", colInterval: "Interval",
+    colPrior: "Prior", colSource: "Source / as of", colRationale: "Rationale",
+    colStaff: "Staff baseline", colPrev: "Previous", colChange: "Change",
+    colOfficial: "Official projection",
+    colRelease: "Release", colActual: "Actual", colWhy: "Why it matters",
+    colDate: "Date", colEvent: "Release / event", colTime: "Europe/Zurich", colFocus: "Why it matters",
+    excluded: "Omitted from this public page",
+    gaps: "Gaps and stale items",
+    fine: "Staff-style research compilation only. Not official central-bank staff work and not a committee projection. Not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich. This page only renders figures already saved by the desk; it does not refresh or invent numbers.",
+    foot: "Public research pages · not investment advice",
+    home: "Inflation nowcasts",
+    ai: "AI token",
+    staffHome: "Staff desks",
+    dark: "Dark", light: "Light",
+    empty: "No rows in the source note.",
+    emptyCal: "No calendar in the source note.",
+    emptyBase: "No approved desk baseline in the source note.",
+    category: {GDP:"GDP", inflation:"Inflation", labour:"Labour", policy:"Policy rate"}
+  },
+  de: {
+    asOf: "Stand", source: "Quelle", freshness: "Datenstand",
+    summary: "1 · Aktueller Stand",
+    nowcast: "2 · Nowcasts",
+    baseline: "3 · Ausgangslage",
+    recent: "4 · Daten seit dem letzten Stand",
+    cal: "5 · Kalender",
+    staff: "6 · Staff-Einschätzung",
+    charts: "7 · Grafiken",
+    caveat: "⚠ Datenlage und Quellen – Vorbehalte",
+    qualityHint: "Alle Zahlen behalten ihre Kennzeichnung V / U / (d). Diese Seite erzeugt oder verändert keine Werte.",
+    legendV: "V — an einem Primärdokument geprüft",
+    legendU: "U — nicht verifiziert (sekundär, undatiert oder nicht unabhängig bestätigt)",
+    legendD: "(d) — eigene Ableitung / Rechnung aus genannten Werten",
+    legendOwn: "Urteil / eigene Schätzung — Staff-Einschätzung",
+    colVariable: "Zielgröße", colValue: "Nowcast / Wert", colPeriod: "Zeitraum",
+    colStatus: "Status", colQuality: "Q", colInterval: "Intervall",
+    colPrior: "Vorher", colSource: "Quelle / Stand", colRationale: "Begründung",
+    colStaff: "Staff-Baseline", colPrev: "Vorherige Baseline", colChange: "Änderung",
+    colOfficial: "Offizielle Projektion",
+    colRelease: "Veröffentlichung", colActual: "Ist", colWhy: "Relevanz",
+    colDate: "Datum", colEvent: "Veröffentlichung / Termin", colTime: "Europe/Zurich", colFocus: "Relevanz",
+    excluded: "Auf dieser öffentlichen Seite nicht gezeigt",
+    gaps: "Lücken und veraltete Punkte",
+    fine: "Nur eine Staff-Recherchezusammenstellung. Keine offizielle Arbeit der Notenbank und keine Ausschussprojektion. Keine Anlageempfehlung, kein Rating und kein Handelssignal. Zeiten in Europe/Zurich. Diese Seite stellt nur bereits gespeicherte Desk-Angaben dar; sie erzeugt oder aktualisiert keine Zahlen.",
+    foot: "Öffentliche Rechercheseiten · keine Anlageberatung",
+    home: "Inflation Nowcasts",
+    ai: "AI Token",
+    staffHome: "Staff-Desks",
+    dark: "Dunkel", light: "Hell",
+    empty: "Im Quellenvermerk keine Zeilen.",
+    emptyCal: "Im Quellenvermerk kein Kalender.",
+    emptyBase: "Im Quellenvermerk keine freigegebene Desk-Baseline.",
+    category: {GDP:"BIP", inflation:"Inflation", labour:"Arbeitsmarkt", policy:"Leitzins"}
+  }
+};
+
+function qs(id){ return document.getElementById(id); }
+function esc(s){
+  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+function qClass(q){
+  const t = String(q || "").trim();
+  if (t === "V") return "V";
+  if (t === "U") return "U";
+  return "d";
+}
+function qBadge(q){
+  const t = String(q || "").trim() || "U";
+  const cls = qClass(t);
+  const label = (t === "(d)" || t === "d" || cls === "d") && t !== "V" && t !== "U" ? "(d)" : t;
+  return `<span class="q ${cls}" title="Data quality">${esc(label)}</span>`;
+}
+function statusPill(s){
+  if (!s) return "";
+  const raw = String(s);
+  const k = raw.toLowerCase();
+  let cls = "";
+  if (/(missing|fehlt|veraltet|stale)/.test(k)) cls = "missing";
+  else if (/(pending|ausstehend)/.test(k)) cls = "pending";
+  else if (/(retained|beibehalten|updated|aktualisiert)/.test(k)) cls = "retained";
+  else if (/(own|urteil|schätzung|estimate)/.test(k)) cls = "own";
+  return ` <span class="pill ${cls}">${esc(raw)}</span>`;
+}
+function fmtWhen(iso, lang){
+  if (!iso) return "–";
+  if (/^\d{4}-\d{2}-\d{2}$/.test(iso)) {
+    const [y,m,d] = iso.split("-");
+    if (lang === "de") {
+      const months = ["Jan.","Feb.","März","Apr.","Mai","Juni","Juli","Aug.","Sep.","Okt.","Nov.","Dez."];
+      return `${Number(d)}. ${months[Number(m)-1]} ${y}`;
+    }
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return `${Number(d)} ${months[Number(m)-1]} ${y}`;
+  }
+  const d = new Date(iso);
+  if (isNaN(d)) return String(iso);
+  const loc = lang === "de" ? "de-CH" : "en-GB";
+  const fmt = new Intl.DateTimeFormat(loc, {
+    timeZone: "Europe/Zurich",
+    day: "numeric", month: "short", year: "numeric",
+    hour: "2-digit", minute: "2-digit", hour12: false
+  });
+  return fmt.format(d).replace(",", "") + " Europe/Zurich";
+}
+function setTheme(t){
+  document.documentElement.setAttribute("data-theme", t);
+  try { localStorage.setItem(THEME_KEY, t); } catch(e){}
+  const lang = document.documentElement.lang === "de" ? "de" : "en";
+  const L = I18N[lang];
+  qs("themeLbl").textContent = t === "dark" ? L.light : L.dark;
+}
+function initTheme(){
+  let t = "light";
+  try { t = localStorage.getItem(THEME_KEY) || t; } catch(e){}
+  setTheme(t);
+}
+function navHtml(desk, L){
+  const items = [
+    {href:"../", label:L.home, id:""},
+    {href:"../ai-token/", label:L.ai, id:""},
+    {sep:true},
+    {href:"../staff/", label:L.staffHome, id:"staff"},
+    {href:"../staff-fed/", label:"Fed", id:"fed"},
+    {href:"../staff-ecb/", label:"ECB", id:"ecb"},
+    {href:"../staff-boe/", label:"BoE", id:"boe"},
+    {href:"../staff-boj/", label:"BoJ", id:"boj"}
+  ];
+  return items.map(it => {
+    if (it.sep) return `<span class="sep"></span>`;
+    const on = it.id && it.id === desk ? " on" : (it.id === "staff" && !desk ? " on" : "");
+    return `<a class="${on.trim()}" href="${it.href}">${esc(it.label)}</a>`;
+  }).join("");
+}
+
+function renderKpis(data){
+  const rows = (data.nowcasts || []).filter(r => r.headline);
+  const el = qs("kpis");
+  if (!rows.length) { el.innerHTML = ""; return; }
+  el.innerHTML = rows.map(r => `
+    <div class="card ov-col">
+      <div class="ov-head">
+        <div class="ov-title"><b>${esc(r.kpi_label || r.variable)}</b><span>${esc(r.period || "")}</span></div>
+        ${qBadge(r.quality)}
+      </div>
+      <div class="big">${esc(r.value)}${r.unit ? `<small>${esc(r.unit)}</small>` : ""}</div>
+      <div class="yy">${esc(r.kpi_note || r.status || "")}</div>
+    </div>`).join("");
+}
+
+function groupRows(rows, lang){
+  const L = I18N[lang] || I18N.en;
+  const order = ["GDP","inflation","labour","policy"];
+  const groups = [];
+  const seen = new Set();
+  for (const key of order) {
+    const g = rows.filter(r => r.category === key);
+    if (g.length) { groups.push({key, label: L.category[key] || key, rows:g}); seen.add(key); }
+  }
+  const rest = rows.filter(r => !seen.has(r.category));
+  if (rest.length) groups.push({key:"other", label:"", rows:rest});
+  return groups;
+}
+
+function renderNowcasts(data, L, lang){
+  const rows = data.nowcasts || [];
+  if (!rows.length) { qs("nowcastTbl").innerHTML = `<p class="notice">${esc(L.empty)}</p>`; return; }
+  const groups = groupRows(rows, lang);
+  let html = `<table><thead><tr>
+    <th>${esc(L.colVariable)}</th>
+    <th class="r">${esc(L.colValue)}</th>
+    <th>${esc(L.colPeriod)}</th>
+    <th>${esc(L.colStatus)}</th>
+    <th>${esc(L.colInterval)}</th>
+    <th>${esc(L.colPrior)}</th>
+    <th>${esc(L.colSource)}</th>
+    <th>${esc(L.colRationale)}</th>
+  </tr></thead><tbody>`;
+  for (const g of groups) {
+    if (g.label) html += `<tr class="group"><td colspan="8">${esc(g.label)}</td></tr>`;
+    for (const r of g.rows) {
+      html += `<tr>
+        <td><div class="item-title">${esc(r.variable)}</div></td>
+        <td class="num r">${esc(r.value)}${r.unit ? " " + esc(r.unit) : ""}${qBadge(r.quality)}</td>
+        <td>${esc(r.period || "–")}</td>
+        <td>${statusPill(r.status)}</td>
+        <td>${esc(r.interval || "–")}</td>
+        <td>${esc(r.prior || "–")}</td>
+        <td><div>${esc(r.source || "–")}</div><div class="item-rel">${esc(r.as_of || "")}</div></td>
+        <td><div class="item-rel">${esc(r.rationale || "")}</div></td>
+      </tr>`;
+    }
+  }
+  html += `</tbody></table>`;
+  qs("nowcastTbl").innerHTML = html;
+  qs("nowcastNote").textContent = data.nowcast_note || "";
+}
+
+function renderBaseline(data, L){
+  const rows = data.baseline || [];
+  const sec = qs("baseline");
+  if (!rows.length) {
+    qs("baselineTbl").innerHTML = `<p class="notice">${esc(L.emptyBase)}</p>`;
+    qs("baselineNote").textContent = data.baseline_note || "";
+    return;
+  }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colVariable)}</th>
+    <th class="r">${esc(L.colStaff)}</th>
+    <th class="r">${esc(L.colPrev)}</th>
+    <th class="r">${esc(L.colChange)}</th>
+    <th class="r">${esc(L.colOfficial)}</th>
+    <th>${esc(L.colSource)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td><div class="item-title">${esc(r.variable)}</div></td>
+      <td class="num r">${esc(r.staff || "–")}${qBadge(r.quality || "d")}</td>
+      <td class="r">${esc(r.previous || "–")}</td>
+      <td class="r">${esc(r.change || "–")}</td>
+      <td class="r">${esc(r.official || "–")}</td>
+      <td><div>${esc(r.source || "–")}</div><div class="item-rel">${esc(r.as_of || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("baselineTbl").innerHTML = html;
+  qs("baselineNote").textContent = data.baseline_note || "";
+}
+
+function renderRecent(data, L){
+  const rows = data.recent_data || [];
+  if (!rows.length) { qs("recentTbl").innerHTML = `<p class="notice">${esc(L.empty)}</p>`; return; }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colRelease)}</th>
+    <th>${esc(L.colActual)}</th>
+    <th>${esc(L.colPrior)}</th>
+    <th>${esc(L.colWhy)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td><div class="item-title">${esc(r.release)}</div><div class="item-rel">${esc(r.date || "")}${r.quality ? qBadge(r.quality) : ""}</div></td>
+      <td>${esc(r.actual || "–")}</td>
+      <td>${esc(r.prior || "–")}</td>
+      <td><div class="item-rel">${esc(r.why || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("recentTbl").innerHTML = html;
+  qs("recentNote").textContent = data.recent_note || "";
+}
+
+function renderCal(data, L){
+  const rows = data.calendar || [];
+  if (!rows.length) { qs("calTbl").innerHTML = `<p class="notice">${esc(L.emptyCal)}</p>`; return; }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colDate)}</th>
+    <th>${esc(L.colEvent)}</th>
+    <th>${esc(L.colTime)}</th>
+    <th>${esc(L.colFocus)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td class="num">${esc(r.date)}</td>
+      <td><div class="item-title">${esc(r.event)}</div></td>
+      <td>${esc(r.time || "–")}</td>
+      <td><div class="item-rel">${esc(r.why || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("calTbl").innerHTML = html;
+  qs("calNote").textContent = data.calendar_note || "";
+}
+
+function renderStaff(data){
+  const sv = data.staff_view || {};
+  let html = "";
+  if (sv.lead) html += `<p>${esc(sv.lead)}</p>`;
+  if (sv.bullets && sv.bullets.length) {
+    html += "<ul>" + sv.bullets.map(b => `<li>${esc(b)}</li>`).join("") + "</ul>";
+  }
+  if (sv.policy) html += `<p>${esc(sv.policy)}</p>`;
+  qs("staffBody").innerHTML = html || `<p class="muted">–</p>`;
+  const t = sv.taylor;
+  if (t && (t.rows || t.note || t.result)) {
+    let th = `<table><thead><tr><th>${esc(t.title || "Taylor-type diagnostic (d)")}</th><th>Assumptions / inputs</th><th class="r">Result</th></tr></thead><tbody>`;
+    const rows = t.rows || [{inputs: t.assumptions || "", result: t.result || ""}];
+    for (const r of rows) {
+      th += `<tr><td>${esc(r.label || t.note || "Own calculation, not an optimal-policy estimate")}</td><td>${esc(r.inputs || t.assumptions || "")}</td><td class="r">${esc(r.result || t.result || "")}${qBadge("d")}</td></tr>`;
+    }
+    th += `</tbody></table>`;
+    qs("taylorTbl").innerHTML = th;
+  } else {
+    qs("taylorTbl").innerHTML = "";
+  }
+}
+
+function renderCharts(data){
+  const charts = data.charts || [];
+  const sec = qs("charts");
+  if (!charts.length) { sec.hidden = true; return; }
+  sec.hidden = false;
+  qs("chartGrid").innerHTML = charts.map(c => `
+    <div class="card">
+      <h3>${esc(c.title)}</h3>
+      <div class="sub" style="margin:4px 0 12px">${esc(c.subtitle || "")}</div>
+      <img class="chart-img" src="${esc(c.file)}" alt="${esc(c.title)}" width="1600" height="900">
+      <div class="cap-line">${esc(c.caption || "")}</div>
+    </div>`).join("");
+}
+
+function renderCaveats(data, L){
+  const bits = [];
+  const caveats = data.caveats || [];
+  if (caveats.length) {
+    bits.push("<ul>" + caveats.map(c => `<li>${esc(c)}</li>`).join("") + "</ul>");
+  }
+  const excl = data.excluded || [];
+  if (excl.length) {
+    bits.push(`<h3>${esc(L.excluded)}</h3><ul>` + excl.map(e => {
+      const item = typeof e === "string" ? e : e.item;
+      const reason = typeof e === "string" ? "" : e.reason;
+      return `<li>${esc(item)}${reason ? " — " + esc(reason) : ""}</li>`;
+    }).join("") + "</ul>");
+  }
+  const gaps = data.gaps || [];
+  if (gaps.length) {
+    bits.push(`<h3>${esc(L.gaps)}</h3><ul>` + gaps.map(g => `<li>${esc(g)}</li>`).join("") + "</ul>");
+  }
+  qs("caveatBody").innerHTML = bits.join("") || `<p>${esc(L.empty)}</p>`;
+  qs("caveatFine").textContent = L.fine;
+}
+
+function render(data){
+  const lang = data.lang === "de" ? "de" : "en";
+  document.documentElement.lang = lang;
+  const L = I18N[lang];
+  document.title = data.title || data.bot?.name || "Staff Desk";
+  qs("brandTitle").textContent = data.short_title || data.bot?.name || "Staff Desk";
+  qs("brandSub").textContent = data.subtitle || "";
+  qs("lblAsOf").textContent = L.asOf;
+  qs("lblSrc").textContent = L.source;
+  qs("lblFresh").textContent = L.freshness;
+  qs("asOf").textContent = data.as_of_display || fmtWhen(data.as_of, lang);
+  qs("srcFile").textContent = (data.source && data.source.label) || "–";
+  const fr = data.freshness || {};
+  qs("freshText").textContent = fr.label || "–";
+  qs("freshDot").className = "dot " + (fr.dot || "amber");
+  const banner = qs("banner");
+  if (fr.banner) {
+    banner.hidden = false;
+    banner.className = "banner " + (fr.dot === "red" ? "very-stale" : "stale");
+    banner.innerHTML = fr.banner;
+  } else {
+    banner.hidden = true;
+  }
+  qs("nav").innerHTML = navHtml(data.desk, L);
+  const theme = document.documentElement.getAttribute("data-theme") || "light";
+  qs("themeLbl").textContent = theme === "dark" ? L.light : L.dark;
+
+  qs("hSummary").textContent = L.summary;
+  qs("hNowcast").textContent = L.nowcast;
+  qs("hBaseline").textContent = L.baseline;
+  qs("hRecent").textContent = L.recent;
+  qs("hCal").textContent = L.cal;
+  qs("hStaff").textContent = L.staff;
+  qs("hCharts").textContent = L.charts;
+  qs("hCaveat").textContent = L.caveat;
+  qs("hintQuality").textContent = L.qualityHint;
+  qs("hintNowcast").textContent = data.nowcast_hint || "";
+  qs("hintBaseline").textContent = data.baseline_hint || "";
+  qs("hintRecent").textContent = data.recent_hint || "";
+  qs("hintCal").textContent = data.calendar_hint || "";
+  qs("hintStaff").textContent = data.staff_hint || "";
+  qs("hintCharts").textContent = data.charts_hint || "";
+
+  qs("legend").innerHTML = `
+    <span class="q V">V</span> ${esc(L.legendV)}
+    <span class="q U">U</span> ${esc(L.legendU)}
+    <span class="q d">(d)</span> ${esc(L.legendD)}
+    <span class="pill own">${esc(L.legendOwn)}</span>`;
+
+  renderKpis(data);
+  const sum = data.summary || {};
+  qs("stateBox").innerHTML = `
+    <div class="ov-head">
+      <div class="ov-title"><b>${esc(sum.heading || (lang==="de" ? "Aktueller Stand" : "Current state"))}</b>
+      <span>${esc(sum.source || "")}</span></div>
+    </div>
+    <div class="state-text">${esc(sum.text || "")}</div>
+    <div class="state-src">${esc(sum.as_of ? (lang==="de"?"Stand: ":"As of: ") + (data.as_of_display || fmtWhen(sum.as_of, lang)) : "")}</div>`;
+
+  renderNowcasts(data, L, lang);
+  renderBaseline(data, L);
+  renderRecent(data, L);
+  renderCal(data, L);
+  renderStaff(data);
+  renderCharts(data);
+  renderCaveats(data, L);
+
+  const home = `<a href="../">${esc(L.home)}</a> · <a href="../ai-token/">${esc(L.ai)}</a> · <a href="../staff/">${esc(L.staffHome)}</a>`;
+  qs("siteFoot").innerHTML = `${esc(L.foot)} · ${home}`;
+}
+
+async function load(){
+  let data = EMBEDDED;
+  try {
+    const r = await fetch("data/desk.json", {cache:"no-store"});
+    if (r.ok) data = await r.json();
+  } catch (e) {}
+  if (!data) {
+    qs("app").innerHTML = `<p class="notice">No desk data loaded.</p>`;
+    return;
+  }
+  render(data);
+}
+qs("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  setTheme(cur === "dark" ? "light" : "dark");
+});
+initTheme();
+load();
+</script>
+</body>
+</html>
