@@ -319,7 +319,9 @@
     ],
     "policy": "Beobachtung: Anhebungen auf etwa 1,0 % am 16.6.2026 und auf etwa 1,25 % am 18.9.2026 (7–2); am 30.10.2026 unverändert (8–1). JGB-Renditen (MOF, V, eigene Änderung in Basispunkten, bis 29.10.; 30.10. fehlt): 2 J. 1,939 → 1,901 (−3,8 bp), 5 J. 2,407 → 2,285 (−12,2), 10 J. 3,092 → 2,876 (−21,6), 30 J. 4,122 → 3,956 (−16,6). Der Zweijahressatz liegt 65 bp über dem Leitzins (d). Eine Laufzeitprämienzerlegung wurde nicht gerechnet. Keine Anlageempfehlung."
   },
+  "charts_hint": "Kein Nowcast-gegen-Ist-Chart. Nur die bereits im Erstlauf festgehaltenen kleinen Kalibrierungsstichproben.",
   "charts": [],
+  "charts_note": "Ein Nowcast-gegen-Ist-Backtest-Chart liegt nicht vor. Der Erstlauf vom 1. November 2026 hat keine gespeicherte Zeitreihe von Nowcast gegen spätere Ist-Werte hinterlassen. Im Quellenvermerk sind nur kleine Kalibrierungsstichproben festgehalten, die bereits auf dieser Seite genannt werden: für die Tokio-Bridge beim nationalen VPI nur n=11 Monatsfehler, RMSE des Modells R2 0,23 Prozentpunkte (Kerninflation ohne frische Lebensmittel) und 0,20 Prozentpunkte (ohne frische Lebensmittel und Energie), Stand 1. November 2026. Das 68-%-Band ist grob. Eine Inflations-Nowcast-Serie gegen die späteren Ist-Werte wurde nicht erzeugt, und es wurde kein neues Modell geschätzt.",
   "caveats": [
     "Datenstand: 1. November 2026 (Europe/Zurich). Dieser öffentliche Stand ist am 12. November veraltet; ein neuer Desk-Lauf liegt nicht vor. (d) = eigene Hilfsrechnung; Urteil = ökonomische Einschätzung; V = Primärquelle; U = Sekundärquelle.",
     "Kleine Kalibrierungsstichprobe beim VPI: für die Tokio-Bridge nur n=11 Monatsfehler, weil die Zeitreihen von stat.go.jp nicht erreichbar waren. Das 68-%-Band ist grob. Lokale Tokio-Effekte (Ende der Wassergebührenbefreiung im September) verzerren die Bridge.",
@@ -351,6 +353,7 @@
     "MLS September war am 6.11. fällig; der Lohn-Nowcast wurde nicht aktualisiert.",
     "BIP Q3 (16.11.) und nationaler VPI Oktober (20.11.) waren am 1.11. noch unveröffentlicht und sind es in diesem Stand weiterhin als Nowcast.",
     "Kein Nowcast für den nationalen VPI ohne Lebensmittel und Energie.",
-    "Erstlauf: keine Zerlegung gegenüber einem vorherigen Nowcast."
+    "Erstlauf: keine Zerlegung gegenüber einem vorherigen Nowcast.",
+    "Kein Inflations-Nowcast-gegen-Ist-Backtest-Chart: der Erstlauf vom 1. November 2026 hat keine gespeicherte Nowcast-Ist-Zeitreihe hinterlassen, nur eine kleine Kalibrierungsstichprobe (n=11)."
   ]
 }

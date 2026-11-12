@@ -321,14 +321,83 @@
     ],
     "policy": "Deposit facility rate 2.50%. Inflation outlook: above the September MPE near term, energy-driven, risks balanced to slightly up medium term. Underlying inflation: core stable or easing. Transmission: no new credit data since 27 Oct (NFC loans 4.2% in September). Market pricing: n/a, not fetched. Policy read unchanged versus 4 Nov."
   },
-  "charts": [],
+  "charts_hint": "Wage tracker: ECB Data Portal series fetched 6 Nov 2026 (press release 4 Nov). Backtest: inflation-nowcast model, 6 Nov 2026, pseudo out-of-sample, current vintage (not real-time).",
+  "charts": [
+    {
+      "file": "charts/ecb_wage_tracker_2026-11-06.png",
+      "wide": true,
+      "title": "ECB Forward-Looking Wage Tracker",
+      "subtitle": "Euro-area negotiated wages, annual rate of change, including and excluding one-off payments. Forward-looking observations (E) are the ECB wage tracker’s own path, not a staff forecast; they are revisable as coverage rises (September 2027 coverage 22.9%).",
+      "caption": "Source: ECB Data Portal, series EWT.M.U2.N.WT.INWS._T.4F0.GY (headline, including one-offs), EWT.M.U2.N.WT.INWX._T.4F0.GY (excluding one-offs) and EWT.M.U2.N.WT.COVR._T.4F0._Z (coverage). ECB press release 4 Nov 2026 (agreements to mid-October 2026). Fetched 6 Nov 2026; not re-fetched for this page. As of 6 Nov 2026. The path points H2 2026 2.7%, H1 2027 2.8%, Q3 2027 2.41% and September 2027 2.18% are those already cited by the ECB Staff Desk (averages of the monthly headline series; the press release rounds the Q3 2027 average to 2.4%). Quality: V."
+    },
+    {
+      "file": "charts/ea_hicp_nowcast_vs_actual_2026-11-06.png",
+      "wide": true,
+      "title": "Euro-area HICP nowcast vs actual — pseudo out-of-sample backtest",
+      "subtitle": "Staff inflation-nowcast model, current vintage (not real-time). Full sample shown (February 2023–October 2026, n=45). This is the model’s historical error, not a track record of the staff-judgment nowcasts in the table above.",
+      "caption": "Source: staff inflation-nowcast model, already-produced pseudo out-of-sample backtest (current vintage, not real-time). As of 6 Nov 2026, 10:46 Europe/Zurich (report timestamp 2026-11-06T09:46:12Z). Actuals: Eurostat HICP, current vintage, non-seasonally adjusted, percent month-on-month. The chart is drawn from the already-produced step file; RMSE, MAE and related figures are taken from the already-produced backtest report (same rounding) and its summary JSON. No new model was estimated. Euro-area I25 history is short; the sample starts in 2023. Headline, core and food use a deseasonalised AR(1) plus a month seasonal (production-aligned); energy uses a fuels bridge. A seasonal naïve benchmark has a slightly lower RMSE than the model for headline (0.302 vs 0.318) and for core (0.198 vs 0.214), as already recorded in the backtest report. A quasi-real-time evaluation against Flash releases was also produced (n=10) and was marked in that report as not meaningful because n is below 12; it is not shown. Quality of error statistics: (d).",
+      "stats": [
+        {
+          "series": "Headline, NSA",
+          "n": "45",
+          "rmse": "0.318",
+          "mae": "0.270",
+          "rw_rmse": "0.497",
+          "seasonal_rmse": "0.302",
+          "dir_hit": "82.2%",
+          "cov80": "90.5%",
+          "unit": "pp m/m",
+          "quality": "(d)"
+        },
+        {
+          "series": "Core, NSA",
+          "n": "45",
+          "rmse": "0.214",
+          "mae": "0.174",
+          "rw_rmse": "0.760",
+          "seasonal_rmse": "0.198",
+          "dir_hit": "97.8%",
+          "cov80": "77.8%",
+          "unit": "pp m/m",
+          "quality": "(d)"
+        },
+        {
+          "series": "Food, NSA",
+          "n": "45",
+          "rmse": "0.361",
+          "mae": "0.237",
+          "rw_rmse": "0.379",
+          "seasonal_rmse": "0.422",
+          "dir_hit": "82.2%",
+          "cov80": "77.8%",
+          "unit": "pp m/m",
+          "quality": "(d)"
+        },
+        {
+          "series": "Energy, NSA",
+          "n": "45",
+          "rmse": "1.258",
+          "mae": "0.941",
+          "rw_rmse": "2.068",
+          "seasonal_rmse": "2.323",
+          "dir_hit": "80.0%",
+          "cov80": "85.7%",
+          "unit": "pp m/m",
+          "quality": "(d)"
+        }
+      ],
+      "note": "Units are percentage points, month-on-month, not seasonally adjusted. Coverage of 80% uses full-sample error quantiles (informative, not expanding sequential bands), as stated in the backtest report."
+    }
+  ],
+  "charts_note": "",
   "caveats": [
     "Report date 12 Nov 2026, ~07:50 CET; data cut-off 11 Nov 2026, 17:55 CET. Update of existing notes only; no new analysis. (d) = derived; own estimate = staff judgment, about ±0.3 pp as stated in the note; V = verified from a primary source this cycle; U = unverified or secondary.",
     "Q4 HICP of about 3.8–3.9% is an own estimate and is still pending; the baseline remains about 4.0 (4 Nov). The energy pass-through rule used in earlier work (0.3–0.5 pp per 10% in Brent) is unverified and, in the note, is described as likely too high at USD 90+.",
     "Energy prices come from a delayed secondary source (U). The German final HICP is from a search-index copy of Destatis PR 392 (U); the live page timed out.",
     "Euro-area GDP excluding Ireland and retail Q3 are derived (d). The Irish GDP figure is an estimate (e) and is volatile. The t+45 GDP release on 13 Nov may revise Q3.",
     "Eurostat and ECB figures (wages, CES, national accounts) date from fetches on 4–6 Nov and were not re-fetched on 12 Nov.",
-    "Release coverage gap: national activity data and surveys from 5–11 Nov are not in the Staff Desk files and were not fetched. Survey-consensus values are not shown and, in the note, were missing for every release since 5 Nov other than one item omitted here."
+    "Release coverage gap: national activity data and surveys from 5–11 Nov are not in the Staff Desk files and were not fetched. Survey-consensus values are not shown and, in the note, were missing for every release since 5 Nov other than one item omitted here.",
+    "The euro-area HICP nowcast-versus-actual chart and its error statistics come from the staff inflation-nowcast model’s already-produced pseudo out-of-sample backtest of 6 Nov 2026, 10:46 Europe/Zurich (current vintage, not real-time; n=45; ends at October 2026). It is not a track record of the staff-judgment nowcasts in the table. A seasonal naïve benchmark has a slightly lower RMSE than the model for headline and core, as already recorded in that report. The wage-tracker chart uses the ECB Data Portal series fetched on 6 Nov 2026 (press release 4 Nov 2026) and was not re-fetched; forward-looking observations (E) are the ECB’s path, not a staff forecast, and are revisable as coverage rises."
   ],
   "excluded": [
     {
@@ -338,6 +407,10 @@
     {
       "item": "Survey-consensus figures and surprise-versus-consensus calculations",
       "reason": "Consensus values are not published here."
+    },
+    {
+      "item": "Private business-survey (PMI) figures",
+      "reason": "Licensed survey data are not shown on this public page."
     },
     {
       "item": "Licensed bank, broker and private-survey datasets",

@@ -16,3 +16,5 @@ Ausgelassen: Konsensumfragen, PMI-Flash, OIS-Wahrscheinlichkeiten aus Sekundärq
 Quality labels: **V** verified, **U** unverified, **(d)** derived, **own estimate** = staff judgment.
 
 This page is a staff-style research compilation, not official central-bank staff work. Not investment advice. After editing the JSON, run `python3 ../_build/build.py` and `python3 ../_build/leak_check.py`.
+
+Kein Inflations-Nowcast-gegen-Ist-Backtest-Chart: der Erstlauf vom 1. November 2026 hat keine gespeicherte Nowcast-Ist-Zeitreihe hinterlassen, nur eine kleine Kalibrierungsstichprobe (n=11), die auf der Seite genannt wird.

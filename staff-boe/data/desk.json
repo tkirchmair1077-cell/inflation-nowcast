@@ -330,6 +330,7 @@
       "caption": "Sources: ONS QNA (30 Sep 2026), MM23 (21 Oct 2026); Bank of England MPR November 2026 (5 Nov 2026). Nowcasts: own estimate, approximate 68% bands. The chart also shows BoE staff Q3 GDP at 0.7% and the BoE survey-indicator model at 0.2%, both from the November MPR. Cutoff 8 Nov 2026, 09:00 CET."
     }
   ],
+  "charts_note": "The BoE Staff Desk has not produced an inflation nowcast-versus-actual backtest. No historical nowcast-versus-outturn series and no calibrated error statistics are in the 8 Nov 2026 source note. The 68% ranges on this page are approximate judgment ranges, not calibrated model intervals. October CPI was still unpublished at the 8 Nov cutoff. The charts below compare a current nowcast with official Bank of England projections; that is not a backtest.",
   "caveats": [
     "Cutoff 8 Nov 2026, 09:00 CET (Europe/Zurich). This public page was assembled on 12 Nov and has not been refreshed with later releases. Observations, official projections and own estimates are distinct. The 68% ranges are approximate judgment ranges, not calibrated model intervals.",
     "September GDP, October CPI and July–September labour data were unpublished at the cutoff. Q3 and September GDP were scheduled for 12 Nov, 08:00 CET; this page does not include that release.",
@@ -337,7 +338,8 @@
     "Labour Force Survey estimates remain unusually uncertain; recent unemployment moves should not be over-interpreted.",
     "No approved desk baseline is available, and there is no complete consumption, investment, real-trade and productivity nowcast in this test report.",
     "The charts use ONS releases through October publication dates and Bank of England business-survey data through October; differing observation periods are labelled on the charts.",
-    "Survey-consensus figures are unavailable in the source and are not inferred. Private business-survey readings cited as secondary in the report are omitted from this public page."
+    "Survey-consensus figures are unavailable in the source and are not inferred. Private business-survey readings cited as secondary in the report are omitted from this public page.",
+    "No inflation nowcast-versus-actual backtest is available from the BoE Staff Desk. The 68% ranges are approximate judgment ranges, not calibrated model intervals. Stated on this page as of the 8 Nov 2026 cutoff."
   ],
   "excluded": [
     {
@@ -358,6 +360,7 @@
     "Q3 and September GDP were due 12 Nov and are not incorporated.",
     "October CPI (18 Nov) and labour-market data (17 Nov) were still unpublished at the cutoff.",
     "No approved desk baseline; incomplete demand-side nowcast in this test report.",
-    "A structured latest-data surprises table was only partially available from the saved report; the rows above are observed points that could be confirmed, not a reconstructed surprises table."
+    "A structured latest-data surprises table was only partially available from the saved report; the rows above are observed points that could be confirmed, not a reconstructed surprises table.",
+    "No inflation nowcast-versus-actual backtest has been produced by the BoE Staff Desk."
   ]
 }

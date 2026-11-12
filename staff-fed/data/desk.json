@@ -333,14 +333,76 @@
       ]
     }
   },
-  "charts": [],
+  "charts_hint": "Inflation-nowcast model backtest of 6 Nov 2026. Pseudo out-of-sample, current vintage (not real-time). Not a track record of the staff-judgment figures in the nowcast table.",
+  "charts": [
+    {
+      "file": "charts/us_cpi_nowcast_vs_actual_2026-11-06.png",
+      "wide": true,
+      "title": "US CPI nowcast vs actual — pseudo out-of-sample backtest",
+      "subtitle": "Staff inflation-nowcast model, current vintage (not real-time). The chart shows 2018–September 2026; the error statistics are the full-sample figures from the already-produced 6 Nov 2026 backtest report (February 2005–September 2026, n=257). This is the model’s historical error, not a track record of the staff-judgment nowcasts in the table above.",
+      "caption": "Source: staff inflation-nowcast model, already-produced pseudo out-of-sample backtest (report label: current vintage, not real-time). As of 6 Nov 2026, 10:46 Europe/Zurich (report timestamp 2026-11-06T09:46:12Z). Actuals: BLS CPI, current vintage, seasonally adjusted, percent month-on-month. The chart is drawn from the already-produced step file; RMSE, MAE and related figures are taken from the already-produced backtest report (same rounding) and its summary JSON. No new model was estimated. This backtest uses revised history, not a real-time vintage. The model in this backtest is a univariate AR(1) on each component’s month-on-month SA series; in production the food component uses persistence and the energy component a gasoline bridge. The October 2025 CPI publication gap, and the non-adjacent November 2025 month, are skipped (shaded band, September 2025–January 2026). US headline model RMSE in the 2023+ sub-period was 0.209 (n=42), as in the same report. A quasi-real-time evaluation against first-release actuals was also produced on 6 Nov 2026, 10:00 Europe/Zurich: US headline RMSE 0.275, n=138. The backtest ends at September 2026 and does not include the October CPI released on 10 Nov. Quality of error statistics: (d).",
+      "stats": [
+        {
+          "series": "Headline, SA",
+          "n": "257",
+          "rmse": "0.291",
+          "mae": "0.194",
+          "rw_rmse": "0.323",
+          "seasonal_rmse": "0.348",
+          "dir_hit": "84.8%",
+          "cov80": "79.8%",
+          "unit": "pp m/m",
+          "quality": "(d)"
+        },
+        {
+          "series": "Core, SA",
+          "n": "257",
+          "rmse": "0.113",
+          "mae": "0.076",
+          "rw_rmse": "0.120",
+          "seasonal_rmse": "0.151",
+          "dir_hit": "97.7%",
+          "cov80": "79.8%",
+          "unit": "pp m/m",
+          "quality": "(d)"
+        },
+        {
+          "series": "Food, SA",
+          "n": "257",
+          "rmse": "0.209",
+          "mae": "0.150",
+          "rw_rmse": "0.222",
+          "seasonal_rmse": "0.294",
+          "dir_hit": "85.2%",
+          "cov80": "79.8%",
+          "unit": "pp m/m",
+          "quality": "(d)"
+        },
+        {
+          "series": "Energy, SA",
+          "n": "257",
+          "rmse": "3.110",
+          "mae": "2.155",
+          "rw_rmse": "3.654",
+          "seasonal_rmse": "3.485",
+          "dir_hit": "59.9%",
+          "cov80": "79.8%",
+          "unit": "pp m/m",
+          "quality": "(d)"
+        }
+      ],
+      "note": "Units are percentage points, month-on-month, seasonally adjusted. Coverage of 80% uses full-sample error quantiles (informative, not expanding sequential bands), as stated in the backtest report."
+    }
+  ],
+  "charts_note": "",
   "caveats": [
     "Checked 12 Nov 2026, ~07:40 Europe/Zurich (CET). (d) = own derivation; own estimate = staff judgment; V = checked against a primary source this run or, for rounded BLS NFP, productivity and CPI figures, carried from the 6 Nov Page and the 10 Nov staff CPI draft (BLS pages not re-opened this morning); U = secondary or not independently re-checked.",
     "MISSING: claims for the week ended 7 Nov (due 12 Nov, 14:30 Zurich). No New York Fed Staff Nowcast after 6 Nov in the official file. Current Treasury yields, a single verified December hike probability, and a reconciled post-CPI market reaction are n/a.",
     "BLS published no October CPI year-on-year change (October 2025 gap). Unrounded CPI 0.350 / 0.296 (d) is carried from the 10 Nov staff draft’s API derivation, not re-fetched on 12 Nov.",
     "The University of Michigan primary page does not timestamp the release; secondary news reports date it 6 Nov, not 9 Nov (U).",
     "Q3 credit-card 90+ delinquency 12.9% remains U, not re-verified.",
-    "Atlanta GDPNow and the New York Fed Staff Nowcast are model outputs, not official FOMC forecasts. Taylor figures are carried, not recalculated, and are not optimal-policy estimates."
+    "Atlanta GDPNow and the New York Fed Staff Nowcast are model outputs, not official FOMC forecasts. Taylor figures are carried, not recalculated, and are not optimal-policy estimates.",
+    "The US CPI nowcast-versus-actual chart and its error statistics come from the staff inflation-nowcast model’s already-produced pseudo out-of-sample backtest of 6 Nov 2026, 10:46 Europe/Zurich. That backtest uses revised (current-vintage) history, not a real-time vintage, and is not a track record of the staff-judgment nowcasts in the table. It ends at September 2026 and does not include the October CPI released on 10 Nov."
   ],
   "excluded": [
     {
@@ -356,6 +418,10 @@
       "reason": "Unverified and conflicting; omitted."
     },
     {
+      "item": "Private business-survey (PMI) figures",
+      "reason": "Licensed survey data are not shown on this public page."
+    },
+    {
       "item": "Licensed bank, broker and private-survey datasets",
       "reason": "Internal-use or licensed material is not shown."
     }
@@ -363,6 +429,7 @@
   "gaps": [
     "Claims for the week ended 7 Nov were still unpublished at the 07:40 CET cutoff on 12 Nov.",
     "Core PCE staff baseline awaits the 13 Nov PPI before any reset decision.",
-    "Market yields and December policy odds were not available as a single verified series in this run."
+    "Market yields and December policy odds were not available as a single verified series in this run.",
+    "The inflation-nowcast model backtest on this page is dated 6 Nov 2026 and does not include the October CPI (released 10 Nov)."
   ]
 }

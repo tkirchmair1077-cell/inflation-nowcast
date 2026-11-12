@@ -16,3 +16,5 @@ Omitted: private business-survey (PMI) figures; survey-consensus figures; licens
 Quality labels: **V** verified, **U** unverified, **(d)** derived, **own estimate** = staff judgment.
 
 This page is a staff-style research compilation, not official central-bank staff work. Not investment advice. After editing the JSON, run `python3 ../_build/build.py` and `python3 ../_build/leak_check.py`.
+
+No inflation nowcast-versus-actual backtest has been produced by the BoE Staff Desk; the page states this visibly. The existing charts compare a current nowcast with official Bank of England projections, which is not a backtest.
