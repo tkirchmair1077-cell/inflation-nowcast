@@ -4,6 +4,7 @@ Publish set for GitHub Pages (`inflation-nowcast/`).
 
 - `index.html` — page (HTML + CSS + vanilla JS). Embeds a fallback copy of `data/desk.json` and, when served over HTTP, tries to fetch the JSON.
 - `data/desk.json` — figures and text from the desk’s saved note. Do not invent numbers.
+- `charts/` — US CPI nowcast-versus-actual backtest chart, drawn from the already-produced 6 Nov 2026 inflation-nowcast model backtest. No new model is estimated.
 - `README.md` — this file.
 
 **As of:** 12 Nov 2026, 07:40 Europe/Zurich
