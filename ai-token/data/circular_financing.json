@@ -5,16 +5,27 @@
     "name": "AI Circular Financing Alert Bot",
     "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
   },
-  "as_of": "2026-11-12T07:50:00+01:00",
+  "as_of": "2026-11-12T16:40:00+01:00",
   "timezone": "Europe/Zurich",
-  "title": "Circular Financing Watch, as of Thu 12 Nov 2026 ~07:50 Europe/Zurich",
+  "title": "Circular Financing Watch, as of Thu 12 Nov 2026 ~16:40 Europe/Zurich",
   "status": {
-    "current_user_alert": "Watch: Lambda / Nvidia (Anthropic contract termination right)",
-    "current_user_alert_as_of": "2026-11-12T07:50:00+01:00",
-    "summary": "The 12 Nov morning scan raised a Watch: Anthropic's 10 Nov S-1/A2 says its ~$34.9bn Lambda agreement is now terminable by either party after Lambda missed a facility-lease deadline (V). Anthropic says it does not intend to terminate. The independent check of the reported Nvidia lease and stake is pending. Neocloud equities extended their post-CoreWeave rally.",
-    "last_scan": "2026-11-12T07:50:00+01:00",
-    "last_independent_check": "2026-11-11T08:00:00+01:00",
+    "current_user_alert": "Elevated: Nvidia (CEO resignation) + neoclouds (Nebius guidance, sector sell-off)",
+    "current_user_alert_as_of": "2026-11-12T16:40:00+01:00",
+    "summary": "The 12 Nov US-session scan raised an Elevated alert. Nvidia's 8-K says Jensen Huang resigned as CEO and director effective 11 Nov; the CFO is interim CEO (V). On the same morning Nebius pushed revenue and ARR timing out (V), and neocloud shares fell sharply (U). No credit-market confirmation was found: there was no dated CDS print after 10 Nov.",
+    "last_scan": "2026-11-12T16:40:00+01:00",
+    "last_independent_check": "2026-11-12T07:45:00+01:00",
     "outstanding_watches": [
+      {
+        "date": "2026-11-12",
+        "session": "PM",
+        "tier": "Elevated",
+        "node": "Nvidia / neoclouds (CoreWeave, Nebius)",
+        "headline": "Nvidia CEO resigned effective immediately (8-K); Nebius cut 2026 revenue to the low end of guidance and moved its ARR target out by about two months; Nvidia-backed neocloud equities sold off.",
+        "quality": "V",
+        "note": "The filings are V. Share moves are U (press reports). There is no dated CDS or bond confirmation, and the independent check is pending.",
+        "tone": "negative",
+        "tone_source": "bot"
+      },
       {
         "date": "2026-11-12",
         "session": "AM",
@@ -51,11 +62,211 @@
     ]
   },
   "summary": {
-    "text": "Anthropic's S-1/A2 of 10 Nov says the ~$34.9bn August 2026 part of its ~$41.3bn Lambda compute commitment is now terminable by either party because Lambda missed a facility-lease deadline; no notice has been given, and Anthropic says it does not intend to terminate (V). Lambda is a neocloud renting Nvidia GPUs; reports say Nvidia is an investor and holds the lease on the ~350MW Texas site (U), which would make Nvidia the residual holder if the contract lapsed. The same filing puts Anthropic's total compute and infrastructure commitments at $900.9bn, with a $26bn concurrent equity placement by its suppliers (V). CoreWeave's Q3 8-K showed revenue of $3.661bn and interest expense of about 4.1× GAAP operating income (V, d); its shares closed sharply higher on 11 Nov as management ruled out new parent-level unsecured debt through 2027 at current yields (V, call transcript). OpenAI's reported ~$10bn Q3 revenue and the $11bn first close at a $1.25tn valuation remain unverified private figures (U). No dated CoreWeave or Oracle CDS level after 10 Nov was found.",
-    "as_of": "2026-11-12T07:50:00+01:00",
-    "source": "AI Circular Financing Alert Bot; SEC EDGAR (Anthropic S-1/A1 and S-1/A2, CoreWeave Q3 8-K and call transcript), Data Center Dynamics, Bloomberg/TechCrunch, CNBC"
+    "text": "Nvidia's 8-K says Jensen Huang resigned as CEO and director effective 11 Nov 2026, with the CFO as interim CEO and results still due 17 Nov (V). Nvidia sits at the centre of the loop through $99bn of equity investments plus $25bn of commitments and $3.5bn of AI-cloud lease guarantees as of 26 Jul (V). Nebius reported Q3 revenue of $0.98bn and capex of $7.3bn; it now sees 2026 revenue at the low end of $3.0–3.4bn and its ARR target about two months later (V). CoreWeave's Q3 10-Q shows top-customer concentration down to 30%/24% and $11.0bn of debt principal due in 2027 (V). Press reports put Nvidia about 7–12% lower and neoclouds about 7–20% lower in New York trading on 12 Nov (U). No dated CDS print after 10 Nov was available, so credit confirmation is missing.",
+    "as_of": "2026-11-12T16:40:00+01:00",
+    "source": "AI Alert US-session scan 12 Nov 2026 (~16:40 Europe/Zurich); primary SEC filings; independent check pending"
   },
   "items": [
+    {
+      "id": "nvidia-ceo-resignation",
+      "node": "Nvidia",
+      "type": "governance_event",
+      "title": "CEO Jensen Huang resigns; CFO Colette Kress interim CEO (8-K Item 5.02)",
+      "as_of": "2026-11-12",
+      "event_time": "2026-11-12T14:52:41+01:00",
+      "tier_relevance": "Elevated (with the Nebius / neocloud signal). This is a supplier-node shock, not a credit event.",
+      "tone": "negative",
+      "tone_source": "bot",
+      "relationship": "Nvidia is the main supplier-financier in the loop: it holds equity stakes in labs and neoclouds, AI-cloud capacity agreements, and lease guarantees. A leadership vacuum raises uncertainty over how those commitments are managed. The board says customer commitments continue without interruption.",
+      "counterparties": [
+        "OpenAI",
+        "Anthropic",
+        "CoreWeave",
+        "Nebius",
+        "Lambda"
+      ],
+      "figures": [
+        {
+          "label": "Resignation effective",
+          "value": "11 Nov 2026 (board acceptance)",
+          "unit": null,
+          "quality": "V",
+          "note": "Kress stays CFO while serving as interim CEO; Harvey C. Jones is the first board chair; Q3 FY27 results still 17 Nov."
+        },
+        {
+          "label": "Equity investments (26 Jul 2026)",
+          "value": 99,
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "Plus $25bn of equity investment commitments (Q2 FY27 10-Q)."
+        },
+        {
+          "label": "AI-cloud land/power/shell guarantees, maximum gross exposure",
+          "value": 3.5,
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "Q2 FY27 10-Q."
+        },
+        {
+          "label": "NVDA share move, 12 Nov morning (New York)",
+          "value": "about −12% at the open, about −7% later",
+          "unit": "%",
+          "quality": "U",
+          "note": "Reuters via Investing.com and NBC News; intraday, not a close."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nvidia 8-K, acc. 0001045810-26-000082",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm",
+          "kind": "primary"
+        },
+        {
+          "title": "Nvidia press release (Ex. 99.1)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+          "kind": "primary"
+        },
+        {
+          "title": "Nvidia Q2 FY27 10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "kind": "primary"
+        },
+        {
+          "title": "Reuters via Investing.com, 12 Nov",
+          "url": "https://www.investing.com/news/stock-market-news/nvidia-ceo-jensen-huang-to-step-down-in-big-blow-to-ai-boom-5021980",
+          "kind": "secondary"
+        }
+      ],
+      "notes": "The filing gives no reason. Press reports link the resignation to personal-conduct reports and an internal investigation (U). The 8-K and press release say nothing about changes to investment or guarantee commitments."
+    },
+    {
+      "id": "nebius-q3",
+      "node": "Nebius / neoclouds",
+      "type": "earnings",
+      "title": "Nebius Q3 2026: revenue up, 2026 at the low end, ARR target moved out",
+      "as_of": "2026-11-12",
+      "event_time": "2026-11-12T15:22:11+01:00",
+      "tier_relevance": "Part of the 12 Nov Elevated alert (neocloud node).",
+      "tone": "negative",
+      "tone_source": "bot",
+      "relationship": "Nvidia-backed neocloud. Revenue and capacity timing slipped (Microsoft New Jersey tranches moved to 2Q27). Mitigant: prepayments covered over 100% of capex on Q3 deals.",
+      "counterparties": [
+        "Nvidia",
+        "Microsoft",
+        "Meta"
+      ],
+      "figures": [
+        {
+          "label": "Q3 revenue",
+          "value": 0.981,
+          "unit": "USD billion",
+          "quality": "V"
+        },
+        {
+          "label": "Q3 purchases of PP&E and intangibles",
+          "value": 7.3,
+          "unit": "USD billion",
+          "quality": "V"
+        },
+        {
+          "label": "Q3 operating cash flow (continuing ops)",
+          "value": -0.273,
+          "unit": "USD billion",
+          "quality": "V"
+        },
+        {
+          "label": "2026 revenue guide",
+          "value": "low end of 3.0–3.4",
+          "unit": "USD billion",
+          "quality": "V"
+        },
+        {
+          "label": "ARR >$7bn target timing",
+          "value": "February 2027 (was December 2026)",
+          "unit": null,
+          "quality": "V"
+        },
+        {
+          "label": "2027 initial outlook (shareholder letter text)",
+          "value": "revenue 12–13, capex 40–45",
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "A slide in the same letter appears to show different figures in text extraction; still being checked."
+        },
+        {
+          "label": "Cash at quarter-end",
+          "value": 7.4,
+          "unit": "USD billion",
+          "quality": "V"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nebius 6-K Ex. 99.1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-1.htm",
+          "kind": "primary"
+        },
+        {
+          "title": "Nebius shareholder letter (Ex. 99.2)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-2.htm",
+          "kind": "primary"
+        }
+      ],
+      "notes": "Press reports say NBIS fell about 15–20% in early New York trading (U)."
+    },
+    {
+      "id": "coreweave-10q-q3",
+      "node": "CoreWeave",
+      "type": "filing",
+      "title": "Q3 2026 10-Q: customer concentration and debt maturities",
+      "as_of": "2026-11-12",
+      "event_time": "2026-11-12T13:20:41+01:00",
+      "tier_relevance": "Below Watch on its own. Concentration fell versus Q2.",
+      "tone": "neutral",
+      "tone_source": "bot",
+      "relationship": "Neocloud node. The top-customer share fell; heavy 2027 maturities remain. CRWV shares fell about 7–12% on 12 Nov after the Nvidia news (U).",
+      "counterparties": [
+        "OpenAI",
+        "Microsoft",
+        "Meta",
+        "Nvidia"
+      ],
+      "figures": [
+        {
+          "label": "Top two customers, share of Q3 revenue",
+          "value": "30 / 24",
+          "unit": "%",
+          "quality": "V",
+          "note": "Q2: 36 / 26 / 10."
+        },
+        {
+          "label": "Total debt principal (30 Sep 2026)",
+          "value": 47.505,
+          "unit": "USD billion",
+          "quality": "V"
+        },
+        {
+          "label": "Principal due 2027",
+          "value": 10.974,
+          "unit": "USD billion",
+          "quality": "V"
+        },
+        {
+          "label": "Committed contracts, share of revenue",
+          "value": 98,
+          "unit": "%",
+          "quality": "V"
+        }
+      ],
+      "sources": [
+        {
+          "title": "CoreWeave 10-Q Q3 2026, acc. 0001769628-26-000465",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+          "kind": "primary"
+        }
+      ],
+      "notes": "Covenants were in compliance at 30 Sep. An Nvidia capacity backstop was not found by keyword search (a negative finding, not proof of absence)."
+    },
     {
       "id": "coreweave-post-earnings-reaction",
       "node": "CoreWeave / neoclouds",
@@ -930,6 +1141,7 @@
     }
   ],
   "caveats": [
+    "12 Nov PM: share-price moves are intraday press figures (U). No dated CDS or bond print for Nvidia, CoreWeave, Oracle or Nebius was obtained after 10 Nov. The independent verification of the PM scan is pending.",
     "V means a primary document was opened in the saved independent checks (SEC filings, issuer IR, official BIS/ECB PDFs). U is secondary, anonymous, undated or not independently confirmed. (d) is an arithmetic combination of stated figures.",
     "No dated post-earnings CoreWeave CDS or 2031/2032 bond print was obtained after the 10 Nov 22:05 Europe/Zurich 8-K. Conflicting or undated secondary credit-market prints from commercial terminals or broker-sourced media are excluded; they are treated as a data gap.",
     "Debt totals depend on the definition (recourse vs non-recourse, whether leases are included). CoreWeave's $46.873bn is recourse + non-recourse only (d from V components).",
