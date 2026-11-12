@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.0",
+  "feed": "staff_desk",
+  "desk": "fed",
+  "lang": "en",
+  "bot": {
+    "name": "Fed Staff Desk",
+    "id": "e7dd0741-a00a-4b0d-8aa6-e2bf9fc3f8e8"
+  },
+  "title": "Fed Staff Desk — US nowcast (12 Nov 2026)",
+  "short_title": "Fed Staff Desk",
+  "subtitle": "United States · staff-style research view · not Fed Board staff work and not the FOMC SEP · public sources only · not investment advice",
+  "as_of": "2026-11-12T07:40:00+01:00",
+  "as_of_display": "12 Nov 2026, 07:40 Europe/Zurich",
+  "timezone": "Europe/Zurich",
+  "source": {
+    "label": "IPDeck_US_nowcast_note_2026-11-12.md",
+    "file": "IPDeck_US_nowcast_note_2026-11-12.md",
+    "prepared": "12 Nov 2026, morning Europe/Zurich. Data as of 5–10 Nov; nowcast pages checked ~07:40 CET."
+  },
+  "freshness": {
+    "status": "current",
+    "dot": "green",
+    "label": "Current — checked 12 Nov, 07:40",
+    "banner": null
+  },
+  "summary": {
+    "heading": "Current state",
+    "text": "Q4 growth trackers remain at or above the 6 Nov staff baseline of 3.0% SAAR (own estimate): Atlanta GDPNow 3.5% (V, 9 Nov; FRED 3.4810) and the New York Fed Staff Nowcast 2.94% (V, official file, 6 Nov). October payrolls (BLS, 6 Nov, V) showed NFP +165k and an unemployment rate of 4.1%, but U-6 rose to 7.9%. October CPI (BLS, 10 Nov, V) was +0.4% m/m sa and core +0.3% m/m; no 12-month change was published (October 2025 gap). The 3.2% core PCE Q4/Q4 staff baseline is retained, with judgmental upside risk of about 3.3–3.4% (own estimate), pending PPI on 13 Nov. Stance: hold at 3.75–4.00% with a tightening bias; a December hike remains live, not automatic (own estimate). Staff-style view, not Fed Board staff work and not the FOMC SEP (16 Sep medians).",
+    "as_of": "2026-11-12T07:40:00+01:00",
+    "source": "Fed Staff Desk note, 12 Nov 2026"
+  },
+  "nowcast_hint": "Model nowcasts are not official Reserve Bank or FOMC forecasts. Third-party inflation-nowcast model readings are omitted from this public page.",
+  "nowcast_note": "Pages checked 12 Nov ~07:40 CET: Atlanta GDPNow, FRED GDPNOW, and the New York Fed official Staff Nowcast file. No New York Fed vintage after 6 Nov. Early-quarter GDPNow has high revision risk. The 3.2% core PCE baseline is not reset ahead of PPI.",
+  "nowcasts": [
+    {
+      "id": "gdp-staff",
+      "category": "GDP",
+      "variable": "Q4 2026 GDP, SAAR (staff baseline)",
+      "value": "3.0",
+      "unit": "%",
+      "quality": "d",
+      "status": "own estimate, retained",
+      "period": "Q4 2026",
+      "interval": "–",
+      "prior": "2.0 (30 Oct)",
+      "source": "Staff judgment",
+      "as_of": "6 Nov, unchanged 12 Nov",
+      "rationale": "Judgmental staff baseline on the 6 Nov Page; not reset in the 12 Nov note. Near-term trackers sit at or above this level.",
+      "headline": true,
+      "kpi_label": "Q4 GDP, staff",
+      "kpi_note": "Own estimate, retained 6 Nov · SAAR"
+    },
+    {
+      "id": "gdpnow",
+      "category": "GDP",
+      "variable": "Q4 2026 GDP, SAAR (Atlanta GDPNow)",
+      "value": "3.5",
+      "unit": "%",
+      "quality": "V",
+      "status": "updated 9 Nov",
+      "period": "Q4 2026",
+      "interval": "–",
+      "prior": "3.4% (4 Nov)",
+      "source": "Atlanta GDPNow page and FRED GDPNOW (3.4810)",
+      "as_of": "9 Nov (FRED last updated 18:02 Europe/Zurich); next 17 Nov",
+      "rationale": "Mechanical expenditure bridge; the 9 Nov vintage includes wholesale trade. Early-quarter estimate, not a judgmental forecast. +0.5 pp vs staff 3.0% (d).",
+      "headline": true,
+      "kpi_label": "GDPNow",
+      "kpi_note": "Atlanta Fed, 9 Nov · FRED 3.4810 · V"
+    },
+    {
+      "id": "nyfed",
+      "category": "GDP",
+      "variable": "Q4 2026 GDP, SAAR (NY Fed Staff Nowcast)",
+      "value": "2.94",
+      "unit": "%",
+      "quality": "V",
+      "status": "as of 6 Nov",
+      "period": "Q4 2026",
+      "interval": "–",
+      "prior": "2.90% (30 Oct, same file)",
+      "source": "New York Fed official Staff Nowcast file, checked 12 Nov",
+      "as_of": "6 Nov; no later vintage in the official file",
+      "rationale": "Factor-model cross-check. Interactive page still unreadable. Close to the staff 3.0% baseline (−0.06 pp vs staff, d)."
+    },
+    {
+      "id": "gdp-q4q4",
+      "category": "GDP",
+      "variable": "2026 GDP, Q4/Q4",
+      "value": "2.7",
+      "unit": "%",
+      "quality": "d",
+      "status": "retained",
+      "period": "2026 Q4/Q4",
+      "interval": "–",
+      "prior": "2.4 (30 Oct)",
+      "source": "Staff bridge, 6 Nov; BEA 29 Oct",
+      "as_of": "6 Nov, unchanged 12 Nov",
+      "rationale": "Approximate bridge on the 6 Nov Page (earlier quarters held fixed). SEP 16 Sep median is 2.3%."
+    },
+    {
+      "id": "pce-base",
+      "category": "inflation",
+      "variable": "2026 PCE / core PCE, Q4/Q4 (staff baseline)",
+      "value": "3.7 / 3.2",
+      "unit": "%",
+      "quality": "d",
+      "status": "retained; core upside risk",
+      "period": "2026 Q4/Q4",
+      "interval": "core upside ~3.3–3.4, own estimate",
+      "prior": "3.7 / 3.2",
+      "source": "Staff, retained 6 Nov",
+      "as_of": "6 Nov; judgment 10–12 Nov",
+      "rationale": "Baseline unchanged. Judgmental upside risk of about 3.3–3.4% on core (own estimate); no mechanical reset, pending PPI on 13 Nov. SEP 16 Sep: 3.7 / 3.4.",
+      "headline": true,
+      "kpi_label": "PCE / core, staff",
+      "kpi_note": "Q4/Q4 baseline 3.2% · upside risk ~3.3–3.4, own estimate · pending PPI"
+    },
+    {
+      "id": "ur",
+      "category": "labour",
+      "variable": "Unemployment rate",
+      "value": "4.1",
+      "unit": "%",
+      "quality": "V",
+      "status": "BLS October; staff Q4 average also 4.1",
+      "period": "Oct 2026 / 2026 Q4 average",
+      "interval": "–",
+      "prior": "Sep 4.2%; staff previous 4.2",
+      "source": "BLS Employment Situation, 6 Nov; staff baseline 6 Nov",
+      "as_of": "6 Nov (BLS); baseline unchanged 12 Nov",
+      "rationale": "October UR 4.1% (V). Staff 2026 Q4 average is 4.1 (own estimate), in line with the SEP 16 Sep median. U-6 rose to 7.9%.",
+      "headline": true,
+      "kpi_label": "Unemployment",
+      "kpi_note": "BLS October · V · U-6 7.9%"
+    },
+    {
+      "id": "funds",
+      "category": "policy",
+      "variable": "Federal funds target range / staff year-end midpoint",
+      "value": "3.75–4.00",
+      "unit": "%",
+      "quality": "V",
+      "status": "hold, tightening bias",
+      "period": "Current (28 Oct decision) / 2026 year-end",
+      "interval": "Staff year-end midpoint 4.1 (retained)",
+      "prior": "Held 28 Oct, 10–2",
+      "source": "Fed statement, V, carried from the 6 Nov Page; staff path retained 6 Nov",
+      "as_of": "28 Oct decision; path unchanged 12 Nov",
+      "rationale": "Hold at 3.75–4.00% with a tightening bias. A December hike remains live, not automatic (own estimate). Staff year-end midpoint 4.1, same as the SEP 16 Sep median. No new numerical decision probability is assigned.",
+      "headline": true,
+      "kpi_label": "Policy rate",
+      "kpi_note": "Hold 3.75–4.00% · tightening bias · Dec hike live, not automatic"
+    }
+  ],
+  "baseline_hint": "Staff baselines from the 6 Nov Page, unchanged in the 12 Nov note. Official column is the FOMC SEP of 16 Sep (medians).",
+  "baseline_note": "2026 GDP Q4/Q4 bridge (d) is approximate (earlier quarters held fixed). Core PCE is not reset ahead of PPI. 2027 figures were set 30 Oct and retained 6 Nov.",
+  "baseline": [
+    {
+      "variable": "Q4 2026 GDP, SAAR",
+      "staff": "3.0 — own estimate",
+      "previous": "2.0 (30 Oct)",
+      "change": "+1.0 (d)",
+      "official": "n/a",
+      "quality": "d",
+      "source": "Staff judgment",
+      "as_of": "6 Nov, unchanged 12 Nov"
+    },
+    {
+      "variable": "2026 GDP, Q4/Q4",
+      "staff": "2.7 (d)",
+      "previous": "2.4",
+      "change": "+0.3 (d)",
+      "official": "2.3",
+      "quality": "d",
+      "source": "Staff bridge, 6 Nov; BEA 29 Oct",
+      "as_of": "6 Nov"
+    },
+    {
+      "variable": "2026 UR, Q4 average",
+      "staff": "4.1 — own estimate",
+      "previous": "4.2",
+      "change": "−0.1 (d)",
+      "official": "4.1",
+      "quality": "d",
+      "source": "Staff, 6 Nov; BLS October",
+      "as_of": "6 Nov"
+    },
+    {
+      "variable": "2026 PCE / core PCE, Q4/Q4",
+      "staff": "3.7 / 3.2",
+      "previous": "3.7 / 3.2",
+      "change": "0.0 (core upside risk ~3.3–3.4, own estimate)",
+      "official": "3.7 / 3.4",
+      "quality": "d",
+      "source": "Retained 6 Nov; judgment 10–12 Nov",
+      "as_of": "6 Nov, unchanged 12 Nov"
+    },
+    {
+      "variable": "2026 funds midpoint, year-end",
+      "staff": "4.1",
+      "previous": "4.1",
+      "change": "0.0",
+      "official": "4.1",
+      "quality": "d",
+      "source": "Staff conditional path, retained 6 Nov",
+      "as_of": "6 Nov"
+    },
+    {
+      "variable": "2027 GDP / UR / PCE / core / funds",
+      "staff": "1.8 / 4.4 / 2.4 / 2.6 / 4.4",
+      "previous": "unchanged (30 Oct)",
+      "change": "0.0",
+      "official": "2.4 / 4.1 / 2.3 / 2.5 / 4.1",
+      "quality": "d",
+      "source": "Staff 30 Oct, retained 6 Nov; SEP 16 Sep",
+      "as_of": "6 Nov"
+    }
+  ],
+  "recent_hint": "Official releases since 5 Nov. Survey-consensus figures are omitted from this public page.",
+  "recent_note": "Rounded BLS NFP, productivity and CPI figures are carried from the 6 Nov Page and the 10 Nov staff CPI draft (BLS pages not re-opened on the morning of 12 Nov). Unrounded CPI 0.350 / 0.296 (d) is from that 10 Nov draft’s BLS API derivation, not re-fetched on 12 Nov. Claims for the week ended 7 Nov were still missing at 07:40 CET.",
+  "recent_data": [
+    {
+      "release": "Q3 productivity — BLS",
+      "date": "5 Nov 2026",
+      "quality": "V",
+      "actual": "+3.6% SAAR / 2.1% y/y; unit labour costs −0.7% SAAR / +2.4% y/y",
+      "prior": "Q2 productivity +2.1% (revised), ULC +1.9%",
+      "why": "Supply improvement offsets some wage pressure."
+    },
+    {
+      "release": "Initial claims — FRED ICSA (DOL)",
+      "date": "Updated 5 Nov 2026",
+      "quality": "V",
+      "actual": "189k, week ended 31 Oct. Week ended 7 Nov: missing (due 12 Nov, 14:30 Zurich).",
+      "prior": "195k, week ended 24 Oct",
+      "why": "Layoffs still limited on the last published week."
+    },
+    {
+      "release": "October Employment Situation — BLS",
+      "date": "6 Nov 2026",
+      "quality": "V",
+      "actual": "NFP +165k; private +159k; 3-month average +137k (d); UR 4.1%; average hourly earnings +0.4% m/m, 3.1% y/y; Aug/Sep revisions +84k; U-6 7.9%; part-time for economic reasons +339k to 4.8m.",
+      "prior": "Sep NFP +60k (revised); UR 4.2%; U-6 7.6%",
+      "why": "Hiring upside; broader slack increased."
+    },
+    {
+      "release": "Michigan preliminary November — sca.isr.umich.edu",
+      "date": "Checked 12 Nov 2026 (figures V)",
+      "quality": "V",
+      "actual": "Sentiment 51.0; current 51.0; expectations 50.9; 1-year inflation 4.3% (from 4.7%); long-run 3.4% (from 3.5%). Interviews 20 Oct–2 Nov.",
+      "prior": "October final 48.0 / 46.7 / 48.8",
+      "why": "Soft-data bounce. The primary page does not timestamp the release; secondary news dates it 6 Nov, not 9 Nov (U)."
+    },
+    {
+      "release": "New York Fed SCE, October",
+      "date": "9 Nov 2026",
+      "quality": "V",
+      "actual": "Inflation 1y 3.9% / 3y 3.3% / 5y 3.0%, unchanged; mean probability that unemployment is higher: 45.3%, highest since April 2020; job-finding 46.5%; missed-payment probability 13.8%.",
+      "prior": "Inflation unchanged; unemployment-probability +1.4 pp",
+      "why": "Inflation expectations stable; labour anxiety mixed."
+    },
+    {
+      "release": "October CPI — BLS USDL-26-1685",
+      "date": "10 Nov 2026",
+      "quality": "V",
+      "actual": "+0.4% sa (0.350, d); core +0.3% (0.296, d). No 12-month change (October 2025 gap).",
+      "prior": "September +0.6% / core +0.3%",
+      "why": "Core still firm. Flags upside risk to the 3.2% core PCE baseline, pending PPI."
+    }
+  ],
+  "calendar_hint": "Dates from primary calendars as recorded in the 12 Nov note. Some times were not re-verified that morning.",
+  "calendar_note": "Claims for the week ended 7 Nov were already due at 14:30 Zurich on 12 Nov and were still missing at the 07:40 CET cutoff.",
+  "calendar": [
+    {
+      "date": "12 Nov 2026",
+      "event": "Claims, week ended 7 Nov",
+      "time": "14:30 (usual DOL Thursday time; calendar not re-verified on 12 Nov)",
+      "why": "Missing as of ~07:40 CET. Last FRED ICSA observation: 189k, 31 Oct."
+    },
+    {
+      "date": "13 Nov 2026",
+      "event": "October PPI",
+      "time": "14:30",
+      "why": "PCE pipeline; decision point for a core PCE baseline reset. BLS calendar (30 Oct check)."
+    },
+    {
+      "date": "17 Nov 2026",
+      "event": "Atlanta GDPNow update",
+      "time": "Publication time not verified",
+      "why": "Next scheduled Atlanta update (primary page, 9 Nov)."
+    },
+    {
+      "date": "25 Nov 2026",
+      "event": "Q3 GDP second estimate; October PCE",
+      "time": "14:30",
+      "why": "Growth revision and target inflation (BEA calendar, 30 Oct)."
+    },
+    {
+      "date": "4 Dec 2026",
+      "event": "November Employment Situation",
+      "time": "14:30",
+      "why": "Last scheduled jobs report before the FOMC (BLS, 6 Nov notice)."
+    },
+    {
+      "date": "8–9 Dec 2026",
+      "event": "FOMC with SEP",
+      "time": "Decision time not re-verified",
+      "why": "Policy path and new participant projections (Fed calendar)."
+    }
+  ],
+  "staff_hint": "Staff-style view, not Fed Board staff work and not the FOMC SEP.",
+  "staff_view": {
+    "lead": "Risk balance in the 12 Nov note: growth up near term, inflation up, pending PPI.",
+    "bullets": [
+      "Growth (near-term upside, own estimate): GDPNow 3.5% vs staff Q4 3.0%; the New York Fed 2.94% is close to baseline. Next-year downside (energy, real incomes, rate-sensitive demand) is unchanged (staff, 6 Nov).",
+      "Labour (mixed): payrolls and a 4.1% unemployment rate coexist with U-6 at 7.9%, low published claims, and SCE unemployment-probability at a post-2020 high.",
+      "Inflation (upside risk): October core CPI +0.3% m/m (BLS, V). The 3.2% core PCE Q4/Q4 baseline is retained, with judgmental upside risk of about 3.3–3.4% (own estimate), pending PPI on 13 Nov. Productivity and ECI still offset.",
+      "Credit / household finance: SLOOS (2 Nov) still shows weak C&I demand and tighter CRE and non-bank financial standards; SCE missed-payment probability 13.8% (V, 9 Nov). A Q3 credit-card 90+ delinquency reading of 12.9% remains U and was not re-verified.",
+      "Policy: hold-with-tightening-bias remains the central case; a December hike is live, not automatic (own estimate)."
+    ],
+    "policy": "Keep hold at 3.75–4.00% with a tightening bias. Stronger payrolls and a still-firm core CPI make the December hike-live case more compelling; better unit labour costs and mixed labour internals keep it from being automatic. The core PCE baseline is not reset ahead of PPI. No new numerical decision probability is assigned. The staff path remains separate from the 16 Sep SEP. Market pricing — current Treasury yields, post-CPI moves and December hike odds — is n/a as a single verified series in this run. Target range 3.75–4.00%, held 10–2 on 28 Oct (Fed statement, V, carried from the 6 Nov Page).",
+    "taylor": {
+      "title": "Taylor-type diagnostic (d)",
+      "note": "Carried from the 6 Nov Page; not recalculated on 12 Nov. Not optimal-policy estimates.",
+      "rows": [
+        {
+          "label": "Carried from the 6 Nov Page; not recalculated this run",
+          "inputs": "r* 1.2; u* 4.2 (SEP 16 Sep); u 4.1 (BLS Oct); gap +0.2 (d); π core 3.1 / headline 3.6 (BEA Sep, 29 Oct); midpoint 3.875 (Fed 28 Oct)",
+          "result": "6 Nov: core 4.95%; headline 5.70%; low-r* 4.25%; inertial 4.04%"
+        }
+      ]
+    }
+  },
+  "charts": [],
+  "caveats": [
+    "Checked 12 Nov 2026, ~07:40 Europe/Zurich (CET). (d) = own derivation; own estimate = staff judgment; V = checked against a primary source this run or, for rounded BLS NFP, productivity and CPI figures, carried from the 6 Nov Page and the 10 Nov staff CPI draft (BLS pages not re-opened this morning); U = secondary or not independently re-checked.",
+    "MISSING: claims for the week ended 7 Nov (due 12 Nov, 14:30 Zurich). No New York Fed Staff Nowcast after 6 Nov in the official file. Current Treasury yields, a single verified December hike probability, and a reconciled post-CPI market reaction are n/a.",
+    "BLS published no October CPI year-on-year change (October 2025 gap). Unrounded CPI 0.350 / 0.296 (d) is carried from the 10 Nov staff draft’s API derivation, not re-fetched on 12 Nov.",
+    "The University of Michigan primary page does not timestamp the release; secondary news reports date it 6 Nov, not 9 Nov (U).",
+    "Q3 credit-card 90+ delinquency 12.9% remains U, not re-verified.",
+    "Atlanta GDPNow and the New York Fed Staff Nowcast are model outputs, not official FOMC forecasts. Taylor figures are carried, not recalculated, and are not optimal-policy estimates."
+  ],
+  "excluded": [
+    {
+      "item": "Third-party inflation nowcast model readings (including any comparison of CPI or PCE to those model values)",
+      "reason": "Licensed or restricted content is not shown on this public page."
+    },
+    {
+      "item": "Survey-consensus figures and surprise-versus-consensus calculations",
+      "reason": "Consensus values are not published here."
+    },
+    {
+      "item": "Secondary unofficial PCE estimates from private accounts",
+      "reason": "Unverified and conflicting; omitted."
+    },
+    {
+      "item": "Licensed bank, broker and private-survey datasets",
+      "reason": "Internal-use or licensed material is not shown."
+    }
+  ],
+  "gaps": [
+    "Claims for the week ended 7 Nov were still unpublished at the 07:40 CET cutoff on 12 Nov.",
+    "Core PCE staff baseline awaits the 13 Nov PPI before any reset decision.",
+    "Market yields and December policy odds were not available as a single verified series in this run."
+  ]
+}

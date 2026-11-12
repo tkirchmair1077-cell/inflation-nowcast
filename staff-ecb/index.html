@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff Desk</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Staff-style research desk. Public sources only. Not official central-bank staff work. Not investment advice.">
+<style>
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f9fafc; --border:#e2e7ee; --border-strong:#cfd7e2;
+  --text:#0f1c30; --text-2:#56657c; --text-3:#8391a6; --grid:#e8ecf2;
+  --navy:#14305a; --navy-ink:#ffffff; --accent:#2f5d9e;
+  --green:#2e8b5a; --green-bg:#e7f4ec; --red:#c4514c; --red-bg:#fbebea; --amber:#a9741a; --amber-bg:#fdf2d9; --neutral-bg:#eef1f5;
+  --shadow:0 1px 2px rgba(15,28,48,.04);
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#0a111e; --surface:#111a2b; --surface-2:#0e1626; --border:#223149; --border-strong:#2f4262;
+  --text:#e5ebf4; --text-2:#9aabc3; --text-3:#6f819b; --grid:#1d2a40;
+  --navy:#3d6cb3; --navy-ink:#ffffff; --accent:#7ba5e6;
+  --green:#4cc08a; --green-bg:#12301f; --red:#ec7b76; --red-bg:#3a1a1a; --amber:#e3b25a; --amber-bg:#33280f; --neutral-bg:#18233a;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1360px;margin:0 auto;padding:0 28px}
+header.top{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--border)}
+.top-inner{display:flex;align-items:center;gap:20px;padding:14px 28px;max-width:1360px;margin:0 auto;flex-wrap:wrap}
+.brand{flex:1 1 260px;min-width:200px}
+.brand h1{margin:0;font-size:22px;font-weight:650;letter-spacing:-.01em;color:var(--text)}
+.brand .sub{color:var(--text-2);font-size:12.5px;margin-top:2px}
+.meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:var(--text-2);font-size:12.5px}
+.meta .lbl{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)}
+.meta .val{color:var(--text);font-weight:550}
+.fresh{display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--text-3);flex:none;box-shadow:0 0 0 3px rgba(128,140,160,.18)}
+.dot.green{background:var(--green);box-shadow:0 0 0 3px rgba(46,139,90,.18)}
+.dot.amber{background:#d9a21b;box-shadow:0 0 0 3px rgba(217,162,27,.2)}
+.dot.red{background:var(--red);box-shadow:0 0 0 3px rgba(196,81,76,.2)}
+.actions{display:flex;align-items:center;gap:10px}
+button{font:inherit;cursor:pointer}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border-strong);border-radius:8px;padding:9px 12px;font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.btn-ghost:hover{background:var(--neutral-bg)}
+.nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.nav a{display:inline-flex;align-items:center;padding:6px 11px;border-radius:8px;font-size:12.5px;font-weight:550;color:var(--text-2);text-decoration:none;border:1px solid transparent}
+.nav a:hover{background:var(--neutral-bg);color:var(--text)}
+.nav a.on{background:var(--navy);color:var(--navy-ink);border-color:transparent}
+.nav .sep{width:1px;height:16px;background:var(--border-strong);margin:0 4px}
+.banner{background:var(--amber-bg);border-bottom:1px solid var(--amber);color:var(--text);font-weight:600;text-align:center;padding:9px 16px;font-size:13px;line-height:1.45}
+.banner.stale{background:var(--amber-bg);color:var(--text)}
+.banner.very-stale{background:var(--red-bg);border-bottom-color:var(--red);color:var(--text)}
+.banner b{color:var(--amber)}
+.banner.very-stale b{color:var(--red)}
+main{padding:32px 0 20px}
+section{margin-bottom:44px;scroll-margin-top:84px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{margin:0;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-2);font-weight:650}
+.sec-head .hint{color:var(--text-3);font-size:12px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:20px}
+.card h3{margin:0;font-size:15px;font-weight:620}
+.card .sub{color:var(--text-2);font-size:12px}
+.ov-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.ov-title{display:flex;flex-direction:column}
+.ov-title b{font-size:13px;letter-spacing:.02em;color:var(--text-2);font-weight:620}
+.ov-title span{font-size:11.5px;color:var(--text-3)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:650;padding:3px 9px;border-radius:999px;border:1px solid var(--border-strong);color:var(--text-2);background:var(--neutral-bg);white-space:nowrap}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--text-3)}
+.badge.V,.badge.GREEN{color:var(--green);background:var(--green-bg);border-color:transparent}
+.badge.V::before,.badge.GREEN::before{background:var(--green)}
+.badge.U,.badge.YELLOW,.badge.WATCH{color:var(--amber);background:var(--amber-bg);border-color:transparent}
+.badge.U::before,.badge.YELLOW::before,.badge.WATCH::before{background:#d9a21b}
+.badge.d{color:var(--accent);background:var(--neutral-bg);border-color:transparent}
+.badge.d::before{background:var(--accent)}
+.badge.RED,.badge.stale{color:var(--red);background:var(--red-bg);border-color:transparent}
+.badge.RED::before,.badge.stale::before{background:var(--red)}
+.q{display:inline-flex;align-items:center;justify-content:center;min-width:22px;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:6px;vertical-align:1px;letter-spacing:.02em}
+.q.V{background:var(--green-bg);color:var(--green)}
+.q.U{background:var(--amber-bg);color:var(--amber)}
+.q.d{background:var(--neutral-bg);color:var(--accent)}
+.ov-col .k{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px}
+.ov-col .big{font-size:28px;font-weight:650;letter-spacing:-.02em;line-height:1.1}
+.ov-col .big small{font-size:13px;font-weight:500;color:var(--text-2);margin-left:3px;letter-spacing:0}
+.ov-col .yy{color:var(--text-2);font-size:12.5px;margin-top:6px;line-height:1.45}
+.legend-note{font-size:11.5px;color:var(--text-3);margin-top:10px}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);font-weight:650;text-align:left;padding:8px 12px;border-bottom:1px solid var(--border-strong);white-space:nowrap}
+td{padding:11px 12px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.num{font-weight:620;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tr.group td{background:var(--surface-2);font-weight:650;color:var(--text-2);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px}
+.item-title{font-weight:620;color:var(--text)}
+.item-rel{color:var(--text-2);font-size:12px;margin-top:3px;max-width:46rem;white-space:normal}
+.notes{margin-top:10px;font-size:12px;color:var(--text-2);line-height:1.55}
+.state-card{border-left:3px solid var(--navy)}
+.state-card .state-text{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--text)}
+.state-card .state-src{margin:10px 0 0;font-size:11.5px;color:var(--text-3);line-height:1.5}
+.staff-body{font-size:14px;line-height:1.65;margin:0}
+.staff-body p{margin:0 0 12px}
+.staff-body p:last-child{margin-bottom:0}
+.staff-body ul{margin:0 0 14px;padding-left:18px}
+.staff-body li{margin:0 0 6px}
+.chart-img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:var(--surface-2)}
+.cap-line{font-size:11.5px;color:var(--text-3);margin-top:8px;line-height:1.45}
+footer{margin:10px 0 48px}
+.caveat{border:1px solid var(--amber);background:var(--amber-bg);border-radius:12px;padding:18px 22px;color:var(--text)}
+.caveat h2{margin:0 0 8px;font-size:15px;color:var(--amber);letter-spacing:.01em}
+.caveat h3{margin:16px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+.caveat ul{margin:0;padding-left:18px;font-size:13px;line-height:1.65}
+.caveat .fine{margin-top:10px;font-size:11.5px;color:var(--text-2)}
+.notice{color:var(--text-2);font-size:13px;text-align:center;padding:16px}
+.muted{color:var(--text-2)}
+.pill{display:inline-flex;align-items:center;font-size:11px;font-weight:650;padding:2px 8px;border-radius:999px;background:var(--neutral-bg);color:var(--text-2);white-space:nowrap}
+.pill.pending{background:var(--amber-bg);color:var(--amber)}
+.pill.missing{background:var(--red-bg);color:var(--red)}
+.pill.stale{background:var(--red-bg);color:var(--red)}
+.pill.retained,.pill.updated{background:var(--green-bg);color:var(--green)}
+.pill.own{background:var(--neutral-bg);color:var(--accent)}
+.site-foot{margin:16px 0 0;font-size:12px;color:var(--text-3);text-align:center;line-height:1.55}
+.site-foot a{color:var(--accent);text-decoration:none}
+.site-foot a:hover{text-decoration:underline}
+.legend-row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:0 0 12px;font-size:12px;color:var(--text-2)}
+@media (max-width:1100px){
+  .grid4,.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 14px}
+  .top-inner{padding:12px 14px;gap:12px}
+  .brand h1{font-size:18px}
+  .meta{gap:14px;width:100%}
+  main{padding-top:22px}
+  .card{padding:16px}
+  .ov-col .big{font-size:24px}
+  .grid4,.grid3{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <h1 id="brandTitle">Staff Desk</h1>
+      <div class="sub" id="brandSub"></div>
+    </div>
+    <div class="meta">
+      <div><span class="lbl" id="lblAsOf">As of</span><span class="val" id="asOf">–</span></div>
+      <div><span class="lbl" id="lblSrc">Source</span><span class="val" id="srcFile">–</span></div>
+      <div class="fresh"><i class="dot amber" id="freshDot"></i><div><span class="lbl" id="lblFresh">Data freshness</span><span class="val" id="freshText">–</span></div></div>
+    </div>
+    <nav class="nav" id="nav" aria-label="Staff desks"></nav>
+    <div class="actions">
+      <button class="btn-ghost" id="themeBtn" type="button" aria-label="Toggle dark mode">◐ <span id="themeLbl">Dark</span></button>
+    </div>
+  </div>
+</header>
+<div class="banner" id="banner" hidden></div>
+
+<main class="wrap" id="app">
+  <section id="summary">
+    <div class="sec-head"><h2 id="hSummary">1 · Current state</h2><span class="hint" id="hintQuality"></span></div>
+    <div class="grid4" id="kpis"></div>
+    <div class="card state-card" id="stateBox" style="margin-top:18px"></div>
+  </section>
+
+  <section id="nowcasts">
+    <div class="sec-head"><h2 id="hNowcast">2 · Nowcasts</h2><span class="hint" id="hintNowcast"></span></div>
+    <div class="legend-row" id="legend"></div>
+    <div class="card">
+      <div class="tbl-wrap" id="nowcastTbl"></div>
+      <div class="notes" id="nowcastNote"></div>
+    </div>
+  </section>
+
+  <section id="baseline">
+    <div class="sec-head"><h2 id="hBaseline">3 · Baseline</h2><span class="hint" id="hintBaseline"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="baselineTbl"></div>
+      <div class="notes" id="baselineNote"></div>
+    </div>
+  </section>
+
+  <section id="recent">
+    <div class="sec-head"><h2 id="hRecent">4 · Key data since last update</h2><span class="hint" id="hintRecent"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="recentTbl"></div>
+      <div class="notes" id="recentNote"></div>
+    </div>
+  </section>
+
+  <section id="calendar">
+    <div class="sec-head"><h2 id="hCal">5 · Upcoming calendar</h2><span class="hint" id="hintCal"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="calTbl"></div>
+      <div class="notes" id="calNote"></div>
+    </div>
+  </section>
+
+  <section id="staff">
+    <div class="sec-head"><h2 id="hStaff">6 · Staff view</h2><span class="hint" id="hintStaff"></span></div>
+    <div class="card">
+      <div class="staff-body" id="staffBody"></div>
+      <div class="tbl-wrap" id="taylorTbl" style="margin-top:16px"></div>
+    </div>
+  </section>
+
+  <section id="charts" hidden>
+    <div class="sec-head"><h2 id="hCharts">7 · Charts</h2><span class="hint" id="hintCharts"></span></div>
+    <div class="grid2" id="chartGrid"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="caveat" id="caveat">
+    <h2 id="hCaveat">⚠ Datenlage und Quellen – Vorbehalte</h2>
+    <div id="caveatBody"></div>
+    <p class="fine" id="caveatFine"></p>
+  </div>
+  <div class="site-foot" id="siteFoot"></div>
+</footer>
+
+<script>
+const EMBEDDED = /*__EMBEDDED__*/ {"schema_version":"1.0","feed":"staff_desk","desk":"ecb","lang":"en","bot":{"name":"ECB Staff Desk","id":"f34fbb8c-9754-4270-8659-efbfdee20850"},"title":"ECB Staff Desk — euro-area nowcast (12 Nov 2026)","short_title":"ECB Staff Desk","subtitle":"Euro area · staff-style research view · not the Governing Council and not ECB staff projections · public sources only · not investment advice","as_of":"2026-11-12T07:50:00+01:00","as_of_display":"12 Nov 2026, 07:50 Europe/Zurich","timezone":"Europe/Zurich","source":{"label":"nowcast_ipdeck_2026-11-12.md","file":"nowcast_ipdeck_2026-11-12.md","prepared":"12 Nov 2026, ~07:50 CET. Data cut-off 11 Nov 2026, 17:55 CET. Update of existing notes only; no new analysis."},"freshness":{"status":"current","dot":"green","label":"Current — note 12 Nov, 07:50; data cut-off 11 Nov, 17:55","banner":null},"summary":{"heading":"Current state","text":"GDP holds up at about +0.2–0.3% q/q in Q4 (own estimate, 4 Nov note, unchanged 11 Nov). The Q3 flash was +0.4% q/q (Eurostat, V, 30 Oct); underlying growth excluding Ireland is softer at 0.21 (d). Headline HICP is past the oil peak: the own Q4 view is about 3.8–3.9% y/y (pending; the baseline remains about 4.0), above the September MPE Q4 peak of 3.6, and core shows no second-round signal so far (HICPX October flash 2.5%, V; German CPI core 2.1, U). Deposit facility rate 2.50%. Staff view, not the Governing Council’s or ECB staff projections.","as_of":"2026-11-12T07:50:00+01:00","source":"ECB Staff Desk note, 12 Nov 2026 (data cut-off 11 Nov, 17:55 CET)"},"nowcast_hint":"Own estimates carry a judgment band of about ±0.3 pp as stated in the source note. A third-party euro-area GDP tracker used internally by the desk is not shown on this public page.","nowcast_note":"The Q4 HICP reading of about 3.8–3.9% is an own estimate and is still pending; the baseline table continues to show about 4.0 (4 Nov). The desk’s energy pass-through rule is unverified. Eurostat and ECB figures in the note date from fetches on 4–6 Nov and were not all re-fetched on 12 Nov.","nowcasts":[{"id":"gdp-q3","category":"GDP","variable":"Euro-area GDP, Q3 2026 flash, q/q","value":"0.4","unit":"%","quality":"V","status":"published flash","period":"Q3 2026","interval":"–","prior":"–","source":"Eurostat flash, 30 Oct 2026 (fetched 6 Nov)","as_of":"30 Oct 2026","rationale":"Official flash. The t+45 release on 13 Nov may revise Q3. Country detail: DE 0.2 (p), FR −0.1, IT 0.0, ES 0.6 (p), IE 5.5 (e) — all V, Eurostat."},{"id":"gdp-ex-ie","category":"GDP","variable":"Euro-area GDP excluding Ireland, Q3, q/q","value":"0.21","unit":"%","quality":"d","status":"derived","period":"Q3 2026","interval":"–","prior":"–","source":"Euro-area 21 minus Ireland levels (derived)","as_of":"6 Nov 2026","rationale":"Own calculation from official levels. Irish GDP is an estimate (e) and is volatile. Underlying growth is softer than the headline 0.4% flash."},{"id":"gdp-staff-q4","category":"GDP","variable":"Staff Q4 2026 GDP, q/q","value":"+0.2–0.3","unit":"%","quality":"d","status":"own estimate, unchanged","period":"Q4 2026","interval":"judgment ±0.3 pp","prior":"same (4 Nov note)","source":"Staff, 4 Nov note, unchanged 11 Nov","as_of":"11 Nov 2026","rationale":"Judgmental staff range. No new analysis in the 12 Nov update. Retail volume in September was weak (EA −0.7% m/m, V).","headline":true,"kpi_label":"Q4 GDP, staff","kpi_note":"Own estimate · unchanged since 4 Nov"},{"id":"gdp-2026","category":"GDP","variable":"Staff GDP 2026","value":"1.1","unit":"%","quality":"d","status":"own baseline","period":"2026","interval":"–","prior":"–","source":"Staff baseline, 4 Nov note (September MPE 0.9)","as_of":"4 Nov 2026","rationale":"Own baseline, compared with the September 2026 MPE of 0.9 (official ECB staff projections, V from an earlier fetch)."},{"id":"hicp-oct","category":"inflation","variable":"Euro-area HICP / HICPX, October flash, y/y","value":"4.0 / 2.5","unit":"%","quality":"V","status":"published flash","period":"Oct 2026","interval":"–","prior":"–","source":"Eurostat flash, 4 Nov 2026","as_of":"4 Nov 2026","rationale":"Official flash. HICPX 2.5% shows no second-round signal so far. The final October HICP is due 18 Nov.","headline":true,"kpi_label":"HICP Oct flash","kpi_note":"Eurostat, 4 Nov · V · HICPX 2.5%"},{"id":"hicp-q4","category":"inflation","variable":"Staff Q4 2026 HICP, y/y","value":"~3.8–3.9","unit":"%","quality":"d","status":"pending; baseline still ~4.0","period":"Q4 2026","interval":"judgment ±0.3 pp","prior":"Initial energy-check estimate 10 Nov was ~3.7","source":"Staff own estimate, reconciled 11 Nov","as_of":"11 Nov 2026","rationale":"Own estimate, still pending; the baseline table continues to show about 4.0 (4 Nov). Above the September MPE Q4 peak of 3.6 (V). The desk’s pass-through rule (0.3–0.5 pp per 10% in Brent) is unverified and, in the note, is described as likely too high at USD 90+.","headline":true,"kpi_label":"Q4 HICP, staff","kpi_note":"Own estimate ~3.8–3.9, pending · baseline still ~4.0"},{"id":"hicp-path","category":"inflation","variable":"Staff HICP / HICPX, 2026 and 2027","value":"HICP 3.1 / ~2.7–2.8; HICPX 2.4 / 2.7","unit":"%","quality":"d","status":"own baseline; 2027 HICP pending energy revision","period":"2026 / 2027","interval":"–","prior":"–","source":"Staff, 4 Nov note","as_of":"4 Nov 2026","rationale":"Own baselines. September 2026 MPE (V, earlier fetch): HICP 3.0 / 2.5 / 2.1; HICPX 2.5 / 2.6 / 2.3; Q4 peak 3.6. 2027 HICP is pending an energy revision."},{"id":"wages","category":"labour","variable":"ECB wage tracker","value":"H2-26 2.7; H1-27 2.8; Q3-27 2.41; Sep-27 2.18","unit":"%","quality":"V","status":"official tracker, 6 Nov fetch","period":"H2 2026 to Sep 2027","interval":"–","prior":"–","source":"ECB wage tracker, fetched 6 Nov","as_of":"6 Nov 2026, not re-fetched","rationale":"Official ECB series. The 12 Nov policy read notes the tracker easing into 2027. Consumer expectations (CES, Sep, V, 6 Nov): 1y 3.1 / 3y 2.9 / 5y 2.5."},{"id":"dfr","category":"policy","variable":"Deposit facility rate","value":"2.50","unit":"%","quality":"V","status":"unchanged vs 4 Nov policy read","period":"Current","interval":"–","prior":"2.50%","source":"Staff policy read, 4 Nov, unchanged 12 Nov","as_of":"12 Nov 2026","rationale":"Inflation outlook: above the September MPE near term, energy-driven, risks balanced to slightly up medium term. Underlying inflation: core stable or easing (German CPI core 2.1, U). Transmission: no new credit data since 27 Oct (NFC loans 4.2% in September). Market pricing: n/a, not fetched.","headline":true,"kpi_label":"Deposit facility","kpi_note":"2.50% · policy read unchanged vs 4 Nov"}],"baseline_hint":"Staff baselines from the 4 Nov note. Official column is the September 2026 ECB staff macroeconomic projections (MPE).","baseline_note":"Q4 HICP own estimate (~3.8–3.9) has not replaced the ~4.0 baseline. 2027 HICP is pending an energy revision. MPE figures are from an earlier primary fetch (V).","baseline":[{"variable":"Q4 2026 GDP, q/q","staff":"+0.2–0.3 — own estimate","previous":"same (4 Nov)","change":"0","official":"n/a in the 12 Nov note","quality":"d","source":"Staff, 4 Nov, unchanged 11 Nov","as_of":"11 Nov 2026"},{"variable":"GDP 2026","staff":"1.1 — own baseline","previous":"–","change":"–","official":"0.9 (Sept MPE)","quality":"d","source":"Staff, 4 Nov; MPE Sept 2026","as_of":"4 Nov 2026"},{"variable":"Q4 2026 HICP, y/y","staff":"baseline ~4.0; pending own view ~3.8–3.9","previous":"~4.0 (4 Nov)","change":"own view pending, baseline not reset","official":"Q4 peak 3.6 (Sept MPE)","quality":"d","source":"Staff 4 Nov / 11 Nov; MPE Sept 2026","as_of":"11 Nov 2026"},{"variable":"HICP 2026 / 2027","staff":"3.1 / ~2.7–2.8","previous":"–","change":"2027 pending energy revision","official":"3.0 / 2.5 (then 2.1 in 2028, Sept MPE)","quality":"d","source":"Staff, 4 Nov; MPE Sept 2026","as_of":"4 Nov 2026"},{"variable":"HICPX 2026 / 2027","staff":"2.4 / 2.7","previous":"–","change":"–","official":"2.5 / 2.6 (then 2.3 in 2028, Sept MPE)","quality":"d","source":"Staff, 4 Nov; MPE Sept 2026","as_of":"4 Nov 2026"}],"recent_hint":"Releases since 5 Nov that are in the Staff Desk files. Survey-consensus figures are omitted. National activity data from 5–11 Nov are not in the files.","recent_note":"German final HICP is from a search-index copy of the Destatis release (U). Energy prices are from a delayed secondary source (U). Retail-sales consensus was not on file and is not estimated.","recent_data":[{"release":"Euro-area retail volume, September","date":"Around 6 Nov 2026","quality":"V","actual":"EA −0.7% m/m; Germany −2.0% (p). Retail Q3 vs Q2 ≈ −0.48 (d).","prior":"–","why":"Soft consumption into Q4. Eurostat short-term statistics, fetched 6 Nov."},{"release":"German HICP final, October","date":"11 Nov 2026","quality":"U","actual":"HICP 2.8% y/y, −0.1% m/m (equal to the flash); CPI core 2.1 (from 2.4).","prior":"Flash 2.8% y/y","why":"Core eased. Taken from a search-index copy of Destatis PR 392; the live page timed out."},{"release":"Energy prices (secondary)","date":"11 Nov 2026, 17:34 / 17:10 CET","quality":"U","actual":"Brent 94.04 (+2.6% vs 10 Nov reference 91.63); TTF 86.53 (+1.9% vs 84.90).","prior":"10 Nov references 91.63 / 84.90","why":"Near-term HICP energy driver. Delayed secondary quotes, not a primary exchange settlement."}],"calendar_hint":"As listed in the 12 Nov note. Times not specified there are left blank.","calendar_note":"The t+45 GDP release on 13 Nov may revise the Q3 flash.","calendar":[{"date":"13 Nov 2026","event":"Euro-area GDP t+45 and employment","time":"–","why":"May revise the Q3 0.4% flash."},{"date":"18 Nov 2026","event":"Euro-area HICP final, October","time":"–","why":"Confirms or revises the 4.0% / 2.5% flash."},{"date":"20 Nov 2026","event":"Negotiated wages, Q3","time":"–","why":"Wage-pipeline cross-check."},{"date":"Around 23 Nov 2026","event":"Flash PMI","time":"–","why":"Timely activity and price-setting signal (not yet in this note)."},{"date":"26 Nov 2026","event":"Monetary developments","time":"–","why":"Credit and money; last NFC loan reading in the note is 4.2% in September, as of 27 Oct."},{"date":"1 Dec 2026","event":"Euro-area HICP flash, November","time":"–","why":"Next inflation print."},{"date":"16–17 Dec 2026","event":"Governing Council and December BMPE","time":"–","why":"Policy decision and new staff projections."}],"staff_hint":"Policy read unchanged versus 4 Nov. Staff view, not the Governing Council or ECB staff projections.","staff_view":{"lead":"Bottom line from the 12 Nov note: growth about +0.2–0.3% q/q in Q4 (own estimate); headline inflation past the oil peak, with a pending own Q4 view of about 3.8–3.9% against a baseline still around 4.0, and no second-round core signal so far.","bullets":["Growth: Q3 flash 0.4% (V) is flattered by Ireland (ex-Ireland 0.21, d). Staff Q4 is +0.2–0.3 (own estimate). September retail volume was weak.","Inflation: October HICP flash 4.0% (V) sits above the September MPE Q4 peak of 3.6. The pending own Q4 view (~3.8–3.9) has not replaced the ~4.0 baseline. HICPX 2.5% (V) and German CPI core 2.1 (U) show no second-round signal so far.","Wages and expectations: ECB wage tracker easing into 2027 (V, 6 Nov). CES September: 1y 3.1 / 3y 2.9 / 5y 2.5 (V).","Energy: Brent and TTF quotes on 11 Nov were slightly higher than the 10 Nov references (U, delayed secondary).","Coverage gap: national activity data and surveys from 5–11 Nov are not in the Staff Desk files."],"policy":"Deposit facility rate 2.50%. Inflation outlook: above the September MPE near term, energy-driven, risks balanced to slightly up medium term. Underlying inflation: core stable or easing. Transmission: no new credit data since 27 Oct (NFC loans 4.2% in September). Market pricing: n/a, not fetched. Policy read unchanged versus 4 Nov."},"charts":[],"caveats":["Report date 12 Nov 2026, ~07:50 CET; data cut-off 11 Nov 2026, 17:55 CET. Update of existing notes only; no new analysis. (d) = derived; own estimate = staff judgment, about ±0.3 pp as stated in the note; V = verified from a primary source this cycle; U = unverified or secondary.","Q4 HICP of about 3.8–3.9% is an own estimate and is still pending; the baseline remains about 4.0 (4 Nov). The energy pass-through rule used in earlier work (0.3–0.5 pp per 10% in Brent) is unverified and, in the note, is described as likely too high at USD 90+.","Energy prices come from a delayed secondary source (U). The German final HICP is from a search-index copy of Destatis PR 392 (U); the live page timed out.","Euro-area GDP excluding Ireland and retail Q3 are derived (d). The Irish GDP figure is an estimate (e) and is volatile. The t+45 GDP release on 13 Nov may revise Q3.","Eurostat and ECB figures (wages, CES, national accounts) date from fetches on 4–6 Nov and were not re-fetched on 12 Nov.","Release coverage gap: national activity data and surveys from 5–11 Nov are not in the Staff Desk files and were not fetched. Survey-consensus values are not shown and, in the note, were missing for every release since 5 Nov other than one item omitted here."],"excluded":[{"item":"A third-party euro-area GDP nowcast tracker","reason":"Marked internal-only by the ECB Staff Desk; figures and the path are not shown."},{"item":"Survey-consensus figures and surprise-versus-consensus calculations","reason":"Consensus values are not published here."},{"item":"Licensed bank, broker and private-survey datasets","reason":"Internal-use or licensed material is not shown."}],"gaps":["National activity and survey releases from 5–11 Nov are not covered.","Q4 HICP own estimate is pending and has not replaced the ~4.0 baseline.","2027 HICP is pending an energy revision.","Market pricing was not fetched (n/a).","No unemployment nowcast is in the 12 Nov note; labour is represented by the wage tracker and CES."]} /*__EMBEDDED__*/;
+const THEME_KEY = "staff-desk-theme";
+
+const I18N = {
+  en: {
+    asOf: "As of", source: "Source", freshness: "Data freshness",
+    summary: "1 · Current state",
+    nowcast: "2 · Nowcasts",
+    baseline: "3 · Baseline",
+    recent: "4 · Key data since last update",
+    cal: "5 · Upcoming calendar",
+    staff: "6 · Staff view",
+    charts: "7 · Charts",
+    caveat: "⚠ Datenlage und Quellen – Vorbehalte",
+    qualityHint: "Figures keep their V / U / (d) labels. This page does not generate or randomise numbers.",
+    legendV: "V — verified from a primary document that was opened",
+    legendU: "U — unverified (secondary, undated, or not independently confirmed)",
+    legendD: "(d) — derived / own arithmetic from stated figures",
+    legendOwn: "own estimate — staff judgment",
+    colVariable: "Variable", colValue: "Nowcast / reading", colPeriod: "Period",
+    colStatus: "Status", colQuality: "Q", colInterval: "Interval",
+    colPrior: "Prior", colSource: "Source / as of", colRationale: "Rationale",
+    colStaff: "Staff baseline", colPrev: "Previous", colChange: "Change",
+    colOfficial: "Official projection",
+    colRelease: "Release", colActual: "Actual", colWhy: "Why it matters",
+    colDate: "Date", colEvent: "Release / event", colTime: "Europe/Zurich", colFocus: "Why it matters",
+    excluded: "Omitted from this public page",
+    gaps: "Gaps and stale items",
+    fine: "Staff-style research compilation only. Not official central-bank staff work and not a committee projection. Not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich. This page only renders figures already saved by the desk; it does not refresh or invent numbers.",
+    foot: "Public research pages · not investment advice",
+    home: "Inflation nowcasts",
+    ai: "AI token",
+    staffHome: "Staff desks",
+    dark: "Dark", light: "Light",
+    empty: "No rows in the source note.",
+    emptyCal: "No calendar in the source note.",
+    emptyBase: "No approved desk baseline in the source note.",
+    category: {GDP:"GDP", inflation:"Inflation", labour:"Labour", policy:"Policy rate"}
+  },
+  de: {
+    asOf: "Stand", source: "Quelle", freshness: "Datenstand",
+    summary: "1 · Aktueller Stand",
+    nowcast: "2 · Nowcasts",
+    baseline: "3 · Ausgangslage",
+    recent: "4 · Daten seit dem letzten Stand",
+    cal: "5 · Kalender",
+    staff: "6 · Staff-Einschätzung",
+    charts: "7 · Grafiken",
+    caveat: "⚠ Datenlage und Quellen – Vorbehalte",
+    qualityHint: "Alle Zahlen behalten ihre Kennzeichnung V / U / (d). Diese Seite erzeugt oder verändert keine Werte.",
+    legendV: "V — an einem Primärdokument geprüft",
+    legendU: "U — nicht verifiziert (sekundär, undatiert oder nicht unabhängig bestätigt)",
+    legendD: "(d) — eigene Ableitung / Rechnung aus genannten Werten",
+    legendOwn: "Urteil / eigene Schätzung — Staff-Einschätzung",
+    colVariable: "Zielgröße", colValue: "Nowcast / Wert", colPeriod: "Zeitraum",
+    colStatus: "Status", colQuality: "Q", colInterval: "Intervall",
+    colPrior: "Vorher", colSource: "Quelle / Stand", colRationale: "Begründung",
+    colStaff: "Staff-Baseline", colPrev: "Vorherige Baseline", colChange: "Änderung",
+    colOfficial: "Offizielle Projektion",
+    colRelease: "Veröffentlichung", colActual: "Ist", colWhy: "Relevanz",
+    colDate: "Datum", colEvent: "Veröffentlichung / Termin", colTime: "Europe/Zurich", colFocus: "Relevanz",
+    excluded: "Auf dieser öffentlichen Seite nicht gezeigt",
+    gaps: "Lücken und veraltete Punkte",
+    fine: "Nur eine Staff-Recherchezusammenstellung. Keine offizielle Arbeit der Notenbank und keine Ausschussprojektion. Keine Anlageempfehlung, kein Rating und kein Handelssignal. Zeiten in Europe/Zurich. Diese Seite stellt nur bereits gespeicherte Desk-Angaben dar; sie erzeugt oder aktualisiert keine Zahlen.",
+    foot: "Öffentliche Rechercheseiten · keine Anlageberatung",
+    home: "Inflation Nowcasts",
+    ai: "AI Token",
+    staffHome: "Staff-Desks",
+    dark: "Dunkel", light: "Hell",
+    empty: "Im Quellenvermerk keine Zeilen.",
+    emptyCal: "Im Quellenvermerk kein Kalender.",
+    emptyBase: "Im Quellenvermerk keine freigegebene Desk-Baseline.",
+    category: {GDP:"BIP", inflation:"Inflation", labour:"Arbeitsmarkt", policy:"Leitzins"}
+  }
+};
+
+function qs(id){ return document.getElementById(id); }
+function esc(s){
+  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+function qClass(q){
+  const t = String(q || "").trim();
+  if (t === "V") return "V";
+  if (t === "U") return "U";
+  return "d";
+}
+function qBadge(q){
+  const t = String(q || "").trim() || "U";
+  const cls = qClass(t);
+  const label = (t === "(d)" || t === "d" || cls === "d") && t !== "V" && t !== "U" ? "(d)" : t;
+  return `<span class="q ${cls}" title="Data quality">${esc(label)}</span>`;
+}
+function statusPill(s){
+  if (!s) return "";
+  const raw = String(s);
+  const k = raw.toLowerCase();
+  let cls = "";
+  if (/(missing|fehlt|veraltet|stale)/.test(k)) cls = "missing";
+  else if (/(pending|ausstehend)/.test(k)) cls = "pending";
+  else if (/(retained|beibehalten|updated|aktualisiert)/.test(k)) cls = "retained";
+  else if (/(own|urteil|schätzung|estimate)/.test(k)) cls = "own";
+  return ` <span class="pill ${cls}">${esc(raw)}</span>`;
+}
+function fmtWhen(iso, lang){
+  if (!iso) return "–";
+  if (/^\d{4}-\d{2}-\d{2}$/.test(iso)) {
+    const [y,m,d] = iso.split("-");
+    if (lang === "de") {
+      const months = ["Jan.","Feb.","März","Apr.","Mai","Juni","Juli","Aug.","Sep.","Okt.","Nov.","Dez."];
+      return `${Number(d)}. ${months[Number(m)-1]} ${y}`;
+    }
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return `${Number(d)} ${months[Number(m)-1]} ${y}`;
+  }
+  const d = new Date(iso);
+  if (isNaN(d)) return String(iso);
+  const loc = lang === "de" ? "de-CH" : "en-GB";
+  const fmt = new Intl.DateTimeFormat(loc, {
+    timeZone: "Europe/Zurich",
+    day: "numeric", month: "short", year: "numeric",
+    hour: "2-digit", minute: "2-digit", hour12: false
+  });
+  return fmt.format(d).replace(",", "") + " Europe/Zurich";
+}
+function setTheme(t){
+  document.documentElement.setAttribute("data-theme", t);
+  try { localStorage.setItem(THEME_KEY, t); } catch(e){}
+  const lang = document.documentElement.lang === "de" ? "de" : "en";
+  const L = I18N[lang];
+  qs("themeLbl").textContent = t === "dark" ? L.light : L.dark;
+}
+function initTheme(){
+  let t = "light";
+  try { t = localStorage.getItem(THEME_KEY) || t; } catch(e){}
+  setTheme(t);
+}
+function navHtml(desk, L){
+  const items = [
+    {href:"../", label:L.home, id:""},
+    {href:"../ai-token/", label:L.ai, id:""},
+    {sep:true},
+    {href:"../staff/", label:L.staffHome, id:"staff"},
+    {href:"../staff-fed/", label:"Fed", id:"fed"},
+    {href:"../staff-ecb/", label:"ECB", id:"ecb"},
+    {href:"../staff-boe/", label:"BoE", id:"boe"},
+    {href:"../staff-boj/", label:"BoJ", id:"boj"}
+  ];
+  return items.map(it => {
+    if (it.sep) return `<span class="sep"></span>`;
+    const on = it.id && it.id === desk ? " on" : (it.id === "staff" && !desk ? " on" : "");
+    return `<a class="${on.trim()}" href="${it.href}">${esc(it.label)}</a>`;
+  }).join("");
+}
+
+function renderKpis(data){
+  const rows = (data.nowcasts || []).filter(r => r.headline);
+  const el = qs("kpis");
+  if (!rows.length) { el.innerHTML = ""; return; }
+  el.innerHTML = rows.map(r => `
+    <div class="card ov-col">
+      <div class="ov-head">
+        <div class="ov-title"><b>${esc(r.kpi_label || r.variable)}</b><span>${esc(r.period || "")}</span></div>
+        ${qBadge(r.quality)}
+      </div>
+      <div class="big">${esc(r.value)}${r.unit ? `<small>${esc(r.unit)}</small>` : ""}</div>
+      <div class="yy">${esc(r.kpi_note || r.status || "")}</div>
+    </div>`).join("");
+}
+
+function groupRows(rows, lang){
+  const L = I18N[lang] || I18N.en;
+  const order = ["GDP","inflation","labour","policy"];
+  const groups = [];
+  const seen = new Set();
+  for (const key of order) {
+    const g = rows.filter(r => r.category === key);
+    if (g.length) { groups.push({key, label: L.category[key] || key, rows:g}); seen.add(key); }
+  }
+  const rest = rows.filter(r => !seen.has(r.category));
+  if (rest.length) groups.push({key:"other", label:"", rows:rest});
+  return groups;
+}
+
+function renderNowcasts(data, L, lang){
+  const rows = data.nowcasts || [];
+  if (!rows.length) { qs("nowcastTbl").innerHTML = `<p class="notice">${esc(L.empty)}</p>`; return; }
+  const groups = groupRows(rows, lang);
+  let html = `<table><thead><tr>
+    <th>${esc(L.colVariable)}</th>
+    <th class="r">${esc(L.colValue)}</th>
+    <th>${esc(L.colPeriod)}</th>
+    <th>${esc(L.colStatus)}</th>
+    <th>${esc(L.colInterval)}</th>
+    <th>${esc(L.colPrior)}</th>
+    <th>${esc(L.colSource)}</th>
+    <th>${esc(L.colRationale)}</th>
+  </tr></thead><tbody>`;
+  for (const g of groups) {
+    if (g.label) html += `<tr class="group"><td colspan="8">${esc(g.label)}</td></tr>`;
+    for (const r of g.rows) {
+      html += `<tr>
+        <td><div class="item-title">${esc(r.variable)}</div></td>
+        <td class="num r">${esc(r.value)}${r.unit ? " " + esc(r.unit) : ""}${qBadge(r.quality)}</td>
+        <td>${esc(r.period || "–")}</td>
+        <td>${statusPill(r.status)}</td>
+        <td>${esc(r.interval || "–")}</td>
+        <td>${esc(r.prior || "–")}</td>
+        <td><div>${esc(r.source || "–")}</div><div class="item-rel">${esc(r.as_of || "")}</div></td>
+        <td><div class="item-rel">${esc(r.rationale || "")}</div></td>
+      </tr>`;
+    }
+  }
+  html += `</tbody></table>`;
+  qs("nowcastTbl").innerHTML = html;
+  qs("nowcastNote").textContent = data.nowcast_note || "";
+}
+
+function renderBaseline(data, L){
+  const rows = data.baseline || [];
+  const sec = qs("baseline");
+  if (!rows.length) {
+    qs("baselineTbl").innerHTML = `<p class="notice">${esc(L.emptyBase)}</p>`;
+    qs("baselineNote").textContent = data.baseline_note || "";
+    return;
+  }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colVariable)}</th>
+    <th class="r">${esc(L.colStaff)}</th>
+    <th class="r">${esc(L.colPrev)}</th>
+    <th class="r">${esc(L.colChange)}</th>
+    <th class="r">${esc(L.colOfficial)}</th>
+    <th>${esc(L.colSource)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td><div class="item-title">${esc(r.variable)}</div></td>
+      <td class="num r">${esc(r.staff || "–")}${qBadge(r.quality || "d")}</td>
+      <td class="r">${esc(r.previous || "–")}</td>
+      <td class="r">${esc(r.change || "–")}</td>
+      <td class="r">${esc(r.official || "–")}</td>
+      <td><div>${esc(r.source || "–")}</div><div class="item-rel">${esc(r.as_of || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("baselineTbl").innerHTML = html;
+  qs("baselineNote").textContent = data.baseline_note || "";
+}
+
+function renderRecent(data, L){
+  const rows = data.recent_data || [];
+  if (!rows.length) { qs("recentTbl").innerHTML = `<p class="notice">${esc(L.empty)}</p>`; return; }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colRelease)}</th>
+    <th>${esc(L.colActual)}</th>
+    <th>${esc(L.colPrior)}</th>
+    <th>${esc(L.colWhy)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td><div class="item-title">${esc(r.release)}</div><div class="item-rel">${esc(r.date || "")}${r.quality ? qBadge(r.quality) : ""}</div></td>
+      <td>${esc(r.actual || "–")}</td>
+      <td>${esc(r.prior || "–")}</td>
+      <td><div class="item-rel">${esc(r.why || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("recentTbl").innerHTML = html;
+  qs("recentNote").textContent = data.recent_note || "";
+}
+
+function renderCal(data, L){
+  const rows = data.calendar || [];
+  if (!rows.length) { qs("calTbl").innerHTML = `<p class="notice">${esc(L.emptyCal)}</p>`; return; }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colDate)}</th>
+    <th>${esc(L.colEvent)}</th>
+    <th>${esc(L.colTime)}</th>
+    <th>${esc(L.colFocus)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td class="num">${esc(r.date)}</td>
+      <td><div class="item-title">${esc(r.event)}</div></td>
+      <td>${esc(r.time || "–")}</td>
+      <td><div class="item-rel">${esc(r.why || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("calTbl").innerHTML = html;
+  qs("calNote").textContent = data.calendar_note || "";
+}
+
+function renderStaff(data){
+  const sv = data.staff_view || {};
+  let html = "";
+  if (sv.lead) html += `<p>${esc(sv.lead)}</p>`;
+  if (sv.bullets && sv.bullets.length) {
+    html += "<ul>" + sv.bullets.map(b => `<li>${esc(b)}</li>`).join("") + "</ul>";
+  }
+  if (sv.policy) html += `<p>${esc(sv.policy)}</p>`;
+  qs("staffBody").innerHTML = html || `<p class="muted">–</p>`;
+  const t = sv.taylor;
+  if (t && (t.rows || t.note || t.result)) {
+    let th = `<table><thead><tr><th>${esc(t.title || "Taylor-type diagnostic (d)")}</th><th>Assumptions / inputs</th><th class="r">Result</th></tr></thead><tbody>`;
+    const rows = t.rows || [{inputs: t.assumptions || "", result: t.result || ""}];
+    for (const r of rows) {
+      th += `<tr><td>${esc(r.label || t.note || "Own calculation, not an optimal-policy estimate")}</td><td>${esc(r.inputs || t.assumptions || "")}</td><td class="r">${esc(r.result || t.result || "")}${qBadge("d")}</td></tr>`;
+    }
+    th += `</tbody></table>`;
+    qs("taylorTbl").innerHTML = th;
+  } else {
+    qs("taylorTbl").innerHTML = "";
+  }
+}
+
+function renderCharts(data){
+  const charts = data.charts || [];
+  const sec = qs("charts");
+  if (!charts.length) { sec.hidden = true; return; }
+  sec.hidden = false;
+  qs("chartGrid").innerHTML = charts.map(c => `
+    <div class="card">
+      <h3>${esc(c.title)}</h3>
+      <div class="sub" style="margin:4px 0 12px">${esc(c.subtitle || "")}</div>
+      <img class="chart-img" src="${esc(c.file)}" alt="${esc(c.title)}" width="1600" height="900">
+      <div class="cap-line">${esc(c.caption || "")}</div>
+    </div>`).join("");
+}
+
+function renderCaveats(data, L){
+  const bits = [];
+  const caveats = data.caveats || [];
+  if (caveats.length) {
+    bits.push("<ul>" + caveats.map(c => `<li>${esc(c)}</li>`).join("") + "</ul>");
+  }
+  const excl = data.excluded || [];
+  if (excl.length) {
+    bits.push(`<h3>${esc(L.excluded)}</h3><ul>` + excl.map(e => {
+      const item = typeof e === "string" ? e : e.item;
+      const reason = typeof e === "string" ? "" : e.reason;
+      return `<li>${esc(item)}${reason ? " — " + esc(reason) : ""}</li>`;
+    }).join("") + "</ul>");
+  }
+  const gaps = data.gaps || [];
+  if (gaps.length) {
+    bits.push(`<h3>${esc(L.gaps)}</h3><ul>` + gaps.map(g => `<li>${esc(g)}</li>`).join("") + "</ul>");
+  }
+  qs("caveatBody").innerHTML = bits.join("") || `<p>${esc(L.empty)}</p>`;
+  qs("caveatFine").textContent = L.fine;
+}
+
+function render(data){
+  const lang = data.lang === "de" ? "de" : "en";
+  document.documentElement.lang = lang;
+  const L = I18N[lang];
+  document.title = data.title || data.bot?.name || "Staff Desk";
+  qs("brandTitle").textContent = data.short_title || data.bot?.name || "Staff Desk";
+  qs("brandSub").textContent = data.subtitle || "";
+  qs("lblAsOf").textContent = L.asOf;
+  qs("lblSrc").textContent = L.source;
+  qs("lblFresh").textContent = L.freshness;
+  qs("asOf").textContent = data.as_of_display || fmtWhen(data.as_of, lang);
+  qs("srcFile").textContent = (data.source && data.source.label) || "–";
+  const fr = data.freshness || {};
+  qs("freshText").textContent = fr.label || "–";
+  qs("freshDot").className = "dot " + (fr.dot || "amber");
+  const banner = qs("banner");
+  if (fr.banner) {
+    banner.hidden = false;
+    banner.className = "banner " + (fr.dot === "red" ? "very-stale" : "stale");
+    banner.innerHTML = fr.banner;
+  } else {
+    banner.hidden = true;
+  }
+  qs("nav").innerHTML = navHtml(data.desk, L);
+  const theme = document.documentElement.getAttribute("data-theme") || "light";
+  qs("themeLbl").textContent = theme === "dark" ? L.light : L.dark;
+
+  qs("hSummary").textContent = L.summary;
+  qs("hNowcast").textContent = L.nowcast;
+  qs("hBaseline").textContent = L.baseline;
+  qs("hRecent").textContent = L.recent;
+  qs("hCal").textContent = L.cal;
+  qs("hStaff").textContent = L.staff;
+  qs("hCharts").textContent = L.charts;
+  qs("hCaveat").textContent = L.caveat;
+  qs("hintQuality").textContent = L.qualityHint;
+  qs("hintNowcast").textContent = data.nowcast_hint || "";
+  qs("hintBaseline").textContent = data.baseline_hint || "";
+  qs("hintRecent").textContent = data.recent_hint || "";
+  qs("hintCal").textContent = data.calendar_hint || "";
+  qs("hintStaff").textContent = data.staff_hint || "";
+  qs("hintCharts").textContent = data.charts_hint || "";
+
+  qs("legend").innerHTML = `
+    <span class="q V">V</span> ${esc(L.legendV)}
+    <span class="q U">U</span> ${esc(L.legendU)}
+    <span class="q d">(d)</span> ${esc(L.legendD)}
+    <span class="pill own">${esc(L.legendOwn)}</span>`;
+
+  renderKpis(data);
+  const sum = data.summary || {};
+  qs("stateBox").innerHTML = `
+    <div class="ov-head">
+      <div class="ov-title"><b>${esc(sum.heading || (lang==="de" ? "Aktueller Stand" : "Current state"))}</b>
+      <span>${esc(sum.source || "")}</span></div>
+    </div>
+    <div class="state-text">${esc(sum.text || "")}</div>
+    <div class="state-src">${esc(sum.as_of ? (lang==="de"?"Stand: ":"As of: ") + (data.as_of_display || fmtWhen(sum.as_of, lang)) : "")}</div>`;
+
+  renderNowcasts(data, L, lang);
+  renderBaseline(data, L);
+  renderRecent(data, L);
+  renderCal(data, L);
+  renderStaff(data);
+  renderCharts(data);
+  renderCaveats(data, L);
+
+  const home = `<a href="../">${esc(L.home)}</a> · <a href="../ai-token/">${esc(L.ai)}</a> · <a href="../staff/">${esc(L.staffHome)}</a>`;
+  qs("siteFoot").innerHTML = `${esc(L.foot)} · ${home}`;
+}
+
+async function load(){
+  let data = EMBEDDED;
+  try {
+    const r = await fetch("data/desk.json", {cache:"no-store"});
+    if (r.ok) data = await r.json();
+  } catch (e) {}
+  if (!data) {
+    qs("app").innerHTML = `<p class="notice">No desk data loaded.</p>`;
+    return;
+  }
+  render(data);
+}
+qs("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  setTheme(cur === "dark" ? "light" : "dark");
+});
+initTheme();
+load();
+</script>
+</body>
+</html>

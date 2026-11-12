@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff desks — Fed, ECB, BoE, BoJ</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Staff-style research desks. Public sources only. Not official central-bank staff work. Not investment advice.">
+<style>
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f9fafc; --border:#e2e7ee; --border-strong:#cfd7e2;
+  --text:#0f1c30; --text-2:#56657c; --text-3:#8391a6; --grid:#e8ecf2;
+  --navy:#14305a; --navy-ink:#ffffff; --accent:#2f5d9e;
+  --green:#2e8b5a; --green-bg:#e7f4ec; --red:#c4514c; --red-bg:#fbebea; --amber:#a9741a; --amber-bg:#fdf2d9; --neutral-bg:#eef1f5;
+  --shadow:0 1px 2px rgba(15,28,48,.04);
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#0a111e; --surface:#111a2b; --surface-2:#0e1626; --border:#223149; --border-strong:#2f4262;
+  --text:#e5ebf4; --text-2:#9aabc3; --text-3:#6f819b; --grid:#1d2a40;
+  --navy:#3d6cb3; --navy-ink:#ffffff; --accent:#7ba5e6;
+  --green:#4cc08a; --green-bg:#12301f; --red:#ec7b76; --red-bg:#3a1a1a; --amber:#e3b25a; --amber-bg:#33280f; --neutral-bg:#18233a;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1360px;margin:0 auto;padding:0 28px}
+header.top{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--border)}
+.top-inner{display:flex;align-items:center;gap:20px;padding:14px 28px;max-width:1360px;margin:0 auto;flex-wrap:wrap}
+.brand{flex:1 1 260px;min-width:200px}
+.brand h1{margin:0;font-size:22px;font-weight:650;letter-spacing:-.01em;color:var(--text)}
+.brand .sub{color:var(--text-2);font-size:12.5px;margin-top:2px}
+.meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:var(--text-2);font-size:12.5px}
+.meta .lbl{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)}
+.meta .val{color:var(--text);font-weight:550}
+.fresh{display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--text-3);flex:none;box-shadow:0 0 0 3px rgba(128,140,160,.18)}
+.dot.green{background:var(--green);box-shadow:0 0 0 3px rgba(46,139,90,.18)}
+.dot.amber{background:#d9a21b;box-shadow:0 0 0 3px rgba(217,162,27,.2)}
+.dot.red{background:var(--red);box-shadow:0 0 0 3px rgba(196,81,76,.2)}
+.actions{display:flex;align-items:center;gap:10px}
+button{font:inherit;cursor:pointer}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border-strong);border-radius:8px;padding:9px 12px;font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.btn-ghost:hover{background:var(--neutral-bg)}
+.nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.nav a{display:inline-flex;align-items:center;padding:6px 11px;border-radius:8px;font-size:12.5px;font-weight:550;color:var(--text-2);text-decoration:none;border:1px solid transparent}
+.nav a:hover{background:var(--neutral-bg);color:var(--text)}
+.nav a.on{background:var(--navy);color:var(--navy-ink);border-color:transparent}
+.nav .sep{width:1px;height:16px;background:var(--border-strong);margin:0 4px}
+.banner{background:var(--amber-bg);border-bottom:1px solid var(--amber);color:var(--text);font-weight:600;text-align:center;padding:9px 16px;font-size:13px;line-height:1.45}
+.banner.stale{background:var(--amber-bg);color:var(--text)}
+.banner.very-stale{background:var(--red-bg);border-bottom-color:var(--red);color:var(--text)}
+.banner b{color:var(--amber)}
+.banner.very-stale b{color:var(--red)}
+main{padding:32px 0 20px}
+section{margin-bottom:44px;scroll-margin-top:84px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{margin:0;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-2);font-weight:650}
+.sec-head .hint{color:var(--text-3);font-size:12px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:20px}
+.card h3{margin:0;font-size:15px;font-weight:620}
+.card .sub{color:var(--text-2);font-size:12px}
+.ov-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.ov-title{display:flex;flex-direction:column}
+.ov-title b{font-size:13px;letter-spacing:.02em;color:var(--text-2);font-weight:620}
+.ov-title span{font-size:11.5px;color:var(--text-3)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:650;padding:3px 9px;border-radius:999px;border:1px solid var(--border-strong);color:var(--text-2);background:var(--neutral-bg);white-space:nowrap}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--text-3)}
+.badge.V,.badge.GREEN{color:var(--green);background:var(--green-bg);border-color:transparent}
+.badge.V::before,.badge.GREEN::before{background:var(--green)}
+.badge.U,.badge.YELLOW,.badge.WATCH{color:var(--amber);background:var(--amber-bg);border-color:transparent}
+.badge.U::before,.badge.YELLOW::before,.badge.WATCH::before{background:#d9a21b}
+.badge.d{color:var(--accent);background:var(--neutral-bg);border-color:transparent}
+.badge.d::before{background:var(--accent)}
+.badge.RED,.badge.stale{color:var(--red);background:var(--red-bg);border-color:transparent}
+.badge.RED::before,.badge.stale::before{background:var(--red)}
+.q{display:inline-flex;align-items:center;justify-content:center;min-width:22px;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:6px;vertical-align:1px;letter-spacing:.02em}
+.q.V{background:var(--green-bg);color:var(--green)}
+.q.U{background:var(--amber-bg);color:var(--amber)}
+.q.d{background:var(--neutral-bg);color:var(--accent)}
+.ov-col .k{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px}
+.ov-col .big{font-size:28px;font-weight:650;letter-spacing:-.02em;line-height:1.1}
+.ov-col .big small{font-size:13px;font-weight:500;color:var(--text-2);margin-left:3px;letter-spacing:0}
+.ov-col .yy{color:var(--text-2);font-size:12.5px;margin-top:6px;line-height:1.45}
+.legend-note{font-size:11.5px;color:var(--text-3);margin-top:10px}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);font-weight:650;text-align:left;padding:8px 12px;border-bottom:1px solid var(--border-strong);white-space:nowrap}
+td{padding:11px 12px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.num{font-weight:620;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tr.group td{background:var(--surface-2);font-weight:650;color:var(--text-2);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px}
+.item-title{font-weight:620;color:var(--text)}
+.item-rel{color:var(--text-2);font-size:12px;margin-top:3px;max-width:46rem;white-space:normal}
+.notes{margin-top:10px;font-size:12px;color:var(--text-2);line-height:1.55}
+.state-card{border-left:3px solid var(--navy)}
+.state-card .state-text{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--text)}
+.state-card .state-src{margin:10px 0 0;font-size:11.5px;color:var(--text-3);line-height:1.5}
+.staff-body{font-size:14px;line-height:1.65;margin:0}
+.staff-body p{margin:0 0 12px}
+.staff-body p:last-child{margin-bottom:0}
+.staff-body ul{margin:0 0 14px;padding-left:18px}
+.staff-body li{margin:0 0 6px}
+.chart-img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:var(--surface-2)}
+.cap-line{font-size:11.5px;color:var(--text-3);margin-top:8px;line-height:1.45}
+footer{margin:10px 0 48px}
+.caveat{border:1px solid var(--amber);background:var(--amber-bg);border-radius:12px;padding:18px 22px;color:var(--text)}
+.caveat h2{margin:0 0 8px;font-size:15px;color:var(--amber);letter-spacing:.01em}
+.caveat h3{margin:16px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+.caveat ul{margin:0;padding-left:18px;font-size:13px;line-height:1.65}
+.caveat .fine{margin-top:10px;font-size:11.5px;color:var(--text-2)}
+.notice{color:var(--text-2);font-size:13px;text-align:center;padding:16px}
+.muted{color:var(--text-2)}
+.pill{display:inline-flex;align-items:center;font-size:11px;font-weight:650;padding:2px 8px;border-radius:999px;background:var(--neutral-bg);color:var(--text-2);white-space:nowrap}
+.pill.pending{background:var(--amber-bg);color:var(--amber)}
+.pill.missing{background:var(--red-bg);color:var(--red)}
+.pill.stale{background:var(--red-bg);color:var(--red)}
+.pill.retained,.pill.updated{background:var(--green-bg);color:var(--green)}
+.pill.own{background:var(--neutral-bg);color:var(--accent)}
+.site-foot{margin:16px 0 0;font-size:12px;color:var(--text-3);text-align:center;line-height:1.55}
+.site-foot a{color:var(--accent);text-decoration:none}
+.site-foot a:hover{text-decoration:underline}
+.legend-row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:0 0 12px;font-size:12px;color:var(--text-2)}
+@media (max-width:1100px){
+  .grid4,.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 14px}
+  .top-inner{padding:12px 14px;gap:12px}
+  .brand h1{font-size:18px}
+  .meta{gap:14px;width:100%}
+  main{padding-top:22px}
+  .card{padding:16px}
+  .ov-col .big{font-size:24px}
+  .grid4,.grid3{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+<style>
+.desk-card{display:block;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s}
+.desk-card:hover{border-color:var(--border-strong);box-shadow:0 4px 16px rgba(15,28,48,.08)}
+.desk-card .blurb{margin:12px 0 0;font-size:13.5px;line-height:1.6;color:var(--text);display:-webkit-box;-webkit-line-clamp:8;-webkit-box-orient:vertical;overflow:hidden}
+.desk-card .k{font-size:12px;color:var(--text-2);margin-top:2px}
+.desk-card .src-line{margin-top:12px;font-size:11.5px;color:var(--text-3)}
+.intro{margin:0 0 22px;font-size:14.5px;line-height:1.65;color:var(--text);max-width:52rem}
+.intro p{margin:0 0 10px}
+.grid2d{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.grid2d{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <h1>Staff desks</h1>
+      <div class="sub">Fed · ECB · BoE · BoJ · staff-style research views · public sources only · not official central-bank staff work · not investment advice</div>
+    </div>
+    <nav class="nav" aria-label="Site">
+      <a href="../">Inflation nowcasts</a>
+      <a href="../ai-token/">AI token</a>
+      <span class="sep"></span>
+      <a class="on" href="./">Staff desks</a>
+      <a href="../staff-fed/">Fed</a>
+      <a href="../staff-ecb/">ECB</a>
+      <a href="../staff-boe/">BoE</a>
+      <a href="../staff-boj/">BoJ</a>
+    </nav>
+    <div class="actions">
+      <button class="btn-ghost" id="themeBtn" type="button" aria-label="Toggle dark mode">◐ <span id="themeLbl">Dark</span></button>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <section>
+    <div class="sec-head"><h2>Overview</h2><span class="hint">Figures keep their V / U / (d) labels. These pages do not generate or randomise numbers.</span></div>
+    <div class="intro">
+      <p>Four public pages, one for each staff desk, built from the desk’s latest saved note. Nothing here is new research: where a note is several days old, the page says so. Licensed bank, broker and private-survey content, survey-consensus figures, and items the desks marked internal-only are left off.</p>
+      <p>Fed and ECB notes are dated 12 Nov 2026. The BoE report is dated 8 Nov 2026 (Q3 GDP was due 12 Nov and is not incorporated). The BoJ first-run nowcast is dated 1 Nov 2026 and is marked veraltet.</p>
+    </div>
+    <div class="grid2d">
+      
+    <a class="desk-card card" href="../staff-fed/">
+      <div class="ov-head">
+        <div class="ov-title"><b>Fed Staff Desk</b><span>United States</span></div>
+        <span class="badge GREEN">Current — checked 12 Nov, 07:40</span>
+      </div>
+      <div class="k">12 Nov 2026, 07:40 Europe/Zurich</div>
+      <p class="blurb">Q4 growth trackers remain at or above the 6 Nov staff baseline of 3.0% SAAR (own estimate): Atlanta GDPNow 3.5% (V, 9 Nov; FRED 3.4810) and the New York Fed Staff Nowcast 2.94% (V, official file, 6 Nov). October payrolls (BLS, 6 Nov, V) showed NFP +165k and an unemployment rate of 4.1%, but U-6 rose to 7.9%. October CPI (BLS, 10 Nov, V) was +0.4% m/m sa and core +0. …</p>
+      <div class="src-line">Source: IPDeck_US_nowcast_note_2026-11-12.md</div>
+    </a>
+    <a class="desk-card card" href="../staff-ecb/">
+      <div class="ov-head">
+        <div class="ov-title"><b>ECB Staff Desk</b><span>Euro area</span></div>
+        <span class="badge GREEN">Current — note 12 Nov, 07:50; data cut-off 11 Nov, 17:55</span>
+      </div>
+      <div class="k">12 Nov 2026, 07:50 Europe/Zurich</div>
+      <p class="blurb">GDP holds up at about +0.2–0.3% q/q in Q4 (own estimate, 4 Nov note, unchanged 11 Nov). The Q3 flash was +0.4% q/q (Eurostat, V, 30 Oct); underlying growth excluding Ireland is softer at 0.21 (d). Headline HICP is past the oil peak: the own Q4 view is about 3.8–3.9% y/y (pending; the baseline remains about 4.0), above the September MPE Q4 peak of 3. …</p>
+      <div class="src-line">Source: nowcast_ipdeck_2026-11-12.md</div>
+    </a>
+    <a class="desk-card card" href="../staff-boe/">
+      <div class="ov-head">
+        <div class="ov-title"><b>BoE Staff Desk</b><span>United Kingdom</span></div>
+        <span class="badge YELLOW">Stand: 8 Nov 2026, 09:00 — several days old</span>
+      </div>
+      <div class="k">8 Nov 2026, 09:00 Europe/Zurich</div>
+      <p class="blurb">As of the 8 Nov cutoff, 09:00 CET: growth remains firm, but energy is lifting inflation while firms’ wage and price expectations remain broadly flat. The policy lean is hawkish following the November Bank Rate increase to 4.00%. Own nowcasts (approximate 68% judgment ranges, not calibrated model intervals): Q3 GDP +0.6% q/q (0.45–0.75; BoE staff 0.7% in the November MPR); October CPI 3.7% y/y (3.5–3. …</p>
+      <div class="src-line">Source: BoE Staff Desk report, 8 Nov 2026 (test run in the desk template)</div>
+    </a>
+    <a class="desk-card card" href="../staff-boj/">
+      <div class="ov-head">
+        <div class="ov-title"><b>BoJ Staff Desk</b><span>Japan</span></div>
+        <span class="badge RED">Stand: 1. Nov. 2026, veraltet</span>
+      </div>
+      <div class="k">1. Nov. 2026</div>
+      <p class="blurb">Erstlauf vom 1. November 2026, seither nicht aktualisiert. Urteil: Kern-VPI national (ohne Frischwaren) im Oktober etwa 2,1 % J/J (Modell R2 2,0 %; empirisches 68-%-Band um R2 1,8–2,2 %); Kern-Kern etwa 2,2 %. Reales BIP Q3 etwa −0,1 % Q/Q (Szenarioband −0,5 bis +0,3 %); die eigene Bridge-Gegenprobe über den Handel ergibt +0,25 % und dient nicht als Punktschätzung. …</p>
+      <div class="src-line">Source: Japan-Nowcast im BoJ-Stil, Erstlauf (Page, 1. Nov. 2026) und boj_nowcast_2026-11-01.json</div>
+    </a>
+    </div>
+  </section>
+</main>
+<footer class="wrap">
+  <div class="caveat">
+    <h2>⚠ Datenlage und Quellen – Vorbehalte</h2>
+    <ul>
+      <li>Each desk page has its own caveats, exclusions and gap list. Read those before relying on a figure.</li>
+      <li>Survey-consensus figures, licensed broker and bank research, licensed private-survey datasets, and a third-party euro-area GDP tracker marked internal-only are omitted. Quality labels: <b>V</b> verified from a primary document, <b>U</b> unverified, <b>(d)</b> derived, <b>own estimate</b> = staff judgment.</li>
+      <li>BoE material is as of 8 Nov 2026, 09:00 Europe/Zurich, and is several days old. BoJ material is as of 1 Nov 2026 and is stale (veraltet); the September wage nowcast was due for a 6 Nov release and was not updated.</li>
+      <li>These are staff-style research compilations, not official central-bank staff work and not committee projections. They are not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich.</li>
+    </ul>
+    <p class="fine">This landing page was assembled on 12 Nov 2026 from the four desk JSON files. It does not refresh or invent numbers.</p>
+  </div>
+  <div class="site-foot">Public research pages · not investment advice · <a href="../">Inflation nowcasts</a> · <a href="../ai-token/">AI token</a></div>
+</footer>
+<script>
+const THEME_KEY = "staff-desk-theme";
+function setTheme(t){
+  document.documentElement.setAttribute("data-theme", t);
+  try { localStorage.setItem(THEME_KEY, t); } catch(e){}
+  document.getElementById("themeLbl").textContent = t === "dark" ? "Light" : "Dark";
+}
+(function(){
+  let t = "light";
+  try { t = localStorage.getItem(THEME_KEY) || t; } catch(e){}
+  setTheme(t);
+  document.getElementById("themeBtn").addEventListener("click", () => {
+    const cur = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    setTheme(cur === "dark" ? "light" : "dark");
+  });
+})();
+</script>
+</body>
+</html>

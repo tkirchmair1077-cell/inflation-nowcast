@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff Desk</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Staff-style research desk. Public sources only. Not official central-bank staff work. Not investment advice.">
+<style>
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f9fafc; --border:#e2e7ee; --border-strong:#cfd7e2;
+  --text:#0f1c30; --text-2:#56657c; --text-3:#8391a6; --grid:#e8ecf2;
+  --navy:#14305a; --navy-ink:#ffffff; --accent:#2f5d9e;
+  --green:#2e8b5a; --green-bg:#e7f4ec; --red:#c4514c; --red-bg:#fbebea; --amber:#a9741a; --amber-bg:#fdf2d9; --neutral-bg:#eef1f5;
+  --shadow:0 1px 2px rgba(15,28,48,.04);
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#0a111e; --surface:#111a2b; --surface-2:#0e1626; --border:#223149; --border-strong:#2f4262;
+  --text:#e5ebf4; --text-2:#9aabc3; --text-3:#6f819b; --grid:#1d2a40;
+  --navy:#3d6cb3; --navy-ink:#ffffff; --accent:#7ba5e6;
+  --green:#4cc08a; --green-bg:#12301f; --red:#ec7b76; --red-bg:#3a1a1a; --amber:#e3b25a; --amber-bg:#33280f; --neutral-bg:#18233a;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1360px;margin:0 auto;padding:0 28px}
+header.top{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--border)}
+.top-inner{display:flex;align-items:center;gap:20px;padding:14px 28px;max-width:1360px;margin:0 auto;flex-wrap:wrap}
+.brand{flex:1 1 260px;min-width:200px}
+.brand h1{margin:0;font-size:22px;font-weight:650;letter-spacing:-.01em;color:var(--text)}
+.brand .sub{color:var(--text-2);font-size:12.5px;margin-top:2px}
+.meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:var(--text-2);font-size:12.5px}
+.meta .lbl{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)}
+.meta .val{color:var(--text);font-weight:550}
+.fresh{display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--text-3);flex:none;box-shadow:0 0 0 3px rgba(128,140,160,.18)}
+.dot.green{background:var(--green);box-shadow:0 0 0 3px rgba(46,139,90,.18)}
+.dot.amber{background:#d9a21b;box-shadow:0 0 0 3px rgba(217,162,27,.2)}
+.dot.red{background:var(--red);box-shadow:0 0 0 3px rgba(196,81,76,.2)}
+.actions{display:flex;align-items:center;gap:10px}
+button{font:inherit;cursor:pointer}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border-strong);border-radius:8px;padding:9px 12px;font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.btn-ghost:hover{background:var(--neutral-bg)}
+.nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.nav a{display:inline-flex;align-items:center;padding:6px 11px;border-radius:8px;font-size:12.5px;font-weight:550;color:var(--text-2);text-decoration:none;border:1px solid transparent}
+.nav a:hover{background:var(--neutral-bg);color:var(--text)}
+.nav a.on{background:var(--navy);color:var(--navy-ink);border-color:transparent}
+.nav .sep{width:1px;height:16px;background:var(--border-strong);margin:0 4px}
+.banner{background:var(--amber-bg);border-bottom:1px solid var(--amber);color:var(--text);font-weight:600;text-align:center;padding:9px 16px;font-size:13px;line-height:1.45}
+.banner.stale{background:var(--amber-bg);color:var(--text)}
+.banner.very-stale{background:var(--red-bg);border-bottom-color:var(--red);color:var(--text)}
+.banner b{color:var(--amber)}
+.banner.very-stale b{color:var(--red)}
+main{padding:32px 0 20px}
+section{margin-bottom:44px;scroll-margin-top:84px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{margin:0;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-2);font-weight:650}
+.sec-head .hint{color:var(--text-3);font-size:12px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:20px}
+.card h3{margin:0;font-size:15px;font-weight:620}
+.card .sub{color:var(--text-2);font-size:12px}
+.ov-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.ov-title{display:flex;flex-direction:column}
+.ov-title b{font-size:13px;letter-spacing:.02em;color:var(--text-2);font-weight:620}
+.ov-title span{font-size:11.5px;color:var(--text-3)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:650;padding:3px 9px;border-radius:999px;border:1px solid var(--border-strong);color:var(--text-2);background:var(--neutral-bg);white-space:nowrap}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--text-3)}
+.badge.V,.badge.GREEN{color:var(--green);background:var(--green-bg);border-color:transparent}
+.badge.V::before,.badge.GREEN::before{background:var(--green)}
+.badge.U,.badge.YELLOW,.badge.WATCH{color:var(--amber);background:var(--amber-bg);border-color:transparent}
+.badge.U::before,.badge.YELLOW::before,.badge.WATCH::before{background:#d9a21b}
+.badge.d{color:var(--accent);background:var(--neutral-bg);border-color:transparent}
+.badge.d::before{background:var(--accent)}
+.badge.RED,.badge.stale{color:var(--red);background:var(--red-bg);border-color:transparent}
+.badge.RED::before,.badge.stale::before{background:var(--red)}
+.q{display:inline-flex;align-items:center;justify-content:center;min-width:22px;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:6px;vertical-align:1px;letter-spacing:.02em}
+.q.V{background:var(--green-bg);color:var(--green)}
+.q.U{background:var(--amber-bg);color:var(--amber)}
+.q.d{background:var(--neutral-bg);color:var(--accent)}
+.ov-col .k{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px}
+.ov-col .big{font-size:28px;font-weight:650;letter-spacing:-.02em;line-height:1.1}
+.ov-col .big small{font-size:13px;font-weight:500;color:var(--text-2);margin-left:3px;letter-spacing:0}
+.ov-col .yy{color:var(--text-2);font-size:12.5px;margin-top:6px;line-height:1.45}
+.legend-note{font-size:11.5px;color:var(--text-3);margin-top:10px}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);font-weight:650;text-align:left;padding:8px 12px;border-bottom:1px solid var(--border-strong);white-space:nowrap}
+td{padding:11px 12px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.num{font-weight:620;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tr.group td{background:var(--surface-2);font-weight:650;color:var(--text-2);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px}
+.item-title{font-weight:620;color:var(--text)}
+.item-rel{color:var(--text-2);font-size:12px;margin-top:3px;max-width:46rem;white-space:normal}
+.notes{margin-top:10px;font-size:12px;color:var(--text-2);line-height:1.55}
+.state-card{border-left:3px solid var(--navy)}
+.state-card .state-text{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--text)}
+.state-card .state-src{margin:10px 0 0;font-size:11.5px;color:var(--text-3);line-height:1.5}
+.staff-body{font-size:14px;line-height:1.65;margin:0}
+.staff-body p{margin:0 0 12px}
+.staff-body p:last-child{margin-bottom:0}
+.staff-body ul{margin:0 0 14px;padding-left:18px}
+.staff-body li{margin:0 0 6px}
+.chart-img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:var(--surface-2)}
+.cap-line{font-size:11.5px;color:var(--text-3);margin-top:8px;line-height:1.45}
+footer{margin:10px 0 48px}
+.caveat{border:1px solid var(--amber);background:var(--amber-bg);border-radius:12px;padding:18px 22px;color:var(--text)}
+.caveat h2{margin:0 0 8px;font-size:15px;color:var(--amber);letter-spacing:.01em}
+.caveat h3{margin:16px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+.caveat ul{margin:0;padding-left:18px;font-size:13px;line-height:1.65}
+.caveat .fine{margin-top:10px;font-size:11.5px;color:var(--text-2)}
+.notice{color:var(--text-2);font-size:13px;text-align:center;padding:16px}
+.muted{color:var(--text-2)}
+.pill{display:inline-flex;align-items:center;font-size:11px;font-weight:650;padding:2px 8px;border-radius:999px;background:var(--neutral-bg);color:var(--text-2);white-space:nowrap}
+.pill.pending{background:var(--amber-bg);color:var(--amber)}
+.pill.missing{background:var(--red-bg);color:var(--red)}
+.pill.stale{background:var(--red-bg);color:var(--red)}
+.pill.retained,.pill.updated{background:var(--green-bg);color:var(--green)}
+.pill.own{background:var(--neutral-bg);color:var(--accent)}
+.site-foot{margin:16px 0 0;font-size:12px;color:var(--text-3);text-align:center;line-height:1.55}
+.site-foot a{color:var(--accent);text-decoration:none}
+.site-foot a:hover{text-decoration:underline}
+.legend-row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:0 0 12px;font-size:12px;color:var(--text-2)}
+@media (max-width:1100px){
+  .grid4,.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 14px}
+  .top-inner{padding:12px 14px;gap:12px}
+  .brand h1{font-size:18px}
+  .meta{gap:14px;width:100%}
+  main{padding-top:22px}
+  .card{padding:16px}
+  .ov-col .big{font-size:24px}
+  .grid4,.grid3{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <h1 id="brandTitle">Staff Desk</h1>
+      <div class="sub" id="brandSub"></div>
+    </div>
+    <div class="meta">
+      <div><span class="lbl" id="lblAsOf">As of</span><span class="val" id="asOf">–</span></div>
+      <div><span class="lbl" id="lblSrc">Source</span><span class="val" id="srcFile">–</span></div>
+      <div class="fresh"><i class="dot amber" id="freshDot"></i><div><span class="lbl" id="lblFresh">Data freshness</span><span class="val" id="freshText">–</span></div></div>
+    </div>
+    <nav class="nav" id="nav" aria-label="Staff desks"></nav>
+    <div class="actions">
+      <button class="btn-ghost" id="themeBtn" type="button" aria-label="Toggle dark mode">◐ <span id="themeLbl">Dark</span></button>
+    </div>
+  </div>
+</header>
+<div class="banner" id="banner" hidden></div>
+
+<main class="wrap" id="app">
+  <section id="summary">
+    <div class="sec-head"><h2 id="hSummary">1 · Current state</h2><span class="hint" id="hintQuality"></span></div>
+    <div class="grid4" id="kpis"></div>
+    <div class="card state-card" id="stateBox" style="margin-top:18px"></div>
+  </section>
+
+  <section id="nowcasts">
+    <div class="sec-head"><h2 id="hNowcast">2 · Nowcasts</h2><span class="hint" id="hintNowcast"></span></div>
+    <div class="legend-row" id="legend"></div>
+    <div class="card">
+      <div class="tbl-wrap" id="nowcastTbl"></div>
+      <div class="notes" id="nowcastNote"></div>
+    </div>
+  </section>
+
+  <section id="baseline">
+    <div class="sec-head"><h2 id="hBaseline">3 · Baseline</h2><span class="hint" id="hintBaseline"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="baselineTbl"></div>
+      <div class="notes" id="baselineNote"></div>
+    </div>
+  </section>
+
+  <section id="recent">
+    <div class="sec-head"><h2 id="hRecent">4 · Key data since last update</h2><span class="hint" id="hintRecent"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="recentTbl"></div>
+      <div class="notes" id="recentNote"></div>
+    </div>
+  </section>
+
+  <section id="calendar">
+    <div class="sec-head"><h2 id="hCal">5 · Upcoming calendar</h2><span class="hint" id="hintCal"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="calTbl"></div>
+      <div class="notes" id="calNote"></div>
+    </div>
+  </section>
+
+  <section id="staff">
+    <div class="sec-head"><h2 id="hStaff">6 · Staff view</h2><span class="hint" id="hintStaff"></span></div>
+    <div class="card">
+      <div class="staff-body" id="staffBody"></div>
+      <div class="tbl-wrap" id="taylorTbl" style="margin-top:16px"></div>
+    </div>
+  </section>
+
+  <section id="charts" hidden>
+    <div class="sec-head"><h2 id="hCharts">7 · Charts</h2><span class="hint" id="hintCharts"></span></div>
+    <div class="grid2" id="chartGrid"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="caveat" id="caveat">
+    <h2 id="hCaveat">⚠ Datenlage und Quellen – Vorbehalte</h2>
+    <div id="caveatBody"></div>
+    <p class="fine" id="caveatFine"></p>
+  </div>
+  <div class="site-foot" id="siteFoot"></div>
+</footer>
+
+<script>
+const EMBEDDED = /*__EMBEDDED__*/ {"schema_version":"1.0","feed":"staff_desk","desk":"fed","lang":"en","bot":{"name":"Fed Staff Desk","id":"e7dd0741-a00a-4b0d-8aa6-e2bf9fc3f8e8"},"title":"Fed Staff Desk — US nowcast (12 Nov 2026)","short_title":"Fed Staff Desk","subtitle":"United States · staff-style research view · not Fed Board staff work and not the FOMC SEP · public sources only · not investment advice","as_of":"2026-11-12T07:40:00+01:00","as_of_display":"12 Nov 2026, 07:40 Europe/Zurich","timezone":"Europe/Zurich","source":{"label":"IPDeck_US_nowcast_note_2026-11-12.md","file":"IPDeck_US_nowcast_note_2026-11-12.md","prepared":"12 Nov 2026, morning Europe/Zurich. Data as of 5–10 Nov; nowcast pages checked ~07:40 CET."},"freshness":{"status":"current","dot":"green","label":"Current — checked 12 Nov, 07:40","banner":null},"summary":{"heading":"Current state","text":"Q4 growth trackers remain at or above the 6 Nov staff baseline of 3.0% SAAR (own estimate): Atlanta GDPNow 3.5% (V, 9 Nov; FRED 3.4810) and the New York Fed Staff Nowcast 2.94% (V, official file, 6 Nov). October payrolls (BLS, 6 Nov, V) showed NFP +165k and an unemployment rate of 4.1%, but U-6 rose to 7.9%. October CPI (BLS, 10 Nov, V) was +0.4% m/m sa and core +0.3% m/m; no 12-month change was published (October 2025 gap). The 3.2% core PCE Q4/Q4 staff baseline is retained, with judgmental upside risk of about 3.3–3.4% (own estimate), pending PPI on 13 Nov. Stance: hold at 3.75–4.00% with a tightening bias; a December hike remains live, not automatic (own estimate). Staff-style view, not Fed Board staff work and not the FOMC SEP (16 Sep medians).","as_of":"2026-11-12T07:40:00+01:00","source":"Fed Staff Desk note, 12 Nov 2026"},"nowcast_hint":"Model nowcasts are not official Reserve Bank or FOMC forecasts. Third-party inflation-nowcast model readings are omitted from this public page.","nowcast_note":"Pages checked 12 Nov ~07:40 CET: Atlanta GDPNow, FRED GDPNOW, and the New York Fed official Staff Nowcast file. No New York Fed vintage after 6 Nov. Early-quarter GDPNow has high revision risk. The 3.2% core PCE baseline is not reset ahead of PPI.","nowcasts":[{"id":"gdp-staff","category":"GDP","variable":"Q4 2026 GDP, SAAR (staff baseline)","value":"3.0","unit":"%","quality":"d","status":"own estimate, retained","period":"Q4 2026","interval":"–","prior":"2.0 (30 Oct)","source":"Staff judgment","as_of":"6 Nov, unchanged 12 Nov","rationale":"Judgmental staff baseline on the 6 Nov Page; not reset in the 12 Nov note. Near-term trackers sit at or above this level.","headline":true,"kpi_label":"Q4 GDP, staff","kpi_note":"Own estimate, retained 6 Nov · SAAR"},{"id":"gdpnow","category":"GDP","variable":"Q4 2026 GDP, SAAR (Atlanta GDPNow)","value":"3.5","unit":"%","quality":"V","status":"updated 9 Nov","period":"Q4 2026","interval":"–","prior":"3.4% (4 Nov)","source":"Atlanta GDPNow page and FRED GDPNOW (3.4810)","as_of":"9 Nov (FRED last updated 18:02 Europe/Zurich); next 17 Nov","rationale":"Mechanical expenditure bridge; the 9 Nov vintage includes wholesale trade. Early-quarter estimate, not a judgmental forecast. +0.5 pp vs staff 3.0% (d).","headline":true,"kpi_label":"GDPNow","kpi_note":"Atlanta Fed, 9 Nov · FRED 3.4810 · V"},{"id":"nyfed","category":"GDP","variable":"Q4 2026 GDP, SAAR (NY Fed Staff Nowcast)","value":"2.94","unit":"%","quality":"V","status":"as of 6 Nov","period":"Q4 2026","interval":"–","prior":"2.90% (30 Oct, same file)","source":"New York Fed official Staff Nowcast file, checked 12 Nov","as_of":"6 Nov; no later vintage in the official file","rationale":"Factor-model cross-check. Interactive page still unreadable. Close to the staff 3.0% baseline (−0.06 pp vs staff, d)."},{"id":"gdp-q4q4","category":"GDP","variable":"2026 GDP, Q4/Q4","value":"2.7","unit":"%","quality":"d","status":"retained","period":"2026 Q4/Q4","interval":"–","prior":"2.4 (30 Oct)","source":"Staff bridge, 6 Nov; BEA 29 Oct","as_of":"6 Nov, unchanged 12 Nov","rationale":"Approximate bridge on the 6 Nov Page (earlier quarters held fixed). SEP 16 Sep median is 2.3%."},{"id":"pce-base","category":"inflation","variable":"2026 PCE / core PCE, Q4/Q4 (staff baseline)","value":"3.7 / 3.2","unit":"%","quality":"d","status":"retained; core upside risk","period":"2026 Q4/Q4","interval":"core upside ~3.3–3.4, own estimate","prior":"3.7 / 3.2","source":"Staff, retained 6 Nov","as_of":"6 Nov; judgment 10–12 Nov","rationale":"Baseline unchanged. Judgmental upside risk of about 3.3–3.4% on core (own estimate); no mechanical reset, pending PPI on 13 Nov. SEP 16 Sep: 3.7 / 3.4.","headline":true,"kpi_label":"PCE / core, staff","kpi_note":"Q4/Q4 baseline 3.2% · upside risk ~3.3–3.4, own estimate · pending PPI"},{"id":"ur","category":"labour","variable":"Unemployment rate","value":"4.1","unit":"%","quality":"V","status":"BLS October; staff Q4 average also 4.1","period":"Oct 2026 / 2026 Q4 average","interval":"–","prior":"Sep 4.2%; staff previous 4.2","source":"BLS Employment Situation, 6 Nov; staff baseline 6 Nov","as_of":"6 Nov (BLS); baseline unchanged 12 Nov","rationale":"October UR 4.1% (V). Staff 2026 Q4 average is 4.1 (own estimate), in line with the SEP 16 Sep median. U-6 rose to 7.9%.","headline":true,"kpi_label":"Unemployment","kpi_note":"BLS October · V · U-6 7.9%"},{"id":"funds","category":"policy","variable":"Federal funds target range / staff year-end midpoint","value":"3.75–4.00","unit":"%","quality":"V","status":"hold, tightening bias","period":"Current (28 Oct decision) / 2026 year-end","interval":"Staff year-end midpoint 4.1 (retained)","prior":"Held 28 Oct, 10–2","source":"Fed statement, V, carried from the 6 Nov Page; staff path retained 6 Nov","as_of":"28 Oct decision; path unchanged 12 Nov","rationale":"Hold at 3.75–4.00% with a tightening bias. A December hike remains live, not automatic (own estimate). Staff year-end midpoint 4.1, same as the SEP 16 Sep median. No new numerical decision probability is assigned.","headline":true,"kpi_label":"Policy rate","kpi_note":"Hold 3.75–4.00% · tightening bias · Dec hike live, not automatic"}],"baseline_hint":"Staff baselines from the 6 Nov Page, unchanged in the 12 Nov note. Official column is the FOMC SEP of 16 Sep (medians).","baseline_note":"2026 GDP Q4/Q4 bridge (d) is approximate (earlier quarters held fixed). Core PCE is not reset ahead of PPI. 2027 figures were set 30 Oct and retained 6 Nov.","baseline":[{"variable":"Q4 2026 GDP, SAAR","staff":"3.0 — own estimate","previous":"2.0 (30 Oct)","change":"+1.0 (d)","official":"n/a","quality":"d","source":"Staff judgment","as_of":"6 Nov, unchanged 12 Nov"},{"variable":"2026 GDP, Q4/Q4","staff":"2.7 (d)","previous":"2.4","change":"+0.3 (d)","official":"2.3","quality":"d","source":"Staff bridge, 6 Nov; BEA 29 Oct","as_of":"6 Nov"},{"variable":"2026 UR, Q4 average","staff":"4.1 — own estimate","previous":"4.2","change":"−0.1 (d)","official":"4.1","quality":"d","source":"Staff, 6 Nov; BLS October","as_of":"6 Nov"},{"variable":"2026 PCE / core PCE, Q4/Q4","staff":"3.7 / 3.2","previous":"3.7 / 3.2","change":"0.0 (core upside risk ~3.3–3.4, own estimate)","official":"3.7 / 3.4","quality":"d","source":"Retained 6 Nov; judgment 10–12 Nov","as_of":"6 Nov, unchanged 12 Nov"},{"variable":"2026 funds midpoint, year-end","staff":"4.1","previous":"4.1","change":"0.0","official":"4.1","quality":"d","source":"Staff conditional path, retained 6 Nov","as_of":"6 Nov"},{"variable":"2027 GDP / UR / PCE / core / funds","staff":"1.8 / 4.4 / 2.4 / 2.6 / 4.4","previous":"unchanged (30 Oct)","change":"0.0","official":"2.4 / 4.1 / 2.3 / 2.5 / 4.1","quality":"d","source":"Staff 30 Oct, retained 6 Nov; SEP 16 Sep","as_of":"6 Nov"}],"recent_hint":"Official releases since 5 Nov. Survey-consensus figures are omitted from this public page.","recent_note":"Rounded BLS NFP, productivity and CPI figures are carried from the 6 Nov Page and the 10 Nov staff CPI draft (BLS pages not re-opened on the morning of 12 Nov). Unrounded CPI 0.350 / 0.296 (d) is from that 10 Nov draft’s BLS API derivation, not re-fetched on 12 Nov. Claims for the week ended 7 Nov were still missing at 07:40 CET.","recent_data":[{"release":"Q3 productivity — BLS","date":"5 Nov 2026","quality":"V","actual":"+3.6% SAAR / 2.1% y/y; unit labour costs −0.7% SAAR / +2.4% y/y","prior":"Q2 productivity +2.1% (revised), ULC +1.9%","why":"Supply improvement offsets some wage pressure."},{"release":"Initial claims — FRED ICSA (DOL)","date":"Updated 5 Nov 2026","quality":"V","actual":"189k, week ended 31 Oct. Week ended 7 Nov: missing (due 12 Nov, 14:30 Zurich).","prior":"195k, week ended 24 Oct","why":"Layoffs still limited on the last published week."},{"release":"October Employment Situation — BLS","date":"6 Nov 2026","quality":"V","actual":"NFP +165k; private +159k; 3-month average +137k (d); UR 4.1%; average hourly earnings +0.4% m/m, 3.1% y/y; Aug/Sep revisions +84k; U-6 7.9%; part-time for economic reasons +339k to 4.8m.","prior":"Sep NFP +60k (revised); UR 4.2%; U-6 7.6%","why":"Hiring upside; broader slack increased."},{"release":"Michigan preliminary November — sca.isr.umich.edu","date":"Checked 12 Nov 2026 (figures V)","quality":"V","actual":"Sentiment 51.0; current 51.0; expectations 50.9; 1-year inflation 4.3% (from 4.7%); long-run 3.4% (from 3.5%). Interviews 20 Oct–2 Nov.","prior":"October final 48.0 / 46.7 / 48.8","why":"Soft-data bounce. The primary page does not timestamp the release; secondary news dates it 6 Nov, not 9 Nov (U)."},{"release":"New York Fed SCE, October","date":"9 Nov 2026","quality":"V","actual":"Inflation 1y 3.9% / 3y 3.3% / 5y 3.0%, unchanged; mean probability that unemployment is higher: 45.3%, highest since April 2020; job-finding 46.5%; missed-payment probability 13.8%.","prior":"Inflation unchanged; unemployment-probability +1.4 pp","why":"Inflation expectations stable; labour anxiety mixed."},{"release":"October CPI — BLS USDL-26-1685","date":"10 Nov 2026","quality":"V","actual":"+0.4% sa (0.350, d); core +0.3% (0.296, d). No 12-month change (October 2025 gap).","prior":"September +0.6% / core +0.3%","why":"Core still firm. Flags upside risk to the 3.2% core PCE baseline, pending PPI."}],"calendar_hint":"Dates from primary calendars as recorded in the 12 Nov note. Some times were not re-verified that morning.","calendar_note":"Claims for the week ended 7 Nov were already due at 14:30 Zurich on 12 Nov and were still missing at the 07:40 CET cutoff.","calendar":[{"date":"12 Nov 2026","event":"Claims, week ended 7 Nov","time":"14:30 (usual DOL Thursday time; calendar not re-verified on 12 Nov)","why":"Missing as of ~07:40 CET. Last FRED ICSA observation: 189k, 31 Oct."},{"date":"13 Nov 2026","event":"October PPI","time":"14:30","why":"PCE pipeline; decision point for a core PCE baseline reset. BLS calendar (30 Oct check)."},{"date":"17 Nov 2026","event":"Atlanta GDPNow update","time":"Publication time not verified","why":"Next scheduled Atlanta update (primary page, 9 Nov)."},{"date":"25 Nov 2026","event":"Q3 GDP second estimate; October PCE","time":"14:30","why":"Growth revision and target inflation (BEA calendar, 30 Oct)."},{"date":"4 Dec 2026","event":"November Employment Situation","time":"14:30","why":"Last scheduled jobs report before the FOMC (BLS, 6 Nov notice)."},{"date":"8–9 Dec 2026","event":"FOMC with SEP","time":"Decision time not re-verified","why":"Policy path and new participant projections (Fed calendar)."}],"staff_hint":"Staff-style view, not Fed Board staff work and not the FOMC SEP.","staff_view":{"lead":"Risk balance in the 12 Nov note: growth up near term, inflation up, pending PPI.","bullets":["Growth (near-term upside, own estimate): GDPNow 3.5% vs staff Q4 3.0%; the New York Fed 2.94% is close to baseline. Next-year downside (energy, real incomes, rate-sensitive demand) is unchanged (staff, 6 Nov).","Labour (mixed): payrolls and a 4.1% unemployment rate coexist with U-6 at 7.9%, low published claims, and SCE unemployment-probability at a post-2020 high.","Inflation (upside risk): October core CPI +0.3% m/m (BLS, V). The 3.2% core PCE Q4/Q4 baseline is retained, with judgmental upside risk of about 3.3–3.4% (own estimate), pending PPI on 13 Nov. Productivity and ECI still offset.","Credit / household finance: SLOOS (2 Nov) still shows weak C&I demand and tighter CRE and non-bank financial standards; SCE missed-payment probability 13.8% (V, 9 Nov). A Q3 credit-card 90+ delinquency reading of 12.9% remains U and was not re-verified.","Policy: hold-with-tightening-bias remains the central case; a December hike is live, not automatic (own estimate)."],"policy":"Keep hold at 3.75–4.00% with a tightening bias. Stronger payrolls and a still-firm core CPI make the December hike-live case more compelling; better unit labour costs and mixed labour internals keep it from being automatic. The core PCE baseline is not reset ahead of PPI. No new numerical decision probability is assigned. The staff path remains separate from the 16 Sep SEP. Market pricing — current Treasury yields, post-CPI moves and December hike odds — is n/a as a single verified series in this run. Target range 3.75–4.00%, held 10–2 on 28 Oct (Fed statement, V, carried from the 6 Nov Page).","taylor":{"title":"Taylor-type diagnostic (d)","note":"Carried from the 6 Nov Page; not recalculated on 12 Nov. Not optimal-policy estimates.","rows":[{"label":"Carried from the 6 Nov Page; not recalculated this run","inputs":"r* 1.2; u* 4.2 (SEP 16 Sep); u 4.1 (BLS Oct); gap +0.2 (d); π core 3.1 / headline 3.6 (BEA Sep, 29 Oct); midpoint 3.875 (Fed 28 Oct)","result":"6 Nov: core 4.95%; headline 5.70%; low-r* 4.25%; inertial 4.04%"}]}},"charts":[],"caveats":["Checked 12 Nov 2026, ~07:40 Europe/Zurich (CET). (d) = own derivation; own estimate = staff judgment; V = checked against a primary source this run or, for rounded BLS NFP, productivity and CPI figures, carried from the 6 Nov Page and the 10 Nov staff CPI draft (BLS pages not re-opened this morning); U = secondary or not independently re-checked.","MISSING: claims for the week ended 7 Nov (due 12 Nov, 14:30 Zurich). No New York Fed Staff Nowcast after 6 Nov in the official file. Current Treasury yields, a single verified December hike probability, and a reconciled post-CPI market reaction are n/a.","BLS published no October CPI year-on-year change (October 2025 gap). Unrounded CPI 0.350 / 0.296 (d) is carried from the 10 Nov staff draft’s API derivation, not re-fetched on 12 Nov.","The University of Michigan primary page does not timestamp the release; secondary news reports date it 6 Nov, not 9 Nov (U).","Q3 credit-card 90+ delinquency 12.9% remains U, not re-verified.","Atlanta GDPNow and the New York Fed Staff Nowcast are model outputs, not official FOMC forecasts. Taylor figures are carried, not recalculated, and are not optimal-policy estimates."],"excluded":[{"item":"Third-party inflation nowcast model readings (including any comparison of CPI or PCE to those model values)","reason":"Licensed or restricted content is not shown on this public page."},{"item":"Survey-consensus figures and surprise-versus-consensus calculations","reason":"Consensus values are not published here."},{"item":"Secondary unofficial PCE estimates from private accounts","reason":"Unverified and conflicting; omitted."},{"item":"Licensed bank, broker and private-survey datasets","reason":"Internal-use or licensed material is not shown."}],"gaps":["Claims for the week ended 7 Nov were still unpublished at the 07:40 CET cutoff on 12 Nov.","Core PCE staff baseline awaits the 13 Nov PPI before any reset decision.","Market yields and December policy odds were not available as a single verified series in this run."]} /*__EMBEDDED__*/;
+const THEME_KEY = "staff-desk-theme";
+
+const I18N = {
+  en: {
+    asOf: "As of", source: "Source", freshness: "Data freshness",
+    summary: "1 · Current state",
+    nowcast: "2 · Nowcasts",
+    baseline: "3 · Baseline",
+    recent: "4 · Key data since last update",
+    cal: "5 · Upcoming calendar",
+    staff: "6 · Staff view",
+    charts: "7 · Charts",
+    caveat: "⚠ Datenlage und Quellen – Vorbehalte",
+    qualityHint: "Figures keep their V / U / (d) labels. This page does not generate or randomise numbers.",
+    legendV: "V — verified from a primary document that was opened",
+    legendU: "U — unverified (secondary, undated, or not independently confirmed)",
+    legendD: "(d) — derived / own arithmetic from stated figures",
+    legendOwn: "own estimate — staff judgment",
+    colVariable: "Variable", colValue: "Nowcast / reading", colPeriod: "Period",
+    colStatus: "Status", colQuality: "Q", colInterval: "Interval",
+    colPrior: "Prior", colSource: "Source / as of", colRationale: "Rationale",
+    colStaff: "Staff baseline", colPrev: "Previous", colChange: "Change",
+    colOfficial: "Official projection",
+    colRelease: "Release", colActual: "Actual", colWhy: "Why it matters",
+    colDate: "Date", colEvent: "Release / event", colTime: "Europe/Zurich", colFocus: "Why it matters",
+    excluded: "Omitted from this public page",
+    gaps: "Gaps and stale items",
+    fine: "Staff-style research compilation only. Not official central-bank staff work and not a committee projection. Not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich. This page only renders figures already saved by the desk; it does not refresh or invent numbers.",
+    foot: "Public research pages · not investment advice",
+    home: "Inflation nowcasts",
+    ai: "AI token",
+    staffHome: "Staff desks",
+    dark: "Dark", light: "Light",
+    empty: "No rows in the source note.",
+    emptyCal: "No calendar in the source note.",
+    emptyBase: "No approved desk baseline in the source note.",
+    category: {GDP:"GDP", inflation:"Inflation", labour:"Labour", policy:"Policy rate"}
+  },
+  de: {
+    asOf: "Stand", source: "Quelle", freshness: "Datenstand",
+    summary: "1 · Aktueller Stand",
+    nowcast: "2 · Nowcasts",
+    baseline: "3 · Ausgangslage",
+    recent: "4 · Daten seit dem letzten Stand",
+    cal: "5 · Kalender",
+    staff: "6 · Staff-Einschätzung",
+    charts: "7 · Grafiken",
+    caveat: "⚠ Datenlage und Quellen – Vorbehalte",
+    qualityHint: "Alle Zahlen behalten ihre Kennzeichnung V / U / (d). Diese Seite erzeugt oder verändert keine Werte.",
+    legendV: "V — an einem Primärdokument geprüft",
+    legendU: "U — nicht verifiziert (sekundär, undatiert oder nicht unabhängig bestätigt)",
+    legendD: "(d) — eigene Ableitung / Rechnung aus genannten Werten",
+    legendOwn: "Urteil / eigene Schätzung — Staff-Einschätzung",
+    colVariable: "Zielgröße", colValue: "Nowcast / Wert", colPeriod: "Zeitraum",
+    colStatus: "Status", colQuality: "Q", colInterval: "Intervall",
+    colPrior: "Vorher", colSource: "Quelle / Stand", colRationale: "Begründung",
+    colStaff: "Staff-Baseline", colPrev: "Vorherige Baseline", colChange: "Änderung",
+    colOfficial: "Offizielle Projektion",
+    colRelease: "Veröffentlichung", colActual: "Ist", colWhy: "Relevanz",
+    colDate: "Datum", colEvent: "Veröffentlichung / Termin", colTime: "Europe/Zurich", colFocus: "Relevanz",
+    excluded: "Auf dieser öffentlichen Seite nicht gezeigt",
+    gaps: "Lücken und veraltete Punkte",
+    fine: "Nur eine Staff-Recherchezusammenstellung. Keine offizielle Arbeit der Notenbank und keine Ausschussprojektion. Keine Anlageempfehlung, kein Rating und kein Handelssignal. Zeiten in Europe/Zurich. Diese Seite stellt nur bereits gespeicherte Desk-Angaben dar; sie erzeugt oder aktualisiert keine Zahlen.",
+    foot: "Öffentliche Rechercheseiten · keine Anlageberatung",
+    home: "Inflation Nowcasts",
+    ai: "AI Token",
+    staffHome: "Staff-Desks",
+    dark: "Dunkel", light: "Hell",
+    empty: "Im Quellenvermerk keine Zeilen.",
+    emptyCal: "Im Quellenvermerk kein Kalender.",
+    emptyBase: "Im Quellenvermerk keine freigegebene Desk-Baseline.",
+    category: {GDP:"BIP", inflation:"Inflation", labour:"Arbeitsmarkt", policy:"Leitzins"}
+  }
+};
+
+function qs(id){ return document.getElementById(id); }
+function esc(s){
+  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+function qClass(q){
+  const t = String(q || "").trim();
+  if (t === "V") return "V";
+  if (t === "U") return "U";
+  return "d";
+}
+function qBadge(q){
+  const t = String(q || "").trim() || "U";
+  const cls = qClass(t);
+  const label = (t === "(d)" || t === "d" || cls === "d") && t !== "V" && t !== "U" ? "(d)" : t;
+  return `<span class="q ${cls}" title="Data quality">${esc(label)}</span>`;
+}
+function statusPill(s){
+  if (!s) return "";
+  const raw = String(s);
+  const k = raw.toLowerCase();
+  let cls = "";
+  if (/(missing|fehlt|veraltet|stale)/.test(k)) cls = "missing";
+  else if (/(pending|ausstehend)/.test(k)) cls = "pending";
+  else if (/(retained|beibehalten|updated|aktualisiert)/.test(k)) cls = "retained";
+  else if (/(own|urteil|schätzung|estimate)/.test(k)) cls = "own";
+  return ` <span class="pill ${cls}">${esc(raw)}</span>`;
+}
+function fmtWhen(iso, lang){
+  if (!iso) return "–";
+  if (/^\d{4}-\d{2}-\d{2}$/.test(iso)) {
+    const [y,m,d] = iso.split("-");
+    if (lang === "de") {
+      const months = ["Jan.","Feb.","März","Apr.","Mai","Juni","Juli","Aug.","Sep.","Okt.","Nov.","Dez."];
+      return `${Number(d)}. ${months[Number(m)-1]} ${y}`;
+    }
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return `${Number(d)} ${months[Number(m)-1]} ${y}`;
+  }
+  const d = new Date(iso);
+  if (isNaN(d)) return String(iso);
+  const loc = lang === "de" ? "de-CH" : "en-GB";
+  const fmt = new Intl.DateTimeFormat(loc, {
+    timeZone: "Europe/Zurich",
+    day: "numeric", month: "short", year: "numeric",
+    hour: "2-digit", minute: "2-digit", hour12: false
+  });
+  return fmt.format(d).replace(",", "") + " Europe/Zurich";
+}
+function setTheme(t){
+  document.documentElement.setAttribute("data-theme", t);
+  try { localStorage.setItem(THEME_KEY, t); } catch(e){}
+  const lang = document.documentElement.lang === "de" ? "de" : "en";
+  const L = I18N[lang];
+  qs("themeLbl").textContent = t === "dark" ? L.light : L.dark;
+}
+function initTheme(){
+  let t = "light";
+  try { t = localStorage.getItem(THEME_KEY) || t; } catch(e){}
+  setTheme(t);
+}
+function navHtml(desk, L){
+  const items = [
+    {href:"../", label:L.home, id:""},
+    {href:"../ai-token/", label:L.ai, id:""},
+    {sep:true},
+    {href:"../staff/", label:L.staffHome, id:"staff"},
+    {href:"../staff-fed/", label:"Fed", id:"fed"},
+    {href:"../staff-ecb/", label:"ECB", id:"ecb"},
+    {href:"../staff-boe/", label:"BoE", id:"boe"},
+    {href:"../staff-boj/", label:"BoJ", id:"boj"}
+  ];
+  return items.map(it => {
+    if (it.sep) return `<span class="sep"></span>`;
+    const on = it.id && it.id === desk ? " on" : (it.id === "staff" && !desk ? " on" : "");
+    return `<a class="${on.trim()}" href="${it.href}">${esc(it.label)}</a>`;
+  }).join("");
+}
+
+function renderKpis(data){
+  const rows = (data.nowcasts || []).filter(r => r.headline);
+  const el = qs("kpis");
+  if (!rows.length) { el.innerHTML = ""; return; }
+  el.innerHTML = rows.map(r => `
+    <div class="card ov-col">
+      <div class="ov-head">
+        <div class="ov-title"><b>${esc(r.kpi_label || r.variable)}</b><span>${esc(r.period || "")}</span></div>
+        ${qBadge(r.quality)}
+      </div>
+      <div class="big">${esc(r.value)}${r.unit ? `<small>${esc(r.unit)}</small>` : ""}</div>
+      <div class="yy">${esc(r.kpi_note || r.status || "")}</div>
+    </div>`).join("");
+}
+
+function groupRows(rows, lang){
+  const L = I18N[lang] || I18N.en;
+  const order = ["GDP","inflation","labour","policy"];
+  const groups = [];
+  const seen = new Set();
+  for (const key of order) {
+    const g = rows.filter(r => r.category === key);
+    if (g.length) { groups.push({key, label: L.category[key] || key, rows:g}); seen.add(key); }
+  }
+  const rest = rows.filter(r => !seen.has(r.category));
+  if (rest.length) groups.push({key:"other", label:"", rows:rest});
+  return groups;
+}
+
+function renderNowcasts(data, L, lang){
+  const rows = data.nowcasts || [];
+  if (!rows.length) { qs("nowcastTbl").innerHTML = `<p class="notice">${esc(L.empty)}</p>`; return; }
+  const groups = groupRows(rows, lang);
+  let html = `<table><thead><tr>
+    <th>${esc(L.colVariable)}</th>
+    <th class="r">${esc(L.colValue)}</th>
+    <th>${esc(L.colPeriod)}</th>
+    <th>${esc(L.colStatus)}</th>
+    <th>${esc(L.colInterval)}</th>
+    <th>${esc(L.colPrior)}</th>
+    <th>${esc(L.colSource)}</th>
+    <th>${esc(L.colRationale)}</th>
+  </tr></thead><tbody>`;
+  for (const g of groups) {
+    if (g.label) html += `<tr class="group"><td colspan="8">${esc(g.label)}</td></tr>`;
+    for (const r of g.rows) {
+      html += `<tr>
+        <td><div class="item-title">${esc(r.variable)}</div></td>
+        <td class="num r">${esc(r.value)}${r.unit ? " " + esc(r.unit) : ""}${qBadge(r.quality)}</td>
+        <td>${esc(r.period || "–")}</td>
+        <td>${statusPill(r.status)}</td>
+        <td>${esc(r.interval || "–")}</td>
+        <td>${esc(r.prior || "–")}</td>
+        <td><div>${esc(r.source || "–")}</div><div class="item-rel">${esc(r.as_of || "")}</div></td>
+        <td><div class="item-rel">${esc(r.rationale || "")}</div></td>
+      </tr>`;
+    }
+  }
+  html += `</tbody></table>`;
+  qs("nowcastTbl").innerHTML = html;
+  qs("nowcastNote").textContent = data.nowcast_note || "";
+}
+
+function renderBaseline(data, L){
+  const rows = data.baseline || [];
+  const sec = qs("baseline");
+  if (!rows.length) {
+    qs("baselineTbl").innerHTML = `<p class="notice">${esc(L.emptyBase)}</p>`;
+    qs("baselineNote").textContent = data.baseline_note || "";
+    return;
+  }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colVariable)}</th>
+    <th class="r">${esc(L.colStaff)}</th>
+    <th class="r">${esc(L.colPrev)}</th>
+    <th class="r">${esc(L.colChange)}</th>
+    <th class="r">${esc(L.colOfficial)}</th>
+    <th>${esc(L.colSource)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td><div class="item-title">${esc(r.variable)}</div></td>
+      <td class="num r">${esc(r.staff || "–")}${qBadge(r.quality || "d")}</td>
+      <td class="r">${esc(r.previous || "–")}</td>
+      <td class="r">${esc(r.change || "–")}</td>
+      <td class="r">${esc(r.official || "–")}</td>
+      <td><div>${esc(r.source || "–")}</div><div class="item-rel">${esc(r.as_of || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("baselineTbl").innerHTML = html;
+  qs("baselineNote").textContent = data.baseline_note || "";
+}
+
+function renderRecent(data, L){
+  const rows = data.recent_data || [];
+  if (!rows.length) { qs("recentTbl").innerHTML = `<p class="notice">${esc(L.empty)}</p>`; return; }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colRelease)}</th>
+    <th>${esc(L.colActual)}</th>
+    <th>${esc(L.colPrior)}</th>
+    <th>${esc(L.colWhy)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td><div class="item-title">${esc(r.release)}</div><div class="item-rel">${esc(r.date || "")}${r.quality ? qBadge(r.quality) : ""}</div></td>
+      <td>${esc(r.actual || "–")}</td>
+      <td>${esc(r.prior || "–")}</td>
+      <td><div class="item-rel">${esc(r.why || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("recentTbl").innerHTML = html;
+  qs("recentNote").textContent = data.recent_note || "";
+}
+
+function renderCal(data, L){
+  const rows = data.calendar || [];
+  if (!rows.length) { qs("calTbl").innerHTML = `<p class="notice">${esc(L.emptyCal)}</p>`; return; }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colDate)}</th>
+    <th>${esc(L.colEvent)}</th>
+    <th>${esc(L.colTime)}</th>
+    <th>${esc(L.colFocus)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td class="num">${esc(r.date)}</td>
+      <td><div class="item-title">${esc(r.event)}</div></td>
+      <td>${esc(r.time || "–")}</td>
+      <td><div class="item-rel">${esc(r.why || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("calTbl").innerHTML = html;
+  qs("calNote").textContent = data.calendar_note || "";
+}
+
+function renderStaff(data){
+  const sv = data.staff_view || {};
+  let html = "";
+  if (sv.lead) html += `<p>${esc(sv.lead)}</p>`;
+  if (sv.bullets && sv.bullets.length) {
+    html += "<ul>" + sv.bullets.map(b => `<li>${esc(b)}</li>`).join("") + "</ul>";
+  }
+  if (sv.policy) html += `<p>${esc(sv.policy)}</p>`;
+  qs("staffBody").innerHTML = html || `<p class="muted">–</p>`;
+  const t = sv.taylor;
+  if (t && (t.rows || t.note || t.result)) {
+    let th = `<table><thead><tr><th>${esc(t.title || "Taylor-type diagnostic (d)")}</th><th>Assumptions / inputs</th><th class="r">Result</th></tr></thead><tbody>`;
+    const rows = t.rows || [{inputs: t.assumptions || "", result: t.result || ""}];
+    for (const r of rows) {
+      th += `<tr><td>${esc(r.label || t.note || "Own calculation, not an optimal-policy estimate")}</td><td>${esc(r.inputs || t.assumptions || "")}</td><td class="r">${esc(r.result || t.result || "")}${qBadge("d")}</td></tr>`;
+    }
+    th += `</tbody></table>`;
+    qs("taylorTbl").innerHTML = th;
+  } else {
+    qs("taylorTbl").innerHTML = "";
+  }
+}
+
+function renderCharts(data){
+  const charts = data.charts || [];
+  const sec = qs("charts");
+  if (!charts.length) { sec.hidden = true; return; }
+  sec.hidden = false;
+  qs("chartGrid").innerHTML = charts.map(c => `
+    <div class="card">
+      <h3>${esc(c.title)}</h3>
+      <div class="sub" style="margin:4px 0 12px">${esc(c.subtitle || "")}</div>
+      <img class="chart-img" src="${esc(c.file)}" alt="${esc(c.title)}" width="1600" height="900">
+      <div class="cap-line">${esc(c.caption || "")}</div>
+    </div>`).join("");
+}
+
+function renderCaveats(data, L){
+  const bits = [];
+  const caveats = data.caveats || [];
+  if (caveats.length) {
+    bits.push("<ul>" + caveats.map(c => `<li>${esc(c)}</li>`).join("") + "</ul>");
+  }
+  const excl = data.excluded || [];
+  if (excl.length) {
+    bits.push(`<h3>${esc(L.excluded)}</h3><ul>` + excl.map(e => {
+      const item = typeof e === "string" ? e : e.item;
+      const reason = typeof e === "string" ? "" : e.reason;
+      return `<li>${esc(item)}${reason ? " — " + esc(reason) : ""}</li>`;
+    }).join("") + "</ul>");
+  }
+  const gaps = data.gaps || [];
+  if (gaps.length) {
+    bits.push(`<h3>${esc(L.gaps)}</h3><ul>` + gaps.map(g => `<li>${esc(g)}</li>`).join("") + "</ul>");
+  }
+  qs("caveatBody").innerHTML = bits.join("") || `<p>${esc(L.empty)}</p>`;
+  qs("caveatFine").textContent = L.fine;
+}
+
+function render(data){
+  const lang = data.lang === "de" ? "de" : "en";
+  document.documentElement.lang = lang;
+  const L = I18N[lang];
+  document.title = data.title || data.bot?.name || "Staff Desk";
+  qs("brandTitle").textContent = data.short_title || data.bot?.name || "Staff Desk";
+  qs("brandSub").textContent = data.subtitle || "";
+  qs("lblAsOf").textContent = L.asOf;
+  qs("lblSrc").textContent = L.source;
+  qs("lblFresh").textContent = L.freshness;
+  qs("asOf").textContent = data.as_of_display || fmtWhen(data.as_of, lang);
+  qs("srcFile").textContent = (data.source && data.source.label) || "–";
+  const fr = data.freshness || {};
+  qs("freshText").textContent = fr.label || "–";
+  qs("freshDot").className = "dot " + (fr.dot || "amber");
+  const banner = qs("banner");
+  if (fr.banner) {
+    banner.hidden = false;
+    banner.className = "banner " + (fr.dot === "red" ? "very-stale" : "stale");
+    banner.innerHTML = fr.banner;
+  } else {
+    banner.hidden = true;
+  }
+  qs("nav").innerHTML = navHtml(data.desk, L);
+  const theme = document.documentElement.getAttribute("data-theme") || "light";
+  qs("themeLbl").textContent = theme === "dark" ? L.light : L.dark;
+
+  qs("hSummary").textContent = L.summary;
+  qs("hNowcast").textContent = L.nowcast;
+  qs("hBaseline").textContent = L.baseline;
+  qs("hRecent").textContent = L.recent;
+  qs("hCal").textContent = L.cal;
+  qs("hStaff").textContent = L.staff;
+  qs("hCharts").textContent = L.charts;
+  qs("hCaveat").textContent = L.caveat;
+  qs("hintQuality").textContent = L.qualityHint;
+  qs("hintNowcast").textContent = data.nowcast_hint || "";
+  qs("hintBaseline").textContent = data.baseline_hint || "";
+  qs("hintRecent").textContent = data.recent_hint || "";
+  qs("hintCal").textContent = data.calendar_hint || "";
+  qs("hintStaff").textContent = data.staff_hint || "";
+  qs("hintCharts").textContent = data.charts_hint || "";
+
+  qs("legend").innerHTML = `
+    <span class="q V">V</span> ${esc(L.legendV)}
+    <span class="q U">U</span> ${esc(L.legendU)}
+    <span class="q d">(d)</span> ${esc(L.legendD)}
+    <span class="pill own">${esc(L.legendOwn)}</span>`;
+
+  renderKpis(data);
+  const sum = data.summary || {};
+  qs("stateBox").innerHTML = `
+    <div class="ov-head">
+      <div class="ov-title"><b>${esc(sum.heading || (lang==="de" ? "Aktueller Stand" : "Current state"))}</b>
+      <span>${esc(sum.source || "")}</span></div>
+    </div>
+    <div class="state-text">${esc(sum.text || "")}</div>
+    <div class="state-src">${esc(sum.as_of ? (lang==="de"?"Stand: ":"As of: ") + (data.as_of_display || fmtWhen(sum.as_of, lang)) : "")}</div>`;
+
+  renderNowcasts(data, L, lang);
+  renderBaseline(data, L);
+  renderRecent(data, L);
+  renderCal(data, L);
+  renderStaff(data);
+  renderCharts(data);
+  renderCaveats(data, L);
+
+  const home = `<a href="../">${esc(L.home)}</a> · <a href="../ai-token/">${esc(L.ai)}</a> · <a href="../staff/">${esc(L.staffHome)}</a>`;
+  qs("siteFoot").innerHTML = `${esc(L.foot)} · ${home}`;
+}
+
+async function load(){
+  let data = EMBEDDED;
+  try {
+    const r = await fetch("data/desk.json", {cache:"no-store"});
+    if (r.ok) data = await r.json();
+  } catch (e) {}
+  if (!data) {
+    qs("app").innerHTML = `<p class="notice">No desk data loaded.</p>`;
+    return;
+  }
+  render(data);
+}
+qs("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  setTheme(cur === "dark" ? "light" : "dark");
+});
+initTheme();
+load();
+</script>
+</body>
+</html>
