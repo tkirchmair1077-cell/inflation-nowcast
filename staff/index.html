@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Staff desks — Fed, ECB, BoE, BoJ</title>
+<title>Staff desks — Fed, ECB, BoE, BoJ, SNB</title>
 <meta name="robots" content="noindex">
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="Staff-style research desks. Public sources only. Not official central-bank staff work. Not investment advice.">
@@ -159,7 +159,7 @@ footer{margin:10px 0 48px}
   <div class="top-inner">
     <div class="brand">
       <h1>Staff desks</h1>
-      <div class="sub">Fed · ECB · BoE · BoJ · staff-style research views · public sources only · not official central-bank staff work · not investment advice</div>
+      <div class="sub">Fed · ECB · BoE · BoJ · SNB · staff-style research views · public sources only · not official central-bank staff work · not investment advice</div>
     </div>
     <nav class="nav" aria-label="Site">
       <a href="../">Inflation nowcasts</a>
@@ -170,6 +170,7 @@ footer{margin:10px 0 48px}
       <a href="../staff-ecb/">ECB</a>
       <a href="../staff-boe/">BoE</a>
       <a href="../staff-boj/">BoJ</a>
+      <a href="../staff-snb/">SNB</a>
     </nav>
     <div class="actions">
       <button class="btn-ghost" id="themeBtn" type="button" aria-label="Toggle dark mode">◐ <span id="themeLbl">Dark</span></button>
@@ -180,8 +181,8 @@ footer{margin:10px 0 48px}
   <section>
     <div class="sec-head"><h2>Overview</h2><span class="hint">Figures keep their V / U / (d) labels. These pages do not generate or randomise numbers.</span></div>
     <div class="intro">
-      <p>Four public pages, one for each staff desk, built from the desk’s latest saved note. Nothing here is new research: where a note is several days old, the page says so. Licensed bank, broker and private-survey content, survey-consensus figures, and items the desks marked internal-only are left off.</p>
-      <p>Fed and ECB notes are dated 12 Nov 2026. The BoE report is dated 8 Nov 2026 (Q3 GDP was due 12 Nov and is not incorporated). The BoJ first-run nowcast is dated 1 Nov 2026 and is marked veraltet.</p>
+      <p>Five public pages, one for each staff desk, built from the desk’s latest saved note. Nothing here is new research: where a note is several days old, the page says so. Licensed bank, broker and private-survey content, survey-consensus figures, and items the desks marked internal-only are left off.</p>
+      <p>Fed, ECB and SNB notes are dated 12 Nov 2026. The BoE report is dated 8 Nov 2026 (Q3 GDP was due 12 Nov and is not incorporated). The BoJ first-run nowcast is dated 1 Nov 2026 and is marked veraltet.</p>
     </div>
     <div class="grid2d">
       
@@ -221,6 +222,15 @@ footer{margin:10px 0 48px}
       <p class="blurb">Erstlauf vom 1. November 2026, seither nicht aktualisiert. Urteil: Kern-VPI national (ohne Frischwaren) im Oktober etwa 2,1 % J/J (Modell R2 2,0 %; empirisches 68-%-Band um R2 1,8–2,2 %); Kern-Kern etwa 2,2 %. Reales BIP Q3 etwa −0,1 % Q/Q (Szenarioband −0,5 bis +0,3 %); die eigene Bridge-Gegenprobe über den Handel ergibt +0,25 % und dient nicht als Punktschätzung. …</p>
       <div class="src-line">Source: Japan-Nowcast im BoJ-Stil, Erstlauf (Page, 1. Nov. 2026) und boj_nowcast_2026-11-01.json</div>
     </a>
+    <a class="desk-card card" href="../staff-snb/">
+      <div class="ov-head">
+        <div class="ov-title"><b>SNB Staff Desk</b><span>Switzerland</span></div>
+        <span class="badge GREEN">Current — note 12 Nov 2026</span>
+      </div>
+      <div class="k">12 Nov 2026</div>
+      <p class="blurb">The SNB left the policy rate unchanged at 0% on 24 September 2026 (V). The staff baseline for the 10 December 2026 assessment is a hold at 0%, with a higher short-term conditional inflation forecast and a live discussion of whether 0% remains appropriate. Hawk/dove score: +1 (slightly hawkish tilt into December; committee barometer scale −5 to +5; Einschätzung, keine Formel). Incoming data since the meeting have moved against the September Q4 forecast of 0.7%: headline CPI printed 1.0% in September and 1.5% in October, while core 1 remains 0.5% (V: BFS). …</p>
+      <div class="src-line">Source: SNB baseline note, 12 November 2026</div>
+    </a>
     </div>
   </section>
 </main>
@@ -230,10 +240,10 @@ footer{margin:10px 0 48px}
     <ul>
       <li>Each desk page has its own caveats, exclusions and gap list. Read those before relying on a figure.</li>
       <li>Survey-consensus figures, licensed broker and bank research, licensed private-survey datasets, and a third-party euro-area GDP tracker marked internal-only are omitted. Quality labels: <b>V</b> verified from a primary document, <b>U</b> unverified, <b>(d)</b> derived, <b>own estimate</b> = staff judgment.</li>
-      <li>BoE material is as of 8 Nov 2026, 09:00 Europe/Zurich, and is several days old. BoJ material is as of 1 Nov 2026 and is stale (veraltet); the September wage nowcast was due for a 6 Nov release and was not updated.</li>
+      <li>BoE material is as of 8 Nov 2026, 09:00 Europe/Zurich, and is several days old. BoJ material is as of 1 Nov 2026 and is stale (veraltet); the September wage nowcast was due for a 6 Nov release and was not updated. The SNB page omits daily exchange rates computed from Bloomberg BFIX; official monthly FX is shown instead. A staff LIK component nowcast is not yet available on that page.</li>
       <li>These are staff-style research compilations, not official central-bank staff work and not committee projections. They are not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich.</li>
     </ul>
-    <p class="fine">This landing page was assembled on 12 Nov 2026 from the four desk JSON files. It does not refresh or invent numbers.</p>
+    <p class="fine">This landing page was assembled on 12 Nov 2026 from the five desk JSON files. It does not refresh or invent numbers.</p>
   </div>
   <div class="site-foot">Public research pages · not investment advice · <a href="../">Inflation nowcasts</a> · <a href="../ai-token/">AI token</a></div>
 </footer>

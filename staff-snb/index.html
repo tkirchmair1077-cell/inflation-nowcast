@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff Desk</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Staff-style research desk. Public sources only. Not official central-bank staff work. Not investment advice.">
+<style>
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f9fafc; --border:#e2e7ee; --border-strong:#cfd7e2;
+  --text:#0f1c30; --text-2:#56657c; --text-3:#8391a6; --grid:#e8ecf2;
+  --navy:#14305a; --navy-ink:#ffffff; --accent:#2f5d9e;
+  --green:#2e8b5a; --green-bg:#e7f4ec; --red:#c4514c; --red-bg:#fbebea; --amber:#a9741a; --amber-bg:#fdf2d9; --neutral-bg:#eef1f5;
+  --shadow:0 1px 2px rgba(15,28,48,.04);
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#0a111e; --surface:#111a2b; --surface-2:#0e1626; --border:#223149; --border-strong:#2f4262;
+  --text:#e5ebf4; --text-2:#9aabc3; --text-3:#6f819b; --grid:#1d2a40;
+  --navy:#3d6cb3; --navy-ink:#ffffff; --accent:#7ba5e6;
+  --green:#4cc08a; --green-bg:#12301f; --red:#ec7b76; --red-bg:#3a1a1a; --amber:#e3b25a; --amber-bg:#33280f; --neutral-bg:#18233a;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1360px;margin:0 auto;padding:0 28px}
+header.top{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--border)}
+.top-inner{display:flex;align-items:center;gap:20px;padding:14px 28px;max-width:1360px;margin:0 auto;flex-wrap:wrap}
+.brand{flex:1 1 260px;min-width:200px}
+.brand h1{margin:0;font-size:22px;font-weight:650;letter-spacing:-.01em;color:var(--text)}
+.brand .sub{color:var(--text-2);font-size:12.5px;margin-top:2px}
+.meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:var(--text-2);font-size:12.5px}
+.meta .lbl{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)}
+.meta .val{color:var(--text);font-weight:550}
+.fresh{display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--text-3);flex:none;box-shadow:0 0 0 3px rgba(128,140,160,.18)}
+.dot.green{background:var(--green);box-shadow:0 0 0 3px rgba(46,139,90,.18)}
+.dot.amber{background:#d9a21b;box-shadow:0 0 0 3px rgba(217,162,27,.2)}
+.dot.red{background:var(--red);box-shadow:0 0 0 3px rgba(196,81,76,.2)}
+.actions{display:flex;align-items:center;gap:10px}
+button{font:inherit;cursor:pointer}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border-strong);border-radius:8px;padding:9px 12px;font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.btn-ghost:hover{background:var(--neutral-bg)}
+.nav{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.nav a{display:inline-flex;align-items:center;padding:6px 11px;border-radius:8px;font-size:12.5px;font-weight:550;color:var(--text-2);text-decoration:none;border:1px solid transparent}
+.nav a:hover{background:var(--neutral-bg);color:var(--text)}
+.nav a.on{background:var(--navy);color:var(--navy-ink);border-color:transparent}
+.nav .sep{width:1px;height:16px;background:var(--border-strong);margin:0 4px}
+.banner{background:var(--amber-bg);border-bottom:1px solid var(--amber);color:var(--text);font-weight:600;text-align:center;padding:9px 16px;font-size:13px;line-height:1.45}
+.banner.stale{background:var(--amber-bg);color:var(--text)}
+.banner.very-stale{background:var(--red-bg);border-bottom-color:var(--red);color:var(--text)}
+.banner b{color:var(--amber)}
+.banner.very-stale b{color:var(--red)}
+main{padding:32px 0 20px}
+section{margin-bottom:44px;scroll-margin-top:84px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{margin:0;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-2);font-weight:650}
+.sec-head .hint{color:var(--text-3);font-size:12px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:20px}
+.card h3{margin:0;font-size:15px;font-weight:620}
+.card .sub{color:var(--text-2);font-size:12px}
+.ov-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.ov-title{display:flex;flex-direction:column}
+.ov-title b{font-size:13px;letter-spacing:.02em;color:var(--text-2);font-weight:620}
+.ov-title span{font-size:11.5px;color:var(--text-3)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:650;padding:3px 9px;border-radius:999px;border:1px solid var(--border-strong);color:var(--text-2);background:var(--neutral-bg);white-space:nowrap}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--text-3)}
+.badge.V,.badge.GREEN{color:var(--green);background:var(--green-bg);border-color:transparent}
+.badge.V::before,.badge.GREEN::before{background:var(--green)}
+.badge.U,.badge.YELLOW,.badge.WATCH{color:var(--amber);background:var(--amber-bg);border-color:transparent}
+.badge.U::before,.badge.YELLOW::before,.badge.WATCH::before{background:#d9a21b}
+.badge.d{color:var(--accent);background:var(--neutral-bg);border-color:transparent}
+.badge.d::before{background:var(--accent)}
+.badge.RED,.badge.stale{color:var(--red);background:var(--red-bg);border-color:transparent}
+.badge.RED::before,.badge.stale::before{background:var(--red)}
+.q{display:inline-flex;align-items:center;justify-content:center;min-width:22px;font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:6px;vertical-align:1px;letter-spacing:.02em}
+.q.V{background:var(--green-bg);color:var(--green)}
+.q.U{background:var(--amber-bg);color:var(--amber)}
+.q.d{background:var(--neutral-bg);color:var(--accent)}
+.ov-col .k{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px}
+.ov-col .big{font-size:28px;font-weight:650;letter-spacing:-.02em;line-height:1.1}
+.ov-col .big small{font-size:13px;font-weight:500;color:var(--text-2);margin-left:3px;letter-spacing:0}
+.ov-col .yy{color:var(--text-2);font-size:12.5px;margin-top:6px;line-height:1.45}
+.legend-note{font-size:11.5px;color:var(--text-3);margin-top:10px}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);font-weight:650;text-align:left;padding:8px 12px;border-bottom:1px solid var(--border-strong);white-space:nowrap}
+td{padding:11px 12px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.num{font-weight:620;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tr.group td{background:var(--surface-2);font-weight:650;color:var(--text-2);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px}
+.item-title{font-weight:620;color:var(--text)}
+.item-rel{color:var(--text-2);font-size:12px;margin-top:3px;max-width:46rem;white-space:normal}
+.notes{margin-top:10px;font-size:12px;color:var(--text-2);line-height:1.55}
+.state-card{border-left:3px solid var(--navy)}
+.state-card .state-text{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--text)}
+.state-card .state-src{margin:10px 0 0;font-size:11.5px;color:var(--text-3);line-height:1.5}
+.staff-body{font-size:14px;line-height:1.65;margin:0}
+.staff-body p{margin:0 0 12px}
+.staff-body p:last-child{margin-bottom:0}
+.staff-body ul{margin:0 0 14px;padding-left:18px}
+.staff-body li{margin:0 0 6px}
+.chart-img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:var(--surface-2)}
+.cap-line{font-size:11.5px;color:var(--text-3);margin-top:8px;line-height:1.45}
+.grid2 .card.wide{grid-column:1/-1}
+.chart-note{border:1px solid var(--amber);background:var(--amber-bg);border-radius:12px;padding:16px 20px;font-size:13.5px;line-height:1.65;color:var(--text);margin:0 0 18px}
+.chart-note p{margin:0 0 8px}
+.chart-note p:last-child{margin:0}
+.chart-stats{margin-top:14px}
+footer{margin:10px 0 48px}
+.caveat{border:1px solid var(--amber);background:var(--amber-bg);border-radius:12px;padding:18px 22px;color:var(--text)}
+.caveat h2{margin:0 0 8px;font-size:15px;color:var(--amber);letter-spacing:.01em}
+.caveat h3{margin:16px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+.caveat ul{margin:0;padding-left:18px;font-size:13px;line-height:1.65}
+.caveat .fine{margin-top:10px;font-size:11.5px;color:var(--text-2)}
+.notice{color:var(--text-2);font-size:13px;text-align:center;padding:16px}
+.muted{color:var(--text-2)}
+.pill{display:inline-flex;align-items:center;font-size:11px;font-weight:650;padding:2px 8px;border-radius:999px;background:var(--neutral-bg);color:var(--text-2);white-space:nowrap}
+.pill.pending{background:var(--amber-bg);color:var(--amber)}
+.pill.missing{background:var(--red-bg);color:var(--red)}
+.pill.stale{background:var(--red-bg);color:var(--red)}
+.pill.retained,.pill.updated{background:var(--green-bg);color:var(--green)}
+.pill.own{background:var(--neutral-bg);color:var(--accent)}
+.site-foot{margin:16px 0 0;font-size:12px;color:var(--text-3);text-align:center;line-height:1.55}
+.site-foot a{color:var(--accent);text-decoration:none}
+.site-foot a:hover{text-decoration:underline}
+.legend-row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:0 0 12px;font-size:12px;color:var(--text-2)}
+@media (max-width:1100px){
+  .grid4,.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 14px}
+  .top-inner{padding:12px 14px;gap:12px}
+  .brand h1{font-size:18px}
+  .meta{gap:14px;width:100%}
+  main{padding-top:22px}
+  .card{padding:16px}
+  .ov-col .big{font-size:24px}
+  .grid4,.grid3{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <h1 id="brandTitle">Staff Desk</h1>
+      <div class="sub" id="brandSub"></div>
+    </div>
+    <div class="meta">
+      <div><span class="lbl" id="lblAsOf">As of</span><span class="val" id="asOf">–</span></div>
+      <div><span class="lbl" id="lblSrc">Source</span><span class="val" id="srcFile">–</span></div>
+      <div class="fresh"><i class="dot amber" id="freshDot"></i><div><span class="lbl" id="lblFresh">Data freshness</span><span class="val" id="freshText">–</span></div></div>
+    </div>
+    <nav class="nav" id="nav" aria-label="Staff desks"></nav>
+    <div class="actions">
+      <button class="btn-ghost" id="themeBtn" type="button" aria-label="Toggle dark mode">◐ <span id="themeLbl">Dark</span></button>
+    </div>
+  </div>
+</header>
+<div class="banner" id="banner" hidden></div>
+
+<main class="wrap" id="app">
+  <section id="summary">
+    <div class="sec-head"><h2 id="hSummary">1 · Current state</h2><span class="hint" id="hintQuality"></span></div>
+    <div class="grid4" id="kpis"></div>
+    <div class="card state-card" id="stateBox" style="margin-top:18px"></div>
+  </section>
+
+  <section id="staff">
+    <div class="sec-head"><h2 id="hStaff">2 · Staff view</h2><span class="hint" id="hintStaff"></span></div>
+    <div class="card">
+      <div class="staff-body" id="staffBody"></div>
+      <div class="tbl-wrap" id="taylorTbl" style="margin-top:16px"></div>
+    </div>
+  </section>
+
+  <section id="nowcasts">
+    <div class="sec-head"><h2 id="hNowcast">3 · Nowcasts</h2><span class="hint" id="hintNowcast"></span></div>
+    <div class="legend-row" id="legend"></div>
+    <div class="card">
+      <div class="tbl-wrap" id="nowcastTbl"></div>
+      <div class="notes" id="nowcastNote"></div>
+    </div>
+  </section>
+
+  <section id="baseline">
+    <div class="sec-head"><h2 id="hBaseline">4 · Baseline</h2><span class="hint" id="hintBaseline"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="baselineTbl"></div>
+      <div class="notes" id="baselineNote"></div>
+    </div>
+  </section>
+
+  <section id="recent">
+    <div class="sec-head"><h2 id="hRecent">5 · Key data since last update</h2><span class="hint" id="hintRecent"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="recentTbl"></div>
+      <div class="notes" id="recentNote"></div>
+    </div>
+  </section>
+
+  <section id="calendar">
+    <div class="sec-head"><h2 id="hCal">6 · Upcoming calendar</h2><span class="hint" id="hintCal"></span></div>
+    <div class="card">
+      <div class="tbl-wrap" id="calTbl"></div>
+      <div class="notes" id="calNote"></div>
+    </div>
+  </section>
+
+  <section id="charts" hidden>
+    <div class="sec-head"><h2 id="hCharts">7 · Charts</h2><span class="hint" id="hintCharts"></span></div>
+    <div class="chart-note" id="chartsNote" hidden></div>
+    <div class="grid2" id="chartGrid"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="caveat" id="caveat">
+    <h2 id="hCaveat">⚠ Datenlage und Quellen – Vorbehalte</h2>
+    <div id="caveatBody"></div>
+    <p class="fine" id="caveatFine"></p>
+  </div>
+  <div class="site-foot" id="siteFoot"></div>
+</footer>
+
+<script>
+const EMBEDDED = /*__EMBEDDED__*/ {"schema_version":"1.0","feed":"staff_desk","desk":"snb","lang":"en","bot":{"name":"SNB Staff Desk","id":"cd81f4f5-1d61-459a-9068-7a2073aea100"},"title":"SNB Staff Desk — Switzerland (12 Nov 2026)","short_title":"SNB Staff Desk","subtitle":"Switzerland · staff-style research view · not the Governing Board and not official SNB staff work · public sources only · not investment advice","as_of":"2026-11-12","as_of_display":"12 Nov 2026","timezone":"Europe/Zurich","source":{"label":"SNB baseline note, 12 November 2026","file":"SNB baseline note, 12 November 2026","prepared":"12 November 2026, Europe/Zurich. First SNB baseline for the committee. Official sources fetched on 12 November 2026 (SNB, BFS, SECO, KOF). No time of day was recorded on the note."},"freshness":{"status":"current","dot":"green","label":"Current — note 12 Nov 2026","banner":null},"summary":{"heading":"Current state","text":"The SNB left the policy rate unchanged at 0% on 24 September 2026 (V). The current policy rate remains 0.00%, valid from 20 June 2025 (V). The staff baseline for the 10 December 2026 assessment is a hold at 0%, with a higher short-term conditional inflation forecast and a live discussion of whether 0% remains appropriate. Hawk/dove score: +1 (slightly hawkish tilt into December; committee barometer scale −5 to +5; Einschätzung, keine Formel). Incoming data since the meeting have moved against the September Q4 forecast of 0.7%: headline CPI was 0.8% y/y in August at the time of the decision and has since printed 1.0% in September and 1.5% in October (V: BFS, 3 November 2026). Core 1 remains 0.5% in October, unchanged from September (V: BFS). The rise is imported and energy-driven (imported goods +3.7%, petroleum products +40.3% y/y in October; V: BFS). A 1.5% October print makes a Q4 average of 0.7% highly unlikely without a sharp reversal in November–December (d). Official monthly EUR/CHF and USD/CHF (SNB cube devkum, to October 2026) show a June–September depreciation and a partial October retracement against the euro, with the franc still weaker against the dollar than in early summer (V / (d)). Staff view, not the Governing Board’s and not official SNB staff work. A staff LIK component nowcast is not yet available.","as_of":"2026-11-12","source":"SNB baseline note, 12 November 2026"},"nowcast_hint":"There is no staff LIK component nowcast on this page; that model is pending. Official BFS, SECO, KOF and SNB readings are shown with their V / (d) labels. The 10 December policy call and the hawk/dove score are staff judgment.","nowcast_note":"The 10 December baseline (hold at 0%) and the hawk/dove score of +1 are staff judgment (Einschätzung, keine Formel), not a formula and not a market-implied probability. A staff LIK nowcast point for November 2026 is not published: the component model is pending, and an unsealed research prototype is not shown. Quarterly headline y/y figures of 0.17% (Q1), 0.56% (Q2) and 0.72% (Q3) are derived (d) from average official monthly BFS indices; the SNB’s September “observed” table printed 0.2 and 0.6 for Q1 and Q2 (consistent after rounding) and left Q3–Q4 blank.","nowcasts":[{"id":"policy-rate","category":"policy","variable":"SNB policy rate","value":"0.00","unit":"%","quality":"V","status":"unchanged since 24 Sep 2026 decision","period":"Current (valid from 20 June 2025)","interval":"–","prior":"0.00% (held on 24 Sep 2026)","source":"SNB press release, 24 September 2026; SNB current interest rates, page and Excel dated 11 November 2026","as_of":"11 Nov 2026","rationale":"Banks’ sight deposits are remunerated at the policy rate up to a threshold; the discount above the threshold is 0.25 percentage points (rate −0.25%), unchanged. The threshold factor is 13.5, valid from 1 August 2026 (previously 15, per Quarterly Bulletin 3/2026).","headline":true,"kpi_label":"SNB policy rate","kpi_note":"Held at 0% on 24 Sep 2026 · V"},{"id":"dec-baseline","category":"policy","variable":"Staff baseline, 10 December 2026 assessment","value":"Hold at 0%","unit":"","quality":"d","status":"own estimate","period":"10 Dec 2026","interval":"–","prior":"Hold at 0% (24 Sep decision, V)","source":"Staff judgment, SNB baseline note, 12 November 2026","as_of":"12 Nov 2026","rationale":"Central staff call: hold at 0%, with a higher short-term inflation forecast and a live discussion of whether 0% remains appropriate. A hike is not the baseline while core remains at 0.5% and the SNB continues to look through energy, but the October print has made a purely mechanical “forecast still in the band, therefore hold and say little” meeting less comfortable.","headline":true,"kpi_label":"10 Dec baseline","kpi_note":"Staff judgment · hold at 0%"},{"id":"hawk-dove","category":"policy","variable":"Hawk/dove score (committee barometer)","value":"+1","unit":"","quality":"d","status":"own estimate","period":"Into 10 Dec 2026","interval":"Scale −5 (very dovish) to +5 (very hawkish)","prior":"–","source":"Staff judgment, SNB baseline note, 12 November 2026","as_of":"12 Nov 2026","rationale":"Einschätzung, keine Formel. Slightly hawkish tilt: last action a hold at 0% with an expansionary self-assessment, but “increased” FX-intervention willingness withdrawn after franc depreciation, and two subsequent CPI prints (1.0%, then 1.5%) sit well above the September Q4 forecast of 0.7%. Core 0.5% and the look-through-energy reaction function keep a December hike out of the baseline and cap the score at +1 rather than +2 or higher."},{"id":"saron","category":"policy","variable":"SARON (SNB two-decimal republication)","value":"−0.04","unit":"%","quality":"V","status":"latest SNB republication","period":"Close of trading 10 Nov 2026","interval":"–","prior":"−0.04% on 6 Nov (official cube snbgwdzid, PublishingDate 2026-11-09)","source":"SNB current-rates page and Excel, file date 11 November 2026; SNB two-decimal republication of SIX","as_of":"11 Nov 2026","rationale":"No 11 November SARON on that file. SIX is the benchmark administrator and publishes six decimals; the six-decimal SIX print was not fetched. SARON has stayed in a narrow band slightly below the 0% policy rate, as the SNB intends (V: QB 3/2026)."},{"id":"conf-10y","category":"policy","variable":"Ten-year Confederation spot yield","value":"0.529","unit":"%","quality":"V","status":"official SNB print","period":"11 Nov 2026","interval":"–","prior":"0.58% in mid-September; 0.39% at the June assessment (V: QB 3/2026, data as at 24 Sep 2026)","source":"SNB current-rates Excel, 11 November 2026; mid-September and mid-June from QB 3/2026","as_of":"11 Nov 2026","rationale":"Below mid-September and above mid-June. The September QB described an upward shift and slight flattening driven mainly by higher expected short-term rates (V: QB 3/2026). Market-implied SNB forwards are a gap and are not estimated."},{"id":"cpi-oct","category":"inflation","variable":"Swiss CPI (LIK), October, y/y and m/m","value":"1.5 / 0.2","unit":"%","quality":"V","status":"published","period":"Oct 2026","interval":"–","prior":"Sep 1.0% y/y, 0.0% m/m; Aug 0.8% y/y (the print at the 24 Sep decision)","source":"BFS, LIK October 2026 release, 3 November 2026, 08:30; LIK25B25 workbook (base December 2025 = 100)","as_of":"3 Nov 2026","rationale":"October index 101.7 (workbook 101.6823). Last twelve months, headline y/y: 2025-11 0.0; 12 0.1; 2026-01 0.1; 02 0.1; 03 0.3; 04 0.6; 05 0.6; 06 0.5; 07 0.4; 08 0.8; 09 1.0; 10 1.5. HVPI for Switzerland in October: +1.6% y/y (V: BFS press release).","headline":true,"kpi_label":"CPI Oct, y/y","kpi_note":"BFS, 3 Nov · V · +0.2% m/m"},{"id":"core-oct","category":"inflation","variable":"Core 1 (ex fresh/seasonal products, energy and fuels), October, y/y","value":"0.5","unit":"%","quality":"V","status":"published","period":"Oct 2026","interval":"–","prior":"0.5% in September","source":"BFS LIK25B25, 3 November 2026","as_of":"3 Nov 2026","rationale":"Unchanged from September. Last twelve months, core 1 y/y: 0.4, 0.5, 0.5, 0.4, 0.4, 0.3, 0.3, 0.3, 0.3, 0.4, 0.5, 0.5. Ex-petroleum headline in October: 0.6% y/y (V).","headline":true,"kpi_label":"Core 1 Oct, y/y","kpi_note":"BFS · V · unchanged from September"},{"id":"cpi-drivers","category":"inflation","variable":"Domestic / imported / petroleum / ex-petroleum, October, y/y","value":"0.8 / 3.7 / 40.3 / 0.6","unit":"%","quality":"V","status":"published","period":"Oct 2026","interval":"–","prior":"Domestic last four months 0.5, 0.6, 0.7, 0.8; imported 0.0, 1.5, 2.1, 3.7 (Jul–Oct)","source":"BFS LIK25B25, 3 November 2026","as_of":"3 Nov 2026","rationale":"The rise is imported and energy-driven. Energy and fuels +15.9% y/y in October (V)."},{"id":"cif-sept","category":"inflation","variable":"SNB conditional inflation forecast (annual), September 2026","value":"0.7 / 0.8 / 0.8","unit":"%","quality":"V","status":"official forecast, 24 Sep 2026","period":"2026 / 2027 / 2028","interval":"Assumes a 0% policy rate over the entire horizon","prior":"June 2026 conditional forecast: 0.6 / 0.6 / 0.7","source":"SNB press-release PDF table, 24 September 2026","as_of":"24 Sep 2026","rationale":"Stays inside the 0–2% price-stability range throughout. Quarterly path (V: same table, numbers read from the official image and aligned to the printed year-separator gridlines): 2026 Q4 0.7%; 2027 1.2 / 1.2 / 0.9 / 0.7; 2028 0.7 / 0.8 / 0.8 / 0.8; 2029 Q1–Q3 0.8 / 0.9 / 0.9. Relative to June, the short-term path is higher (2027 H1 1.2 vs 0.8), as the SNB attributed to higher-than-expected oil-product prices and, at the medium-term margin, a weaker franc."},{"id":"q-inflation-d","category":"inflation","variable":"Quarterly headline CPI y/y, from average official monthly indices","value":"Q1 0.17; Q2 0.56; Q3 0.72","unit":"%","quality":"d","status":"derived","period":"2026 Q1–Q3","interval":"–","prior":"SNB September “observed” table printed 0.2 and 0.6 for Q1 and Q2; Q3–Q4 blank","source":"Derived from average official BFS monthly indices (LIK25B25)","as_of":"3 Nov 2026","rationale":"Q1 and Q2 are consistent with the official September observed table after rounding. Q3 0.72% is staff-derived; it was not in that table. A 1.5% October print makes a Q4 average of 0.7% — the September conditional forecast — highly unlikely without a sharp reversal in November–December (d)."},{"id":"gdp-q2","category":"GDP","variable":"Swiss real GDP, Q2 2026, q/q, sport-event-adjusted","value":"+1.5","unit":"%","quality":"V","status":"published","period":"Q2 2026","interval":"–","prior":"Q1 +0.5% (sport-event-adjusted)","source":"SECO media release, 3 September 2026","as_of":"3 Sep 2026","rationale":"Not sport-event-adjusted: +1.9% in Q2 and +0.6% in Q1 (V). The SNB described Q2 as exceptionally strong and overstated by chemicals/pharma, but solid and broad-based even without that effect (V: SNB press release and introductory remarks, 24 September 2026). SECO Q3 GDP has not been published."},{"id":"snb-growth","category":"GDP","variable":"SNB growth forecast","value":"1.5–2 / around 1.5","unit":"%","quality":"V","status":"official forecast, 24 Sep 2026","period":"2026 / 2027","interval":"–","prior":"2026 raised from a lower June figure (the June figure was not re-fetched)","source":"SNB press release and introductory remarks, 24 September 2026","as_of":"24 Sep 2026","rationale":"Company talks available at the September assessment pointed to robust Q3 momentum (V: SNB summary; QB 3/2026). Q3 GDP is an input for 10 December, not by itself a trigger given that judgment."},{"id":"kof","category":"GDP","variable":"KOF Economic Barometer, October","value":"107.6","unit":"","quality":"V","status":"published","period":"Oct 2026","interval":"–","prior":"−1.5 points from September","source":"KOF press release, 30 October 2026","as_of":"30 Oct 2026","rationale":"Still above the medium-term average of 100; outlook described as robust (V)."}],"baseline_hint":"Staff policy baseline for 10 December, set against the 24 September decision and the September conditional inflation forecast (constant 0% policy rate).","baseline_note":"The staff call is a hold at 0%, not a hike and not a cut. No staff point estimate replaces the official September Q4 forecast of 0.7%; the note only states that this Q4 path is highly unlikely after the 1.5% October print (d). The SNB’s 2026 growth forecast of 1.5–2% is official; the June figure it replaced was not re-fetched.","baseline":[{"variable":"Policy rate at the 10 December 2026 assessment","staff":"Hold at 0% — own estimate","previous":"Hold at 0% (24 Sep decision, V)","change":"Baseline unchanged; short-term inflation forecast expected to be revised up","official":"No explicit official guidance on the next decision. Last action: held at 0% on 24 Sep, assuming 0% over the forecast horizon","quality":"d","source":"Staff, 12 Nov note; SNB press release, 24 Sep 2026","as_of":"12 Nov 2026"},{"variable":"Hawk/dove score","staff":"+1 (slightly hawkish) — Einschätzung, keine Formel","previous":"–","change":"–","official":"n/a","quality":"d","source":"Staff, 12 Nov note","as_of":"12 Nov 2026"},{"variable":"Q4 2026 CPI, y/y","staff":"September path of 0.7% highly unlikely without a sharp Nov–Dec reversal; no staff point estimate","previous":"–","change":"Incoming data have moved against the September Q4 forecast","official":"0.7% (Sept conditional forecast, constant 0% policy rate)","quality":"d","source":"Staff, 12 Nov note; SNB press-release table, 24 Sep 2026","as_of":"12 Nov 2026"},{"variable":"Conditional inflation forecast, annual","staff":"Short-term path expected to be revised up in December if November does not reverse sharply","previous":"–","change":"Qualitative; no staff path is estimated","official":"Sept 2026: 0.7% (2026), 0.8% (2027), 0.8% (2028). June 2026: 0.6 / 0.6 / 0.7","quality":"d","source":"Staff, 12 Nov note; SNB press-release table, 24 Sep 2026","as_of":"12 Nov 2026"},{"variable":"GDP growth","staff":"No separate staff growth forecast in the note","previous":"–","change":"–","official":"SNB, 24 Sep: 1.5–2% in 2026; around 1.5% in 2027","quality":"V","source":"SNB press release and introductory remarks, 24 September 2026","as_of":"24 Sep 2026"}],"recent_hint":"Official releases and official SNB series since the 24 September 2026 assessment that are in the 12 November baseline note. Daily exchange rates computed from Bloomberg BFIX are omitted.","recent_note":"September and October CPI arrived after the 24 September decision (which had August headline at 0.8% y/y). The exact BFS publication date for the September CPI is not in the note; the October release is dated 3 November 2026, 08:30. Sight-deposit and FX-reserve stock moves are not intervention figures.","recent_data":[{"release":"LIK, September — BFS","date":"September 2026 (published after the 24 Sep assessment)","quality":"V","actual":"Headline 1.0% y/y, 0.0% m/m; core 1 0.5%.","prior":"August headline 0.8% y/y (the print at the 24 Sep decision)","why":"First incoming inflation print after the meeting, already above the September Q4 forecast of 0.7%."},{"release":"LIK, October — BFS","date":"3 Nov 2026, 08:30","quality":"V","actual":"Headline 1.5% y/y, +0.2% m/m, index 101.7 (workbook 101.6823). Core 1 0.5%. Domestic 0.8%, imported 3.7%, petroleum products +40.3%, ex-petroleum 0.6%, energy and fuels +15.9%. HVPI +1.6% y/y.","prior":"September headline 1.0%; core 1 0.5%","why":"Central fact for 10 December: a 1.5% October print makes a Q4 average of 0.7% highly unlikely without a sharp Nov–Dec reversal (d)."},{"release":"KOF Economic Barometer, October","date":"30 Oct 2026","quality":"V","actual":"107.6, −1.5 points from September, still above the medium-term average of 100. Outlook described as robust.","prior":"September (level not separately quoted beyond the −1.5 change)","why":"Activity signal still expansionary but not accelerating."},{"release":"SNB summary of the September Governing Board discussion","date":"22 Oct 2026","quality":"V","actual":"Monetary conditions had eased since June because franc depreciation outweighed a slight rise in rates; policy is expansionary; inflation expectations were well anchored; no signs of second-round effects; core had risen only slightly; “an increased willingness to intervene is no longer necessary in the current environment.” Standard willingness “to be active in the foreign exchange market as necessary” was retained. No explicit guidance on a return to a negative policy rate.","prior":"–","why":"Still the best official read of the reaction function ahead of 10 December."},{"release":"Sight deposits at the SNB in CHF — weekly Friday snapshots","date":"Latest Friday 6 Nov 2026 (cube published 9 Nov, 10:00)","quality":"V","actual":"Total (TG) CHF 452,892 mn (452.9 bn, d). Domestic banks (GI) 429,151 mn; other sight (UEB) 23,742 mn.","prior":"12 June 468.5 bn; 11 September 451.6 bn; 30 October 460.2 bn","why":"Decline since the June assessment week about CHF 15.6 bn (d). Weekly moves of several billions are common and are evidence, not proof, of FX intervention. Consistent with stated liquidity-absorbing operations (CHF repos averaged CHF 75.1 bn and SNB Bills CHF 78.8 bn between the June and September assessments; V: QB 3/2026)."},{"release":"Official monthly EUR/CHF and USD/CHF — SNB cube devkum","date":"To October 2026 (PublishingDate 2026-11-02 14:30)","quality":"V","actual":"EUR/CHF monthly average June 0.92045, September 0.94312, October 0.92841; month-end 0.92218 / 0.94579 / 0.91961. USD/CHF monthly average 0.79920 / 0.81926 / 0.82854; month-end 0.80950 / 0.83278 / 0.82122.","prior":"June 2026 as above","why":"June–September depreciation and a partial October retracement against the euro; the franc still weaker against the dollar than in early summer (V / (d)). At the September assessment the franc had depreciated by around 3% on a trade-weighted basis (V: SNB introductory remarks; no later official TWI level was fetched)."},{"release":"SNB monthly balance sheet (cube snbbipo)","date":"End-September 2026 (published 30 Oct 2026, 09:00)","quality":"V","actual":"Total assets CHF 945,829 mn; foreign-currency investments 810,727; gold 116,598; claims from CHF repos 0. Sight deposits of domestic banks 421,378; liabilities from CHF repos 63,180; SNB Bills 86,990; provisions and equity 206,699.","prior":"End-August: total assets 950,572; FX investments 813,102","why":"FX-reserve stocks move with valuation as well as transactions; month-to-month changes are not intervention figures. End-October balance sheet not yet published."}],"calendar_hint":"Horizon: next scheduled monetary policy assessment, 10 December 2026. November CPI and SECO Q3 GDP arrive before that meeting.","calendar_note":"The 10 December times are from the SNB event schedule and official ICS (V). SECO Q3 GDP on 30 November is marked provisional on seco.admin.ch (V). November and December LIK dates are from the official BFS calendar as recorded in later SNB-desk feasibility notes (V); the 12 November baseline note itself had not yet fetched the November CPI date.","calendar":[{"date":"30 Nov 2026","event":"SECO Q3 2026 GDP","time":"09:00 (provisional)","why":"Input for 10 December, not by itself a trigger given the SNB already judged Q3 momentum robust. Official date marked provisional."},{"date":"2 Dec 2026","event":"BFS LIK, November 2026","time":"08:30","why":"The next inflation print, and the main trigger for whether the hold-at-0% baseline stays on track. Official BFS calendar (V), recorded in the desk’s 12 November feasibility notes; not fetched in the baseline note itself."},{"date":"10 Dec 2026","event":"SNB monetary policy assessment","time":"09:30 press release / 10:00 news conference","why":"Staff baseline: hold at 0%, with a higher short-term inflation forecast."},{"date":"5 Jan 2027","event":"BFS LIK, December 2026","time":"08:30","why":"Next CPI print after the December assessment. Official BFS calendar (V)."},{"date":"18 Mar 2027","event":"SNB monetary policy assessment","time":"–","why":"Subsequent scheduled assessment (V: SNB event schedule)."},{"date":"24 Jun 2027","event":"SNB monetary policy assessment","time":"–","why":"Subsequent scheduled assessment (V: SNB event schedule)."}],"staff_hint":"Staff view, not the Governing Board and not official SNB staff work. The hawk/dove score is judgment, not a formula. Market-implied SNB pricing was not obtained.","staff_view":{"lead":"Baseline for 10 December: hold at 0%, with a higher inflation forecast and a live discussion of whether 0% remains appropriate. Hawk/dove score: +1 (slightly hawkish tilt; scale −5 to +5; Einschätzung, keine Formel).","bullets":["Last action, 24 September: policy rate held at 0% (valid from 20 June 2025). The September conditional forecast, assuming 0% over the entire horizon, stayed inside 0–2% and put annual inflation at 0.7% in 2026 and 0.8% in 2027 and 2028 (V).","Incoming CPI has moved against that Q4 path: 1.0% in September and 1.5% in October, after 0.8% in August at the time of the decision (V: BFS). Core 1 is still 0.5%. The rise is imported and energy-driven (imported +3.7%, petroleum products +40.3%; V). A 1.5% October print makes a Q4 average of 0.7% highly unlikely without a sharp November–December reversal (d).","The September discussion (published 22 October) remains the best official read of the reaction function: conditions had eased because franc depreciation outweighed a slight rise in rates; policy is expansionary; expectations well anchored; no second-round effects; “increased willingness to intervene is no longer necessary,” while standard FX willingness was retained. No explicit guidance on a return to a negative policy rate (V).","Activity: SECO Q2 sport-event-adjusted GDP +1.5% q/q (V); Q3 not yet published (provisional date 30 November). KOF October 107.6, still above average (V). Official SNB growth forecast 1.5–2% in 2026 and around 1.5% in 2027 (V).","Official monthly FX (devkum, to October): June–September depreciation and a partial October retracement against the euro; the franc still weaker against the dollar than in early summer (V / (d)). Sight deposits 452.9 bn on 6 November, about CHF 15.6 bn below the June assessment week (V / (d)) — evidence, not proof, of FX intervention.","A staff LIK component nowcast is not yet available and is not shown. Market-implied SNB path (SARON OIS, futures, hike probabilities): not obtained from any free official source; not estimated. Hard gap."],"policy":"Baseline — hold at 0% (~central): the Board revises the short-term conditional forecast up, keeps it inside 0–2% at a constant 0% rate or close to it, repeats the standard FX-willingness sentence without restoring “increased willingness,” and stresses energy, the Middle East, and the absence (or otherwise) of second-round effects. Hawkish — hike 25 bp, or a hold with a clearly tighter bias / a forecast that no longer sits comfortably at a constant 0% — would need November (and any early-December) CPI that keeps headline elevated and lifts core or domestic inflation, or evidence of second-round effects, or a further material franc depreciation; a first hike since the 2025 easing would be a regime shift from “look through energy.” Dovish — cut, or a return to “increased” FX-intervention willingness — is the less likely tail on the current information set. A return to a negative policy rate is not signalled in any official text fetched for the note. The already-negative above-threshold sight-deposit rate (−0.25%) is a feature of the tiered remuneration system, not a policy-rate signal (V).","taylor":{"title":"Taylor-type comparison (d) — illustrative, not an SNB rule","note":"Specification (Taylor 1993 form): iT = r* + inflation + 0.5 × (inflation − 1%) + 0.5 × output gap. π* = 1% is the mid-point of the SNB’s 0–2% range (V for the range, (d) for the mid-point). r* is not observed and is illustrated at 0%, not as an estimate of Swiss equilibrium. No official output-gap series was fetched; y is illustrated at 0 and −0.5 pp as stylised “mild slack,” consistent only qualitatively with the SNB’s September remark that capacity utilisation was below average, especially in manufacturing. Not a fitted SNB reaction function.","rows":[{"label":"Headline 1.5%, r* = 0, y = 0","inputs":"October headline 1.5% (V: BFS); r* = 0 (assumption); output gap closed","result":"1.75% — policy rate 0% is below"},{"label":"Headline 1.5%, r* = 0, y = −0.5","inputs":"October headline 1.5% (V: BFS); r* = 0 (assumption); stylised mild slack","result":"1.50% — policy rate 0% is below"},{"label":"Core 1 0.5%, r* = 0, y = 0","inputs":"October core 1 0.5% (V: BFS); r* = 0 (assumption); output gap closed","result":"0.25% — policy slightly below"},{"label":"Core 1 0.5%, r* = 0, y = −0.5","inputs":"October core 1 0.5% (V: BFS); r* = 0 (assumption); stylised mild slack","result":"0.00% — aligned with the policy rate"}]}},"charts_hint":"Official BFS and SNB series from the 12 November baseline note, plus a LIK month-on-month benchmark backtest (benchmarks only; the component model is pending). Daily Bloomberg BFIX-based FX rates are not shown.","charts":[{"file":"charts/ch_cpi_yy_2026-11-03.png","wide":true,"title":"Swiss CPI — headline, core 1, domestic and imported, y/y","subtitle":"BFS LIK, base December 2025 = 100. Official year-on-year rates from the LIK25B25 workbook published 3 November 2026. The 0–2% band is the SNB’s price-stability range, not a forecast.","caption":"Source: BFS LIK25B25 (su-d-05.02.66), published 3 November 2026, 08:30 Europe/Zurich. Series as in the 12 November baseline note and the official workbook extract. October 2026: headline 1.5%, core 1 (ex fresh/seasonal products, energy and fuels) 0.5%, domestic 0.8%, imported 3.7% (V). Quality: V."},{"file":"charts/snb_conditional_inflation_forecast_2026-09.png","wide":true,"title":"SNB September 2026 conditional inflation forecast versus actual CPI","subtitle":"Conditional forecast assumes a 0% policy rate over the entire horizon. Observed quarterly values through 2026 Q2 are from the official 24 September table. 2026 Q3 is a staff derivation from average official monthly indices (d) and was blank in that table. Monthly y/y is the official BFS series.","caption":"Source: SNB Monetary policy assessment, 24 September 2026, press-release PDF table (forecast quarterly path read from the official table image and aligned to the printed year-separator gridlines; annual averages 0.7 / 0.8 / 0.8 also appear in the body text); BFS LIK25B25, 3 November 2026. June 2026 forecast path shown for comparison. Derived Q3 2026 y/y is 0.72% (d); official September “observed” figures for Q1 and Q2 were 0.2 and 0.6, consistent with the derived 0.17 and 0.56 after rounding. October monthly y/y is 1.5% (V). Quality of official forecast and monthly/quarterly observed values: V; quality of the Q3 derivation and of the statement that a Q4 average of 0.7% is highly unlikely: (d)."},{"file":"charts/snb_sight_deposits_2026-11-06.png","wide":false,"title":"Sight deposits at the SNB in Swiss francs","subtitle":"Friday snapshots, official SNB cube snbgwdchfsgw. Totals in CHF billion (divided by 1,000 from the official CHF million series). Other sight deposits are stated in the box, not plotted, so the variation in the total is readable. Weekly moves are evidence, not proof, of FX intervention.","caption":"Source: SNB data portal cube snbgwdchfsgw, PublishingDate 2026-11-09 10:00, Fridays from 15 May to 6 November 2026. Unit confirmed by exact match of 12 June 2026 total 468,497 CHF million to Quarterly Bulletin 3/2026 “CHF 468.5 billion.” Latest, 6 November: total 452.9 bn, domestic banks 429.2 bn, other sight deposits 23.7 bn (V / (d) for the billion rounding). Decline since the June assessment week about CHF 15.6 bn (d). Quality: V."},{"file":"charts/snb_fx_monthly_2026-10.png","wide":false,"title":"EUR/CHF and USD/CHF — official monthly rates","subtitle":"SNB cube devkum, monthly average and month-end, January 2025–October 2026. Daily SNB rates computed from Bloomberg BFIX are omitted from this public page.","caption":"Source: SNB data portal cube devkum, PublishingDate 2026-11-02 14:30, official monthly series. EUR/CHF monthly average June 0.92045, September 0.94312, October 0.92841; month-end 0.92218 / 0.94579 / 0.91961. USD/CHF monthly average 0.79920 / 0.81926 / 0.82854; month-end 0.80950 / 0.83278 / 0.82122 (V). Quality: V."},{"file":"charts/lik_mom_benchmarks_2011_2026.png","wide":true,"title":"Swiss LIK month-on-month benchmark backtest — benchmarks only","subtitle":"Recursive, real-time-style benchmarks for official BFS LIK headline and core 1 month-on-month (not seasonally adjusted), scored against the published 1-decimal print. The component nowcast model is pending and is not in this chart. This is not a track record of a staff nowcast.","caption":"Source: already-produced SNB-desk benchmark backtest of 12 November 2026, built from the stored BFS LIK25B25 workbook (su-d-05.02.66, published 3 November 2026), the same vintage as the official CPI extract used on this page. Chart series are official 1-decimal MoM (V) and already-produced benchmark forecasts (d). Error statistics in the boxes are the already-produced full-sample (2011-01–2026-10, n=190) and 2024-01–2026-10 (n=34) figures from that backtest note, same rounding. Forecasts use only data available before that month. A seasonal naïve benchmark has a slightly lower headline MAE than the seasonal mean over 2011–2026 (0.176 vs 0.187) but not over 2024–26 (0.174 vs 0.159). Core 1 is already smooth; forecasting zero is similar to the seasonal mean over the long window. No new model was estimated. Quality of error statistics: (d).","note":"Benchmarks only. The component model is pending. Units are percentage points, month-on-month, not seasonally adjusted, scored against the official 1-decimal print. The chart shows 2018–October 2026 for readability; the error statistics are for the samples named in the boxes."}],"charts_note":"Daily exchange rates computed by the SNB from Bloomberg BFIX are not shown (licensed origin; the SNB republishes them for information only). Official monthly FX from cube devkum is shown instead. The LIK backtest is a set of simple benchmarks, not a sealed staff nowcast; a component model is pending and is not published here.","caveats":["Report date 12 November 2026, Europe/Zurich; no time of day was recorded on the baseline note. Official sources were fetched on 12 November 2026. Labels: V = verified from a primary official source with date stated; U = unverified; (d) = derived by the desk; own estimate / Einschätzung, keine Formel = staff judgment. This page does not generate or refresh figures.","The 10 December baseline (hold at 0%) and the hawk/dove score of +1 are staff judgment, not a formula, not a market-implied probability, and not official SNB guidance. The September assessment contained no explicit guidance on a return to a negative policy rate.","A staff LIK component nowcast is not yet available and is not shown. The LIK month-on-month chart is a benchmark backtest only (seasonal mean, seasonal naïve, and related simple rules). An unsealed research prototype is omitted from this public page.","The September 2026 conditional forecast quarterly path was read from the official press-release PDF table image, aligned to the printed year-separator gridlines, not from a machine-readable SNB file. Annual averages 0.7 / 0.8 / 0.8 also appear in the body text (V). Quarterly headline y/y of 0.17 / 0.56 / 0.72 for 2026 Q1–Q3 is derived (d) from average official monthly indices.","SARON on this page is the SNB’s two-decimal republication of SIX. The legally authoritative six-decimal SIX fixing was not fetched. The latest such SNB print is 10 November 2026, not 11 November.","The Taylor-type comparison is illustrative and assumption-dependent (d): r* is not observed, no official output-gap series was fetched, and the specification is not a fitted SNB rule. The SNB’s revealed reaction function, as written down in September, is closer to a core / look-through-energy / conditional-forecast reading than to a headline Taylor.","Sight-deposit and FX-reserve stock moves are not intervention figures. Published quarterly FX-intervention (purchase/sale) figures for 2026 Q2 or Q3 were not located in the cubes queried for the note or in the text of Quarterly Bulletin 3/2026.","The end-October SNB balance sheet is not yet published (latest official month is September, published 30 October). Sight deposits after 6 November are not in the cube published on 9 November. No later official trade-weighted CHF index was fetched after the SNB’s own “around 3%” TWI depreciation figure as at the September assessment.","November 2026 CPI had not been published at the time of the note; it is due on 2 December 2026, 08:30 (official BFS calendar, V, recorded in later desk feasibility notes). SECO Q3 GDP is not yet published (provisional official date 30 November 2026, 09:00). Q2 y/y was not extracted from the SECO tables (q/q is the official headline used here). The June 2026 SNB growth figure that was later raised was not re-fetched."],"excluded":[{"item":"SNB daily exchange rates computed from Bloomberg BFIX","reason":"Licensed origin; the SNB republishes these rates for information only. Official monthly FX from SNB cube devkum is shown instead. No daily BFIX figures are quoted on this page."},{"item":"Market-implied SNB path (SARON OIS, futures, hike probabilities)","reason":"Not obtained from any free official source. Not estimated. Broker or paywalled pricing is not used."},{"item":"Third-party reports of FX-intervention volumes","reason":"Not used. Official quarterly purchase/sale figures were not located and are listed as a gap."},{"item":"An unsealed LIK component-nowcast prototype and any incomplete November preview","reason":"Not a sealed nowcast and not shown on this public page. Only official prints and the already-produced benchmark backtest are shown."},{"item":"SIX official six-decimal SARON","reason":"Not fetched. Only the SNB’s two-decimal republication is used, with that attribution."},{"item":"Licensed bank, broker and private-survey datasets, and survey-consensus figures","reason":"Internal-use or licensed material is not shown."}],"gaps":["Market-implied SNB path (SARON OIS, futures, hike probabilities): not obtained; not estimated. Hard gap.","Official quarterly FX-intervention purchase/sale figures for 2026 Q2 and Q3 were not located.","SIX official six-decimal SARON was not fetched; latest SNB two-decimal print is 10 November, not 11 November.","SECO Q3 2026 GDP is not yet published (provisional official date 30 November 2026, 09:00). Q2 y/y was not extracted.","Official SNB or SECO output-gap / r* series were not fetched. The Taylor comparison is illustrative (d).","November 2026 CPI is not yet published (due 2 December 2026, 08:30, official BFS calendar). A staff LIK component nowcast is not yet available.","End-October SNB balance sheet is not yet published (latest official month is September).","Sight deposits after 6 November 2026 are not in the cube published on 9 November.","No later official trade-weighted CHF index was fetched after the SNB’s September “around 3%” TWI figure.","The June 2026 SNB growth figure that was later raised to 1.5–2% was not re-fetched."]} /*__EMBEDDED__*/;
+const THEME_KEY = "staff-desk-theme";
+
+const I18N = {
+  en: {
+    asOf: "As of", source: "Source", freshness: "Data freshness",
+    summary: "1 · Current state",
+    staff: "2 · Staff view",
+    nowcast: "3 · Nowcasts",
+    baseline: "4 · Baseline",
+    recent: "5 · Key data since last update",
+    cal: "6 · Upcoming calendar",
+    charts: "7 · Charts",
+    colN: "n", colRmse: "Model RMSE", colRw: "Random-walk RMSE",
+    colMae: "MAE", colSeas: "Seasonal RMSE", colDir: "Directional hit",
+    colCov: "80% coverage", colUnit: "Unit",
+    caveat: "⚠ Datenlage und Quellen – Vorbehalte",
+    qualityHint: "Figures keep their V / U / (d) labels. This page does not generate or randomise numbers.",
+    legendV: "V — verified from a primary document that was opened",
+    legendU: "U — unverified (secondary, undated, or not independently confirmed)",
+    legendD: "(d) — derived / own arithmetic from stated figures",
+    legendOwn: "own estimate — staff judgment",
+    colVariable: "Variable", colValue: "Nowcast / reading", colPeriod: "Period",
+    colStatus: "Status", colQuality: "Q", colInterval: "Interval",
+    colPrior: "Prior", colSource: "Source / as of", colRationale: "Rationale",
+    colStaff: "Staff baseline", colPrev: "Previous", colChange: "Change",
+    colOfficial: "Official projection",
+    colRelease: "Release", colActual: "Actual", colWhy: "Why it matters",
+    colDate: "Date", colEvent: "Release / event", colTime: "Europe/Zurich", colFocus: "Why it matters",
+    excluded: "Omitted from this public page",
+    gaps: "Gaps and stale items",
+    fine: "Staff-style research compilation only. Not official central-bank staff work and not a committee projection. Not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich. This page only renders figures already saved by the desk; it does not refresh or invent numbers.",
+    foot: "Public research pages · not investment advice",
+    home: "Inflation nowcasts",
+    ai: "AI token",
+    staffHome: "Staff desks",
+    dark: "Dark", light: "Light",
+    empty: "No rows in the source note.",
+    emptyCal: "No calendar in the source note.",
+    emptyBase: "No approved desk baseline in the source note.",
+    category: {GDP:"GDP", inflation:"Inflation", labour:"Labour", policy:"Policy rate"}
+  },
+  de: {
+    asOf: "Stand", source: "Quelle", freshness: "Datenstand",
+    summary: "1 · Aktueller Stand",
+    staff: "2 · Staff-Einschätzung",
+    nowcast: "3 · Nowcasts",
+    baseline: "4 · Ausgangslage",
+    recent: "5 · Daten seit dem letzten Stand",
+    cal: "6 · Kalender",
+    charts: "7 · Grafiken",
+    colN: "n", colRmse: "Modell-RMSE", colRw: "Random-Walk-RMSE",
+    colMae: "MAE", colSeas: "Saisonaler RMSE", colDir: "Richtige Richtung",
+    colCov: "80-%-Abdeckung", colUnit: "Einheit",
+    caveat: "⚠ Datenlage und Quellen – Vorbehalte",
+    qualityHint: "Alle Zahlen behalten ihre Kennzeichnung V / U / (d). Diese Seite erzeugt oder verändert keine Werte.",
+    legendV: "V — an einem Primärdokument geprüft",
+    legendU: "U — nicht verifiziert (sekundär, undatiert oder nicht unabhängig bestätigt)",
+    legendD: "(d) — eigene Ableitung / Rechnung aus genannten Werten",
+    legendOwn: "Urteil / eigene Schätzung — Staff-Einschätzung",
+    colVariable: "Zielgröße", colValue: "Nowcast / Wert", colPeriod: "Zeitraum",
+    colStatus: "Status", colQuality: "Q", colInterval: "Intervall",
+    colPrior: "Vorher", colSource: "Quelle / Stand", colRationale: "Begründung",
+    colStaff: "Staff-Baseline", colPrev: "Vorherige Baseline", colChange: "Änderung",
+    colOfficial: "Offizielle Projektion",
+    colRelease: "Veröffentlichung", colActual: "Ist", colWhy: "Relevanz",
+    colDate: "Datum", colEvent: "Veröffentlichung / Termin", colTime: "Europe/Zurich", colFocus: "Relevanz",
+    excluded: "Auf dieser öffentlichen Seite nicht gezeigt",
+    gaps: "Lücken und veraltete Punkte",
+    fine: "Nur eine Staff-Recherchezusammenstellung. Keine offizielle Arbeit der Notenbank und keine Ausschussprojektion. Keine Anlageempfehlung, kein Rating und kein Handelssignal. Zeiten in Europe/Zurich. Diese Seite stellt nur bereits gespeicherte Desk-Angaben dar; sie erzeugt oder aktualisiert keine Zahlen.",
+    foot: "Öffentliche Rechercheseiten · keine Anlageberatung",
+    home: "Inflation Nowcasts",
+    ai: "AI Token",
+    staffHome: "Staff-Desks",
+    dark: "Dunkel", light: "Hell",
+    empty: "Im Quellenvermerk keine Zeilen.",
+    emptyCal: "Im Quellenvermerk kein Kalender.",
+    emptyBase: "Im Quellenvermerk keine freigegebene Desk-Baseline.",
+    category: {GDP:"BIP", inflation:"Inflation", labour:"Arbeitsmarkt", policy:"Leitzins"}
+  }
+};
+
+function qs(id){ return document.getElementById(id); }
+function esc(s){
+  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+function qClass(q){
+  const t = String(q || "").trim();
+  if (t === "V") return "V";
+  if (t === "U") return "U";
+  return "d";
+}
+function qBadge(q){
+  const t = String(q || "").trim() || "U";
+  const cls = qClass(t);
+  const label = (t === "(d)" || t === "d" || cls === "d") && t !== "V" && t !== "U" ? "(d)" : t;
+  return `<span class="q ${cls}" title="Data quality">${esc(label)}</span>`;
+}
+function statusPill(s){
+  if (!s) return "";
+  const raw = String(s);
+  const k = raw.toLowerCase();
+  let cls = "";
+  if (/(missing|fehlt|veraltet|stale)/.test(k)) cls = "missing";
+  else if (/(pending|ausstehend)/.test(k)) cls = "pending";
+  else if (/(retained|beibehalten|updated|aktualisiert)/.test(k)) cls = "retained";
+  else if (/(own|urteil|schätzung|estimate)/.test(k)) cls = "own";
+  return ` <span class="pill ${cls}">${esc(raw)}</span>`;
+}
+function fmtWhen(iso, lang){
+  if (!iso) return "–";
+  if (/^\d{4}-\d{2}-\d{2}$/.test(iso)) {
+    const [y,m,d] = iso.split("-");
+    if (lang === "de") {
+      const months = ["Jan.","Feb.","März","Apr.","Mai","Juni","Juli","Aug.","Sep.","Okt.","Nov.","Dez."];
+      return `${Number(d)}. ${months[Number(m)-1]} ${y}`;
+    }
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return `${Number(d)} ${months[Number(m)-1]} ${y}`;
+  }
+  const d = new Date(iso);
+  if (isNaN(d)) return String(iso);
+  const loc = lang === "de" ? "de-CH" : "en-GB";
+  const fmt = new Intl.DateTimeFormat(loc, {
+    timeZone: "Europe/Zurich",
+    day: "numeric", month: "short", year: "numeric",
+    hour: "2-digit", minute: "2-digit", hour12: false
+  });
+  return fmt.format(d).replace(",", "") + " Europe/Zurich";
+}
+function setTheme(t){
+  document.documentElement.setAttribute("data-theme", t);
+  try { localStorage.setItem(THEME_KEY, t); } catch(e){}
+  const lang = document.documentElement.lang === "de" ? "de" : "en";
+  const L = I18N[lang];
+  qs("themeLbl").textContent = t === "dark" ? L.light : L.dark;
+}
+function initTheme(){
+  let t = "light";
+  try { t = localStorage.getItem(THEME_KEY) || t; } catch(e){}
+  setTheme(t);
+}
+function navHtml(desk, L){
+  const items = [
+    {href:"../", label:L.home, id:""},
+    {href:"../ai-token/", label:L.ai, id:""},
+    {sep:true},
+    {href:"../staff/", label:L.staffHome, id:"staff"},
+    {href:"../staff-fed/", label:"Fed", id:"fed"},
+    {href:"../staff-ecb/", label:"ECB", id:"ecb"},
+    {href:"../staff-boe/", label:"BoE", id:"boe"},
+    {href:"../staff-boj/", label:"BoJ", id:"boj"},
+    {href:"../staff-snb/", label:"SNB", id:"snb"}
+  ];
+  return items.map(it => {
+    if (it.sep) return `<span class="sep"></span>`;
+    const on = it.id && it.id === desk ? " on" : (it.id === "staff" && !desk ? " on" : "");
+    return `<a class="${on.trim()}" href="${it.href}">${esc(it.label)}</a>`;
+  }).join("");
+}
+
+function renderKpis(data){
+  const rows = (data.nowcasts || []).filter(r => r.headline);
+  const el = qs("kpis");
+  if (!rows.length) { el.innerHTML = ""; return; }
+  el.innerHTML = rows.map(r => `
+    <div class="card ov-col">
+      <div class="ov-head">
+        <div class="ov-title"><b>${esc(r.kpi_label || r.variable)}</b><span>${esc(r.period || "")}</span></div>
+        ${qBadge(r.quality)}
+      </div>
+      <div class="big">${esc(r.value)}${r.unit ? `<small>${esc(r.unit)}</small>` : ""}</div>
+      <div class="yy">${esc(r.kpi_note || r.status || "")}</div>
+    </div>`).join("");
+}
+
+function groupRows(rows, lang){
+  const L = I18N[lang] || I18N.en;
+  const order = ["GDP","inflation","labour","policy"];
+  const groups = [];
+  const seen = new Set();
+  for (const key of order) {
+    const g = rows.filter(r => r.category === key);
+    if (g.length) { groups.push({key, label: L.category[key] || key, rows:g}); seen.add(key); }
+  }
+  const rest = rows.filter(r => !seen.has(r.category));
+  if (rest.length) groups.push({key:"other", label:"", rows:rest});
+  return groups;
+}
+
+function renderNowcasts(data, L, lang){
+  const rows = data.nowcasts || [];
+  if (!rows.length) { qs("nowcastTbl").innerHTML = `<p class="notice">${esc(L.empty)}</p>`; return; }
+  const groups = groupRows(rows, lang);
+  let html = `<table><thead><tr>
+    <th>${esc(L.colVariable)}</th>
+    <th class="r">${esc(L.colValue)}</th>
+    <th>${esc(L.colPeriod)}</th>
+    <th>${esc(L.colStatus)}</th>
+    <th>${esc(L.colInterval)}</th>
+    <th>${esc(L.colPrior)}</th>
+    <th>${esc(L.colSource)}</th>
+    <th>${esc(L.colRationale)}</th>
+  </tr></thead><tbody>`;
+  for (const g of groups) {
+    if (g.label) html += `<tr class="group"><td colspan="8">${esc(g.label)}</td></tr>`;
+    for (const r of g.rows) {
+      html += `<tr>
+        <td><div class="item-title">${esc(r.variable)}</div></td>
+        <td class="num r">${esc(r.value)}${r.unit ? " " + esc(r.unit) : ""}${qBadge(r.quality)}</td>
+        <td>${esc(r.period || "–")}</td>
+        <td>${statusPill(r.status)}</td>
+        <td>${esc(r.interval || "–")}</td>
+        <td>${esc(r.prior || "–")}</td>
+        <td><div>${esc(r.source || "–")}</div><div class="item-rel">${esc(r.as_of || "")}</div></td>
+        <td><div class="item-rel">${esc(r.rationale || "")}</div></td>
+      </tr>`;
+    }
+  }
+  html += `</tbody></table>`;
+  qs("nowcastTbl").innerHTML = html;
+  qs("nowcastNote").textContent = data.nowcast_note || "";
+}
+
+function renderBaseline(data, L){
+  const rows = data.baseline || [];
+  const sec = qs("baseline");
+  if (!rows.length) {
+    qs("baselineTbl").innerHTML = `<p class="notice">${esc(L.emptyBase)}</p>`;
+    qs("baselineNote").textContent = data.baseline_note || "";
+    return;
+  }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colVariable)}</th>
+    <th class="r">${esc(L.colStaff)}</th>
+    <th class="r">${esc(L.colPrev)}</th>
+    <th class="r">${esc(L.colChange)}</th>
+    <th class="r">${esc(L.colOfficial)}</th>
+    <th>${esc(L.colSource)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td><div class="item-title">${esc(r.variable)}</div></td>
+      <td class="num r">${esc(r.staff || "–")}${qBadge(r.quality || "d")}</td>
+      <td class="r">${esc(r.previous || "–")}</td>
+      <td class="r">${esc(r.change || "–")}</td>
+      <td class="r">${esc(r.official || "–")}</td>
+      <td><div>${esc(r.source || "–")}</div><div class="item-rel">${esc(r.as_of || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("baselineTbl").innerHTML = html;
+  qs("baselineNote").textContent = data.baseline_note || "";
+}
+
+function renderRecent(data, L){
+  const rows = data.recent_data || [];
+  if (!rows.length) { qs("recentTbl").innerHTML = `<p class="notice">${esc(L.empty)}</p>`; return; }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colRelease)}</th>
+    <th>${esc(L.colActual)}</th>
+    <th>${esc(L.colPrior)}</th>
+    <th>${esc(L.colWhy)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td><div class="item-title">${esc(r.release)}</div><div class="item-rel">${esc(r.date || "")}${r.quality ? qBadge(r.quality) : ""}</div></td>
+      <td>${esc(r.actual || "–")}</td>
+      <td>${esc(r.prior || "–")}</td>
+      <td><div class="item-rel">${esc(r.why || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("recentTbl").innerHTML = html;
+  qs("recentNote").textContent = data.recent_note || "";
+}
+
+function renderCal(data, L){
+  const rows = data.calendar || [];
+  if (!rows.length) { qs("calTbl").innerHTML = `<p class="notice">${esc(L.emptyCal)}</p>`; return; }
+  let html = `<table><thead><tr>
+    <th>${esc(L.colDate)}</th>
+    <th>${esc(L.colEvent)}</th>
+    <th>${esc(L.colTime)}</th>
+    <th>${esc(L.colFocus)}</th>
+  </tr></thead><tbody>`;
+  for (const r of rows) {
+    html += `<tr>
+      <td class="num">${esc(r.date)}</td>
+      <td><div class="item-title">${esc(r.event)}</div></td>
+      <td>${esc(r.time || "–")}</td>
+      <td><div class="item-rel">${esc(r.why || "")}</div></td>
+    </tr>`;
+  }
+  html += `</tbody></table>`;
+  qs("calTbl").innerHTML = html;
+  qs("calNote").textContent = data.calendar_note || "";
+}
+
+function renderStaff(data){
+  const sv = data.staff_view || {};
+  let html = "";
+  if (sv.lead) html += `<p>${esc(sv.lead)}</p>`;
+  if (sv.bullets && sv.bullets.length) {
+    html += "<ul>" + sv.bullets.map(b => `<li>${esc(b)}</li>`).join("") + "</ul>";
+  }
+  if (sv.policy) html += `<p>${esc(sv.policy)}</p>`;
+  qs("staffBody").innerHTML = html || `<p class="muted">–</p>`;
+  const t = sv.taylor;
+  if (t && (t.rows || t.note || t.result)) {
+    let th = `<table><thead><tr><th>${esc(t.title || "Taylor-type diagnostic (d)")}</th><th>Assumptions / inputs</th><th class="r">Result</th></tr></thead><tbody>`;
+    const rows = t.rows || [{inputs: t.assumptions || "", result: t.result || ""}];
+    for (const r of rows) {
+      th += `<tr><td>${esc(r.label || t.note || "Own calculation, not an optimal-policy estimate")}</td><td>${esc(r.inputs || t.assumptions || "")}</td><td class="r">${esc(r.result || t.result || "")}${qBadge("d")}</td></tr>`;
+    }
+    th += `</tbody></table>`;
+    qs("taylorTbl").innerHTML = th;
+  } else {
+    qs("taylorTbl").innerHTML = "";
+  }
+}
+
+function renderChartStats(c, L){
+  const rows = c.stats || [];
+  if (!rows.length) return "";
+  const cols = [
+    ["series", L.colVariable],
+    ["n", L.colN],
+    ["rmse", L.colRmse],
+    ["mae", L.colMae],
+    ["rw_rmse", L.colRw],
+    ["seasonal_rmse", L.colSeas],
+    ["dir_hit", L.colDir],
+    ["cov80", L.colCov],
+    ["unit", L.colUnit]
+  ];
+  const used = cols.filter(([k]) => rows.some(r => r[k] != null && r[k] !== ""));
+  let html = `<div class="tbl-wrap chart-stats"><table><thead><tr>`;
+  for (const [,lab] of used) html += `<th>${esc(lab)}</th>`;
+  html += `</tr></thead><tbody>`;
+  for (const r of rows) {
+    html += "<tr>";
+    for (const [k] of used) {
+      const cls = k === "series" ? "" : " class=\"r\"";
+      html += `<td${cls}>${esc(r[k] ?? "")}${k==="rmse" && r.quality ? qBadge(r.quality) : ""}</td>`;
+    }
+    html += "</tr>";
+  }
+  html += "</tbody></table></div>";
+  return html;
+}
+
+function renderCharts(data, L){
+  const charts = data.charts || [];
+  const note = data.charts_note || "";
+  const sec = qs("charts");
+  if (!charts.length && !note) { sec.hidden = true; return; }
+  sec.hidden = false;
+  qs("chartGrid").innerHTML = charts.map(c => {
+    const img = c.file ? `<img class="chart-img" src="${esc(c.file)}" alt="${esc(c.title)}" width="1600" height="900">` : "";
+    const sub = c.subtitle ? `<div class="sub" style="margin:4px 0 12px">${esc(c.subtitle)}</div>` : "";
+    const cap = c.caption ? `<div class="cap-line">${esc(c.caption)}</div>` : "";
+    const cnote = c.note ? `<div class="notes">${esc(c.note)}</div>` : "";
+    return `<div class="card${c.wide ? " wide" : ""}">
+      <h3>${esc(c.title || "")}</h3>
+      ${sub}${img}${renderChartStats(c, L)}${cnote}${cap}
+    </div>`;
+  }).join("");
+  const noteEl = qs("chartsNote");
+  if (note) {
+    noteEl.hidden = false;
+    const paras = String(note).split("\n").filter(Boolean);
+    noteEl.innerHTML = paras.map(p => `<p>${esc(p)}</p>`).join("");
+  } else {
+    noteEl.hidden = true;
+    noteEl.innerHTML = "";
+  }
+}
+
+function renderCaveats(data, L){
+  const bits = [];
+  const caveats = data.caveats || [];
+  if (caveats.length) {
+    bits.push("<ul>" + caveats.map(c => `<li>${esc(c)}</li>`).join("") + "</ul>");
+  }
+  const excl = data.excluded || [];
+  if (excl.length) {
+    bits.push(`<h3>${esc(L.excluded)}</h3><ul>` + excl.map(e => {
+      const item = typeof e === "string" ? e : e.item;
+      const reason = typeof e === "string" ? "" : e.reason;
+      return `<li>${esc(item)}${reason ? " — " + esc(reason) : ""}</li>`;
+    }).join("") + "</ul>");
+  }
+  const gaps = data.gaps || [];
+  if (gaps.length) {
+    bits.push(`<h3>${esc(L.gaps)}</h3><ul>` + gaps.map(g => `<li>${esc(g)}</li>`).join("") + "</ul>");
+  }
+  qs("caveatBody").innerHTML = bits.join("") || `<p>${esc(L.empty)}</p>`;
+  qs("caveatFine").textContent = L.fine;
+}
+
+function render(data){
+  const lang = data.lang === "de" ? "de" : "en";
+  document.documentElement.lang = lang;
+  const L = I18N[lang];
+  document.title = data.title || data.bot?.name || "Staff Desk";
+  qs("brandTitle").textContent = data.short_title || data.bot?.name || "Staff Desk";
+  qs("brandSub").textContent = data.subtitle || "";
+  qs("lblAsOf").textContent = L.asOf;
+  qs("lblSrc").textContent = L.source;
+  qs("lblFresh").textContent = L.freshness;
+  qs("asOf").textContent = data.as_of_display || fmtWhen(data.as_of, lang);
+  qs("srcFile").textContent = (data.source && data.source.label) || "–";
+  const fr = data.freshness || {};
+  qs("freshText").textContent = fr.label || "–";
+  qs("freshDot").className = "dot " + (fr.dot || "amber");
+  const banner = qs("banner");
+  if (fr.banner) {
+    banner.hidden = false;
+    banner.className = "banner " + (fr.dot === "red" ? "very-stale" : "stale");
+    banner.innerHTML = fr.banner;
+  } else {
+    banner.hidden = true;
+  }
+  qs("nav").innerHTML = navHtml(data.desk, L);
+  const theme = document.documentElement.getAttribute("data-theme") || "light";
+  qs("themeLbl").textContent = theme === "dark" ? L.light : L.dark;
+
+  qs("hSummary").textContent = L.summary;
+  qs("hNowcast").textContent = L.nowcast;
+  qs("hBaseline").textContent = L.baseline;
+  qs("hRecent").textContent = L.recent;
+  qs("hCal").textContent = L.cal;
+  qs("hStaff").textContent = L.staff;
+  qs("hCharts").textContent = L.charts;
+  qs("hCaveat").textContent = L.caveat;
+  qs("hintQuality").textContent = L.qualityHint;
+  qs("hintNowcast").textContent = data.nowcast_hint || "";
+  qs("hintBaseline").textContent = data.baseline_hint || "";
+  qs("hintRecent").textContent = data.recent_hint || "";
+  qs("hintCal").textContent = data.calendar_hint || "";
+  qs("hintStaff").textContent = data.staff_hint || "";
+  qs("hintCharts").textContent = data.charts_hint || "";
+
+  qs("legend").innerHTML = `
+    <span class="q V">V</span> ${esc(L.legendV)}
+    <span class="q U">U</span> ${esc(L.legendU)}
+    <span class="q d">(d)</span> ${esc(L.legendD)}
+    <span class="pill own">${esc(L.legendOwn)}</span>`;
+
+  renderKpis(data);
+  const sum = data.summary || {};
+  qs("stateBox").innerHTML = `
+    <div class="ov-head">
+      <div class="ov-title"><b>${esc(sum.heading || (lang==="de" ? "Aktueller Stand" : "Current state"))}</b>
+      <span>${esc(sum.source || "")}</span></div>
+    </div>
+    <div class="state-text">${esc(sum.text || "")}</div>
+    <div class="state-src">${esc(sum.as_of ? (lang==="de"?"Stand: ":"As of: ") + (data.as_of_display || fmtWhen(sum.as_of, lang)) : "")}</div>`;
+
+  renderNowcasts(data, L, lang);
+  renderBaseline(data, L);
+  renderRecent(data, L);
+  renderCal(data, L);
+  renderStaff(data);
+  renderCharts(data, L);
+  renderCaveats(data, L);
+
+  const home = `<a href="../">${esc(L.home)}</a> · <a href="../ai-token/">${esc(L.ai)}</a> · <a href="../staff/">${esc(L.staffHome)}</a>`;
+  qs("siteFoot").innerHTML = `${esc(L.foot)} · ${home}`;
+}
+
+async function load(){
+  let data = EMBEDDED;
+  try {
+    const r = await fetch("data/desk.json", {cache:"no-store"});
+    if (r.ok) data = await r.json();
+  } catch (e) {}
+  if (!data) {
+    qs("app").innerHTML = `<p class="notice">No desk data loaded.</p>`;
+    return;
+  }
+  render(data);
+}
+qs("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  setTheme(cur === "dark" ? "light" : "dark");
+});
+initTheme();
+load();
+</script>
+</body>
+</html>
