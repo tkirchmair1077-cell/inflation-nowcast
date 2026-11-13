@@ -65,7 +65,7 @@
     "why": "Pre-2020 sample (January 2000–December 2019) so the 2021–22 inflation spike does not inflate the standard deviation and flatten current z-scores. 2000–2019 is the longest stretch of the inflation-targeting era that is common to most of the series. Series that start after January 2000 use their available pre-2020 history, which is flagged."
   },
   "method": "Each series is signed so that a higher value means more inflation pressure, optionally smoothed with a 3-month average when the monthly series is noisy, then z-scored against the 2000–2019 mean and sample standard deviation (ddof=1). Z-scores are capped at ±3 before averaging. The aggregate is the equal-weight mean of components whose period-end is not more than three months before the as-of date. Latest available observation is used for daily, quarterly, survey and already-smooth monthly series. Core CPI 3-month annualised is also 3-month averaged because that series is noisy. The dial maps the aggregate onto [−3, +3], leaving room past the +1.5 ‘severe’ threshold; zone thresholds and labels are unchanged (green < −0.5, yellow −0.5..+0.5, orange +0.5..+1.5, red > +1.5). All z-scores and the aggregate are staff constructions (d).",
-  "method_note": "Equal-weight mean of z-scores versus 2000–2019 (pre-2020, so 2021–22 does not flatten the scale). Noisy monthly series: 3-month average. Each z is capped at ±3; the dial maps −3 to +3. Public sources; Richmond is a staff construction (d). Shown without endorsement.",
+  "method_note": "Equal-weight mean of z-scores versus 2000–2019 (pre-2020, so 2021–22 does not flatten the scale). Noisy monthly series: 3-month average. Each z is capped at ±3; the dial maps −3 to +3. Public sources; Richmond is a staff construction (d). Shown without endorsement. A real-time (expanding-window) reading, using only data available at each date, is shown next to the headline score.",
   "z_cap": 3.0,
   "stale_rule": "A component is stale, and is excluded from the aggregate, if the end of its reference period is more than three calendar months before the stale-check date (2026-11-13). It is still shown, flagged.",
   "components": [
@@ -601,7 +601,29 @@
     "Dallas Fed trimmed-mean PCE is one month behind (latest is Sep 2026; next update 25 Nov), following the PCE calendar. Credit: “Source: Federal Reserve Bank of Dallas”. Dallas Fed terms permit reproduction with credit, provided it is not distributed for the purpose of private gain.",
     "Atlanta Fed sticky-price core CPI (ex food and energy), year-over-year. Credit: “Source: Federal Reserve Bank of Atlanta”.",
     "Equal weights treat a supply-chain index, a survey, a market breakeven, wages, import prices and realized core inflation as interchangeable. That is a transparent starting point, not an estimated factor model. Realized core (six of thirteen components: core PCE, core CPI, median CPI, trimmed-mean CPI, Dallas trimmed-mean PCE, sticky CPI) and leading/survey measures are mixed by design.",
-    "Licensed bank, broker, private-survey and survey-consensus figures are omitted from this gauge."
+    "Licensed bank, broker, private-survey and survey-consensus figures are omitted from this gauge.",
+    "The headline aggregate is z-scored against 2000–2019, a window known only in hindsight. The real-time (expanding-window) reading as of 12 Nov 2026 is +0.31 (neutral): each component is z-scored only against its own history available before that date. A staff backtest found that neither reading is a reliable lead on Fed hikes or cuts."
   ],
-  "credits": "Shown without endorsement by the Federal Reserve Bank of New York, the Federal Reserve Bank of Atlanta, the Federal Reserve Bank of Richmond, the Federal Reserve Bank of Cleveland, the Federal Reserve Bank of Dallas, the U.S. Bureau of Labor Statistics, the U.S. Bureau of Economic Analysis, or the Federal Reserve Bank of St. Louis. Those institutions do not endorse this page or its conclusions. Views are the author's own and are not necessarily those of any Reserve Bank or the Federal Reserve System. Cleveland Fed EXPINF1YR: noncommercial use, DOI https://doi.org/10.26509/frbc-infexp. Cleveland Fed median and trimmed-mean CPI year-over-year charts: Licensed CC BY-SA 4.0; derived charts shared under the same licence. Atlanta Fed BIE: noncommercial use under Atlanta Fed terms."
+  "credits": "Shown without endorsement by the Federal Reserve Bank of New York, the Federal Reserve Bank of Atlanta, the Federal Reserve Bank of Richmond, the Federal Reserve Bank of Cleveland, the Federal Reserve Bank of Dallas, the U.S. Bureau of Labor Statistics, the U.S. Bureau of Economic Analysis, or the Federal Reserve Bank of St. Louis. Those institutions do not endorse this page or its conclusions. Views are the author's own and are not necessarily those of any Reserve Bank or the Federal Reserve System. Cleveland Fed EXPINF1YR: noncommercial use, DOI https://doi.org/10.26509/frbc-infexp. Cleveland Fed median and trimmed-mean CPI year-over-year charts: Licensed CC BY-SA 4.0; derived charts shared under the same licence. Atlanta Fed BIE: noncommercial use under Atlanta Fed terms.",
+  "aggregate_expanding_z": 0.312196,
+  "aggregate_expanding_label": "neutral",
+  "aggregate_expanding": {
+    "z": 0.312196,
+    "label": "neutral",
+    "zone": "yellow",
+    "state": "neutral",
+    "n_included": 13,
+    "as_of": "2026-11-12",
+    "as_of_display": "12 Nov 2026",
+    "window": "expanding; at each date, each component is z-scored against its own history strictly before that date",
+    "min_obs": {
+      "monthly": 36,
+      "quarterly": 12,
+      "daily": 252,
+      "survey": 36
+    },
+    "method": "Same components, signs, smoothing, stale rule (period-end not more than three months before as-of) and ±3 cap as the headline aggregate. Equal-weight mean of components with a valid expanding z (13 of 13 as of 12 Nov 2026). Three-state label: low if z < −0.5, neutral if −0.5 ≤ z ≤ +0.5, high if z > +0.5. Current-vintage reconstruction, not a real-time data vintage (publication lags and revisions are not unwound). Staff construction (d).",
+    "source": "Staff backtest of the inflation-pressure gauge, computed 13 Nov 2026, 18:52 Europe/Zurich.",
+    "computed_at": "2026-11-13T18:52:31+01:00"
+  }
 }
