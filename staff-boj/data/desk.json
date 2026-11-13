@@ -21,8 +21,8 @@
   "freshness": {
     "status": "stale",
     "dot": "red",
-    "label": "Stand: 1. Nov. 2026, veraltet",
-    "banner": "<b>Stand: 1. November 2026 — veraltet.</b> Kein neuer Desk-Stand bis zum 12. November. Der Nominallohn-Nowcast für September bezog sich auf die Veröffentlichung am 6.11.; BIP Q3 ist für den 16.11. (08:50 JST) und der nationale VPI Oktober für den 20.11. (08:30 JST) vorgesehen."
+    "label": "Stand: 1. Nov. 2026, veraltet · Data refreshed 2026-11-12, commentary as of 1. Nov. 2026",
+    "banner": "<b>Stand: 1. November 2026 — veraltet.</b> Kein neuer Desk-Stand bis zum 12. November. Der Nominallohn-Nowcast für September bezog sich auf die Veröffentlichung am 6.11.; BIP Q3 ist für den 16.11. (08:50 JST) und der nationale VPI Oktober für den 20.11. (08:30 JST) vorgesehen. <b>Data refreshed 2026-11-12, commentary as of 1. Nov. 2026.</b> Staff nowcasts and policy text are unchanged."
   },
   "summary": {
     "heading": "Aktueller Stand (1. Nov. 2026 — veraltet)",
@@ -219,6 +219,14 @@
   "recent_note": "Industrieproduktion, Einzelhandel und Shuntō-Endergebnis stammen teilweise aus Sekundärquellen (U), soweit unten so gekennzeichnet. Konsensumfragen und PMI-Werte sind nicht gezeigt.",
   "recent_data": [
     {
+      "release": "Importpreise, Yen-Basis, J/J — BoJ CGPI (offizielle Jahresveränderung)",
+      "date": "1 Oct 2026 (Monatsbericht 12. Nov. 2026)",
+      "quality": "V",
+      "actual": "Yen-Basis +24,8 % J/J im Oktober 2026 (Index 199,0). Vertragswährung im Monatsbericht 19,2 % (in der Tidy-Datei 19,25 % (d)).",
+      "prior": "Die 1.-Nov.-Notiz nannte +24,5 % J/J (damals vorliegender Stand).",
+      "why": "Offizieller Oktober-Druck, bestätigt im Monatsbericht vom 12. November 2026. Der Desk-Text vom 1. November bleibt unverändert; dieser Eintrag ergänzt nur die amtliche Zahl."
+    },
+    {
       "release": "VPI national September (Basis 2025) — Statistikamt",
       "date": "23.10.2026",
       "quality": "V",
@@ -320,7 +328,20 @@
     "policy": "Beobachtung: Anhebungen auf etwa 1,0 % am 16.6.2026 und auf etwa 1,25 % am 18.9.2026 (7–2); am 30.10.2026 unverändert (8–1). JGB-Renditen (MOF, V, eigene Änderung in Basispunkten, bis 29.10.; 30.10. fehlt): 2 J. 1,939 → 1,901 (−3,8 bp), 5 J. 2,407 → 2,285 (−12,2), 10 J. 3,092 → 2,876 (−21,6), 30 J. 4,122 → 3,956 (−16,6). Der Zweijahressatz liegt 65 bp über dem Leitzins (d). Eine Laufzeitprämienzerlegung wurde nicht gerechnet. Keine Anlageempfehlung."
   },
   "charts_hint": "Kein Nowcast-gegen-Ist-Chart. Nur die bereits im Erstlauf festgehaltenen kleinen Kalibrierungsstichproben.",
-  "charts": [],
+  "charts": [
+    {
+      "file": "charts/leading_inflation_outlook_imports.png",
+      "title": "Inflation outlook and import prices",
+      "subtitle": "Core-core and Tankan Outlook 1y (shifted +2 quarters, d); import prices yen-basis official y/y and contract-currency y/y (d), shifted +12 months.",
+      "caption": "Sources: Bank of Japan Tankan and CGPI (import price index, yen basis official y/y; contract-currency companion). Staff chart from the 12 Nov 2026 leading-indicators note (data as-of 12 Nov 2026, 18:43 Europe/Zurich). Best-lag shifts are (d). This is a staff view, not Bank of Japan staff work. Shown without endorsement."
+    },
+    {
+      "file": "charts/leading_employment_di_jobs.png",
+      "title": "Employment DI and jobs-to-applicants ratio",
+      "subtitle": "Tankan employment DI inverted (d) versus the jobs-to-applicants ratio, SA.",
+      "caption": "Sources: Bank of Japan Tankan employment-conditions DI (inverted, d, for the chart); MHLW jobs-to-applicants ratio, SA. Staff chart from the 12 Nov 2026 leading-indicators note (data as-of 12 Nov 2026, 18:43 Europe/Zurich). This is a staff view, not Bank of Japan staff work. Shown without endorsement."
+    }
+  ],
   "charts_note": "Ein Nowcast-gegen-Ist-Backtest-Chart liegt nicht vor. Der Erstlauf vom 1. November 2026 hat keine gespeicherte Zeitreihe von Nowcast gegen spätere Ist-Werte hinterlassen. Im Quellenvermerk sind nur kleine Kalibrierungsstichproben festgehalten, die bereits auf dieser Seite genannt werden: für die Tokio-Bridge beim nationalen VPI nur n=11 Monatsfehler, RMSE des Modells R2 0,23 Prozentpunkte (Kerninflation ohne frische Lebensmittel) und 0,20 Prozentpunkte (ohne frische Lebensmittel und Energie), Stand 1. November 2026. Das 68-%-Band ist grob. Eine Inflations-Nowcast-Serie gegen die späteren Ist-Werte wurde nicht erzeugt, und es wurde kein neues Modell geschätzt.",
   "caveats": [
     "Datenstand: 1. November 2026 (Europe/Zurich). Dieser öffentliche Stand ist am 12. November veraltet; ein neuer Desk-Lauf liegt nicht vor. (d) = eigene Hilfsrechnung; Urteil = ökonomische Einschätzung; V = Primärquelle; U = Sekundärquelle.",
@@ -355,5 +376,11 @@
     "Kein Nowcast für den nationalen VPI ohne Lebensmittel und Energie.",
     "Erstlauf: keine Zerlegung gegenüber einem vorherigen Nowcast.",
     "Kein Inflations-Nowcast-gegen-Ist-Backtest-Chart: der Erstlauf vom 1. November 2026 hat keine gespeicherte Nowcast-Ist-Zeitreihe hinterlassen, nur eine kleine Kalibrierungsstichprobe (n=11)."
-  ]
+  ],
+  "data_refresh": {
+    "data_as_of": "2026-11-12",
+    "commentary_as_of": "1. Nov. 2026",
+    "stamp": "Data refreshed 2026-11-12, commentary as of 1. Nov. 2026",
+    "latest": "official import y/y Oct 24.8 (date 2026-10-01); charts copied: leading_inflation_outlook_imports.png, leading_employment_di_jobs.png"
+  }
 }

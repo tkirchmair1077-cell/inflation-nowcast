@@ -16,13 +16,13 @@
   "source": {
     "label": "SNB baseline note, 12 November 2026",
     "file": "SNB baseline note, 12 November 2026",
-    "prepared": "12 November 2026, Europe/Zurich. First SNB baseline for the committee. Official sources fetched on 12 November 2026 (SNB, BFS, SECO, KOF). No time of day was recorded on the note."
+    "prepared": "12 November 2026, Europe/Zurich. First SNB baseline for the committee. Official sources fetched on 12 November 2026 (SNB, BFS, SECO). No time of day was recorded on the note."
   },
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Current — note 12 Nov 2026",
-    "banner": null
+    "label": "Current — note 12 Nov 2026 · Data refreshed 2026-11-13, commentary as of 12 Nov 2026",
+    "banner": "<b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026.</b> Staff nowcasts and policy text are unchanged."
   },
   "summary": {
     "heading": "Current state",
@@ -30,7 +30,7 @@
     "as_of": "2026-11-12",
     "source": "SNB baseline note, 12 November 2026"
   },
-  "nowcast_hint": "There is no staff LIK component nowcast on this page; that model is pending. Official BFS, SECO, KOF and SNB readings are shown with their V / (d) labels. The 10 December policy call and the hawk/dove score are staff judgment.",
+  "nowcast_hint": "There is no staff LIK component nowcast on this page; that model is pending. Official BFS, SECO and SNB readings are shown with their V / (d) labels. The 10 December policy call and the hawk/dove score are staff judgment.",
   "nowcast_note": "The 10 December baseline (hold at 0%) and the hawk/dove score of +1 are staff judgment (Einschätzung, keine Formel), not a formula and not a market-implied probability. A staff LIK nowcast point for November 2026 is not published: the component model is pending, and an unsealed research prototype is not shown. Quarterly headline y/y figures of 0.17% (Q1), 0.56% (Q2) and 0.72% (Q3) are derived (d) from average official monthly BFS indices; the SNB’s September “observed” table printed 0.2 and 0.6 for Q1 and Q2 (consistent after rounding) and left Q3–Q4 blank.",
   "nowcasts": [
     {
@@ -92,10 +92,10 @@
       "unit": "%",
       "quality": "V",
       "status": "latest SNB republication",
-      "period": "Close of trading 10 Nov 2026",
+      "period": "Close of trading 11 Nov 2026",
       "interval": "–",
-      "prior": "−0.04% on 6 Nov (official cube snbgwdzid, PublishingDate 2026-11-09)",
-      "source": "SNB current-rates page and Excel, file date 11 November 2026; SNB two-decimal republication of SIX",
+      "prior": "−0.04% (Close of trading 10 Nov 2026)",
+      "source": "SNB current-rates Excel, file date 12 Nov 2026, column SARH (two-decimal republication of SIX). No 12 November SARON on that file.",
       "as_of": "11 Nov 2026",
       "rationale": "No 11 November SARON on that file. SIX is the benchmark administrator and publishes six decimals; the six-decimal SIX print was not fetched. SARON has stayed in a narrow band slightly below the 0% policy rate, as the SNB intends (V: QB 3/2026)."
     },
@@ -103,15 +103,15 @@
       "id": "conf-10y",
       "category": "policy",
       "variable": "Ten-year Confederation spot yield",
-      "value": "0.529",
+      "value": "0.524",
       "unit": "%",
       "quality": "V",
       "status": "official SNB print",
-      "period": "11 Nov 2026",
+      "period": "12 Nov 2026",
       "interval": "–",
-      "prior": "0.58% in mid-September; 0.39% at the June assessment (V: QB 3/2026, data as at 24 Sep 2026)",
-      "source": "SNB current-rates Excel, 11 November 2026; mid-September and mid-June from QB 3/2026",
-      "as_of": "11 Nov 2026",
+      "prior": "0.529% on 11 Nov 2026",
+      "source": "SNB current-rates Excel, 12 Nov 2026 (interestRates.xlsx, column R10)",
+      "as_of": "12 Nov 2026",
       "rationale": "Below mid-September and above mid-June. The September QB described an upward shift and slight flattening driven mainly by higher expected short-term rates (V: QB 3/2026). Market-implied SNB forwards are a gap and are not estimated."
     },
     {
@@ -224,21 +224,6 @@
       "source": "SNB press release and introductory remarks, 24 September 2026",
       "as_of": "24 Sep 2026",
       "rationale": "Company talks available at the September assessment pointed to robust Q3 momentum (V: SNB summary; QB 3/2026). Q3 GDP is an input for 10 December, not by itself a trigger given that judgment."
-    },
-    {
-      "id": "kof",
-      "category": "GDP",
-      "variable": "KOF Economic Barometer, October",
-      "value": "107.6",
-      "unit": "",
-      "quality": "V",
-      "status": "published",
-      "period": "Oct 2026",
-      "interval": "–",
-      "prior": "−1.5 points from September",
-      "source": "KOF press release, 30 October 2026",
-      "as_of": "30 Oct 2026",
-      "rationale": "Still above the medium-term average of 100; outlook described as robust (V)."
     }
   ],
   "baseline_hint": "Staff policy baseline for 10 December, set against the 24 September decision and the September conditional inflation forecast (constant 0% policy rate).",
@@ -313,14 +298,6 @@
       "actual": "Headline 1.5% y/y, +0.2% m/m, index 101.7 (workbook 101.6823). Core 1 0.5%. Domestic 0.8%, imported 3.7%, petroleum products +40.3%, ex-petroleum 0.6%, energy and fuels +15.9%. HVPI +1.6% y/y.",
       "prior": "September headline 1.0%; core 1 0.5%",
       "why": "Central fact for 10 December: a 1.5% October print makes a Q4 average of 0.7% highly unlikely without a sharp Nov–Dec reversal (d)."
-    },
-    {
-      "release": "KOF Economic Barometer, October",
-      "date": "30 Oct 2026",
-      "quality": "V",
-      "actual": "107.6, −1.5 points from September, still above the medium-term average of 100. Outlook described as robust.",
-      "prior": "September (level not separately quoted beyond the −1.5 change)",
-      "why": "Activity signal still expansionary but not accelerating."
     },
     {
       "release": "SNB summary of the September Governing Board discussion",
@@ -402,7 +379,7 @@
       "Last action, 24 September: policy rate held at 0% (valid from 20 June 2025). The September conditional forecast, assuming 0% over the entire horizon, stayed inside 0–2% and put annual inflation at 0.7% in 2026 and 0.8% in 2027 and 2028 (V).",
       "Incoming CPI has moved against that Q4 path: 1.0% in September and 1.5% in October, after 0.8% in August at the time of the decision (V: BFS). Core 1 is still 0.5%. The rise is imported and energy-driven (imported +3.7%, petroleum products +40.3%; V). A 1.5% October print makes a Q4 average of 0.7% highly unlikely without a sharp November–December reversal (d).",
       "The September discussion (published 22 October) remains the best official read of the reaction function: conditions had eased because franc depreciation outweighed a slight rise in rates; policy is expansionary; expectations well anchored; no second-round effects; “increased willingness to intervene is no longer necessary,” while standard FX willingness was retained. No explicit guidance on a return to a negative policy rate (V).",
-      "Activity: SECO Q2 sport-event-adjusted GDP +1.5% q/q (V); Q3 not yet published (provisional date 30 November). KOF October 107.6, still above average (V). Official SNB growth forecast 1.5–2% in 2026 and around 1.5% in 2027 (V).",
+      "Activity: SECO Q2 sport-event-adjusted GDP +1.5% q/q (V); Q3 not yet published (provisional date 30 November). Official SNB growth forecast 1.5–2% in 2026 and around 1.5% in 2027 (V).",
       "Official monthly FX (devkum, to October): June–September depreciation and a partial October retracement against the euro; the franc still weaker against the dollar than in early summer (V / (d)). Sight deposits 452.9 bn on 6 November, about CHF 15.6 bn below the June assessment week (V / (d)) — evidence, not proof, of FX intervention.",
       "A staff LIK component nowcast is not yet available and is not shown. Market-implied SNB path (SARON OIS, futures, hike probabilities): not obtained from any free official source; not estimated. Hard gap."
     ],
@@ -509,6 +486,10 @@
     {
       "item": "Licensed bank, broker and private-survey datasets, and survey-consensus figures",
       "reason": "Internal-use or licensed material is not shown."
+    },
+    {
+      "item": "KOF Economic Barometer",
+      "reason": "Licensed; not a public official SNB or BFS series, so it is not shown on this page."
     }
   ],
   "gaps": [
@@ -522,5 +503,11 @@
     "Sight deposits after 6 November 2026 are not in the cube published on 9 November.",
     "No later official trade-weighted CHF index was fetched after the SNB’s September “around 3%” TWI figure.",
     "The June 2026 SNB growth figure that was later raised to 1.5–2% was not re-fetched."
-  ]
+  ],
+  "data_refresh": {
+    "data_as_of": "2026-11-12",
+    "commentary_as_of": "12 Nov 2026",
+    "stamp": "Data refreshed 2026-11-13, commentary as of 12 Nov 2026",
+    "latest": "R10 0.524 on 2026-11-12 (V); SARON −0.04 on 2026-11-11 (V). (Corrected after a parser bug had written a date into the R10 field.)"
+  }
 }
