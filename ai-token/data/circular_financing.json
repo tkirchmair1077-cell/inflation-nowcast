@@ -1,1251 +1,1435 @@
 {
-  "schema_version": "1.1",
-  "feed": "circular_financing",
-  "bot": {
-    "name": "AI Circular Financing Alert Bot",
-    "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
-  },
-  "as_of": "2026-11-12T16:45:00+01:00",
-  "timezone": "Europe/Zurich",
-  "title": "Circular Financing Watch, as of Thu 12 Nov 2026 ~16:45 Europe/Zurich",
-  "status": {
-    "current_user_alert": "Elevated: Nvidia (CEO resignation) + neoclouds (Nebius guidance, sector sell-off)",
-    "current_user_alert_as_of": "2026-11-12T16:45:00+01:00",
-    "summary": "The 12 Nov US-session scan raised an Elevated alert. Nvidia's 8-K says Jensen Huang resigned as CEO and director effective 11 Nov; the CFO is interim CEO (V). On the same day Nebius pushed 2026 revenue to the low end of guidance, raised 2026 capex to about $27bn and moved its ARR target from $7–9bn in December to more than $7bn in February (V). At 16:18 CET Nvidia was about 6% lower, Nebius about 19% lower and CoreWeave about 8.8% lower (U); Nvidia's implied market-value loss is about $260–290bn (d). No dated CDS print after 10 Nov was found; a CoreWeave 2032 bond printed around 80.75 (TRACE, U).",
-    "last_scan": "2026-11-12T16:45:00+01:00",
-    "last_independent_check": "2026-11-12T16:25:00+01:00",
-    "outstanding_watches": [
-      {
-        "date": "2026-11-12",
-        "session": "PM",
-        "tier": "Elevated",
-        "node": "Nvidia / neoclouds (CoreWeave, Nebius)",
-        "headline": "Nvidia CEO resigned effective immediately (8-K); Nebius cut 2026 revenue to the low end of guidance, raised 2026 capex to about $27bn and moved its ARR target from $7–9bn in December to more than $7bn in February; Nvidia-backed neocloud equities sold off.",
-        "quality": "V",
-        "note": "The filings are V. Share moves are U (Yahoo and press figures as of 16:18 CET). Nvidia's opening drop is conflicting (about −12% in the press versus −14.1% on Yahoo, U). The implied Nvidia market-value loss is about $260–290bn (d). There is no dated CDS print after 10 Nov. A CoreWeave 2032 bond printed around 80.75 (TRACE, U). The independent check of the PM scan was completed around 16:25 CET.",
-        "tone": "negative",
-        "tone_source": "bot"
-      },
-      {
-        "date": "2026-11-12",
-        "session": "AM",
-        "tier": "Watch",
-        "node": "Lambda / Nvidia",
-        "headline": "Anthropic's ~$34.9bn Lambda compute agreement is currently terminable by either party (missed lease deadline); no notice given.",
-        "quality": "V",
-        "note": "Primary S-1/A2 vs S-1/A1 wording verified. The Nvidia leaseholder and investor role is unverified (U); the independent check is pending.",
-        "tone": "negative",
-        "tone_source": "derived"
-      },
-      {
-        "date": "2026-11-10",
-        "session": "PM",
-        "tier": "Watch",
-        "node": "Anthropic",
-        "headline": "Supplier equity placement funding a customer that has ~$900.9bn compute and infrastructure commitments to the same supplier set.",
-        "quality": "V",
-        "note": "Independently checked the same afternoon. IPO liquidity reduces near-term funding risk; this is a circularity-structure signal, not a default signal.",
-        "tone": "negative",
-        "tone_source": "derived"
-      },
-      {
-        "date": "2026-11-09",
-        "session": "PM",
-        "tier": "Watch (provisional)",
-        "node": "Lenders / neoclouds",
-        "headline": "Some banks reportedly reluctant to finance additional AI deals even with big-tech guarantees (Anthropic, Google named as backstops; lenders unnamed).",
-        "quality": "U",
-        "note": "Reuters via Investing.com, anonymous sources. No named lender withdrawal from a guaranteed deal was found in subsequent checks through 11 Nov morning.",
-        "tone": "negative",
-        "tone_source": "derived"
-      }
-    ]
-  },
-  "summary": {
-    "text": "Nvidia's 8-K says Jensen Huang resigned as CEO and director effective 11 Nov 2026, with the CFO as interim CEO and results still due 17 Nov (V). Nvidia sits at the centre of the loop through $99bn of equity investments plus $25bn of commitments and $3.5bn of AI-cloud lease guarantees as of 26 Jul (V). Nebius reported Q3 revenue of $0.98bn and capex of $7.3bn; it now sees 2026 revenue at the low end of $3.0–3.4bn, 2026 capex of about $27bn, and an ARR target of more than $7bn in February rather than $7–9bn in December; its 2027 outlook is $12–13bn of revenue and $40–45bn of capex (V). CoreWeave's Q3 10-Q shows top-customer concentration down to 30%/24% and $11.0bn of debt principal due in 2027 (V). In New York trading on 12 Nov, Nvidia was about 6% lower at 16:18 CET ($163.31) and the implied market-value loss is about $260–290bn (d); the opening drop is conflicting (about −12% in the press versus −14.1% on Yahoo, both U), while Nebius was about 19% lower and CoreWeave about 8.8% lower at the same time (U). No dated CDS print after 10 Nov was available; a CoreWeave 2032 bond printed around 80.75 (TRACE, U), and a CNBC report of an OpenAI $15bn raise at a $1.25tn valuation remains unconfirmed (U).",
-    "as_of": "2026-11-12T16:45:00+01:00",
-    "source": "AI Alert US-session scan 12 Nov 2026 (~16:40 Europe/Zurich), corrected after the independent check (~16:25 Europe/Zurich); primary SEC filings"
-  },
-  "items": [
-    {
-      "id": "openai-raise-reported-15bn",
-      "node": "OpenAI",
-      "type": "reported_funding",
-      "title": "Reported $15bn raise at a $1.25tn valuation (CNBC, unconfirmed)",
-      "as_of": "2026-11-12",
-      "event_time": "2026-11-12T15:50:00+01:00",
-      "tier_relevance": "Below Watch on its own. Unconfirmed secondary report; not used to change the 12 Nov Elevated tier.",
-      "tone": "neutral",
-      "tone_source": "bot",
-      "relationship": "If confirmed, this would add private-lab funding at the previously reported $1.25tn valuation, which feeds offtake credibility at Oracle, CoreWeave and other suppliers. It has not been confirmed from an issuer primary document or from an opened CNBC original.",
-      "counterparties": [
-        "SoftBank",
-        "Oracle",
-        "CoreWeave",
-        "Nvidia"
-      ],
-      "figures": [
-        {
-          "label": "Reported raise and valuation",
-          "value": "15 at 1.25tn valuation",
-          "unit": "USD billion / USD",
-          "quality": "U",
-          "note": "CNBC, 12 Nov, about 15:50 CET. Not independently confirmed. Earlier 6 Nov secondary reports had described an $11bn first close at the same $1.25tn valuation."
-        }
-      ],
-      "sources": [
-        {
-          "title": "CNBC, 12 Nov 2026 (report not independently opened)",
-          "kind": "secondary"
-        }
-      ],
-      "notes": "Unconfirmed. Not used to tighten or ease the 12 Nov Elevated alert."
-    },
-    {
-      "id": "nebius-q3",
-      "node": "Nebius / neoclouds",
-      "type": "earnings",
-      "title": "Nebius Q3 2026: revenue up, 2026 at the low end, ARR target moved out",
-      "as_of": "2026-11-12",
-      "event_time": "2026-11-12T15:22:11+01:00",
-      "tier_relevance": "Part of the 12 Nov Elevated alert (neocloud node).",
-      "tone": "negative",
-      "tone_source": "bot",
-      "relationship": "Nvidia-backed neocloud. Revenue and capacity timing slipped (Microsoft New Jersey tranches moved to 2Q27). Mitigant: prepayments covered over 100% of capex on Q3 deals.",
-      "counterparties": [
-        "Nvidia",
-        "Microsoft",
-        "Meta"
-      ],
-      "figures": [
-        {
-          "label": "Q3 revenue",
-          "value": 0.981,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Q3 capex (purchases of PP&E)",
-          "value": 7.3,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Cash capex in the quarter, not the PP&E stock (which was $19.34bn)."
-        },
-        {
-          "label": "Q3 operating cash flow (continuing ops)",
-          "value": -0.273,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "2026 revenue guide",
-          "value": "low end of 3.0–3.4",
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "2026 capex guide",
-          "value": "about 27",
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Raised above the prior $20–25bn range."
-        },
-        {
-          "label": "ARR target",
-          "value": "exceed $7bn in February 2027 (was $7–9bn in December 2026)",
-          "unit": null,
-          "quality": "V"
-        },
-        {
-          "label": "2027 initial outlook",
-          "value": "revenue 12–13, capex 40–45",
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Confirmed in the shareholder-letter text and the slides (V). The $17–20bn slide figure is 2027 customer-prepayment expectations, not revenue."
-        },
-        {
-          "label": "Cash at quarter-end",
-          "value": 7.4,
-          "unit": "USD billion",
-          "quality": "V"
-        }
-      ],
-      "sources": [
-        {
-          "title": "Nebius 6-K Ex. 99.1",
-          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-1.htm",
-          "kind": "primary"
-        },
-        {
-          "title": "Nebius shareholder letter (Ex. 99.2)",
-          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-2.htm",
-          "kind": "primary"
-        }
-      ],
-      "notes": "NBIS was about −19% at 16:18 CET (U)."
-    },
-    {
-      "id": "nvidia-ceo-resignation",
-      "node": "Nvidia",
-      "type": "governance_event",
-      "title": "CEO Jensen Huang resigns; CFO Colette Kress interim CEO (8-K Item 5.02)",
-      "as_of": "2026-11-12",
-      "event_time": "2026-11-12T14:52:41+01:00",
-      "tier_relevance": "Elevated (with the Nebius / neocloud signal). This is a supplier-node shock, not a credit event.",
-      "tone": "negative",
-      "tone_source": "bot",
-      "relationship": "Nvidia is the main supplier-financier in the loop: it holds equity stakes in labs and neoclouds, AI-cloud capacity agreements, and lease guarantees. A leadership vacuum raises uncertainty over how those commitments are managed. The board says customer commitments continue without interruption.",
-      "counterparties": [
-        "OpenAI",
-        "Anthropic",
-        "CoreWeave",
-        "Nebius",
-        "Lambda"
-      ],
-      "figures": [
-        {
-          "label": "Resignation effective",
-          "value": "11 Nov 2026 (board acceptance)",
-          "unit": null,
-          "quality": "V",
-          "note": "Kress stays CFO while serving as interim CEO; Harvey C. Jones is the first board chair; Q3 FY27 results still 17 Nov."
-        },
-        {
-          "label": "Equity investments (26 Jul 2026)",
-          "value": 99,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Plus $25bn of equity investment commitments (Q2 FY27 10-Q)."
-        },
-        {
-          "label": "AI-cloud land/power/shell guarantees, maximum gross exposure",
-          "value": 3.5,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Q2 FY27 10-Q."
-        },
-        {
-          "label": "NVDA share move, 12 Nov 16:18 CET",
-          "value": "about −6 ($163.31)",
-          "unit": "%",
-          "quality": "U",
-          "note": "Yahoo (U). The opening drop is conflicting: about −12% in the press versus −14.1% ($149.29) on Yahoo (U). Earlier prints near $161.76 were about −7%."
-        },
-        {
-          "label": "Implied NVDA market-value move, 12 Nov session",
-          "value": "about 260–290",
-          "unit": "USD billion",
-          "quality": "(d)",
-          "note": "Derived from unverified intraday prices, not a close."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Nvidia 8-K, acc. 0001045810-26-000082",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm",
-          "kind": "primary"
-        },
-        {
-          "title": "Nvidia press release (Ex. 99.1)",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm",
-          "kind": "primary"
-        },
-        {
-          "title": "Nvidia Q2 FY27 10-Q",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
-          "kind": "primary"
-        },
-        {
-          "title": "Reuters via Investing.com, 12 Nov",
-          "url": "https://www.investing.com/news/stock-market-news/nvidia-ceo-jensen-huang-to-step-down-in-big-blow-to-ai-boom-5021980",
-          "kind": "secondary"
-        },
-        {
-          "title": "Yahoo Finance quote, NVDA, 12 Nov 16:18 CET",
-          "url": "https://finance.yahoo.com/quote/NVDA/",
-          "kind": "secondary"
-        }
-      ],
-      "notes": "The filing gives no reason. Press reports link the resignation to personal-conduct reports and an internal investigation (U). The 8-K and press release say nothing about changes to investment or guarantee commitments."
-    },
-    {
-      "id": "coreweave-10q-q3",
-      "node": "CoreWeave",
-      "type": "filing",
-      "title": "Q3 2026 10-Q: customer concentration and debt maturities",
-      "as_of": "2026-11-12",
-      "event_time": "2026-11-12T13:20:41+01:00",
-      "tier_relevance": "Below Watch on its own. Concentration fell versus Q2.",
-      "tone": "neutral",
-      "tone_source": "bot",
-      "relationship": "Neocloud node. The top-customer share fell; heavy 2027 maturities remain. CRWV was about −8.8% at 16:18 CET on 12 Nov after the Nvidia news (U).",
-      "counterparties": [
-        "OpenAI",
-        "Microsoft",
-        "Meta",
-        "Nvidia"
-      ],
-      "figures": [
-        {
-          "label": "Top two customers, share of Q3 revenue",
-          "value": "30 / 24",
-          "unit": "%",
-          "quality": "V",
-          "note": "Q2: 36 / 26 / 10."
-        },
-        {
-          "label": "Total debt principal (30 Sep 2026)",
-          "value": 47.505,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Principal due 2027",
-          "value": 10.974,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Committed contracts, share of revenue",
-          "value": 98,
-          "unit": "%",
-          "quality": "V"
-        },
-        {
-          "label": "CoreWeave 2032 bond, 12 Nov 15:26 CET",
-          "value": "around 80.75",
-          "unit": "price",
-          "quality": "U",
-          "note": "TRACE, U. Not a dated CDS print; no CDS confirmation after 10 Nov."
-        }
-      ],
-      "sources": [
-        {
-          "title": "CoreWeave 10-Q Q3 2026, acc. 0001769628-26-000465",
-          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
-          "kind": "primary"
-        }
-      ],
-      "notes": "Covenants were in compliance at 30 Sep. An Nvidia capacity backstop was not found by keyword search (a negative finding, not proof of absence). The 10-Q discloses only the 14 Aug adoption of CEO Michael Intrator's Rule 10b5-1 plan (estimated gross proceeds $325m personally plus $175m via Omnadora; window 14 Nov 2026–31 Mar 2027) (V). A reported cancellation of that plan rests on CNBC (U) and is not in this filing."
-    },
-    {
-      "id": "coreweave-post-earnings-reaction",
-      "node": "CoreWeave / neoclouds",
-      "type": "market_reaction",
-      "title": "Neocloud equities rally after CoreWeave Q3 and financing plan",
-      "as_of": "2026-11-11",
-      "event_time": "2026-11-11T16:17:00+01:00",
-      "tier_relevance": "Below Watch. De-risking reaction; no dated post-earnings CDS or bond print obtained.",
-      "tone": "positive",
-      "tone_source": "derived",
-      "relationship": "Equity market response at the neocloud node of the OpenAI / Microsoft / Nvidia loop; CoreWeave plans a contract-backed, investment-grade-rated loan instead of parent-level unsecured debt.",
-      "counterparties": [
-        "Nebius",
-        "IREN",
-        "Nvidia",
-        "Microsoft",
-        "OpenAI"
-      ],
-      "figures": [
-        {
-          "label": "CoreWeave share price vs 10 Nov close, 11 Nov 16:17 Europe/Zurich",
-          "value": "+19.9",
-          "unit": "%",
-          "quality": "U",
-          "note": "Yahoo 5-min chart, $58.41 vs $48.73 (% derived); intraday high +21.2%. Nebius +14.9% at the same time."
-        },
-        {
-          "label": "Planned IG-rated contract-backed delayed-draw loan, yield talk",
-          "value": "7–7.5",
-          "unit": "%",
-          "quality": "V",
-          "note": "Q3 call transcript: launch 'in the coming weeks', >90% of capex; no amount, banks or customer named; not yet closed."
-        }
-      ],
-      "links": [
-        "https://www.cnbc.com/2026/11/11/coreweave-crwv-outlook-earnings-ai.html",
-        "https://thenextweb.com/news/coreweave-forecast-q3-2026-revenue-unsecured-debt"
-      ]
-    },
-    {
-      "id": "coreweave-q3",
-      "node": "CoreWeave",
-      "type": "earnings",
-      "title": "Q3 2026 results (8-K Exhibit 99.1)",
-      "as_of": "2026-11-10",
-      "event_time": "2026-11-10T22:05:53+01:00",
-      "tier_relevance": "Below new-Watch threshold (11 Nov morning). Stress elements are continuations, not a new node signal. No post-earnings CDS or bond print was obtained.",
-      "tone": "neutral",
-      "tone_source": "derived",
-      "relationship": "Neocloud node in the OpenAI / Microsoft / Nvidia financing loop. Q3 10-Q (customer concentration, Nvidia arrangements) had not been filed as of 11 Nov 07:50 Europe/Zurich.",
-      "counterparties": [
-        "OpenAI",
-        "Microsoft",
-        "Nvidia",
-        "Meta"
-      ],
-      "figures": [
-        {
-          "label": "Revenue",
-          "value": 3.661,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Q3 2025: $1.365bn."
-        },
-        {
-          "label": "GAAP operating income",
-          "value": 0.207,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Interest expense, net",
-          "value": 0.846,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Net loss",
-          "value": 0.709,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Adjusted operating income",
-          "value": 0.379,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Interest / GAAP operating income",
-          "value": 4.1,
-          "unit": "×",
-          "quality": "(d)"
-        },
-        {
-          "label": "Interest / adjusted operating income",
-          "value": 2.2,
-          "unit": "×",
-          "quality": "(d)"
-        },
-        {
-          "label": "Q4 interest expense guide",
-          "value": "1.05–1.15",
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Debt (recourse + non-recourse)",
-          "value": 46.873,
-          "unit": "USD billion",
-          "quality": "(d)",
-          "note": "Components V: recourse $9.183bn current + $32.417bn non-current; non-recourse $1.389bn + $3.884bn. Excludes operating leases $18.697bn (d from V components) and finance leases. 31 Dec 2025 debt was $21.4bn."
-        },
-        {
-          "label": "Operating-lease liabilities",
-          "value": 18.697,
-          "unit": "USD billion",
-          "quality": "(d)",
-          "note": "668 + 18,029, from the 8-K balance sheet (V components)."
-        },
-        {
-          "label": "Equity",
-          "value": 4.025,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Cash",
-          "value": 4.122,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Plus restricted cash, current, $1.405bn."
-        },
-        {
-          "label": "Operating cash flow",
-          "value": 1.975,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Purchases of PP&E (cash)",
-          "value": 9.441,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "The $14.5bn 'capex' figure in the earnings presentation is a different definition (additions including finance leases, net of CIP changes) and is also V from the deck, not a contradiction."
-        },
-        {
-          "label": "Revenue backlog",
-          "value": 132.5,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Approximately; 30 Sep 2026. June was $104.2bn. Footnote: RPO plus further amounts from committed contracts, subject to delivery."
-        },
-        {
-          "label": "FY26 revenue guide",
-          "value": "13.0–13.3",
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "FY26 capex guide",
-          "value": "37–39",
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Expected customer prepayments/deposits in next 3 months",
-          "value": 9,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Issuer quote in Exhibit 99.1 / call."
-        },
-        {
-          "label": "Weighted average cost of debt (Q3-end)",
-          "value": 7.9,
-          "unit": "%",
-          "quality": "V",
-          "note": "IR transcript."
-        },
-        {
-          "label": "Parent-level unsecured debt through 2027",
-          "value": "no additional issuance at current yields",
-          "unit": null,
-          "quality": "V",
-          "note": "CFO, official IR transcript p. 6: 'at current yields, we do not intend to issue additional parent-level unsecured debt through 2027.' Condition is part of the statement."
-        },
-        {
-          "label": "Incremental parent-level capital through 2027",
-          "value": "<5",
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "CFO, transcript p. 7: wording is 'capital', not 'financing' or 'debt'. Equity, converts and ATM are not excluded."
-        }
-      ],
-      "sources": [
-        {
-          "title": "CoreWeave 8-K Exhibit 99.1, acc. 0001769628-26-000461",
-          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm",
-          "kind": "primary"
-        },
-        {
-          "title": "CoreWeave 3Q26 official transcript",
-          "url": "https://investors.coreweave.com/files/content_files/CoreWeave-3Q26-Transcript-_1_.pdf",
-          "kind": "primary"
-        },
-        {
-          "title": "CoreWeave 3Q26 earnings presentation",
-          "url": "https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-3Q26-Earnings-Presentation-Final.pdf",
-          "kind": "primary"
-        },
-        {
-          "title": "CoreWeave Q2 2026 10-Q (last filed quarterly report)",
-          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm",
-          "kind": "primary"
-        }
-      ],
-      "notes": "Q3 10-Q was not on EDGAR as of 11 Nov 07:50 Europe/Zurich. Statutory deadline for a non-accelerated filer is 16 Nov 2026 (d). Last filed customer-concentration figures are therefore still Q2: customers A/B/C 36% / 26% / 10% of Q2 revenue (anonymised; 'other significant customers include Microsoft and OpenAI'). A keyword search of the Q2 10-Q did not find an Nvidia residual capacity backstop; that is a negative finding, not a proof of absence. 'More than 75% of committed capex tied to IG/enterprise customers' is an issuer self-classification with two different denominators in the CEO and CFO remarks, and is not independently confirmed."
-    },
-    {
-      "id": "lambda-termination-right",
-      "node": "Lambda / Nvidia (Anthropic contract)",
-      "type": "contract_contingency",
-      "title": "Anthropic's ~$34.9bn Lambda compute agreement is now terminable by either party",
-      "as_of": "2026-11-10",
-      "event_time": "2026-11-10T12:29:24+01:00",
-      "tier_relevance": "Watch (12 Nov morning scan). Single node; no credit-market confirmation (Lambda is private).",
-      "tone": "negative",
-      "tone_source": "derived",
-      "relationship": "Nvidia-backed neocloud Lambda would supply Nvidia-GPU capacity to Anthropic. Lambda missed a facility-lease deadline, which gives either party a termination right. Nvidia is reportedly a Lambda investor and the site leaseholder (U). Timing of the missed lease deadline is not disclosed; the change in wording between S-1/A1 (2 Nov) and S-1/A2 (10 Nov) does not prove it occurred in that window.",
-      "counterparties": [
-        "Anthropic",
-        "Lambda",
-        "Nvidia",
-        "Hut 8"
-      ],
-      "figures": [
-        {
-          "label": "Lambda Agreements, aggregate commitment through 2034",
-          "value": 41.3,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "S-1/A2; fees accrue only as capacity is delivered and accepted."
-        },
-        {
-          "label": "August 2026 agreement, currently terminable by either party",
-          "value": 34.9,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "S-1/A2: no notice given, and Anthropic does 'not currently intend to terminate'. In S-1/A1 (2 Nov) this was only a contingency. Equals 84.5% of the Lambda total and ~3.9% of $900.9bn total commitments (d)."
-        },
-        {
-          "label": "Hut 8 Beacon Point leases (2 × 352 MW, 15 years, one unnamed AA- or better tenant)",
-          "value": 704,
-          "unit": "MW",
-          "quality": "V",
-          "note": "Hut 8 disclosure: ~$19.6bn total; ~350 MW is phase 1 only. Link to the Lambda/Anthropic contract is not in the S-1; Nvidia as tenant only per WSJ/Reuters (U). Nvidia 10-Q shows unnamed 15-year leases >$20bn it expects to reassign and guarantees up to $3.5bn (V), not attributed to a site."
-        }
-      ],
-      "links": [
-        "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
-        "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
-        "https://www.datacenterdynamics.com/en/news/anthropic-signs-another-43bn-in-compute-agreements-with-microsoft/"
-      ]
-    },
-    {
-      "id": "anthropic-s1a2",
-      "node": "Anthropic",
-      "type": "equity_placement",
-      "title": "S-1/A Amendment 2: IPO range and $26bn concurrent supplier placement",
-      "as_of": "2026-11-10",
-      "event_time": "2026-11-10T12:29:00+01:00",
-      "tier_relevance": "Watch (10 Nov PM)",
-      "tone": "negative",
-      "tone_source": "derived",
-      "relationship": "Compute and chip suppliers commit to buy $26bn of Class N stock at the IPO price, while Anthropic has large committed spend with the same group.",
-      "counterparties": [
-        "Google",
-        "Nvidia",
-        "AMD",
-        "Broadcom",
-        "Micron",
-        "Microsoft",
-        "TSMC"
-      ],
-      "figures": [
-        {
-          "label": "IPO range",
-          "value": "70–78",
-          "unit": "USD/share",
-          "quality": "V"
-        },
-        {
-          "label": "Class A shares offered",
-          "value": 825000000,
-          "unit": "shares",
-          "quality": "V",
-          "note": "801,351,354 primary + 23,648,646 secondary; greenshoe 123,750,000."
-        },
-        {
-          "label": "Concurrent Class N placement",
-          "value": 26.0,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Google $10.0bn, Nvidia $10.0bn, AMD $2.5bn, Broadcom $1.0bn, Micron $1.0bn, Microsoft $1.0bn, TSMC $0.5bn, at an assumed $74 IPO price."
-        },
-        {
-          "label": "Net proceeds IPO + placement at $74",
-          "value": 84.6,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "About $93.7bn if the greenshoe is exercised in full. Placement is ~30.7% of $84.6bn (d)."
-        },
-        {
-          "label": "Shares outstanding after offering + placement (all classes)",
-          "value": 13086672593,
-          "unit": "shares",
-          "quality": "V",
-          "note": "Basic implied equity value (d): ~$916bn / $968bn / $1,021bn at $70 / $74 / $78. This is not a fully diluted figure; the prospectus excludes options, unvested RSUs, plan reserves, donation matching and Amazon rollover notes."
-        },
-        {
-          "label": "Compute and infrastructure commitments (A2)",
-          "value": 900.9,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Up from $895.4bn in Amendment 1 (+$5.5bn). Of which $451.6bn expected by end-2031 and $70.7bn in the next 12 months. Cancellable/conditional commitments $186.2bn."
-        },
-        {
-          "label": "Microsoft Azure commitment (A2)",
-          "value": "≥47.2, up to 49.2",
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Nov 2026–Jun 2033. Was at least $44.9bn in Amendment 1."
-        },
-        {
-          "label": "Total indebtedness at 30 Sep 2026",
-          "value": 6.2,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Q3 revenue",
-          "value": 17.0,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Confirmed in S-1/A2. Compute and infrastructure expense $9.9bn was taken from the 2 Nov S-1/A (see token-demand feed)."
-        },
-        {
-          "label": "Series H post-money (28 May 2026)",
-          "value": 965,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Issuer press release, not restated as a valuation in the S-1/A itself."
-        },
-        {
-          "label": "Illustrative fully diluted equity at $78",
-          "value": 1404.4,
-          "unit": "USD billion",
-          "quality": "(d)",
-          "note": "One reconstruction of 18,004,734,037 shares × $78 matches a TechCrunch $1.404tn figure. The prospectus does not define 'fully diluted' market cap. Basis is not unique."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Anthropic S-1/A Amendment 2",
-          "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
-          "kind": "primary"
-        },
-        {
-          "title": "Anthropic S-1/A Amendment 1 (2 Nov)",
-          "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
-          "kind": "primary"
-        },
-        {
-          "title": "Anthropic Series H announcement",
-          "url": "https://www.anthropic.com/news/series-h",
-          "kind": "primary"
-        },
-        {
-          "title": "Anthropic roadshow launch",
-          "url": "https://www.anthropic.com/news/roadshow-launch",
-          "kind": "primary"
-        }
-      ],
-      "notes": "Placement closes immediately after the IPO and is contingent on IPO closing, stockholder approval and no court block; the IPO itself is not contingent on the placement. Automatic termination includes failure to sign the underwriting agreement by 31 Jan 2027. Google's $10bn purchase reduces the Google 2026 NPA from $20bn to $10bn on close (V). Individual supplier commitments from Amendment 1 (Amazon ≥$110bn, Google CSP ≥~$121.3bn, SpaceXAI up to $120.5bn, Broadcom leases ~$161.2bn rent, Broadcom-related convertible note capacity up to $42bn) were recorded as V on 8 Nov; only the aggregate, Microsoft line and cancellable totals were re-stated as changed in the 10 Nov Amendment 2 check."
-    },
-    {
-      "id": "softbank-q2",
-      "node": "SoftBank Group",
-      "type": "earnings",
-      "title": "Q2 FY2026 results, LTV/NAV, and OpenAI-linked financing",
-      "as_of": "2026-11-10",
-      "tier_relevance": "Morning pending item closed on 10 Nov PM; below Watch on its own. Links SoftBank liquidity to OpenAI's valuation via a guaranteed share-backed loan.",
-      "tone": "negative",
-      "tone_source": "derived",
-      "relationship": "SoftBank is an OpenAI investor; a $10bn SVF2 share-backed loan is guaranteed by SBG and can require early repayment or cash collateral if OpenAI preferred-share value falls significantly.",
-      "counterparties": [
-        "OpenAI",
-        "Arm"
-      ],
-      "figures": [
-        {
-          "label": "Q2 net loss attributable to owners",
-          "value": 1115.3,
-          "unit": "JPY billion",
-          "quality": "V"
-        },
-        {
-          "label": "H1 net loss attributable to owners",
-          "value": 768.0,
-          "unit": "JPY billion",
-          "quality": "V"
-        },
-        {
-          "label": "Charge on US power-equipment procurement reset",
-          "value": 597.2,
-          "unit": "JPY billion",
-          "quality": "V",
-          "note": "Includes PORTS / Pike County, Ohio (SB7). Rebate rights of up to $2.1bn over 10 years were not activated (amount not determinable)."
-        },
-        {
-          "label": "LTV at 30 Sep 2026",
-          "value": 15.9,
-          "unit": "%",
-          "quality": "V",
-          "note": "13.0% in June, 17.0% in March. Policy remains <25% in normal conditions."
-        },
-        {
-          "label": "NAV at 30 Sep 2026",
-          "value": 59.8,
-          "unit": "JPY trillion",
-          "quality": "V"
-        },
-        {
-          "label": "Pro forma NAV (9 Nov prices for Arm, SBKK, Intel)",
-          "value": 44.7,
-          "unit": "JPY trillion",
-          "quality": "V"
-        },
-        {
-          "label": "Net debt at 30 Sep 2026",
-          "value": 11.3,
-          "unit": "JPY trillion",
-          "quality": "V",
-          "note": "Issuer figure, about $72bn at the presentation FX."
-        },
-        {
-          "label": "Illustrative pro forma LTV if net debt unchanged",
-          "value": 20.2,
-          "unit": "%",
-          "quality": "(d)",
-          "note": "11.30 / 56.0 equity value of holdings. SoftBank does not publish a pro forma LTV. Assumes unchanged net debt and ignores the FX difference."
-        },
-        {
-          "label": "OpenAI cumulative investment / fair value at 30 Sep",
-          "value": "54.6 / 99.6",
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Valuation unchanged vs 31 Mar 2026. The 30 Sep balance-sheet date is before the reported 6 Nov first close; the report does not reference a $1.25tn price."
-        },
-        {
-          "label": "OpenAI third tranche (1 Oct 2026)",
-          "value": 10,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Cumulative investment $64.6bn, about 13%, per the financial report."
-        },
-        {
-          "label": "SVF2 OpenAI share-backed loan, SBG-guaranteed",
-          "value": 1543.7,
-          "unit": "JPY billion",
-          "quality": "V",
-          "note": "$10bn facility, Aug 2026. Cash-collateral and mandatory prepayment clauses may be triggered by a significant fall in the fair value of OpenAI preferred shares held by SVF2. Thresholds not disclosed. From the Sep-30 LTV definition this guaranteed loan is included in net debt (a methodology change vs June/March definitions)."
-        },
-        {
-          "label": "Arm-share margin loan (Kronos I)",
-          "value": 3896.9,
-          "unit": "JPY billion",
-          "quality": "V",
-          "note": "Secured by 769,029,000 Arm shares; maturity extended to Sep 2028; non-recourse to SBG; cash-collateral and prepayment clauses may be triggered by a significant fall in the pledged Arm shares."
-        }
-      ],
-      "sources": [
-        {
-          "title": "SoftBank IR presentations",
-          "url": "https://group.softbank/en/ir/presentations",
-          "kind": "primary"
-        },
-        {
-          "title": "SoftBank Q2 FY2026 financial report",
-          "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q2fy2026_01_en.pdf",
-          "kind": "primary"
-        },
-        {
-          "title": "SoftBank Q2 FY2026 earnings datasheet",
-          "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/earnings-datasheet_q2fy2026_02.pdf",
-          "kind": "primary"
-        }
-      ],
-      "notes": "The financial report is 'not subject to interim review' and the English translation is for reference. OpenAI first-close size and $1.25tn valuation remain secondary (Bloomberg/Reuters, U) and are listed separately."
-    },
-    {
-      "id": "banks-reluctance",
-      "node": "Lenders",
-      "type": "reported_credit",
-      "title": "Reported bank reluctance to fund additional guaranteed AI deals",
-      "as_of": "2026-11-09",
-      "tier_relevance": "Provisional Watch, 9 Nov PM. Still unverified through the 11 Nov morning check.",
-      "tone": "negative",
-      "tone_source": "derived",
-      "relationship": "If accurate, weakens the guarantee / residual-backstop channel that funds neocloud capex.",
-      "counterparties": [
-        "Anthropic (named as a backstop, declined comment)",
-        "Google (named as a backstop, declined comment)"
-      ],
-      "figures": [],
-      "sources": [
-        {
-          "title": "Reuters via Investing.com, 9 Nov 2026",
-          "url": "https://www.investing.com/news/stock-market-news/banks-investors-grow-wary-of-ai-debt-spooked-by-marketselloff-5011246",
-          "kind": "secondary"
-        },
-        {
-          "title": "CNBC on ING data-centre loan BWIC, 6 Nov 2026",
-          "url": "https://www.cnbc.com/2026/11/06/ing-ai-data-center-loans-debt.html",
-          "kind": "secondary"
-        }
-      ],
-      "notes": "Lenders are unnamed. No named withdrawal from a guaranteed deal was found through 11 Nov 07:50 Europe/Zurich. A reported loan sale/distribution in secondary media (U) is not a documented pullback from a guarantee. A paywalled news original naming lenders was not readable and is not used."
-    },
-    {
-      "id": "ecb-lagarde",
-      "node": "Official",
-      "type": "official_flag",
-      "title": "ECB letter on circular financing in the AI ecosystem",
-      "as_of": "2026-11-06",
-      "tier_relevance": "Official qualitative flag. No new quantified euro-area exposures.",
-      "tone": "neutral",
-      "tone_source": "derived",
-      "relationship": "Flags interlinked ownership and mutual commitments, and debt-like off-balance-sheet lease or purchase commitments.",
-      "counterparties": [],
-      "figures": [],
-      "sources": [
-        {
-          "title": "Lagarde letter to MEPs Heinäluoma and Fernández, 6 Nov 2026, L/CL/26/245",
-          "url": "https://www.ecb.europa.eu/pub/pdf/other/ecb.mepletter261106_Heinaluoma_Fernandez~6e406be51f.en.pdf",
-          "kind": "primary"
-        }
-      ],
-      "notes": "States that rising debt levels are 'compounded by circular financing arrangements in the form of interlinked ownership structures and mutual commitments between firms in the AI ecosystem,' and that debt financing increasingly includes 'debt-like off-balance sheet commitments to lease or purchase AI infrastructure.' Euro-area entities' exposure to AI-related debt 'remains low for now'; main spillover channels in a shock would be falling equity valuations and contagion. No significant spillover from hyperscaler euro issuance to EU government funding costs so far."
-    },
-    {
-      "id": "openai-funding-reported",
-      "node": "OpenAI",
-      "type": "reported_funding",
-      "title": "Reported funding-round cut and first close (secondary)",
-      "as_of": "2026-11-06",
-      "tier_relevance": "On the exposure map since the 6 Nov baseline. Not re-verified from an issuer primary document.",
-      "tone": "neutral",
-      "tone_source": "derived",
-      "relationship": "Private-lab funding conditions feed offtake credibility at Oracle, CoreWeave and other suppliers. SoftBank is a disclosed investor (see SoftBank item, V).",
-      "counterparties": [
-        "SoftBank",
-        "Oracle",
-        "CoreWeave",
-        "Nvidia"
-      ],
-      "figures": [
-        {
-          "label": "Reported first close",
-          "value": "11 at 1.25tn valuation, up to 20tn target",
-          "unit": "USD billion / USD",
-          "quality": "U",
-          "note": "Bloomberg/Reuters, 6 Nov, as logged in later scans. Pre- vs post-money basis is unclear. Issuer primary not obtained."
-        },
-        {
-          "label": "Reported target cut",
-          "value": "~30 → ~20; valuation $1.4tn → $1.25tn",
-          "unit": "USD billion",
-          "quality": "U",
-          "note": "FT via Reuters, event ~30 Oct, published 31 Oct (updated 2 Nov). OpenAI had no comment in that report."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Reuters (FT report): OpenAI cuts funding target",
-          "url": "https://www.reuters.com/5f374b32b07b/business/openai-cuts-funding-target-by-10-billion-ft-reports-2026-10-31/",
-          "kind": "secondary"
-        }
-      ],
-      "notes": "Cash-burn and compute-commitment figures that appear only in paywalled FT/WSJ originals are not shown. Microsoft winding down older Oracle GPU rentals is secondary (Bloomberg via Reuters) and is parked, not used as a fresh stress print."
-    },
-    {
-      "id": "oracle-20bn",
-      "node": "Oracle",
-      "type": "debt_and_equity",
-      "title": "$20bn common stock and senior notes (priced 2 Nov, closed 4 Nov)",
-      "as_of": "2026-11-04",
-      "tier_relevance": "On the exposure map; not a new 11 Nov alert.",
-      "tone": "positive",
-      "tone_source": "derived",
-      "relationship": "Issuer financing of the AI build-out. Official OpenAI share of remaining performance obligations has not been published by Oracle in the sources used here.",
-      "counterparties": [
-        "OpenAI (reported customer concentration, not issuer-primary)"
-      ],
-      "figures": [
-        {
-          "label": "Common stock",
-          "value": 10,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Priced at $116 per share, per issuer IR."
-        },
-        {
-          "label": "Senior notes",
-          "value": 10,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Coupons 7.000% 2029, 7.450% 2031, 7.850% 2033, 8.000% 2037, 8.650% 2046."
-        },
-        {
-          "label": "Closing",
-          "value": "2026-11-04",
-          "unit": null,
-          "quality": "V",
-          "note": "Confirmed by SEC 8-K."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Oracle IR: pricing of $20bn common stock and senior notes",
-          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Pricing-of-20-Billion-of-Common-Stock-and-Senior-Notes/default.aspx",
-          "kind": "primary"
-        },
-        {
-          "title": "Oracle 8-K (closing)",
-          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526447507/d131790d8k.htm",
-          "kind": "primary"
-        },
-        {
-          "title": "Oracle 424B5",
-          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526445847/d181425d424b5.htm",
-          "kind": "primary"
-        }
-      ],
-      "notes": "Secondary figures for total debt, RPO and the claim that about half of RPO is OpenAI are not issuer-primary in the saved files and are not shown as facts here. Live CDS/yields are excluded (see excluded)."
-    },
-    {
-      "id": "bis-140",
-      "node": "Official",
-      "type": "official_flag",
-      "title": "BIS Bulletin 140: building AI on credit",
-      "as_of": "2026-10-27",
-      "tier_relevance": "Structural context.",
-      "tone": "neutral",
-      "tone_source": "derived",
-      "relationship": "Describes credit structures, vendor backstops, lease commitments and spillovers.",
-      "counterparties": [],
-      "figures": [
-        {
-          "label": "Five largest US hyperscalers, capex expected by end-2026",
-          "value": ">800",
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "About 2.5% of US GDP, per the bulletin."
-        },
-        {
-          "label": "Gross bond issuance by those hyperscalers to September 2026",
-          "value": 222,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Bonds/ABS linked to off-balance-sheet vehicles in 2026 so far (market sources, as cited)",
-          "value": "75–100",
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "V as a BIS document finding; the bulletin attributes this range to 'market sources'."
-        },
-        {
-          "label": "Hyperscaler data-centre lease commitments by mid-2026 (Moody's, as cited)",
-          "value": 1.2,
-          "unit": "USD trillion",
-          "quality": "V",
-          "note": "Of which about $820bn not yet started. V as a BIS citation; Moody's raw figures were not independently opened."
-        }
-      ],
-      "sources": [
-        {
-          "title": "BIS Bulletin 140 (PDF)",
-          "url": "https://www.bis.org/publications/bulletin-140-building-ai-credit-structures-and-spillovers.pdf",
-          "kind": "primary"
-        }
-      ],
-      "notes": "The bulletin says spillovers to US Treasury term premia and IG spreads on 2026 AI-financing news days were small and short-lived, and that sustained issuance could change that."
-    },
-    {
-      "id": "broadcom-backstop",
-      "node": "Broadcom",
-      "type": "guarantee",
-      "title": "Residual-value backstop for an AI-rack lease SPV",
-      "as_of": "2026-10-27",
-      "tier_relevance": "On the exposure map; not a new 11 Nov alert.",
-      "tone": "negative",
-      "tone_source": "derived",
-      "relationship": "Vendor residual-value support on leases, analogous in form (not in legal terms or caps) to Nvidia's disclosed capacity/guarantee structures. The 8-K does not name the customer.",
-      "counterparties": [
-        "Unnamed customer (secondary reports name Anthropic, U)"
-      ],
-      "figures": [
-        {
-          "label": "Maximum potential liability upon deployment, undiscounted",
-          "value": 43,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Equals the gap between 72.5% of outstanding lease amounts and value realized on sale of the racks, after a customer-lease default. Broadcom describes the probability as low."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Broadcom 8-K (earliest event 26 Oct 2026, signed 27 Oct)",
-          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm",
-          "kind": "primary"
-        }
-      ],
-      "notes": "Larger combined totals in secondary reports (e.g. 'up to $72bn') are not in the 8-K and remain U; they are not shown as facts."
-    },
-    {
-      "id": "bis-137",
-      "node": "Official",
-      "type": "official_flag",
-      "title": "BIS Bulletin 137: circular relationships among AI firms",
-      "as_of": "2026-10-01",
-      "tier_relevance": "Structural context. Not a current stress print and not a reason, on its own, to escalate a tier.",
-      "tone": "neutral",
-      "tone_source": "derived",
-      "relationship": "Documents overlap between financial and supplier-customer relationships among AI firms, 2021–2025.",
-      "counterparties": [],
-      "figures": [
-        {
-          "label": "Share of disclosed deal value with AI firms as investors that is AI→AI",
-          "value": 28.7,
-          "unit": "%",
-          "quality": "V",
-          "note": "Document finding. Underlying PitchBook/FactSet microdata were not independently replicated (U for the raw basis)."
-        },
-        {
-          "label": "Share of disclosed deal value with AI firms as targets that is AI→AI",
-          "value": 55.2,
-          "unit": "%",
-          "quality": "V",
-          "note": "Uses whole disclosed round values, not observed individual contributions by AI investors."
-        },
-        {
-          "label": "Share of AI→AI deals classified as circular (count)",
-          "value": 16.1,
-          "unit": "%",
-          "quality": "V"
-        },
-        {
-          "label": "Share of AI→AI disclosed deal value classified as circular",
-          "value": 46.4,
-          "unit": "%",
-          "quality": "V",
-          "note": "A relationship is 'circular' if, at any time in 2021–2025, the same pair also had a supplier-customer link. This is a relational classification, not proof of a closed cash loop on the same deal."
-        }
-      ],
-      "sources": [
-        {
-          "title": "BIS Bulletin 137 (PDF)",
-          "url": "https://www.bis.org/publications/bulletin-137-circular-relationships-among-ai-firms.pdf",
-          "kind": "primary"
-        },
-        {
-          "title": "BIS Bulletin 137 landing page",
-          "url": "https://www.bis.org/publications/bulletin-137-circular-relationships-among-ai-firms",
-          "kind": "primary"
-        }
-      ],
-      "notes": "Reviewed against the official PDF on 8 Nov 2026 09:08 Europe/Zurich. Views are the authors', not necessarily a BIS position."
-    },
-    {
-      "id": "nvidia-guarantees",
-      "node": "Nvidia",
-      "type": "guarantee",
-      "title": "SB Energy / OpenAI residual-value guarantees and other AI-cloud commitments (Q2 FY27 10-Q / 8-K)",
-      "as_of": "2026-07-26",
-      "tier_relevance": "On the exposure map; filings as of 26 Jul / 17 Aug 2026. Next 10-Q expected around 17 Nov (secondary timing).",
-      "tone": "negative",
-      "tone_source": "derived",
-      "relationship": "Nvidia provides residual-value credit support on SB Energy leases in Ohio where an OpenAI affiliate is the tenant, plus other AI-cloud offtake and lease commitments.",
-      "counterparties": [
-        "OpenAI",
-        "SB Energy"
-      ],
-      "figures": [
-        {
-          "label": "SB Energy guarantees, cap",
-          "value": 105,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "About 4.25 GW IT load at the PORTS Technology Campus, Pike County, Ohio. Triggered on certain tenant defaults (OpenAI insolvency resulting in a lease default, or failure to pay). First phases expected fiscal 2029; payment obligations expected to begin as sites become ready for service from 2028. OpenAI has agreed to reimburse and indemnify Nvidia for amounts actually paid."
-        },
-        {
-          "label": "Land / power / shell guarantees (AI clouds)",
-          "value": 3.5,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Total maximum guarantee gross exposure",
-          "value": 108.5,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "AI cloud agreements (capacity offtake)",
-          "value": 36,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Additional commitments table in the 10-Q. Nvidia may have to take capacity if third-party demand is not sold."
-        },
-        {
-          "label": "Third-party data-centre leases not commenced",
-          "value": 20,
-          "unit": "USD billion",
-          "quality": "V"
-        },
-        {
-          "label": "Supply and capacity commitments",
-          "value": 279,
-          "unit": "USD billion",
-          "quality": "V",
-          "note": "Was $119bn in the prior quarter, per the 10-Q."
-        },
-        {
-          "label": "Equity investment commitments",
-          "value": 25,
-          "unit": "USD billion",
-          "quality": "V"
-        }
-      ],
-      "sources": [
-        {
-          "title": "Nvidia 10-Q, quarter ended 26 Jul 2026",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
-          "kind": "primary"
-        },
-        {
-          "title": "Nvidia 8-K, 17 Aug 2026 (SB Energy / OpenAI guarantees)",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
-          "kind": "primary"
-        }
-      ],
-      "notes": "These caps are mostly contingent and not yet in force. They are not a present payment obligation and are not evidence of default. Analyst aggregations of these line items are licensed broker research and are not shown."
-    }
-  ],
-  "combined_links": [
-    {
-      "id": "volume-vs-financing",
-      "title": "Token volume is still rising; financing is the tighter constraint",
-      "text": "The 8 Nov token-demand pack shows OpenRouter's complete week of 26 Oct at a series high of 193.6T tokens (d) and Portkey tokens +15.3% week on week (d). The circular-financing scan's 11 Nov morning result is that the binding stress is funding conditions, not a measured drop in token use: CoreWeave said it does not intend to issue more parent-level unsecured debt at current yields (V), the 9 Nov bank-reluctance item remains unverified (U), and Oracle closed a $20bn equity-and-notes raise on 4 Nov (V)."
-    },
-    {
-      "id": "spend-lag",
-      "title": "Volume is outpacing spend and revenue per token",
-      "text": "Ramp Tokenomics: volume +37.1% vs spend +8.9% for the week to 23 Oct versus 25 Sep (V, table unchanged through 8 Nov). Portkey: tokens +15.3% vs cost +4.4% in the week of 1 Nov (d). In the Ramp TSM chart sample, volume +64.6% vs spend +1.5% since the week of 27 Jul (d, 18 Oct vintage). The same pressure shows up in Anthropic's unit economics: compute and infrastructure expense was $9.9bn on $17.0bn of Q3 revenue, 58.2% (d) versus 48% in Q2, from the 2 Nov S-1/A."
-    },
-    {
-      "id": "supplier-funding",
-      "title": "Suppliers are also financing their customers",
-      "text": "Anthropic's $26bn concurrent placement (V) is being bought by Google, Nvidia, AMD, Broadcom, Micron, Microsoft and TSMC — several of whom are also compute or component counterparties to ~$900.9bn of commitments (V). Nvidia's 10-Q caps SB Energy / OpenAI residual-value guarantees at $105bn (V, contingent, first phases fiscal 2029). SoftBank guarantees an SVF2 loan secured on OpenAI preferred shares (V), so a mark-down of OpenAI hits both SoftBank earnings and a liquidity clause. These structures can keep capex and measured token demand going even if outside funding tightens — and they can transmit a funding or valuation shock back through the same chain."
-    }
-  ],
-  "caveats": [
-    "12 Nov PM: share-price moves are intraday figures (U). NVDA's opening drop is conflicting (about −12% in the press versus −14.1% on Yahoo, U). At 16:18 CET Nvidia was about −6%, Nebius about −19% and CoreWeave about −8.8% (U). The implied Nvidia market-value loss is about $260–290bn (d), not a close. No dated CDS print after 10 Nov was obtained. A CoreWeave 2032 bond printed around 80.75 at 15:26 CET (TRACE, U). The 2027 Nebius slide conflict is resolved: $12–13bn is revenue and $17–20bn is prepayments (V). A reported OpenAI $15bn raise at a $1.25tn valuation is CNBC only (U) and is not independently confirmed. The independent check of this PM scan was completed around 16:25 CET.",
-    "V means a primary document was opened in the saved independent checks (SEC filings, issuer IR, official BIS/ECB PDFs). U is secondary, anonymous, undated or not independently confirmed. (d) is an arithmetic combination of stated figures.",
-    "No dated CoreWeave, Nvidia, Oracle or Nebius CDS print was obtained after 10 Nov. A CoreWeave 2032 bond printed around 80.75 at 15:26 CET on 12 Nov (TRACE, U). Conflicting or undated secondary credit-market prints from commercial terminals or broker-sourced media are excluded; they are treated as a data gap.",
-    "Debt totals depend on the definition (recourse vs non-recourse, whether leases are included). CoreWeave's $46.873bn is recourse + non-recourse only (d from V components).",
-    "CoreWeave's Q3 10-Q was filed on 12 Nov (accepted 13:20 CET). Customer concentration and debt figures above use that filing (V). The 10-Q discloses the 14 Aug adoption of the CEO's Rule 10b5-1 plan, not a cancellation; the reported cancellation remains CNBC only (U).",
-    "OpenAI funding size and valuation are still secondary. A 12 Nov CNBC report of a $15bn raise at a $1.25tn valuation has not been independently confirmed, and no issuer-primary confirmation was in the saved files.",
-    "BIS 137 percentages are document findings; the proprietary PitchBook/FactSet microdata were not replicated. 'Circular' there is a relational classification over 2021–2025, not proof of a closed cash loop on one deal.",
-    "Call quotes use the official CoreWeave IR transcript. Press paraphrases that say 'financing' instead of 'capital', or that collapse two different 75% denominators, are not used.",
-    "This page is a research compilation, not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich.",
-    "Saved review packs include screenshots of third-party documents or sites and charts built on credit-terminal or licensed prints; those images are not shown. Official-flag figures appear as a table.",
-    "Item tone (positive / neutral / negative) is a derived classification of circular-financing risk for this page (positive = de-risking or healthy financing; negative = rising circularity, stress or credit risk; neutral = mixed or informational). It is not a credit rating."
-  ],
-  "excluded": [
-    {
-      "item": "Broker and bank research forecasts and commentary",
-      "reason": "Excluded (licensed research)."
-    },
-    {
-      "item": "Credit-market prints from commercial terminals or broker-sourced media",
-      "reason": "Excluded; shown as a data gap, not as a current level."
-    },
-    {
-      "item": "Paywalled news originals",
-      "reason": "Excluded; only public relays are used, and those are marked U."
-    },
-    {
-      "item": "Secondary-cited official figures where the primary document could not be opened",
-      "reason": "Excluded."
-    },
-    {
-      "item": "Unverified author calculations and secondary market-colour prints",
-      "reason": "Excluded."
-    },
-    {
-      "item": "Internal working files",
-      "reason": "Not published."
-    },
-    {
-      "item": "Screenshots of third-party documents or sites",
-      "reason": "Not shown."
-    },
-    {
-      "item": "Charts built on credit-terminal or licensed market prints",
-      "reason": "Excluded."
-    }
+ "schema_version": "1.1",
+ "feed": "circular_financing",
+ "bot": {
+  "name": "AI Circular Financing Alert Bot",
+  "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
+ },
+ "as_of": "2026-11-13T05:39:00+01:00",
+ "timezone": "Europe/Zurich",
+ "title": "Circular Financing Watch, as of Thu 12 Nov 2026 ~16:45 Europe/Zurich",
+ "status": {
+  "current_user_alert": "Elevated: Nvidia (CEO resignation) + neoclouds (Nebius guidance, sector sell-off)",
+  "current_user_alert_as_of": "2026-11-12T16:45:00+01:00",
+  "summary": "No new user alert in the 13 Nov morning scan; the 12 Nov Elevated alert (Nvidia CEO resignation plus Nebius guidance slip) stands. New since then: Nebius interim financials show one customer holding 75% of receivables (V); a Fed Vice Chair speech put AI-related debt above $800bn this year with contingent obligations more than three times that (V); a DOJ antitrust probe of Nvidia is reported but unconfirmed (U). CoreWeave bonds firmed late on 12 Nov (TRACE, U); no publishable dated CDS print after 10 Nov.",
+  "last_scan": "2026-11-13T05:39:00+01:00",
+  "last_independent_check": "2026-11-13T05:38:00+01:00",
+  "outstanding_watches": [
+   {
+    "date": "2026-11-13",
+    "session": "AM",
+    "tier": "No new alert",
+    "node": "Nebius / Nvidia / official flags",
+    "headline": "Morning scan: no new verified Watch-or-higher signal. Nebius interim financials (V), the Fed Vice Chair's AI-debt flag (V) and a reported DOJ probe of Nvidia (U) were logged as map updates.",
+    "quality": "V/U",
+    "note": "Independently checked at about 05:38 CET. No publishable dated CDS print after 10 Nov; CoreWeave senior bonds closed 12 Nov higher than at midday (TRACE, U). Next: Nvidia Q3 FY27 results on 17 Nov, Anthropic IPO trading from 19 Nov ($70–78 range, unchanged), bids on the ING data-center loan package due 19 Nov.",
+    "tone": "neutral",
+    "tone_source": "bot"
+   },
+   {
+    "date": "2026-11-12",
+    "session": "PM",
+    "tier": "Elevated",
+    "node": "Nvidia / neoclouds (CoreWeave, Nebius)",
+    "headline": "Nvidia CEO resigned effective immediately (8-K); Nebius cut 2026 revenue to the low end of guidance, raised 2026 capex to about $27bn and moved its ARR target from $7–9bn in December to more than $7bn in February; Nvidia-backed neocloud equities sold off.",
+    "quality": "V",
+    "note": "The filings are V. Share moves are U (Yahoo and press figures as of 16:18 CET). Nvidia's opening drop is conflicting (about −12% in the press versus −14.1% on Yahoo, U). The implied Nvidia market-value loss is about $260–290bn (d). There is no dated CDS print after 10 Nov. A CoreWeave 2032 bond printed around 80.75 (TRACE, U). The independent check of the PM scan was completed around 16:25 CET.",
+    "tone": "negative",
+    "tone_source": "bot"
+   },
+   {
+    "date": "2026-11-12",
+    "session": "AM",
+    "tier": "Watch",
+    "node": "Lambda / Nvidia",
+    "headline": "Anthropic's ~$34.9bn Lambda compute agreement is currently terminable by either party (missed lease deadline); no notice given.",
+    "quality": "V",
+    "note": "Primary S-1/A2 vs S-1/A1 wording verified. The Nvidia leaseholder and investor role is unverified (U); the independent check is pending.",
+    "tone": "negative",
+    "tone_source": "derived"
+   },
+   {
+    "date": "2026-11-10",
+    "session": "PM",
+    "tier": "Watch",
+    "node": "Anthropic",
+    "headline": "Supplier equity placement funding a customer that has ~$900.9bn compute and infrastructure commitments to the same supplier set.",
+    "quality": "V",
+    "note": "Independently checked the same afternoon. IPO liquidity reduces near-term funding risk; this is a circularity-structure signal, not a default signal.",
+    "tone": "negative",
+    "tone_source": "derived"
+   },
+   {
+    "date": "2026-11-09",
+    "session": "PM",
+    "tier": "Watch (provisional)",
+    "node": "Lenders / neoclouds",
+    "headline": "Some banks reportedly reluctant to finance additional AI deals even with big-tech guarantees (Anthropic, Google named as backstops; lenders unnamed).",
+    "quality": "U",
+    "note": "Reuters via Investing.com, anonymous sources. No named lender withdrawal from a guaranteed deal was found in subsequent checks through 11 Nov morning.",
+    "tone": "negative",
+    "tone_source": "derived"
+   }
   ]
+ },
+ "summary": {
+  "text": "The 12 Nov Elevated alert still stands: Nvidia's 8-K says Jensen Huang resigned as CEO effective 11 Nov, with the CFO as interim CEO and results still due 17 Nov (V), and Nebius moved 2026 revenue to the low end of $3.0–3.4bn and pushed its ARR target to February (V). Nebius's interim financials, filed after the 12 Nov close, show unnamed customers at 33%, 22% and 15% of Q3 revenue, one customer holding 75% of $4.04bn of receivables (up from $0.72bn at end-2025), and debt of about $14.2bn versus about $4.1bn at end-2025 (V, sums (d)); the filing shows no Nvidia or Microsoft guarantee or backstop. A Federal Reserve Vice Chair for Supervision said on 10 Nov that AI-related debt is on track to exceed $800bn this year and that lease, contract and residual-value obligations are more than three times that, describing 'the appearance of circular financing' (V). On 12 Nov Nvidia closed 4.3% lower, Nebius 16.8% lower and CoreWeave 6.9% lower, while CoreWeave's 2032 bond recovered to about 82 by the evening (U); a DOJ antitrust probe focused on Nvidia was reported by one outlet with no company or DOJ confirmation (U). A reported OpenAI raise of $15bn at a $1.25tn valuation has not closed and conflicts with talk of a larger round (U), and no publishable dated CDS print after 10 Nov was available.",
+  "as_of": "2026-11-13T05:39:00+01:00",
+  "source": "AI Alert morning scan 13 Nov 2026 (~05:30–05:39 Europe/Zurich), independently checked ~05:38 Europe/Zurich; SEC EDGAR filings, BIS-hosted Fed speech text, public news relays"
+ },
+ "items": [
+  {
+   "id": "nebius-q3-interim-financials",
+   "node": "Nebius / neoclouds",
+   "type": "filing",
+   "title": "Nebius Q3 interim financial statements: three customers carry most revenue, one customer holds 75% of receivables",
+   "as_of": "2026-11-12",
+   "event_time": "2026-11-12T22:10:13+01:00",
+   "tier_relevance": "Below a new Watch on its own. Adds filing detail to the neocloud node already in the 12 Nov Elevated alert.",
+   "tone": "neutral",
+   "tone_source": "bot",
+   "relationship": "Customer concentration and receivables at an Nvidia-backed neocloud. The filing explains the deferred-revenue rise as prepayments received for future services but does not explain the receivables jump; billed but unpaid amounts would fit, but that is an inference. Debt more than tripled in nine months, mainly through convertible notes and a covenanted term loan.",
+   "counterparties": [
+    "Nvidia",
+    "unnamed customers C, D and E"
+   ],
+   "figures": [
+    {
+     "label": "Q3 2026 revenue share, customers E / D / C",
+     "value": "33% / 22% / 15%",
+     "unit": "% of revenue",
+     "quality": "V",
+     "note": "Customers are not named in the filing."
+    },
+    {
+     "label": "Customer D share of accounts receivable, 30 Sep 2026",
+     "value": "75%",
+     "unit": "% of AR",
+     "quality": "V",
+     "note": "Customer E holds 10%."
+    },
+    {
+     "label": "Accounts receivable, net",
+     "value": "4.04 (31 Dec 2025: 0.72)",
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Deferred revenue, current + non-current",
+     "value": 9.41,
+     "unit": "USD billion",
+     "quality": "(d)",
+     "note": "1.4455 + 7.9637 from the balance sheet (V)."
+    },
+    {
+     "label": "Debt, current + non-current",
+     "value": 14.19,
+     "unit": "USD billion",
+     "quality": "(d)",
+     "note": "0.1875 + 14.0033 (V); 31 Dec 2025: about 4.13 (d)."
+    },
+    {
+     "label": "Term loan covenant",
+     "value": "debt service coverage at least 1.15x plus minimum liquidity; compliant at 30 Sep",
+     "unit": null,
+     "quality": "V"
+    },
+    {
+     "label": "Nvidia pre-funded warrants (11 Mar 2026)",
+     "value": 2.0,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "21.07m Class A shares; supplier equity in a customer."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Nebius 6-K, 12 Nov 2026 (Ex. 99.1 operating and financial review)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126238/nbis-ex99d1.htm",
+     "kind": "primary"
+    },
+    {
+     "title": "Nebius 6-K, 12 Nov 2026 (Ex. 99.2 interim financial statements)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126238/nbis-ex99d2.htm",
+     "kind": "primary"
+    }
+   ],
+   "notes": "Filed after the US close on 12 Nov (22:10 CET); independently checked on 13 Nov. The filing does not name customers C, D or E, and it shows no Nvidia or Microsoft guarantee or capacity backstop (the guarantees it mentions are from parents of unconsolidated data-center entities)."
+  },
+  {
+   "id": "nvidia-doj-probe-report",
+   "node": "Nvidia",
+   "type": "reported_regulatory",
+   "title": "Reported DOJ antitrust probe focused on Nvidia (Semafor, unconfirmed)",
+   "as_of": "2026-11-12",
+   "event_time": "2026-11-12T17:12:12+01:00",
+   "tier_relevance": "Below Watch on its own: one outlet, two anonymous officials, no company or DOJ confirmation. Context for the Nvidia node in the 12 Nov Elevated alert.",
+   "tone": "negative",
+   "tone_source": "bot",
+   "relationship": "Nvidia is the main supplier-financier in the loop (equity stakes, lease guarantees, capacity backstops). Regulatory pressure on top of the CEO change adds governance uncertainty around those ecosystem commitments. No Nvidia filing addresses it.",
+   "counterparties": [
+    "Nvidia",
+    "Supermicro",
+    "Megaspeed"
+   ],
+   "figures": [
+    {
+     "label": "DOJ inquiries reported",
+     "value": "3 (1 antitrust probe focused on Nvidia; 2 on Megaspeed and Supermicro)",
+     "unit": null,
+     "quality": "U",
+     "note": "Semafor, first published 12 Nov 17:12 CET and updated 20:12 CET, citing two administration officials; the report says there is no indication of criminal charges against Nvidia or Huang at this time."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Semafor, 12 Nov 2026",
+     "url": "https://www.semafor.com/article/11/12/2026/us-doj-probes-nvidia",
+     "kind": "secondary"
+    }
+   ],
+   "notes": "Nvidia and the DOJ did not comment to Semafor. The independent check found no Nvidia statement, no DOJ statement and no Nvidia EDGAR filing after the 12 Nov 8-K (as of about 05:38 CET on 13 Nov)."
+  },
+  {
+   "id": "openai-raise-reported-15bn",
+   "node": "OpenAI",
+   "type": "reported_funding",
+   "title": "Reported $15bn raise at a $1.25tn valuation (CNBC, unconfirmed)",
+   "as_of": "2026-11-12",
+   "event_time": "2026-11-12T15:50:00+01:00",
+   "tier_relevance": "Below Watch on its own. Unconfirmed secondary report; not used to change the 12 Nov Elevated tier.",
+   "tone": "neutral",
+   "tone_source": "bot",
+   "relationship": "If confirmed, this would add private-lab funding at the previously reported $1.25tn valuation, which feeds offtake credibility at Oracle, CoreWeave and other suppliers. It has not been confirmed from an issuer primary document or from an opened CNBC original.",
+   "counterparties": [
+    "SoftBank",
+    "Oracle",
+    "CoreWeave",
+    "Nvidia"
+   ],
+   "figures": [
+    {
+     "label": "Reported raise and valuation",
+     "value": "15 at 1.25tn valuation",
+     "unit": "USD billion / USD",
+     "quality": "U",
+     "note": "CNBC, 12 Nov, about 15:50 CET; relayed by Benzinga at 20:08 CET. The round has not formally closed and is reported to finish within weeks. Earlier secondary reports: an $11bn first close at the same valuation (6 Nov) and an original ask of up to $30bn at $1.4tn. Not independently confirmed."
+    },
+    {
+     "label": "Conflicting report on round size",
+     "value": "UAE funds incl. MGX (up to $10bn combined) and BlackRock in talks on a '$30bn round'",
+     "unit": null,
+     "quality": "U",
+     "note": "GMT Eight, 13 Nov, anonymous sources. Conflicts with the $15bn figure; the independent check could not find it on the outlet's front page. No OpenAI or investor primary confirmation of any size."
+    }
+   ],
+   "sources": [
+    {
+     "title": "CNBC, 12 Nov 2026 (report not independently opened)",
+     "kind": "secondary"
+    },
+    {
+     "title": "Benzinga relay of CNBC, 12 Nov 2026",
+     "url": "https://www.benzinga.com/markets/private-markets/26/11/63213967/openai-raises-15b-at-1-25t-valuation-in-latest-funding-round-amid-ipo-plans",
+     "kind": "secondary"
+    },
+    {
+     "title": "GMT Eight, 13 Nov 2026",
+     "url": "https://www.gmt8press.com/flash/detail/1542540",
+     "kind": "secondary"
+    }
+   ],
+   "notes": "Unconfirmed and partly conflicting. Not used to tighten or ease the 12 Nov Elevated alert."
+  },
+  {
+   "id": "nebius-q3",
+   "node": "Nebius / neoclouds",
+   "type": "earnings",
+   "title": "Nebius Q3 2026: revenue up, 2026 at the low end, ARR target moved out",
+   "as_of": "2026-11-12",
+   "event_time": "2026-11-12T15:22:11+01:00",
+   "tier_relevance": "Part of the 12 Nov Elevated alert (neocloud node).",
+   "tone": "negative",
+   "tone_source": "bot",
+   "relationship": "Nvidia-backed neocloud. Revenue and capacity timing slipped (Microsoft New Jersey tranches moved to 2Q27). Mitigant: prepayments covered over 100% of capex on Q3 deals.",
+   "counterparties": [
+    "Nvidia",
+    "Microsoft",
+    "Meta"
+   ],
+   "figures": [
+    {
+     "label": "Q3 revenue",
+     "value": 0.981,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Q3 capex (purchases of PP&E)",
+     "value": 7.3,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Cash capex in the quarter, not the PP&E stock (which was $19.34bn)."
+    },
+    {
+     "label": "Q3 operating cash flow (continuing ops)",
+     "value": -0.273,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "2026 revenue guide",
+     "value": "low end of 3.0–3.4",
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "2026 capex guide",
+     "value": "about 27",
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Raised above the prior $20–25bn range."
+    },
+    {
+     "label": "ARR target",
+     "value": "exceed $7bn in February 2027 (was $7–9bn in December 2026)",
+     "unit": null,
+     "quality": "V"
+    },
+    {
+     "label": "2027 initial outlook",
+     "value": "revenue 12–13, capex 40–45",
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Confirmed in the shareholder-letter text and the slides (V). The $17–20bn slide figure is 2027 customer-prepayment expectations, not revenue."
+    },
+    {
+     "label": "Cash at quarter-end",
+     "value": 7.4,
+     "unit": "USD billion",
+     "quality": "V"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Nebius 6-K Ex. 99.1",
+     "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-1.htm",
+     "kind": "primary"
+    },
+    {
+     "title": "Nebius shareholder letter (Ex. 99.2)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-2.htm",
+     "kind": "primary"
+    }
+   ],
+   "notes": "NBIS closed at $128.64, −16.84%, on 12 Nov (Motley Fool quote, U)."
+  },
+  {
+   "id": "nvidia-ceo-resignation",
+   "node": "Nvidia",
+   "type": "governance_event",
+   "title": "CEO Jensen Huang resigns; CFO Colette Kress interim CEO (8-K Item 5.02)",
+   "as_of": "2026-11-12",
+   "event_time": "2026-11-12T14:52:41+01:00",
+   "tier_relevance": "Elevated (with the Nebius / neocloud signal). This is a supplier-node shock, not a credit event.",
+   "tone": "negative",
+   "tone_source": "bot",
+   "relationship": "Nvidia is the main supplier-financier in the loop: it holds equity stakes in labs and neoclouds, AI-cloud capacity agreements, and lease guarantees. A leadership vacuum raises uncertainty over how those commitments are managed. The board says customer commitments continue without interruption.",
+   "counterparties": [
+    "OpenAI",
+    "Anthropic",
+    "CoreWeave",
+    "Nebius",
+    "Lambda"
+   ],
+   "figures": [
+    {
+     "label": "Resignation effective",
+     "value": "11 Nov 2026 (board acceptance)",
+     "unit": null,
+     "quality": "V",
+     "note": "Kress stays CFO while serving as interim CEO; Harvey C. Jones is the first board chair; Q3 FY27 results still 17 Nov."
+    },
+    {
+     "label": "Equity investments (26 Jul 2026)",
+     "value": 99,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Plus $25bn of equity investment commitments (Q2 FY27 10-Q)."
+    },
+    {
+     "label": "AI-cloud land/power/shell guarantees, maximum gross exposure",
+     "value": 3.5,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Q2 FY27 10-Q."
+    },
+    {
+     "label": "NVDA share move, 12 Nov 16:18 CET",
+     "value": "about −6 ($163.31)",
+     "unit": "%",
+     "quality": "U",
+     "note": "Yahoo (U). The opening drop is conflicting: about −12% in the press versus −14.1% ($149.29) on Yahoo (U). Earlier prints near $161.76 were about −7%."
+    },
+    {
+     "label": "Implied NVDA market-value move, 12 Nov session",
+     "value": "about 260–290",
+     "unit": "USD billion",
+     "quality": "(d)",
+     "note": "Derived from unverified intraday prices, not a close."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Nvidia 8-K, acc. 0001045810-26-000082",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm",
+     "kind": "primary"
+    },
+    {
+     "title": "Nvidia press release (Ex. 99.1)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+     "kind": "primary"
+    },
+    {
+     "title": "Nvidia Q2 FY27 10-Q",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+     "kind": "primary"
+    },
+    {
+     "title": "Reuters via Investing.com, 12 Nov",
+     "url": "https://www.investing.com/news/stock-market-news/nvidia-ceo-jensen-huang-to-step-down-in-big-blow-to-ai-boom-5021980",
+     "kind": "secondary"
+    },
+    {
+     "title": "Yahoo Finance quote, NVDA, 12 Nov 16:18 CET",
+     "url": "https://finance.yahoo.com/quote/NVDA/",
+     "kind": "secondary"
+    }
+   ],
+   "notes": "The filing gives no reason. Press reports link the resignation to personal-conduct reports and an internal investigation (U). The 8-K and press release say nothing about changes to investment or guarantee commitments. 12 Nov close: NVDA $166.19, −4.34%, after falling as much as 16% intraday (Nasdaq data and NBC, U)."
+  },
+  {
+   "id": "coreweave-10q-q3",
+   "node": "CoreWeave",
+   "type": "filing",
+   "title": "Q3 2026 10-Q: customer concentration and debt maturities",
+   "as_of": "2026-11-12",
+   "event_time": "2026-11-12T13:20:41+01:00",
+   "tier_relevance": "Below Watch on its own. Concentration fell versus Q2.",
+   "tone": "neutral",
+   "tone_source": "bot",
+   "relationship": "Neocloud node. The top-customer share fell; heavy 2027 maturities remain. CRWV was about −8.8% at 16:18 CET on 12 Nov after the Nvidia news (U).",
+   "counterparties": [
+    "OpenAI",
+    "Microsoft",
+    "Meta",
+    "Nvidia"
+   ],
+   "figures": [
+    {
+     "label": "Top two customers, share of Q3 revenue",
+     "value": "30 / 24",
+     "unit": "%",
+     "quality": "V",
+     "note": "Q2: 36 / 26 / 10."
+    },
+    {
+     "label": "Total debt principal (30 Sep 2026)",
+     "value": 47.505,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Principal due 2027",
+     "value": 10.974,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Committed contracts, share of revenue",
+     "value": 98,
+     "unit": "%",
+     "quality": "V"
+    },
+    {
+     "label": "CoreWeave 2032 bond, 12 Nov 15:26 CET",
+     "value": "around 80.75",
+     "unit": "price",
+     "quality": "U",
+     "note": "TRACE, U. Not a dated CDS print; no CDS confirmation after 10 Nov."
+    }
+   ],
+   "sources": [
+    {
+     "title": "CoreWeave 10-Q Q3 2026, acc. 0001769628-26-000465",
+     "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+     "kind": "primary"
+    }
+   ],
+   "notes": "Covenants were in compliance at 30 Sep. An Nvidia capacity backstop was not found by keyword search (a negative finding, not proof of absence). The 10-Q discloses only the 14 Aug adoption of CEO Michael Intrator's Rule 10b5-1 plan (estimated gross proceeds $325m personally plus $175m via Omnadora; window 14 Nov 2026–31 Mar 2027) (V). A reported cancellation of that plan rests on CNBC (U) and is not in this filing."
+  },
+  {
+   "id": "coreweave-post-earnings-reaction",
+   "node": "CoreWeave / neoclouds",
+   "type": "market_reaction",
+   "title": "Neocloud equities rally after CoreWeave Q3 and financing plan",
+   "as_of": "2026-11-11",
+   "event_time": "2026-11-11T16:17:00+01:00",
+   "tier_relevance": "Below Watch. De-risking reaction; no dated post-earnings CDS or bond print obtained.",
+   "tone": "positive",
+   "tone_source": "derived",
+   "relationship": "Equity market response at the neocloud node of the OpenAI / Microsoft / Nvidia loop; CoreWeave plans a contract-backed, investment-grade-rated loan instead of parent-level unsecured debt.",
+   "counterparties": [
+    "Nebius",
+    "IREN",
+    "Nvidia",
+    "Microsoft",
+    "OpenAI"
+   ],
+   "figures": [
+    {
+     "label": "CoreWeave share price vs 10 Nov close, 11 Nov 16:17 Europe/Zurich",
+     "value": "+19.9",
+     "unit": "%",
+     "quality": "U",
+     "note": "Yahoo 5-min chart, $58.41 vs $48.73 (% derived); intraday high +21.2%. Nebius +14.9% at the same time."
+    },
+    {
+     "label": "Planned IG-rated contract-backed delayed-draw loan, yield talk",
+     "value": "7–7.5",
+     "unit": "%",
+     "quality": "V",
+     "note": "Q3 call transcript: launch 'in the coming weeks', >90% of capex; no amount, banks or customer named; not yet closed."
+    }
+   ],
+   "links": [
+    "https://www.cnbc.com/2026/11/11/coreweave-crwv-outlook-earnings-ai.html",
+    "https://thenextweb.com/news/coreweave-forecast-q3-2026-revenue-unsecured-debt"
+   ]
+  },
+  {
+   "id": "coreweave-q3",
+   "node": "CoreWeave",
+   "type": "earnings",
+   "title": "Q3 2026 results (8-K Exhibit 99.1)",
+   "as_of": "2026-11-10",
+   "event_time": "2026-11-10T22:05:53+01:00",
+   "tier_relevance": "Below new-Watch threshold (11 Nov morning). Stress elements are continuations, not a new node signal. No post-earnings CDS or bond print was obtained.",
+   "tone": "neutral",
+   "tone_source": "derived",
+   "relationship": "Neocloud node in the OpenAI / Microsoft / Nvidia financing loop. Q3 10-Q (customer concentration, Nvidia arrangements) had not been filed as of 11 Nov 07:50 Europe/Zurich.",
+   "counterparties": [
+    "OpenAI",
+    "Microsoft",
+    "Nvidia",
+    "Meta"
+   ],
+   "figures": [
+    {
+     "label": "Revenue",
+     "value": 3.661,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Q3 2025: $1.365bn."
+    },
+    {
+     "label": "GAAP operating income",
+     "value": 0.207,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Interest expense, net",
+     "value": 0.846,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Net loss",
+     "value": 0.709,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Adjusted operating income",
+     "value": 0.379,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Interest / GAAP operating income",
+     "value": 4.1,
+     "unit": "×",
+     "quality": "(d)"
+    },
+    {
+     "label": "Interest / adjusted operating income",
+     "value": 2.2,
+     "unit": "×",
+     "quality": "(d)"
+    },
+    {
+     "label": "Q4 interest expense guide",
+     "value": "1.05–1.15",
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Debt (recourse + non-recourse)",
+     "value": 46.873,
+     "unit": "USD billion",
+     "quality": "(d)",
+     "note": "Components V: recourse $9.183bn current + $32.417bn non-current; non-recourse $1.389bn + $3.884bn. Excludes operating leases $18.697bn (d from V components) and finance leases. 31 Dec 2025 debt was $21.4bn."
+    },
+    {
+     "label": "Operating-lease liabilities",
+     "value": 18.697,
+     "unit": "USD billion",
+     "quality": "(d)",
+     "note": "668 + 18,029, from the 8-K balance sheet (V components)."
+    },
+    {
+     "label": "Equity",
+     "value": 4.025,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Cash",
+     "value": 4.122,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Plus restricted cash, current, $1.405bn."
+    },
+    {
+     "label": "Operating cash flow",
+     "value": 1.975,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Purchases of PP&E (cash)",
+     "value": 9.441,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "The $14.5bn 'capex' figure in the earnings presentation is a different definition (additions including finance leases, net of CIP changes) and is also V from the deck, not a contradiction."
+    },
+    {
+     "label": "Revenue backlog",
+     "value": 132.5,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Approximately; 30 Sep 2026. June was $104.2bn. Footnote: RPO plus further amounts from committed contracts, subject to delivery."
+    },
+    {
+     "label": "FY26 revenue guide",
+     "value": "13.0–13.3",
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "FY26 capex guide",
+     "value": "37–39",
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Expected customer prepayments/deposits in next 3 months",
+     "value": 9,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Issuer quote in Exhibit 99.1 / call."
+    },
+    {
+     "label": "Weighted average cost of debt (Q3-end)",
+     "value": 7.9,
+     "unit": "%",
+     "quality": "V",
+     "note": "IR transcript."
+    },
+    {
+     "label": "Parent-level unsecured debt through 2027",
+     "value": "no additional issuance at current yields",
+     "unit": null,
+     "quality": "V",
+     "note": "CFO, official IR transcript p. 6: 'at current yields, we do not intend to issue additional parent-level unsecured debt through 2027.' Condition is part of the statement."
+    },
+    {
+     "label": "Incremental parent-level capital through 2027",
+     "value": "<5",
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "CFO, transcript p. 7: wording is 'capital', not 'financing' or 'debt'. Equity, converts and ATM are not excluded."
+    }
+   ],
+   "sources": [
+    {
+     "title": "CoreWeave 8-K Exhibit 99.1, acc. 0001769628-26-000461",
+     "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm",
+     "kind": "primary"
+    },
+    {
+     "title": "CoreWeave 3Q26 official transcript",
+     "url": "https://investors.coreweave.com/files/content_files/CoreWeave-3Q26-Transcript-_1_.pdf",
+     "kind": "primary"
+    },
+    {
+     "title": "CoreWeave 3Q26 earnings presentation",
+     "url": "https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-3Q26-Earnings-Presentation-Final.pdf",
+     "kind": "primary"
+    },
+    {
+     "title": "CoreWeave Q2 2026 10-Q (last filed quarterly report)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm",
+     "kind": "primary"
+    }
+   ],
+   "notes": "Q3 10-Q was not on EDGAR as of 11 Nov 07:50 Europe/Zurich. Statutory deadline for a non-accelerated filer is 16 Nov 2026 (d). Last filed customer-concentration figures are therefore still Q2: customers A/B/C 36% / 26% / 10% of Q2 revenue (anonymised; 'other significant customers include Microsoft and OpenAI'). A keyword search of the Q2 10-Q did not find an Nvidia residual capacity backstop; that is a negative finding, not a proof of absence. 'More than 75% of committed capex tied to IG/enterprise customers' is an issuer self-classification with two different denominators in the CEO and CFO remarks, and is not independently confirmed."
+  },
+  {
+   "id": "fed-bowman-ai-debt",
+   "node": "Macro / official flags",
+   "type": "official_flag",
+   "title": "Fed Vice Chair for Supervision: AI-related debt on track to exceed $800bn this year; contingent obligations more than three times that",
+   "as_of": "2026-11-10",
+   "event_time": "2026-11-10T18:00:00+01:00",
+   "tier_relevance": "Official flag; logged on the exposure map, not a stress event and not alerted on its own.",
+   "tone": "negative",
+   "tone_source": "bot",
+   "relationship": "Official description of the loop: hyperscalers and large tech firms take off-balance-sheet liabilities that smaller, riskier firms use as collateral, and hyperscalers and chip designers buy equity in smaller companies that purchase their products, 'creating the appearance of circular financing'. Bank exposure is covered in supervisory stress tests.",
+   "counterparties": [
+    "Hyperscalers",
+    "chip designers",
+    "neoclouds",
+    "US banks",
+    "insurers",
+    "private credit"
+   ],
+   "figures": [
+    {
+     "label": "AI-related debt (corporate bonds, private credit, project finance), 2026",
+     "value": "more than 800",
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "'on track to exceed $800 billion this year'."
+    },
+    {
+     "label": "Lease, contract commitments and residual value guarantees, potential payments",
+     "value": "more than 3x the debt",
+     "unit": "multiple",
+     "quality": "V",
+     "note": "Implies more than about $2.4tn (d)."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Bowman, 'The US economy and considerations for monetary policy', Council on Foreign Relations, 10 Nov 2026 (BIS central bankers' speeches, posted 12 Nov)",
+     "url": "https://www.bis.org/speeches/20261112-us-economy-and-considerations-monetary-policy",
+     "kind": "primary"
+    }
+   ],
+   "notes": "Event time is approximate (afternoon speech, Washington DC). Most exposed entities are described as well capitalised with stable funding; the speech flags that complex structures make counterparty risk hard to assess."
+  },
+  {
+   "id": "lambda-termination-right",
+   "node": "Lambda / Nvidia (Anthropic contract)",
+   "type": "contract_contingency",
+   "title": "Anthropic's ~$34.9bn Lambda compute agreement is now terminable by either party",
+   "as_of": "2026-11-10",
+   "event_time": "2026-11-10T12:29:24+01:00",
+   "tier_relevance": "Watch (12 Nov morning scan). Single node; no credit-market confirmation (Lambda is private).",
+   "tone": "negative",
+   "tone_source": "derived",
+   "relationship": "Nvidia-backed neocloud Lambda would supply Nvidia-GPU capacity to Anthropic. Lambda missed a facility-lease deadline, which gives either party a termination right. Nvidia is reportedly a Lambda investor and the site leaseholder (U). Timing of the missed lease deadline is not disclosed; the change in wording between S-1/A1 (2 Nov) and S-1/A2 (10 Nov) does not prove it occurred in that window.",
+   "counterparties": [
+    "Anthropic",
+    "Lambda",
+    "Nvidia",
+    "Hut 8"
+   ],
+   "figures": [
+    {
+     "label": "Lambda Agreements, aggregate commitment through 2034",
+     "value": 41.3,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "S-1/A2; fees accrue only as capacity is delivered and accepted."
+    },
+    {
+     "label": "August 2026 agreement, currently terminable by either party",
+     "value": 34.9,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "S-1/A2: no notice given, and Anthropic does 'not currently intend to terminate'. In S-1/A1 (2 Nov) this was only a contingency. Equals 84.5% of the Lambda total and ~3.9% of $900.9bn total commitments (d)."
+    },
+    {
+     "label": "Hut 8 Beacon Point leases (2 × 352 MW, 15 years, one unnamed AA- or better tenant)",
+     "value": 704,
+     "unit": "MW",
+     "quality": "V",
+     "note": "Hut 8 disclosure: ~$19.6bn total; ~350 MW is phase 1 only. Link to the Lambda/Anthropic contract is not in the S-1; Nvidia as tenant only per WSJ/Reuters (U). Nvidia 10-Q shows unnamed 15-year leases >$20bn it expects to reassign and guarantees up to $3.5bn (V), not attributed to a site."
+    }
+   ],
+   "links": [
+    "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
+    "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+    "https://www.datacenterdynamics.com/en/news/anthropic-signs-another-43bn-in-compute-agreements-with-microsoft/"
+   ]
+  },
+  {
+   "id": "anthropic-s1a2",
+   "node": "Anthropic",
+   "type": "equity_placement",
+   "title": "S-1/A Amendment 2: IPO range and $26bn concurrent supplier placement",
+   "as_of": "2026-11-10",
+   "event_time": "2026-11-10T12:29:00+01:00",
+   "tier_relevance": "Watch (10 Nov PM)",
+   "tone": "negative",
+   "tone_source": "derived",
+   "relationship": "Compute and chip suppliers commit to buy $26bn of Class N stock at the IPO price, while Anthropic has large committed spend with the same group.",
+   "counterparties": [
+    "Google",
+    "Nvidia",
+    "AMD",
+    "Broadcom",
+    "Micron",
+    "Microsoft",
+    "TSMC"
+   ],
+   "figures": [
+    {
+     "label": "IPO range",
+     "value": "70–78",
+     "unit": "USD/share",
+     "quality": "V"
+    },
+    {
+     "label": "Class A shares offered",
+     "value": 825000000,
+     "unit": "shares",
+     "quality": "V",
+     "note": "801,351,354 primary + 23,648,646 secondary; greenshoe 123,750,000."
+    },
+    {
+     "label": "Concurrent Class N placement",
+     "value": 26.0,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Google $10.0bn, Nvidia $10.0bn, AMD $2.5bn, Broadcom $1.0bn, Micron $1.0bn, Microsoft $1.0bn, TSMC $0.5bn, at an assumed $74 IPO price."
+    },
+    {
+     "label": "Net proceeds IPO + placement at $74",
+     "value": 84.6,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "About $93.7bn if the greenshoe is exercised in full. Placement is ~30.7% of $84.6bn (d)."
+    },
+    {
+     "label": "Shares outstanding after offering + placement (all classes)",
+     "value": 13086672593,
+     "unit": "shares",
+     "quality": "V",
+     "note": "Basic implied equity value (d): ~$916bn / $968bn / $1,021bn at $70 / $74 / $78. This is not a fully diluted figure; the prospectus excludes options, unvested RSUs, plan reserves, donation matching and Amazon rollover notes."
+    },
+    {
+     "label": "Compute and infrastructure commitments (A2)",
+     "value": 900.9,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Up from $895.4bn in Amendment 1 (+$5.5bn). Of which $451.6bn expected by end-2031 and $70.7bn in the next 12 months. Cancellable/conditional commitments $186.2bn."
+    },
+    {
+     "label": "Microsoft Azure commitment (A2)",
+     "value": "≥47.2, up to 49.2",
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Nov 2026–Jun 2033. Was at least $44.9bn in Amendment 1."
+    },
+    {
+     "label": "Total indebtedness at 30 Sep 2026",
+     "value": 6.2,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Q3 revenue",
+     "value": 17.0,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Confirmed in S-1/A2. Compute and infrastructure expense $9.9bn was taken from the 2 Nov S-1/A (see token-demand feed)."
+    },
+    {
+     "label": "Series H post-money (28 May 2026)",
+     "value": 965,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Issuer press release, not restated as a valuation in the S-1/A itself."
+    },
+    {
+     "label": "Illustrative fully diluted equity at $78",
+     "value": 1404.4,
+     "unit": "USD billion",
+     "quality": "(d)",
+     "note": "One reconstruction of 18,004,734,037 shares × $78 matches a TechCrunch $1.404tn figure. The prospectus does not define 'fully diluted' market cap. Basis is not unique."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Anthropic S-1/A Amendment 2",
+     "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm",
+     "kind": "primary"
+    },
+    {
+     "title": "Anthropic S-1/A Amendment 1 (2 Nov)",
+     "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+     "kind": "primary"
+    },
+    {
+     "title": "Anthropic Series H announcement",
+     "url": "https://www.anthropic.com/news/series-h",
+     "kind": "primary"
+    },
+    {
+     "title": "Anthropic roadshow launch",
+     "url": "https://www.anthropic.com/news/roadshow-launch",
+     "kind": "primary"
+    }
+   ],
+   "notes": "Placement closes immediately after the IPO and is contingent on IPO closing, stockholder approval and no court block; the IPO itself is not contingent on the placement. Automatic termination includes failure to sign the underwriting agreement by 31 Jan 2027. Google's $10bn purchase reduces the Google 2026 NPA from $20bn to $10bn on close (V). Individual supplier commitments from Amendment 1 (Amazon ≥$110bn, Google CSP ≥~$121.3bn, SpaceXAI up to $120.5bn, Broadcom leases ~$161.2bn rent, Broadcom-related convertible note capacity up to $42bn) were recorded as V on 8 Nov; only the aggregate, Microsoft line and cancellable totals were re-stated as changed in the 10 Nov Amendment 2 check."
+  },
+  {
+   "id": "softbank-q2",
+   "node": "SoftBank Group",
+   "type": "earnings",
+   "title": "Q2 FY2026 results, LTV/NAV, and OpenAI-linked financing",
+   "as_of": "2026-11-10",
+   "tier_relevance": "Morning pending item closed on 10 Nov PM; below Watch on its own. Links SoftBank liquidity to OpenAI's valuation via a guaranteed share-backed loan.",
+   "tone": "negative",
+   "tone_source": "derived",
+   "relationship": "SoftBank is an OpenAI investor; a $10bn SVF2 share-backed loan is guaranteed by SBG and can require early repayment or cash collateral if OpenAI preferred-share value falls significantly.",
+   "counterparties": [
+    "OpenAI",
+    "Arm"
+   ],
+   "figures": [
+    {
+     "label": "Q2 net loss attributable to owners",
+     "value": 1115.3,
+     "unit": "JPY billion",
+     "quality": "V"
+    },
+    {
+     "label": "H1 net loss attributable to owners",
+     "value": 768.0,
+     "unit": "JPY billion",
+     "quality": "V"
+    },
+    {
+     "label": "Charge on US power-equipment procurement reset",
+     "value": 597.2,
+     "unit": "JPY billion",
+     "quality": "V",
+     "note": "Includes PORTS / Pike County, Ohio (SB7). Rebate rights of up to $2.1bn over 10 years were not activated (amount not determinable)."
+    },
+    {
+     "label": "LTV at 30 Sep 2026",
+     "value": 15.9,
+     "unit": "%",
+     "quality": "V",
+     "note": "13.0% in June, 17.0% in March. Policy remains <25% in normal conditions."
+    },
+    {
+     "label": "NAV at 30 Sep 2026",
+     "value": 59.8,
+     "unit": "JPY trillion",
+     "quality": "V"
+    },
+    {
+     "label": "Pro forma NAV (9 Nov prices for Arm, SBKK, Intel)",
+     "value": 44.7,
+     "unit": "JPY trillion",
+     "quality": "V"
+    },
+    {
+     "label": "Net debt at 30 Sep 2026",
+     "value": 11.3,
+     "unit": "JPY trillion",
+     "quality": "V",
+     "note": "Issuer figure, about $72bn at the presentation FX."
+    },
+    {
+     "label": "Illustrative pro forma LTV if net debt unchanged",
+     "value": 20.2,
+     "unit": "%",
+     "quality": "(d)",
+     "note": "11.30 / 56.0 equity value of holdings. SoftBank does not publish a pro forma LTV. Assumes unchanged net debt and ignores the FX difference."
+    },
+    {
+     "label": "OpenAI cumulative investment / fair value at 30 Sep",
+     "value": "54.6 / 99.6",
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Valuation unchanged vs 31 Mar 2026. The 30 Sep balance-sheet date is before the reported 6 Nov first close; the report does not reference a $1.25tn price."
+    },
+    {
+     "label": "OpenAI third tranche (1 Oct 2026)",
+     "value": 10,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Cumulative investment $64.6bn, about 13%, per the financial report."
+    },
+    {
+     "label": "SVF2 OpenAI share-backed loan, SBG-guaranteed",
+     "value": 1543.7,
+     "unit": "JPY billion",
+     "quality": "V",
+     "note": "$10bn facility, Aug 2026. Cash-collateral and mandatory prepayment clauses may be triggered by a significant fall in the fair value of OpenAI preferred shares held by SVF2. Thresholds not disclosed. From the Sep-30 LTV definition this guaranteed loan is included in net debt (a methodology change vs June/March definitions)."
+    },
+    {
+     "label": "Arm-share margin loan (Kronos I)",
+     "value": 3896.9,
+     "unit": "JPY billion",
+     "quality": "V",
+     "note": "Secured by 769,029,000 Arm shares; maturity extended to Sep 2028; non-recourse to SBG; cash-collateral and prepayment clauses may be triggered by a significant fall in the pledged Arm shares."
+    }
+   ],
+   "sources": [
+    {
+     "title": "SoftBank IR presentations",
+     "url": "https://group.softbank/en/ir/presentations",
+     "kind": "primary"
+    },
+    {
+     "title": "SoftBank Q2 FY2026 financial report",
+     "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q2fy2026_01_en.pdf",
+     "kind": "primary"
+    },
+    {
+     "title": "SoftBank Q2 FY2026 earnings datasheet",
+     "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/earnings-datasheet_q2fy2026_02.pdf",
+     "kind": "primary"
+    }
+   ],
+   "notes": "The financial report is 'not subject to interim review' and the English translation is for reference. OpenAI first-close size and $1.25tn valuation remain secondary (Bloomberg/Reuters, U) and are listed separately."
+  },
+  {
+   "id": "banks-reluctance",
+   "node": "Lenders",
+   "type": "reported_credit",
+   "title": "Reported bank reluctance to fund additional guaranteed AI deals",
+   "as_of": "2026-11-09",
+   "tier_relevance": "Provisional Watch, 9 Nov PM. Still unverified through the 11 Nov morning check.",
+   "tone": "negative",
+   "tone_source": "derived",
+   "relationship": "If accurate, weakens the guarantee / residual-backstop channel that funds neocloud capex.",
+   "counterparties": [
+    "Anthropic (named as a backstop, declined comment)",
+    "Google (named as a backstop, declined comment)"
+   ],
+   "figures": [],
+   "sources": [
+    {
+     "title": "Reuters via Investing.com, 9 Nov 2026",
+     "url": "https://www.investing.com/news/stock-market-news/banks-investors-grow-wary-of-ai-debt-spooked-by-marketselloff-5011246",
+     "kind": "secondary"
+    },
+    {
+     "title": "CNBC on ING data-centre loan BWIC, 6 Nov 2026",
+     "url": "https://www.cnbc.com/2026/11/06/ing-ai-data-center-loans-debt.html",
+     "kind": "secondary"
+    }
+   ],
+   "notes": "Lenders are unnamed. No named withdrawal from a guaranteed deal was found through 11 Nov 07:50 Europe/Zurich. A reported loan sale/distribution in secondary media (U) is not a documented pullback from a guarantee. A paywalled news original naming lenders was not readable and is not used."
+  },
+  {
+   "id": "ecb-lagarde",
+   "node": "Official",
+   "type": "official_flag",
+   "title": "ECB letter on circular financing in the AI ecosystem",
+   "as_of": "2026-11-06",
+   "tier_relevance": "Official qualitative flag. No new quantified euro-area exposures.",
+   "tone": "neutral",
+   "tone_source": "derived",
+   "relationship": "Flags interlinked ownership and mutual commitments, and debt-like off-balance-sheet lease or purchase commitments.",
+   "counterparties": [],
+   "figures": [],
+   "sources": [
+    {
+     "title": "Lagarde letter to MEPs Heinäluoma and Fernández, 6 Nov 2026, L/CL/26/245",
+     "url": "https://www.ecb.europa.eu/pub/pdf/other/ecb.mepletter261106_Heinaluoma_Fernandez~6e406be51f.en.pdf",
+     "kind": "primary"
+    }
+   ],
+   "notes": "States that rising debt levels are 'compounded by circular financing arrangements in the form of interlinked ownership structures and mutual commitments between firms in the AI ecosystem,' and that debt financing increasingly includes 'debt-like off-balance sheet commitments to lease or purchase AI infrastructure.' Euro-area entities' exposure to AI-related debt 'remains low for now'; main spillover channels in a shock would be falling equity valuations and contagion. No significant spillover from hyperscaler euro issuance to EU government funding costs so far."
+  },
+  {
+   "id": "openai-funding-reported",
+   "node": "OpenAI",
+   "type": "reported_funding",
+   "title": "Reported funding-round cut and first close (secondary)",
+   "as_of": "2026-11-06",
+   "tier_relevance": "On the exposure map since the 6 Nov baseline. Not re-verified from an issuer primary document.",
+   "tone": "neutral",
+   "tone_source": "derived",
+   "relationship": "Private-lab funding conditions feed offtake credibility at Oracle, CoreWeave and other suppliers. SoftBank is a disclosed investor (see SoftBank item, V).",
+   "counterparties": [
+    "SoftBank",
+    "Oracle",
+    "CoreWeave",
+    "Nvidia"
+   ],
+   "figures": [
+    {
+     "label": "Reported first close",
+     "value": "11 at 1.25tn valuation, up to 20tn target",
+     "unit": "USD billion / USD",
+     "quality": "U",
+     "note": "Bloomberg/Reuters, 6 Nov, as logged in later scans. Pre- vs post-money basis is unclear. Issuer primary not obtained."
+    },
+    {
+     "label": "Reported target cut",
+     "value": "~30 → ~20; valuation $1.4tn → $1.25tn",
+     "unit": "USD billion",
+     "quality": "U",
+     "note": "FT via Reuters, event ~30 Oct, published 31 Oct (updated 2 Nov). OpenAI had no comment in that report."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Reuters (FT report): OpenAI cuts funding target",
+     "url": "https://www.reuters.com/5f374b32b07b/business/openai-cuts-funding-target-by-10-billion-ft-reports-2026-10-31/",
+     "kind": "secondary"
+    }
+   ],
+   "notes": "Cash-burn and compute-commitment figures that appear only in paywalled FT/WSJ originals are not shown. Microsoft winding down older Oracle GPU rentals is secondary (Bloomberg via Reuters) and is parked, not used as a fresh stress print."
+  },
+  {
+   "id": "oracle-20bn",
+   "node": "Oracle",
+   "type": "debt_and_equity",
+   "title": "$20bn common stock and senior notes (priced 2 Nov, closed 4 Nov)",
+   "as_of": "2026-11-04",
+   "tier_relevance": "On the exposure map; not a new 11 Nov alert.",
+   "tone": "positive",
+   "tone_source": "derived",
+   "relationship": "Issuer financing of the AI build-out. Official OpenAI share of remaining performance obligations has not been published by Oracle in the sources used here.",
+   "counterparties": [
+    "OpenAI (reported customer concentration, not issuer-primary)"
+   ],
+   "figures": [
+    {
+     "label": "Common stock",
+     "value": 10,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Priced at $116 per share, per issuer IR."
+    },
+    {
+     "label": "Senior notes",
+     "value": 10,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Coupons 7.000% 2029, 7.450% 2031, 7.850% 2033, 8.000% 2037, 8.650% 2046."
+    },
+    {
+     "label": "Closing",
+     "value": "2026-11-04",
+     "unit": null,
+     "quality": "V",
+     "note": "Confirmed by SEC 8-K."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Oracle IR: pricing of $20bn common stock and senior notes",
+     "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Pricing-of-20-Billion-of-Common-Stock-and-Senior-Notes/default.aspx",
+     "kind": "primary"
+    },
+    {
+     "title": "Oracle 8-K (closing)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526447507/d131790d8k.htm",
+     "kind": "primary"
+    },
+    {
+     "title": "Oracle 424B5",
+     "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526445847/d181425d424b5.htm",
+     "kind": "primary"
+    }
+   ],
+   "notes": "Secondary figures for total debt, RPO and the claim that about half of RPO is OpenAI are not issuer-primary in the saved files and are not shown as facts here. Live CDS/yields are excluded (see excluded)."
+  },
+  {
+   "id": "bis-140",
+   "node": "Official",
+   "type": "official_flag",
+   "title": "BIS Bulletin 140: building AI on credit",
+   "as_of": "2026-10-27",
+   "tier_relevance": "Structural context.",
+   "tone": "neutral",
+   "tone_source": "derived",
+   "relationship": "Describes credit structures, vendor backstops, lease commitments and spillovers.",
+   "counterparties": [],
+   "figures": [
+    {
+     "label": "Five largest US hyperscalers, capex expected by end-2026",
+     "value": ">800",
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "About 2.5% of US GDP, per the bulletin."
+    },
+    {
+     "label": "Gross bond issuance by those hyperscalers to September 2026",
+     "value": 222,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Bonds/ABS linked to off-balance-sheet vehicles in 2026 so far (market sources, as cited)",
+     "value": "75–100",
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "V as a BIS document finding; the bulletin attributes this range to 'market sources'."
+    },
+    {
+     "label": "Hyperscaler data-centre lease commitments by mid-2026 (Moody's, as cited)",
+     "value": 1.2,
+     "unit": "USD trillion",
+     "quality": "V",
+     "note": "Of which about $820bn not yet started. V as a BIS citation; Moody's raw figures were not independently opened."
+    }
+   ],
+   "sources": [
+    {
+     "title": "BIS Bulletin 140 (PDF)",
+     "url": "https://www.bis.org/publications/bulletin-140-building-ai-credit-structures-and-spillovers.pdf",
+     "kind": "primary"
+    }
+   ],
+   "notes": "The bulletin says spillovers to US Treasury term premia and IG spreads on 2026 AI-financing news days were small and short-lived, and that sustained issuance could change that."
+  },
+  {
+   "id": "broadcom-backstop",
+   "node": "Broadcom",
+   "type": "guarantee",
+   "title": "Residual-value backstop for an AI-rack lease SPV",
+   "as_of": "2026-10-27",
+   "tier_relevance": "On the exposure map; not a new 11 Nov alert.",
+   "tone": "negative",
+   "tone_source": "derived",
+   "relationship": "Vendor residual-value support on leases, analogous in form (not in legal terms or caps) to Nvidia's disclosed capacity/guarantee structures. The 8-K does not name the customer.",
+   "counterparties": [
+    "Unnamed customer (secondary reports name Anthropic, U)"
+   ],
+   "figures": [
+    {
+     "label": "Maximum potential liability upon deployment, undiscounted",
+     "value": 43,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Equals the gap between 72.5% of outstanding lease amounts and value realized on sale of the racks, after a customer-lease default. Broadcom describes the probability as low."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Broadcom 8-K (earliest event 26 Oct 2026, signed 27 Oct)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526434271/d148323d8k.htm",
+     "kind": "primary"
+    }
+   ],
+   "notes": "Larger combined totals in secondary reports (e.g. 'up to $72bn') are not in the 8-K and remain U; they are not shown as facts."
+  },
+  {
+   "id": "bis-137",
+   "node": "Official",
+   "type": "official_flag",
+   "title": "BIS Bulletin 137: circular relationships among AI firms",
+   "as_of": "2026-10-01",
+   "tier_relevance": "Structural context. Not a current stress print and not a reason, on its own, to escalate a tier.",
+   "tone": "neutral",
+   "tone_source": "derived",
+   "relationship": "Documents overlap between financial and supplier-customer relationships among AI firms, 2021–2025.",
+   "counterparties": [],
+   "figures": [
+    {
+     "label": "Share of disclosed deal value with AI firms as investors that is AI→AI",
+     "value": 28.7,
+     "unit": "%",
+     "quality": "V",
+     "note": "Document finding. Underlying PitchBook/FactSet microdata were not independently replicated (U for the raw basis)."
+    },
+    {
+     "label": "Share of disclosed deal value with AI firms as targets that is AI→AI",
+     "value": 55.2,
+     "unit": "%",
+     "quality": "V",
+     "note": "Uses whole disclosed round values, not observed individual contributions by AI investors."
+    },
+    {
+     "label": "Share of AI→AI deals classified as circular (count)",
+     "value": 16.1,
+     "unit": "%",
+     "quality": "V"
+    },
+    {
+     "label": "Share of AI→AI disclosed deal value classified as circular",
+     "value": 46.4,
+     "unit": "%",
+     "quality": "V",
+     "note": "A relationship is 'circular' if, at any time in 2021–2025, the same pair also had a supplier-customer link. This is a relational classification, not proof of a closed cash loop on the same deal."
+    }
+   ],
+   "sources": [
+    {
+     "title": "BIS Bulletin 137 (PDF)",
+     "url": "https://www.bis.org/publications/bulletin-137-circular-relationships-among-ai-firms.pdf",
+     "kind": "primary"
+    },
+    {
+     "title": "BIS Bulletin 137 landing page",
+     "url": "https://www.bis.org/publications/bulletin-137-circular-relationships-among-ai-firms",
+     "kind": "primary"
+    }
+   ],
+   "notes": "Reviewed against the official PDF on 8 Nov 2026 09:08 Europe/Zurich. Views are the authors', not necessarily a BIS position."
+  },
+  {
+   "id": "nvidia-guarantees",
+   "node": "Nvidia",
+   "type": "guarantee",
+   "title": "SB Energy / OpenAI residual-value guarantees and other AI-cloud commitments (Q2 FY27 10-Q / 8-K)",
+   "as_of": "2026-07-26",
+   "tier_relevance": "On the exposure map; filings as of 26 Jul / 17 Aug 2026. Next 10-Q expected around 17 Nov (secondary timing).",
+   "tone": "negative",
+   "tone_source": "derived",
+   "relationship": "Nvidia provides residual-value credit support on SB Energy leases in Ohio where an OpenAI affiliate is the tenant, plus other AI-cloud offtake and lease commitments.",
+   "counterparties": [
+    "OpenAI",
+    "SB Energy"
+   ],
+   "figures": [
+    {
+     "label": "SB Energy guarantees, cap",
+     "value": 105,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "About 4.25 GW IT load at the PORTS Technology Campus, Pike County, Ohio. Triggered on certain tenant defaults (OpenAI insolvency resulting in a lease default, or failure to pay). First phases expected fiscal 2029; payment obligations expected to begin as sites become ready for service from 2028. OpenAI has agreed to reimburse and indemnify Nvidia for amounts actually paid."
+    },
+    {
+     "label": "Land / power / shell guarantees (AI clouds)",
+     "value": 3.5,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Total maximum guarantee gross exposure",
+     "value": 108.5,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "AI cloud agreements (capacity offtake)",
+     "value": 36,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Additional commitments table in the 10-Q. Nvidia may have to take capacity if third-party demand is not sold."
+    },
+    {
+     "label": "Third-party data-centre leases not commenced",
+     "value": 20,
+     "unit": "USD billion",
+     "quality": "V"
+    },
+    {
+     "label": "Supply and capacity commitments",
+     "value": 279,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Was $119bn in the prior quarter, per the 10-Q."
+    },
+    {
+     "label": "Equity investment commitments",
+     "value": 25,
+     "unit": "USD billion",
+     "quality": "V"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Nvidia 10-Q, quarter ended 26 Jul 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+     "kind": "primary"
+    },
+    {
+     "title": "Nvidia 8-K, 17 Aug 2026 (SB Energy / OpenAI guarantees)",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
+     "kind": "primary"
+    }
+   ],
+   "notes": "These caps are mostly contingent and not yet in force. They are not a present payment obligation and are not evidence of default. Analyst aggregations of these line items are licensed broker research and are not shown."
+  }
+ ],
+ "combined_links": [
+  {
+   "id": "volume-vs-financing",
+   "title": "Token volume is still rising; financing is the tighter constraint",
+   "text": "The 8 Nov token-demand pack shows OpenRouter's complete week of 26 Oct at a series high of 193.6T tokens (d) and Portkey tokens +15.3% week on week (d). The circular-financing scan's 11 Nov morning result is that the binding stress is funding conditions, not a measured drop in token use: CoreWeave said it does not intend to issue more parent-level unsecured debt at current yields (V), the 9 Nov bank-reluctance item remains unverified (U), and Oracle closed a $20bn equity-and-notes raise on 4 Nov (V)."
+  },
+  {
+   "id": "spend-lag",
+   "title": "Volume is outpacing spend and revenue per token",
+   "text": "Ramp Tokenomics: volume +37.1% vs spend +8.9% for the week to 23 Oct versus 25 Sep (V, table unchanged through 8 Nov). Portkey: tokens +15.3% vs cost +4.4% in the week of 1 Nov (d). In the Ramp TSM chart sample, volume +64.6% vs spend +1.5% since the week of 27 Jul (d, 18 Oct vintage). The same pressure shows up in Anthropic's unit economics: compute and infrastructure expense was $9.9bn on $17.0bn of Q3 revenue, 58.2% (d) versus 48% in Q2, from the 2 Nov S-1/A."
+  },
+  {
+   "id": "supplier-funding",
+   "title": "Suppliers are also financing their customers",
+   "text": "Anthropic's $26bn concurrent placement (V) is being bought by Google, Nvidia, AMD, Broadcom, Micron, Microsoft and TSMC — several of whom are also compute or component counterparties to ~$900.9bn of commitments (V). Nvidia's 10-Q caps SB Energy / OpenAI residual-value guarantees at $105bn (V, contingent, first phases fiscal 2029). SoftBank guarantees an SVF2 loan secured on OpenAI preferred shares (V), so a mark-down of OpenAI hits both SoftBank earnings and a liquidity clause. These structures can keep capex and measured token demand going even if outside funding tightens — and they can transmit a funding or valuation shock back through the same chain."
+  }
+ ],
+ "caveats": [
+  "12–13 Nov: 12 Nov closes (NVDA $166.19, −4.34%; NBIS $128.64, −16.84%; CRWV $56.60, −6.86%; ORCL $127.11, −0.99%) are from exchange data APIs and news quotes (U). No publishable dated CDS print after 10 Nov. CoreWeave's 2032 bond printed around 80.75 at 15:26 CET and about 82 at 22:15 CET on 12 Nov (TRACE, U). The reported DOJ antitrust probe of Nvidia is single-source (U). OpenAI round size is conflicting ($15bn per CNBC versus talk of a $30bn round, both U, no primary confirmation). Nebius customers C, D and E are unnamed in the filing; mapping them to Microsoft, Meta or others would be speculation, and the filing does not explain the receivables jump.",
+  "V means a primary document was opened in the saved independent checks (SEC filings, issuer IR, official BIS/ECB PDFs). U is secondary, anonymous, undated or not independently confirmed. (d) is an arithmetic combination of stated figures.",
+  "No dated CoreWeave, Nvidia, Oracle or Nebius CDS print was obtained after 10 Nov. A CoreWeave 2032 bond printed around 80.75 at 15:26 CET on 12 Nov (TRACE, U). Conflicting or undated secondary credit-market prints from commercial terminals or broker-sourced media are excluded; they are treated as a data gap.",
+  "Debt totals depend on the definition (recourse vs non-recourse, whether leases are included). CoreWeave's $46.873bn is recourse + non-recourse only (d from V components).",
+  "CoreWeave's Q3 10-Q was filed on 12 Nov (accepted 13:20 CET). Customer concentration and debt figures above use that filing (V). The 10-Q discloses the 14 Aug adoption of the CEO's Rule 10b5-1 plan, not a cancellation; the reported cancellation remains CNBC only (U).",
+  "OpenAI funding size and valuation are still secondary. A 12 Nov CNBC report of a $15bn raise at a $1.25tn valuation has not been independently confirmed, and no issuer-primary confirmation was in the saved files.",
+  "BIS 137 percentages are document findings; the proprietary PitchBook/FactSet microdata were not replicated. 'Circular' there is a relational classification over 2021–2025, not proof of a closed cash loop on one deal.",
+  "Call quotes use the official CoreWeave IR transcript. Press paraphrases that say 'financing' instead of 'capital', or that collapse two different 75% denominators, are not used.",
+  "This page is a research compilation, not an investment recommendation, a credit rating or a trading signal. Times are Europe/Zurich.",
+  "Saved review packs include screenshots of third-party documents or sites and charts built on credit-terminal or licensed prints; those images are not shown. Official-flag figures appear as a table.",
+  "Item tone (positive / neutral / negative) is a derived classification of circular-financing risk for this page (positive = de-risking or healthy financing; negative = rising circularity, stress or credit risk; neutral = mixed or informational). It is not a credit rating."
+ ],
+ "excluded": [
+  {
+   "item": "Broker and bank research forecasts and commentary",
+   "reason": "Excluded (licensed research)."
+  },
+  {
+   "item": "Credit-market prints from commercial terminals or broker-sourced media",
+   "reason": "Excluded; shown as a data gap, not as a current level."
+  },
+  {
+   "item": "Paywalled news originals",
+   "reason": "Excluded; only public relays are used, and those are marked U."
+  },
+  {
+   "item": "Secondary-cited official figures where the primary document could not be opened",
+   "reason": "Excluded."
+  },
+  {
+   "item": "Unverified author calculations and secondary market-colour prints",
+   "reason": "Excluded."
+  },
+  {
+   "item": "Internal working files",
+   "reason": "Not published."
+  },
+  {
+   "item": "Screenshots of third-party documents or sites",
+   "reason": "Not shown."
+  },
+  {
+   "item": "Charts built on credit-terminal or licensed market prints",
+   "reason": "Excluded."
+  }
+ ]
 }
