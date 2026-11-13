@@ -21,8 +21,8 @@
   "freshness": {
     "status": "stale",
     "dot": "amber",
-    "label": "Stand: 8 Nov 2026, 09:00 — several days old",
-    "banner": "<b>Stand: 8 Nov 2026, 09:00 Europe/Zurich.</b> This page has not been updated since then. Q3 and September GDP were scheduled for 12 Nov, 08:00 CET; labour-market data are due 17 Nov and October CPI on 18 Nov."
+    "label": "Stand: 8 Nov 2026, 09:00 — several days old · Data refreshed 2026-11-12, commentary as of 8 Nov 2026, 09:00 Europe/Zurich",
+    "banner": "<b>Stand: 8 Nov 2026, 09:00 Europe/Zurich.</b> This page has not been updated since then. Q3 and September GDP were scheduled for 12 Nov, 08:00 CET; labour-market data are due 17 Nov and October CPI on 18 Nov. <b>Data refreshed 2026-11-12, commentary as of 8 Nov 2026, 09:00 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged."
   },
   "summary": {
     "heading": "Current state (as of 8 Nov — not updated for later releases)",
@@ -224,6 +224,22 @@
   "recent_note": "ONS CPI is shown through September 2026 and labour-market unemployment through June–August 2026. Bank of England Decision Maker Panel data run through October 2026 (published 30 Oct). Private business-survey flash readings mentioned in the report are omitted from this public page.",
   "recent_data": [
     {
+      "release": "Q3 GDP, q/q — ONS (IHYQ, dataset PN2)",
+      "date": "30 Sep 2026 (published 12 Nov 2026)",
+      "quality": "V",
+      "actual": "0.7% q/q in Q3 2026.",
+      "prior": "Q2 0.5% q/q (IHYQ).",
+      "why": "Official first quarterly estimate, published 12 November 2026. The 8 Nov staff nowcast of 0.6% q/q is unchanged on this page and is not replaced by the official print."
+    },
+    {
+      "release": "Monthly GDP, m/m — ONS (ECYX, dataset MGDP)",
+      "date": "1 Sep 2026 (published 12 Nov 2026)",
+      "quality": "V",
+      "actual": "0.2% m/m in September 2026.",
+      "prior": "August 0.1% m/m, as used on 8 Nov.",
+      "why": "Official September monthly GDP, published 12 November 2026. The 8 Nov staff nowcast of −0.2% m/m is unchanged on this page and is not replaced by the official print."
+    },
+    {
       "release": "CPI y/y — ONS (D7G7)",
       "date": "September 2026 (published 21 Oct 2026)",
       "quality": "V",
@@ -362,5 +378,11 @@
     "No approved desk baseline; incomplete demand-side nowcast in this test report.",
     "A structured latest-data surprises table was only partially available from the saved report; the rows above are observed points that could be confirmed, not a reconstructed surprises table.",
     "No inflation nowcast-versus-actual backtest has been produced by the BoE Staff Desk."
-  ]
+  ],
+  "data_refresh": {
+    "data_as_of": "2026-11-12",
+    "commentary_as_of": "8 Nov 2026, 09:00 Europe/Zurich",
+    "stamp": "Data refreshed 2026-11-12, commentary as of 8 Nov 2026, 09:00 Europe/Zurich",
+    "latest": "IHYQ Q3 0.7 (vintage 2026-11-12, date 2026-09-30); ECYX Sep 0.2 (vintage 2026-11-12, date 2026-09-01)"
+  }
 }

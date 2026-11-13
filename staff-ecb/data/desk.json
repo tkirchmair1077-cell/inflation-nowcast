@@ -21,8 +21,8 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Current — note 12 Nov, 07:50; data cut-off 11 Nov, 17:55",
-    "banner": null
+    "label": "Current — note 12 Nov, 07:50; data cut-off 11 Nov, 17:55 · Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:50 Europe/Zurich",
+    "banner": "<b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:50 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged."
   },
   "summary": {
     "heading": "Current state",
@@ -438,9 +438,9 @@
     "No unemployment nowcast is in the 12 Nov note; labour is represented by the wage tracker and CES."
   ],
   "leading_indicators": {
-    "hint": "Staff charts and staff reads. As of 12 Nov 2026, 18:41 Europe/Zurich. Source: leading_indicators_2026-11-12.md. Public sources only. Staff view, not ECB staff projections.",
-    "as_of": "2026-11-12T18:41:00+01:00",
-    "as_of_display": "12 Nov 2026, 18:41 Europe/Zurich",
+    "hint": "Staff charts and staff reads. As of 2026-11-13 07:03:13 Europe/Zurich. Source: leading_indicators_ea tidy (Research Manager). Public sources only. Staff view, not ECB staff projections.",
+    "as_of": "2026-11-13T07:03:17+01:00",
+    "as_of_display": "2026-11-13 07:03:13 Europe/Zurich",
     "source": "leading_indicators_2026-11-12.md",
     "note": "Staff view, not ECB staff projections. Computed figures are (d) and pseudo-real-time (final vintages, not a real-time vintage panel). October 2026 HICP is the flash; the final is due on 18 November. A recession probit of the AAA 10y–3m spread versus CEPR dates is not yet tested (n/a).",
     "blocks": [
@@ -550,5 +550,11 @@
         ]
       }
     ]
+  },
+  "data_refresh": {
+    "data_as_of": "2026-11-13",
+    "commentary_as_of": "12 Nov 2026, 07:50 Europe/Zurich",
+    "stamp": "Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:50 Europe/Zurich",
+    "latest": "ECB public leading charts redrawn 2026-11-13 07:03:13 Europe/Zurich"
   }
 }
