@@ -21,8 +21,8 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Current — checked 12 Nov, 07:40",
-    "banner": null
+    "label": "Current — checked 12 Nov, 07:40 · Data refreshed 2026-11-10, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
+    "banner": "<b>Data refreshed 2026-11-10, commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged. <b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged."
   },
   "summary": {
     "heading": "Current state",
@@ -454,9 +454,9 @@
     "The inflation-nowcast model backtest on this page is dated 6 Nov 2026 and does not include the October CPI (released 10 Nov)."
   ],
   "leading_indicators": {
-    "hint": "Staff charts and staff reads versus the 6 Nov baseline. As of 12 Nov 2026, 17:24 Europe/Zurich. Source: leading_indicators_2026-11-12.md. Public sources only.",
-    "as_of": "2026-11-12T17:24:00+01:00",
-    "as_of_display": "12 Nov 2026, 17:24 Europe/Zurich",
+    "hint": "Staff charts and staff reads versus the 6 Nov baseline. As of 2026-11-13 07:05:52 Europe/Zurich. Source: leading_indicators tidy (Research Manager). Public sources only.",
+    "as_of": "2026-11-13T07:05:58+01:00",
+    "as_of_display": "2026-11-13 07:05:52 Europe/Zurich",
     "source": "leading_indicators_2026-11-12.md",
     "blocks": [
       {
@@ -501,6 +501,26 @@
             "title": "ECI private-industry wages and salaries y/y vs core PCE (quarterly)",
             "caption": "Source: U.S. Bureau of Labor Statistics, Employment Cost Index: Wages and Salaries: Private Industry Workers [ECIWAG], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/ECIWAG, 12 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source. Core PCE / core CPI: BEA / BLS via FRED. ECI y/y and the quarterly mean of monthly PCE/CPI y/y are staff constructions (d).",
             "companion": true
+          },
+          {
+            "file": "charts/leading_median_cpi.png",
+            "title": "Cleveland Fed median CPI, year-over-year",
+            "caption": "Source: Federal Reserve Bank of Cleveland, via FRED. Licensed CC BY-SA 4.0; derived chart shared under the same licence Shown without endorsement by the Federal Reserve Bank of Cleveland. The Federal Reserve Bank of Cleveland does not endorse this page or its conclusions. Any conclusions drawn here are the author's own and are not to be attributed to the Bank or the Federal Reserve System. Year-over-year series via FRED [MEDCPIM159SFRBCLE]. This chart shows the 12-month (y/y) series only; monthly annualized figures are not shown. Core PCE y/y is a staff construction (d)."
+          },
+          {
+            "file": "charts/leading_trimmed_mean_cpi.png",
+            "title": "Cleveland Fed 16% trimmed-mean CPI, year-over-year",
+            "caption": "Source: Federal Reserve Bank of Cleveland, via FRED. Licensed CC BY-SA 4.0; derived chart shared under the same licence Shown without endorsement by the Federal Reserve Bank of Cleveland. The Federal Reserve Bank of Cleveland does not endorse this page or its conclusions. Any conclusions drawn here are the author's own and are not to be attributed to the Bank or the Federal Reserve System. Year-over-year series via FRED [TRMMEANCPIM159SFRBCLE]. This chart shows the 12-month (y/y) series only; monthly annualized figures are not shown. Core PCE y/y is a staff construction (d)."
+          },
+          {
+            "file": "charts/leading_dallas_trimmed_pce.png",
+            "title": "Dallas Fed trimmed-mean PCE, 12-month (one month behind)",
+            "caption": "Source: Federal Reserve Bank of Dallas. Shown without endorsement by the Federal Reserve Bank of Dallas. The Federal Reserve Bank of Dallas does not endorse this page or its conclusions. Any conclusions drawn here are the author's own and are not to be attributed to the Bank or the Federal Reserve System. Official page: https://www.dallasfed.org/research/pce. One month behind (latest is Sep 2026; next update 25 Nov 2026). This chart shows the 12-month series only; monthly annualized figures are not shown. Core PCE y/y is a staff construction (d)."
+          },
+          {
+            "file": "charts/leading_sticky_cpi.png",
+            "title": "Atlanta Fed sticky-price core CPI, year-over-year",
+            "caption": "Source: Federal Reserve Bank of Atlanta. Shown without endorsement by the Federal Reserve Bank of Atlanta. The Federal Reserve Bank of Atlanta does not endorse this page or its conclusions. Any conclusions drawn here are the author's own and are not to be attributed to the Bank or the Federal Reserve System. Official page: https://www.atlantafed.org/research-and-data/data/sticky-price-cpi. Core Sticky CPI (ex food and energy), 12-month. This chart shows the 12-month series only; monthly annualized figures are not shown. Core PCE y/y is a staff construction (d)."
           }
         ]
       },
@@ -561,7 +581,7 @@
     ]
   },
   "ust10y_decomposition": {
-    "hint": "H.15 and NY Fed ACM through 10 November 2026; Board Kim-Wright through 6 November 2026. Source: ust10y_decomposition_charts_2026-11-12.md. Fetched 13 Nov 2026, 06:47 Europe/Zurich, after the 12 November 22:15 H.15 slot.",
+    "hint": "H.15 and NY Fed ACM through 10 Nov 2026; Board Kim-Wright through 6 Nov 2026. Source: Research Manager ust10y tidy. Fetched 13 Nov 2026, 06:47 Europe/Zurich.",
     "as_of": "2026-11-10",
     "as_of_display": "H.15 and ACM 10 Nov 2026; Kim-Wright 6 Nov 2026",
     "source": "ust10y_decomposition_charts_2026-11-12.md",
@@ -641,5 +661,11 @@
         ]
       }
     ]
+  },
+  "data_refresh": {
+    "data_as_of": "2026-11-13",
+    "commentary_as_of": "12 Nov 2026, 07:40 Europe/Zurich",
+    "stamp": "Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
+    "latest": "leading charts redrawn 2026-11-13 07:05:52 Europe/Zurich"
   }
 }
