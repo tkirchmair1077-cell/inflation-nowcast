@@ -21,8 +21,8 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Current — checked 12 Nov, 07:40 · Data refreshed 2026-11-10, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
-    "banner": "<b>Data refreshed 2026-11-10, commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged. <b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged."
+    "label": "Current — checked 12 Nov, 07:40 · Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
+    "banner": "<b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged. Leading-indicator charts redrawn 13 Nov 2026, 07:05:52 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026."
   },
   "summary": {
     "heading": "Current state",
@@ -33,6 +33,150 @@
   "nowcast_hint": "Model nowcasts are not official Reserve Bank or FOMC forecasts. Third-party inflation-nowcast model readings are omitted from this public page.",
   "nowcast_note": "Pages checked 12 Nov ~07:40 CET: Atlanta GDPNow, FRED GDPNOW, and the New York Fed official Staff Nowcast file. No New York Fed vintage after 6 Nov. Early-quarter GDPNow has high revision risk. The 3.2% core PCE baseline is not reset ahead of PPI.",
   "nowcasts": [
+    {
+      "id": "cpi-nowcast",
+      "category": "inflation",
+      "variable": "US CPI-U / core CPI, m/m SA (research nowcast)",
+      "value": "0.35 / 0.33",
+      "unit": "%",
+      "quality": "d",
+      "status": "YELLOW — Auditor recheck pending, not validated for trading",
+      "period": "Oct 2026",
+      "interval": "–",
+      "prior": "–",
+      "source": "Inflation Nowcasts page, NOWCAST_DATA (inline on the live page)",
+      "as_of": "Frozen 10 Nov 2026 10:11 Zurich, before the BLS release",
+      "rationale": "Own model (d), not certified. BLS first release (10 Nov 2026): headline +0.4, core +0.3 m/m SA (V). y/y n/a: BLS could not publish 12-month change (no Oct-2025 index) (V).",
+      "headline": false,
+      "kpi_group": "inflation_nowcast",
+      "kpi_label": "CPI",
+      "full_name": "US CPI-U (all items)",
+      "core_label": "Core CPI (ex food & energy)",
+      "nowcast": {
+        "headline": {
+          "mm": 0.35,
+          "yy": null
+        },
+        "core": {
+          "mm": 0.33,
+          "yy": null
+        }
+      },
+      "status_flag": "YELLOW",
+      "status_label": "Status YELLOW",
+      "status_note": "Auditor recheck pending, not validated for trading",
+      "release": {
+        "reference": "Oct 2026",
+        "dateLabel": "BLS first release 10 Nov 2026"
+      },
+      "actual": {
+        "headline_mm": 0.4,
+        "core_mm": 0.3,
+        "quality": "V",
+        "note": "BLS first release (10 Nov 2026): headline +0.4, core +0.3 m/m SA (V)",
+        "yy_note": "y/y n/a: BLS could not publish 12-month change (no Oct-2025 index) (V)."
+      },
+      "card_notes": [
+        "Nowcast = own model, frozen 10 Nov 2026 10:11 Zurich before the release (d). Not certified.",
+        "BLS first release (10 Nov 2026): headline +0.4, core +0.3 m/m SA (V). y/y n/a: BLS could not publish 12-month change (no Oct-2025 index) (V).",
+        "Error vs unrounded actual (0.350 / 0.296): headline -0.003pp, core +0.030pp (d)."
+      ],
+      "page_url": "../",
+      "page_label": "Main nowcast page",
+      "cardCaption": "Realised vs nowcast · y/y n/a"
+    },
+    {
+      "id": "pce-nowcast",
+      "category": "inflation",
+      "variable": "US PCE / core PCE, m/m SA (research nowcast)",
+      "value": "0.41 / 0.40",
+      "unit": "%",
+      "quality": "d",
+      "status": "Auditor YELLOW (12 Nov) — Sealed research nowcast, stage B1, not signed off / no B2",
+      "period": "Oct 2026",
+      "interval": "–",
+      "prior": "–",
+      "source": "Inflation Nowcasts page, NOWCAST_DATA (inline on the live page)",
+      "as_of": "SEALED 11 Nov 2026 09:48 Zurich, stage B1",
+      "rationale": "SEALED 11 Nov 2026 09:48 Zurich, stage B1 (after CPI, before PPI); local hash chain, SHA de1e6c24… (d). Not certified, not an official forecast. BEA release: 25 Nov 2026.",
+      "headline": false,
+      "kpi_group": "inflation_nowcast",
+      "kpi_label": "PCE",
+      "full_name": "US PCE price index",
+      "core_label": "Core PCE (ex food & energy)",
+      "nowcast": {
+        "headline": {
+          "mm": 0.41,
+          "yy": 3.9163
+        },
+        "core": {
+          "mm": 0.4,
+          "yy": 3.3487
+        }
+      },
+      "status_flag": "YELLOW",
+      "status_label": "Auditor YELLOW, not signed off",
+      "status_note": "Sealed research nowcast, Auditor rating YELLOW (12 Nov), not signed off / no B2",
+      "release": {
+        "reference": "Oct 2026",
+        "dateLabel": "BEA release 25 Nov 2026"
+      },
+      "actual": null,
+      "card_notes": [
+        "SEALED 11 Nov 2026 09:48 Zurich, stage B1 (after CPI, before PPI); local hash chain, SHA de1e6c24… (d). Not certified, not an official forecast.",
+        "Unrounded: headline 0.4066 (80% band 0.321 … 0.492), core 0.3983 (band 0.308 … 0.488). y/y derived (d): headline 3.92, core 3.35.",
+        "About 30% of the weight is not CPI-driven in B1 (PPI units are AR(1) placeholders until the 13 Nov PPI). A separate B2 record follows after the PPI. BEA release: 25 Nov 2026 14:30 Zurich (V)."
+      ],
+      "page_url": "../",
+      "page_label": "Main nowcast page",
+      "cardCaption": "Stage B1 (post-CPI) · SEALED"
+    },
+    {
+      "id": "ppi-nowcast",
+      "category": "inflation",
+      "variable": "US PPI final demand / FD less foods & energy, m/m SA (research nowcast)",
+      "value": "0.45 / 0.30",
+      "unit": "%",
+      "quality": "d",
+      "status": "Auditor YELLOW (12 Nov) — Sealed research nowcast, stage B1, not signed off / no B2",
+      "period": "Oct 2026",
+      "interval": "–",
+      "prior": "–",
+      "source": "Inflation Nowcasts page, NOWCAST_DATA (inline on the live page)",
+      "as_of": "SEALED 11 Nov 2026 09:44 Zurich, stage B1",
+      "rationale": "SEALED 11 Nov 2026 09:44 Zurich, stage B1; local hash chain, SHA daddf981… (d). Research nowcast, not an official forecast. BLS release: 13 Nov 2026 14:30 Zurich (V). y/y not modelled.",
+      "headline": false,
+      "kpi_group": "inflation_nowcast",
+      "kpi_label": "PPI",
+      "full_name": "US PPI final demand",
+      "core_label": "FD less foods & energy",
+      "nowcast": {
+        "headline": {
+          "mm": 0.45,
+          "yy": null
+        },
+        "core": {
+          "mm": 0.3,
+          "yy": null
+        }
+      },
+      "status_flag": "YELLOW",
+      "status_label": "Auditor YELLOW, not signed off",
+      "status_note": "Sealed research nowcast, stage B1, Auditor rating YELLOW (12 Nov), not signed off / no B2",
+      "release": {
+        "reference": "Oct 2026",
+        "dateLabel": "BLS release 13 Nov 2026"
+      },
+      "actual": null,
+      "card_notes": [
+        "SEALED 11 Nov 2026 09:44 Zurich, stage B1; local hash chain, SHA daddf981… (d). Research nowcast, not an official forecast.",
+        "Unrounded: final demand 0.446 (80% band 0.02 … 1.00), core FD 0.305 (band 0.00 … 0.80), FD ex food, energy & trade 0.305 (band 0.11 … 0.68) (d). Stage A (pre-CPI): FD 0.48, core 0.33.",
+        "BLS release: 13 Nov 2026 14:30 Zurich (V). y/y not modelled."
+      ],
+      "page_url": "../",
+      "page_label": "Main nowcast page",
+      "cardCaption": "Stage B1 (post-CPI) · SEALED · y/y n/a"
+    },
     {
       "id": "gdp-staff",
       "category": "GDP",
@@ -218,7 +362,7 @@
       "as_of": "6 Nov"
     }
   ],
-  "recent_hint": "Official releases since 5 Nov. Survey-consensus figures are omitted from this public page.",
+  "recent_hint": "Official releases since 5 Nov. Survey-consensus figures are omitted from this public page, except the credited consensus in the release-day note.",
   "recent_note": "Rounded BLS NFP, productivity and CPI figures are carried from the 6 Nov Page and the 10 Nov staff CPI draft (BLS pages not re-opened on the morning of 12 Nov). Unrounded CPI 0.350 / 0.296 (d) is from that 10 Nov draft’s BLS API derivation, not re-fetched on 12 Nov. Claims for the week ended 7 Nov were still missing at 07:40 CET.",
   "recent_data": [
     {
