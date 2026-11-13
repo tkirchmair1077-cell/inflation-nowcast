@@ -5,11 +5,11 @@
     "name": "Token Demand Bot",
     "id": "1ff4ca99-21f4-48d1-a702-c2ad3bc5fe5d"
   },
-  "as_of": "2026-11-12T08:08:56+01:00",
+  "as_of": "2026-11-13T06:12:00+01:00",
   "timezone": "Europe/Zurich",
   "edition": "2026-11-12",
   "title": "AI Token Demand Monitor, as of Thu 12 Nov 2026 (Europe/Zurich)",
-  "sources_retrieved": "2026-11-12T07:31:07+01:00",
+  "sources_retrieved": "2026-11-13T06:03:00+01:00",
   "bottom_line": "View: complete-week OpenRouter volume made a new high in the week of 2 Nov (209.5T tokens, +8.2% WoW, d). Trailing 7-day tokens to 11 Nov were 207.0T, only +1.2% versus the non-overlapping 7 days to 3 Nov, and paid tokens were slightly lower (193.6T, −0.9%, d). CoreWeave reported a $132.5bn revenue backlog at 30 Sep (V, company IR, 10 Nov). View: token volume still supports the capex trajectory; financing terms, not demand, remain the binding transmission risk.",
   "readings": [
     {
@@ -27,23 +27,23 @@
     {
       "id": "openrouter_partial_week",
       "label": "OpenRouter week of 9 Nov (partial)",
-      "value": 102.6,
+      "value": 133.2,
       "unit": "trillion tokens",
       "quality": "(d)",
-      "note": "12 Nov 07:31 Europe/Zurich snapshot (API cachedAt); the week is open through 15 Nov. 102.6T is 49.0% of the prior complete week (d). Shown only as a light bar, not used as a reading.",
+      "note": "13 Nov 06:03 Europe/Zurich snapshot (API cachedAt); the week is open through 15 Nov. 133.2T is 63.6% of the prior complete week (d). Shown only as a light bar, not used as a reading.",
       "source_url": "https://openrouter.ai/rankings",
-      "as_of": "2026-11-12T07:31:07+01:00"
+      "as_of": "2026-11-13T06:03:00+01:00"
     },
     {
       "id": "openrouter_trailing7d",
-      "label": "OpenRouter 7 days to 11 Nov",
-      "value": 207.0,
+      "label": "OpenRouter 7 days to 12 Nov",
+      "value": 209.7,
       "unit": "trillion tokens",
       "quality": "(d)",
-      "wow_pct": 1.2,
-      "note": "Versus the non-overlapping 7 days to 3 Nov (no snapshot ends on 4 Nov). Paid 193.6T (−0.9%); free/stealth 13.4T (6.5% of the window). The 7 days to 10 Nov were 206.5T (paid 192.7T, −1.4% vs the 7 days to 3 Nov, d).",
+      "wow_pct": 2.5,
+      "note": "Versus the non-overlapping 7 days to 3 Nov (d). Paid 196.7T (+0.7%, d); free/stealth 13.0T (6.2% of the window). The 7 days to 11 Nov were 207.0T (paid 193.6T, −0.9%, d).",
       "source_url": "https://openrouter.ai/rankings",
-      "as_of": "2026-11-11"
+      "as_of": "2026-11-12"
     },
     {
       "id": "openrouter_deepseek_share",
@@ -766,13 +766,13 @@
       ],
       "partial_week": {
         "week_start": "2026-11-09",
-        "total_tn": 102.648840941775,
+        "total_tn": 133.246363071144,
         "free_tn": 0.0,
-        "paid_tn": 102.648840941775,
+        "paid_tn": 133.246363071144,
         "wow_pct": null,
         "g4_pct": null,
         "complete": false,
-        "note": "Partial week at the 12 Nov 07:31 Europe/Zurich OpenRouter snapshot (API cachedAt); week open through 15 Nov. Not a final reading."
+        "note": "Partial week at the 13 Nov 06:03 Europe/Zurich OpenRouter snapshot (API cachedAt); week open through 15 Nov. Not a final reading."
       }
     },
     "openrouter_trailing7d_paid_free": {
@@ -831,6 +831,12 @@
           "paid_tn": 193.614290982627,
           "free_tn": 13.352003698618,
           "total_tn": 206.96629468124502
+        },
+        {
+          "window_end": "2026-11-12",
+          "paid_tn": 196.701342315534,
+          "free_tn": 12.968095711693,
+          "total_tn": 209.669438027227
         }
       ]
     },
@@ -8777,7 +8783,8 @@
     "This edition's bottom line on financing/credit uses the CoreWeave IR figures above, CNBC (U) for the June comparison and CFO comments, and the token series in this feed. Broker forecasts and terminal credit prints are excluded from this public page (see excluded). The bottom line is a view.",
     "Charts in section 3 are Chart.js redraws of the 8 Nov 2026 pack from public OpenRouter, Ramp, Vercel and Portkey series. Those pack-chart captions were not redrawn for this mid-week feed update. Hyperliquid and prediction-market blocks were not refreshed on 12 Nov and keep their own as_of (11 Nov).",
     "Hyperliquid figures are public HIP-3 perpetual marks from the official info API, not equity or IPO prices. Contract units and oracles differ by deployer (official docs). Implied fully diluted valuation is derived only where the official contract defines a price of $1 as $1 billion of fully diluted valuation. 24-hour change is versus the API previous-day reference, not an official equity close. Annualised funding is a simple 24×365 scaling of the hourly rate and is not a forecast. Some builder-deployed markets are thin. Not investment advice.",
-    "Prediction-market yes-probabilities are API-read contract prices from Polymarket and Kalshi, not forecasts. Resolution rules can differ from headlines. Thin markets are flagged. Not investment advice."
+    "Prediction-market yes-probabilities are API-read contract prices from Polymarket and Kalshi, not forecasts. Resolution rules can differ from headlines. Thin markets are flagged. Not investment advice.",
+    "13 Nov refresh (d): only the OpenRouter partial week and the trailing 7-day total/paid/free were updated (windows to 12 Nov). Author shares, spend shares, CoreWeave and other readings remain as of 11-12 Nov; headline text was not rewritten."
   ],
   "excluded": [
     {
@@ -8892,7 +8899,7 @@
     ]
   },
   "hyperliquid": {
-    "as_of": "2026-11-13T05:39:18.508128+01:00",
+    "as_of": "2026-11-13T06:40:33.765351+01:00",
     "timezone": "Europe/Zurich",
     "source": "https://api.hyperliquid.xyz/info",
     "spec_docs": [
@@ -8930,18 +8937,18 @@
         "max_leverage": 10,
         "sz_decimals": 2,
         "growth_mode": "enabled",
-        "mark_px": 102.68,
-        "oracle_px": 102.68,
-        "mid_px": 102.67,
-        "prev_day_px": 103.68,
-        "chg_24h_vs_prevDayPx": -0.009645061728395077,
-        "funding_hourly": 6.25e-08,
-        "funding_annualized_simple": 0.0005475,
-        "open_interest_units": 1042215.6200000003,
-        "open_interest_notional_usd": 107014699.86160004,
-        "volume_24h_usd": 38706343.277500026,
-        "day_base_volume": 373308.9699999997,
-        "premium": 1.70432e-05,
+        "mark_px": 102.9,
+        "oracle_px": 102.78,
+        "mid_px": 102.955,
+        "prev_day_px": 103.33,
+        "chg_24h_vs_prevDayPx": -0.004161424562082572,
+        "funding_hourly": 1.225e-07,
+        "funding_annualized_simple": 0.0010731,
+        "open_interest_units": 1043150.7,
+        "open_interest_notional_usd": 107340207.03,
+        "volume_24h_usd": 39133869.43740002,
+        "day_base_volume": 377511.8100000003,
+        "premium": 0.0017391516,
         "implied_valuation_usd": null,
         "implied_valuation_tn": null,
         "thin_liquidity": false,
@@ -8967,20 +8974,20 @@
         "max_leverage": 15,
         "sz_decimals": 3,
         "growth_mode": "enabled",
-        "mark_px": 1791.3,
-        "oracle_px": 1791.2,
-        "mid_px": 1790.6,
-        "prev_day_px": 1805.8,
-        "chg_24h_vs_prevDayPx": -0.00802968213534172,
+        "mark_px": 1796.5,
+        "oracle_px": 1796.3,
+        "mid_px": 1798.85,
+        "prev_day_px": 1798.2,
+        "chg_24h_vs_prevDayPx": -0.0009453898342787204,
         "funding_hourly": 1.5625e-06,
         "funding_annualized_simple": 0.013687500000000002,
-        "open_interest_units": 113681.492,
-        "open_interest_notional_usd": 203637656.6196,
-        "volume_24h_usd": 27886753.35430002,
-        "day_base_volume": 15421.269,
-        "premium": -0.0003810295,
-        "implied_valuation_usd": 1791300000000.0,
-        "implied_valuation_tn": 1.7913,
+        "open_interest_units": 113694.422,
+        "open_interest_notional_usd": 204252029.123,
+        "volume_24h_usd": 26530619.33709999,
+        "day_base_volume": 14667.904,
+        "premium": 0.0010986472,
+        "implied_valuation_usd": 1796500000000.0,
+        "implied_valuation_tn": 1.7965,
         "thin_liquidity": false,
         "quality_api": "V",
         "quality_derived": "(d)"
@@ -9004,20 +9011,20 @@
         "max_leverage": 6,
         "sz_decimals": 3,
         "growth_mode": "enabled",
-        "mark_px": 1331.1,
-        "oracle_px": 1328.7,
-        "mid_px": 1331.2,
-        "prev_day_px": 1331.3,
-        "chg_24h_vs_prevDayPx": -0.00015022909937656426,
-        "funding_hourly": 1.39735e-05,
-        "funding_annualized_simple": 0.12240786,
-        "open_interest_units": 5737.588,
-        "open_interest_notional_usd": 7637303.3867999995,
-        "volume_24h_usd": 1827080.6349000023,
-        "day_base_volume": 1370.757,
-        "premium": 0.0015127568,
-        "implied_valuation_usd": 1331100000000.0,
-        "implied_valuation_tn": 1.3311,
+        "mark_px": 1339.5,
+        "oracle_px": 1337.3,
+        "mid_px": 1339.3,
+        "prev_day_px": 1331.8,
+        "chg_24h_vs_prevDayPx": 0.005781648896230784,
+        "funding_hourly": 1.72929e-05,
+        "funding_annualized_simple": 0.15148580399999997,
+        "open_interest_units": 5738.436,
+        "open_interest_notional_usd": 7686635.022,
+        "volume_24h_usd": 1780107.1036000014,
+        "day_base_volume": 1335.107,
+        "premium": 0.0009149032,
+        "implied_valuation_usd": 1339500000000.0,
+        "implied_valuation_tn": 1.3395,
         "thin_liquidity": false,
         "quality_api": "V",
         "quality_derived": "(d)"
@@ -9041,18 +9048,18 @@
         "max_leverage": 10,
         "sz_decimals": 3,
         "growth_mode": "enabled",
-        "mark_px": 102.37,
+        "mark_px": 102.65,
         "oracle_px": 103.06,
-        "mid_px": 102.255,
-        "prev_day_px": 102.9,
-        "chg_24h_vs_prevDayPx": -0.005150631681243967,
-        "funding_hourly": -4.4978e-06,
-        "funding_annualized_simple": -0.039400728,
+        "mid_px": 102.535,
+        "prev_day_px": 103.84,
+        "chg_24h_vs_prevDayPx": -0.011459938366717992,
+        "funding_hourly": -3.5896e-06,
+        "funding_annualized_simple": -0.031444896,
         "open_interest_units": 913.752,
-        "open_interest_notional_usd": 93540.79224,
-        "volume_24h_usd": 26082.34134,
-        "day_base_volume": 252.405,
-        "premium": -0.0081991073,
+        "open_interest_notional_usd": 93796.6428,
+        "volume_24h_usd": 14244.95744,
+        "day_base_volume": 137.478,
+        "premium": -0.0004851543,
         "implied_valuation_usd": null,
         "implied_valuation_tn": null,
         "thin_liquidity": true,
@@ -9933,10 +9940,10 @@
             "open": 1820.0,
             "high": 1830.8,
             "low": 1781.6,
-            "close": 1790.8,
-            "volume_base": 1605.345,
-            "trades": 19455,
-            "implied_valuation_tn": 1.7908
+            "close": 1798.8,
+            "volume_base": 1715.915,
+            "trades": 21935,
+            "implied_valuation_tn": 1.7988
           }
         ]
       },
@@ -10672,10 +10679,10 @@
             "open": 1348.0,
             "high": 1350.6,
             "low": 1324.7,
-            "close": 1332.0,
-            "volume_base": 139.95,
-            "trades": 2484,
-            "implied_valuation_tn": 1.332
+            "close": 1339.1,
+            "volume_base": 162.833,
+            "trades": 2782,
+            "implied_valuation_tn": 1.3391
           }
         ]
       },
@@ -15178,9 +15185,9 @@
             "open": 104.38,
             "high": 105.12,
             "low": 102.28,
-            "close": 102.65,
-            "volume_base": 57121.16,
-            "trades": 20113,
+            "close": 102.95,
+            "volume_base": 69580.61,
+            "trades": 27206,
             "implied_valuation_tn": null
           }
         ]
