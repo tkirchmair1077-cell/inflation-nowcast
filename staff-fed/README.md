@@ -4,10 +4,10 @@ Publish set for GitHub Pages (`inflation-nowcast/`).
 
 - `index.html` — page (HTML + CSS + vanilla JS). Embeds a fallback copy of `data/desk.json` and, when served over HTTP, tries to fetch the JSON.
 - `data/desk.json` — figures and text from the desk’s saved notes. Do not invent numbers.
-- `charts/` — US CPI nowcast-versus-actual backtest, drawn from the already-produced 6 Nov 2026 inflation-nowcast model backtest (no new model is estimated); 15 leading-indicator charts (inflation, labour, growth) from the Fed Staff Desk note of 12 Nov 2026, 17:24 Europe/Zurich; and seven 10-year Treasury composition charts from the Fed Staff Desk note of 12 Nov 2026 (H.15 and ACM through 9 Nov; Kim-Wright through 6 Nov). The publish set does not include any file with INTERNAL in its name.
+- `charts/` — US CPI nowcast-versus-actual backtest, drawn from the already-produced 6 Nov 2026 inflation-nowcast model backtest (no new model is estimated); 15 leading-indicator charts (inflation, labour, growth) from the Fed Staff Desk note of 12 Nov 2026, 17:24 Europe/Zurich; and seven 10-year Treasury composition charts refreshed 13 Nov 2026, 06:47 Europe/Zurich (H.15 and ACM through 10 Nov; Kim-Wright through 6 Nov). The publish set does not include any file with INTERNAL in its name.
 - `README.md` — this file.
 
-**As of:** 12 Nov 2026, 07:40 Europe/Zurich (nowcast note). Leading-indicator section: 12 Nov 2026, 17:24 Europe/Zurich. 10-year Treasury composition: H.15 and ACM 9 Nov 2026; Kim-Wright 6 Nov 2026 (fetched 12 Nov 2026, 17:33 Europe/Zurich, before the 22:15 H.15 slot).
+**As of:** 12 Nov 2026, 07:40 Europe/Zurich (nowcast note). Leading-indicator section: 12 Nov 2026, 17:24 Europe/Zurich. 10-year Treasury composition: H.15 and ACM 10 Nov 2026; Kim-Wright 6 Nov 2026 (fetched 13 Nov 2026, 06:47 Europe/Zurich, after the 12 November 22:15 H.15 slot).
 **Source:** IPDeck_US_nowcast_note_2026-11-12.md; leading_indicators_2026-11-12.md (leading-indicator charts and staff reads); ust10y_decomposition_charts_2026-11-12.md (10-year composition charts and staff read).
 
 Page section order: 1 Current state; 2 Staff view; 3 Leading indicators (three blocks: Inflation, Labour, Growth, each with a staff read versus the 6 Nov baseline); 4 10Y Treasury: where the move comes from (Split A market, Split B ACM and Kim-Wright); 5 Nowcasts; 6 Baseline; 7 Key data since last update; 8 Upcoming calendar; 9 Charts (CPI backtest).
