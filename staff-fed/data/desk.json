@@ -92,7 +92,7 @@
       "value": "0.41 / 0.40",
       "unit": "%",
       "quality": "d",
-      "status": "Status not audited — Sealed research nowcast, Auditor review pending",
+      "status": "Auditor YELLOW (12 Nov) — Sealed research nowcast, stage B1, not signed off / no B2",
       "period": "Oct 2026",
       "interval": "–",
       "prior": "–",
@@ -114,9 +114,9 @@
           "yy": 3.3487
         }
       },
-      "status_flag": "UNAUDITED",
-      "status_label": "Status not audited",
-      "status_note": "Sealed research nowcast, Auditor review pending",
+      "status_flag": "YELLOW",
+      "status_label": "Auditor YELLOW, not signed off",
+      "status_note": "Sealed research nowcast, Auditor rating YELLOW (12 Nov), not signed off / no B2",
       "release": {
         "reference": "Oct 2026",
         "dateLabel": "BEA release 25 Nov 2026"
@@ -138,7 +138,7 @@
       "value": "0.45 / 0.30",
       "unit": "%",
       "quality": "d",
-      "status": "Status not audited — Sealed research nowcast, not audited",
+      "status": "Auditor YELLOW (12 Nov) — Sealed research nowcast, stage B1, not signed off / no B2",
       "period": "Oct 2026",
       "interval": "–",
       "prior": "–",
@@ -160,9 +160,9 @@
           "yy": null
         }
       },
-      "status_flag": "UNAUDITED",
-      "status_label": "Status not audited",
-      "status_note": "Sealed research nowcast, not audited",
+      "status_flag": "YELLOW",
+      "status_label": "Auditor YELLOW, not signed off",
+      "status_note": "Sealed research nowcast, stage B1, Auditor rating YELLOW (12 Nov), not signed off / no B2",
       "release": {
         "reference": "Oct 2026",
         "dateLabel": "BLS release 13 Nov 2026"
@@ -362,7 +362,7 @@
       "as_of": "6 Nov"
     }
   ],
-  "recent_hint": "Official releases since 5 Nov. Survey-consensus figures are omitted from this public page.",
+  "recent_hint": "Official releases since 5 Nov. Survey-consensus figures are omitted from this public page, except the credited consensus in the release-day note.",
   "recent_note": "Rounded BLS NFP, productivity and CPI figures are carried from the 6 Nov Page and the 10 Nov staff CPI draft (BLS pages not re-opened on the morning of 12 Nov). Unrounded CPI 0.350 / 0.296 (d) is from that 10 Nov draft’s BLS API derivation, not re-fetched on 12 Nov. Claims for the week ended 7 Nov were still missing at 07:40 CET.",
   "recent_data": [
     {
