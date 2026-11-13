@@ -5,16 +5,27 @@
   "name": "AI Circular Financing Alert Bot",
   "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
  },
- "as_of": "2026-11-13T05:39:00+01:00",
+ "as_of": "2026-11-13T16:26:00+01:00",
  "timezone": "Europe/Zurich",
  "title": "Circular Financing Watch, as of Thu 12 Nov 2026 ~16:45 Europe/Zurich",
  "status": {
   "current_user_alert": "Elevated: Nvidia (CEO resignation) + neoclouds (Nebius guidance, sector sell-off)",
   "current_user_alert_as_of": "2026-11-12T16:45:00+01:00",
-  "summary": "No new user alert in the 13 Nov morning scan; the 12 Nov Elevated alert (Nvidia CEO resignation plus Nebius guidance slip) stands. New since then: Nebius interim financials show one customer holding 75% of receivables (V); a Fed Vice Chair speech put AI-related debt above $800bn this year with contingent obligations more than three times that (V); a DOJ antitrust probe of Nvidia is reported but unconfirmed (U). CoreWeave bonds firmed late on 12 Nov (TRACE, U); no publishable dated CDS print after 10 Nov.",
-  "last_scan": "2026-11-13T05:39:00+01:00",
-  "last_independent_check": "2026-11-13T05:38:00+01:00",
+  "summary": "US-session scan 13 Nov: no new user alert; the 12 Nov Elevated alert (Nvidia CEO resignation plus Nebius guidance slip) stands. New but unverified, and still without a second source: Nvidia's reported $500bn financing platform has no deals and partners want more than 25% residual-value support (U; first-publication time unconfirmed); CoreWeave is marketing a ~$4bn Meta-backed loan at ~7.5% (U). Nvidia's Q2 FY27 10-Q shows $36bn of AI-cloud agreements, $20bn of third-party leases and $3.5bn of guarantees (V), but the 25% residual-value figure, the $500bn platform and the word \"backstop\" are not in that filing. Neocloud shares fell again as of 16:20 CET (U, (d)); no publishable dated CDS print after 10 Nov.",
+  "last_scan": "2026-11-13T16:25:00+01:00",
+  "last_independent_check": "2026-11-13T16:26:00+01:00",
   "outstanding_watches": [
+   {
+    "date": "2026-11-13",
+    "session": "PM",
+    "tier": "No new alert",
+    "node": "Nvidia / neoclouds",
+    "headline": "US-session scan: no new verified Watch-or-higher signal. A report that Nvidia's $500bn financing platform has no deals and faces pressure to raise its 25% residual-value support (U, no second source; first-publication time unconfirmed) and a reported Meta-backed $4bn CoreWeave loan (U, no 8-K and no second source) were logged as map updates.",
+    "quality": "U",
+    "note": "Intraday at 16:20 CET versus 12 Nov closes (U, own calculation): NVDA about -3.6%, CoreWeave about -11.0%, Nebius about -14.4%, Oracle about -4.0%; SoftBank US shares about -8.1% (d) and Tokyo about -5.1% (d). A CNBC yield of 5.77% on Nvidia's 2031 notes is inside the 12 Nov range, not the last trade (U); a claim that the yield was nearly 6% higher on the week conflicts with the last-to-last move from 5.60% to 5.68% (+8bp, (d)). Independently checked at about 16:26 CET.",
+    "tone": "neutral",
+    "tone_source": "bot"
+   },
    {
     "date": "2026-11-13",
     "session": "AM",
@@ -73,11 +84,123 @@
   ]
  },
  "summary": {
-  "text": "The 12 Nov Elevated alert still stands: Nvidia's 8-K says Jensen Huang resigned as CEO effective 11 Nov, with the CFO as interim CEO and results still due 17 Nov (V), and Nebius moved 2026 revenue to the low end of $3.0–3.4bn and pushed its ARR target to February (V). Nebius's interim financials, filed after the 12 Nov close, show unnamed customers at 33%, 22% and 15% of Q3 revenue, one customer holding 75% of $4.04bn of receivables (up from $0.72bn at end-2025), and debt of about $14.2bn versus about $4.1bn at end-2025 (V, sums (d)); the filing shows no Nvidia or Microsoft guarantee or backstop. A Federal Reserve Vice Chair for Supervision said on 10 Nov that AI-related debt is on track to exceed $800bn this year and that lease, contract and residual-value obligations are more than three times that, describing 'the appearance of circular financing' (V). On 12 Nov Nvidia closed 4.3% lower, Nebius 16.8% lower and CoreWeave 6.9% lower, while CoreWeave's 2032 bond recovered to about 82 by the evening (U); a DOJ antitrust probe focused on Nvidia was reported by one outlet with no company or DOJ confirmation (U). A reported OpenAI raise of $15bn at a $1.25tn valuation has not closed and conflicts with talk of a larger round (U), and no publishable dated CDS print after 10 Nov was available.",
-  "as_of": "2026-11-13T05:39:00+01:00",
-  "source": "AI Alert morning scan 13 Nov 2026 (~05:30–05:39 Europe/Zurich), independently checked ~05:38 Europe/Zurich; SEC EDGAR filings, BIS-hosted Fed speech text, public news relays"
+  "text": "The 12 Nov Elevated alert still stands: Nvidia's 8-K says Jensen Huang resigned as CEO effective 11 Nov with the CFO as interim CEO and results due 17 Nov (V), and Nebius moved 2026 revenue to the low end of $3.0–3.4bn (V); Nebius's interim financials show one unnamed customer holding 75% of $4.04bn of receivables and debt of about $14.2bn (V). A Bloomberg report last updated at 01:52 CET on 13 Nov, with first publication unconfirmed and possibly on 12 Nov, says Nvidia's $500bn financing platform has completed no deals and that customers and partners want more than its 25% residual-value support, with a first deal unlikely before January (U, anonymous sources, no company comment, no second source); Nvidia's Q2 FY27 10-Q shows $36bn of AI-cloud agreements, $20bn of third-party leases and $3.5bn of guarantees (V), but the 25% residual-value guarantee, the $500bn figure and the word \"backstop\" do not appear in that filing. CoreWeave is reported to be marketing a ~$4bn loan backed by Meta contracts at about 7.5% all-in with a warm reception, first published at 14:53 CET, which points against fresh credit stress at that node (U, no 8-K and no second source). By 16:20 CET on 13 Nov Nebius traded about 14.4% and CoreWeave about 11.0% below their 12 Nov closes, with Nvidia about 3.6% lower, Oracle about 4.0% lower and SoftBank's US shares about 8.1% lower (Tokyo about 5.1% lower) (U, (d)); a CNBC figure of 5.77% on Nvidia's 2031 notes sits inside the 12 Nov intraday range and is not the last trade (U), and a claim that the yield was nearly 6% higher on the week conflicts with the last-to-last move from 5.60% to 5.68% (+8bp, (d)), with no publishable dated CDS print after 10 Nov available. A Federal Reserve Vice Chair said on 10 Nov that AI-related debt is on track to exceed $800bn this year with contingent obligations more than three times that (V).",
+  "as_of": "2026-11-13T16:26:00+01:00",
+  "source": "AI Alert US-session scan 13 Nov 2026 (~16:20 Europe/Zurich), independently checked at about 16:26 CET; SEC EDGAR (including Nvidia Q2 FY27 10-Q), BIS-hosted Fed speech text, Semafor, Bloomberg via The Economic Times, CNBC, exchange-data quotes"
  },
  "items": [
+  {
+   "id": "coreweave-meta-backed-loan",
+   "node": "CoreWeave / neoclouds",
+   "type": "financing",
+   "title": "CoreWeave reportedly marketing a ~$4bn loan secured by Meta contracts",
+   "as_of": "2026-11-13",
+   "event_time": "2026-11-13T14:53:24+01:00",
+   "tier_relevance": "Below Watch. Points against fresh credit stress at CoreWeave; it does not change the 12 Nov Elevated alert.",
+   "tone": "positive",
+   "tone_source": "bot",
+   "relationship": "Contract-backed (secured) borrowing that leans on an investment-grade customer's credit rather than CoreWeave's unsecured credit. It reduces refinancing pressure but deepens dependence on a few large customer contracts.",
+   "counterparties": [
+    "Meta",
+    "arranging banks"
+   ],
+   "figures": [
+    {
+     "label": "Loan size sought",
+     "value": "~4",
+     "unit": "USD billion",
+     "quality": "U"
+    },
+    {
+     "label": "Targeted all-in rate",
+     "value": "~7.5",
+     "unit": "%",
+     "quality": "U",
+     "note": "Versus unsecured bond yields near 16% reported in early November (U)."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Semafor, 13 Nov 2026: CoreWeave tunes out Nvidia noise, looks to raise $4B",
+     "url": "https://www.semafor.com/article/11/13/2026/coreweave-tunes-out-nvidia-noise-looks-to-raise-4b",
+     "kind": "secondary"
+    }
+   ],
+   "notes": "First published 13 Nov at 14:53 CET (the 14:54 CET stamp is a later modification). Single source, one person familiar with the matter; no CoreWeave 8-K and no second source as of the independent check at about 16:26 CET."
+  },
+  {
+   "id": "nvidia-financing-platform-backstop",
+   "node": "Nvidia",
+   "type": "contingent exposure",
+   "title": "Nvidia's $500bn AI financing platform has no deals yet; partners reportedly push for more than 25% residual-value support",
+   "as_of": "2026-11-13",
+   "event_time": "2026-11-13T01:52:00+01:00",
+   "tier_relevance": "Logged as a map update to the Nvidia node already in the 12 Nov Elevated alert; not a new user alert because it is anonymous-source reporting with no company confirmation.",
+   "tone": "negative",
+   "tone_source": "bot",
+   "relationship": "Reported residual-value support channel: lenders to GPU-leasing vehicles would rely on the supplier covering a shortfall if a lessee stops paying. Pressure to raise Nvidia's share above the reported 25% would move more downside onto Nvidia; a stalled platform would slow supplier-supported financing of customer GPU purchases. The 25% residual-value figure, the $500bn platform size and the word \"backstop\" come from the Bloomberg report (U) and do not appear in Nvidia's Q2 FY27 10-Q (V).",
+   "counterparties": [
+    "six large asset managers and investment firms",
+    "neocloud and AI-lab customers"
+   ],
+   "figures": [
+    {
+     "label": "Platform size announced (Aug 2026)",
+     "value": "500",
+     "unit": "USD billion",
+     "quality": "U",
+     "note": "Bloomberg report (U). This $500bn figure does not appear in Nvidia's Q2 FY27 10-Q."
+    },
+    {
+     "label": "Nvidia residual-value support offered",
+     "value": "up to 25",
+     "unit": "% of deal",
+     "quality": "U",
+     "note": "Bloomberg report (U). The 25% residual-value guarantee does not appear in the Q2 FY27 10-Q. Exhibit 10.1 (Form of Residual Value Guaranty) is listed in the exhibit index only and was not read."
+    },
+    {
+     "label": "Deals completed under the platform",
+     "value": "0",
+     "unit": "count",
+     "quality": "U",
+     "note": "Earliest announcement likely January, per one person."
+    },
+    {
+     "label": "AI cloud agreements (Q2 FY27 10-Q)",
+     "value": 36,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Additional commitments table in the 10-Q. Not a confirmation of the reported $500bn platform."
+    },
+    {
+     "label": "Third-party data-centre leases not commenced (Q2 FY27 10-Q)",
+     "value": 20,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Terms of about 15 years; Nvidia says it expects to reassign these leases to third parties."
+    },
+    {
+     "label": "Land / power / shell guarantees (Q2 FY27 10-Q)",
+     "value": 3.5,
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Maximum gross exposure under those agreements. Separate from the reported 25% residual-value support."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Bloomberg via The Economic Times, last updated 13 Nov 2026, 01:52 CET (first-publication time unconfirmed): Nvidia faced pressure to boost its AI backstop before Jensen Huang's exit",
+     "url": "https://economictimes.indiatimes.com/news/international/world-news/nvidia-faced-pressure-to-boost-its-ai-backstop-before-jensen-huangs-exit/articleshow/135785679.cms",
+     "kind": "secondary"
+    },
+    {
+     "title": "Nvidia 10-Q, quarter ended 26 Jul 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+     "kind": "primary"
+    }
+   ],
+   "notes": "The 01:52 CET time is The Economic Times \"Last Updated\" stamp (V for that stamp); first publication is unconfirmed and may be 12 Nov. People familiar with the matter; Nvidia and the partners did not comment or declined. The independent check at about 16:26 CET found no second source (The Economic Times is a reprint of the Bloomberg report, not an independent confirmation). Compare with Nvidia's Q3 FY27 results on 17 Nov for guarantee disclosures."
+  },
   {
    "id": "nebius-q3-interim-financials",
    "node": "Nebius / neoclouds",
@@ -1386,6 +1509,7 @@
   }
  ],
  "caveats": [
+  "13 Nov PM: the Nvidia financing-platform report and the CoreWeave Meta-backed loan remain single-source, anonymous-source reports (U) without filings or company confirmation; the independent check at about 16:26 CET found no second source for either. The 01:52 CET stamp on the financing-platform report is a last-updated time; first publication is unconfirmed and may be 12 Nov. Nvidia's Q2 FY27 10-Q shows $36bn of AI-cloud agreements, $20bn of third-party leases and $3.5bn of guarantees (V), but the 25% residual-value guarantee, the $500bn figure and the word \"backstop\" do not appear in that filing. Intraday moves are exchange-data quotes at 16:20 CET compared with 12 Nov closes by own calculation (U, (d)): NVDA about -3.6%, CRWV about -11.0%, NBIS about -14.4%, ORCL about -4.0%, SoftBank US about -8.1% and Tokyo about -5.1%. A CNBC yield of 5.77% on Nvidia's 2031 notes sits inside the 12 Nov intraday range and is not the last trade (U); a claim that the yield was nearly 6% higher on the week conflicts with the last-to-last move from 5.60% to 5.68% (+8bp, (d)). No publishable dated CDS print after 10 Nov.",
   "12–13 Nov: 12 Nov closes (NVDA $166.19, −4.34%; NBIS $128.64, −16.84%; CRWV $56.60, −6.86%; ORCL $127.11, −0.99%) are from exchange data APIs and news quotes (U). No publishable dated CDS print after 10 Nov. CoreWeave's 2032 bond printed around 80.75 at 15:26 CET and about 82 at 22:15 CET on 12 Nov (TRACE, U). The reported DOJ antitrust probe of Nvidia is single-source (U). OpenAI round size is conflicting ($15bn per CNBC versus talk of a $30bn round, both U, no primary confirmation). Nebius customers C, D and E are unnamed in the filing; mapping them to Microsoft, Meta or others would be speculation, and the filing does not explain the receivables jump.",
   "V means a primary document was opened in the saved independent checks (SEC filings, issuer IR, official BIS/ECB PDFs). U is secondary, anonymous, undated or not independently confirmed. (d) is an arithmetic combination of stated figures.",
   "No dated CoreWeave, Nvidia, Oracle or Nebius CDS print was obtained after 10 Nov. A CoreWeave 2032 bond printed around 80.75 at 15:26 CET on 12 Nov (TRACE, U). Conflicting or undated secondary credit-market prints from commercial terminals or broker-sourced media are excluded; they are treated as a data gap.",
