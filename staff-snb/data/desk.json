@@ -411,6 +411,85 @@
       ]
     }
   },
+  "leading_indicators": {
+    "title": "Swiss business cycle: public indicators",
+    "hint": "Public official SNB and BFS series used in place of KOF on this page. No KOF values are shown. Retrieved 13 November 2026, 07:42:55 Europe/Zurich. Quality: V.",
+    "as_of": "2026-11-13",
+    "as_of_display": "13 Nov 2026, 07:42 Europe/Zurich",
+    "source": "SNB cube snbkosiq (PublishingDate 2026-09-30 15:00); BFS INDPAU DAM 36815386 (last update 19 August 2026); BFS BESTA DAM 36829829 (revised 2018-Q2 to 2026-Q1, August 2026). Retrieved 13 November 2026, 07:42:55 Europe/Zurich. license=public_with_credit.",
+    "note": "These public official Swiss series replace the KOF Economic Barometer on this page. No KOF values are used. All four readings below are official (V); none is a staff estimate.",
+    "next_releases": "Next official releases: BFS INDPAU on 19 November 2026, 08:30; BFS BESTA (employment barometer, 2026-Q3) on 26 November 2026, 08:30; SNB Quarterly Bulletin 4/2026 on 16 December 2026, 15:00 (the official SNB calendar names the bulletin, not Konjunktursignale separately; the previous Konjunktursignale edition was published with Quarterly Bulletin 3/2026).",
+    "caveats_title": "Data and sources: caveats",
+    "caveats": [
+      "The latest INDPAU month (June 2026) is marked provisional in the official file, with a lag of about seven weeks (last update 19 August 2026).",
+      "SNB UVJQ and UERW are official index values from cube snbkosiq, not percentages.",
+      "The two official BFS licence pages are inconsistent on commercial use: OPEN BY on bfs.admin.ch (published 27 October 2026) allows commercial use with source credit; statistik.admin.ch/de/nutzungsbedingungen-copyright requires prior written permission for commercial use, while treating internet visualisation as non-commercial if the data are not passed on electronically. This page is a non-commercial internet visualisation. Our reading of the licence texts is not legal advice.",
+      "No KOF or SECO data is used in this section. Official SECO figures already shown elsewhere on this page are unchanged."
+    ],
+    "blocks": [
+      {
+        "id": "ch-public-cycle",
+        "charts": [
+          {
+            "file": "charts/ch_snb_kosiq_uvjq_2026-q3.png",
+            "title": "SNB business-cycle signals — turnover vs year-earlier quarter (UVJQ)",
+            "latest": "0.58",
+            "latest_period": "2026-Q3",
+            "latest_unit": "index (not a percent)",
+            "latest_flag": "index",
+            "quality": "V",
+            "caption": "SNB business-cycle signals: turnover versus the same quarter of the previous year (UVJQ, index). Current-state component. Latest reading, 2026-Q3: 0.58 (V). Published 30 September 2026, 15:00.",
+            "credit": "Source: Swiss National Bank, business-cycle signals (Konjunktursignale: Regionale Wirtschaftskontakte der SNB), cube snbkosiq, data.snb.ch (https://data.snb.ch/api/cube/snbkosiq/data/csv/de).",
+            "licence": "SNB data: non-commercial use with source credit (SNB copyright, retrieved 13 November 2026).",
+            "width": 2666,
+            "height": 1500
+          },
+          {
+            "file": "charts/ch_snb_kosiq_uerw_2026-q3.png",
+            "title": "SNB business-cycle signals — expected turnover (UERW)",
+            "latest": "0.83",
+            "latest_period": "2026-Q3",
+            "latest_unit": "index (not a percent)",
+            "latest_flag": "index",
+            "quality": "V",
+            "caption": "SNB business-cycle signals: expected turnover (UERW, index). Leading component. Latest reading, 2026-Q3: 0.83 (V). Published 30 September 2026, 15:00.",
+            "credit": "Source: Swiss National Bank, business-cycle signals (Konjunktursignale: Regionale Wirtschaftskontakte der SNB), cube snbkosiq, data.snb.ch (https://data.snb.ch/api/cube/snbkosiq/data/csv/de).",
+            "licence": "SNB data: non-commercial use with source credit (SNB copyright, retrieved 13 November 2026).",
+            "width": 2666,
+            "height": 1500
+          },
+          {
+            "file": "charts/ch_bfs_indpau_prod_total_yoy_2026-06.png",
+            "title": "Swiss industrial production, total (B–E), unadjusted year-on-year (INDPAU)",
+            "latest": "+15.8%",
+            "latest_period": "June 2026",
+            "latest_unit": "y/y, unadjusted",
+            "latest_flag": "provisional",
+            "quality": "V",
+            "caption": "Industrial production, total (sections B–E), unadjusted change versus the same month of the previous year. Latest reading, June 2026: +15.8% (V, provisional; exact Excel cell value 15.8205750463847; last update 19 August 2026).",
+            "credit": "Source: Federal Statistical Office (BFS), production, orders and turnover statistics of industry (INDPAU), monthly unadjusted rates, production total (sections B–E), https://www.bfs.admin.ch/asset/de/36815386.",
+            "licence": "BFS data: OPEN BY, source credit required (bfs.admin.ch/en/terms-of-use, published 27 October 2026, retrieved 13 November 2026). Commercial use: statistik.admin.ch/de/nutzungsbedingungen-copyright requires prior written permission. This page is a non-commercial internet visualisation; the data are not passed on electronically.",
+            "width": 2666,
+            "height": 1500
+          },
+          {
+            "file": "charts/ch_bfs_besta_employment_outlook_2026-q2.png",
+            "title": "Employment outlook indicator, total (BESTA)",
+            "latest": "1.0412",
+            "latest_period": "2026-Q2",
+            "latest_unit": "index",
+            "latest_flag": "index",
+            "quality": "V",
+            "caption": "Employment outlook indicator, total (BESTA, 5-96, weighted by employment). Latest reading, 2026-Q2: 1.0412 (V; 1.04 to two decimals). Results for 2018-Q2 to 2026-Q1 were revised in August 2026.",
+            "credit": "Source: Federal Statistical Office (BFS), employment statistics (BESTA), indicator of employment outlook, total (5-96), https://www.bfs.admin.ch/asset/de/36829829.",
+            "licence": "BFS data: OPEN BY, source credit required (bfs.admin.ch/en/terms-of-use, published 27 October 2026, retrieved 13 November 2026). Commercial use: statistik.admin.ch/de/nutzungsbedingungen-copyright requires prior written permission. This page is a non-commercial internet visualisation; the data are not passed on electronically.",
+            "width": 2666,
+            "height": 1500
+          }
+        ]
+      }
+    ]
+  },
   "charts_hint": "Official BFS and SNB series from the 12 November baseline note, plus a LIK month-on-month benchmark backtest (benchmarks only; the component model is pending). Daily Bloomberg BFIX-based FX rates are not shown.",
   "charts": [
     {
@@ -489,7 +568,7 @@
     },
     {
       "item": "KOF Economic Barometer",
-      "reason": "Licensed; not a public official SNB or BFS series, so it is not shown on this page."
+      "reason": "Licensed; not a public official SNB or BFS series. It is replaced on this page by public official series (SNB business-cycle signals UVJQ and UERW, and BFS INDPAU and BESTA). No KOF values are used."
     }
   ],
   "gaps": [
