@@ -187,6 +187,87 @@ footer{margin:10px 0 48px}
     <div class="card state-card" id="stateBox" style="margin-top:18px"></div>
   </section>
 
+  <!--BREADTH:BEGIN-->
+  <section id="breadth" aria-labelledby="hBreadth">
+
+<style>
+  #breadth .br-intro{margin:0 0 14px;font-size:13px;color:var(--text-2);line-height:1.55;max-width:980px}
+  #breadth .br-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
+  #breadth .br-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #breadth .br-grid.two .br-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media (max-width:1100px){#breadth .br-grid.two{grid-template-columns:minmax(0,1fr)}}
+  #breadth .br-grid:not(.two) .br-body{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:20px;align-items:start}
+  #breadth .br-grid:not(.two) .br-side .br-text{margin-top:0}
+  @media (max-width:1000px){#breadth .br-grid:not(.two) .br-body{display:block}#breadth .br-grid:not(.two) .br-side .br-text{margin-top:10px}}
+  #breadth .br-card h3{margin:0 0 4px}
+  #breadth .br-kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:12px 0 14px}
+  #breadth .br-kpi{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:9px 11px;min-width:0}
+  #breadth .br-kpi .l{display:block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);font-weight:600;line-height:1.3}
+  #breadth .br-kpi .v{display:block;font-size:17px;font-weight:650;letter-spacing:-.01em;margin-top:3px;color:var(--text)}
+  #breadth .br-kpi .s{display:block;font-size:11px;color:var(--text-3);margin-top:1px}
+  #breadth .br-img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:#fff}
+  #breadth .br-text{font-size:12.5px;color:var(--text-2);line-height:1.55;margin-top:10px}
+  #breadth .br-text p{margin:0 0 6px}
+  #breadth .br-text b{color:var(--text);font-weight:620}
+  #breadth .br-tbl{width:100%;border-collapse:collapse;font-size:12px;margin:12px 0 4px}
+  #breadth .br-tbl th,#breadth .br-tbl td{padding:6px 6px;border-bottom:1px solid var(--grid);text-align:right;white-space:nowrap}
+  #breadth .br-tbl th{white-space:normal;vertical-align:bottom}
+  #breadth .br-tbl th:first-child,#breadth .br-tbl td:first-child{text-align:left}
+  #breadth .br-tbl th{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);font-weight:600;border-bottom:1px solid var(--border-strong)}
+  #breadth .br-tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #breadth .br-cnotes{margin-top:10px}
+  #breadth .br-cnotes details{border-top:1px dashed var(--grid);padding:6px 0}
+  #breadth .br-cnotes summary{cursor:pointer;font-size:12.5px;font-weight:600;color:var(--text)}
+  #breadth .br-credit{font-size:11.5px;color:var(--text-3);line-height:1.5;margin-top:12px;border-top:1px solid var(--border);padding-top:10px}
+  #breadth .br-credit h5{margin:8px 0 2px;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-2);font-weight:650}
+  #breadth .br-credit p{margin:0 0 6px}
+  #breadth .br-credit a,#breadth .br-text a{color:var(--accent);word-break:break-word}
+  #breadth .br-credit code,#breadth .br-text code{font-size:.92em;word-break:break-all}
+  #breadth .br-vb{margin-top:18px;border:1px solid var(--amber);background:var(--amber-bg);border-radius:12px;padding:12px 16px;font-size:12px;line-height:1.55;color:var(--text)}
+  #breadth .br-vb h4{margin:0 0 6px;font-size:12.5px;font-weight:650}
+  #breadth .br-vb p{margin:0 0 6px}
+  #breadth .br-vb p:last-child{margin:0}
+  #breadth code{background:transparent;color:inherit;padding:0}
+  #breadth .br-vb a{color:var(--accent)}
+  #breadth .br-files{font-size:11.5px;color:var(--text-3);margin-top:8px}
+  #breadth .br-files a{color:var(--accent)}
+  @media (max-width:900px){#breadth .br-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @media (max-width:480px){#breadth .br-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}#breadth .br-kpi .v{font-size:15px}}
+</style>
+    <div class="sec-head"><h2 id="hBreadth">Inflation breadth</h2><span class="hint">How widespread inflation is across the basket · authors’ calculations (d) from official data</span></div>
+    <p class="br-intro">Weighted share of official CPI components whose 12-month rate is above or below fixed thresholds (strict &gt; 2% / &lt; 0%, 3-month trailing average), and the diffusion between the two. Shares, diffusion and z-scores are authors’ calculations <span class="q d">(d)</span> from official indexes and basket weights <span class="q V">V</span>. Research prototype, not sealed and not a forecast.</p>
+    <div class="br-grid">
+    <div class="card br-card" id="breadth-jp">
+      <h3>Japan CPI: inflation breadth</h3>
+      <div class="sub">Share of the basket with 12-month inflation above / below threshold · latest 2026-09</div>
+      <div class="br-kpis"><div class="br-kpi"><span class="l">Share above 2%</span><span class="v">50.2% <span class="q d">(d)</span></span></div><div class="br-kpi"><span class="l">Share below 0%</span><span class="v">12.9% <span class="q d">(d)</span></span></div><div class="br-kpi"><span class="l">Diffusion</span><span class="v">+37.3 pp <span class="q d">(d)</span></span><span class="s">above − below</span></div><div class="br-kpi"><span class="l">z vs 2011–19</span><span class="v">+2.47 <span class="q d">(d)</span></span><span class="s">diffusion</span></div><div class="br-kpi"><span class="l">Components</span><span class="v">104 / 104</span><span class="s">used / target</span></div><div class="br-kpi"><span class="l">Data date</span><span class="v">2026-09</span><span class="s">monthly</span></div></div>
+      <div class="br-body">
+        <div class="br-media"><a href="breadth/jp_cpi_inflation_breadth.png" target="_blank" rel="noopener"><img class="br-img" src="breadth/jp_cpi_inflation_breadth.png" alt="Japan CPI inflation breadth: share of components above and below threshold, and diffusion" width="1792" height="1216" loading="lazy"></a></div>
+        <div class="br-side">
+          <div class="br-text"><p><b>Thresholds:</b> strict &gt; 2% / &lt; 0%, 3-month trailing average of monthly shares.</p>
+<p><b>Breaks and sample notes:</b> The plotted shares are a 3-month trailing average of monthly shares. Official 2005 weights are n/a; 2010 weights are held through December 2010 (j). No concordance between classification vintages was invented. Fresh food and energy are included; memorandum items are excluded.</p>
+<p><b>Method (d):</b> Weighted share of official mixed leaves (finest minor groups plus mid-class leaves with no minor-group child), using official NSA year-on-year rates and official basket weights. Monthly shares are averaged over three months. Thresholds are greater than 2% and less than 0%.</p>
+<p>Shares, diffusion and the z-score are authors' calculations (d) from official linked NSA indexes and official basket weights (V), renormalised each period over items with a published rate and a strictly positive weight. Thresholds are strict (<code>&gt;</code> / <code>&lt;</code>). This is a research prototype, not a sealed nowcast and not a trade input.</p></div>
+          <div class="br-credit"><p>出典：総務省統計局「消費者物価指数」（2025年基準）および政府統計の総合窓口（e-Stat）（<a href="https://www.e-stat.go.jp/" target="_blank" rel="noopener">https://www.e-stat.go.jp/</a>）</p>
+<p>Official numerical data and simple tables from the Statistics Bureau of Japan and from e-Stat are not subject to copyright and may be used freely. Other content on e-Stat may be used under the e-Stat Terms of Use, which are based on the Government of Japan Standard Terms of Use (Version 2.0) and are compatible with Creative Commons Attribution 4.0 International (CC BY 4.0), on the conditions in those terms (source citation; edited work must say it was edited and must not look official).</p>
+<p>This package is a reshape of official cells plus authors' calculations (d). It is edited work and is not an official Statistics Bureau or e-Stat product.</p>
+<p>e-Stat Terms of Use (English): <a href="https://www.e-stat.go.jp/en/terms-of-use" target="_blank" rel="noopener">https://www.e-stat.go.jp/en/terms-of-use</a> (accessed 13 November 2026, as recorded in the snapshot).</p>
+<p>Verified against: <code>/docs/LICENCE.md</code> in snapshot <code>20261113T184418Z_breadth_jp</code>.</p></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="br-vb">
+      <h4>⚠ Datenlage und Quellen – Vorbehalte (inflation breadth)</h4>
+      <p>This is a research prototype. It is not sealed and is not a trade input. Official indexes and weights are <b>V</b>. Shares, diffusion and z-scores are authors' calculations <b>(d)</b>. Judgement is marked <b>(j)</b>. Unverified items are <b>U</b>. Missing official values are <b>n/a</b>. Nothing here is a recommendation.</p>
+<p>Thresholds are strict greater-than / less-than. Weights are renormalised each period over items with a published rate and a strictly positive weight. The z-score is the latest diffusion minus the 2011–2019 mean, divided by the 2011–2019 standard deviation (d).</p>
+<p>Japan series notes: thresholds are strict greater than 2% and less than 0%. The plotted shares are a 3-month trailing average of monthly shares. The partition is 104 mixed leaves (finest minor groups plus mid-class leaves with no minor-group child); latest n used / n target is 104 / 104. Official 2005 weights are n/a; 2010 weights are held through December 2010 (j). No concordance between classification vintages was invented. Fresh food and energy are included; memorandum items are excluded.</p>
+<p>Licence: official numerical data are not subject to copyright, per the snapshot licence file; other e-Stat content follows the e-Stat Terms of Use / Government of Japan Standard Terms of Use v2.0. Credit as in <a href="breadth/credit.md" target="_blank" rel="noopener"><code>credit.md</code></a>, verified against the snapshot licence file.</p>
+      <div class="br-files">Latest values: <a href="breadth/latest.csv" target="_blank" rel="noopener">latest.csv</a> · <a href="breadth/latest.json" target="_blank" rel="noopener">latest.json</a></div>
+    </div>
+  </section>
+<!--BREADTH:END-->
+
   <section id="staff">
     <div class="sec-head"><h2 id="hStaff">2 · Staff view</h2><span class="hint" id="hintStaff"></span></div>
     <div class="card">

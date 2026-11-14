@@ -1,0 +1,4 @@
+country,data_date,frequency,share_above,share_below,diffusion,z_vs_2011_2019,thresholds,n_used,n_target,component_count
+AU,2026Q3,quarterly,63.163674,18.475263,44.688411,3.365271,strict > 3% / < 1%,87,87,87 / 87
+NZ,2026Q3,quarterly,54.257981,29.470629,24.787351,2.726373,strict > 3% / < 1%,107,107,107 / 107
+CA,2026-09,monthly,32.643376,36.197496,-3.55412,0.253741,strict > 3% / < 1%,204,211,204 / 211

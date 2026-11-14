@@ -1,0 +1,2 @@
+country,desk,data_date,frequency,share_above,share_below,diffusion,z_vs_2011_2019,thresholds,n_used,n_target,component_count
+EA,staff-ecb,2026-09,monthly,42.071299,27.681819,14.38948,1.720203,strict > 3% / < 1%,275,275,275 / 275

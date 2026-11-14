@@ -1,0 +1,27 @@
+{
+  "country": "UK",
+  "desk": "staff-boe",
+  "data_date": "2026-09",
+  "data_date_iso": "2026-09",
+  "frequency": "monthly",
+  "share_above": 53.2337,
+  "share_above_1dp": 53.2,
+  "share_below": 28.13493,
+  "share_below_1dp": 28.1,
+  "diffusion": 25.09877,
+  "diffusion_1dp": 25.1,
+  "z_vs_2011_2019": 0.930601,
+  "z_vs_2011_2019_2dp": 0.93,
+  "thresholds": "strict > 3% / < 1%",
+  "n_used": 86,
+  "n_target": 86,
+  "component_count": "86 / 86",
+  "labels": {
+    "shares_diffusion_z": "(d)",
+    "official_indexes_and_weights": "V"
+  },
+  "snapshot_ids": [
+    "20261113T182124Z_breadth_uk"
+  ],
+  "research_status": "research prototype; not sealed; not a trade input"
+}

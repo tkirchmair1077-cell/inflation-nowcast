@@ -1,0 +1,27 @@
+{
+  "country": "EA",
+  "desk": "staff-ecb",
+  "data_date": "2026-09",
+  "data_date_iso": "2026-09",
+  "frequency": "monthly",
+  "share_above": 42.071299,
+  "share_above_1dp": 42.1,
+  "share_below": 27.681819,
+  "share_below_1dp": 27.7,
+  "diffusion": 14.38948,
+  "diffusion_1dp": 14.4,
+  "z_vs_2011_2019": 1.720203,
+  "z_vs_2011_2019_2dp": 1.72,
+  "thresholds": "strict > 3% / < 1%",
+  "n_used": 275,
+  "n_target": 275,
+  "component_count": "275 / 275",
+  "labels": {
+    "shares_diffusion_z": "(d)",
+    "official_indexes_and_weights": "V"
+  },
+  "snapshot_ids": [
+    "20261113T191620Z_breadth_ea"
+  ],
+  "research_status": "research prototype; not sealed; not a trade input"
+}
