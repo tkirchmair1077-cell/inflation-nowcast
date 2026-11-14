@@ -1,0 +1,2 @@
+country,desk,data_date,frequency,share_above,share_below,diffusion,z_vs_2011_2019,thresholds,n_used,n_target,component_count
+UK,staff-boe,2026-09,monthly,53.2337,28.13493,25.09877,0.930601,strict > 3% / < 1%,86,86,86 / 86

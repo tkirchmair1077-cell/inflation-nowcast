@@ -1,0 +1,2 @@
+country,desk,data_date,frequency,share_above,share_below,diffusion,z_vs_2011_2019,thresholds,n_used,n_target,component_count
+JP,staff-boj,2026-09,monthly,50.188171,12.858208,37.329963,2.466255,"strict > 2% / < 0%, 3-month trailing average of monthly shares",104,104,104 / 104

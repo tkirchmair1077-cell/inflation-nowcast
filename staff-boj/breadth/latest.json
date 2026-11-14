@@ -1,0 +1,27 @@
+{
+  "country": "JP",
+  "desk": "staff-boj",
+  "data_date": "2026-09",
+  "data_date_iso": "2026-09",
+  "frequency": "monthly",
+  "share_above": 50.188171,
+  "share_above_1dp": 50.2,
+  "share_below": 12.858208,
+  "share_below_1dp": 12.9,
+  "diffusion": 37.329963,
+  "diffusion_1dp": 37.3,
+  "z_vs_2011_2019": 2.466255,
+  "z_vs_2011_2019_2dp": 2.47,
+  "thresholds": "strict > 2% / < 0%, 3-month trailing average of monthly shares",
+  "n_used": 104,
+  "n_target": 104,
+  "component_count": "104 / 104",
+  "labels": {
+    "shares_diffusion_z": "(d)",
+    "official_indexes_and_weights": "V"
+  },
+  "snapshot_ids": [
+    "20261113T184418Z_breadth_jp"
+  ],
+  "research_status": "research prototype; not sealed; not a trade input"
+}

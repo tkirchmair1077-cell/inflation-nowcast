@@ -1,0 +1,83 @@
+[
+  {
+    "country": "AU",
+    "desk": "staff-fed",
+    "data_date": "2026Q3",
+    "data_date_iso": "2026-09",
+    "frequency": "quarterly",
+    "share_above": 63.163674,
+    "share_above_1dp": 63.2,
+    "share_below": 18.475263,
+    "share_below_1dp": 18.5,
+    "diffusion": 44.688411,
+    "diffusion_1dp": 44.7,
+    "z_vs_2011_2019": 3.365271,
+    "z_vs_2011_2019_2dp": 3.37,
+    "thresholds": "strict > 3% / < 1%",
+    "n_used": 87,
+    "n_target": 87,
+    "component_count": "87 / 87",
+    "labels": {
+      "shares_diffusion_z": "(d)",
+      "official_indexes_and_weights": "V"
+    },
+    "snapshot_ids": [
+      "20261113T180951Z_breadth_au"
+    ],
+    "research_status": "research prototype; not sealed; not a trade input"
+  },
+  {
+    "country": "NZ",
+    "desk": "staff-fed",
+    "data_date": "2026Q3",
+    "data_date_iso": "2026-09",
+    "frequency": "quarterly",
+    "share_above": 54.257981,
+    "share_above_1dp": 54.3,
+    "share_below": 29.470629,
+    "share_below_1dp": 29.5,
+    "diffusion": 24.787351,
+    "diffusion_1dp": 24.8,
+    "z_vs_2011_2019": 2.726373,
+    "z_vs_2011_2019_2dp": 2.73,
+    "thresholds": "strict > 3% / < 1%",
+    "n_used": 107,
+    "n_target": 107,
+    "component_count": "107 / 107",
+    "labels": {
+      "shares_diffusion_z": "(d)",
+      "official_indexes_and_weights": "V"
+    },
+    "snapshot_ids": [
+      "20261113T182814Z_breadth_nz"
+    ],
+    "research_status": "research prototype; not sealed; not a trade input"
+  },
+  {
+    "country": "CA",
+    "desk": "staff-fed",
+    "data_date": "2026-09",
+    "data_date_iso": "2026-09",
+    "frequency": "monthly",
+    "share_above": 32.643376,
+    "share_above_1dp": 32.6,
+    "share_below": 36.197496,
+    "share_below_1dp": 36.2,
+    "diffusion": -3.55412,
+    "diffusion_1dp": -3.6,
+    "z_vs_2011_2019": 0.253741,
+    "z_vs_2011_2019_2dp": 0.25,
+    "thresholds": "strict > 3% / < 1%",
+    "n_used": 204,
+    "n_target": 211,
+    "component_count": "204 / 211",
+    "labels": {
+      "shares_diffusion_z": "(d)",
+      "official_indexes_and_weights": "V"
+    },
+    "snapshot_ids": [
+      "20261113T190024Z_breadth_ca"
+    ],
+    "research_status": "research prototype; not sealed; not a trade input"
+  }
+]

@@ -1,0 +1,2 @@
+country,desk,data_date,frequency,share_above,share_below,diffusion,z_vs_2011_2019,thresholds,n_used,n_target,component_count
+US,staff-fed,2026-09,monthly,62.151267,21.405448,40.745819,2.468644,strict > 3% / < 1%,178,182,178 / 182

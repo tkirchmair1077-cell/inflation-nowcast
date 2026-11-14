@@ -1,0 +1,28 @@
+{
+  "country": "US",
+  "desk": "staff-fed",
+  "data_date": "2026-09",
+  "data_date_iso": "2026-09",
+  "frequency": "monthly",
+  "share_above": 62.151267,
+  "share_above_1dp": 62.2,
+  "share_below": 21.405448,
+  "share_below_1dp": 21.4,
+  "diffusion": 40.745819,
+  "diffusion_1dp": 40.7,
+  "z_vs_2011_2019": 2.468644,
+  "z_vs_2011_2019_2dp": 2.47,
+  "thresholds": "strict > 3% / < 1%",
+  "n_used": 178,
+  "n_target": 182,
+  "component_count": "178 / 182",
+  "labels": {
+    "shares_diffusion_z": "(d)",
+    "official_indexes_and_weights": "V"
+  },
+  "snapshot_ids": [
+    "20261110T160733Z_pce_cpi_items",
+    "20261110T165118Z_pce_cpi_relative_importance"
+  ],
+  "research_status": "research prototype; not sealed; not a trade input"
+}
