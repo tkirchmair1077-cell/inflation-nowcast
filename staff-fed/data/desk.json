@@ -390,14 +390,6 @@
       "why": "Hiring upside; broader slack increased."
     },
     {
-      "release": "Michigan preliminary November — sca.isr.umich.edu",
-      "date": "Checked 12 Nov 2026 (figures V)",
-      "quality": "V",
-      "actual": "Sentiment 51.0; current 51.0; expectations 50.9; 1-year inflation 4.3% (from 4.7%); long-run 3.4% (from 3.5%). Interviews 20 Oct–2 Nov.",
-      "prior": "October final 48.0 / 46.7 / 48.8",
-      "why": "Soft-data bounce. The primary page does not timestamp the release; secondary news dates it 6 Nov, not 9 Nov (U)."
-    },
-    {
       "release": "New York Fed SCE, October",
       "date": "9 Nov 2026",
       "quality": "V",
@@ -543,7 +535,6 @@
     "Checked 12 Nov 2026, ~07:40 Europe/Zurich (CET). (d) = own derivation; own estimate = staff judgment; V = checked against a primary source this run or, for rounded BLS NFP, productivity and CPI figures, carried from the 6 Nov Page and the 10 Nov staff CPI draft (BLS pages not re-opened this morning); U = secondary or not independently re-checked.",
     "MISSING: claims for the week ended 7 Nov (due 12 Nov, 14:30 Zurich). No New York Fed Staff Nowcast after 6 Nov in the official file. Current Treasury yields, a single verified December hike probability, and a reconciled post-CPI market reaction are n/a.",
     "BLS published no October CPI year-on-year change (October 2025 gap). Unrounded CPI 0.350 / 0.296 (d) is carried from the 10 Nov staff draft’s API derivation, not re-fetched on 12 Nov.",
-    "The University of Michigan primary page does not timestamp the release; secondary news reports date it 6 Nov, not 9 Nov (U).",
     "Q3 credit-card 90+ delinquency 12.9% remains U, not re-verified.",
     "Atlanta GDPNow and the New York Fed Staff Nowcast are model outputs, not official FOMC forecasts. Taylor figures are carried, not recalculated, and are not optimal-policy estimates.",
     "The US CPI nowcast-versus-actual chart and its error statistics come from the staff inflation-nowcast model’s already-produced pseudo out-of-sample backtest of 6 Nov 2026, 10:46 Europe/Zurich. That backtest uses revised (current-vintage) history, not a real-time vintage, and is not a track record of the staff-judgment nowcasts in the table. It ends at September 2026 and does not include the October CPI released on 10 Nov.",
