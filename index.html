@@ -198,6 +198,83 @@ footer{margin:10px 0 48px}
   </section>
 
   <!-- 2. Charts -->
+  <!--PRESSURE_COMMODITY:BEGIN-->
+  <section id="pressure-commodity" aria-labelledby="hPressureCommodity">
+
+<style>
+  #pressure-commodity .pc-intro{margin:0 0 14px;font-size:13px;color:var(--text-2);line-height:1.55;max-width:1100px}
+  #pressure-commodity .pc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+  @media (max-width:1100px){#pressure-commodity .pc-grid{grid-template-columns:minmax(0,1fr)}}
+  #pressure-commodity .pc-card h3{margin:0 0 4px}
+  #pressure-commodity .pc-kpis{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 12px}
+  #pressure-commodity .pc-kpi{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:8px 11px;min-width:7rem}
+  #pressure-commodity .pc-kpi .l{display:block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);font-weight:600}
+  #pressure-commodity .pc-kpi .v{display:block;font-size:17px;font-weight:650;margin-top:2px;color:var(--text)}
+  #pressure-commodity .pc-kpi .s{display:block;font-size:11px;color:var(--text-3)}
+  #pressure-commodity .pc-img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:#fff}
+  #pressure-commodity .pc-dir{margin:10px 0 0;padding:10px 12px;border-radius:10px;background:var(--neutral-bg);border:1px solid var(--border);font-size:13px;line-height:1.5;color:var(--text)}
+  #pressure-commodity .pc-dir .tag{display:inline-block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;color:var(--text-3);margin-bottom:4px}
+  #pressure-commodity .pc-credit{font-size:11.5px;color:var(--text-3);line-height:1.5;margin-top:12px;border-top:1px solid var(--border);padding-top:10px}
+  #pressure-commodity .pc-credit p{margin:0 0 6px}
+  #pressure-commodity .pc-credit a{color:var(--accent);word-break:break-word}
+  #pressure-commodity .pc-tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:14px}
+  #pressure-commodity .pc-tbl{width:100%;border-collapse:collapse;font-size:12px}
+  #pressure-commodity .pc-tbl th,#pressure-commodity .pc-tbl td{padding:6px 6px;border-bottom:1px solid var(--grid);text-align:right;white-space:nowrap}
+  #pressure-commodity .pc-tbl th:first-child,#pressure-commodity .pc-tbl td:first-child{text-align:left}
+  #pressure-commodity .pc-tbl th{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);font-weight:600;border-bottom:1px solid var(--border-strong)}
+  #pressure-commodity .pc-files{font-size:11.5px;color:var(--text-3);margin-top:8px}
+  #pressure-commodity .pc-files a{color:var(--accent)}
+  #pressure-commodity .pc-vb{margin-top:18px;border:1px solid var(--amber);background:var(--amber-bg);border-radius:12px;padding:12px 16px;font-size:12px;line-height:1.55;color:var(--text)}
+  #pressure-commodity .pc-vb h4{margin:0 0 6px;font-size:12.5px;font-weight:650}
+  #pressure-commodity .pc-vb p{margin:0 0 6px}
+  #pressure-commodity .pc-vb p:last-child{margin:0}
+  #pressure-commodity .zone-pill{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11px;font-weight:650}
+  #pressure-commodity .zone-pill.neutral{background:var(--neutral-bg);color:var(--text-2)}
+  #pressure-commodity .zone-pill.amber{background:var(--amber-bg);color:var(--amber)}
+  #pressure-commodity .zone-pill.red{background:var(--red-bg);color:var(--red)}
+  #pressure-commodity .zone-pill.green{background:var(--green-bg);color:var(--green)}
+</style>
+
+<style>
+  #pressure-commodity{--text:#0f1c30;--text-2:#56657c;--text-3:#8391a6;--border:#e2e7ee;--border-strong:#cfd7e2;--grid:#e8ecf2;--surface:#fff;--surface-2:#f9fafc;--neutral-bg:#eef1f5;--accent:#2f5d9e;--amber:#a9741a;--amber-bg:#fdf2d9;--red:#c4514c;--red-bg:#fbebea;--green:#2e8b5a;--green-bg:#e7f4ec}
+  #pressure-commodity .pc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+</style>
+
+    <div class="sec-head"><h2 id="hPressureCommodity">FIPI-US and commodity prices (USD)</h2><span class="hint">Staff constructions (d) · internal staff page</span></div>
+    <p class="pc-intro">The inflation-pressure gauge and inflation-breadth charts live on the staff-fed desk, not on this page. Shown here: the FIPI-US composite and the USD commodity dashboard. FIPI-US component values are not shown. Commodity lines are direction only, not a forecast. Internal staff use.</p>
+    <div class="pc-grid">
+    <div class="card pc-card">
+      <h3>FIPI-US</h3>
+      <div class="sub">Composite only; licensed component values are not shown</div>
+      <div class="pc-kpis"><div class="pc-kpi"><span class="l">FIPI-US</span><span class="v">+1.584274 (d)</span><span class="s">V12R, fixed 2000–2019, H2</span></div><div class="pc-kpi"><span class="l">Info date</span><span class="v">2026-10-30</span><span class="s">135 months</span></div></div>
+      <a href="pressure_commodity/fipi_us.png" target="_blank" rel="noopener"><img class="pc-img" src="pressure_commodity/fipi_us.png" alt="History of the FIPI-US composite, V12R, fixed 2000-2019 baseline, H2" width="1008" height="504" loading="lazy"></a>
+      
+      <div class="pc-credit"><p>FIPI-US composite (V12R, fixed 2000–2019 baseline, H2 pseudo-real-time). Composite built by us from public and licensed survey inputs; components not shown. Authors’ calculations (d). Internal staff use.</p></div>
+    </div>
+    <div class="card pc-card">
+      <h3>Commodity prices (USD)</h3>
+      <div class="sub">Block and three segments · data month 2026-10</div>
+      <div class="pc-kpis"><div class="pc-kpi"><span class="l">Block z</span><span class="v">+0.125 (d)</span><span class="s">neutral</span></div><div class="pc-kpi"><span class="l">Energy z</span><span class="v">+0.237</span></div><div class="pc-kpi"><span class="l">Food z</span><span class="v">+0.102</span></div><div class="pc-kpi"><span class="l">Base metals z</span><span class="v">-0.045</span></div></div>
+      <a href="pressure_commodity/commodity_block.png" target="_blank" rel="noopener"><img class="pc-img" src="pressure_commodity/commodity_block.png" alt="Commodity block and Energy, Food and Base metals z-scores over the last 13 months" width="1008" height="504" loading="lazy"></a>
+      <div class="pc-dir"><span class="tag">Direction only · not a forecast</span><div>Druck auf Energie- und Food-PCE über 3–12M: neutral. Nur Richtung, keine Prognose.</div><div>Pressure on energy and food PCE over 3–12M: neutral. Direction only, not a forecast.</div></div>
+      <div class="pc-tblwrap"><table class="pc-tbl">
+        <thead><tr>
+          <th>Series</th><th>Value</th><th>6M chg</th><th>z</th><th>Zone</th>
+          <th>t−3</th><th>t−6</th><th>t−12</th>
+        </tr></thead>
+        <tbody><tr><td>Block</td><td>0.125</td><td>—</td><td>+0.125</td><td><span class="zone-pill neutral">neutral</span></td><td>0.458</td><td>1.924</td><td>0.048</td></tr><tr><td>Energy</td><td>159.6</td><td>+8.43</td><td>+0.237</td><td><span class="zone-pill neutral">neutral</span></td><td>108.8</td><td>146.7</td><td>84.3</td></tr><tr><td>Food</td><td>121.9</td><td>+2.41</td><td>+0.102</td><td><span class="zone-pill neutral">neutral</span></td><td>118.0</td><td>119.0</td><td>106.3</td></tr><tr><td>Base metals</td><td>161.9</td><td>+1.18</td><td>-0.045</td><td><span class="zone-pill neutral">neutral</span></td><td>157.5</td><td>160.0</td><td>130.6</td></tr><tr><td>WB Total</td><td>149.2</td><td>+6.36</td><td>+0.285</td><td><span class="zone-pill neutral">neutral</span></td><td>114.5</td><td>140.0</td><td>94.4</td></tr><tr><td>WTI</td><td>102.07</td><td>+1.73</td><td>-0.02</td><td><span class="zone-pill neutral">neutral</span></td><td>80.46</td><td>100.32</td><td>60.89</td></tr><tr><td>Henry Hub</td><td>2.99</td><td>+7.64</td><td>+0.197</td><td><span class="zone-pill neutral">neutral</span></td><td>2.89</td><td>2.77</td><td>3.19</td></tr></tbody>
+      </table></div>
+      <div class="pc-credit"><p>Source: The World Bank: Commodity Price Data (The Pink Sheet), Nov 2026 edition (retrieved 15 Nov 2026), licensed under CC BY 4.0 (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">https://creativecommons.org/licenses/by/4.0/</a>); U.S. Energy Information Administration (12 Nov 2026). 6M changes and z-scores: own calculations.</p></div>
+    </div>
+    </div>
+    <div class="pc-vb">
+      <h4>Data and sources — caveats</h4>
+      <p>Validated on current-vintage data only; energy PCE RMSE 2.5–4 % better than AR, food PCE 4–9 % better than AR at 6–12M; food lead strongest since 2008; not valid for core PCE.</p>
+      <p>Composite built by us from public and licensed survey inputs; components not shown. Source: The World Bank: Commodity Price Data (The Pink Sheet), Nov 2026 edition (retrieved 15 Nov 2026), licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); U.S. Energy Information Administration (12 Nov 2026). 6M changes and z-scores: own calculations.</p>
+    </div>
+  </section>
+<!--PRESSURE_COMMODITY:END-->
+
   <section id="charts">
     <div class="sec-head"><h2>2 · Charts</h2><span class="hint">Real data where it exists · "no data" where it does not</span></div>
 

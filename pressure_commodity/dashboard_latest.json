@@ -1,0 +1,178 @@
+{
+ "meta": {
+  "snapshot": "20261115T1051Z_commodity_dashboard_usd",
+  "created_utc": "20261115T1051Z",
+  "created_zurich": "2026-11-15 11:52",
+  "licence_status": "option_a_internal_staff",
+  "credit_line": "Source: The World Bank: Commodity Price Data (The Pink Sheet), Nov 2026 edition (retrieved 15 Nov 2026), licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); U.S. Energy Information Administration (12 Nov 2026). 6M changes and z-scores: own calculations.",
+  "eia_release": {
+   "EIA_WTI": {
+    "Release Date": "11/12/2026",
+    "Next Release Date": "11/18/2026"
+   },
+   "EIA_HH": {
+    "Release Date": "11/12/2026",
+    "Next Release Date": "11/18/2026"
+   }
+  },
+  "sources": {
+   "CMO-Historical-Data-Monthly.xlsx": {
+    "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+    "bytes": 587760,
+    "sha256": "3c8d9d8dbb48342fdbf24777c39a8ce8964cc2fd0958f72f6779e6e4ad99cde2",
+    "last_modified": null
+   },
+   "RWTCm.xls": {
+    "url": "https://www.eia.gov/dnav/pet/hist_xls/RWTCm.xls",
+    "bytes": 55808,
+    "sha256": "dd3b7182897a0e1525e01dd24dd425f88b5f64523aa134a42de88aae6d4702b6",
+    "last_modified": "Thu, 12 Nov 2026 17:36:10 GMT"
+   },
+   "RNGWHHDm.xls": {
+    "url": "https://www.eia.gov/dnav/ng/hist_xls/RNGWHHDm.xls",
+    "bytes": 49664,
+    "sha256": "b19dda071c35a390d75005a12e6674b6f8e50a21d58d56e7bae81d814de76e1a",
+    "last_modified": "Thu, 12 Nov 2026 14:50:53 GMT"
+   }
+  },
+  "method": "R6 = 100 ln(P/P[-6]); z recursive over all history to the month incl. (ddof=1, >=48 obs), capped +-3; BLOCK as in LABEL",
+  "labels": "values V (published), z/zones (d) derived; nothing imputed",
+  "credit_line_de": "Quelle: The World Bank: Commodity Price Data (The Pink Sheet), Ausgabe Nov. 2026 (abgerufen am 15.11.2026), lizenziert unter CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); U.S. Energy Information Administration (12.11.2026). 6M-Änderungen und z-Scores: eigene Berechnungen."
+ },
+ "series": {
+  "WB_ENERGY": {
+   "series": "WB_ENERGY",
+   "label": "Energy (WB index)",
+   "unit": "index 2010=100 (nominal USD)",
+   "latest_month": "2026-10",
+   "value": 159.6,
+   "chg_6m_logpct": 8.43,
+   "z": 0.237,
+   "zone": "neutral",
+   "value_t-3": 108.8,
+   "value_t-6": 146.7,
+   "value_t-12": 84.3,
+   "z_t-3": 0.57,
+   "z_t-6": 2.33,
+   "z_t-12": -0.313
+  },
+  "WB_FOOD": {
+   "series": "WB_FOOD",
+   "label": "Food (WB index)",
+   "unit": "index 2010=100 (nominal USD)",
+   "latest_month": "2026-10",
+   "value": 121.9,
+   "chg_6m_logpct": 2.41,
+   "z": 0.102,
+   "zone": "neutral",
+   "value_t-3": 118.0,
+   "value_t-6": 119.0,
+   "value_t-12": 106.3,
+   "z_t-3": 0.438,
+   "z_t-6": 0.928,
+   "z_t-12": -0.457
+  },
+  "WB_BASE_METALS_EX_IRON": {
+   "series": "WB_BASE_METALS_EX_IRON",
+   "label": "Base metals ex iron ore (WB index)",
+   "unit": "index 2010=100 (nominal USD)",
+   "latest_month": "2026-10",
+   "value": 161.9,
+   "chg_6m_logpct": 1.18,
+   "z": -0.045,
+   "zone": "neutral",
+   "value_t-3": 157.5,
+   "value_t-6": 160.0,
+   "value_t-12": 130.6,
+   "z_t-3": 0.062,
+   "z_t-6": 1.238,
+   "z_t-12": 0.883
+  },
+  "BLOCK": {
+   "series": "BLOCK",
+   "label": "Commodity block (mean of Energy/Food/Base-metals z, restandardised, cap +-3)",
+   "unit": "z",
+   "latest_month": "2026-10",
+   "value": 0.125,
+   "chg_6m_logpct": null,
+   "z": 0.125,
+   "zone": "neutral",
+   "value_t-3": 0.458,
+   "value_t-6": 1.924,
+   "value_t-12": 0.048,
+   "z_t-3": 0.458,
+   "z_t-6": 1.924,
+   "z_t-12": 0.048
+  },
+  "WB_TOTAL": {
+   "series": "WB_TOTAL",
+   "label": "Total commodity index (WB; energy 67%/non-energy 33%)",
+   "unit": "index 2010=100 (nominal USD)",
+   "latest_month": "2026-10",
+   "value": 149.2,
+   "chg_6m_logpct": 6.36,
+   "z": 0.285,
+   "zone": "neutral",
+   "value_t-3": 114.5,
+   "value_t-6": 140.0,
+   "value_t-12": 94.4,
+   "z_t-3": 0.631,
+   "z_t-6": 2.524,
+   "z_t-12": -0.273
+  },
+  "EIA_WTI": {
+   "series": "EIA_WTI",
+   "label": "WTI crude oil (EIA)",
+   "unit": "USD/bbl",
+   "latest_month": "2026-10",
+   "value": 102.07,
+   "chg_6m_logpct": 1.73,
+   "z": -0.02,
+   "zone": "neutral",
+   "value_t-3": 80.46,
+   "value_t-6": 100.32,
+   "value_t-12": 60.89,
+   "z_t-3": 1.066,
+   "z_t-6": 1.896,
+   "z_t-12": -0.241
+  },
+  "EIA_HH": {
+   "series": "EIA_HH",
+   "label": "Henry Hub natural gas (EIA)",
+   "unit": "USD/MMBtu",
+   "latest_month": "2026-10",
+   "value": 2.99,
+   "chg_6m_logpct": 7.64,
+   "z": 0.197,
+   "zone": "neutral",
+   "value_t-3": 2.89,
+   "value_t-6": 2.77,
+   "value_t-12": 3.19,
+   "z_t-3": -2.691,
+   "z_t-6": -0.414,
+   "z_t-12": -0.206
+  }
+ },
+ "headline_addon": {
+  "type": "direction_only (no point forecast)",
+  "signal": "BLOCK z (validated long-history signal for energy and food PCE, OOS 1975-2026); segment z shown for context",
+  "data_month": "2026-10",
+  "horizon": "3-12 months",
+  "energy_pce": {
+   "block_z": 0.125,
+   "energy_segment_z": 0.237,
+   "direction": "neutral"
+  },
+  "food_pce": {
+   "block_z": 0.125,
+   "food_segment_z": 0.102,
+   "direction": "neutral"
+  },
+  "zones": "z>=1 strong_up; 0.5..1 up; -0.5..0.5 neutral; -1..-0.5 down; <=-1 strong_down",
+  "line_en": "Headline add-on (2026-10): commodity block z +0.12. Pressure on energy and food PCE over 3–12M: neutral. Direction only, not a forecast.",
+  "line_de": "Headline-Zusatz (2026-10): Rohstoffblock z +0.12. Druck auf Energie- und Food-PCE über 3–12M: neutral. Nur Richtung, keine Prognose.",
+  "caveats": "Validated on current-vintage data only; energy PCE RMSE 2.5–4 % better than AR, food PCE 4–9 % better than AR at 6–12M; food lead strongest since 2008; not valid for core PCE.",
+  "direction_line_en": "Pressure on energy and food PCE over 3–12M: neutral. Direction only, not a forecast.",
+  "direction_line_de": "Druck auf Energie- und Food-PCE über 3–12M: neutral. Nur Richtung, keine Prognose."
+ }
+}
