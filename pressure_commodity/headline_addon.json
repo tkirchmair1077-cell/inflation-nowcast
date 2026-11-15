@@ -1,0 +1,22 @@
+{
+ "type": "direction_only (no point forecast)",
+ "signal": "BLOCK z (validated long-history signal for energy and food PCE, OOS 1975-2026); segment z shown for context",
+ "data_month": "2026-10",
+ "horizon": "3-12 months",
+ "energy_pce": {
+  "block_z": 0.125,
+  "energy_segment_z": 0.237,
+  "direction": "neutral"
+ },
+ "food_pce": {
+  "block_z": 0.125,
+  "food_segment_z": 0.102,
+  "direction": "neutral"
+ },
+ "zones": "z>=1 strong_up; 0.5..1 up; -0.5..0.5 neutral; -1..-0.5 down; <=-1 strong_down",
+ "line_en": "Headline add-on (2026-10): commodity block z +0.12. Pressure on energy and food PCE over 3–12M: neutral. Direction only, not a forecast.",
+ "line_de": "Headline-Zusatz (2026-10): Rohstoffblock z +0.12. Druck auf Energie- und Food-PCE über 3–12M: neutral. Nur Richtung, keine Prognose.",
+ "caveats": "Validated on current-vintage data only; energy PCE RMSE 2.5–4 % better than AR, food PCE 4–9 % better than AR at 6–12M; food lead strongest since 2008; not valid for core PCE.",
+ "direction_line_en": "Pressure on energy and food PCE over 3–12M: neutral. Direction only, not a forecast.",
+ "direction_line_de": "Druck auf Energie- und Food-PCE über 3–12M: neutral. Nur Richtung, keine Prognose."
+}

@@ -25,3 +25,7 @@ Omitted from this public page: third-party inflation-nowcast model readings; sec
 Quality labels: **V** verified, **U** unverified, **(d)** derived, **own estimate** = staff judgment.
 
 This page is a staff-style research compilation, not official central-bank staff work. Not investment advice. After editing the JSON, run `python3 ../_build/build.py` and `python3 ../_build/leak_check.py`.
+
+## Inflation pressure, FIPI-US and commodity prices (15 Nov 2026)
+
+A section immediately after Inflation breadth shows (1) the underlying inflation-pressure composite z since 2000 with zone bands, (2) the FIPI-US composite only (V12R, fixed 2000–2019 baseline, H2; components not shown), and (3) the USD commodity dashboard (World Bank Pink Sheet and EIA). Assets live in `pressure_commodity/`. Internal staff use.
