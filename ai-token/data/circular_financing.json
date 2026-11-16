@@ -5,7 +5,7 @@
   "name": "AI Circular Financing Alert Bot",
   "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
  },
- "as_of": "2026-11-16T05:55:00+01:00",
+ "as_of": "2026-11-16T07:05:00+01:00",
  "timezone": "Europe/Zurich",
  "title": "Circular Financing Watch, as of Thu 12 Nov 2026 ~16:45 Europe/Zurich",
  "status": {
@@ -95,9 +95,9 @@
   ]
  },
  "summary": {
-  "text": "The 12 Nov Elevated alert still stands: Nvidia's 8-K says Jensen Huang resigned as CEO effective 11 Nov with the CFO as interim CEO and results due 17 Nov (V), and Nebius moved 2026 revenue to the low end of $3.0–3.4bn with one unnamed customer holding 75% of $4.04bn of receivables (V). Secondary reports relayed on 14–15 Nov say the interim CEO resisted a proposed $250bn credit backstop for OpenAI and that Nvidia is expected to slow AI investing and credit guarantees, while binding contracts go ahead (U, single source, no company comment); Nvidia's 10-Q already caps its SB Energy / OpenAI Ohio guarantees at $105bn (V). A Bloomberg report that Nvidia's $500bn financing platform has no deals and partners want more than 25% residual-value support remains without a second source (U). Cerebras's 10-Q says capacity delivered to OpenAI is behind the contracted schedule, with service credits and possible tranche terminations (V). CoreWeave closed 13 Nov at $53.13, down 6.1% on the day, and Oracle at $125.35, down 1.4% (U, (d)), while CoreWeave's reported ~$4bn Meta-backed loan at about 7.5% points against acute credit stress at that node (U); no publishable dated CDS print after 10 Nov.",
-  "as_of": "2026-11-16T05:55:00+01:00",
-  "source": "AI Alert morning scan 16 Nov 2026 (~05:40–05:55 Europe/Zurich); SEC EDGAR (Nvidia 10-Q and 8-K, Nebius 6-K, Cerebras 10-Q), Yahoo Finance, AI Affairs, Bloomberg via The Economic Times, Semafor, exchange-data closes; independent check pending"
+  "text": "The 12 Nov Elevated alert still stands: Nvidia's 8-K says Jensen Huang resigned as CEO effective 11 Nov with the CFO as interim CEO and results due 17 Nov (V), and Nebius moved 2026 revenue to the low end of $3.0–3.4bn with one unnamed customer holding 75% of $4.04bn of receivables (V). Secondary reports relayed on 14–15 Nov say the interim CEO resisted a proposed $250bn credit backstop for OpenAI and that Nvidia is expected to slow AI investing and credit guarantees, while binding contracts go ahead (U, single source, no company comment); Nvidia's 10-Q already caps its SB Energy / OpenAI Ohio guarantees at $105bn (V). A Bloomberg report that Nvidia's $500bn financing platform has no deals and partners want more than 25% residual-value support remains without a second source (U). Cerebras's 10-Q says capacity delivered to OpenAI is behind the contracted schedule, with service credits and possible tranche terminations (V). CoreWeave closed 13 Nov at $53.13, down 6.1% on the day, and Oracle at $125.35, down 1.4% (U, (d)), while CoreWeave's reported ~$4bn Meta-backed loan at about 7.5% points against acute credit stress at that node (U); no publishable dated CDS print after 10 Nov. SoftBank's Q2 FY2026 report (10 Nov) gives no OpenAI profit or loss figure and records no gain or loss on its OpenAI stake for April–September 2026, holding the fair value at $99.6bn against $54.6bn cost (V).",
+  "as_of": "2026-11-16T07:05:00+01:00",
+  "source": "AI Alert morning scan 16 Nov 2026 (~05:40–05:55 Europe/Zurich); SEC EDGAR (Nvidia 10-Q and 8-K, Nebius 6-K, Cerebras 10-Q), Yahoo Finance, AI Affairs, Bloomberg via The Economic Times, Semafor, exchange-data closes; independent check pending; SoftBank Group Q2 FY2026 financial report and investor-briefing materials (group.softbank, 10 Nov 2026)"
  },
  "items": [
   {
@@ -1143,6 +1143,88 @@
    "notes": "Placement closes immediately after the IPO and is contingent on IPO closing, stockholder approval and no court block; the IPO itself is not contingent on the placement. Automatic termination includes failure to sign the underwriting agreement by 31 Jan 2027. Google's $10bn purchase reduces the Google 2026 NPA from $20bn to $10bn on close (V). Individual supplier commitments from Amendment 1 (Amazon ≥$110bn, Google CSP ≥~$121.3bn, SpaceXAI up to $120.5bn, Broadcom leases ~$161.2bn rent, Broadcom-related convertible note capacity up to $42bn) were recorded as V on 8 Nov; only the aggregate, Microsoft line and cancellable totals were re-stated as changed in the 10 Nov Amendment 2 check."
   },
   {
+   "id": "softbank-openai-pl-q2fy2026",
+   "node": "OpenAI / SoftBank Group",
+   "type": "disclosure",
+   "title": "SoftBank Q2 FY2026: no OpenAI profit or loss disclosed; no gain or loss recorded on the OpenAI stake for Apr–Sep 2026 (fair value unchanged at $99.6bn)",
+   "as_of": "2026-11-10",
+   "tier_relevance": "Map update to the OpenAI and SoftBank nodes, requested by Thomas; below Watch on its own. SoftBank's Q2 FY2026 documents give no OpenAI net income or loss for Jul–Sep 2026. What they do state is that SoftBank booked no gain or loss on OpenAI because it left the valuation unchanged from March 2026, so the OpenAI mark has not yet moved SoftBank's P/L or the OpenAI-share-backed loan clause.",
+   "tone": "neutral",
+   "tone_source": "bot",
+   "relationship": "SVF2 holds OpenAI preferred and common shares as financial assets at fair value through profit or loss (FVTPL); fair-value changes run through 'Gain on investments - SoftBank Vision Funds' (financial report p.83, V). SoftBank does not use the equity method for OpenAI and does not report OpenAI's own profit or loss. A future mark-down would hit SoftBank's earnings and could trigger the cash-collateral / prepayment clauses of the SBG-guaranteed $10bn loan using OpenAI shares (see SoftBank Q2 item).",
+   "counterparties": [
+    "OpenAI",
+    "SoftBank Vision Fund 2"
+   ],
+   "figures": [
+    {
+     "label": "OpenAI's own net income/loss, Jul–Sep 2026 (or Apr–Sep 2026)",
+     "value": "not disclosed",
+     "unit": "n/a",
+     "quality": "V",
+     "note": "Not stated in the financial report, earnings datasheet (PDF and xlsx), earnings presentation, investor-briefing accounting section or the briefing Q&A. No OpenAI-level P/L is derived here."
+    },
+    {
+     "label": "SoftBank investment gain/loss on OpenAI, FY2026 Q1–Q2 (Apr–Sep 2026, six-month cumulative)",
+     "value": "none recorded",
+     "unit": "JPY / USD",
+     "quality": "V",
+     "note": "Verbatim: \"No investment gain or loss was recorded on OpenAI.\" (financial report p.14, SVF2, April–September 2026). Investor briefing, Accounting 4: \"No gain/loss recorded in FY2026 Q1-Q2 as the valuation was unchanged from Mar 2026\"; Accounting 12: \"No investment gain or loss was recorded on OpenAI\". A separate Jul–Sep figure is not stated; the Q1–Q2 statement covers that quarter."
+    },
+    {
+     "label": "Fair value / cumulative investment cost of OpenAI investments at 30 Sep 2026",
+     "value": "99.6 / 54.6",
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Investor briefing, Accounting 4. Cumulative investment gains $45.0bn (FY2025 $43.9bn, FY2024 $1.1bn). Cost includes indirect investments, net of disposals."
+    },
+    {
+     "label": "Carrying amount of OpenAI shares at 30 Sep 2026",
+     "value": 15671.5,
+     "unit": "JPY billion",
+     "quality": "V",
+     "note": "Financial report p.25; up ¥2,946.0bn on the $20.0bn of follow-on investments in the period."
+    },
+    {
+     "label": "Comparison: OpenAI investment gains in Q2 FY2025 (Jul–Sep 2025)",
+     "value": 2156.3,
+     "unit": "JPY billion",
+     "quality": "V",
+     "note": "Investor briefing, Accounting 3: ¥980.1bn unrealized valuation gain plus ¥1,176.2bn derivative gain on the OpenAI Forward Contract."
+    },
+    {
+     "label": "OpenAI ARR as of Sep 2026, as cited by SoftBank",
+     "value": "~50",
+     "unit": "USD billion",
+     "quality": "V",
+     "note": "Earnings presentation p.40: \"OpenAI ARR ... ~50 ... Jul - Sep up 70%+\" (ARR: annualized revenue run rate). SoftBank cites OpenAI's blog (18 Jan 2026) and a LinkedIn post by OpenAI's CFO (9 Oct 2026). A run-rate, not reported revenue or profit; SoftBank is an interested party."
+    }
+   ],
+   "sources": [
+    {
+     "title": "SoftBank Group Consolidated Financial Report, six months ended 30 Sep 2026 (pp.14, 25, 83)",
+     "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q2fy2026_01_en.pdf",
+     "kind": "primary"
+    },
+    {
+     "title": "SoftBank Q2 FY2026 investor briefing, Accounting section (slides Accounting 3, 4, 12)",
+     "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/investor-accounting_q2fy2026_01_en.pdf",
+     "kind": "primary"
+    },
+    {
+     "title": "SoftBank Q2 FY2026 earnings presentation (p.40, OpenAI ARR)",
+     "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/earnings-presentation_q2fy2026_01_en.pdf",
+     "kind": "primary"
+    },
+    {
+     "title": "SoftBank Q2 FY2026 investor briefing Q&A, 10 Nov 2026 (valuation unchanged at quarter-end)",
+     "url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/investor-presentation_q2fy2026_02_en.pdf",
+     "kind": "primary"
+    }
+   ],
+   "notes": "Published 10 Nov 2026 (earnings announcement); presentations revised 11 Nov and one slide updated 12 Nov on power equipment, not on OpenAI. The financial report is not subject to interim review and the English version is a reference translation. In the Q&A, SoftBank said Anthropic's listing and trading will be one factor when it reassesses the OpenAI valuation."
+  },
+  {
    "id": "softbank-q2",
    "node": "SoftBank Group",
    "type": "earnings",
@@ -1631,6 +1713,7 @@
   }
  ],
  "caveats": [
+  "16 Nov (added ~07:05 CET at Thomas's request): SoftBank's Q2 FY2026 documents (10 Nov) do not disclose OpenAI's own net income or loss for Jul–Sep 2026 or any other period, and SoftBank does not account for OpenAI under the equity method (FVTPL), so no 'SoftBank share' of OpenAI profit exists either. The only P/L figure is SoftBank's own investment gain/loss on OpenAI: none recorded for Apr–Sep 2026 because the valuation was held at the March 2026 level (V). A separate Jul–Sep line is not printed; the zero follows from the six-month statement. No OpenAI-level figure has been derived from SoftBank's stake, ownership (~13%) or fair value. The ~$50bn ARR is an OpenAI-sourced run-rate cited in SoftBank's deck, not audited revenue. The 30 Sep fair value predates OpenAI's reported current round and Anthropic's listing.",
   "16 Nov AM: the reported Nvidia pullback from credit guarantees and the $250bn / $125bn OpenAI backstop figures come from secondary relays of a single paywalled 12 Nov report and a Wccftech report (U); the two figures are not reconciled with each other or with the $105bn maximum exposure in Nvidia's 10-Q (V). No Nvidia or OpenAI comment. Friday closes for Nvidia and Nebius were not retrieved in this scan. No dated CDS for Oracle, CoreWeave or Nvidia after 10 Nov is publishable. The independent check requested at about 05:40 CET had not replied at publication.",
   "13 Nov PM: the Nvidia financing-platform report and the CoreWeave Meta-backed loan remain single-source, anonymous-source reports (U) without filings or company confirmation; the independent check at about 16:26 CET found no second source for either. The 01:52 CET stamp on the financing-platform report is a last-updated time; first publication is unconfirmed and may be 12 Nov. Nvidia's Q2 FY27 10-Q shows $36bn of AI-cloud agreements, $20bn of third-party leases and $3.5bn of guarantees (V), but the 25% residual-value guarantee, the $500bn figure and the word \"backstop\" do not appear in that filing. Intraday moves are exchange-data quotes at 16:20 CET compared with 12 Nov closes by own calculation (U, (d)): NVDA about -3.6%, CRWV about -11.0%, NBIS about -14.4%, ORCL about -4.0%, SoftBank US about -8.1% and Tokyo about -5.1%. A CNBC yield of 5.77% on Nvidia's 2031 notes sits inside the 12 Nov intraday range and is not the last trade (U); a claim that the yield was nearly 6% higher on the week conflicts with the last-to-last move from 5.60% to 5.68% (+8bp, (d)). No publishable dated CDS print after 10 Nov.",
   "12–13 Nov: 12 Nov closes (NVDA $166.19, −4.34%; NBIS $128.64, −16.84%; CRWV $56.60, −6.86%; ORCL $127.11, −0.99%) are from exchange data APIs and news quotes (U). No publishable dated CDS print after 10 Nov. CoreWeave's 2032 bond printed around 80.75 at 15:26 CET and about 82 at 22:15 CET on 12 Nov (TRACE, U). The reported DOJ antitrust probe of Nvidia is single-source (U). OpenAI round size is conflicting ($15bn per CNBC versus talk of a $30bn round, both U, no primary confirmation). Nebius customers C, D and E are unnamed in the filing; mapping them to Microsoft, Meta or others would be speculation, and the filing does not explain the receivables jump.",
