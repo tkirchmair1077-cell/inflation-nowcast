@@ -21,8 +21,8 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Current — note 12 Nov, 07:50; data cut-off 11 Nov, 17:55 · Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:50 Europe/Zurich",
-    "banner": "<b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:50 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged."
+    "label": "Current — note 12 Nov, 07:50; data cut-off 11 Nov, 17:55 · Data refreshed 2026-11-16, commentary as of 12 Nov 2026, 07:50 Europe/Zurich",
+    "banner": "<b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:50 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged. <b>Data refreshed 2026-11-16, commentary as of 12 Nov 2026, 07:50 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged."
   },
   "summary": {
     "heading": "Current state",
@@ -552,9 +552,9 @@
     ]
   },
   "data_refresh": {
-    "data_as_of": "2026-11-13",
+    "data_as_of": "2026-11-16",
     "commentary_as_of": "12 Nov 2026, 07:50 Europe/Zurich",
-    "stamp": "Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:50 Europe/Zurich",
-    "latest": "ECB public leading charts redrawn 2026-11-13 07:03:13 Europe/Zurich"
+    "stamp": "Data refreshed 2026-11-16, commentary as of 12 Nov 2026, 07:50 Europe/Zurich",
+    "latest": "ECB public leading charts redrawn 2026-11-13 07:03:13 Europe/Zurich; ecb:YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y last 2026-11-12=3.3672459164; ecb:YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_3M last 2026-11-12=2.6357552721; ecb:CISS.D.U2.Z0Z.4F.EC.SS_CIN.IDX last 2026-11-12=0.0065077495417175555 (daily keys; leading charts not redrawn until the weekly panel is rebuilt)"
   }
 }
