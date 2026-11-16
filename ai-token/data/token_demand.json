@@ -5,65 +5,65 @@
     "name": "Token Demand Bot",
     "id": "1ff4ca99-21f4-48d1-a702-c2ad3bc5fe5d"
   },
-  "as_of": "2026-11-13T06:12:00+01:00",
+  "as_of": "2026-11-16T06:10:00+01:00",
   "timezone": "Europe/Zurich",
   "edition": "2026-11-12",
   "title": "AI Token Demand Monitor, as of Thu 12 Nov 2026 (Europe/Zurich)",
-  "sources_retrieved": "2026-11-13T06:03:00+01:00",
-  "bottom_line": "View: complete-week OpenRouter volume made a new high in the week of 2 Nov (209.5T tokens, +8.2% WoW, d). Trailing 7-day tokens to 11 Nov were 207.0T, only +1.2% versus the non-overlapping 7 days to 3 Nov, and paid tokens were slightly lower (193.6T, −0.9%, d). CoreWeave reported a $132.5bn revenue backlog at 30 Sep (V, company IR, 10 Nov). View: token volume still supports the capex trajectory; financing terms, not demand, remain the binding transmission risk.",
+  "sources_retrieved": "2026-11-16T06:10:00+01:00",
+  "bottom_line": "View: complete-week OpenRouter volume made a new high in the week of 9 Nov (211.3T tokens, +0.8% WoW, d), but growth slowed from +8.2%. Trailing 7-day tokens to 15 Nov were 211.3T (+1.8% vs the 7 days to 7 Nov, d); paid tokens 199.4T (+1.9%, d). CoreWeave reported a $132.5bn revenue backlog at 30 Sep (V, company IR, 10 Nov). View: token volume still supports the capex trajectory; financing terms, not demand, remain the binding transmission risk.",
   "readings": [
     {
       "id": "openrouter_complete_week",
-      "label": "OpenRouter weekly tokens (complete week of 2 Nov)",
-      "value": 209.5,
+      "label": "OpenRouter weekly tokens (complete week of 9 Nov)",
+      "value": 211.3,
       "unit": "trillion tokens",
       "quality": "(d)",
-      "wow_pct": 8.2,
-      "g4_pct": 21.9,
-      "note": "Series high for a complete week. Derived from OpenRouter weekly chart snapshots (top-9 models + Others; API cachedAt 12 Nov 07:31 Europe/Zurich). WoW after +3.0% the prior week. Week-of-2-Nov total was still partial (202.3T) in the 8 Nov pack and is now final at 209.5T (unchanged between the 11 Nov and 12 Nov snapshots).",
+      "wow_pct": 0.8,
+      "g4_pct": 28.8,
+      "note": "New series high for a complete week (prior high 209.5T, week of 2 Nov, +8.2% WoW). Derived from OpenRouter weekly chart (top-9 models + Others; fetched 16 Nov 06:10 Europe/Zurich). +28.8% versus the week of 12 Oct (4 weeks, d). The week was partial in the 15 Nov pack (204.2T) and is now final.",
       "source_url": "https://openrouter.ai/rankings",
-      "as_of": "2026-11-02"
+      "as_of": "2026-11-09"
     },
     {
       "id": "openrouter_partial_week",
-      "label": "OpenRouter week of 9 Nov (partial)",
-      "value": 133.2,
+      "label": "OpenRouter week of 16 Nov (partial)",
+      "value": 4.6,
       "unit": "trillion tokens",
       "quality": "(d)",
-      "note": "13 Nov 06:03 Europe/Zurich snapshot (API cachedAt); the week is open through 15 Nov. 133.2T is 63.6% of the prior complete week (d). Shown only as a light bar, not used as a reading.",
+      "note": "16 Nov 06:10 Europe/Zurich fetch; the week has only just opened (first hours). Shown only as a light bar, not used as a reading.",
       "source_url": "https://openrouter.ai/rankings",
-      "as_of": "2026-11-13T06:03:00+01:00"
+      "as_of": "2026-11-16T06:10:00+01:00"
     },
     {
       "id": "openrouter_trailing7d",
-      "label": "OpenRouter 7 days to 12 Nov",
-      "value": 209.7,
+      "label": "OpenRouter 7 days to 15 Nov",
+      "value": 211.3,
       "unit": "trillion tokens",
       "quality": "(d)",
-      "wow_pct": 2.5,
-      "note": "Versus the non-overlapping 7 days to 3 Nov (d). Paid 196.7T (+0.7%, d); free/stealth 13.0T (6.2% of the window). The 7 days to 11 Nov were 207.0T (paid 193.6T, −0.9%, d).",
+      "wow_pct": 1.8,
+      "note": "Versus the non-overlapping 7 days to 7 Nov, 207.5T (d). Paid 199.4T (+1.9% vs 195.6T, d); free/stealth 11.9T (5.6% of the window). Window equals the complete week of 9 Nov.",
       "source_url": "https://openrouter.ai/rankings",
-      "as_of": "2026-11-12"
+      "as_of": "2026-11-15"
     },
     {
       "id": "openrouter_deepseek_share",
       "label": "DeepSeek share of OpenRouter 7-day tokens",
-      "value": 37.1,
+      "value": 38.8,
       "unit": "%",
       "quality": "(d)",
-      "note": "7 days to 7 Nov reading was 39.1%; 7 days to 10 Nov was 37.7% (d). Spend shares unpublished since the 7 days to 10 Oct.",
+      "note": "7 days to 7 Nov reading was 39.1%; 7 days to 11 Nov was 37.1% (d). Spend shares unpublished since the 7 days to 10 Oct.",
       "source_url": "https://openrouter.ai/rankings",
-      "as_of": "2026-11-11"
+      "as_of": "2026-11-15"
     },
     {
       "id": "openrouter_frontier_trio_share",
       "label": "Anthropic + OpenAI + Google share of OpenRouter 7-day tokens",
-      "value": 18.2,
+      "value": 18.9,
       "unit": "%",
       "quality": "(d)",
-      "note": "7 days to 7 Nov reading was 18.8%. Individual shares, 7 days to 11 Nov: OpenAI 8.51%, Anthropic 6.67%, Google 3.05%.",
+      "note": "7 days to 7 Nov reading was 18.8%. Individual shares, 7 days to 15 Nov: OpenAI 8.53%, Anthropic 6.97%, Google 3.38%.",
       "source_url": "https://openrouter.ai/rankings",
-      "as_of": "2026-11-11"
+      "as_of": "2026-11-15"
     },
     {
       "id": "portkey_week",
@@ -144,7 +144,7 @@
       "id": 1,
       "title": "Volume stall",
       "status": "Eased",
-      "text": "The complete week of 2 Nov was 209.5T, +8.2% WoW and a series high (d), after +3.0% the week of 26 Oct. The week of 9 Nov is still partial (102.6T at the 12 Nov 07:31 Europe/Zurich snapshot; 49.0% of the prior week, d)."
+      "text": "The complete week of 9 Nov was 211.3T, +0.8% WoW and a new series high (d), after +8.2% the week of 2 Nov: growth is slowing but there is no stall. OpenRouter paid tokens, 7 days to 15 Nov, were 199.4T, +1.9% versus the 7 days to 7 Nov, total +1.8% (d). OpenRouter spend has been unpublished since the 7 days to 10 Oct. Portkey and Ramp comparisons are unchanged (not refreshed on 16 Nov): Portkey tokens +15.3% vs cost +4.4% (week of 1 Nov); Ramp Tokenomics volume +37.1% vs spend +8.9% (week to 23 Oct vs 25 Sep). DeepSeek 38.8% of OpenRouter 7-day tokens to 15 Nov (39.1% to 7 Nov); Tencent 9.6%; frontier trio 18.9% (d). Contrary: Anthropic 60.5% of Ramp Tokenomics spend (table through 23 Oct, not refreshed on 16 Nov)."
     },
     {
       "id": 2,
@@ -162,7 +162,7 @@
       "id": 4,
       "title": "Cheap / open-weight share",
       "status": "Flag",
-      "text": "DeepSeek 37.1% of OpenRouter 7-day tokens to 11 Nov (39.1% to 7 Nov); Tencent 11.0%; frontier trio 18.2% (d). Contrary: Anthropic 60.5% of Ramp Tokenomics spend (table through 23 Oct, not refreshed on 12 Nov)."
+      "text": "DeepSeek 38.8% of OpenRouter 7-day tokens to 15 Nov (39.1% to 7 Nov); Tencent 9.6%; frontier trio 18.9% (d). Contrary: Anthropic 60.5% of Ramp Tokenomics spend (table through 23 Oct, not refreshed on 16 Nov)."
     },
     {
       "id": 5,
@@ -190,8 +190,8 @@
       "unit": "trillion tokens",
       "quality": "(d)",
       "source_url": "https://openrouter.ai/rankings",
-      "retrieved": "2026-11-12T07:31:07+01:00",
-      "notes": "Derived from OpenRouter weekly chart snapshots. History uses, per week, the retrieval with the largest weekly total. Orange/free is stealth or free models named in that week's top-9 only. Spend unpublished in the API since 14 Oct. The week of 2 Nov is now complete (same 209.517T in the 11 Nov and 12 Nov snapshots). The week of 9 Nov is partial and is supplied separately.",
+      "retrieved": "2026-11-16T06:10:00+01:00",
+      "notes": "Derived from OpenRouter weekly chart snapshots. History uses, per week, the retrieval with the largest weekly total. Orange/free is stealth or free models named in that week's top-9 only. Spend unpublished in the API since 14 Oct. The week of 9 Nov is now complete (211.3T at the 16 Nov fetch; the 15 Nov pack showed it partial at 204.2T). The week of 16 Nov has only just opened.",
       "points": [
         {
           "week_start": "2025-10-06",
@@ -762,17 +762,27 @@
           "g4_pct": 21.924156762906733,
           "complete": true,
           "paid_wow_pct": 8.2256222892799
+        },
+        {
+          "week_start": "2026-11-09",
+          "total_tn": 211.281198134151,
+          "free_tn": 0.0,
+          "paid_tn": 211.281198134151,
+          "wow_pct": 0.841780169986972,
+          "g4_pct": 28.79545504564611,
+          "complete": true,
+          "paid_wow_pct": 0.841780169986972
         }
       ],
       "partial_week": {
-        "week_start": "2026-11-09",
-        "total_tn": 133.246363071144,
+        "week_start": "2026-11-16",
+        "total_tn": 4.562085023897,
         "free_tn": 0.0,
-        "paid_tn": 133.246363071144,
+        "paid_tn": 4.562085023897,
         "wow_pct": null,
         "g4_pct": null,
         "complete": false,
-        "note": "Partial week at the 13 Nov 06:03 Europe/Zurich OpenRouter snapshot (API cachedAt); week open through 15 Nov. Not a final reading."
+        "note": "Partial week at the 16 Nov 06:10 Europe/Zurich fetch (first hours of the week). Not a reading."
       }
     },
     "openrouter_trailing7d_paid_free": {
@@ -781,8 +791,8 @@
       "unit": "trillion tokens",
       "quality": "(d)",
       "source_url": "https://openrouter.ai/rankings",
-      "retrieved": "2026-11-12T07:31:07+01:00",
-      "notes": "Free = variant=='free' or stealth/ prefix. Consecutive daily runs overlap 6 of 7 days. Windows through 7 Nov as recorded in the 8 Nov pack; 10 Nov from the 11 Nov snapshot; 11 Nov from this run. The comparison used in the headline reading is the non-overlapping 7 days to 3 Nov (no snapshot ends on 4 Nov).",
+      "retrieved": "2026-11-16T06:10:00+01:00",
+      "notes": "Free = variant=='free' or stealth/ prefix. Consecutive daily runs overlap 6 of 7 days. Windows through 7 Nov as recorded in the 8 Nov pack; 10 Nov from the 11 Nov snapshot; 11 Nov from this run. The comparison used in the headline reading is the non-overlapping 7 days to 3 Nov (no snapshot ends on 4 Nov). The 15 Nov window (9-15 Nov) is from the 16 Nov fetch and equals the complete week of 9 Nov; it is compared with the 7 days to 7 Nov (non-overlapping).",
       "points": [
         {
           "window_end": "2026-10-20",
@@ -837,563 +847,575 @@
           "paid_tn": 196.701342315534,
           "free_tn": 12.968095711693,
           "total_tn": 209.669438027227
+        },
+        {
+          "window_end": "2026-11-15",
+          "paid_tn": 199.369402304565,
+          "free_tn": 11.911795961204,
+          "total_tn": 211.281198265769
         }
       ]
     },
     "openrouter_author_share_7d": {
       "id": "openrouter_author_share_7d",
-      "title": "OpenRouter token share by author, 7 days to 11 Nov",
+      "title": "OpenRouter token share by author, 7 days to 15 Nov",
       "unit": "% of tokens",
       "quality": "(d)",
       "source_url": "https://openrouter.ai/rankings",
-      "retrieved": "2026-11-12T07:31:07+01:00",
-      "window_end": "2026-11-11",
+      "retrieved": "2026-11-16T06:10:00+01:00",
+      "window_end": "2026-11-15",
       "notes": "Spend shares are empty: OpenRouter has not published spend since the 7 days to 10 Oct.",
       "points": [
         {
           "author": "deepseek",
-          "tokens": 76783745598897,
-          "token_share_pct": 37.099637753651606,
+          "tokens": 81999181562839,
+          "token_share_pct": 38.81044893530605,
           "spend_share_pct": null
         },
         {
           "author": "tencent",
-          "tokens": 22742618802944,
-          "token_share_pct": 10.988561609981272,
+          "tokens": 20352674706118,
+          "token_share_pct": 9.632979589843355,
           "spend_share_pct": null
         },
         {
           "author": "openai",
-          "tokens": 17611811464836,
-          "token_share_pct": 8.509507063437784,
+          "tokens": 18016251264736,
+          "token_share_pct": 8.52714364203553,
           "spend_share_pct": null
         },
         {
           "author": "z-ai",
-          "tokens": 17074182704863,
-          "token_share_pct": 8.249740727667499,
+          "tokens": 16975011753459,
+          "token_share_pct": 8.034321980750157,
           "spend_share_pct": null
         },
         {
           "author": "anthropic",
-          "tokens": 13802031719056,
-          "token_share_pct": 6.668734027592717,
+          "tokens": 14718451360576,
+          "token_share_pct": 6.966285443942708,
           "spend_share_pct": null
         },
         {
           "author": "nvidia",
-          "tokens": 8140330500772,
-          "token_share_pct": 3.9331672402548286,
-          "spend_share_pct": null
-        },
-        {
-          "author": "stepfun",
-          "tokens": 6891197583617,
-          "token_share_pct": 3.3296231128988127,
+          "tokens": 8119239387170,
+          "token_share_pct": 3.8428593996124873,
           "spend_share_pct": null
         },
         {
           "author": "google",
-          "tokens": 6313426971519,
-          "token_share_pct": 3.050461419934342,
+          "tokens": 7142512420405,
+          "token_share_pct": 3.380571711554044,
           "spend_share_pct": null
         },
         {
-          "author": "moonshotai",
-          "tokens": 5757348145421,
-          "token_share_pct": 2.7817805572100833,
-          "spend_share_pct": null
-        },
-        {
-          "author": "typesafe",
-          "tokens": 4814003022791,
-          "token_share_pct": 2.3259840594842704,
-          "spend_share_pct": null
-        },
-        {
-          "author": "minimax",
-          "tokens": 4505583540459,
-          "token_share_pct": 2.1769648760433116,
-          "spend_share_pct": null
-        },
-        {
-          "author": "stealth",
-          "tokens": 4504538810814,
-          "token_share_pct": 2.17646009353918,
+          "author": "stepfun",
+          "tokens": 6422616175143,
+          "token_share_pct": 3.039842744106383,
           "spend_share_pct": null
         },
         {
           "author": "xiaomi",
-          "tokens": 4421249130641,
-          "token_share_pct": 2.1362169803785194,
+          "tokens": 5212690980119,
+          "token_share_pct": 2.4671816625926155,
+          "spend_share_pct": null
+        },
+        {
+          "author": "typesafe",
+          "tokens": 4893821388570,
+          "token_share_pct": 2.3162597660081894,
+          "spend_share_pct": null
+        },
+        {
+          "author": "moonshotai",
+          "tokens": 4819043414218,
+          "token_share_pct": 2.2808671352555288,
+          "spend_share_pct": null
+        },
+        {
+          "author": "minimax",
+          "tokens": 4024971914359,
+          "token_share_pct": 1.9050308060521401,
           "spend_share_pct": null
         },
         {
           "author": "qwen",
-          "tokens": 3690456916985,
-          "token_share_pct": 1.783119769655626,
+          "tokens": 3901104157682,
+          "token_share_pct": 1.846403839860294,
           "spend_share_pct": null
         },
         {
           "author": "meta",
-          "tokens": 3474799581269,
-          "token_share_pct": 1.6789205153528226,
-          "spend_share_pct": null
-        },
-        {
-          "author": "upstage",
-          "tokens": 1743004017565,
-          "token_share_pct": 0.8421680545856285,
-          "spend_share_pct": null
-        },
-        {
-          "author": "dots-studio",
-          "tokens": 711110663901,
-          "token_share_pct": 0.34358766725577367,
-          "spend_share_pct": null
-        },
-        {
-          "author": "x-ai",
-          "tokens": 581208417598,
-          "token_share_pct": 0.28082273903252536,
-          "spend_share_pct": null
-        },
-        {
-          "author": "perplexity",
-          "tokens": 571480540761,
-          "token_share_pct": 0.276122516297233,
-          "spend_share_pct": null
-        },
-        {
-          "author": "mistralai",
-          "tokens": 540160977798,
-          "token_share_pct": 0.26098982862398834,
-          "spend_share_pct": null
-        },
-        {
-          "author": "thinkingmachines",
-          "tokens": 362496256267,
-          "token_share_pct": 0.1751474832292337,
-          "spend_share_pct": null
-        },
-        {
-          "author": "cohere",
-          "tokens": 202499477276,
-          "token_share_pct": 0.09784176577537687,
-          "spend_share_pct": null
-        },
-        {
-          "author": "voyageai",
-          "tokens": 195124813673,
-          "token_share_pct": 0.09427854616304436,
-          "spend_share_pct": null
-        },
-        {
-          "author": "inclusionai",
-          "tokens": 185079882544,
-          "token_share_pct": 0.08942513215934367,
-          "spend_share_pct": null
-        },
-        {
-          "author": "liquid",
-          "tokens": 184233683278,
-          "token_share_pct": 0.0890162736699441,
-          "spend_share_pct": null
-        },
-        {
-          "author": "recursive",
-          "tokens": 160630503097,
-          "token_share_pct": 0.0776119142222611,
-          "spend_share_pct": null
-        },
-        {
-          "author": "particle-ai",
-          "tokens": 140407387965,
-          "token_share_pct": 0.06784070236230766,
-          "spend_share_pct": null
-        },
-        {
-          "author": "reflection",
-          "tokens": 113769531577,
-          "token_share_pct": 0.05497007701288747,
-          "spend_share_pct": null
-        },
-        {
-          "author": "meta-llama",
-          "tokens": 90801016468,
-          "token_share_pct": 0.04387236898058467,
+          "tokens": 3833902791497,
+          "token_share_pct": 1.814597239587009,
           "spend_share_pct": null
         },
         {
           "author": "baidu",
-          "tokens": 84468595192,
-          "token_share_pct": 0.04081273007379903,
+          "tokens": 1949225610104,
+          "token_share_pct": 0.922574098454366,
           "spend_share_pct": null
         },
         {
-          "author": "xingchen-agi",
-          "tokens": 80768310949,
-          "token_share_pct": 0.03902486203050294,
+          "author": "upstage",
+          "tokens": 1691766667809,
+          "token_share_pct": 0.800718039132351,
+          "spend_share_pct": null
+        },
+        {
+          "author": "thinkingmachines",
+          "tokens": 1275792935045,
+          "token_share_pct": 0.6038364726804464,
+          "spend_share_pct": null
+        },
+        {
+          "author": "stealth",
+          "tokens": 833941176450,
+          "token_share_pct": 0.39470676202857946,
+          "spend_share_pct": null
+        },
+        {
+          "author": "x-ai",
+          "tokens": 811331956766,
+          "token_share_pct": 0.38400575319789304,
+          "spend_share_pct": null
+        },
+        {
+          "author": "perplexity",
+          "tokens": 740516399728,
+          "token_share_pct": 0.35048854597866774,
+          "spend_share_pct": null
+        },
+        {
+          "author": "dots-studio",
+          "tokens": 729819323961,
+          "token_share_pct": 0.3454255891917869,
+          "spend_share_pct": null
+        },
+        {
+          "author": "particle-ai",
+          "tokens": 570312900530,
+          "token_share_pct": 0.269930739323339,
+          "spend_share_pct": null
+        },
+        {
+          "author": "mistralai",
+          "tokens": 545815961821,
+          "token_share_pct": 0.2583362676381749,
+          "spend_share_pct": null
+        },
+        {
+          "author": "inclusionai",
+          "tokens": 324758916003,
+          "token_share_pct": 0.15370933082009894,
+          "spend_share_pct": null
+        },
+        {
+          "author": "liquid",
+          "tokens": 254688012298,
+          "token_share_pct": 0.12054457016929158,
+          "spend_share_pct": null
+        },
+        {
+          "author": "cohere",
+          "tokens": 199337521702,
+          "token_share_pct": 0.09434702346360932,
+          "spend_share_pct": null
+        },
+        {
+          "author": "voyageai",
+          "tokens": 180416425379,
+          "token_share_pct": 0.08539161404795496,
+          "spend_share_pct": null
+        },
+        {
+          "author": "recursive",
+          "tokens": 140105207204,
+          "token_share_pct": 0.06631219831864203,
+          "spend_share_pct": null
+        },
+        {
+          "author": "meta-llama",
+          "tokens": 86714693223,
+          "token_share_pct": 0.04104231419301317,
           "spend_share_pct": null
         },
         {
           "author": "nace-ai",
-          "tokens": 72742112293,
-          "token_share_pct": 0.03514683992629443,
-          "spend_share_pct": null
-        },
-        {
-          "author": "inception",
-          "tokens": 61219270909,
-          "token_share_pct": 0.02957934334345872,
+          "tokens": 79043750271,
+          "token_share_pct": 0.03741163478804748,
           "spend_share_pct": null
         },
         {
           "author": "baai",
-          "tokens": 37954128816,
-          "token_share_pct": 0.01833831391456966,
+          "tokens": 46862169453,
+          "token_share_pct": 0.02217999984743197,
+          "spend_share_pct": null
+        },
+        {
+          "author": "reflection",
+          "tokens": 45398122120,
+          "token_share_pct": 0.021487062025696224,
           "spend_share_pct": null
         },
         {
           "author": "cloudflare",
-          "tokens": 31586876516,
-          "token_share_pct": 0.015261845685862955,
+          "tokens": 38028466324,
+          "token_share_pct": 0.017998982699901335,
           "spend_share_pct": null
         },
         {
           "author": "microsoft",
-          "tokens": 31091665320,
-          "token_share_pct": 0.015022574264029418,
-          "spend_share_pct": null
-        },
-        {
-          "author": "baseten",
-          "tokens": 29203244205,
-          "token_share_pct": 0.014110144963447693,
-          "spend_share_pct": null
-        },
-        {
-          "author": "bytedance-seed",
-          "tokens": 27750943602,
-          "token_share_pct": 0.013408436211674013,
-          "spend_share_pct": null
-        },
-        {
-          "author": "respan",
-          "tokens": 25909424391,
-          "token_share_pct": 0.012518668525666887,
+          "tokens": 37323320478,
+          "token_share_pct": 0.017665235138931427,
           "spend_share_pct": null
         },
         {
           "author": "scaledown",
-          "tokens": 23877883756,
-          "token_share_pct": 0.011537088100637374,
+          "tokens": 27028364195,
+          "token_share_pct": 0.01279260266263789,
+          "spend_share_pct": null
+        },
+        {
+          "author": "xingchen-agi",
+          "tokens": 25192957887,
+          "token_share_pct": 0.011923899567868776,
+          "spend_share_pct": null
+        },
+        {
+          "author": "bytedance-seed",
+          "tokens": 24702757072,
+          "token_share_pct": 0.01169188610949025,
+          "spend_share_pct": null
+        },
+        {
+          "author": "respan",
+          "tokens": 22032899114,
+          "token_share_pct": 0.010428234644090283,
           "spend_share_pct": null
         },
         {
           "author": "amazon",
-          "tokens": 23437827711,
-          "token_share_pct": 0.011324466018535675,
+          "tokens": 20077067150,
+          "token_share_pct": 0.009502533739299041,
           "spend_share_pct": null
         },
         {
-          "author": "ricursiveai",
-          "tokens": 17978854921,
-          "token_share_pct": 0.008686851619337233,
-          "spend_share_pct": null
-        },
-        {
-          "author": "fireworks",
-          "tokens": 17591217236,
-          "token_share_pct": 0.008499556540398407,
-          "spend_share_pct": null
-        },
-        {
-          "author": "parallel",
-          "tokens": 16953979282,
-          "token_share_pct": 0.008191661984436322,
+          "author": "baseten",
+          "tokens": 19646876700,
+          "token_share_pct": 0.009298923359610231,
           "spend_share_pct": null
         },
         {
           "author": "meituan",
-          "tokens": 13625096138,
-          "token_share_pct": 0.006583243981337358,
+          "tokens": 18808112948,
+          "token_share_pct": 0.008901934058676352,
+          "spend_share_pct": null
+        },
+        {
+          "author": "ricursiveai",
+          "tokens": 18356438514,
+          "token_share_pct": 0.008688155247448747,
           "spend_share_pct": null
         },
         {
           "author": "nex-agi",
-          "tokens": 11037555539,
-          "token_share_pct": 0.005333020797419826,
+          "tokens": 16114636358,
+          "token_share_pct": 0.0076271038266876555,
           "spend_share_pct": null
         },
         {
-          "author": "unbiased",
-          "tokens": 9335857204,
-          "token_share_pct": 0.0045108104285185345,
+          "author": "parallel",
+          "tokens": 12282660570,
+          "token_share_pct": 0.00581341864340893,
+          "spend_share_pct": null
+        },
+        {
+          "author": "apodex",
+          "tokens": 7977150734,
+          "token_share_pct": 0.0037756084306023304,
           "spend_share_pct": null
         },
         {
           "author": "aion-labs",
-          "tokens": 7751787595,
-          "token_share_pct": 0.003745434785378344,
+          "tokens": 7908305433,
+          "token_share_pct": 0.0037430237512436873,
           "spend_share_pct": null
         },
         {
-          "author": "sao10k",
-          "tokens": 5107947219,
-          "token_share_pct": 0.0024680092122569535,
+          "author": "fireworks",
+          "tokens": 6559329628,
+          "token_share_pct": 0.0031045496153183825,
           "spend_share_pct": null
         },
         {
           "author": "ibm-granite",
-          "tokens": 3848894626,
-          "token_share_pct": 0.0018596721905505425,
+          "tokens": 5548091014,
+          "token_share_pct": 0.0026259274651694747,
           "spend_share_pct": null
         },
         {
-          "author": "intfloat",
-          "tokens": 3591270775,
-          "token_share_pct": 0.0017351959557139602,
+          "author": "sao10k",
+          "tokens": 5171473823,
+          "token_share_pct": 0.0024476734633504128,
+          "spend_share_pct": null
+        },
+        {
+          "author": "unbiased",
+          "tokens": 4752805679,
+          "token_share_pct": 0.002249516624295874,
           "spend_share_pct": null
         },
         {
           "author": "morph",
-          "tokens": 3129821820,
-          "token_share_pct": 0.0015122374514267322,
-          "spend_share_pct": null
-        },
-        {
-          "author": "venice",
-          "tokens": 2515884570,
-          "token_share_pct": 0.0012156011073565331,
+          "tokens": 3078251338,
+          "token_share_pct": 0.0014569452290439451,
           "spend_share_pct": null
         },
         {
           "author": "thedrummer",
-          "tokens": 2175725393,
-          "token_share_pct": 0.0010512462410127697,
-          "spend_share_pct": null
-        },
-        {
-          "author": "black-forest-labs",
-          "tokens": 1967217149,
-          "token_share_pct": 0.000950501216649682,
-          "spend_share_pct": null
-        },
-        {
-          "author": "sentence-transformers",
-          "tokens": 1686444919,
-          "token_share_pct": 0.0008148403688616758,
-          "spend_share_pct": null
-        },
-        {
-          "author": "nousresearch",
-          "tokens": 1122265281,
-          "token_share_pct": 0.0005422454331167471,
-          "spend_share_pct": null
-        },
-        {
-          "author": "recraft",
-          "tokens": 1101412852,
-          "token_share_pct": 0.0005321701553851167,
-          "spend_share_pct": null
-        },
-        {
-          "author": "sakana",
-          "tokens": 997415112,
-          "token_share_pct": 0.00048192151941268936,
-          "spend_share_pct": null
-        },
-        {
-          "author": "jaredpalmer",
-          "tokens": 964253090,
-          "token_share_pct": 0.00046589860995727595,
-          "spend_share_pct": null
-        },
-        {
-          "author": "togethercomputer",
-          "tokens": 706687663,
-          "token_share_pct": 0.0003414506038717033,
-          "spend_share_pct": null
-        },
-        {
-          "author": "gryphe",
-          "tokens": 698518769,
-          "token_share_pct": 0.00033750363559236044,
-          "spend_share_pct": null
-        },
-        {
-          "author": "elorian",
-          "tokens": 535714191,
-          "token_share_pct": 0.00025884127259710065,
-          "spend_share_pct": null
-        },
-        {
-          "author": "bytedance",
-          "tokens": 483747238,
-          "token_share_pct": 0.0002337323759624888,
-          "spend_share_pct": null
-        },
-        {
-          "author": "perceptron",
-          "tokens": 383665776,
-          "token_share_pct": 0.0001853759698364872,
-          "spend_share_pct": null
-        },
-        {
-          "author": "prism-ml",
-          "tokens": 331774742,
-          "token_share_pct": 0.00016030375502009938,
-          "spend_share_pct": null
-        },
-        {
-          "author": "anthracite-org",
-          "tokens": 200306314,
-          "token_share_pct": 9.678209406439719e-05,
-          "spend_share_pct": null
-        },
-        {
-          "author": "rekaai",
-          "tokens": 176705048,
-          "token_share_pct": 8.537865949243028e-05,
-          "spend_share_pct": null
-        },
-        {
-          "author": "undi95",
-          "tokens": 141131286,
-          "token_share_pct": 6.819046850955153e-05,
-          "spend_share_pct": null
-        },
-        {
-          "author": "thenlper",
-          "tokens": 119432408,
-          "token_share_pct": 5.7706211624429683e-05,
-          "spend_share_pct": null
-        },
-        {
-          "author": "krea",
-          "tokens": 104713266,
-          "token_share_pct": 5.059435699966125e-05,
-          "spend_share_pct": null
-        },
-        {
-          "author": "fish-audio",
-          "tokens": 99309194,
-          "token_share_pct": 4.798326904047303e-05,
-          "spend_share_pct": null
-        },
-        {
-          "author": "writer",
-          "tokens": 88394462,
-          "token_share_pct": 4.2709592949006004e-05,
-          "spend_share_pct": null
-        },
-        {
-          "author": "sourceful",
-          "tokens": 85482355,
-          "token_share_pct": 4.130254886751195e-05,
-          "spend_share_pct": null
-        },
-        {
-          "author": "inference-net",
-          "tokens": 72488086,
-          "token_share_pct": 3.502410192521496e-05,
-          "spend_share_pct": null
-        },
-        {
-          "author": "elevenlabs",
-          "tokens": 59195730,
-          "token_share_pct": 2.860162814972801e-05,
-          "spend_share_pct": null
-        },
-        {
-          "author": "relace",
-          "tokens": 54278297,
-          "token_share_pct": 2.6225669780480746e-05,
+          "tokens": 2432534115,
+          "token_share_pct": 0.001151325406598714,
           "spend_share_pct": null
         },
         {
           "author": "heygen",
-          "tokens": 34402804,
-          "token_share_pct": 1.6622418666278388e-05,
+          "tokens": 2373114143,
+          "token_share_pct": 0.001123201762617267,
           "spend_share_pct": null
         },
         {
-          "author": "moondream",
-          "tokens": 32253775,
-          "token_share_pct": 1.558407133377684e-05,
+          "author": "intfloat",
+          "tokens": 2270289035,
+          "token_share_pct": 0.001074534342684019,
           "spend_share_pct": null
         },
         {
-          "author": "hexgrad",
-          "tokens": 28240227,
-          "token_share_pct": 1.3644843496615533e-05,
+          "author": "venice",
+          "tokens": 2261362884,
+          "token_share_pct": 0.0010703095696927318,
+          "spend_share_pct": null
+        },
+        {
+          "author": "black-forest-labs",
+          "tokens": 1875844464,
+          "token_share_pct": 0.000887842590536802,
+          "spend_share_pct": null
+        },
+        {
+          "author": "sentence-transformers",
+          "tokens": 1687167026,
+          "token_share_pct": 0.0007985410154091069,
+          "spend_share_pct": null
+        },
+        {
+          "author": "sakana",
+          "tokens": 1581996176,
+          "token_share_pct": 0.0007487633490274033,
+          "spend_share_pct": null
+        },
+        {
+          "author": "nousresearch",
+          "tokens": 1215686913,
+          "token_share_pct": 0.0005753881192356723,
+          "spend_share_pct": null
+        },
+        {
+          "author": "jaredpalmer",
+          "tokens": 1176960871,
+          "token_share_pct": 0.0005570589719580773,
+          "spend_share_pct": null
+        },
+        {
+          "author": "recraft",
+          "tokens": 1148637510,
+          "token_share_pct": 0.0005436534435757684,
+          "spend_share_pct": null
+        },
+        {
+          "author": "togethercomputer",
+          "tokens": 775678762,
+          "token_share_pct": 0.0003671309933713456,
           "spend_share_pct": null
         },
         {
           "author": "kt",
-          "tokens": 16728491,
-          "token_share_pct": 8.08271270728601e-06,
+          "tokens": 682749601,
+          "token_share_pct": 0.0003231473536709,
           "spend_share_pct": null
         },
         {
-          "author": "mancer",
-          "tokens": 7757166,
-          "token_share_pct": 3.7480334718013117e-06,
+          "author": "gryphe",
+          "tokens": 642091247,
+          "token_share_pct": 0.0003039036375552539,
+          "spend_share_pct": null
+        },
+        {
+          "author": "elorian",
+          "tokens": 585229720,
+          "token_share_pct": 0.00027699091296512057,
+          "spend_share_pct": null
+        },
+        {
+          "author": "prism-ml",
+          "tokens": 572148806,
+          "token_share_pct": 0.0002707996786729212,
+          "spend_share_pct": null
+        },
+        {
+          "author": "bytedance",
+          "tokens": 378065783,
+          "token_share_pct": 0.00017893962458715042,
+          "spend_share_pct": null
+        },
+        {
+          "author": "perceptron",
+          "tokens": 282023362,
+          "token_share_pct": 0.00013348246995704985,
+          "spend_share_pct": null
+        },
+        {
+          "author": "anthracite-org",
+          "tokens": 208381866,
+          "token_share_pct": 9.862773768344406e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "rekaai",
+          "tokens": 168961507,
+          "token_share_pct": 7.996996816889718e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "thenlper",
+          "tokens": 153574011,
+          "token_share_pct": 7.268702196909183e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "undi95",
+          "tokens": 150396451,
+          "token_share_pct": 7.118307366413999e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "krea",
+          "tokens": 113999646,
+          "token_share_pct": 5.395636097093729e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "writer",
+          "tokens": 84203502,
+          "token_share_pct": 3.985376015052748e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "inference-net",
+          "tokens": 81983686,
+          "token_share_pct": 3.8803114840759916e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "elevenlabs",
+          "tokens": 79553950,
+          "token_share_pct": 3.765311379005419e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "fish-audio",
+          "tokens": 76700190,
+          "token_share_pct": 3.630242095821485e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "sourceful",
+          "tokens": 72543826,
+          "token_share_pct": 3.433520189938893e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "relace",
+          "tokens": 38933388,
+          "token_share_pct": 1.8427284736915393e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "hexgrad",
+          "tokens": 36690410,
+          "token_share_pct": 1.7365676785800607e-05,
           "spend_share_pct": null
         },
         {
           "author": "motif-technologies",
-          "tokens": 6642631,
-          "token_share_pct": 3.2095230821185232e-06,
+          "tokens": 32722665,
+          "token_share_pct": 1.548773164322857e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "moondream",
+          "tokens": 27697079,
+          "token_share_pct": 1.3109107306917132e-05,
+          "spend_share_pct": null
+        },
+        {
+          "author": "mancer",
+          "tokens": 15354385,
+          "token_share_pct": 7.26727466808752e-06,
           "spend_share_pct": null
         },
         {
           "author": "deepgram",
-          "tokens": 1092981,
-          "token_share_pct": 5.280961335677062e-07,
+          "tokens": 1234307,
+          "token_share_pct": 5.842010600713153e-07,
           "spend_share_pct": null
         },
         {
-          "author": "canopylabs",
-          "tokens": 446989,
-          "token_share_pct": 2.159718811647187e-07,
-          "spend_share_pct": null
-        },
-        {
-          "author": "Qwen",
-          "tokens": 389224,
-          "token_share_pct": 1.8806153948857014e-07,
-          "spend_share_pct": null
-        },
-        {
-          "author": "assemblyai",
-          "tokens": 292072,
-          "token_share_pct": 1.4112056286741223e-07,
-          "spend_share_pct": null
-        },
-        {
-          "author": "sesame",
-          "tokens": 18080,
-          "token_share_pct": 8.735721933779388e-09,
+          "author": "qwen3-embedding-8b",
+          "tokens": 998433,
+          "token_share_pct": 4.725612161400556e-07,
           "spend_share_pct": null
         },
         {
           "author": "speechify",
-          "tokens": 18026,
-          "token_share_pct": 8.709630728888674e-09,
+          "tokens": 472782,
+          "token_share_pct": 2.2376908304225496e-07,
+          "spend_share_pct": null
+        },
+        {
+          "author": "assemblyai",
+          "tokens": 444380,
+          "token_share_pct": 2.1032633459462768e-07,
+          "spend_share_pct": null
+        },
+        {
+          "author": "canopylabs",
+          "tokens": 321865,
+          "token_share_pct": 1.523396320363199e-07,
+          "spend_share_pct": null
+        },
+        {
+          "author": "Qwen",
+          "tokens": 291050,
+          "token_share_pct": 1.3775480373501594e-07,
           "spend_share_pct": null
         },
         {
           "author": "text-embedding-3-large",
-          "tokens": 4871,
-          "token_share_pct": 2.35352331523448e-09,
+          "tokens": 168252,
+          "token_share_pct": 7.963415646117129e-08,
+          "spend_share_pct": null
+        },
+        {
+          "author": "sesame",
+          "tokens": 65953,
+          "token_share_pct": 3.121574496043809e-08,
           "spend_share_pct": null
         },
         {
           "author": "text-embedding-3-small",
           "tokens": 50,
-          "token_share_pct": 2.415852304695627e-11,
+          "token_share_pct": 2.3665144087788345e-11,
           "spend_share_pct": null
         },
         {
@@ -1415,13 +1437,13 @@
           "spend_share_pct": null
         },
         {
-          "author": "runway",
+          "author": "tbc",
           "tokens": 0,
           "token_share_pct": 0.0,
           "spend_share_pct": null
         },
         {
-          "author": "tbc",
+          "author": "runway",
           "tokens": 0,
           "token_share_pct": 0.0,
           "spend_share_pct": null
@@ -2311,8 +2333,8 @@
       "unit": "percent",
       "quality": "V",
       "source_url": "https://openrouter.ai/rankings",
-      "retrieved": "2026-11-12T07:31:07+01:00",
-      "notes": "Share of weekly tokens by model author (author = slug before '/'; Others is the residual outside the weekly top-9). History uses, per week, the retrieval with the largest weekly total. The week of 2 Nov is complete (final shares from the 11/12 Nov snapshots, which match). The week of 9 Nov is partial.",
+      "retrieved": "2026-11-16T06:10:00+01:00",
+      "notes": "Share of weekly tokens by model author (author = slug before '/'; Others is the residual outside the weekly top-9). History uses, per week, the retrieval with the largest weekly total. The week of 2 Nov is complete (final shares from the 11/12 Nov snapshots, which match). The week of 9 Nov is complete (16 Nov fetch).",
       "authors": [
         "deepseek",
         "tencent",
@@ -2578,21 +2600,21 @@
         },
         {
           "week_start": "2026-11-09",
-          "complete": false,
+          "complete": true,
           "shares_pct": {
-            "deepseek": 34.63,
-            "tencent": 9.555,
-            "z-ai": 8.405,
-            "openai": 3.518,
-            "xiaomi": 2.093,
+            "deepseek": 35.39,
+            "tencent": 8.578,
+            "z-ai": 7.412,
+            "openai": 3.716,
+            "xiaomi": 2.001,
             "stealth": 0.0,
             "nvidia": 0.0,
-            "anthropic": 3.262,
-            "stepfun": 2.916,
+            "anthropic": 3.305,
+            "stepfun": 3.034,
             "minimax": 0.0,
             "google": 0.0,
             "moonshotai": 0.0,
-            "Others": 35.621
+            "Others": 36.564
           }
         }
       ]
@@ -2603,83 +2625,83 @@
       "unit": "percent",
       "quality": "V",
       "source_url": "https://openrouter.ai/rankings",
-      "retrieved": "2026-11-12T07:31:07+01:00",
-      "window_end": "2026-11-11",
-      "prior_window_end": "2026-11-03",
+      "retrieved": "2026-11-16T06:10:00+01:00",
+      "window_end": "2026-11-15",
+      "prior_window_end": "2026-11-07",
       "last_spend_window_end": "2026-10-10",
-      "notes": "Token share is the trailing 7 days to 11 Nov. The prior-window marker is the non-overlapping 7 days to 3 Nov (no snapshot ends on 4 Nov). Spend share is the last published window (7 days to 10 Oct); spend has been unpublished in the API since 14 Oct. Top 12 authors by current-window tokens; stealth entered the top 12 and xiaomi dropped out versus the 7 Nov window.",
+      "notes": "Token share is the trailing 7 days to 15 Nov. The prior-window marker is the non-overlapping 7 days to 7 Nov (saved 8 Nov snapshot). Spend share is the last published window (7 days to 10 Oct); spend has been unpublished in the API since 14 Oct. Top 12 authors by current-window tokens; authors absent from the last spend window show no spend share.",
       "points": [
         {
           "author": "deepseek",
-          "token_share_pct": 37.1,
-          "prior_token_share_pct": 38.39,
+          "token_share_pct": 38.81,
+          "prior_token_share_pct": 39.14,
           "last_spend_share_pct": 9.09
         },
         {
           "author": "tencent",
-          "token_share_pct": 10.99,
-          "prior_token_share_pct": 6.11,
+          "token_share_pct": 9.63,
+          "prior_token_share_pct": 8.14,
           "last_spend_share_pct": 0.5
         },
         {
           "author": "openai",
-          "token_share_pct": 8.51,
-          "prior_token_share_pct": 11.44,
+          "token_share_pct": 8.53,
+          "prior_token_share_pct": 9.17,
           "last_spend_share_pct": 20.47
         },
         {
           "author": "z-ai",
-          "token_share_pct": 8.25,
-          "prior_token_share_pct": 10.43,
+          "token_share_pct": 8.03,
+          "prior_token_share_pct": 8.84,
           "last_spend_share_pct": 8.77
         },
         {
           "author": "anthropic",
-          "token_share_pct": 6.67,
-          "prior_token_share_pct": 6.9,
+          "token_share_pct": 6.97,
+          "prior_token_share_pct": 6.57,
           "last_spend_share_pct": 35.79
         },
         {
           "author": "nvidia",
-          "token_share_pct": 3.93,
-          "prior_token_share_pct": 3.52,
+          "token_share_pct": 3.84,
+          "prior_token_share_pct": 3.9,
           "last_spend_share_pct": 0.05
         },
         {
-          "author": "stepfun",
-          "token_share_pct": 3.33,
-          "prior_token_share_pct": 3.52,
-          "last_spend_share_pct": 0.03
-        },
-        {
           "author": "google",
-          "token_share_pct": 3.05,
-          "prior_token_share_pct": 3.22,
+          "token_share_pct": 3.38,
+          "prior_token_share_pct": 3.09,
           "last_spend_share_pct": 11.21
         },
         {
-          "author": "moonshotai",
-          "token_share_pct": 2.78,
-          "prior_token_share_pct": 2.48,
-          "last_spend_share_pct": 5.31
+          "author": "stepfun",
+          "token_share_pct": 3.04,
+          "prior_token_share_pct": 3.51,
+          "last_spend_share_pct": 0.03
+        },
+        {
+          "author": "xiaomi",
+          "token_share_pct": 2.47,
+          "prior_token_share_pct": 1.66,
+          "last_spend_share_pct": null
         },
         {
           "author": "typesafe",
-          "token_share_pct": 2.33,
-          "prior_token_share_pct": 2.39,
+          "token_share_pct": 2.32,
+          "prior_token_share_pct": 2.35,
           "last_spend_share_pct": 0.47
         },
         {
-          "author": "minimax",
-          "token_share_pct": 2.18,
-          "prior_token_share_pct": 3.45,
-          "last_spend_share_pct": 0.2
+          "author": "moonshotai",
+          "token_share_pct": 2.28,
+          "prior_token_share_pct": 3.04,
+          "last_spend_share_pct": 5.31
         },
         {
-          "author": "stealth",
-          "token_share_pct": 2.18,
-          "prior_token_share_pct": 0.01,
-          "last_spend_share_pct": 0.0
+          "author": "minimax",
+          "token_share_pct": 1.91,
+          "prior_token_share_pct": 2.93,
+          "last_spend_share_pct": 0.2
         }
       ]
     },
@@ -8772,8 +8794,8 @@
     }
   },
   "caveats": [
-    "OpenRouter: no spend in the API since 14 Oct; the last published spend window is the 7 days to 10 Oct. The week of 2 Nov is now complete (209.5T). The week of 9 Nov is partial (102.6T at the 12 Nov 07:31 Europe/Zurich snapshot, API cachedAt) and is not used as a reading. OpenRouter excludes first-party apps. Changes, shares and ratios are derived (d). Weekly totals use, per week, the retrieval with the largest weekly total.",
-    "OpenRouter trailing-7-day comparison: the 7 days to 11 Nov are compared with the non-overlapping 7 days to 3 Nov (d). There is no saved snapshot ending 4 Nov. Consecutive daily 7-day windows overlap 6 of 7 days.",
+    "OpenRouter: no spend in the API since 14 Oct; the last published spend window is the 7 days to 10 Oct. The week of 9 Nov is now complete (211.3T, fetched 16 Nov 06:10 Europe/Zurich); the week of 16 Nov has only just opened and is not used as a reading. OpenRouter excludes first-party apps. Changes, shares and ratios are derived (d). Weekly totals use, per week, the retrieval with the largest weekly total.",
+    "OpenRouter trailing-7-day comparison: the 7 days to 15 Nov are compared with the non-overlapping 7 days to 7 Nov (d; a one-day gap sits between the windows). Consecutive daily 7-day windows overlap 6 of 7 days.",
     "Ramp: Tokenomics table unchanged since the 1 Nov vintage (week to 23 Oct vs 25 Sep); confirmed unchanged at the 4, 8 and 11 Nov checks. Not re-fetched on 12 Nov. Weekly chart series end at the week of 5 Oct (18 Oct vintage). Chart and table are different cuts and are not spliced. Ramp is a US-corporate, API-heavy sample whose composition can change.",
     "Vercel: open/closed traffic split stopped on 17 Oct; team-preference series stuck at 29 Oct (12.65%). The two measures are not comparable and are not spliced. Not refreshed on 12 Nov.",
     "Portkey: chart-array sums do not match the page headline cards (weekly card spend was −0.0% vs chart +4.4%). Use within-series changes only. Not refreshed on 12 Nov; last complete week in this feed is the week of 1 Nov.",
@@ -8899,7 +8921,7 @@
     ]
   },
   "hyperliquid": {
-    "as_of": "2026-11-13T08:03:55.819309+01:00",
+    "as_of": "2026-11-16T06:38:29.175297+01:00",
     "timezone": "Europe/Zurich",
     "source": "https://api.hyperliquid.xyz/info",
     "spec_docs": [
@@ -8919,43 +8941,6 @@
     ],
     "markets": [
       {
-        "coin": "xyz:ANT",
-        "dex": "xyz",
-        "dex_full_name": "XYZ",
-        "deployer_address": "0x88806a71d74ad0a510b350545c9ae490912f0888",
-        "issuer": "Anthropic PBC",
-        "unit": "References 1 share of Anthropic, PBC Class A common stock (expected Nasdaq: ANT), quoted in USD (trade.xyz Pre-IPO Specification Index).",
-        "unit_kind": "usd_per_share",
-        "spec_docs": "https://docs.trade.xyz/perpetuals/specifications-and-schedules/pre-ipo-specification-index.md",
-        "oracle_methodology": "trade.xyz pre-IPO / internal discovery mechanics (see official pre-IPO perpetuals docs). Anticipated listing 20 Nov 2026, grace period to 19 Jan 2027.",
-        "bounds": "Discovery bound ±50%, max 3 resets per direction; initial reference $125.",
-        "no_ipo_resolution": null,
-        "margin_mode_docs": "Cross margin (docs).",
-        "is_delisted": false,
-        "only_isolated": false,
-        "margin_mode_api": null,
-        "max_leverage": 10,
-        "sz_decimals": 2,
-        "growth_mode": "enabled",
-        "mark_px": 103.06,
-        "oracle_px": 102.87,
-        "mid_px": 103.055,
-        "prev_day_px": 103.7,
-        "chg_24h_vs_prevDayPx": -0.006171648987463807,
-        "funding_hourly": 1.1724e-06,
-        "funding_annualized_simple": 0.010270224,
-        "open_interest_units": 1045201.4600000002,
-        "open_interest_notional_usd": 107718462.46760002,
-        "volume_24h_usd": 39021311.46409997,
-        "day_base_volume": 376472.6800000002,
-        "premium": 0.0019427433,
-        "implied_valuation_usd": null,
-        "implied_valuation_tn": null,
-        "thin_liquidity": false,
-        "quality_api": "V",
-        "quality_derived": "(d)"
-      },
-      {
         "coin": "io:ANTH",
         "dex": "io",
         "dex_full_name": "EntropyIO",
@@ -8974,20 +8959,57 @@
         "max_leverage": 15,
         "sz_decimals": 3,
         "growth_mode": "enabled",
-        "mark_px": 1793.7,
-        "oracle_px": 1793.6,
-        "mid_px": 1796.95,
-        "prev_day_px": 1807.9,
-        "chg_24h_vs_prevDayPx": -0.00785441672658893,
-        "funding_hourly": 2.86802e-05,
-        "funding_annualized_simple": 0.251238552,
-        "open_interest_units": 113614.286,
-        "open_interest_notional_usd": 203789944.79819998,
-        "volume_24h_usd": 27737207.01949997,
-        "day_base_volume": 15341.338,
-        "premium": 0.001823149,
-        "implied_valuation_usd": 1793700000000.0,
-        "implied_valuation_tn": 1.7937,
+        "mark_px": 1770.5,
+        "oracle_px": 1770.5,
+        "mid_px": 1770.85,
+        "prev_day_px": 1764.7,
+        "chg_24h_vs_prevDayPx": 0.003286677622258649,
+        "funding_hourly": 1.5625e-06,
+        "funding_annualized_simple": 0.013687500000000002,
+        "open_interest_units": 113601.484,
+        "open_interest_notional_usd": 201131427.422,
+        "volume_24h_usd": 7750474.579900004,
+        "day_base_volume": 4380.976,
+        "premium": 0.0002490822,
+        "implied_valuation_usd": 1770500000000.0,
+        "implied_valuation_tn": 1.7705,
+        "thin_liquidity": false,
+        "quality_api": "V",
+        "quality_derived": "(d)"
+      },
+      {
+        "coin": "xyz:ANT",
+        "dex": "xyz",
+        "dex_full_name": "XYZ",
+        "deployer_address": "0x88806a71d74ad0a510b350545c9ae490912f0888",
+        "issuer": "Anthropic PBC",
+        "unit": "References 1 share of Anthropic, PBC Class A common stock (expected Nasdaq: ANT), quoted in USD (trade.xyz Pre-IPO Specification Index).",
+        "unit_kind": "usd_per_share",
+        "spec_docs": "https://docs.trade.xyz/perpetuals/specifications-and-schedules/pre-ipo-specification-index.md",
+        "oracle_methodology": "trade.xyz pre-IPO / internal discovery mechanics (see official pre-IPO perpetuals docs). Anticipated listing 20 Nov 2026, grace period to 19 Jan 2027.",
+        "bounds": "Discovery bound ±50%, max 3 resets per direction; initial reference $125.",
+        "no_ipo_resolution": null,
+        "margin_mode_docs": "Cross margin (docs).",
+        "is_delisted": false,
+        "only_isolated": false,
+        "margin_mode_api": null,
+        "max_leverage": 10,
+        "sz_decimals": 2,
+        "growth_mode": "enabled",
+        "mark_px": 101.81,
+        "oracle_px": 101.7,
+        "mid_px": 101.825,
+        "prev_day_px": 101.33,
+        "chg_24h_vs_prevDayPx": 0.0047369979275635465,
+        "funding_hourly": 1.273e-07,
+        "funding_annualized_simple": 0.001115148,
+        "open_interest_units": 1088275.9399999995,
+        "open_interest_notional_usd": 110797373.45139995,
+        "volume_24h_usd": 7643776.569499999,
+        "day_base_volume": 75145.66,
+        "premium": 0.0010476893,
+        "implied_valuation_usd": null,
+        "implied_valuation_tn": null,
         "thin_liquidity": false,
         "quality_api": "V",
         "quality_derived": "(d)"
@@ -9011,21 +9033,21 @@
         "max_leverage": 6,
         "sz_decimals": 3,
         "growth_mode": "enabled",
-        "mark_px": 1337.7,
-        "oracle_px": 1335.6,
-        "mid_px": 1335.95,
-        "prev_day_px": 1334.8,
-        "chg_24h_vs_prevDayPx": 0.0021726101288583877,
-        "funding_hourly": 3.19063e-05,
-        "funding_annualized_simple": 0.27949918800000007,
-        "open_interest_units": 5712.324,
-        "open_interest_notional_usd": 7641375.8148,
-        "volume_24h_usd": 1815677.2574000016,
-        "day_base_volume": 1361.389,
-        "premium": 0.0013256214,
-        "implied_valuation_usd": 1337700000000.0,
-        "implied_valuation_tn": 1.3377,
-        "thin_liquidity": false,
+        "mark_px": 1315.9,
+        "oracle_px": 1313.5,
+        "mid_px": 1314.95,
+        "prev_day_px": 1319.4,
+        "chg_24h_vs_prevDayPx": -0.0026527209337577906,
+        "funding_hourly": 1.70289e-05,
+        "funding_annualized_simple": 0.149173164,
+        "open_interest_units": 5738.74,
+        "open_interest_notional_usd": 7551607.966,
+        "volume_24h_usd": 350334.2155,
+        "day_base_volume": 265.253,
+        "premium": 0.0013182337,
+        "implied_valuation_usd": 1315900000000.0,
+        "implied_valuation_tn": 1.3159,
+        "thin_liquidity": true,
         "quality_api": "V",
         "quality_derived": "(d)"
       },
@@ -9048,18 +9070,18 @@
         "max_leverage": 10,
         "sz_decimals": 3,
         "growth_mode": "enabled",
-        "mark_px": 102.63,
-        "oracle_px": 103.04,
-        "mid_px": 102.635,
-        "prev_day_px": 103.84,
-        "chg_24h_vs_prevDayPx": -0.01165254237288138,
-        "funding_hourly": -8.188e-07,
-        "funding_annualized_simple": -0.007172688,
-        "open_interest_units": 913.752,
-        "open_interest_notional_usd": 93778.36776,
-        "volume_24h_usd": 16862.9157,
-        "day_base_volume": 163.079,
-        "premium": 0.0007230202,
+        "mark_px": 101.48,
+        "oracle_px": 101.75,
+        "mid_px": 101.49,
+        "prev_day_px": 100.94,
+        "chg_24h_vs_prevDayPx": 0.005349712700614351,
+        "funding_hourly": -2.6869e-06,
+        "funding_annualized_simple": -0.023537244000000002,
+        "open_interest_units": 875.456,
+        "open_interest_notional_usd": 88841.27488000001,
+        "volume_24h_usd": 3067.60057,
+        "day_base_volume": 30.346,
+        "premium": -0.0031646192,
         "implied_valuation_usd": null,
         "implied_valuation_tn": null,
         "thin_liquidity": true,
@@ -9068,1630 +9090,12 @@
       }
     ],
     "series": {
-      "io:ANTH": {
-        "coin": "io:ANTH",
-        "interval": "1d",
-        "n": 87,
-        "start": "2026-08-19",
-        "end": "2026-11-13",
-        "points": [
-          {
-            "date": "2026-08-19",
-            "open": 1796.8,
-            "high": 1820.0,
-            "low": 1767.9,
-            "close": 1801.5,
-            "volume_base": 206.226,
-            "trades": 8279,
-            "implied_valuation_tn": 1.8015
-          },
-          {
-            "date": "2026-08-20",
-            "open": 1799.1,
-            "high": 1849.9,
-            "low": 1797.8,
-            "close": 1829.1,
-            "volume_base": 243.083,
-            "trades": 5826,
-            "implied_valuation_tn": 1.8291
-          },
-          {
-            "date": "2026-08-21",
-            "open": 1829.2,
-            "high": 1919.9,
-            "low": 1824.5,
-            "close": 1880.6,
-            "volume_base": 326.052,
-            "trades": 6375,
-            "implied_valuation_tn": 1.8806
-          },
-          {
-            "date": "2026-08-22",
-            "open": 1880.6,
-            "high": 1895.3,
-            "low": 1879.7,
-            "close": 1894.0,
-            "volume_base": 157.122,
-            "trades": 2680,
-            "implied_valuation_tn": 1.894
-          },
-          {
-            "date": "2026-08-23",
-            "open": 1894.1,
-            "high": 1919.8,
-            "low": 1894.1,
-            "close": 1911.5,
-            "volume_base": 245.42,
-            "trades": 3683,
-            "implied_valuation_tn": 1.9115
-          },
-          {
-            "date": "2026-08-24",
-            "open": 1911.6,
-            "high": 1972.7,
-            "low": 1880.9,
-            "close": 1963.0,
-            "volume_base": 1352.024,
-            "trades": 10718,
-            "implied_valuation_tn": 1.963
-          },
-          {
-            "date": "2026-08-25",
-            "open": 1963.0,
-            "high": 2021.6,
-            "low": 1957.7,
-            "close": 2006.7,
-            "volume_base": 4360.937,
-            "trades": 71776,
-            "implied_valuation_tn": 2.0067
-          },
-          {
-            "date": "2026-08-26",
-            "open": 2006.7,
-            "high": 2021.3,
-            "low": 1986.9,
-            "close": 1987.1,
-            "volume_base": 9680.311,
-            "trades": 179538,
-            "implied_valuation_tn": 1.9871
-          },
-          {
-            "date": "2026-08-27",
-            "open": 1987.1,
-            "high": 2008.5,
-            "low": 1941.1,
-            "close": 1952.1,
-            "volume_base": 10950.813,
-            "trades": 152630,
-            "implied_valuation_tn": 1.9521
-          },
-          {
-            "date": "2026-08-28",
-            "open": 1952.1,
-            "high": 1982.9,
-            "low": 1941.3,
-            "close": 1945.3,
-            "volume_base": 19775.21,
-            "trades": 316044,
-            "implied_valuation_tn": 1.9453
-          },
-          {
-            "date": "2026-08-29",
-            "open": 1945.3,
-            "high": 1956.1,
-            "low": 1907.1,
-            "close": 1913.4,
-            "volume_base": 16524.277,
-            "trades": 294716,
-            "implied_valuation_tn": 1.9134
-          },
-          {
-            "date": "2026-08-30",
-            "open": 1913.5,
-            "high": 1928.0,
-            "low": 1870.8,
-            "close": 1877.0,
-            "volume_base": 15659.016,
-            "trades": 270353,
-            "implied_valuation_tn": 1.877
-          },
-          {
-            "date": "2026-08-31",
-            "open": 1876.8,
-            "high": 1944.8,
-            "low": 1875.0,
-            "close": 1939.5,
-            "volume_base": 5760.019,
-            "trades": 135105,
-            "implied_valuation_tn": 1.9395
-          },
-          {
-            "date": "2026-09-01",
-            "open": 1939.5,
-            "high": 1972.5,
-            "low": 1925.2,
-            "close": 1966.5,
-            "volume_base": 4761.31,
-            "trades": 119370,
-            "implied_valuation_tn": 1.9665
-          },
-          {
-            "date": "2026-09-02",
-            "open": 1967.2,
-            "high": 1986.5,
-            "low": 1935.3,
-            "close": 1967.6,
-            "volume_base": 4987.138,
-            "trades": 119329,
-            "implied_valuation_tn": 1.9676
-          },
-          {
-            "date": "2026-09-03",
-            "open": 1967.7,
-            "high": 1985.0,
-            "low": 1928.7,
-            "close": 1962.3,
-            "volume_base": 5975.845,
-            "trades": 122248,
-            "implied_valuation_tn": 1.9623
-          },
-          {
-            "date": "2026-09-04",
-            "open": 1962.3,
-            "high": 1987.0,
-            "low": 1922.9,
-            "close": 1949.5,
-            "volume_base": 5186.282,
-            "trades": 113466,
-            "implied_valuation_tn": 1.9495
-          },
-          {
-            "date": "2026-09-05",
-            "open": 1949.6,
-            "high": 1980.0,
-            "low": 1931.1,
-            "close": 1979.6,
-            "volume_base": 4282.872,
-            "trades": 104109,
-            "implied_valuation_tn": 1.9796
-          },
-          {
-            "date": "2026-09-06",
-            "open": 1979.6,
-            "high": 1989.9,
-            "low": 1962.6,
-            "close": 1983.3,
-            "volume_base": 4723.009,
-            "trades": 131058,
-            "implied_valuation_tn": 1.9833
-          },
-          {
-            "date": "2026-09-07",
-            "open": 1983.5,
-            "high": 2029.5,
-            "low": 1969.6,
-            "close": 2023.3,
-            "volume_base": 6002.449,
-            "trades": 92808,
-            "implied_valuation_tn": 2.0233
-          },
-          {
-            "date": "2026-09-08",
-            "open": 2023.3,
-            "high": 2241.9,
-            "low": 2011.6,
-            "close": 2191.2,
-            "volume_base": 8070.348,
-            "trades": 87429,
-            "implied_valuation_tn": 2.1912
-          },
-          {
-            "date": "2026-09-09",
-            "open": 2191.1,
-            "high": 2359.3,
-            "low": 2190.8,
-            "close": 2279.5,
-            "volume_base": 5337.491,
-            "trades": 66369,
-            "implied_valuation_tn": 2.2795
-          },
-          {
-            "date": "2026-09-10",
-            "open": 2279.5,
-            "high": 2290.7,
-            "low": 2127.2,
-            "close": 2153.7,
-            "volume_base": 4405.686,
-            "trades": 41026,
-            "implied_valuation_tn": 2.1536999999999997
-          },
-          {
-            "date": "2026-09-11",
-            "open": 2153.2,
-            "high": 2181.8,
-            "low": 2117.3,
-            "close": 2178.3,
-            "volume_base": 3623.539,
-            "trades": 43881,
-            "implied_valuation_tn": 2.1783
-          },
-          {
-            "date": "2026-09-12",
-            "open": 2178.0,
-            "high": 2188.9,
-            "low": 2091.3,
-            "close": 2103.6,
-            "volume_base": 2438.24,
-            "trades": 34548,
-            "implied_valuation_tn": 2.1036
-          },
-          {
-            "date": "2026-09-13",
-            "open": 2103.9,
-            "high": 2192.4,
-            "low": 2046.7,
-            "close": 2142.5,
-            "volume_base": 4320.469,
-            "trades": 58830,
-            "implied_valuation_tn": 2.1425
-          },
-          {
-            "date": "2026-09-14",
-            "open": 2143.0,
-            "high": 2209.8,
-            "low": 2128.4,
-            "close": 2204.9,
-            "volume_base": 3365.169,
-            "trades": 61516,
-            "implied_valuation_tn": 2.2049
-          },
-          {
-            "date": "2026-09-15",
-            "open": 2204.9,
-            "high": 2205.9,
-            "low": 2146.7,
-            "close": 2184.4,
-            "volume_base": 2641.482,
-            "trades": 55900,
-            "implied_valuation_tn": 2.1844
-          },
-          {
-            "date": "2026-09-16",
-            "open": 2184.7,
-            "high": 2207.7,
-            "low": 2164.1,
-            "close": 2170.6,
-            "volume_base": 1622.657,
-            "trades": 36039,
-            "implied_valuation_tn": 2.1706
-          },
-          {
-            "date": "2026-09-17",
-            "open": 2170.6,
-            "high": 2178.3,
-            "low": 2148.2,
-            "close": 2155.6,
-            "volume_base": 1496.908,
-            "trades": 33101,
-            "implied_valuation_tn": 2.1556
-          },
-          {
-            "date": "2026-09-18",
-            "open": 2155.6,
-            "high": 2191.8,
-            "low": 2149.0,
-            "close": 2170.1,
-            "volume_base": 2261.009,
-            "trades": 44871,
-            "implied_valuation_tn": 2.1701
-          },
-          {
-            "date": "2026-09-19",
-            "open": 2170.0,
-            "high": 2179.5,
-            "low": 2142.4,
-            "close": 2154.8,
-            "volume_base": 1801.232,
-            "trades": 44212,
-            "implied_valuation_tn": 2.1548000000000003
-          },
-          {
-            "date": "2026-09-20",
-            "open": 2154.8,
-            "high": 2161.8,
-            "low": 2139.2,
-            "close": 2143.7,
-            "volume_base": 1569.457,
-            "trades": 41310,
-            "implied_valuation_tn": 2.1437
-          },
-          {
-            "date": "2026-09-21",
-            "open": 2143.8,
-            "high": 2198.9,
-            "low": 2138.9,
-            "close": 2166.1,
-            "volume_base": 3583.286,
-            "trades": 78475,
-            "implied_valuation_tn": 2.1661
-          },
-          {
-            "date": "2026-09-22",
-            "open": 2166.8,
-            "high": 2194.7,
-            "low": 2146.5,
-            "close": 2189.5,
-            "volume_base": 2713.529,
-            "trades": 63366,
-            "implied_valuation_tn": 2.1895
-          },
-          {
-            "date": "2026-09-23",
-            "open": 2189.5,
-            "high": 2191.6,
-            "low": 2152.4,
-            "close": 2164.5,
-            "volume_base": 1609.113,
-            "trades": 48296,
-            "implied_valuation_tn": 2.1645
-          },
-          {
-            "date": "2026-09-24",
-            "open": 2164.6,
-            "high": 2167.8,
-            "low": 2085.8,
-            "close": 2092.6,
-            "volume_base": 2423.173,
-            "trades": 48908,
-            "implied_valuation_tn": 2.0926
-          },
-          {
-            "date": "2026-09-25",
-            "open": 2092.5,
-            "high": 2116.1,
-            "low": 2073.5,
-            "close": 2092.4,
-            "volume_base": 2805.866,
-            "trades": 54516,
-            "implied_valuation_tn": 2.0924
-          },
-          {
-            "date": "2026-09-26",
-            "open": 2092.3,
-            "high": 2096.5,
-            "low": 2046.0,
-            "close": 2066.4,
-            "volume_base": 1596.183,
-            "trades": 32812,
-            "implied_valuation_tn": 2.0664
-          },
-          {
-            "date": "2026-09-27",
-            "open": 2066.4,
-            "high": 2136.2,
-            "low": 2063.0,
-            "close": 2116.0,
-            "volume_base": 1671.706,
-            "trades": 37919,
-            "implied_valuation_tn": 2.116
-          },
-          {
-            "date": "2026-09-28",
-            "open": 2116.0,
-            "high": 2123.3,
-            "low": 2070.0,
-            "close": 2077.2,
-            "volume_base": 2587.708,
-            "trades": 52968,
-            "implied_valuation_tn": 2.0772
-          },
-          {
-            "date": "2026-09-29",
-            "open": 2077.7,
-            "high": 2088.3,
-            "low": 2037.0,
-            "close": 2037.4,
-            "volume_base": 3472.656,
-            "trades": 67212,
-            "implied_valuation_tn": 2.0374
-          },
-          {
-            "date": "2026-09-30",
-            "open": 2037.3,
-            "high": 2125.7,
-            "low": 2037.0,
-            "close": 2083.4,
-            "volume_base": 3834.714,
-            "trades": 74870,
-            "implied_valuation_tn": 2.0834
-          },
-          {
-            "date": "2026-10-01",
-            "open": 2083.6,
-            "high": 2109.3,
-            "low": 2076.8,
-            "close": 2087.5,
-            "volume_base": 2983.76,
-            "trades": 70814,
-            "implied_valuation_tn": 2.0875
-          },
-          {
-            "date": "2026-10-02",
-            "open": 2087.6,
-            "high": 2110.1,
-            "low": 2068.3,
-            "close": 2075.8,
-            "volume_base": 2094.013,
-            "trades": 55601,
-            "implied_valuation_tn": 2.0758
-          },
-          {
-            "date": "2026-10-03",
-            "open": 2075.8,
-            "high": 2095.7,
-            "low": 2072.3,
-            "close": 2076.7,
-            "volume_base": 1718.784,
-            "trades": 52325,
-            "implied_valuation_tn": 2.0766999999999998
-          },
-          {
-            "date": "2026-10-04",
-            "open": 2076.7,
-            "high": 2090.6,
-            "low": 2073.6,
-            "close": 2083.7,
-            "volume_base": 2239.823,
-            "trades": 56177,
-            "implied_valuation_tn": 2.0837
-          },
-          {
-            "date": "2026-10-05",
-            "open": 2083.6,
-            "high": 2099.1,
-            "low": 2080.5,
-            "close": 2088.6,
-            "volume_base": 2603.168,
-            "trades": 72627,
-            "implied_valuation_tn": 2.0886
-          },
-          {
-            "date": "2026-10-06",
-            "open": 2088.6,
-            "high": 2158.0,
-            "low": 2084.8,
-            "close": 2138.4,
-            "volume_base": 4287.074,
-            "trades": 94505,
-            "implied_valuation_tn": 2.1384
-          },
-          {
-            "date": "2026-10-07",
-            "open": 2138.9,
-            "high": 2142.1,
-            "low": 2098.8,
-            "close": 2115.4,
-            "volume_base": 4776.861,
-            "trades": 103279,
-            "implied_valuation_tn": 2.1154
-          },
-          {
-            "date": "2026-10-08",
-            "open": 2115.0,
-            "high": 2119.8,
-            "low": 2037.3,
-            "close": 2066.1,
-            "volume_base": 6702.109,
-            "trades": 90668,
-            "implied_valuation_tn": 2.0661
-          },
-          {
-            "date": "2026-10-09",
-            "open": 2066.0,
-            "high": 2078.5,
-            "low": 2048.6,
-            "close": 2071.1,
-            "volume_base": 5942.188,
-            "trades": 106609,
-            "implied_valuation_tn": 2.0711
-          },
-          {
-            "date": "2026-10-10",
-            "open": 2071.1,
-            "high": 2098.8,
-            "low": 2069.5,
-            "close": 2090.6,
-            "volume_base": 3646.251,
-            "trades": 75907,
-            "implied_valuation_tn": 2.0906
-          },
-          {
-            "date": "2026-10-11",
-            "open": 2090.7,
-            "high": 2092.2,
-            "low": 2075.8,
-            "close": 2082.5,
-            "volume_base": 4466.869,
-            "trades": 82637,
-            "implied_valuation_tn": 2.0825
-          },
-          {
-            "date": "2026-10-12",
-            "open": 2082.5,
-            "high": 2092.2,
-            "low": 2050.0,
-            "close": 2057.9,
-            "volume_base": 5009.401,
-            "trades": 86316,
-            "implied_valuation_tn": 2.0579
-          },
-          {
-            "date": "2026-10-13",
-            "open": 2057.6,
-            "high": 2060.2,
-            "low": 2019.3,
-            "close": 2031.4,
-            "volume_base": 4853.515,
-            "trades": 94908,
-            "implied_valuation_tn": 2.0314
-          },
-          {
-            "date": "2026-10-14",
-            "open": 2031.4,
-            "high": 2035.5,
-            "low": 1914.1,
-            "close": 1940.9,
-            "volume_base": 11831.733,
-            "trades": 186804,
-            "implied_valuation_tn": 1.9409
-          },
-          {
-            "date": "2026-10-15",
-            "open": 1940.9,
-            "high": 2053.6,
-            "low": 1833.9,
-            "close": 1857.7,
-            "volume_base": 14517.68,
-            "trades": 139135,
-            "implied_valuation_tn": 1.8577
-          },
-          {
-            "date": "2026-10-16",
-            "open": 1857.8,
-            "high": 2025.1,
-            "low": 1855.4,
-            "close": 1924.6,
-            "volume_base": 8087.479,
-            "trades": 124161,
-            "implied_valuation_tn": 1.9246
-          },
-          {
-            "date": "2026-10-17",
-            "open": 1924.6,
-            "high": 1929.8,
-            "low": 1871.5,
-            "close": 1889.1,
-            "volume_base": 3302.763,
-            "trades": 59054,
-            "implied_valuation_tn": 1.8891
-          },
-          {
-            "date": "2026-10-18",
-            "open": 1889.1,
-            "high": 1926.7,
-            "low": 1887.6,
-            "close": 1925.8,
-            "volume_base": 2778.831,
-            "trades": 43772,
-            "implied_valuation_tn": 1.9258
-          },
-          {
-            "date": "2026-10-19",
-            "open": 1925.9,
-            "high": 1985.2,
-            "low": 1925.0,
-            "close": 1982.8,
-            "volume_base": 4094.731,
-            "trades": 67411,
-            "implied_valuation_tn": 1.9828
-          },
-          {
-            "date": "2026-10-20",
-            "open": 1982.8,
-            "high": 1984.2,
-            "low": 1903.5,
-            "close": 1953.2,
-            "volume_base": 5594.077,
-            "trades": 97229,
-            "implied_valuation_tn": 1.9532
-          },
-          {
-            "date": "2026-10-21",
-            "open": 1952.8,
-            "high": 1970.0,
-            "low": 1927.3,
-            "close": 1965.8,
-            "volume_base": 5499.05,
-            "trades": 99003,
-            "implied_valuation_tn": 1.9658
-          },
-          {
-            "date": "2026-10-22",
-            "open": 1965.8,
-            "high": 1975.0,
-            "low": 1900.0,
-            "close": 1937.8,
-            "volume_base": 5714.439,
-            "trades": 98448,
-            "implied_valuation_tn": 1.9378
-          },
-          {
-            "date": "2026-10-23",
-            "open": 1937.7,
-            "high": 1964.3,
-            "low": 1910.1,
-            "close": 1938.2,
-            "volume_base": 5166.629,
-            "trades": 84589,
-            "implied_valuation_tn": 1.9382
-          },
-          {
-            "date": "2026-10-24",
-            "open": 1938.2,
-            "high": 1954.7,
-            "low": 1910.0,
-            "close": 1912.8,
-            "volume_base": 4896.342,
-            "trades": 75725,
-            "implied_valuation_tn": 1.9128
-          },
-          {
-            "date": "2026-10-25",
-            "open": 1912.7,
-            "high": 1941.3,
-            "low": 1868.0,
-            "close": 1901.2,
-            "volume_base": 5003.182,
-            "trades": 70467,
-            "implied_valuation_tn": 1.9012
-          },
-          {
-            "date": "2026-10-26",
-            "open": 1900.9,
-            "high": 1980.9,
-            "low": 1856.8,
-            "close": 1880.8,
-            "volume_base": 12289.036,
-            "trades": 110675,
-            "implied_valuation_tn": 1.8808
-          },
-          {
-            "date": "2026-10-27",
-            "open": 1880.8,
-            "high": 1903.5,
-            "low": 1877.7,
-            "close": 1884.7,
-            "volume_base": 6474.898,
-            "trades": 103319,
-            "implied_valuation_tn": 1.8847
-          },
-          {
-            "date": "2026-10-28",
-            "open": 1884.0,
-            "high": 1886.0,
-            "low": 1858.9,
-            "close": 1872.8,
-            "volume_base": 5593.029,
-            "trades": 124331,
-            "implied_valuation_tn": 1.8728
-          },
-          {
-            "date": "2026-10-29",
-            "open": 1872.9,
-            "high": 1873.0,
-            "low": 1795.9,
-            "close": 1811.1,
-            "volume_base": 7153.812,
-            "trades": 139431,
-            "implied_valuation_tn": 1.8111
-          },
-          {
-            "date": "2026-10-30",
-            "open": 1811.5,
-            "high": 1813.1,
-            "low": 1683.6,
-            "close": 1726.6,
-            "volume_base": 14419.014,
-            "trades": 143953,
-            "implied_valuation_tn": 1.7266
-          },
-          {
-            "date": "2026-10-31",
-            "open": 1726.6,
-            "high": 1807.5,
-            "low": 1720.9,
-            "close": 1794.7,
-            "volume_base": 10659.562,
-            "trades": 112333,
-            "implied_valuation_tn": 1.7947
-          },
-          {
-            "date": "2026-11-01",
-            "open": 1794.6,
-            "high": 1827.4,
-            "low": 1780.0,
-            "close": 1804.4,
-            "volume_base": 8010.821,
-            "trades": 95998,
-            "implied_valuation_tn": 1.8044
-          },
-          {
-            "date": "2026-11-02",
-            "open": 1804.4,
-            "high": 1822.7,
-            "low": 1718.3,
-            "close": 1731.4,
-            "volume_base": 13644.002,
-            "trades": 118202,
-            "implied_valuation_tn": 1.7314
-          },
-          {
-            "date": "2026-11-03",
-            "open": 1731.9,
-            "high": 1875.4,
-            "low": 1730.0,
-            "close": 1788.4,
-            "volume_base": 16509.641,
-            "trades": 145821,
-            "implied_valuation_tn": 1.7884
-          },
-          {
-            "date": "2026-11-04",
-            "open": 1788.9,
-            "high": 1930.0,
-            "low": 1756.0,
-            "close": 1865.4,
-            "volume_base": 33319.897,
-            "trades": 165671,
-            "implied_valuation_tn": 1.8654
-          },
-          {
-            "date": "2026-11-05",
-            "open": 1865.3,
-            "high": 1898.1,
-            "low": 1607.7,
-            "close": 1718.6,
-            "volume_base": 34776.663,
-            "trades": 176626,
-            "implied_valuation_tn": 1.7186
-          },
-          {
-            "date": "2026-11-06",
-            "open": 1718.6,
-            "high": 1758.4,
-            "low": 1506.7,
-            "close": 1526.5,
-            "volume_base": 38053.997,
-            "trades": 221261,
-            "implied_valuation_tn": 1.5265
-          },
-          {
-            "date": "2026-11-07",
-            "open": 1526.1,
-            "high": 1632.0,
-            "low": 1517.7,
-            "close": 1587.0,
-            "volume_base": 14321.775,
-            "trades": 148026,
-            "implied_valuation_tn": 1.587
-          },
-          {
-            "date": "2026-11-08",
-            "open": 1587.0,
-            "high": 1675.4,
-            "low": 1576.7,
-            "close": 1593.2,
-            "volume_base": 8826.531,
-            "trades": 126475,
-            "implied_valuation_tn": 1.5932
-          },
-          {
-            "date": "2026-11-09",
-            "open": 1593.0,
-            "high": 1748.4,
-            "low": 1584.3,
-            "close": 1684.4,
-            "volume_base": 22302.661,
-            "trades": 184580,
-            "implied_valuation_tn": 1.6844
-          },
-          {
-            "date": "2026-11-10",
-            "open": 1684.2,
-            "high": 1748.9,
-            "low": 1539.6,
-            "close": 1736.7,
-            "volume_base": 84614.639,
-            "trades": 364772,
-            "implied_valuation_tn": 1.7367
-          },
-          {
-            "date": "2026-11-11",
-            "open": 1736.7,
-            "high": 1874.5,
-            "low": 1720.9,
-            "close": 1808.7,
-            "volume_base": 36139.118,
-            "trades": 269274,
-            "implied_valuation_tn": 1.8087
-          },
-          {
-            "date": "2026-11-12",
-            "open": 1808.8,
-            "high": 1838.9,
-            "low": 1764.3,
-            "close": 1820.0,
-            "volume_base": 15502.955,
-            "trades": 132643,
-            "implied_valuation_tn": 1.82
-          },
-          {
-            "date": "2026-11-13",
-            "open": 1820.0,
-            "high": 1830.8,
-            "low": 1781.6,
-            "close": 1796.8,
-            "volume_base": 2694.988,
-            "trades": 32263,
-            "implied_valuation_tn": 1.7968
-          }
-        ]
-      },
-      "io:OAI": {
-        "coin": "io:OAI",
-        "interval": "1d",
-        "n": 73,
-        "start": "2026-09-02",
-        "end": "2026-11-13",
-        "points": [
-          {
-            "date": "2026-09-02",
-            "open": 1328.6,
-            "high": 1361.2,
-            "low": 1130.1,
-            "close": 1360.1,
-            "volume_base": 1934.19,
-            "trades": 10359,
-            "implied_valuation_tn": 1.3601
-          },
-          {
-            "date": "2026-09-03",
-            "open": 1360.2,
-            "high": 1496.2,
-            "low": 1331.8,
-            "close": 1455.5,
-            "volume_base": 3770.139,
-            "trades": 22764,
-            "implied_valuation_tn": 1.4555
-          },
-          {
-            "date": "2026-09-04",
-            "open": 1456.1,
-            "high": 1471.0,
-            "low": 1425.4,
-            "close": 1469.0,
-            "volume_base": 1782.565,
-            "trades": 17078,
-            "implied_valuation_tn": 1.469
-          },
-          {
-            "date": "2026-09-05",
-            "open": 1468.7,
-            "high": 1509.3,
-            "low": 1463.5,
-            "close": 1494.2,
-            "volume_base": 1507.513,
-            "trades": 12639,
-            "implied_valuation_tn": 1.4942
-          },
-          {
-            "date": "2026-09-06",
-            "open": 1494.2,
-            "high": 1503.1,
-            "low": 1464.0,
-            "close": 1485.4,
-            "volume_base": 727.035,
-            "trades": 7856,
-            "implied_valuation_tn": 1.4854
-          },
-          {
-            "date": "2026-09-07",
-            "open": 1485.4,
-            "high": 1531.2,
-            "low": 1479.9,
-            "close": 1516.8,
-            "volume_base": 1249.725,
-            "trades": 8368,
-            "implied_valuation_tn": 1.5168
-          },
-          {
-            "date": "2026-09-08",
-            "open": 1516.3,
-            "high": 1675.2,
-            "low": 1516.0,
-            "close": 1619.9,
-            "volume_base": 3762.709,
-            "trades": 19210,
-            "implied_valuation_tn": 1.6199
-          },
-          {
-            "date": "2026-09-09",
-            "open": 1620.2,
-            "high": 1790.2,
-            "low": 1602.0,
-            "close": 1644.8,
-            "volume_base": 2255.128,
-            "trades": 25412,
-            "implied_valuation_tn": 1.6448
-          },
-          {
-            "date": "2026-09-10",
-            "open": 1644.6,
-            "high": 1723.6,
-            "low": 1560.0,
-            "close": 1629.1,
-            "volume_base": 2000.683,
-            "trades": 28033,
-            "implied_valuation_tn": 1.6291
-          },
-          {
-            "date": "2026-09-11",
-            "open": 1628.7,
-            "high": 1681.8,
-            "low": 1618.0,
-            "close": 1681.6,
-            "volume_base": 1221.461,
-            "trades": 24253,
-            "implied_valuation_tn": 1.6816
-          },
-          {
-            "date": "2026-09-12",
-            "open": 1681.7,
-            "high": 1700.6,
-            "low": 1540.3,
-            "close": 1565.2,
-            "volume_base": 2436.208,
-            "trades": 37602,
-            "implied_valuation_tn": 1.5652
-          },
-          {
-            "date": "2026-09-13",
-            "open": 1564.4,
-            "high": 1603.3,
-            "low": 1407.9,
-            "close": 1493.9,
-            "volume_base": 4833.264,
-            "trades": 42418,
-            "implied_valuation_tn": 1.4939
-          },
-          {
-            "date": "2026-09-14",
-            "open": 1493.9,
-            "high": 1621.4,
-            "low": 1487.9,
-            "close": 1569.8,
-            "volume_base": 1652.777,
-            "trades": 27698,
-            "implied_valuation_tn": 1.5698
-          },
-          {
-            "date": "2026-09-15",
-            "open": 1569.2,
-            "high": 1597.3,
-            "low": 1519.3,
-            "close": 1534.0,
-            "volume_base": 1179.369,
-            "trades": 18314,
-            "implied_valuation_tn": 1.534
-          },
-          {
-            "date": "2026-09-16",
-            "open": 1536.4,
-            "high": 1611.3,
-            "low": 1501.6,
-            "close": 1569.6,
-            "volume_base": 1314.169,
-            "trades": 13897,
-            "implied_valuation_tn": 1.5696
-          },
-          {
-            "date": "2026-09-17",
-            "open": 1569.6,
-            "high": 1621.0,
-            "low": 1557.6,
-            "close": 1572.6,
-            "volume_base": 1153.053,
-            "trades": 10776,
-            "implied_valuation_tn": 1.5726
-          },
-          {
-            "date": "2026-09-18",
-            "open": 1574.2,
-            "high": 1607.3,
-            "low": 1565.3,
-            "close": 1580.5,
-            "volume_base": 729.797,
-            "trades": 12123,
-            "implied_valuation_tn": 1.5805
-          },
-          {
-            "date": "2026-09-19",
-            "open": 1580.9,
-            "high": 1621.0,
-            "low": 1572.0,
-            "close": 1617.5,
-            "volume_base": 541.626,
-            "trades": 10179,
-            "implied_valuation_tn": 1.6175
-          },
-          {
-            "date": "2026-09-20",
-            "open": 1618.4,
-            "high": 1624.5,
-            "low": 1596.0,
-            "close": 1616.0,
-            "volume_base": 433.034,
-            "trades": 6716,
-            "implied_valuation_tn": 1.616
-          },
-          {
-            "date": "2026-09-21",
-            "open": 1616.0,
-            "high": 1704.4,
-            "low": 1574.1,
-            "close": 1678.0,
-            "volume_base": 1323.204,
-            "trades": 12761,
-            "implied_valuation_tn": 1.678
-          },
-          {
-            "date": "2026-09-22",
-            "open": 1677.9,
-            "high": 1724.2,
-            "low": 1660.1,
-            "close": 1701.1,
-            "volume_base": 887.246,
-            "trades": 7405,
-            "implied_valuation_tn": 1.7011
-          },
-          {
-            "date": "2026-09-23",
-            "open": 1699.7,
-            "high": 1707.5,
-            "low": 1647.5,
-            "close": 1650.4,
-            "volume_base": 508.013,
-            "trades": 8398,
-            "implied_valuation_tn": 1.6504
-          },
-          {
-            "date": "2026-09-24",
-            "open": 1650.8,
-            "high": 1665.2,
-            "low": 1616.5,
-            "close": 1628.1,
-            "volume_base": 789.728,
-            "trades": 9003,
-            "implied_valuation_tn": 1.6281
-          },
-          {
-            "date": "2026-09-25",
-            "open": 1628.1,
-            "high": 1642.9,
-            "low": 1620.0,
-            "close": 1632.4,
-            "volume_base": 647.293,
-            "trades": 5669,
-            "implied_valuation_tn": 1.6324
-          },
-          {
-            "date": "2026-09-26",
-            "open": 1633.7,
-            "high": 1645.4,
-            "low": 1626.2,
-            "close": 1637.9,
-            "volume_base": 552.476,
-            "trades": 3934,
-            "implied_valuation_tn": 1.6379
-          },
-          {
-            "date": "2026-09-27",
-            "open": 1637.9,
-            "high": 1700.1,
-            "low": 1635.3,
-            "close": 1658.2,
-            "volume_base": 387.933,
-            "trades": 4555,
-            "implied_valuation_tn": 1.6582
-          },
-          {
-            "date": "2026-09-28",
-            "open": 1658.2,
-            "high": 1660.6,
-            "low": 1617.1,
-            "close": 1623.2,
-            "volume_base": 637.525,
-            "trades": 16761,
-            "implied_valuation_tn": 1.6232
-          },
-          {
-            "date": "2026-09-29",
-            "open": 1623.2,
-            "high": 1827.0,
-            "low": 1614.0,
-            "close": 1680.8,
-            "volume_base": 3240.67,
-            "trades": 23833,
-            "implied_valuation_tn": 1.6808
-          },
-          {
-            "date": "2026-09-30",
-            "open": 1680.8,
-            "high": 1688.7,
-            "low": 1632.5,
-            "close": 1636.8,
-            "volume_base": 1060.053,
-            "trades": 13536,
-            "implied_valuation_tn": 1.6368
-          },
-          {
-            "date": "2026-10-01",
-            "open": 1637.5,
-            "high": 1647.4,
-            "low": 1547.2,
-            "close": 1589.7,
-            "volume_base": 1823.798,
-            "trades": 14033,
-            "implied_valuation_tn": 1.5897
-          },
-          {
-            "date": "2026-10-02",
-            "open": 1589.6,
-            "high": 1642.2,
-            "low": 1580.0,
-            "close": 1616.2,
-            "volume_base": 618.379,
-            "trades": 8168,
-            "implied_valuation_tn": 1.6162
-          },
-          {
-            "date": "2026-10-03",
-            "open": 1615.4,
-            "high": 1642.0,
-            "low": 1608.8,
-            "close": 1631.7,
-            "volume_base": 575.977,
-            "trades": 7217,
-            "implied_valuation_tn": 1.6317
-          },
-          {
-            "date": "2026-10-04",
-            "open": 1631.8,
-            "high": 1645.1,
-            "low": 1629.2,
-            "close": 1640.2,
-            "volume_base": 586.095,
-            "trades": 8364,
-            "implied_valuation_tn": 1.6402
-          },
-          {
-            "date": "2026-10-05",
-            "open": 1640.2,
-            "high": 1647.5,
-            "low": 1629.8,
-            "close": 1646.3,
-            "volume_base": 592.906,
-            "trades": 12180,
-            "implied_valuation_tn": 1.6463
-          },
-          {
-            "date": "2026-10-06",
-            "open": 1645.6,
-            "high": 1699.0,
-            "low": 1635.3,
-            "close": 1694.0,
-            "volume_base": 1082.866,
-            "trades": 21898,
-            "implied_valuation_tn": 1.694
-          },
-          {
-            "date": "2026-10-07",
-            "open": 1693.5,
-            "high": 1738.1,
-            "low": 1674.6,
-            "close": 1730.9,
-            "volume_base": 2701.297,
-            "trades": 24130,
-            "implied_valuation_tn": 1.7309
-          },
-          {
-            "date": "2026-10-08",
-            "open": 1730.1,
-            "high": 1741.7,
-            "low": 1591.8,
-            "close": 1674.2,
-            "volume_base": 3732.713,
-            "trades": 45314,
-            "implied_valuation_tn": 1.6742
-          },
-          {
-            "date": "2026-10-09",
-            "open": 1674.1,
-            "high": 1698.3,
-            "low": 1665.2,
-            "close": 1690.3,
-            "volume_base": 2097.996,
-            "trades": 31181,
-            "implied_valuation_tn": 1.6903
-          },
-          {
-            "date": "2026-10-10",
-            "open": 1690.3,
-            "high": 1724.9,
-            "low": 1689.5,
-            "close": 1713.7,
-            "volume_base": 1589.322,
-            "trades": 30631,
-            "implied_valuation_tn": 1.7137
-          },
-          {
-            "date": "2026-10-11",
-            "open": 1713.7,
-            "high": 1724.1,
-            "low": 1675.0,
-            "close": 1696.5,
-            "volume_base": 2470.518,
-            "trades": 36879,
-            "implied_valuation_tn": 1.6965
-          },
-          {
-            "date": "2026-10-12",
-            "open": 1696.3,
-            "high": 1719.7,
-            "low": 1679.5,
-            "close": 1681.3,
-            "volume_base": 2287.052,
-            "trades": 33397,
-            "implied_valuation_tn": 1.6813
-          },
-          {
-            "date": "2026-10-13",
-            "open": 1681.6,
-            "high": 1690.9,
-            "low": 1653.2,
-            "close": 1655.1,
-            "volume_base": 2061.008,
-            "trades": 35440,
-            "implied_valuation_tn": 1.6551
-          },
-          {
-            "date": "2026-10-14",
-            "open": 1655.1,
-            "high": 1667.4,
-            "low": 1620.0,
-            "close": 1624.8,
-            "volume_base": 3082.752,
-            "trades": 46513,
-            "implied_valuation_tn": 1.6248
-          },
-          {
-            "date": "2026-10-15",
-            "open": 1625.2,
-            "high": 1634.7,
-            "low": 1490.0,
-            "close": 1529.5,
-            "volume_base": 5622.979,
-            "trades": 63490,
-            "implied_valuation_tn": 1.5295
-          },
-          {
-            "date": "2026-10-16",
-            "open": 1529.1,
-            "high": 1558.9,
-            "low": 1520.8,
-            "close": 1529.8,
-            "volume_base": 3283.294,
-            "trades": 63338,
-            "implied_valuation_tn": 1.5298
-          },
-          {
-            "date": "2026-10-17",
-            "open": 1530.1,
-            "high": 1532.1,
-            "low": 1472.9,
-            "close": 1499.1,
-            "volume_base": 2209.85,
-            "trades": 40423,
-            "implied_valuation_tn": 1.4991
-          },
-          {
-            "date": "2026-10-18",
-            "open": 1498.9,
-            "high": 1530.0,
-            "low": 1491.3,
-            "close": 1517.7,
-            "volume_base": 1133.462,
-            "trades": 28635,
-            "implied_valuation_tn": 1.5177
-          },
-          {
-            "date": "2026-10-19",
-            "open": 1517.1,
-            "high": 1546.3,
-            "low": 1507.4,
-            "close": 1534.5,
-            "volume_base": 797.936,
-            "trades": 20236,
-            "implied_valuation_tn": 1.5345
-          },
-          {
-            "date": "2026-10-20",
-            "open": 1534.7,
-            "high": 1537.0,
-            "low": 1500.3,
-            "close": 1517.4,
-            "volume_base": 937.223,
-            "trades": 27061,
-            "implied_valuation_tn": 1.5174
-          },
-          {
-            "date": "2026-10-21",
-            "open": 1517.4,
-            "high": 1548.4,
-            "low": 1511.2,
-            "close": 1537.8,
-            "volume_base": 964.402,
-            "trades": 28359,
-            "implied_valuation_tn": 1.5378
-          },
-          {
-            "date": "2026-10-22",
-            "open": 1537.7,
-            "high": 1555.3,
-            "low": 1469.8,
-            "close": 1501.0,
-            "volume_base": 1720.606,
-            "trades": 38092,
-            "implied_valuation_tn": 1.501
-          },
-          {
-            "date": "2026-10-23",
-            "open": 1501.2,
-            "high": 1501.3,
-            "low": 1464.5,
-            "close": 1467.9,
-            "volume_base": 1141.804,
-            "trades": 40910,
-            "implied_valuation_tn": 1.4679
-          },
-          {
-            "date": "2026-10-24",
-            "open": 1467.9,
-            "high": 1472.2,
-            "low": 1418.8,
-            "close": 1420.3,
-            "volume_base": 851.983,
-            "trades": 25925,
-            "implied_valuation_tn": 1.4203
-          },
-          {
-            "date": "2026-10-25",
-            "open": 1420.3,
-            "high": 1434.0,
-            "low": 1414.3,
-            "close": 1419.0,
-            "volume_base": 487.182,
-            "trades": 11523,
-            "implied_valuation_tn": 1.419
-          },
-          {
-            "date": "2026-10-26",
-            "open": 1418.8,
-            "high": 1443.1,
-            "low": 1415.0,
-            "close": 1435.9,
-            "volume_base": 944.482,
-            "trades": 21312,
-            "implied_valuation_tn": 1.4359
-          },
-          {
-            "date": "2026-10-27",
-            "open": 1435.9,
-            "high": 1501.0,
-            "low": 1428.6,
-            "close": 1499.2,
-            "volume_base": 862.974,
-            "trades": 19367,
-            "implied_valuation_tn": 1.4992
-          },
-          {
-            "date": "2026-10-28",
-            "open": 1499.1,
-            "high": 1545.1,
-            "low": 1487.8,
-            "close": 1496.9,
-            "volume_base": 1508.644,
-            "trades": 26220,
-            "implied_valuation_tn": 1.4969
-          },
-          {
-            "date": "2026-10-29",
-            "open": 1496.9,
-            "high": 1497.0,
-            "low": 1440.5,
-            "close": 1458.2,
-            "volume_base": 1236.161,
-            "trades": 23582,
-            "implied_valuation_tn": 1.4582
-          },
-          {
-            "date": "2026-10-30",
-            "open": 1457.6,
-            "high": 1458.6,
-            "low": 1407.1,
-            "close": 1428.5,
-            "volume_base": 1429.809,
-            "trades": 29835,
-            "implied_valuation_tn": 1.4285
-          },
-          {
-            "date": "2026-10-31",
-            "open": 1428.8,
-            "high": 1428.8,
-            "low": 1330.8,
-            "close": 1400.5,
-            "volume_base": 3368.146,
-            "trades": 29636,
-            "implied_valuation_tn": 1.4005
-          },
-          {
-            "date": "2026-11-01",
-            "open": 1400.5,
-            "high": 1410.5,
-            "low": 1389.2,
-            "close": 1404.1,
-            "volume_base": 809.891,
-            "trades": 15111,
-            "implied_valuation_tn": 1.4041
-          },
-          {
-            "date": "2026-11-02",
-            "open": 1404.2,
-            "high": 1427.0,
-            "low": 1385.8,
-            "close": 1395.3,
-            "volume_base": 869.137,
-            "trades": 15014,
-            "implied_valuation_tn": 1.3953
-          },
-          {
-            "date": "2026-11-03",
-            "open": 1395.8,
-            "high": 1408.7,
-            "low": 1373.9,
-            "close": 1398.7,
-            "volume_base": 678.319,
-            "trades": 13854,
-            "implied_valuation_tn": 1.3987
-          },
-          {
-            "date": "2026-11-04",
-            "open": 1399.1,
-            "high": 1430.5,
-            "low": 1373.1,
-            "close": 1401.5,
-            "volume_base": 1248.201,
-            "trades": 17551,
-            "implied_valuation_tn": 1.4015
-          },
-          {
-            "date": "2026-11-05",
-            "open": 1401.1,
-            "high": 1419.6,
-            "low": 1346.2,
-            "close": 1351.4,
-            "volume_base": 1252.623,
-            "trades": 17157,
-            "implied_valuation_tn": 1.3514
-          },
-          {
-            "date": "2026-11-06",
-            "open": 1351.8,
-            "high": 1371.6,
-            "low": 1256.0,
-            "close": 1288.1,
-            "volume_base": 2722.335,
-            "trades": 20614,
-            "implied_valuation_tn": 1.2881
-          },
-          {
-            "date": "2026-11-07",
-            "open": 1287.7,
-            "high": 1368.9,
-            "low": 1287.6,
-            "close": 1324.2,
-            "volume_base": 1344.167,
-            "trades": 10224,
-            "implied_valuation_tn": 1.3242
-          },
-          {
-            "date": "2026-11-08",
-            "open": 1324.0,
-            "high": 1394.1,
-            "low": 1322.8,
-            "close": 1344.2,
-            "volume_base": 1500.33,
-            "trades": 15578,
-            "implied_valuation_tn": 1.3442
-          },
-          {
-            "date": "2026-11-09",
-            "open": 1343.4,
-            "high": 1376.0,
-            "low": 1329.8,
-            "close": 1372.1,
-            "volume_base": 1056.573,
-            "trades": 15058,
-            "implied_valuation_tn": 1.3721
-          },
-          {
-            "date": "2026-11-10",
-            "open": 1371.5,
-            "high": 1374.8,
-            "low": 1260.9,
-            "close": 1291.9,
-            "volume_base": 2914.17,
-            "trades": 27163,
-            "implied_valuation_tn": 1.2919
-          },
-          {
-            "date": "2026-11-11",
-            "open": 1292.0,
-            "high": 1376.8,
-            "low": 1286.2,
-            "close": 1332.4,
-            "volume_base": 1823.14,
-            "trades": 24374,
-            "implied_valuation_tn": 1.3324
-          },
-          {
-            "date": "2026-11-12",
-            "open": 1332.6,
-            "high": 1362.9,
-            "low": 1316.3,
-            "close": 1347.9,
-            "volume_base": 1437.388,
-            "trades": 21811,
-            "implied_valuation_tn": 1.3479
-          },
-          {
-            "date": "2026-11-13",
-            "open": 1348.0,
-            "high": 1350.6,
-            "low": 1324.7,
-            "close": 1336.4,
-            "volume_base": 236.596,
-            "trades": 3680,
-            "implied_valuation_tn": 1.3364
-          }
-        ]
-      },
       "para:ANTH": {
         "coin": "para:ANTH",
         "interval": "1d",
-        "n": 18,
+        "n": 20,
         "start": "2026-10-27",
-        "end": "2026-11-13",
+        "end": "2026-11-15",
         "points": [
           {
             "date": "2026-10-27",
@@ -10866,11 +9270,31 @@
           {
             "date": "2026-11-13",
             "open": 102.26,
-            "high": 102.26,
-            "low": 101.44,
-            "close": 101.44,
-            "volume_base": 25.601,
-            "trades": 3,
+            "high": 106.96,
+            "low": 99.33,
+            "close": 101.87,
+            "volume_base": 126.527,
+            "trades": 58,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-14",
+            "open": 101.27,
+            "high": 102.13,
+            "low": 100.71,
+            "close": 101.03,
+            "volume_base": 11.494,
+            "trades": 20,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-15",
+            "open": 100.83,
+            "high": 101.7,
+            "low": 99.686,
+            "close": 101.16,
+            "volume_base": 75.956,
+            "trades": 31,
             "implied_valuation_tn": null
           }
         ]
@@ -15006,9 +13430,9 @@
       "xyz:ANT": {
         "coin": "xyz:ANT",
         "interval": "1d",
-        "n": 19,
+        "n": 22,
         "start": "2026-10-26",
-        "end": "2026-11-13",
+        "end": "2026-11-16",
         "points": [
           {
             "date": "2026-10-26",
@@ -15194,10 +13618,40 @@
             "date": "2026-11-13",
             "open": 104.38,
             "high": 105.12,
-            "low": 102.28,
-            "close": 103.08,
-            "volume_base": 82209.07,
-            "trades": 31949,
+            "low": 100.7,
+            "close": 102.14,
+            "volume_base": 298351.8,
+            "trades": 98691,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-14",
+            "open": 102.13,
+            "high": 103.12,
+            "low": 100.72,
+            "close": 102.11,
+            "volume_base": 106142.63,
+            "trades": 41972,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-15",
+            "open": 102.18,
+            "high": 102.61,
+            "low": 100.67,
+            "close": 102.07,
+            "volume_base": 82474.68,
+            "trades": 26593,
+            "implied_valuation_tn": null
+          },
+          {
+            "date": "2026-11-16",
+            "open": 102.05,
+            "high": 102.47,
+            "low": 101.35,
+            "close": 101.81,
+            "volume_base": 22887.27,
+            "trades": 6599,
             "implied_valuation_tn": null
           }
         ]
