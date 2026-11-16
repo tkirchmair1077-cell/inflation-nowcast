@@ -716,9 +716,9 @@
     ]
   },
   "ust10y_decomposition": {
-    "hint": "H.15 and NY Fed ACM through 10 Nov 2026; Board Kim-Wright through 6 Nov 2026. Source: Research Manager ust10y tidy. Fetched 13 Nov 2026, 06:47 Europe/Zurich.",
-    "as_of": "2026-11-10",
-    "as_of_display": "H.15 and ACM 10 Nov 2026; Kim-Wright 6 Nov 2026",
+    "hint": "H.15 and NY Fed ACM through 12 Nov 2026; Board Kim-Wright through 6 Nov 2026. Source: Research Manager ust10y tidy. Fetched 13 Nov 2026, 06:47 Europe/Zurich.",
+    "as_of": "2026-11-12",
+    "as_of_display": "H.15 and ACM 12 Nov 2026; Kim-Wright 6 Nov 2026",
     "source": "ust10y_decomposition_charts_2026-11-12.md",
     "read": "Over 21 sessions (9 October–10 November) the 10-year fell 26 bp (5.24% to 4.98%), of which 13 bp was the real yield and 13 bp the staff breakeven (d). The last day (9–10 November) the 10-year rose 10 bp. On the last common date, 6 November, ACM and Kim-Wright term premiums differed by 23.1 bp (d) (0.643% vs 0.874%), so the Split B result depends on the model.",
     "blocks": [
@@ -801,6 +801,6 @@
     "data_as_of": "2026-11-13",
     "commentary_as_of": "12 Nov 2026, 07:40 Europe/Zurich",
     "stamp": "Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
-    "latest": "leading charts redrawn 2026-11-13 07:05:52 Europe/Zurich"
+    "latest": "leading charts redrawn 2026-11-13 07:05:52 Europe/Zurich; DGS10 5.1 on 2026-11-12 (V)"
   }
 }
