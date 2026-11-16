@@ -21,8 +21,8 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Current — checked 12 Nov, 07:40 · Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
-    "banner": "<b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged. Leading-indicator charts redrawn 13 Nov 2026, 07:05:52 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026."
+    "label": "Current — checked 12 Nov, 07:40 · Data refreshed 2026-11-16, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
+    "banner": "<b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged. Leading-indicator charts redrawn 13 Nov 2026, 07:05:52 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026. <b>Data refreshed 2026-11-16, commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged."
   },
   "summary": {
     "heading": "Current state",
@@ -589,9 +589,9 @@
     "The inflation-nowcast model backtest on this page is dated 6 Nov 2026 and does not include the October CPI (released 10 Nov)."
   ],
   "leading_indicators": {
-    "hint": "Staff charts and staff reads versus the 6 Nov baseline. As of 2026-11-13 07:05:52 Europe/Zurich. Source: leading_indicators tidy (Research Manager). Public sources only.",
-    "as_of": "2026-11-13T07:05:58+01:00",
-    "as_of_display": "2026-11-13 07:05:52 Europe/Zurich",
+    "hint": "Staff charts and staff reads versus the 6 Nov baseline. As of 2026-11-16 07:53:56 Europe/Zurich. Source: leading_indicators tidy (Research Manager). Public sources only.",
+    "as_of": "2026-11-16T07:54:02+01:00",
+    "as_of_display": "2026-11-16 07:53:56 Europe/Zurich",
     "source": "leading_indicators_2026-11-12.md",
     "blocks": [
       {
@@ -798,9 +798,9 @@
     ]
   },
   "data_refresh": {
-    "data_as_of": "2026-11-13",
+    "data_as_of": "2026-11-16",
     "commentary_as_of": "12 Nov 2026, 07:40 Europe/Zurich",
-    "stamp": "Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
-    "latest": "leading charts redrawn 2026-11-13 07:05:52 Europe/Zurich; DGS10 5.1 on 2026-11-12 (V)"
+    "stamp": "Data refreshed 2026-11-16, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
+    "latest": "leading charts redrawn 2026-11-16 07:53:56 Europe/Zurich; DGS10 5.1 on 2026-11-12 (V)"
   }
 }
