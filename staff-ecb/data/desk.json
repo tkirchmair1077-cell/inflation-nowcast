@@ -21,8 +21,8 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Current — note 12 Nov, 07:50; data cut-off 11 Nov, 17:55 · Data refreshed 2026-11-17, commentary as of 12 Nov 2026, 07:50 Europe/Zurich",
-    "banner": "<b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:50 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged. <b>Data refreshed 2026-11-16, commentary as of 12 Nov 2026, 07:50 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged. <b>Data refreshed 2026-11-17, commentary as of 12 Nov 2026, 07:50 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged."
+    "label": "Current — note 12 Nov, 07:50; data cut-off 11 Nov, 17:55 · Data refreshed 2026-11-17 (AAA curve and CISS to 13 Nov), commentary as of 12 Nov 2026",
+    "banner": "<b>Data refreshed 2026-11-17 (AAA curve and CISS to 13 Nov), commentary as of 12 Nov 2026.</b> Staff nowcasts and policy text are unchanged."
   },
   "summary": {
     "heading": "Current state",
