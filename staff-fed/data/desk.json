@@ -21,8 +21,8 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Current — checked 12 Nov, 07:40 · Data refreshed 2026-11-16, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
-    "banner": "<b>Data refreshed 2026-11-13, commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged. Leading-indicator charts redrawn 13 Nov 2026, 07:05:52 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026. <b>Data refreshed 2026-11-16, commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged."
+    "label": "Current — checked 12 Nov, 07:40 · Data refreshed 2026-11-17 (10Y decomposition to 13 Nov, leading indicators to 16 Nov), commentary as of 12 Nov 2026",
+    "banner": "<b>Data refreshed 2026-11-17 (10Y decomposition to 13 Nov, leading indicators to 16 Nov), commentary as of 12 Nov 2026.</b> Staff nowcasts and policy text are unchanged. Leading-indicator charts redrawn 13 Nov 2026, 07:05:52 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026."
   },
   "summary": {
     "heading": "Current state",
@@ -799,9 +799,9 @@
     ]
   },
   "data_refresh": {
-    "data_as_of": "2026-11-16",
+    "data_as_of": "2026-11-17",
     "commentary_as_of": "12 Nov 2026, 07:40 Europe/Zurich",
-    "stamp": "Data refreshed 2026-11-16, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
+    "stamp": "Data refreshed 2026-11-17, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
     "latest": "leading charts redrawn 2026-11-17 07:17:56 Europe/Zurich; DGS10 5.15 on 2026-11-13 (V)"
   }
 }
