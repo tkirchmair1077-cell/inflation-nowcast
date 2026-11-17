@@ -21,8 +21,11 @@
   "freshness": {
     "status": "stale",
     "dot": "red",
-    "label": "Stand: 1. Nov. 2026, veraltet · Data refreshed 2026-11-12, commentary as of 1. Nov. 2026",
-    "banner": "<b>Stand: 1. November 2026 — veraltet.</b> Kein neuer Desk-Stand bis zum 12. November. Der Nominallohn-Nowcast für September bezog sich auf die Veröffentlichung am 6.11.; BIP Q3 ist für den 16.11. (08:50 JST) und der nationale VPI Oktober für den 20.11. (08:30 JST) vorgesehen. <b>Data refreshed 2026-11-12, commentary as of 1. Nov. 2026.</b> Staff nowcasts and policy text are unchanged."
+    "label": "Data refreshed 17 Nov 2026, 08:39 Europe/Zurich",
+    "banner": "<b>Data refreshed 17 Nov 2026, 08:39 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 1. Nov. 2026.</span> <span class=\"commentary-older\">Commentary older than data – as of 1 Nov</span> Kein neuer Desk-Stand bis zum 12. November. Der Nominallohn-Nowcast für September bezog sich auf die Veröffentlichung am 6.11.; BIP Q3 ist für den 16.11. (08:50 JST) und der nationale VPI Oktober für den 20.11. (08:30 JST) vorgesehen.",
+    "data_refreshed_at": "2026-11-17T08:39:52",
+    "data_refreshed_display": "17 Nov 2026, 08:39 Europe/Zurich",
+    "commentary_older_badge": "Commentary older than data – as of 1 Nov"
   },
   "summary": {
     "heading": "Aktueller Stand (1. Nov. 2026 — veraltet)",

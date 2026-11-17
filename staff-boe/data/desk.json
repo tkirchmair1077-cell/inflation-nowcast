@@ -21,8 +21,11 @@
   "freshness": {
     "status": "stale",
     "dot": "amber",
-    "label": "Stand: 8 Nov 2026, 09:00 — several days old · Data refreshed 2026-11-12, commentary as of 8 Nov 2026, 09:00 Europe/Zurich",
-    "banner": "<b>Stand: 8 Nov 2026, 09:00 Europe/Zurich.</b> This page has not been updated since then. Q3 and September GDP were scheduled for 12 Nov, 08:00 CET; labour-market data are due 17 Nov and October CPI on 18 Nov. <b>Data refreshed 2026-11-12, commentary as of 8 Nov 2026, 09:00 Europe/Zurich.</b> Staff nowcasts and policy text are unchanged."
+    "label": "Data refreshed 17 Nov 2026, 08:39 Europe/Zurich",
+    "banner": "<b>Data refreshed 17 Nov 2026, 08:39 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 8 Nov 2026, 09:00 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 8 Nov</span> This page has not been updated since then. Q3 and September GDP were scheduled for 12 Nov, 08:00 CET; labour-market data are due 17 Nov and October CPI on 18 Nov.",
+    "data_refreshed_at": "2026-11-17T08:39:52",
+    "data_refreshed_display": "17 Nov 2026, 08:39 Europe/Zurich",
+    "commentary_older_badge": "Commentary older than data – as of 8 Nov"
   },
   "summary": {
     "heading": "Current state (as of 8 Nov — not updated for later releases)",
