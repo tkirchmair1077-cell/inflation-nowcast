@@ -5,11 +5,11 @@
     "name": "Token Demand Bot",
     "id": "1ff4ca99-21f4-48d1-a702-c2ad3bc5fe5d"
   },
-  "as_of": "2026-11-16T06:10:00+01:00",
+  "as_of": "2026-11-17T06:12:00+01:00",
   "timezone": "Europe/Zurich",
   "edition": "2026-11-12",
   "title": "AI Token Demand Monitor, as of Thu 12 Nov 2026 (Europe/Zurich)",
-  "sources_retrieved": "2026-11-16T06:10:00+01:00",
+  "sources_retrieved": "2026-11-17T06:12:00+01:00",
   "bottom_line": "View: complete-week OpenRouter volume made a new high in the week of 9 Nov (211.3T tokens, +0.8% WoW, d), but growth slowed from +8.2%. Trailing 7-day tokens to 15 Nov were 211.3T (+1.8% vs the 7 days to 7 Nov, d); paid tokens 199.4T (+1.9%, d). CoreWeave reported a $132.5bn revenue backlog at 30 Sep (V, company IR, 10 Nov). View: token volume still supports the capex trajectory; financing terms, not demand, remain the binding transmission risk.",
   "readings": [
     {
@@ -27,12 +27,12 @@
     {
       "id": "openrouter_partial_week",
       "label": "OpenRouter week of 16 Nov (partial)",
-      "value": 4.6,
+      "value": 40.9,
       "unit": "trillion tokens",
       "quality": "(d)",
-      "note": "16 Nov 06:10 Europe/Zurich fetch; the week has only just opened (first hours). Shown only as a light bar, not used as a reading.",
+      "note": "17 Nov 06:07 Europe/Zurich fetch of the OpenRouter weekly chart: the week of 16 Nov has one day of data (16 Nov), 40.9T (d). Shown only as a light bar, not used as a reading; a single day is not a weekly trend.",
       "source_url": "https://openrouter.ai/rankings",
-      "as_of": "2026-11-16T06:10:00+01:00"
+      "as_of": "2026-11-17T06:12:00+01:00"
     },
     {
       "id": "openrouter_trailing7d",
@@ -791,8 +791,8 @@
       "unit": "trillion tokens",
       "quality": "(d)",
       "source_url": "https://openrouter.ai/rankings",
-      "retrieved": "2026-11-16T06:10:00+01:00",
-      "notes": "Free = variant=='free' or stealth/ prefix. Consecutive daily runs overlap 6 of 7 days. Windows through 7 Nov as recorded in the 8 Nov pack; 10 Nov from the 11 Nov snapshot; 11 Nov from this run. The comparison used in the headline reading is the non-overlapping 7 days to 3 Nov (no snapshot ends on 4 Nov). The 15 Nov window (9-15 Nov) is from the 16 Nov fetch and equals the complete week of 9 Nov; it is compared with the 7 days to 7 Nov (non-overlapping).",
+      "retrieved": "2026-11-17T06:12:00+01:00",
+      "notes": "Free = variant=='free' or stealth/ prefix. Consecutive daily runs overlap 6 of 7 days. Windows through 7 Nov as recorded in the 8 Nov pack; 10 Nov from the 11 Nov snapshot; 11 Nov from this run. The comparison used in the headline reading is the non-overlapping 7 days to 3 Nov (no snapshot ends on 4 Nov). The 15 Nov window (9-15 Nov) is from the 16 Nov fetch and equals the complete week of 9 Nov; it is compared with the 7 days to 7 Nov (non-overlapping). The 16 Nov window (10-16 Nov, 213.8T total, from the 17 Nov 06:07 fetch of the models view=week API; free = variant free only, paid = standard + batch) is shown without a headline comparison: no non-overlapping 7-day snapshot ending 8 Nov exists in the saved history.",
       "points": [
         {
           "window_end": "2026-10-20",
@@ -853,6 +853,12 @@
           "paid_tn": 199.369402304565,
           "free_tn": 11.911795961204,
           "total_tn": 211.281198265769
+        },
+        {
+          "window_end": "2026-11-16",
+          "paid_tn": 200.689,
+          "free_tn": 13.112,
+          "total_tn": 213.802
         }
       ]
     },
@@ -8806,7 +8812,8 @@
     "Charts in section 3 are Chart.js redraws of the 8 Nov 2026 pack from public OpenRouter, Ramp, Vercel and Portkey series. Those pack-chart captions were not redrawn for this mid-week feed update. Hyperliquid and prediction-market blocks were not refreshed on 12 Nov and keep their own as_of (11 Nov).",
     "Hyperliquid figures are public HIP-3 perpetual marks from the official info API, not equity or IPO prices. Contract units and oracles differ by deployer (official docs). Implied fully diluted valuation is derived only where the official contract defines a price of $1 as $1 billion of fully diluted valuation. 24-hour change is versus the API previous-day reference, not an official equity close. Annualised funding is a simple 24×365 scaling of the hourly rate and is not a forecast. Some builder-deployed markets are thin. Not investment advice.",
     "Prediction-market yes-probabilities are API-read contract prices from Polymarket and Kalshi, not forecasts. Resolution rules can differ from headlines. Thin markets are flagged. Not investment advice.",
-    "13 Nov refresh (d): only the OpenRouter partial week and the trailing 7-day total/paid/free were updated (windows to 12 Nov). Author shares, spend shares, CoreWeave and other readings remain as of 11-12 Nov; headline text was not rewritten."
+    "13 Nov refresh (d): only the OpenRouter partial week and the trailing 7-day total/paid/free were updated (windows to 12 Nov). Author shares, spend shares, CoreWeave and other readings remain as of 11-12 Nov; headline text was not rewritten.",
+    "17 Nov update: only the OpenRouter partial week of 16 Nov (40.9T, one day) and the 7-day window to 16 Nov (213.8T, d) were refreshed; headline readings, author shares, bottom line and crack watch still refer to the 7 days to 15 Nov. Ramp, Portkey, Vercel, npm not re-fetched."
   ],
   "excluded": [
     {
