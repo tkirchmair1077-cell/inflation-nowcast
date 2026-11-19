@@ -10,28 +10,28 @@
  "title": "Fed Staff Desk — US nowcast (19 Nov 2026)",
  "short_title": "Fed Staff Desk",
  "subtitle": "United States · staff-style research view · not Fed Board staff work and not the FOMC SEP · public sources only · not investment advice",
- "as_of": "2026-11-19T08:30:00+01:00",
- "as_of_display": "19 Nov 2026, 08:30 Europe/Zurich",
+ "as_of": "2026-11-19T10:30:00+01:00",
+ "as_of_display": "19 Nov 2026, 10:30 Europe/Zurich",
  "timezone": "Europe/Zurich",
  "source": {
-  "label": "Fed Staff Desk note, 19 Nov 2026",
-  "file": "notes_20261119/staff-fed/commentary_20261119.md",
-  "prepared": "19 Nov 2026, morning Europe/Zurich. Data from the Research Manager refresh of 19 Nov 2026, 06:44–06:48 Europe/Zurich (FRED through 18 Nov; H.15 and ACM through 17 Nov; Kim-Wright through 13 Nov). No new fetch for this note."
+  "label": "Fed Staff Desk note, 19 Nov 2026 (b)",
+  "file": "staff-fed/data/desk.json",
+  "prepared": "19 Nov 2026, morning Europe/Zurich. Data from the Research Manager refresh of 19 Nov 06:44–06:48 Europe/Zurich; Fed remarks 5–18 Nov and October FOMC minutes (released 18 Nov) read 19 Nov; market pricing from reports dated 18 Nov."
  },
  "freshness": {
   "status": "current",
   "dot": "green",
   "label": "Data refreshed 19 Nov 2026, 06:48 Europe/Zurich",
-  "banner": "<b>Data refreshed 19 Nov 2026, 06:48 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 19 Nov 2026, 08:30 Europe/Zurich.</span> Leading-indicator charts redrawn 17 Nov 2026, 07:17:56 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026; the November CPI figure in the commentary is an unsealed research reading.",
+  "banner": "<b>Data refreshed 19 Nov 2026, 06:48 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 19 Nov 2026, 10:30 Europe/Zurich.</span> Leading-indicator charts redrawn 17 Nov 2026, 07:17:56 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026; the November CPI figure in the commentary is an unsealed research reading.",
   "data_refreshed_at": "2026-11-19T06:48:24",
   "data_refreshed_display": "19 Nov 2026, 06:48 Europe/Zurich",
   "commentary_older_badge": ""
  },
  "summary": {
   "heading": "Current state",
-  "as_of": "2026-11-19T08:30:00+01:00",
+  "as_of": "2026-11-19T10:30:00+01:00",
   "source": "Fed Staff Desk note, 19 Nov 2026",
-  "text": "Q4 growth trackers sit close to the staff baseline of 3.0% SAAR (own estimate): Atlanta GDPNow 3.2% (V, FRED GDPNOW 3.2093 in the 19 Nov pull; previously 3.4810) and the New York Fed Staff Nowcast 2.94% (official file, 6 Nov; not re-checked). October PPI (BLS, 13 Nov) was +0.3% m/m for final demand and +0.5% excluding food, energy and trade; it eased, but did not remove, the upside risk to core PCE that October CPI (+0.4% / core +0.3%, BLS 10 Nov) had raised. After PPI the staff 2026 core PCE Q4/Q4 baseline was moved to about 3.3% from 3.2% (own estimate); headline PCE stays 3.7%. The 10-year Treasury eased to 5.10% on 17 Nov from 5.15% on 13 Nov (H.15, V); the 2s10s spread was 0.27 pp and the 5-year breakeven 2.23% on 18 Nov (FRED, V). An unsealed staff research nowcast for November CPI reads +0.20% headline / +0.30% core m/m (d, not validated). Stance: hold at 3.75–4.00% now with a tightening bias; a 25 bp increase on 9 Dec is the staff base case (own estimate), with October PCE on 25 Nov and November payrolls on 4 Dec as the decision inputs. Staff-style view, not Fed Board staff work and not the FOMC SEP (16 Sep medians)."
+  "text": "The December meeting is about the size of the increase, not whether to raise. Staff base case: +25 bp to 4.00–4.25% on 9 Dec, with a material risk of +50 bp (own estimate, about 70% / 30%); a hold is not a realistic outcome. Fedspeak since 5 Nov is uniformly toward tightening (staff barometer +0.75 for 2026 voters, +0.80 all speakers, d). Governor Waller said on 18 Nov that a 50 bp increase is \"probably necessary\" unless the Committee clearly signals a January move; Williams, Hammack and Logan argue for steady 25 bp steps. The October minutes (18 Nov) say almost all participants see further increases as likely appropriate, and a couple saw more than 25 bp as worth considering if inflation data were unfavourable. Market pricing on 18 Nov fully prices +25 bp with roughly 5% odds of +50 bp (secondary reports). Data: GDPNow 3.2% vs staff Q4 3.0%; October CPI +0.4% / core +0.3%; PPI final demand +0.3%; staff 2026 core PCE about 3.3% Q4/Q4 (own estimate). October core PCE on 25 Nov is the swing input for 25 vs 50. Staff-style view, not Fed Board staff work and not the FOMC SEP (16 Sep medians)."
  },
  "nowcast_hint": "Model nowcasts are not official Reserve Bank or FOMC forecasts. Third-party inflation-nowcast model readings are omitted from this public page.",
  "nowcast_note": "Read from the Research Manager refresh of 19 Nov 2026, 06:44–06:48 Europe/Zurich; no page re-checked for this note. GDPNow is the latest FRED GDPNOW vintage in that pull (3.2093); its Atlanta update date was not re-verified. No New York Fed Staff Nowcast after 6 Nov in the files used. Early-quarter GDPNow has high revision risk. Core PCE baseline reset to about 3.3% after the 13 Nov PPI (own estimate).",
@@ -312,16 +312,16 @@
    "value": "3.75–4.00",
    "unit": "%",
    "quality": "V",
-   "status": "hold now, tightening bias; Dec +25 bp staff base case",
+   "status": "Dec: +25 bp base case, +50 bp material risk",
    "period": "Current (28 Oct decision) / 2026 year-end",
    "interval": "Staff year-end midpoint 4.1 (retained)",
    "prior": "Held 28 Oct, 10–2",
    "source": "Fed statement, V, carried from the 6 Nov Page; staff path retained 6 Nov",
-   "as_of": "28 Oct decision; staff call 13 Nov, unchanged 19 Nov",
-   "rationale": "Hold at 3.75–4.00% now with a tightening bias. Staff base case is +25 bp on 9 Dec (own estimate); a hold with a stated bias is the main alternative and +50 bp a tail. Staff year-end midpoint 4.1 is consistent with one 25 bp move. Market-implied odds are not shown.",
+   "as_of": "Call re-derived 19 Nov",
+   "rationale": "Base case +25 bp on 9 Dec (own estimate ~70%), +50 bp ~30%, hold under 5%. Staff year-end midpoint 4.1 under +25 bp; 4.4 under +50 bp (d).",
    "headline": true,
    "kpi_label": "Policy rate",
-   "kpi_note": "Hold 3.75–4.00% · tightening bias · Dec +25 bp staff base case"
+   "kpi_note": "3.75–4.00% · Dec +25 bp base case · 50 bp risk ~30% (own estimate)"
   }
  ],
  "baseline_hint": "Staff baselines: 6 Nov Page, core PCE reset on 13 Nov after PPI, unchanged 19 Nov. Official column is the FOMC SEP of 16 Sep (medians).",
@@ -462,11 +462,25 @@
    "actual": "Starts 1,309k SAAR (+9.9% m/m, d); permits 1,295k (−7.4%, d), lowest in a year; completions 1,272k.",
    "prior": "Starts 1,191k; permits 1,398k (Sep)",
    "why": "Permits point to softer residential activity into 2027, already in the risk balance."
+  },
+  {
+   "release": "October FOMC minutes — Federal Reserve",
+   "date": "18 Nov 2026",
+   "quality": "V",
+   "actual": "Almost all participants judged further increases likely appropriate; a few called the October hold a close call; some favoured +25 bp in October; a couple said more than 25 bp could warrant consideration in December if inflation data were unfavourable.",
+   "prior": "–",
+   "why": "Confirms a December increase as the Committee's baseline; opens the 50 bp debate."
   }
  ],
  "calendar_hint": "Dates from primary calendars as recorded in staff notes (BEA schedule checked 13 Nov). Times not re-verified for this note.",
  "calendar_note": "Claims for the week ended 14 Nov and the revision of the 7 Nov week are due 19 Nov, 14:30 Zurich, after this note.",
  "calendar": [
+  {
+   "date": "19 Nov 2026",
+   "event": "Fed speakers",
+   "time": "various",
+   "why": "Any further 50 bp signal from voters would raise the staff odds of +50."
+  },
   {
    "date": "19 Nov 2026",
    "event": "Claims, week ended 14 Nov",
@@ -500,15 +514,16 @@
  ],
  "staff_hint": "Staff-style view, not Fed Board staff work and not the FOMC SEP.",
  "staff_view": {
-  "lead": "Risk balance on 19 Nov: growth near baseline, inflation still to the upside but less than after CPI, financial conditions slightly easier.",
+  "lead": "Risk balance on 19 Nov: growth near baseline, inflation to the upside, Committee rhetoric uniformly toward tightening; the debate is 25 vs 50 bp.",
   "bullets": [
    "Growth (balanced near term, own estimate): GDPNow 3.2% vs staff Q4 3.0%, gap narrowed from +0.5 to +0.2 pp (d); the New York Fed 2.94% (6 Nov) is close to baseline. Firm nominal retail sales, falling industrial production and weak permits keep the 2027 downside (energy, real incomes, rate-sensitive demand) in place.",
    "Labour (mixed): payrolls +165k and UR 4.1% (October) with U-6 at 7.9%; claims 200k (week ended 7 Nov, advance) still low; SCE unemployment-probability at a post-2020 high (9 Nov).",
    "Inflation (upside risk, smaller): October core CPI +0.3% and PPI less foods, energy & trade +0.5% led to a core PCE reset to about 3.3% (own estimate). The unsealed November CPI research nowcast (+0.20 / +0.30, d) shows no fade in core. Productivity and ECI still offset.",
    "Financial conditions: the 10-year eased 5 bp to 5.10% (13 to 17 Nov), with the real yield −2 bp and the staff breakeven (d) −3 bp; the 2s10s spread 0.27 pp and the 5-year breakeven 2.23% (18 Nov). The ACM term premium rose slightly to 0.75% (17 Nov); the Kim-Wright term premium was 0.99% (13 Nov). The models are not averaged.",
-   "Policy: hold now with a tightening bias; +25 bp on 9 Dec is the staff base case (own estimate). A neutral hold is not the staff view."
+   "Fedspeak (5–18 Nov, staff barometer, d): voter mean +0.75, all-speaker mean +0.80 on a −2 to +2 scale. Only Waller (+2) argues for 50 bp; Musalem (+1.5, non-voter) sees several hikes by spring 2027; Logan, Barr and Hammack (+1) back further 25 bp steps; Williams, Goolsbee and Kashkari (+0.5) lean hike without a pace; Bowman and Jefferson (0) give no near-term direction.",
+   "Market pricing (18 Nov, secondary reports of a futures-based gauge): +25 bp in December fully priced, about 5% odds of +50 bp, and roughly 75 bp of total increases over 12 months."
   ],
-  "policy": "Hold at 3.75–4.00% now with a tightening bias, and +25 bp on 9 Dec as the staff base case (own estimate; judgmental weights of about 60% for +25 bp, 25% for a hold with a stated bias and 15% for +50 bp, set 13 Nov and unchanged). The call would move to a neutral hold only if October core PCE (25 Nov) is about 0.20% m/m or less, November payrolls (4 Dec) are below about 50k with unemployment at 4.3% or more, and markets show stress. It would move toward +50 bp if core PCE is about 0.35% or more and inflation expectations drift up. Inertial policy rules give 3.90–4.28% (d, 13 Nov review), against the 3.875% midpoint. Market-implied December odds are not shown on this page. The staff path is separate from the 16 Sep SEP. Target range 3.75–4.00%, held 10–2 on 28 Oct (Fed statement, V).",
+  "policy": "December call, re-derived 19 Nov: +25 bp to 4.00–4.25% on 9 Dec is the staff base case (own estimate ~70%), +50 bp the main alternative (~30%), and no change below 5%. Why +25: almost all participants expected further increases in the October minutes; the leadership-adjacent voices (Williams) and the 2026 voters Hammack and Logan argue for steady 25 bp steps; markets already price 25 bp, so it tightens without a surprise; October PPI was softer at the headline than October CPI implied. Counter-argument for +50: Waller says 25 bp is enough only with a clear January signal, and the Chair has avoided forward guidance, which by Waller's logic argues for 50; a couple of participants flagged more than 25 bp if inflation data were unfavourable, and October CPI was firm; markets price only about 5% for 50 bp, so the staff weight is well above the market. Triggers: we move to +50 as the base case if October core PCE (25 Nov) is about 0.35% m/m or more and November payrolls (4 Dec) are firm; a hold needs a core PCE print near 0.2% together with clearly weaker payrolls and market stress. This replaces the 13 Nov wording \"hold now, +25 bp in December (about 60%)\", which understated the hike odds. The staff path is separate from the 16 Sep SEP. Target range 3.75–4.00% (held 10–2 on 28 Oct; Cook and Hammack preferred +25 bp, minutes V).",
   "taylor": {
    "title": "Taylor-type diagnostic (d)",
    "note": "Rows carried from the 6 Nov Page; the 13 Nov review range for inertial rules is 3.90–4.28% (d). Not recalculated on 19 Nov. Not optimal-policy estimates.",
@@ -580,12 +595,22 @@
     }
    ],
    "note": "Units are percentage points, month-on-month, seasonally adjusted. Coverage of 80% uses full-sample error quantiles (informative, not expanding sequential bands), as stated in the backtest report."
+  },
+  {
+   "file": "charts/fedspeak_barometer_20261119.png",
+   "wide": true,
+   "title": "Fedspeak hawk–dove barometer, 5–18 Nov 2026",
+   "subtitle": "Staff scoring (d) of each speaker's latest policy remark, −2 (cut) to +2 (50 bp or faster). Voter mean +0.75, all-speaker mean +0.80 (equal weights, d).",
+   "caption": "Sources: Federal Reserve Board speeches (Waller 10 Nov, Barr 18 Nov, Bowman 10 Nov, Jefferson 13 Nov), Federal Reserve Bank of St. Louis (Musalem 17 Nov), Federal Reserve Bank of Dallas (Logan 10 Nov), CNBC interviews (Waller 18 Nov, Goolsbee 13 Nov), and press reports of remarks by Hammack, Williams and Kashkari (not independently checked against a transcript). Scores are staff judgment, not a Federal Reserve product. Shown without endorsement by any of these sources."
   }
  ],
  "charts_note": "",
  "caveats": [
   "Commentary written 19 Nov 2026, ~08:30 Europe/Zurich (CET), from the Research Manager refresh of 19 Nov 06:44–06:48 and earlier staff notes; no new fetch. (d) = own derivation; own estimate = staff judgment; V = from a primary source (official file, FRED or H.15) in that pull or in a dated earlier staff note; U = secondary or not independently re-checked.",
   "MISSING / NOT RE-CHECKED: no New York Fed Staff Nowcast after 6 Nov in the files used; claims for the week ended 14 Nov (due 19 Nov, 14:30 Zurich); no post-PPI sealed PCE nowcast (B2); market-implied December policy odds are not shown. GDPNow: the FRED value 3.2093 is the latest vintage in the 19 Nov pull, but its Atlanta update date was not re-verified; a desk read of the Atlanta page text on 18 Nov had shown 3.4% for 17 Nov. The two readings are not reconciled; 3.2 is shown as the newer file value.",
+  "Fedspeak barometer: scores are staff judgment (d) on a simple −2 to +2 scale, equal weights, latest remark per speaker, 5–18 Nov. Hammack, Williams and Kashkari are scored from press reports, not transcripts (U). Waller's 18 Nov and Goolsbee's 13 Nov views are from live CNBC interviews as reported by CNBC (video not reviewed by the staff). The 2026 voter list is taken from the October minutes voting record (V). There is no speech-based barometer for the 27–28 Oct FOMC; the direction on the tile compares with the voters' revealed positions at that meeting (hold = 0, dissent for +25 bp = +1, minutes V), which is a different basis (indicative only).",
+  "Market pricing: from press reports dated 18 Nov 2026 of a third-party futures-based probability gauge (about 95% for +25 bp and 5% for +50 bp; one other report gives 99.9% for +25 bp). The source page itself was not read. A rival 13 Nov report gave more than 10% for +50 bp. Treat as indicative only.",
+  "December call weights (about 70/30/under 5) are staff judgment, re-derived 19 Nov, and replace the 13 Nov weights (60/25/15 for +25 / hold / +50), which overstated the chance of a hold.",
   "The November CPI research nowcast (+0.20 / +0.30 m/m) is an unsealed staff-model reading, rated YELLOW, not validated and not a forecast for trading. It is not the sealed nowcast on the main page.",
   "October PPI, retail sales, industrial production and housing figures are carried from staff notes and desk checks of 13, 17 and 18 Nov against BLS and FRED; they were not re-fetched for this note. Census housing figures are first prints with wide error margins. The +0.33% PPI figure is a staff derivation from the BLS series WPSFD49104 as labelled in the 13 Nov note; the series label was not re-verified for this note.",
   "Staff December call weights (about 60/25/15) are judgment, set 13 Nov, not market pricing and not FOMC guidance. The core PCE baseline of about 3.3% is own estimate, pending October PCE on 25 Nov.",
@@ -642,7 +667,8 @@
   "Claims for the week ended 14 Nov were not out at the time of the note.",
   "New York Fed Staff Nowcast: no vintage after 6 Nov in the files used.",
   "GDPNow update date for the 3.2093 FRED value not re-verified; earlier 3.4% page-text reading on 17 Nov unreconciled.",
-  "No post-PPI sealed PCE nowcast (B2) in the files used; market-implied December odds not shown."
+  "Market-pricing source page not read directly; probabilities from press reports (18 Nov).",
+  "No primary transcript for Hammack, Williams or Kashkari remarks in the window."
  ],
  "leading_indicators": {
   "hint": "Staff charts and staff reads versus the 6 Nov baseline. As of 2026-11-17 07:17:56 Europe/Zurich. Source: leading_indicators tidy (Research Manager). Public sources only.",
@@ -855,8 +881,139 @@
  },
  "data_refresh": {
   "data_as_of": "2026-11-17",
-  "commentary_as_of": "19 Nov 2026, 08:30 Europe/Zurich",
-  "stamp": "Data refreshed 2026-11-19 06:48, commentary as of 19 Nov 2026, 08:30 Europe/Zurich",
+  "commentary_as_of": "19 Nov 2026, 10:30 Europe/Zurich",
+  "stamp": "Data refreshed 2026-11-19 06:48, commentary as of 19 Nov 2026, 10:30 Europe/Zurich",
   "latest": "leading charts redrawn 2026-11-17 07:17:56 Europe/Zurich; DGS10 5.1 on 2026-11-17 (V)"
+ },
+ "fedspeak_barometer": {
+  "title": "Fedspeak hawk–dove barometer",
+  "quality": "d",
+  "as_of": "2026-11-18",
+  "as_of_display": "18 Nov 2026 (remarks 5–18 Nov)",
+  "value": 0.75,
+  "value_all": 0.8,
+  "scale_note": "−2 cut · 0 wait · +1 25 bp steps · +2 50 bp or faster",
+  "label": "Hawkish: further hikes, debate is 25 vs 50 bp",
+  "reference": {
+   "meeting": "FOMC 27–28 Oct 2026",
+   "speech_based": "n/a (no speech-based reading scored for that meeting)",
+   "vote_based_all": 0.17,
+   "vote_based_same": 0.12,
+   "direction": "More hawkish: +0.62 vs the same voters' 28 Oct positions (+0.12, votes, d)",
+   "note": "Reference uses the 28 Oct votes from the minutes (hold = 0, dissent for +25 bp = +1), not speeches; indicative only. All 12 voters at 28 Oct: +0.17."
+  },
+  "source": "Staff scoring of public remarks; Federal Reserve Board and Reserve Bank texts, CNBC interviews, press reports (U). Not a Federal Reserve product.",
+  "speakers": [
+   {
+    "speaker": "Christopher Waller",
+    "bank": "Governor",
+    "voter_2026": "Y",
+    "date": "2026-11-18",
+    "venue": "CNBC Squawk Box live interview",
+    "score": 2.0,
+    "stance": "Hike: a 50 bp increase in December is \"probably necessary\"; 25 bp only if the Fed clearly signals a January move. \"You might need to, like, shock people.\"",
+    "url": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html",
+    "quality": "V (interview, quotes as reported by CNBC)"
+   },
+   {
+    "speaker": "Alberto Musalem",
+    "bank": "St. Louis",
+    "voter_2026": "N",
+    "date": "2026-11-17",
+    "venue": "Speech, Central Bank of Argentina",
+    "score": 1.5,
+    "stance": "Hike: \"several interest rate increases before the spring of 2027\"; real policy rate should be \"solidly between 2% and 2.5%\".",
+    "url": "https://www.stlouisfed.org/from-the-president/remarks/2026/remarks-on-us-economy-and-monetary-policy-argentina",
+    "quality": "V (Fed text)"
+   },
+   {
+    "speaker": "Lorie Logan",
+    "bank": "Dallas",
+    "voter_2026": "Y",
+    "date": "2026-11-10",
+    "venue": "Speech, Dallas–Kansas City energy conference",
+    "score": 1.0,
+    "stance": "Hike: \"at least two more 25-basis-point rate increases\"; \"may be possible to move more rapidly this winter\".",
+    "url": "https://www.dallasfed.org/news/speeches/logan/2026/lkl261110",
+    "quality": "V (Fed text)"
+   },
+   {
+    "speaker": "Michael Barr",
+    "bank": "Governor",
+    "voter_2026": "Y",
+    "date": "2026-11-18",
+    "venue": "Speech, community development",
+    "score": 1.0,
+    "stance": "Hike: \"I expect it will be appropriate to raise rates further.\"",
+    "url": "https://www.federalreserve.gov/newsevents/speech/barr20261118a.htm",
+    "quality": "V (Fed text)"
+   },
+   {
+    "speaker": "Beth Hammack",
+    "bank": "Cleveland",
+    "voter_2026": "Y",
+    "date": "2026-11-12",
+    "venue": "Ohio State University event (reiterated 16 Nov in a TV interview)",
+    "score": 1.0,
+    "stance": "Hike, gradual: \"more frequent, smaller rises\"; larger steps only \"if we get behind the curve, and I don't think we're behind the curve today\".",
+    "url": "https://www.investing.com/news/economy-news/feds-hammack-signals-support-for-gradual-ratehike-path-5022530",
+    "quality": "U (secondary report)"
+   },
+   {
+    "speaker": "John Williams",
+    "bank": "New York",
+    "voter_2026": "Y",
+    "date": "2026-11-17",
+    "venue": "Axios BFD Summit (also 12 Nov)",
+    "score": 0.5,
+    "stance": "Hike, gradual: likely to raise again, but no need for \"dramatic action\".",
+    "url": "https://www.investing.com/news/economy-news/feds-williams-still-favors-tighter-monetary-policy-but-says-now-is-not-the-time-for-dramatic-action-5033893",
+    "quality": "U (secondary report)"
+   },
+   {
+    "speaker": "Austan Goolsbee",
+    "bank": "Chicago",
+    "voter_2026": "N",
+    "date": "2026-11-13",
+    "venue": "CNBC Squawk Box interview",
+    "score": 0.5,
+    "stance": "Leaning hike: the Fed \"has definitely got work to do\"; no view on pace.",
+    "url": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html",
+    "quality": "V (interview, quotes as reported by CNBC)"
+   },
+   {
+    "speaker": "Neel Kashkari",
+    "bank": "Minneapolis",
+    "voter_2026": "Y",
+    "date": "2026-11-18",
+    "venue": "Public remarks",
+    "score": 0.5,
+    "stance": "Leaning hike: the Fed is \"clearly missing on inflation side\"; no step size.",
+    "url": "https://www.fxstreet.com/news/feds-kashkari-markets-believe-central-bank-will-have-to-hike-more-than-officials-now-expect-202611182306",
+    "quality": "U (secondary report, quote list)"
+   },
+   {
+    "speaker": "Michelle Bowman",
+    "bank": "Governor (VC Supervision)",
+    "voter_2026": "Y",
+    "date": "2026-11-10",
+    "venue": "Speech, economy and monetary policy",
+    "score": 0.0,
+    "stance": "Wait: further changes \"should wait\" for a better understanding; benefits of tightening \"carefully weighed against its costs\".",
+    "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261110a.htm",
+    "quality": "V (Fed text)"
+   },
+   {
+    "speaker": "Philip Jefferson",
+    "bank": "Vice Chair",
+    "voter_2026": "Y",
+    "date": "2026-11-13",
+    "venue": "Speech, productivity",
+    "score": 0.0,
+    "stance": "No direction: inflation \"notably above\" target; no rate guidance.",
+    "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261113a.htm",
+    "quality": "V (Fed text)"
+   }
+  ]
  }
 }

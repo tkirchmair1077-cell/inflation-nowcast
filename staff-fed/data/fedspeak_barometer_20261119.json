@@ -1,0 +1,127 @@
+{
+ "as_of": "2026-11-19",
+ "window": "2026-11-05 to 2026-11-18",
+ "scale": "-2 cut/clear easing; -1 lean easier; 0 wait or no direction; +1 further 25 bp steps; +2 50 bp or faster",
+ "method": "Staff scoring (d) of each speaker's latest policy remark in the window; equal weights; one score per speaker.",
+ "mean_all": 0.8,
+ "mean_voters": 0.75,
+ "n_all": 10,
+ "n_voters": 8,
+ "speakers": [
+  {
+   "speaker": "Christopher Waller",
+   "bank": "Governor",
+   "voter_2026": "Y",
+   "date": "2026-11-18",
+   "venue": "CNBC Squawk Box live interview",
+   "score": 2.0,
+   "stance": "Hike: a 50 bp increase in December is \"probably necessary\"; 25 bp only if the Fed clearly signals a January move. \"You might need to, like, shock people.\"",
+   "url": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html",
+   "quality": "V (interview, quotes as reported by CNBC)"
+  },
+  {
+   "speaker": "Alberto Musalem",
+   "bank": "St. Louis",
+   "voter_2026": "N",
+   "date": "2026-11-17",
+   "venue": "Speech, Central Bank of Argentina",
+   "score": 1.5,
+   "stance": "Hike: \"several interest rate increases before the spring of 2027\"; real policy rate should be \"solidly between 2% and 2.5%\".",
+   "url": "https://www.stlouisfed.org/from-the-president/remarks/2026/remarks-on-us-economy-and-monetary-policy-argentina",
+   "quality": "V (Fed text)"
+  },
+  {
+   "speaker": "Lorie Logan",
+   "bank": "Dallas",
+   "voter_2026": "Y",
+   "date": "2026-11-10",
+   "venue": "Speech, Dallas–Kansas City energy conference",
+   "score": 1.0,
+   "stance": "Hike: \"at least two more 25-basis-point rate increases\"; \"may be possible to move more rapidly this winter\".",
+   "url": "https://www.dallasfed.org/news/speeches/logan/2026/lkl261110",
+   "quality": "V (Fed text)"
+  },
+  {
+   "speaker": "Michael Barr",
+   "bank": "Governor",
+   "voter_2026": "Y",
+   "date": "2026-11-18",
+   "venue": "Speech, community development",
+   "score": 1.0,
+   "stance": "Hike: \"I expect it will be appropriate to raise rates further.\"",
+   "url": "https://www.federalreserve.gov/newsevents/speech/barr20261118a.htm",
+   "quality": "V (Fed text)"
+  },
+  {
+   "speaker": "Beth Hammack",
+   "bank": "Cleveland",
+   "voter_2026": "Y",
+   "date": "2026-11-12",
+   "venue": "Ohio State University event (reiterated 16 Nov in a TV interview)",
+   "score": 1.0,
+   "stance": "Hike, gradual: \"more frequent, smaller rises\"; larger steps only \"if we get behind the curve, and I don't think we're behind the curve today\".",
+   "url": "https://www.investing.com/news/economy-news/feds-hammack-signals-support-for-gradual-ratehike-path-5022530",
+   "quality": "U (secondary report)"
+  },
+  {
+   "speaker": "John Williams",
+   "bank": "New York",
+   "voter_2026": "Y",
+   "date": "2026-11-17",
+   "venue": "Axios BFD Summit (also 12 Nov)",
+   "score": 0.5,
+   "stance": "Hike, gradual: likely to raise again, but no need for \"dramatic action\".",
+   "url": "https://www.investing.com/news/economy-news/feds-williams-still-favors-tighter-monetary-policy-but-says-now-is-not-the-time-for-dramatic-action-5033893",
+   "quality": "U (secondary report)"
+  },
+  {
+   "speaker": "Austan Goolsbee",
+   "bank": "Chicago",
+   "voter_2026": "N",
+   "date": "2026-11-13",
+   "venue": "CNBC Squawk Box interview",
+   "score": 0.5,
+   "stance": "Leaning hike: the Fed \"has definitely got work to do\"; no view on pace.",
+   "url": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html",
+   "quality": "V (interview, quotes as reported by CNBC)"
+  },
+  {
+   "speaker": "Neel Kashkari",
+   "bank": "Minneapolis",
+   "voter_2026": "Y",
+   "date": "2026-11-18",
+   "venue": "Public remarks",
+   "score": 0.5,
+   "stance": "Leaning hike: the Fed is \"clearly missing on inflation side\"; no step size.",
+   "url": "https://www.fxstreet.com/news/feds-kashkari-markets-believe-central-bank-will-have-to-hike-more-than-officials-now-expect-202611182306",
+   "quality": "U (secondary report, quote list)"
+  },
+  {
+   "speaker": "Michelle Bowman",
+   "bank": "Governor (VC Supervision)",
+   "voter_2026": "Y",
+   "date": "2026-11-10",
+   "venue": "Speech, economy and monetary policy",
+   "score": 0.0,
+   "stance": "Wait: further changes \"should wait\" for a better understanding; benefits of tightening \"carefully weighed against its costs\".",
+   "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261110a.htm",
+   "quality": "V (Fed text)"
+  },
+  {
+   "speaker": "Philip Jefferson",
+   "bank": "Vice Chair",
+   "voter_2026": "Y",
+   "date": "2026-11-13",
+   "venue": "Speech, productivity",
+   "score": 0.0,
+   "stance": "No direction: inflation \"notably above\" target; no rate guidance.",
+   "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261113a.htm",
+   "quality": "V (Fed text)"
+  }
+ ],
+ "not_scored": [
+  "Chair Warsh: 16 Nov opening remarks had no policy content.",
+  "Governor Cook: no policy remark found in the window (dissented for +25 bp on 28 Oct).",
+  "Other presidents: no remark found in the window search."
+ ]
+}
