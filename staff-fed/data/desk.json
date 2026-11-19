@@ -21,15 +21,15 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Data refreshed 17 Nov 2026, 08:39 Europe/Zurich",
-    "banner": "<b>Data refreshed 17 Nov 2026, 08:39 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 12 Nov</span> Leading-indicator charts redrawn 13 Nov 2026, 07:05:52 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026.",
-    "data_refreshed_at": "2026-11-17T08:39:52",
-    "data_refreshed_display": "17 Nov 2026, 08:39 Europe/Zurich",
+    "label": "Data refreshed 19 Nov 2026, 06:48 Europe/Zurich",
+    "banner": "<b>Data refreshed 19 Nov 2026, 06:48 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 12 Nov 2026, 07:40 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 12 Nov</span> Leading-indicator charts redrawn 13 Nov 2026, 07:05:52 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026.",
+    "data_refreshed_at": "2026-11-19T06:48:24",
+    "data_refreshed_display": "19 Nov 2026, 06:48 Europe/Zurich",
     "commentary_older_badge": "Commentary older than data – as of 12 Nov"
   },
   "summary": {
     "heading": "Current state",
-    "text": "Q4 growth trackers remain at or above the 6 Nov staff baseline of 3.0% SAAR (own estimate): Atlanta GDPNow 3.5% (V, 9 Nov; FRED 3.4810) and the New York Fed Staff Nowcast 2.94% (V, official file, 6 Nov). October payrolls (BLS, 6 Nov, V) showed NFP +165k and an unemployment rate of 4.1%, but U-6 rose to 7.9%. October CPI (BLS, 10 Nov, V) was +0.4% m/m sa and core +0.3% m/m; no 12-month change was published (October 2025 gap). The 3.2% core PCE Q4/Q4 staff baseline is retained, with judgmental upside risk of about 3.3–3.4% (own estimate), pending PPI on 13 Nov. Stance: hold at 3.75–4.00% with a tightening bias; a December hike remains live, not automatic (own estimate). Staff-style view, not Fed Board staff work and not the FOMC SEP (16 Sep medians).",
+    "text": "Q4 growth trackers remain at or above the 6 Nov staff baseline of 3.0% SAAR (own estimate): Atlanta GDPNow 3.2% (V, Atlanta Fed via FRED, update 17 Nov; previously 3.5%) and the New York Fed Staff Nowcast 2.94% (V, official file, 6 Nov). October payrolls (BLS, 6 Nov, V) showed NFP +165k and an unemployment rate of 4.1%, but U-6 rose to 7.9%. October CPI (BLS, 10 Nov, V) was +0.4% m/m sa and core +0.3% m/m; no 12-month change was published (October 2025 gap). The 3.2% core PCE Q4/Q4 staff baseline is retained, with judgmental upside risk of about 3.3–3.4% (own estimate), pending PPI on 13 Nov. Stance: hold at 3.75–4.00% with a tightening bias; a December hike remains live, not automatic (own estimate). Staff-style view, not Fed Board staff work and not the FOMC SEP (16 Sep medians).",
     "as_of": "2026-11-12T07:40:00+01:00",
     "source": "Fed Staff Desk note, 12 Nov 2026"
   },
@@ -453,7 +453,7 @@
   "staff_view": {
     "lead": "Risk balance in the 12 Nov note: growth up near term, inflation up, pending PPI.",
     "bullets": [
-      "Growth (near-term upside, own estimate): GDPNow 3.5% vs staff Q4 3.0%; the New York Fed 2.94% is close to baseline. Next-year downside (energy, real incomes, rate-sensitive demand) is unchanged (staff, 6 Nov).",
+      "Growth (near-term upside, own estimate): GDPNow 3.2% (17 Nov, down from 3.5%) vs staff Q4 3.0%, gap narrowing, high revision risk; the New York Fed 2.94% is close to baseline. Next-year downside (energy, real incomes, rate-sensitive demand) is unchanged (staff, 6 Nov).",
       "Labour (mixed): payrolls and a 4.1% unemployment rate coexist with U-6 at 7.9%, low published claims, and SCE unemployment-probability at a post-2020 high.",
       "Inflation (upside risk): October core CPI +0.3% m/m (BLS, V). The 3.2% core PCE Q4/Q4 baseline is retained, with judgmental upside risk of about 3.3–3.4% (own estimate), pending PPI on 13 Nov. Productivity and ECI still offset.",
       "Credit / household finance: SLOOS (2 Nov) still shows weak C&I demand and tighter CRE and non-bank financial standards; SCE missed-payment probability 13.8% (V, 9 Nov). A Q3 credit-card 90+ delinquency reading of 12.9% remains U and was not re-verified.",
@@ -720,9 +720,9 @@
     ]
   },
   "ust10y_decomposition": {
-    "hint": "H.15 and NY Fed ACM through 13 Nov 2026; Board Kim-Wright through 6 Nov 2026. Source: Research Manager ust10y tidy. Fetched 17 Nov 2026, 07:17:21 Europe/Zurich.",
-    "as_of": "2026-11-13",
-    "as_of_display": "H.15 and ACM 13 Nov 2026; Kim-Wright 6 Nov 2026",
+    "hint": "H.15 and NY Fed ACM through 17 Nov 2026; Board Kim-Wright through 13 Nov 2026. Source: Research Manager ust10y tidy. Fetched 17 Nov 2026, 07:17:21 Europe/Zurich.",
+    "as_of": "2026-11-17",
+    "as_of_display": "H.15 and ACM 17 Nov 2026; Kim-Wright 13 Nov 2026",
     "source": "ust10y_decomposition_charts_2026-11-12.md",
     "read": "Over 21 sessions (14 October–13 November) the 10-year fell 4 bp (5.19% to 5.15%), as the real yield rose 7 bp and the staff breakeven (d) fell 11 bp. Over the last 5 sessions (5–13 November) the 10-year rose 31 bp (4.84% to 5.15%), all in the real yield; the staff breakeven was unchanged. The last day (12–13 November) the 10-year rose 5 bp (5.10% to 5.15%), again all in the real yield. On the last common date, 6 November, ACM and Kim-Wright term premiums differed by 23.1 bp (d) (0.643% vs 0.874%), so the Split B result depends on the model.",
     "blocks": [
@@ -805,6 +805,6 @@
     "data_as_of": "2026-11-17",
     "commentary_as_of": "12 Nov 2026, 07:40 Europe/Zurich",
     "stamp": "Data refreshed 2026-11-17, commentary as of 12 Nov 2026, 07:40 Europe/Zurich",
-    "latest": "leading charts redrawn 2026-11-17 07:17:56 Europe/Zurich; DGS10 5.15 on 2026-11-13 (V)"
+    "latest": "leading charts redrawn 2026-11-17 07:17:56 Europe/Zurich; DGS10 5.1 on 2026-11-17 (V)"
   }
 }
