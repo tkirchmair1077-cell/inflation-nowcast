@@ -1,0 +1,103 @@
+{
+ "title": "US CPI Nowcast — November 2026",
+ "mode": "research_provisional_workaround",
+ "certified_production": false,
+ "sealed": false,
+ "unsealed_reason": "Unsealed nowcast: EIA target month is partial (3/5 Mondays through the week of 16.11); inputs are not attested final; not written to the official seal chain.",
+ "unit": "percent_mom_sa",
+ "target_month": "2026-11",
+ "train_end": "2026-10",
+ "data_date": {
+  "inputs_fetched_at_utc": "2026-11-17T15:38:32Z",
+  "inputs_fetched_europe_zurich": "2026-11-17 16:38 Europe/Zurich",
+  "eia_last_week": "2026-11-16",
+  "eia_partial": true,
+  "computed_europe_zurich": "2026-11-19 Europe/Zurich"
+ },
+ "release_calendar": "BLS CPI November 2026 scheduled Thu 2026-12-10 08:30 ET = 14:30 Europe/Zurich (V)",
+ "method_note": "Knotek-Zaman-style component bridge (same method as the October freeze): core AR(1), food persistence, gasoline EIA weekly regular retail → CPI gasoline m/m plus empirical November SA−NSA gap (2015–2024 cap), residual energy persistence; aggregated with official Dec-2025 CPI-U relative-importance weights. October 2026 first-print component levels are the train-end actuals. November EIA average is partial (3 of 5 Mondays through 16.11) and is flagged.",
+ "point_forecasts_(d)": {
+  "headline_mom_sa_4dp": 0.1978,
+  "core_mom_sa_4dp": 0.3015,
+  "headline_mom_sa_1dp": 0.2,
+  "core_mom_sa_1dp": 0.3,
+  "headline_mom_sa_full": 0.1977540681169288,
+  "core_mom_sa_full": 0.3015483967749642
+ },
+ "official_yoy_nsa": "n/a (Nov-2026 index not yet published)",
+ "derived_yoy_nsa_(d)": {
+  "headline": 3.9821174018684236,
+  "core": 2.9617016439283494,
+  "base_period": "2025-11",
+  "base_status": "official_published_NSA",
+  "base_headline_nsa": 324.122,
+  "base_core_nsa": 330.425,
+  "note": "(d) Derived YoY using official published Nov-2025 NSA base and nowcasted Nov-2026 NSA level (SA MoM plus mean Nov NSA−SA 2020–2024). Not an official BLS 12-month change."
+ },
+ "core_band_80pct_(d)": {
+  "lo": 0.1586233561681162,
+  "hi": 0.4444734373818122,
+  "n_oos": 139,
+  "rmse_pp": 0.14786921109352497,
+  "ok": true,
+  "method": "prequential_rolling60_absolute_conformal_adaptive_alpha_gamma0.03",
+  "note": "prior quasi-RT AR(1) errors through 2026-09 plus sealed Oct-2026 first-release core error +0.0299 pp (SHA 1955cd93…); Oct not yet in quasi-RT steps file"
+ },
+ "headline_band": "n/a — withheld (same rule as October: thin/unvalidated headline calibration)",
+ "contributions_pp_(d)": [
+  {
+   "component": "core",
+   "mom_pct": 0.3015483967749642,
+   "weight": 0.79919,
+   "contribution_pp": 0.24099446321858362,
+   "method": "ar1_or_persistence"
+  },
+  {
+   "component": "food",
+   "mom_pct": 0.4727842340581656,
+   "weight": 0.13698,
+   "contribution_pp": 0.06476198438128752,
+   "method": "persistence_or_ar1"
+  },
+  {
+   "component": "energy",
+   "mom_pct": -1.692031638460635,
+   "weight": 0.06383,
+   "contribution_pp": -0.10800237948294233,
+   "method": "approx_gas_plus_ng_contribution_identity"
+  },
+  {
+   "component": "gasoline_within_energy",
+   "mom_pct": -4.234485080145102,
+   "weight": 0.02895,
+   "contribution_pp": -0.12258834307020071,
+   "method": "eia_monday_calendar_month_bridge_nsa_then_sa"
+  }
+ ],
+ "eia_gasoline": {
+  "oct_2026_avg_usd_gal": 4.3095,
+  "nov_2026_partial_avg_usd_gal": 3.9843333333333333,
+  "nov_mondays_used": [
+   "2026-11-02",
+   "2026-11-09",
+   "2026-11-16"
+  ],
+  "complete": false,
+  "n_observed": 3,
+  "n_expected": 5,
+  "eia_mom_pct": -7.545345554395322,
+  "bridge_n": 60,
+  "bridge_alpha": 0.023903439377566685,
+  "bridge_beta": 0.9550550629541035,
+  "gas_nsa_mom_fc_(d)": -7.182317034085922,
+  "gas_sa_mom_fc_(d)": -4.234485080145102,
+  "nov_sa_minus_nsa_mean_2015_2024": 2.9478319539408195
+ },
+ "input_snapshot_ids": [
+  "20261105T183729Z_phase1",
+  "20261105T184322Z_phase2",
+  "20261110T160733Z_pce_cpi_items",
+  "20261117T153832Z_cpi_nov2026_nowcast_inputs",
+  "20261106T075530Z_release_calendar"
+ ]
+}
