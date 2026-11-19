@@ -167,6 +167,21 @@ footer{margin:10px 0 48px}
   .controls{width:100%}
   .banner small{display:block;margin:2px 0 0}
 }
+/* November 2026 US CPI current-month card */
+.cpi-nov{margin:0 0 18px;border-color:var(--amber);border-left:4px solid var(--amber)}
+.cpi-nov h3{flex:1 1 280px;min-width:0;font-size:18px;font-weight:650;letter-spacing:-.01em;line-height:1.35;color:var(--text)}
+.cpi-nov .ov-head{align-items:flex-start;flex-wrap:wrap}
+.cpi-nov-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;border-top:1px solid var(--border);padding-top:14px}
+.cpi-nov .big{font-size:34px}
+.cpi-nov-meta{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--border);display:grid;gap:6px}
+.cpi-nov-meta div{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:10px;align-items:baseline}
+.cpi-nov-meta dt{margin:0;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);font-weight:650}
+.cpi-nov-meta dd{margin:0;font-size:13.5px;color:var(--text);line-height:1.45}
+.cpi-nov-caveat{margin-top:14px;border:1px solid var(--amber);background:var(--amber-bg);border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.55;color:var(--text);font-weight:600}
+@media (max-width:640px){
+  .cpi-nov-cols,.cpi-nov-meta div{grid-template-columns:minmax(0,1fr)}
+  .cpi-nov .big{font-size:28px}
+}
 </style>
 </head>
 <body>
@@ -192,6 +207,35 @@ footer{margin:10px 0 48px}
   <!-- 1. Overview -->
   <section id="overview">
     <div class="sec-head"><h2>1 · Overview</h2><span class="hint" id="ovHint"></span></div>
+    <article class="card cpi-nov" id="cpiNov2026" aria-labelledby="cpiNovTitle">
+      <div class="ov-head">
+        <h3 id="cpiNovTitle">US CPI November 2026: current-month nowcast (provisional, unsealed)</h3>
+        <span class="badge YELLOW">Provisional · unsealed</span>
+      </div>
+      <div class="cpi-nov-cols">
+        <div class="ov-col">
+          <div class="k">Headline m/m SA</div>
+          <div class="big">+0.20%<small>m/m SA</small></div>
+          <div class="yy">(<b>0.1978</b>)</div>
+          <div class="yy">80% band withheld</div>
+        </div>
+        <div class="ov-col">
+          <div class="k">Core m/m SA</div>
+          <div class="big">+0.30%<small>m/m SA</small></div>
+          <div class="yy">(<b>0.3015</b>)</div>
+          <div class="yy">80% band <b>0.16 to 0.44</b></div>
+        </div>
+      </div>
+      <dl class="cpi-nov-meta">
+        <div><dt>Contributions (pp)</dt><dd>core +0.241, food +0.065, energy -0.108 (gasoline -0.123)</dd></div>
+        <div><dt>Derived y/y</dt><dd>3.98 headline / 2.96 core (derived, not official BLS)</dd></div>
+        <div><dt>Data as of</dt><dd>17 Nov 2026 16:38 Zurich</dd></div>
+        <div><dt>EIA gasoline</dt><dd>through week of 16 Nov (3 of 5 weeks)</dd></div>
+        <div><dt>BLS release</dt><dd>Thu 10 Dec 2026 14:30 Zurich</dd></div>
+        <div><dt>Method</dt><dd>component bridge, same method as the October freeze</dd></div>
+      </dl>
+      <div class="cpi-nov-caveat" role="note">Unsealed provisional nowcast. November gasoline data are incomplete (3/5 weeks) and gasoline is the main driver; food assumes persistence of a strong October; no survey forecast available yet.</div>
+    </article>
     <div class="grid3" id="ovCards"></div>
     <div class="pulse" id="pulse"></div>
     <div class="legend-note">Signal vs consensus (m/m): <span class="sw g"></span>nowcast below consensus <span class="sw r"></span>nowcast above consensus</div>
@@ -1737,7 +1781,7 @@ function renderHeader(){
   const m=data.meta;
   $('hdrTitle').textContent=m.title||'Inflation Nowcasts';
   $('hdrSub').textContent='US CPI · PCE · PPI · reference month '+m.targetMonth;
-  $('lastUpdate').textContent=zurich(m.asOf)+(m.asOfNote?' · '+m.asOfNote:'');
+  $('lastUpdate').textContent='Nowcast updated 19 Nov 2026, Europe/Zurich';
   const b=$('banner');
   if(m.banner){b.style.display='';b.innerHTML=esc(m.banner)+(m.bannerSmall?'<small>'+esc(m.bannerSmall)+'</small>':'')}else b.style.display='none';
   $('srcLine').textContent='Data source: '+dataSource+(m.source?' · '+m.source:'')+' · Charts: Chart.js 4 via CDN.';
