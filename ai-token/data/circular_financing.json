@@ -5,16 +5,27 @@
     "name": "AI Circular Financing Alert Bot",
     "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
   },
-  "as_of": "2026-11-18T05:40:00+01:00",
+  "as_of": "2026-11-20T09:50:00+01:00",
   "timezone": "Europe/Zurich",
-  "title": "Circular Financing Watch, as of Thu 12 Nov 2026 ~16:45 Europe/Zurich",
+  "title": "Circular Financing Watch, as of Fri 20 Nov 2026 ~09:50 Europe/Zurich",
   "status": {
-    "current_user_alert": "Watch (18 Nov): Nvidia guarantees $118.0bn, DSO 64 days, $1.8bn private-stake impairment. The 12 Nov Elevated alert (Nvidia CEO resignation + neocloud guidance) stands.",
-    "current_user_alert_as_of": "2026-11-18T05:40:00+01:00",
-    "summary": "Morning scan 18 Nov, updated after the independent check (~05:35 CET): Watch alert on Nvidia's Q3 FY27 8-K holds; no errors found. Guarantees rose to $118.0bn from $108.5bn, driven by a new $9.5bn power-and-systems line whose counterparties and structure are undisclosed (U). DSO rose to 64 days from 60 on extended payment terms, two customers held 18% and 17% of receivables (V), and Nvidia booked a $1.8bn impairment on private stakes (V). Revenue was $115.8bn and Q4 guidance $130bn; commitments total $518bn (V). After hours to ~01:59 CET: CRWV +9.0%, NBIS +11.2%, IREN +10.1% (d, not closes). The 12 Nov Elevated alert stands. No dated CDS print after 13 Nov (U). Independently checked by Recherche-Spezialist.",
-    "last_scan": "2026-11-18T06:00:00+01:00",
+    "current_user_alert": "Watch (20 Nov): SoftBank Group closed −14.48% in Tokyo. Watch (18 Nov): Nvidia guarantees $118.0bn, DSO 64 days, $1.8bn private-stake impairment. The 12 Nov Elevated alert (Nvidia CEO resignation + neocloud guidance) stands.",
+    "current_user_alert_as_of": "2026-11-20T09:50:00+01:00",
+    "summary": "Morning scan 20 Nov: three material items added and one 18 Nov market-reaction item updated with official closes. Anthropic priced at $83.00 in an $81.34bn offering plus a $26.0bn supplier placement; estimated net proceeds $104.8bn (V, company, FWP, 424B4). ANT closed $97.17 on 19 Nov, +17.1% vs the IPO price (V, Nasdaq historical; change d), while Nvidia, CoreWeave, Nebius and Oracle fell in the same session (V). The 18 Nov regular session reversed the after-hours bounce in CoreWeave and Iren (V). SoftBank closed 3,025 yen, −14.48% (V, Yahoo historical after 07:30 CET; change d). The 12 Nov Elevated alert and the 18 Nov Nvidia Watch stand. No 10-Q, no dated CDS print after 13 Nov, no CoreWeave ~$4bn loan pricing, and no published ING auction results (U).",
+    "last_scan": "2026-11-20T09:50:00+01:00",
     "last_independent_check": "2026-11-18T05:35:00+01:00",
     "outstanding_watches": [
+      {
+        "date": "2026-11-20",
+        "session": "AM",
+        "tier": "Watch",
+        "node": "Anthropic / SoftBank / neoclouds",
+        "headline": "Anthropic IPO priced at $83.00 on 18 Nov ($81.34bn offering + $26.0bn Class N supplier placement; net proceeds $104.8bn, V). ANT closed $97.17 on 19 Nov, +17.1% vs IPO (V, Nasdaq historical; change d), while NVDA, CRWV, NBIS and ORCL fell (V). SoftBank Group closed 3,025 yen on 20 Nov, −14.48% (V, Yahoo historical after the 07:30 CET close; change d).",
+        "quality": "V/U",
+        "note": "New 20 Nov Watch is the SoftBank official close (single node, equity-mark channel). Anthropic pricing is a Watch-level financing event that completes the 10 Nov S-1/A2 Watch; tone is neutral because the cash raised offsets Anthropic funding risk while the circular supplier placement is now locked in. The 18 Nov regular-session closes reverse the after-hours neocloud bounce and are an update, not a new alert. The 12 Nov Elevated alert and the 18 Nov Nvidia Watch stand. Nvidia Q3 10-Q still not filed; $9.5bn guarantee-line counterparties undisclosed (U). No publishable dated CDS print after 13 Nov (U). CoreWeave ~$4bn Meta-secured loan still has no dated launch or pricing (U). ING data-centre loan bids were due 19 Nov; no results published (U).",
+        "tone": "negative",
+        "tone_source": "bot"
+      },
       {
         "date": "2026-11-18",
         "session": "AM",
@@ -128,11 +139,212 @@
     ]
   },
   "summary": {
-    "text": "Nvidia's Q3 FY27 filing raises its maximum guarantee exposure to $118.0bn from $108.5bn: $105bn for the OpenAI-leased SB Energy campus in Ohio, $3.5bn for neocloud sites and a new $9.5bn for power and systems credit support, whose counterparties and structure are not disclosed in the 8-K (V; the new line's detail is U, and the 10-Q is not filed). Nvidia says it has made no payments under these guarantees. Receivables reached $81.0bn and DSO rose to 64 days from 60, partly on extended payment terms for large multi-quarter customers; two direct customers accounted for 18% and 17% of receivables, and Nvidia booked a $1.8bn impairment on private equity stakes — the $65.5bn figure is only the non-marketable securities line, not all stakes (V). Demand stayed strong: revenue was $115.8bn, up 103% year on year, with Q4 guidance of $130bn; commitments total $518bn, and the $32bn of neocloud agreements is the renamed 'AI cloud agreements' category, down from $36bn and comparable (V). Nvidia said it would stay 'disciplined and selective' in financing neoclouds (V, third-party transcript), and after hours to about 01:59 CET CoreWeave rose 9.0%, Nebius 11.2% and Iren 10.1% (d, not closes). The 12 Nov Elevated alert (Nvidia CEO resignation, Nebius guidance) still stands. No publishable dated CDS print after 13 Nov was found (U).",
-    "as_of": "2026-11-18T05:40:00+01:00",
-    "source": "AI Alert morning scan 18 Nov 2026, updated after the independent check by Recherche-Spezialist (~05:35 Europe/Zurich); SEC EDGAR Nvidia 8-K of 17 Nov (press release, CFO commentary and supplemental exhibit) and Q2 FY27 10-Q; Nasdaq historical closes; after-hours last prices at ~01:59 CET (d); call quotes from a third-party transcript."
+    "text": "Anthropic priced its IPO at $83.00 on 18 Nov, selling 980 million Class A shares in an $81.34bn offering and a concurrent $26.0bn Class N placement at the same price to Google, Nvidia, AMD, Broadcom, Micron, Microsoft and TSMC; net proceeds to Anthropic are estimated at $104.8bn, or $117.0bn if the 30-day option is exercised in full, and Google's remaining 2026 NPA capacity falls from $20.0bn to $10.0bn when the $10.0bn placement closes (V, company release, FWP and 424B4). After the offering and placement Amazon and Google will hold 14.6% and 13.4% of outstanding capital stock, all in non-voting Class N (V, 424B4). ANT opened at $111.50 on 19 Nov and closed at $97.17, 17.1% above the IPO price (V, Nasdaq historical; change is d), but the same session did not lift the loop: Nvidia closed $145.98 (−3.30%), CoreWeave $44.91 (−6.10%), Nebius $96.92 (−9.39%) and Oracle $110.57 (−2.92%), after an 18 Nov regular session that reversed the after-hours bounce in CoreWeave and Iren (CRWV $47.83, −4.13%; NVDA $150.96, −2.89%) (V, Nasdaq historical; changes d). SoftBank Group closed at 3,025 yen on 20 Nov, −14.48%, after the Tokyo regular session ended at 07:30 CET (V, Yahoo historical; change d). The 12 Nov Elevated alert and the 18 Nov Nvidia Watch still stand; Nvidia's Q3 10-Q is not filed, so the counterparties on the new $9.5bn guarantee line remain undisclosed (U). No publishable dated CDS print after 13 Nov was found, CoreWeave's reported ~$4bn Meta-secured loan still has no dated launch or pricing, and no results have been published for the ING data-centre loan auction that had bids due 19 Nov (U).",
+    "as_of": "2026-11-20T09:50:00+01:00",
+    "source": "AI Alert on-demand scan 20 Nov 2026 (~09:50 Europe/Zurich); Anthropic company release 18 Nov, SEC FWP 18 Nov and 424B4 19 Nov; Nasdaq historical closes 18–19 Nov; Yahoo historical Tokyo closes 19–20 Nov; CNBC 18–20 Nov for event context only. Not independently checked by Recherche-Spezialist in this run."
   },
   "items": [
+    {
+      "id": "softbank-tokyo-selloff-2026-11-20",
+      "node": "SoftBank / OpenAI (equity mark)",
+      "type": "market_reaction",
+      "title": "SoftBank Group closes 14.48% lower in Tokyo as the AI sell-off reaches the listed OpenAI proxy",
+      "as_of": "2026-11-20",
+      "event_time": "2026-11-20T07:30:00+01:00",
+      "tier_relevance": "Watch (single node: SoftBank). Official Tokyo close, after 07:30 CET, at the most concentrated listed OpenAI proxy. This is an equity-mark move, not a new SoftBank filing or a change to OpenAI's funding. No dated CDS print. The 12 Nov Elevated alert and the 18 Nov Nvidia Watch stand.",
+      "tone": "negative",
+      "tone_source": "bot",
+      "relationship": "SoftBank's OpenAI stake is held at FVTPL (fair value $99.6bn at end-September, unchanged through the first half, V per SoftBank's Q2 report). A sharp official decline in the listed proxy is the equity-mark transmission channel of the loop, coming after Anthropic's debut failed to lift Nvidia, neocloud and Oracle shares on 19 Nov.",
+      "counterparties": [
+        "SoftBank Group",
+        "OpenAI",
+        "Nvidia",
+        "Anthropic"
+      ],
+      "figures": [
+        {
+          "label": "SoftBank Group (9984) Tokyo close, 20 Nov",
+          "value": "3025",
+          "unit": "JPY",
+          "quality": "V",
+          "note": "Yahoo historical daily close; the Tokyo regular session had ended at 07:30 CET, so this is a close, not an intraday print. Change −14.48% vs 3,537 yen on 19 Nov (d). CNBC reported the same 14.48% official close and linked the move to the AI sell-off after Anthropic's debut and to SoftBank's OpenAI exposure. A CNBC figure for SoftBank's 'invested' amount in OpenAI is not used here; it is not a SoftBank print and is not the last disclosed fair value."
+        },
+        {
+          "label": "SoftBank Group (9984) Tokyo close, 19 Nov",
+          "value": "3537",
+          "unit": "JPY",
+          "quality": "V",
+          "note": "Yahoo historical daily close, +4.55% vs 3,383 yen on 18 Nov (d)."
+        }
+      ],
+      "links": [
+        "https://finance.yahoo.com/quote/9984.T/history",
+        "https://www.cnbc.com/2026/11/20/softbank-ai-tech-stocks-slide-anthropic-debut.html"
+      ],
+      "notes": "The 3,025 yen print is the official 20 Nov Tokyo close (session ends 15:30 JST = 07:30 CET). Do not confuse it with an intraday low. SoftBank's last disclosed OpenAI carrying value remains $99.6bn at FVTPL from the Q2 FY2026 report (10 Nov); this session does not restate that mark. No SoftBank 6-K was filed in the scan window."
+    },
+    {
+      "id": "anthropic-ipo-debut-ai-selloff-2026-11-19",
+      "node": "Anthropic / Nvidia / neoclouds / Oracle (market reaction)",
+      "type": "market_reaction",
+      "title": "Anthropic closes first day at $97.17, 17.1% above the IPO price; Nvidia, CoreWeave, Nebius and Oracle sell off in the same session",
+      "as_of": "2026-11-19",
+      "event_time": "2026-11-19T22:00:00+01:00",
+      "tier_relevance": "Below Watch as a new alert. ANT's own debut was a successful first close, but the session did not lift the rest of the loop and extends the 18 Nov regular-session reversal of the post-earnings after-hours bounce. Equity only; no dated CDS print, so this is not credit confirmation of the 18 Nov Nvidia Watch. The 12 Nov Elevated alert stands.",
+      "tone": "negative",
+      "tone_source": "bot",
+      "relationship": "A successful lab IPO can ease funding stress at that node, but the same day's declines in Nvidia, the debt-heavy neoclouds and Oracle are the equity channel of circular-financing stress: investors marked down the suppliers, lessors and project sponsors that still carry guarantees, receivables and backlogs tied to AI infrastructure.",
+      "counterparties": [
+        "Anthropic",
+        "Nvidia",
+        "CoreWeave",
+        "Nebius",
+        "Oracle",
+        "Iren"
+      ],
+      "figures": [
+        {
+          "label": "Anthropic (ANT) US close, 19 Nov (first day)",
+          "value": "97.17",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Nasdaq historical close. Open $111.50, high $115.10, low $92.72, volume 857.3 million (Nasdaq historical). Change vs $83.00 IPO price is +17.1% (d). Opened 34.3% above the IPO price (d) and closed below the open. Nasdaq also recorded the $111.50 open in its 19 Nov newsroom note."
+        },
+        {
+          "label": "Nvidia (NVDA) US close, 19 Nov",
+          "value": "145.98",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Nasdaq historical close. −3.30% vs $150.96 on 18 Nov and −6.10% vs $155.46 on 17 Nov (d)."
+        },
+        {
+          "label": "CoreWeave (CRWV) US close, 19 Nov",
+          "value": "44.91",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Nasdaq historical close. −6.10% vs $47.83 on 18 Nov and −9.98% vs $49.89 on 17 Nov (d)."
+        },
+        {
+          "label": "Nebius (NBIS) US close, 19 Nov",
+          "value": "96.92",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Nasdaq historical close. −9.39% vs $106.96 on 18 Nov and −8.60% vs $106.035 on 17 Nov (d)."
+        },
+        {
+          "label": "Oracle (ORCL) US close, 19 Nov",
+          "value": "110.57",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Nasdaq historical close. −2.92% vs $113.89 on 18 Nov and −3.85% vs $115.00 on 17 Nov (d)."
+        },
+        {
+          "label": "Iren (IREN) US close, 19 Nov",
+          "value": "14.41",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Nasdaq historical close. −5.45% vs $15.24 on 18 Nov (d)."
+        }
+      ],
+      "links": [
+        "https://www.nasdaq.com/market-activity/stocks/ant/historical",
+        "https://www.nasdaq.com/newsroom/anthropic-marks-ipo-at-nasdaq",
+        "https://www.nasdaq.com/market-activity/stocks/nvda/historical",
+        "https://www.nasdaq.com/market-activity/stocks/crwv/historical",
+        "https://www.nasdaq.com/market-activity/stocks/nbis/historical",
+        "https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html",
+        "https://www.cnbc.com/2026/11/19/anthropic-ipo-ai-stocks-selloff.html"
+      ],
+      "notes": "Official US closes are from Nasdaq historical data, not article tickers. CNBC also reported the $97.17 close, the $111.50 open and a roughly $1.8tn fully diluted market cap (U for the fully diluted figure). The 424B4 does not define a fully diluted market cap; basic implied equity from the prospectus share counts (6,626,752,642 Class A + 5,323,285,271 Class N + two founder/public-benefit shares) is about $1.16tn at the $97.17 close (d). That reconstruction is not unique and excludes options, unvested awards and other reserved shares."
+    },
+    {
+      "id": "anthropic-ipo-pricing-2026-11-18",
+      "node": "Anthropic (IPO and supplier placement)",
+      "type": "equity_placement",
+      "title": "Anthropic prices IPO at $83.00, above the $70–78 range, in an $81.34bn offering; $26.0bn supplier Class N placement priced at the same level",
+      "as_of": "2026-11-18",
+      "event_time": "2026-11-18T16:15:00+01:00",
+      "tier_relevance": "Watch (single node: Anthropic financing). Completes the 10 Nov S-1/A2 Watch: the IPO was priced above the range and the $26bn concurrent supplier placement is now locked in at $83. Net proceeds are a credit-positive for Anthropic; the circular structure (suppliers buying equity while selling compute) is unchanged. No credit-market confirmation. The 12 Nov Elevated alert and the 18 Nov Nvidia Watch stand.",
+      "tone": "neutral",
+      "tone_source": "bot",
+      "relationship": "Compute and chip suppliers committed to buy $26.0bn of non-voting Class N stock at the IPO price, while Anthropic has large, mostly usage-agnostic compute commitments with the same group, including Google and Amazon. Google is funding $10.0bn of that placement by exercising an option that reduces remaining capacity under the Google 2026 NPA from $20.0bn to $10.0bn at close. The cash raised increases Anthropic's liquidity; it does not cancel the commitments.",
+      "counterparties": [
+        "Anthropic",
+        "Google",
+        "Amazon",
+        "Nvidia",
+        "AMD",
+        "Broadcom",
+        "Micron",
+        "Microsoft",
+        "TSMC"
+      ],
+      "figures": [
+        {
+          "label": "IPO price",
+          "value": "83.00",
+          "unit": "USD/share",
+          "quality": "V",
+          "note": "Company release and FWP, 18 Nov 2026. Above the $70–78 range in S-1/A2."
+        },
+        {
+          "label": "Base offering size (ex-option)",
+          "value": "81.34",
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "FWP: 980,000,000 Class A shares at $83.00. 956,351,354 primary and 23,648,646 secondary; Anthropic receives no proceeds from the selling stockholders. 30-day option for up to 147,000,000 additional primary shares (about $12.20bn gross if exercised in full, d)."
+        },
+        {
+          "label": "Concurrent Class N placement at the IPO price",
+          "value": "26.0",
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "FWP and 424B4: 313,253,007 Class N shares at $83.00. Google $10.0bn (120,481,927 shares), Nvidia $10.0bn (120,481,927), AMD $2.5bn (30,120,481), Broadcom $1.0bn, Micron $1.0bn, Microsoft $1.0bn (12,048,192 each), TSMC $500 million (6,024,096). No underwriting discount on the placement. Settlement of the offering was expected on 20 Nov, subject to customary conditions."
+        },
+        {
+          "label": "Estimated net proceeds to Anthropic, offering plus placement",
+          "value": "104.8",
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "424B4, at $83.00, after discounts (IPO only) and estimated expenses. About $117.0bn if the option is exercised in full (V). A further $4.3bn of the proceeds is intended for tax withholding on the RSU settlement (V)."
+        },
+        {
+          "label": "Amazon and Google post-offering share of outstanding capital stock",
+          "value": "14.6 / 13.4",
+          "unit": "%",
+          "quality": "V",
+          "note": "424B4, after the offering and placement, no option exercise: Amazon 1,936,452,353 and Google 1,774,959,745 Class N shares, 34.4% and 31.5% of Class N and 14.6% and 13.4% of outstanding capital stock (together 28.0%, d). Class N has no voting rights except as required by law. If Amazon's notes converted in full without the ownership cap — which Amazon has elected not to waive in this offering — Amazon would hold 23.6% of outstanding capital stock (V, illustrative only)."
+        },
+        {
+          "label": "Google 2026 NPA capacity remaining after the placement closes",
+          "value": "10.0",
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "424B4: Google exercised in full its option to buy $10.0bn of Class N in the placement, which reduces remaining capacity under the Google 2026 NPA from $20.0bn to $10.0bn at close."
+        },
+        {
+          "label": "Compute and infrastructure commitments (424B4, unchanged vs A2 total)",
+          "value": "900.9",
+          "unit": "USD billion",
+          "quality": "V",
+          "note": "As of 30 Sep 2026. About $451.6bn expected to be incurred before 31 Dec 2030, $70.7bn due in the following 12 months, and $186.2bn subject to termination rights or commencement conditions (V). Usage-agnostic CSP minimums include Google at least $121.3bn (Apr 2026–Jul 2033), Amazon at least $110.0bn (May 2026–Apr 2036), and Microsoft at least $47.2bn and up to $49.2bn (Nov 2026–Jun 2033) (V). Additional arrangements without a fixed dollar commitment are estimated at $150–175bn and are excluded from the $900.9bn total (V)."
+        },
+        {
+          "label": "Basic implied equity at the $83.00 IPO price",
+          "value": "991.9",
+          "unit": "USD billion",
+          "quality": "(d)",
+          "note": "From the 424B4 post-offering share counts, no option exercise: 6,626,752,642 Class A + 5,323,285,271 Class N + two Class T/F shares, times $83.00. This is not a fully diluted figure; the prospectus does not define fully diluted market cap. CNBC cited about $1.5tn fully diluted at pricing (U)."
+        }
+      ],
+      "links": [
+        "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+        "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074937/anthropicpbc-fwppricing.htm",
+        "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
+        "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
+      ],
+      "notes": "Primary sources are the 18 Nov company release, the pricing FWP (acc. 0001628280-26-074937) and the 19 Nov 424B4 final prospectus (acc. 0001628280-26-074944). This item updates, and does not replace, the 10 Nov S-1/A2 Watch, which recorded the range, the $26bn placement and the $900.9bn commitments. Settlement was expected on 20 Nov; this scan does not treat close as confirmed. The 30-day option had not been reported as exercised. CNBC figures for a fully diluted market cap are U and are not used as V."
+    },
     {
       "id": "nvidia-q3fy27-guarantees-dso-2026-11-18",
       "node": "Nvidia (guarantees, receivables, equity marks)",
@@ -207,19 +419,19 @@
         "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html",
         "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/supplementalfinancialinfor.htm"
       ],
-      "notes": "Independently checked by Recherche-Spezialist on 18 Nov (~05:35 CET). No errors found; the Watch tier holds. The new $9.5bn power-and-systems credit-support line is V as a total; counterparties and structure are not disclosed in the 8-K (U). The Q3 10-Q is not yet filed. The $32bn neocloud agreements are the renamed 'AI cloud agreements' category (V, comparable; −$4bn). Q2's separate $20bn third-party lease line is no longer shown separately in Q3. The $65.5bn figure is only the non-marketable securities line, not all stakes. Commitments total $518bn (V). Two direct customers accounted for 18% and 17% of receivables (supplemental exhibit, V)."
+      "notes": "Independently checked by Recherche-Spezialist on 18 Nov (~05:35 CET). No errors found; the Watch tier holds. The new $9.5bn power-and-systems credit-support line is V as a total; counterparties and structure are not disclosed in the 8-K (U). The Q3 10-Q is not yet filed. The $32bn neocloud agreements are the renamed 'AI cloud agreements' category (V, comparable; −$4bn). Q2's separate $20bn third-party lease line is no longer shown separately in Q3. The $65.5bn figure is only the non-marketable securities line, not all stakes. Commitments total $518bn (V). Two direct customers accounted for 18% and 17% of receivables (supplemental exhibit, V). As of the 20 Nov morning scan, the Q3 FY27 10-Q had still not been filed on EDGAR; counterparties and structure of the $9.5bn power-and-systems line remain undisclosed (U)."
     },
     {
       "id": "nvidia-q3fy27-beat-neocloud-rally-2026-11-18",
       "node": "Nvidia / neoclouds (market reaction)",
       "type": "market_reaction",
-      "title": "Nvidia beats and guides Q4 to $130bn; neocloud shares rise after hours (CRWV +9.0%, NBIS +11.2%, IREN +10.1% at ~01:59 CET) as Nvidia promises 'disciplined' financing",
+      "title": "Nvidia beats and guides Q4 to $130bn; after-hours neocloud bounce fades in the 18 Nov regular session (CRWV −4.13%, IREN −3.57%, NVDA −2.89%)",
       "as_of": "2026-11-18",
       "event_time": "2026-11-17T22:20:00+01:00",
-      "tier_relevance": "Below Watch; offsets risk. End demand is visible in Nvidia's own numbers, and the market read Nvidia's financing comments as better than feared. These are after-hours moves only, not closes. Independently checked by Recherche-Spezialist at ~05:35 CET.",
-      "tone": "positive",
+      "tier_relevance": "Below Watch. The 17 Nov results and $130bn Q4 outlook remain a demand offset, but the after-hours bounce in CoreWeave and Iren was not confirmed by the official 18 Nov closes, which are the prints that matter. Independently checked by Recherche-Spezialist at ~05:35 CET for the after-hours figures only; the regular-session closes were added in the 20 Nov scan.",
+      "tone": "neutral",
       "tone_source": "bot",
-      "relationship": "The loop's weak links are the neoclouds, which depend on supplier support and debt. Nvidia's call says it will keep supporting 'select customers' but will be 'disciplined and selective' and is 'rigorously evaluating future investments, commitments, and guarantees' (V, third-party transcript; the quotes are not in the 8-K). That is a slower pace of supplier support rather than a cutoff.",
+      "relationship": "The loop's weak links are the neoclouds, which depend on supplier support and debt. Nvidia's call says it will keep supporting 'select customers' but will be 'disciplined and selective' and is 'rigorously evaluating future investments, commitments, and guarantees' (V, third-party transcript; the quotes are not in the 8-K). That is a slower pace of supplier support rather than a cutoff. The official 18 Nov closes show that investors did not treat the after-hours bounce as the last word.",
       "counterparties": [
         "Nvidia",
         "CoreWeave",
@@ -247,15 +459,31 @@
           "unit": "%",
           "quality": "V",
           "note": "Last after-hours prices vs 17 Nov official closes (d): CRWV $54.39 vs $49.89 (+9.0%), NBIS $117.91 vs $106.04 (+11.2%), IREN $17.41 vs $15.805 (+10.1%). Times are ~01:59 CET. Not closes; the regular session of 18 Nov is the close that matters. Official 17 Nov closes: CRWV $49.89, NBIS $106.04, IREN $15.805 (V)."
+        },
+        {
+          "label": "Nvidia (NVDA) US close, 18 Nov",
+          "value": "150.96",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Nasdaq historical close. −2.89% vs $155.46 on 17 Nov (d). Reverses the after-hours last price of $162.94 at ~01:59 CET."
+        },
+        {
+          "label": "CoreWeave / Nebius / Iren US closes, 18 Nov",
+          "value": "47.83 / 106.96 / 15.24",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Nasdaq historical closes. Changes vs 17 Nov official closes (d): CRWV −4.13% vs $49.89, NBIS +0.87% vs $106.035, IREN −3.57% vs $15.805. The after-hours bounce in CRWV and IREN was reversed; NBIS kept a small gain."
         }
       ],
       "links": [
         "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
         "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html",
         "https://www.nasdaq.com/market-activity/stocks/nvda/historical",
-        "https://www.nasdaq.com/market-activity/stocks/crwv/historical"
+        "https://www.nasdaq.com/market-activity/stocks/crwv/historical",
+        "https://www.nasdaq.com/market-activity/stocks/nbis/historical",
+        "https://www.nasdaq.com/market-activity/stocks/iren/historical"
       ],
-      "notes": "Independently checked by Recherche-Spezialist on 18 Nov (~05:35 CET). Call quotes are V from a third-party transcript (not in the 8-K). After-hours last prices at ~01:59 CET (d), not closes: CRWV +9.0%, NBIS +11.2%, IREN +10.1%. The regular session of 18 Nov is the close that matters."
+      "notes": "Independently checked by Recherche-Spezialist on 18 Nov (~05:35 CET) for the after-hours prints and call quotes. Call quotes are V from a third-party transcript (not in the 8-K). After-hours last prices at ~01:59 CET (d), not closes: CRWV +9.0%, NBIS +11.2%, IREN +10.1%. Official 18 Nov regular-session closes were added on 20 Nov from Nasdaq historical data (V) and show the bounce in CRWV and IREN did not hold."
     },
     {
       "id": "softbank-tokyo-selloff-2026-11-17",
@@ -510,7 +738,7 @@
           "kind": "secondary"
         }
       ],
-      "notes": "First published 13 Nov at 14:53 CET (the 14:54 CET stamp is a later modification). Single source, one person familiar with the matter; no CoreWeave 8-K and no second source as of the independent check at about 16:26 CET."
+      "notes": "First published 13 Nov at 14:53 CET (the 14:54 CET stamp is a later modification). Single source, one person familiar with the matter; no CoreWeave 8-K and no second source as of the independent check at about 16:26 CET. As of the 20 Nov morning scan, no company 8-K or other primary source had announced a dated launch or pricing of this loan (U)."
     },
     {
       "id": "nvidia-financing-platform-backstop",
@@ -1468,7 +1696,7 @@
           "kind": "primary"
         }
       ],
-      "notes": "Placement closes immediately after the IPO and is contingent on IPO closing, stockholder approval and no court block; the IPO itself is not contingent on the placement. Automatic termination includes failure to sign the underwriting agreement by 31 Jan 2027. Google's $10bn purchase reduces the Google 2026 NPA from $20bn to $10bn on close (V). Individual supplier commitments from Amendment 1 (Amazon ≥$110bn, Google CSP ≥~$121.3bn, SpaceXAI up to $120.5bn, Broadcom leases ~$161.2bn rent, Broadcom-related convertible note capacity up to $42bn) were recorded as V on 8 Nov; only the aggregate, Microsoft line and cancellable totals were re-stated as changed in the 10 Nov Amendment 2 check."
+      "notes": "Placement closes immediately after the IPO and is contingent on IPO closing, stockholder approval and no court block; the IPO itself is not contingent on the placement. Automatic termination includes failure to sign the underwriting agreement by 31 Jan 2027. Google's $10bn purchase reduces the Google 2026 NPA from $20bn to $10bn on close (V). Individual supplier commitments from Amendment 1 (Amazon ≥$110bn, Google CSP ≥~$121.3bn, SpaceXAI up to $120.5bn, Broadcom leases ~$161.2bn rent, Broadcom-related convertible note capacity up to $42bn) were recorded as V on 8 Nov; only the aggregate, Microsoft line and cancellable totals were re-stated as changed in the 10 Nov Amendment 2 check. Pricing update (20 Nov scan): the IPO priced at $83.00 on 18 Nov, above this range, and the $26.0bn Class N placement was confirmed at that price in the FWP and 424B4; see anthropic-ipo-pricing-2026-11-18. The $900.9bn commitment total is unchanged in the 424B4."
     },
     {
       "id": "softbank-openai-pl-q2fy2026",
@@ -2042,6 +2270,7 @@
     }
   ],
   "caveats": [
+    "20 Nov AM: full scan since 18 Nov 05:40 CET. Three items added (SoftBank 20 Nov Tokyo close; Anthropic 19 Nov debut plus loop sell-off; Anthropic 18 Nov IPO pricing) and the 18 Nov after-hours neocloud item updated with official 18 Nov regular-session closes. All US closes are from Nasdaq historical data (V); SoftBank 3,025 yen is the Yahoo historical Tokyo close after 07:30 CET (V); changes are (d). Anthropic pricing, share counts, net proceeds ($104.8bn / $117.0bn with option), Amazon 14.6% and Google 13.4% of outstanding capital stock, the $26.0bn placement split and the Google 2026 NPA reduction from $20.0bn to $10.0bn are V from the company release, FWP and 424B4. CNBC fully diluted market-cap figures (~$1.5tn at pricing, ~$1.8tn at the first close) are U and are not treated as V; the 424B4 does not define fully diluted market cap. A CNBC figure for SoftBank's 'invested' amount in OpenAI is not published here; SoftBank's last disclosed fair value remains $99.6bn (V, Q2). EDGAR through the morning of 20 Nov: no Nvidia Q3 FY27 10-Q; no CoreWeave 8-K on the reported ~$4bn Meta-secured loan; no Oracle 8-K after 4 Nov. No publishable dated CDS print after 13 Nov (U); unnamed-vendor model values are not used. ING data-centre loan bids were due 19 Nov; no results have been published (U). This scan was not independently checked by Recherche-Spezialist.",
     "18 Nov AM, updated after the independent check (~05:35 CET): Nvidia Q3 FY27 8-K (acc. 0001045810-26-000088, accepted 17 Nov 22:20 CET) figures hold and the Watch tier is unchanged; no errors found. Guarantees $118.0bn (V) include a new $9.5bn power-and-systems credit-support line whose counterparties and structure are not disclosed in the 8-K (U); the Q3 10-Q is not yet filed. The $32bn neocloud agreements are the same category formerly labelled 'AI cloud agreements' ($36bn at 26 Jul), so the comparison is valid (V, footnote); Q2's separate $20bn 'data center leases not commenced for third party' line is no longer shown separately in Q3. Commitments total $518bn (V), including supply $390bn (from $279bn) and cloud plus leases $102bn (from $74bn); the Q3 lease line of $74bn is not the same as last quarter's combined $74bn cloud-plus-leases figure. The $65.5bn figure is only the 'non-marketable securities' line, not all equity stakes. Two direct customers accounted for 18% and 17% of receivables (supplemental exhibit, V). Call quotes on staying 'disciplined and selective' and 'rigorously evaluating future investments, commitments, and guarantees' are V from a third-party transcript, not from the 8-K. After-hours last prices at ~01:59 CET (d, not closes): CRWV +9.0%, NBIS +11.2%, IREN +10.1%. The regular session of 18 Nov is the close that matters. Independently checked by Recherche-Spezialist.",
     "17 Nov AM, updated after the independent check (05:41 CET): the 3,204 yen / −6.21% SoftBank Group print is the Tokyo morning-session end (03:30 CET), not a close (U). The prior close of 3,416 yen on 16 Nov is V; the −6.21% change is (d). At 05:25 CET the share was 3,261 yen (−4.54%, d, U). Tokyo's regular session ends at 07:30 CET. Official 16 Nov US closes (Nasdaq/Yahoo historical, V): CoreWeave $49.88 (−6.12%, d) and Nvidia $156.14 (−4.12%, d). Earlier article-ticker snapshots that had been used as 16 Nov closes have been replaced with the historical closes. A previously cited Japanese price-page source returned 404 and has been removed. EDGAR since 16 Nov 16:17 CET: no 8-K/6-K at Nvidia, Oracle, CoreWeave or Nebius (V). No dated CDS print after 13 Nov is publishable (U); 16 Nov single-name figures for Oracle and Nvidia are unnamed-vendor model values, not prints, and are not published here. CoreWeave's reported ~$4bn Meta-secured loan still has no dated launch or pricing (U).",
     "16 Nov (added ~07:05 CET at Thomas's request): SoftBank's Q2 FY2026 documents (10 Nov) do not disclose OpenAI's own net income or loss for Jul–Sep 2026 or any other period, and SoftBank does not account for OpenAI under the equity method (FVTPL), so no 'SoftBank share' of OpenAI profit exists either. The only P/L figure is SoftBank's own investment gain/loss on OpenAI: none recorded for Apr–Sep 2026 because the valuation was held at the March 2026 level (V). A separate Jul–Sep line is not printed; the zero follows from the six-month statement. No OpenAI-level figure has been derived from SoftBank's stake, ownership (~13%) or fair value. The ~$50bn ARR is an OpenAI-sourced run-rate cited in SoftBank's deck, not audited revenue. The 30 Sep fair value predates OpenAI's reported current round and Anthropic's listing. The ARR figures on p.40 of the earnings presentation (~$50bn, July–September up 70%+) are V; the CFO's spoken wording is U because SoftBank published video only, with no official transcript. Independently checked by Recherche-Spezialist on 16 Nov (~16:19 CET).",
