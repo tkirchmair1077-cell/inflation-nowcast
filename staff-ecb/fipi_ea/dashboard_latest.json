@@ -27,9 +27,9 @@
     "n_months": 168,
     "momentum": {
       "variant": "D2X",
-      "rule": "D2X, 2M-Änderung, 1M-Beschleunigung",
-      "state": "fallend",
-      "stichtag_state": "fallend",
+      "rule": "D2X, 2-month change, 1-month acceleration",
+      "state": "falling",
+      "stichtag_state": "falling",
       "as_of_T": "2026-11-20",
       "as_of_month": "2026-11",
       "provisional": true,
@@ -191,7 +191,7 @@
       "name": "Global supply-chain pressure",
       "weight": "1/12",
       "publish": "intern_contrib",
-      "source": "intern – Rohwert nicht veröffentlicht (pending clearance)",
+      "source": "intern — raw value not published (pending clearance)",
       "href": null,
       "href_label": null,
       "href2": null,
@@ -329,7 +329,7 @@
       "link": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2023/html/ecb.is230504~f242392c72.en.html",
       "source_label": "Official ECB press conference transcript",
       "vu": "V",
-      "flag": "neutral/unklar"
+      "flag": "neutral/unclear"
     },
     {
       "date": "2023-03-06",
@@ -340,7 +340,7 @@
       "link": "https://www.ecb.europa.eu/press/key/date/2023/html/ecb.sp230306~57f17143da.en.html",
       "source_label": "Official ECB speech",
       "vu": "V",
-      "flag": "neutral/unklar"
+      "flag": "neutral/unclear"
     },
     {
       "date": "2022-07-21",
@@ -417,7 +417,7 @@
       "link": "https://www.ecb.europa.eu/press/inter/date/2021/html/ecb.in211129~da0141d2fa.en.html",
       "source_label": "Official ECB interview page",
       "vu": "V",
-      "flag": "neutral/unklar"
+      "flag": "neutral/unclear"
     },
     {
       "date": "2021-11-26",
@@ -439,7 +439,7 @@
       "link": "https://www.ecb.europa.eu/press/key/date/2021/html/ecb.sp211119~3749d3556c.en.html",
       "source_label": "Official ECB speech",
       "vu": "V",
-      "flag": "neutral/unklar"
+      "flag": "neutral/unclear"
     },
     {
       "date": "2021-10-28",
@@ -538,7 +538,7 @@
       "link": "https://www.ecb.europa.eu/press/accounts/2021/html/ecb.mg210709~8d7a056036.en.html",
       "source_label": "Official ECB monetary policy account",
       "vu": "V",
-      "flag": "neutral/unklar"
+      "flag": "neutral/unclear"
     },
     {
       "date": "2021-05-28",
@@ -589,6 +589,6 @@
     "hawkish": 19,
     "dovish": 7,
     "neutral": 2,
-    "neutral/unklar": 5
+    "neutral/unclear": 5
   }
 }

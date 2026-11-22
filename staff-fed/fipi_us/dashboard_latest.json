@@ -23,9 +23,9 @@
     "n_months": 135,
     "momentum": {
       "variant": "GAP3",
-      "rule": "GAP3, Abstand zum 3M-Durchschnitt",
-      "state": "steigend",
-      "stichtag_state": "steigend",
+      "rule": "GAP3, distance from the 3-month average",
+      "state": "rising",
+      "stichtag_state": "rising",
       "as_of_T": "2026-10-30",
       "as_of_month": "2026-10",
       "provisional": false,
