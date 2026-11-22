@@ -43,23 +43,25 @@
       "obs_date": "2026-09-01",
       "index": 132.257,
       "index_lag12": 127.601,
+      "index_quality": "V",
       "yoy": 3.649,
+      "yoy_quality": "(d)",
       "units": "Index 2017=100",
       "source": "BEA via FRED",
-      "construction": "100*(x_t/x_{t-12}-1) (d)",
-      "quality": "(d)"
+      "construction": "100*(x_t/x_{t-12}-1) (d)"
     },
     "core": {
       "series": "PCEPILFE",
       "obs_date": "2026-09-01",
       "index": 130.902,
       "index_lag12": 126.94,
+      "index_quality": "V",
       "yoy": 3.121,
+      "yoy_quality": "(d)",
       "units": "Index 2017=100",
       "source": "BEA via FRED",
-      "construction": "100*(x_t/x_{t-12}-1) (d)",
-      "quality": "(d)"
+      "construction": "100*(x_t/x_{t-12}-1) (d)"
     }
   },
-  "credit": "FIPI-US composite (V12R, fixed 2000–2019 baseline, H2), with US headline and core PCE. Composite built by us from public and licensed survey inputs; components not shown. Authors’ calculations (d). Headline and core PCE: BEA via FRED (PCEPI, PCEPILFE), 12-month change computed here (d). Last FIPI point 30 Oct 2026; last PCE month Sep 2026. Internal staff use."
+  "credit": "FIPI-US composite (V12R, fixed 2000–2019 baseline, H2), with US headline and core PCE. Composite built by us from public and licensed survey inputs; components not shown. Authors’ calculations (d). Headline and core PCE: BEA via FRED (PCEPI, PCEPILFE), 12-month change computed here (d). Last FIPI point 30 Oct 2026; last PCE month Sep 2026. Before Aug 2015 (EA: Dec 2012) the line is a different basket (L9 / EXK9), spliced without adjustment; the splice decision uses the 2015–2026 (EA: 2012–2026) overlap (ex post). The history is pseudo-real-time, not a real-time record. Join gap +0.216 is close to the 0.25 threshold. Internal staff use."
 }
