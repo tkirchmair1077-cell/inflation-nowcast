@@ -24,7 +24,22 @@
     "stichtag_value": 2.395,
     "stichtag_mom3": -0.125,
     "history_from": "2012-12-31",
-    "n_months": 168
+    "n_months": 168,
+    "momentum": {
+      "variant": "D2X",
+      "rule": "D2X, 2M-Änderung, 1M-Beschleunigung",
+      "state": "fallend",
+      "stichtag_state": "fallend",
+      "as_of_T": "2026-11-20",
+      "as_of_month": "2026-11",
+      "provisional": true,
+      "FIPI_fix": 2.401,
+      "stichtag_T": "2026-10-30",
+      "stichtag_FIPI_fix": 2.395,
+      "quality": "(d)",
+      "source": "FIPI-Momentum v1.1",
+      "h2_sha256": "8436db529e15b19326f40e3d80d4a9d2d09832cf9903adc15501ec3ad0ed2405"
+    }
   },
   "components": [
     {

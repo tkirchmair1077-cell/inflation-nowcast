@@ -10,8 +10,8 @@
   "title": "ECB Staff Desk — euro-area nowcast (19 Nov 2026)",
   "short_title": "ECB Staff Desk",
   "subtitle": "Euro area · staff-style research view · not the Governing Council and not ECB staff projections · public sources only · not investment advice",
-  "as_of": "2026-11-19T08:15:00+01:00",
-  "as_of_display": "19 Nov 2026, 08:15 Europe/Zurich",
+  "as_of": "2026-11-22T14:50:00+01:00",
+  "as_of_display": "22 Nov 2026, 14:50 Europe/Zurich",
   "timezone": "Europe/Zurich",
   "source": {
     "label": "ECB Staff Desk commentary, 19 Nov 2026",
@@ -22,7 +22,7 @@
     "status": "current",
     "dot": "green",
     "label": "Data refreshed 19 Nov 2026, 06:48 Europe/Zurich",
-    "banner": "<b>Data refreshed 19 Nov 2026, 06:48 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 19 Nov 2026, 08:15 Europe/Zurich.</span>",
+    "banner": "<b>Data refreshed 19 Nov 2026, 06:48 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 22 Nov 2026, 14:50 Europe/Zurich.</span>",
     "data_refreshed_at": "2026-11-19T06:48:32",
     "data_refreshed_display": "19 Nov 2026, 06:48 Europe/Zurich",
     "commentary_older_badge": ""
@@ -325,11 +325,12 @@
   ],
   "staff_hint": "Policy read unchanged versus 4 Nov. Staff view, not the Governing Council or ECB staff projections.",
   "staff_view": {
-    "lead": "Bottom line, 19 Nov: the data since 12 Nov confirm rather than change the picture. Q3 growth held at +0.4% q/q with flat employment, and October headline inflation was confirmed at 4.0% while core edged up to 2.6% without a services signal. The staff Q4 view (GDP +0.2–0.3% q/q; HICP about 3.8–3.9%, baseline still about 4.0) is unchanged.",
+    "lead": "Bottom line, 19 Nov: the data since 12 Nov confirm rather than change the picture. Q3 growth held at +0.4% q/q with flat employment, and October headline inflation was confirmed at 4.0% while core edged up to 2.6% without a services signal. The staff Q4 view (GDP +0.2–0.3% q/q; HICP about 3.8–3.9%, baseline still about 4.0) is unchanged. FIPI-EA remains in its high zone, but its momentum is falling (provisional, 20 Nov). This is a descriptive reading, not a forecast, and it does not change the staff Q4 view.",
     "bullets": [
       "Growth: Q3 +0.4% q/q confirmed at t+45 (V, 13 Nov), flattered by Ireland (ex-Ireland 0.21, d, flash levels). Staff Q4 +0.2–0.3 (own estimate).",
       "Labour: employment 0.0% q/q in Q3 (V), after +0.1% in Q2. Staff reading: cooling, not deteriorating.",
       "Inflation: October final HICP 4.0% (V) sits above the September MPE Q4 peak of 3.6. HICPX revised to 2.6% (V); services 3.3% and NEIG 1.2% unchanged, so the energy shock is not yet spreading.",
+      "FIPI-EA (staff inflation-pressure index, provisional, 20 Nov, d): level 2.401, in the high zone (threshold 0.5); momentum falling. Momentum uses the sign of the 2-month change (dead zone ±0.08; inside it the previous trend is kept) and of the 1-month change (dead zone ±0.05). The 3-month change is still slightly positive (+0.011, d), but the 2-month change (−0.027) is inside the dead zone, so the falling trend from September is carried over. Governing Council communication is classified hawkish in the staff's statement coding (d). Descriptive classification only, not a statistically significant forecast signal.",
       "Energy: Brent and TTF on 18 Nov were 3–5% below the 10 Nov references (U, delayed secondary), easing near-term upside to the Q4 view.",
       "Financial conditions: AAA 10y–3m spread about 0.78 pp (d) and CISS 0.0075 on 17 Nov (V): little changed, low stress.",
       "Wages and expectations: ECB wage tracker easing into 2027 (V, 6 Nov). CES September: 1y 3.1 / 3y 2.9 / 5y 2.5 (V). Q3 negotiated wages due 20 Nov."
@@ -419,7 +420,9 @@
     "The AAA 10y–3m spread is kept as a recession-risk indicator, not a growth lead (staff decision, 12 Nov 2026, 19:31 Europe/Zurich). The linear test versus mean GDP growth is a null: no usable lead, wrong sign at lag 0 (r=−0.145), out-of-sample RMSE ratios 1.10–1.20 (worse than an AR). A recession probit versus CEPR dates is not yet tested (n/a).",
     "The wage tracker, ESI and Indeed Hiring Lab posted-wage tracker are labelled coincident/diagnostic, not leading.",
     "FIPI-EA is an internal staff construction (d), source labelled intern. It is a lead indicator of possible ECB Governing Council concerns, not a rule or model. The statements screen is not a model. Values are from the frozen BASE definition of 20 Nov 2026, 20:13 Europe/Zurich; the latest point on 20 Nov 2026 is provisional. Not validated for an investment decision.",
-    "Historical gas data used in the FIPI-EA energy component are private/internal and are not published — no gas time series, chart or historical gas values are shown. The energy component's contribution is a derived figure (d)."
+    "Historical gas data used in the FIPI-EA energy component are private/internal and are not published — no gas time series, chart or historical gas values are shown. The energy component's contribution is a derived figure (d).",
+    "The global supply-chain pressure contribution is shown (d); the raw value is not published (intern – Rohwert nicht veröffentlicht, pending clearance).",
+    "FIPI-EA momentum is classified with the v1.1 rule D2X (2-month change × 1-month acceleration) as steigend, Bodenbildung, Topbildung or fallend. This is a descriptive classification (d), not a forecast signal. The 2020-01 to 2026-10 holdout test was not statistically significant (internal FIPI-Momentum v1.1, Auditor green, 22 Nov 2026). Inflation used in that study is the current vintage only (no real-time ALFRED vintages). The latest FIPI-EA point (20 Nov 2026) is provisional."
   ],
   "excluded": [
     {
@@ -574,8 +577,8 @@
   },
   "data_refresh": {
     "data_as_of": "2026-11-19",
-    "commentary_as_of": "19 Nov 2026, 08:15 Europe/Zurich",
-    "stamp": "Data refreshed 2026-11-19, commentary as of 19 Nov 2026, 08:15 Europe/Zurich",
+    "commentary_as_of": "22 Nov 2026, 14:50 Europe/Zurich",
+    "stamp": "Data refreshed 2026-11-19, commentary as of 22 Nov 2026, 14:50 Europe/Zurich",
     "latest": "ECB public leading charts redrawn 2026-11-13 07:03:13 Europe/Zurich; ecb:YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y last 2026-11-17=3.4245648137; ecb:YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_3M last 2026-11-17=2.6497488192; ecb:CISS.D.U2.Z0Z.4F.EC.SS_CIN.IDX last 2026-11-17=0.007497467741997772 (daily keys; leading charts not redrawn until the weekly panel is rebuilt)"
   }
 }
