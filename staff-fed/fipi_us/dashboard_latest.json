@@ -37,5 +37,29 @@
       "h2_sha256": "5941b557c6566af421850c3d40a86f07fb239f0af7a988f9acf3c458c4a2f184"
     }
   },
-  "credit": "FIPI-US composite (V12R, fixed 2000–2019 baseline, H2). Composite built by us from public and licensed survey inputs; components not shown. Authors’ calculations (d). Internal staff use."
+  "pce": {
+    "headline": {
+      "series": "PCEPI",
+      "obs_date": "2026-09-01",
+      "index": 132.257,
+      "index_lag12": 127.601,
+      "yoy": 3.649,
+      "units": "Index 2017=100",
+      "source": "BEA via FRED",
+      "construction": "100*(x_t/x_{t-12}-1) (d)",
+      "quality": "(d)"
+    },
+    "core": {
+      "series": "PCEPILFE",
+      "obs_date": "2026-09-01",
+      "index": 130.902,
+      "index_lag12": 126.94,
+      "yoy": 3.121,
+      "units": "Index 2017=100",
+      "source": "BEA via FRED",
+      "construction": "100*(x_t/x_{t-12}-1) (d)",
+      "quality": "(d)"
+    }
+  },
+  "credit": "FIPI-US composite (V12R, fixed 2000–2019 baseline, H2), with US headline and core PCE. Composite built by us from public and licensed survey inputs; components not shown. Authors’ calculations (d). Headline and core PCE: BEA via FRED (PCEPI, PCEPILFE), 12-month change computed here (d). Last FIPI point 30 Oct 2026; last PCE month Sep 2026. Internal staff use."
 }
