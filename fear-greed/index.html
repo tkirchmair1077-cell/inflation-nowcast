@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fear &amp; Greed Composite (research)</title>
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Staff Fear &amp; Greed composite for US risk appetite. Research only. Not investment advice.">
+<style>
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f9fafc; --border:#e2e7ee; --border-strong:#cfd7e2;
+  --text:#0f1c30; --text-2:#56657c; --text-3:#8391a6; --grid:#e8ecf2;
+  --navy:#14305a; --navy-ink:#ffffff; --accent:#2f5d9e;
+  --green:#2e8b5a; --green-bg:#e7f4ec; --red:#c4514c; --red-bg:#fbebea; --amber:#a9741a; --amber-bg:#fdf2d9; --neutral-bg:#eef1f5;
+  --shadow:0 1px 2px rgba(15,28,48,.04);
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#0a111e; --surface:#111a2b; --surface-2:#0e1626; --border:#223149; --border-strong:#2f4262;
+  --text:#e5ebf4; --text-2:#9aabc3; --text-3:#6f819b; --grid:#1d2a40;
+  --navy:#3d6cb3; --navy-ink:#ffffff; --accent:#7ba5e6;
+  --green:#4cc08a; --green-bg:#12301f; --red:#ec7b76; --red-bg:#3a1a1a; --amber:#e3b25a; --amber-bg:#33280f; --neutral-bg:#18233a;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+header.top{position:sticky;top:44px;z-index:20;background:var(--surface);border-bottom:1px solid var(--border)}
+.top-inner{display:flex;align-items:center;gap:20px;padding:14px 28px;max-width:1100px;margin:0 auto;flex-wrap:wrap}
+.brand{flex:1 1 260px;min-width:200px}
+.brand h1{margin:0;font-size:22px;font-weight:650;letter-spacing:-.01em;color:var(--text)}
+.brand .sub{color:var(--text-2);font-size:12.5px;margin-top:2px}
+.meta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:var(--text-2);font-size:12.5px}
+.meta .lbl{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)}
+.meta .val{color:var(--text);font-weight:550}
+.actions{margin-left:auto}
+.btn-ghost{background:transparent;border:1px solid var(--border-strong);color:var(--text);border-radius:8px;padding:6px 10px;font:inherit;font-size:12.5px;cursor:pointer}
+.btn-ghost:hover{background:var(--surface-2)}
+.banner{margin:0;padding:10px 28px;font-size:13px;line-height:1.45;border-bottom:1px solid var(--border)}
+.banner.warn{background:var(--amber-bg);color:var(--text);border-bottom-color:var(--amber)}
+main{padding:22px 0 48px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:28px 0 12px}
+.sec-head h2{margin:0;font-size:16px;font-weight:650;letter-spacing:-.01em}
+.sec-head .hint{color:var(--text-3);font-size:12px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.hero{display:grid;grid-template-columns:minmax(220px,280px) minmax(0,1fr);gap:22px;align-items:center}
+.gauge-wrap{text-align:center}
+.gauge-svg{width:100%;max-width:280px;height:auto}
+.g-val{font-size:44px;font-weight:650;letter-spacing:-.03em;line-height:1;color:var(--text)}
+.g-val small{font-size:16px;font-weight:550;color:var(--text-2);margin-left:2px}
+.g-lab{margin-top:6px;font-size:18px;font-weight:650}
+.g-lab.zone-efear,.pill.zone-efear{color:var(--red)}
+.g-lab.zone-fear,.pill.zone-fear{color:var(--amber)}
+.g-lab.zone-neutral,.pill.zone-neutral{color:var(--text-2)}
+.g-lab.zone-greed,.pill.zone-greed,.g-lab.zone-egreed,.pill.zone-egreed{color:var(--green)}
+.g-meta{margin-top:6px;font-size:12px;color:var(--text-3);line-height:1.45}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kpi{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:8px 11px}
+.kpi .l{display:block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);font-weight:600}
+.kpi .v{display:block;font-size:18px;font-weight:650;margin-top:2px;color:var(--text)}
+.kpi-date{font-size:11px;color:var(--text-3);font-weight:500;margin-top:2px}
+.pill{display:inline-block;font-size:11px;font-weight:650;margin-left:4px}
+.prose{font-size:13.5px;color:var(--text);line-height:1.6;max-width:800px}
+.prose p{margin:0 0 10px}
+.prose p:last-child{margin:0}
+.chart-card img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:#fff}
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{padding:7px 8px;border-bottom:1px solid var(--grid);text-align:left;vertical-align:top}
+th{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);font-weight:600;border-bottom:1px solid var(--border-strong)}
+td.num,th.num{text-align:right;white-space:nowrap}
+tbody th{color:var(--text);font-size:12.5px;letter-spacing:0;text-transform:none;font-weight:600;border-bottom:1px solid var(--grid)}
+.note{font-size:12px;color:var(--text-2);margin:8px 0 0;line-height:1.5}
+.like-note{margin:10px 0 0;font-size:12px;color:var(--text-2);line-height:1.5;max-width:100%}
+.like-flag{color:var(--amber);font-weight:600}
+footer{padding:0 0 40px}
+.caveat{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow)}
+.caveat h2{margin:0 0 8px;font-size:15px}
+.caveat ul{margin:0;padding:0 0 0 18px}
+.caveat li{margin:0 0 6px;font-size:12.5px;color:var(--text);line-height:1.5}
+.caveat li:last-child{margin:0}
+.fine{margin:10px 0 0;font-size:11.5px;color:var(--text-3)}
+@media (max-width:800px){
+  .wrap{padding:0 16px}
+  .top-inner{padding:12px 16px}
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g-val{font-size:36px}
+  .banner{padding:10px 16px}
+}
+</style>
+<style>#sitenav{position:sticky;top:0;z-index:9999;display:flex;flex-wrap:nowrap;align-items:center;gap:6px;height:44px;box-sizing:border-box;padding:0 12px;overflow-x:auto;scrollbar-width:none;background:rgba(15,23,42,.96);backdrop-filter:blur(4px);border-bottom:1px solid #334155;font:600 13px/1.2 system-ui,-apple-system,Segoe UI,sans-serif}#sitenav a{color:#e2e8f0;text-decoration:none;white-space:nowrap;flex:0 0 auto;padding:5px 12px;border-radius:999px;border:1px solid #475569}#sitenav a:hover{background:#1e293b}#sitenav a.active{background:#e2e8f0;color:#0f172a;border-color:#e2e8f0}</style>
+</head>
+<body>
+<nav id="sitenav" aria-label="Pages"><a href="/inflation-nowcast/">Nowcasts</a><a href="/inflation-nowcast/staff/">Staff</a><a href="/inflation-nowcast/staff-fed/">Fed</a><a href="/inflation-nowcast/staff-ecb/">ECB</a><a href="/inflation-nowcast/staff-snb/">SNB</a><a href="/inflation-nowcast/ai-token/">AI / Token</a><a href="/inflation-nowcast/fear-greed/" class="active" aria-current="page">Fear &amp; Greed</a></nav>
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <h1>Fear &amp; Greed Composite</h1>
+      <div class="sub">Research dashboard · derived staff construction · not investment advice</div>
+    </div>
+    <div class="meta">
+      <div><span class="lbl">US close as of</span><span class="val">20 Nov 2026</span></div>
+      <div><span class="lbl">Retrieved</span><span class="val">23 Nov 2026 14:55 Europe/Zurich</span></div>
+      <div><span class="lbl">Components</span><span class="val">4 of 5 live</span></div>
+    </div>
+    <div class="actions">
+      <button class="btn-ghost" id="themeBtn" type="button" aria-label="Toggle dark mode">◐ <span id="themeLbl">Dark</span></button>
+    </div>
+  </div>
+</header>
+<div class="banner warn" role="status">As of the US cash close on 20 Nov 2026. The 23 Nov 2026 session had not closed at retrieval (23 Nov 2026 14:55 Europe/Zurich). The high-yield component for 20 Nov 2026 was not yet published and is omitted (4 of 5 live components). Official FRED closes for VIX and the S&amp;P 500 run through 19 Nov 2026; the 20 Nov point uses the Yahoo close after an overlap check.</div>
+<main class="wrap">
+  <section aria-labelledby="hCurrent">
+    <div class="sec-head"><h2 id="hCurrent">1 · Current reading</h2><span class="hint">Equal-weighted composite, 0–100</span></div>
+    <article class="card">
+      <div class="hero">
+        <div class="gauge-wrap">
+          <svg class="gauge-svg" viewBox="-18 8 316 170" role="img" aria-label="Composite 31.6, Fear">
+  <path d="M 32.00 132.00 A 108.00 108.00 0 1 1 248.00 132.00" fill="none" stroke="#e2e7ee" stroke-width="16" stroke-linecap="butt"/>
+  <path d="M 32.00 132.00 A 108.00 108.00 0 0 1 63.63 55.63" fill="none" stroke="#c4514c" stroke-width="16" stroke-linecap="butt"/><path d="M 63.63 55.63 A 108.00 108.00 0 0 1 123.11 25.33" fill="none" stroke="#a9741a" stroke-width="16" stroke-linecap="butt"/><path d="M 123.11 25.33 A 108.00 108.00 0 0 1 156.89 25.33" fill="none" stroke="#8a96a8" stroke-width="16" stroke-linecap="butt"/><path d="M 156.89 25.33 A 108.00 108.00 0 0 1 216.37 55.63" fill="none" stroke="#5aa37a" stroke-width="16" stroke-linecap="butt"/><path d="M 216.37 55.63 A 108.00 108.00 0 0 1 248.00 132.00" fill="none" stroke="#2e8b5a" stroke-width="16" stroke-linecap="butt"/>
+  <line x1="140.00" y1="132.00" x2="86.45" y2="49.92" stroke="#14305a" stroke-width="3.2" stroke-linecap="round"/><circle cx="140.00" cy="132.00" r="5.5" fill="#14305a"/>
+  <text x="14.0" y="132.0" text-anchor="middle" dominant-baseline="middle" fill="#8391a6" font-size="9">0</text><text x="52.3" y="44.3" text-anchor="middle" dominant-baseline="middle" fill="#8391a6" font-size="9">25</text><text x="120.6" y="9.5" text-anchor="middle" dominant-baseline="middle" fill="#8391a6" font-size="9">45</text><text x="159.4" y="9.5" text-anchor="middle" dominant-baseline="middle" fill="#8391a6" font-size="9">55</text><text x="227.7" y="44.3" text-anchor="middle" dominant-baseline="middle" fill="#8391a6" font-size="9">75</text><text x="266.0" y="132.0" text-anchor="middle" dominant-baseline="middle" fill="#8391a6" font-size="9">100</text>
+</svg>
+          <div class="g-val">31.6<small>/100</small></div>
+          <div class="g-lab zone-fear">Fear</div>
+          <div class="g-meta">+4.5 vs previous close (27.0 on 19 Nov 2026) · 252-session percentile 10.3</div>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><span class="l">Previous close</span><span class="v">27.0 <span class="pill zone-fear">Fear</span><div class="kpi-date">19 Nov 2026</div><div class="kpi-date like-flag">Not like-for-like</div></span></div>
+          <div class="kpi"><span class="l">1 week</span><span class="v">44.0 <span class="pill zone-fear">Fear</span><div class="kpi-date">13 Nov 2026</div><div class="kpi-date like-flag">Not like-for-like</div></span></div>
+          <div class="kpi"><span class="l">1 month</span><span class="v">42.8 <span class="pill zone-fear">Fear</span><div class="kpi-date">21 Oct 2026</div><div class="kpi-date like-flag">Not like-for-like</div></span></div>
+          <div class="kpi"><span class="l">1 year</span><span class="v">23.8 <span class="pill zone-efear">Extreme Fear</span><div class="kpi-date">20 Nov 2025</div></span></div>
+          <div class="kpi"><span class="l">252-session percentile</span><span class="v">10.3</span><div class="kpi-date">Mid-rank percentile over the last 252 sessions</div></div>
+          <div class="kpi"><span class="l">252-session range</span><span class="v">21.0 – 81.6</span><div class="kpi-date">Low 20 Mar 2026 · high 28 May 2026</div></div>
+        </div>
+      </div>
+      <p class="note like-note">Not like-for-like: 19 Nov, 13 Nov and 21 Oct include the high-yield component; 20 Nov does not.</p>
+    </article>
+  </section>
+
+  <section aria-labelledby="hComp">
+    <div class="sec-head"><h2 id="hComp">2 · Component scores</h2><span class="hint">Displayed components only</span></div>
+    <article class="card">
+      <div class="tblwrap">
+        <table>
+          <thead><tr><th>Component</th><th class="num">Score</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">VIX (inverted)</th><td>0.4</td><td>252-day percentile of the VIX close, inverted so a high VIX is a low score.</td></tr>
+<tr><th scope="row">% vs 50-day average</th><td>0.0</td><td>S&amp;P 500 distance to its own 50-session average, as a 252-day percentile. This is not market breadth.</td></tr>
+<tr><th scope="row">Momentum (monthly RSI)</th><td>54.0</td><td>14-period Wilder RSI on monthly S&amp;P 500 closes, including the current month-to-date close. Already 0–100; not re-percentiled.</td></tr>
+<tr><th scope="row">Risk appetite (IWM vs SPY)</th><td>71.8</td><td>20-session return of IWM minus SPY, as a 252-day percentile.</td></tr>
+<tr><th scope="row">High-yield credit (z-score, inverted)</th><td>Not displayed</td><td>Included in the composite when the input is available. The raw spread and this component score are third-party licensed via FRED and are not shown. Missing on 20 Nov 2026 (last published 19 Nov; not forward-filled).</td></tr>
+<tr><th scope="row">ETF put/call (inverted)</th><td>Excluded</td><td>Permanently excluded: no free Cboe ETF put/call history was available when the method was frozen on 22 Nov 2026.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The published composite is a derived equal-weighted mean of the components available on that day. A licensed high-yield credit component is included when it is available, but neither its score series nor the underlying spread is shown. ETF put/call is permanently out of the basket. On 20 Nov 2026 the mean uses 4 of 5 live components.</p>
+    </article>
+  </section>
+
+  <section aria-labelledby="hHist">
+    <div class="sec-head"><h2 id="hHist">3 · History</h2><span class="hint">Derived composite only · licensed component scores are not plotted</span></div>
+    <article class="card chart-card">
+      <img src="charts/composite_history.png" alt="History of the derived Fear and Greed composite from 28 Dec 1990 to 20 Nov 2026, with Extreme Fear to Extreme Greed bands." width="1792" height="664">
+      <p class="note">Daily equal-weighted composite from 28 Dec 1990 to 20 Nov 2026 (9,037 sessions with a valid reading). The high-yield component enters the average only on recent dates, once its 756-session z-score window can be computed from the short public sample; it is missing on 20 Nov 2026. The first 2,646 sessions (28 Dec 1990 to 22 Jun 2001) have only three components. Sample range: 4.2 (19 Nov 2008) to 95.2 (13 Dec 1995).</p>
+    </article>
+  </section>
+
+  <section aria-labelledby="hMethod">
+    <div class="sec-head"><h2 id="hMethod">4 · Method, in brief</h2><span class="hint">Frozen on 22 Nov 2026, before the first evaluation</span></div>
+    <article class="card prose">
+      <p>The composite is the equal-weighted mean of the component scores available on a given session, scaled 0–100. Missing inputs are omitted, not filled forward. The composite is computed only when at least three components are present. This is a staff construction that uses the usual Extreme Fear / Fear / Neutral / Greed / Extreme Greed labels (0–25, 25–45, 45–55, 55–75, 75–100). It is not the CNN Fear &amp; Greed Index and is not affiliated with CNN.</p>
+      <p>VIX and the distance to the 50-day average are mapped with a 252-session mid-rank percentile (VIX inverted). Monthly RSI is used as is. Risk appetite is the 20-session return gap between IWM and SPY, also as a 252-session percentile. The high-yield component, when present, is an inverted z-score (756-session window) of a licensed credit spread; it is included in the composite but is not published here. Thresholds, sample split and trading rules were written down before any backtest was run and were not recalibrated afterwards.</p>
+    </article>
+  </section>
+
+  <section aria-labelledby="hBt">
+    <div class="sec-head"><h2 id="hBt">5 · What the backtests show</h2><span class="hint">Holdout from 1 Jan 2019 · backtests run 22 Nov 2026, data to 20 Nov 2026</span></div>
+    <article class="card">
+      <div class="prose">
+        <p><b>No statistically significant edge</b> for the predeclared trading rules: buy when the composite leaves Extreme Fear and measure the next 21 sessions; sell when it leaves Extreme Greed and measure the next 63 sessions. Signals use the close on day t, with a fictitious fill on the next close. The S&amp;P 500 price index is used (no dividends). In-sample ends 31 Dec 2018; the holdout starts 1 Jan 2019 and was not used to set thresholds. Backtests were run on 22 Nov 2026, on data through 20 Nov 2026.</p>
+        <p>Holdout, leave-Extreme-Fear <b>buy / 1 month</b>: 10 signals (9 Apr 2020 to 17 Mar 2026), hit ratio 70.0% against a 68.3% base rate (bootstrap p = 0.657); mean price return +3.0% against +1.3% (p vs base = 0.133). Holdout, leave-Extreme-Greed <b>sell / 3 months</b>: 22 signals (25 Feb 2019 to 29 May 2026). The sell hit ratio is the share of windows with a negative price return: 27.3% against 24.0% (p = 0.734). The mean 63-session return after those signals was still +2.8%, versus +3.7% unconditionally (p = 0.279).</p>
+        <p>A second, also predeclared, test treats an <b>entry into Extreme Fear</b> (composite crossing below 25) as a portfolio filter on 3-month and 6-month horizons, on the S&amp;P 500 price index and on an investment-grade credit excess-return approximation (licensed source; raw series not shown). Holdout results for the official threshold, with no trend filter:</p>
+      </div>
+      <div class="tblwrap" style="margin-top:12px">
+        <table>
+          <thead>
+            <tr>
+              <th>Asset</th>
+              <th>Horizon</th>
+              <th class="num">n</th>
+              <th class="num">n eff.</th>
+              <th class="num">Hit</th>
+              <th class="num">Base</th>
+              <th class="num">p hit</th>
+              <th class="num">Mean</th>
+              <th class="num">Base mean</th>
+              <th class="num">p vs base</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>S&P 500 price index</td><td>3 months (63 sessions)</td><td class="num">11</td><td class="num">8.6</td><td class="num">81.8%</td><td class="num">76.0%</td><td class="num">0.627</td><td class="num">+6.9%</td><td class="num">+3.7%</td><td class="num">0.077</td></tr>
+<tr><td>S&P 500 price index</td><td>6 months (126 sessions)</td><td class="num">11</td><td class="num">6.8</td><td class="num">72.7%</td><td class="num">78.4%</td><td class="num">0.779</td><td class="num">+10.0%</td><td class="num">+7.5%</td><td class="num">0.510</td></tr>
+<tr><td>IG credit excess-return approximation</td><td>3 months (63 sessions)</td><td class="num">11</td><td class="num">8.6</td><td class="num">54.5%</td><td class="num">74.9%</td><td class="num">0.063</td><td class="num">+0.6%</td><td class="num">+0.7%</td><td class="num">0.730</td></tr>
+<tr><td>IG credit excess-return approximation</td><td>6 months (126 sessions)</td><td class="num">11</td><td class="num">6.8</td><td class="num">63.6%</td><td class="num">77.0%</td><td class="num">0.376</td><td class="num">+1.4%</td><td class="num">+1.4%</td><td class="num">0.895</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Hit ratio is the share of signals with a positive forward return. p-values are two-sided stationary block-bootstrap tests (2,000 replications, seed 20261122) against the unconditional base rate in the same holdout window. n effective accounts for overlapping forward windows. None of these four official-threshold tests survives Holm–Bonferroni correction in the predeclared primary family (adjusted p = 1.00, 1.00, 0.819 and 1.00). An approximate White reality check on that family has p = 1.00. Inner thresholds at 20 and 15 produced some formal Holm survivors, but each had fewer than 10 holdout signals and is marked not interpretable. Use the composite as a <b>portfolio filter</b>, not as a trading signal.</p>
+    </article>
+  </section>
+</main>
+<footer class="wrap">
+  <div class="caveat" id="caveat">
+    <h2>Datenlage und Quellen – Vorbehalte</h2>
+    <ul>
+      <li><b>As of.</b> Composite 31.6 (Fear) at the US cash close on 20 Nov 2026. Retrieved 23 Nov 2026 14:55 Europe/Zurich. The 23 Nov 2026 US cash session had not closed; an incomplete Yahoo VIX bar for that date was dropped.</li>
+      <li><b>Sources and lags.</b> VIX: FRED VIXCLS as the primary series, with one Yahoo VIX tail day after 19 Nov 2026 (overlap on 19 Nov, relative difference 1.88×10⁻⁸). S&amp;P 500: Yahoo ^GSPC for the latest close; FRED SP500 last official value 19 Nov 2026. IWM and SPY from Yahoo. A licensed high-yield credit spread via FRED is used in the composite when published; it was last available on 19 Nov 2026 and was not filled forward, so 20 Nov 2026 uses 4 of 5 live components. Official FRED VIX and S&amp;P 500 closes also lag the as-of date by one session.</li>
+      <li><b>Licensing.</b> The published number is a derived equal-weighted composite and is marked as such. Raw levels and the score series of the licensed high-yield component are not shown. The investment-grade excess-return backtest uses a licensed corporate spread series; that raw series is not shown. ETF put/call is permanently excluded because no free history was available at the 22 Nov 2026 method freeze.</li>
+      <li><b>Returns.</b> Backtests use the S&amp;P 500 price index, so long returns omit dividends (typically about 0.1–0.2 percentage points per month, or roughly 0.6–2.0 points over the 3- and 6-month horizons). The credit test is an approximation with a fixed duration of 7, not an official index excess return; convexity, defaults and financing costs are not modelled. Results are gross of transaction costs.</li>
+      <li><b>Comparisons.</b> Previous-close, 1-week, 1-month and 1-year readings are the official composites for those sessions. When the mix of components differs from the as-of date, that is noted. Alternative same-basket values are not published, because they could be used to recover a licensed component score.</li>
+      <li><b>Inference.</b> Forward windows overlap, so raw n overstates independent cases; n effective is also shown. Holdout samples are small (10 buy signals; 11 Extreme Fear entries). A price-return backtest is not a trading recommendation.</li>
+      <li><b>Quality.</b> Research construction. Not investment advice, not a trading signal, and not an official index.</li>
+    </ul>
+    <p class="fine">Times are Europe/Zurich unless a US close is named. Method frozen in the internal specification dated 22 Nov 2026, before evaluation. This page does not generate or randomise numbers.</p>
+  </div>
+</footer>
+<script>
+function setTheme(t,persist){
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeLbl').textContent=t==='dark'?'Light':'Dark';
+  if(persist){try{localStorage.setItem('nowcast-theme',t)}catch(e){}}
+}
+(function(){
+  var t='light';
+  try{t=localStorage.getItem('nowcast-theme')||'light'}catch(e){}
+  setTheme(t,false);
+  document.getElementById('themeBtn').addEventListener('click',function(){
+    setTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark',true);
+  });
+})();
+</script>
+</body>
+</html>
