@@ -21,10 +21,10 @@
   "freshness": {
     "status": "stale",
     "dot": "amber",
-    "label": "Data refreshed 23 Nov 2026, 07:30 Europe/Zurich",
-    "banner": "<b>Data refreshed 23 Nov 2026, 07:30 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 8 Nov 2026, 09:00 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 8 Nov</span> This page has not been updated since then. Q3 and September GDP were scheduled for 12 Nov, 08:00 CET; labour-market data are due 17 Nov and October CPI on 18 Nov.",
-    "data_refreshed_at": "2026-11-23T07:30:52",
-    "data_refreshed_display": "23 Nov 2026, 07:30 Europe/Zurich",
+    "label": "Data refreshed 23 Nov 2026, 07:55 Europe/Zurich",
+    "banner": "<b>Data refreshed 23 Nov 2026, 07:55 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 8 Nov 2026, 09:00 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 8 Nov</span> This page has not been updated since then. Q3 and September GDP were scheduled for 12 Nov, 08:00 CET; labour-market data are due 17 Nov and October CPI on 18 Nov.",
+    "data_refreshed_at": "2026-11-23T07:55:24",
+    "data_refreshed_display": "23 Nov 2026, 07:55 Europe/Zurich",
     "commentary_older_badge": "Commentary older than data – as of 8 Nov"
   },
   "summary": {
@@ -394,6 +394,6 @@
     "data_as_of": "2026-11-23",
     "commentary_as_of": "8 Nov 2026, 09:00 Europe/Zurich",
     "stamp": "Data refreshed 2026-11-23, commentary as of 8 Nov 2026, 09:00 Europe/Zurich",
-    "latest": "IHYQ Q3 0.7 (vintage 2026-11-12, date 2026-09-30); ECYX Sep 0.2 (vintage 2026-11-12, date 2026-09-01); MGSX July to September 2026 4.6 (vintage 2026-11-17, row 2026 AUG); boe:MGSX last 2026-08-01=4.6"
+    "latest": "IHYQ Q3 0.7 (vintage 2026-11-12, date 2026-09-30); ECYX Sep 0.2 (vintage 2026-11-12, date 2026-09-01); MGSX July to September 2026 4.6 (vintage 2026-11-17, row 2026 AUG); boe:MGSX last 2026-08-01=4.6; ons:D7G7 last 2026-10-01=3.6"
   }
 }
