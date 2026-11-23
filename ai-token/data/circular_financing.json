@@ -5,16 +5,27 @@
     "name": "AI Circular Financing Alert Bot",
     "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
   },
-  "as_of": "2026-11-20T09:50:00+01:00",
+  "as_of": "2026-11-23T05:50:00+01:00",
   "timezone": "Europe/Zurich",
   "title": "Circular Financing Watch, as of Fri 20 Nov 2026 ~09:50 Europe/Zurich",
   "status": {
-    "current_user_alert": "Watch (20 Nov): SoftBank Group closed −14.48% in Tokyo. Watch (18 Nov): Nvidia guarantees $118.0bn, DSO 64 days, $1.8bn private-stake impairment. The 12 Nov Elevated alert (Nvidia CEO resignation + neocloud guidance) stands.",
-    "current_user_alert_as_of": "2026-11-20T09:50:00+01:00",
-    "summary": "Morning scan 20 Nov: three material items added and one 18 Nov market-reaction item updated with official closes. Anthropic priced at $83.00 in an $81.34bn offering plus a $26.0bn supplier placement; estimated combined net proceeds of IPO and Class N placement $104.8bn (IPO alone $78.84bn gross) (V, company, FWP, 424B4). ANT closed $97.17 on 19 Nov, +17.1% vs the IPO price (V, Nasdaq historical; change d), while Nvidia, CoreWeave, Nebius and Oracle fell in the same session (V). The 18 Nov regular session reversed the after-hours bounce in CoreWeave and Iren (V). SoftBank closed 3,025 yen, −14.48% (V, Yahoo historical after 07:30 CET; change d). The 12 Nov Elevated alert and the 18 Nov Nvidia Watch stand. No 10-Q, no dated CDS print after 13 Nov, no CoreWeave ~$4bn loan pricing, and no published ING auction results (U).",
-    "last_scan": "2026-11-20T09:50:00+01:00",
+    "current_user_alert": "Elevated (20 Nov, reaffirmed and updated): loop-wide sell-off (NVDA −14.0%, NBIS −16.1%, CRWV −12.0% below its IPO price, ORCL −8.5%, V) with reported CoreWeave and Oracle CDS widening (U), plus Oracle’s statement that its OpenAI contract is fully funded including vendor financing (V). Watch (20 Nov) SoftBank and Watch (18 Nov) Nvidia stand.",
+    "current_user_alert_as_of": "2026-11-22T05:55:00+01:00",
+    "summary": "Morning scan 22 Nov (weekend; covers 20 Nov US session and statements after the close). Two items added: the 20 Nov loop-wide sell-off with reported credit widening, and Oracle’s funding statement. Independent check pending.",
+    "last_scan": "2026-11-22T05:55:00+01:00",
     "last_independent_check": "2026-11-21T08:00:00+01:00",
     "outstanding_watches": [
+      {
+        "date": "2026-11-20",
+        "session": "AM 22 Nov",
+        "tier": "Elevated",
+        "node": "Nvidia / neoclouds / Oracle / Anthropic",
+        "headline": "Loop-wide sell-off on 20 Nov: Nvidia −14.0%, Nebius −16.1%, CoreWeave −12.0% to $39.51 (below its $40 IPO price), Oracle −8.5%; CoreWeave 5y CDS reported up to about 1,233bp",
+        "quality": "V/U",
+        "note": "Closes V (Yahoo historical); CDS and bond levels U (press citing ICE and TRACE, intraday). Oracle statement V. Critical not met (no verified OpenAI funding friction). Recherche-Spezialist check pending.",
+        "tone": "negative",
+        "tone_source": "bot"
+      },
       {
         "date": "2026-11-20",
         "session": "AM",
@@ -139,11 +150,153 @@
     ]
   },
   "summary": {
-    "text": "Anthropic priced its IPO at $83.00 on 18 Nov, selling 980 million Class A shares in an $81.34bn offering and a concurrent $26.0bn Class N placement at the same price to Google, Nvidia, AMD, Broadcom, Micron, Microsoft and TSMC; combined net proceeds to Anthropic from the IPO and the Class N placement are estimated at $104.8bn (IPO alone $78.84bn gross), or $117.0bn if the 30-day option is exercised in full, and the Google 2026 NPA amount falls from $20.0bn to $10.0bn (424B4 wording; effective only at closing of the private placement, closing not yet verified) when the $10.0bn placement closes (V, company release, FWP and 424B4). After the offering and placement Amazon and Google will hold 14.6% and 13.4% of outstanding capital stock, all in non-voting Class N (V, 424B4). ANT opened at $111.50 on 19 Nov and closed at $97.17, 17.1% above the IPO price (V, Nasdaq historical; change is d), but the same session did not lift the loop: Nvidia closed $145.98 (−3.30%), CoreWeave $44.91 (−6.10%), Nebius $96.92 (−9.39%) and Oracle $110.57 (−2.92%), after an 18 Nov regular session that reversed the after-hours bounce in CoreWeave and Iren (CRWV $47.83, −4.13%; NVDA $150.96, −2.89%) (V, Nasdaq historical; changes d). SoftBank Group closed at 3,025 yen on 20 Nov, −14.48%, after the Tokyo regular session ended at 07:30 CET (V, Yahoo historical; change d). The 12 Nov Elevated alert and the 18 Nov Nvidia Watch still stand; Nvidia's Q3 10-Q is not filed, so the counterparties on the new $9.5bn guarantee line remain undisclosed (U). No publishable dated CDS print after 13 Nov was found, CoreWeave's reported ~$4bn Meta-secured loan still has no dated launch or pricing, and no results have been published for the ING data-centre loan auction that had bids due 19 Nov (U).",
-    "as_of": "2026-11-20T09:50:00+01:00",
-    "source": "AI Alert on-demand scan 20 Nov 2026 (~09:50 Europe/Zurich); Anthropic company release 18 Nov, SEC FWP 18 Nov and 424B4 19 Nov; Nasdaq historical closes 18–19 Nov; Yahoo historical Tokyo closes 19–20 Nov; CNBC 18–20 Nov for event context only. Independently checked by Recherche-Spezialist on 21 Nov (no discrepancies; two wording precisions applied)."
+    "as_of": "2026-11-23T05:50:00+01:00",
+    "text": "On 20 Nov the loop sold off together: Nvidia closed at $125.53 (−14.0%), Nebius $81.31 (−16.1%), CoreWeave $39.51 (−12.0%, below its $40 IPO price) and Oracle $101.19 (−8.5%) (V, Yahoo historical; changes d). CoreWeave five-year CDS was reported at about 1,233bp and Oracle’s at 327.9bp early in the session, with higher intraday levels later (about 1,257bp and 341.5bp) (U, press citing ICE Data Services; no closing print). After the close Oracle said its OpenAI contract is fully funded after its $20bn November raise and that vendor financing is in place, without naming amounts or counterparties (V, Oracle statement). Anthropic closed at $88.91, down 8.5% on the day but 7.1% above its $83 IPO price (V; changes d). The 12 Nov Elevated alert stands; Critical is not met because there is no verified OpenAI funding friction and no verified closing CDS print (U). The 23 Nov morning scan found no new issuer filing, rating action or verified market print on the priority nodes over the 21–22 Nov weekend, so the alert is unchanged pending Monday’s US session (V, scan of issuer sites and news).",
+    "source": "AI Alert morning scan 23 Nov 2026 (~05:50 Europe/Zurich), carrying forward the 22 Nov scan: Yahoo historical closes 19–20 Nov; Oracle statement 20 Nov and 8-K 4 Nov; Reuters 20 Nov; press reports citing ICE Data Services and TRACE 20 Nov. 22 Nov figures independently checked by Recherche-Spezialist on 22 Nov 2026; the 23 Nov no-change finding was independently checked by Recherche-Spezialist on 23 Nov 2026."
   },
   "items": [
+    {
+      "id": "oracle-openai-funding-statement-2026-11-20",
+      "node": "Oracle / OpenAI (project funding, vendor financing)",
+      "type": "issuer_statement",
+      "title": "Oracle says its OpenAI contract is fully funded, with vendor financing “in place”, and pre-emptively rejects contrary media reports",
+      "as_of": "2026-11-20",
+      "event_time": "2026-11-20T23:01:00+01:00",
+      "tier_relevance": "Part of the 20 Nov Elevated update (Oracle node). Issuer statement (V) published one minute after the US close; it reduces stated funding risk but confirms that vendor financing is part of the OpenAI build-out funding, with counterparties and amounts undisclosed (opacity).",
+      "tone": "neutral",
+      "tone_source": "bot",
+      "relationship": "Oracle builds OpenAI capacity with Nvidia systems; vendor financing means a supplier funds part of the build that generates its own revenue. Oracle says further vendor talks are optional. Earlier analyst and press reports that Nvidia may guarantee or backstop Oracle data-centre leases are unconfirmed by either company (U).",
+      "counterparties": [
+        "Oracle",
+        "OpenAI",
+        "Nvidia"
+      ],
+      "figures": [
+        {
+          "label": "Capital raise completed 4 Nov",
+          "value": "20.0",
+          "unit": "USD bn",
+          "quality": "V",
+          "note": "$10bn common stock (86,206,897 shares) and $10bn senior notes, 7.000%–8.650% coupons, 2029–2046 (8-K, 4 Nov). Already on the feed."
+        },
+        {
+          "label": "FY2029 free cash flow target",
+          "value": ">30",
+          "unit": "USD bn",
+          "quality": "V",
+          "note": "Oracle statement 20 Nov; positive FCF still expected in 2H FY2028; self-funding from FY2029."
+        },
+        {
+          "label": "Vendor financing amount and counterparties",
+          "value": "undisclosed",
+          "unit": "",
+          "quality": "U",
+          "note": "The statement says vendor financing outlined at Investor Day is in place but gives no amount or counterparty."
+        }
+      ],
+      "links": [
+        "https://www.oracle.com/news/announcement/oracle-statement-2026-11-20/",
+        "https://www.sec.gov/Archives/edgar/data/1341439/000119312526447507/d131790d8k.htm",
+        "https://www.investing.com/news/stock-market-news/oracle-says-openai-infrastructure-deal-is-fully-funded-after-final-capital-raise-5042771"
+      ],
+      "notes": "Statement dated Austin, 20 Nov 2026; Reuters timestamp 17:11 ET. No Oracle 8-K after 4 Nov found in this scan. Watch for the media reports the statement anticipates. Independent check 22 Nov: statement wording and the 8-K raise confirmed (V); Investor Day materials and the latest 10-Q name no vendor-financing amount or counterparty; no contrary media report found on the open web as of 22 Nov (U). An Nvidia backstop of Oracle leases is not in any primary filing (U)."
+    },
+    {
+      "id": "ai-selloff-credit-widening-2026-11-20",
+      "node": "Nvidia / neoclouds (CoreWeave, Nebius) / Oracle / Anthropic (equity marks and credit)",
+      "type": "market_reaction",
+      "title": "Loop-wide sell-off on 20 Nov: Nvidia −14.0%, Nebius −16.1%, CoreWeave −12.0% to $39.51 (below its $40 IPO price), Oracle −8.5%; CoreWeave 5y CDS reported up to about 1,233bp",
+      "as_of": "2026-11-20",
+      "event_time": "2026-11-20T22:00:00+01:00",
+      "tier_relevance": "Elevated (reaffirmed and materially updated). Same-day equity moves across four loop nodes (V, official closes) with reported credit-market confirmation at CoreWeave and Oracle (U: intraday CDS levels reported by the press citing ICE Data Services; not closing prints we verified). Critical is not met: there is no verified OpenAI funding friction, and the CDS levels are not verified closes. Independently checked by Recherche-Spezialist on 22 Nov (closes V; CDS levels correctly transcribed but intraday, no closing print found).",
+      "tone": "negative",
+      "tone_source": "bot",
+      "relationship": "The suppliers (Nvidia, AMD, Broadcom), the neocloud customers they finance or backstop (CoreWeave, Nebius), Oracle (OpenAI capacity) and the newly listed Anthropic all fell in the same session. Equity marks on supplier stakes fall together with the customers’ ability to raise new equity, and wider CoreWeave CDS raises the cost of the debt that funds GPU purchases. That is the self-reinforcing direction of endogenous demand.",
+      "counterparties": [
+        "Nvidia",
+        "CoreWeave",
+        "Nebius",
+        "Oracle",
+        "Anthropic",
+        "AMD",
+        "Broadcom",
+        "Microsoft"
+      ],
+      "figures": [
+        {
+          "label": "Nvidia (NVDA) close, 20 Nov",
+          "value": "125.53",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical daily close; −14.01% vs $145.98 on 19 Nov (d). Press attributed part of the move to a rumour about the former CEO that was later reported as false (U)."
+        },
+        {
+          "label": "CoreWeave (CRWV) close, 20 Nov",
+          "value": "39.51",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; −12.02% vs $44.91 (d); 1.2% below the $40.00 IPO price of March 2025 (d)."
+        },
+        {
+          "label": "Nebius (NBIS) close, 20 Nov",
+          "value": "81.31",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; −16.11% vs $96.92 (d)."
+        },
+        {
+          "label": "Oracle (ORCL) close, 20 Nov",
+          "value": "101.19",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; −8.48% vs $110.57 (d). Close came before Oracle’s after-close funding statement; Reuters reported up to +3.3% after hours (U, not a close)."
+        },
+        {
+          "label": "Anthropic (ANT) close, 20 Nov",
+          "value": "88.91",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; −8.50% vs $97.17 (d); still 7.1% above the $83.00 IPO price (d). Press linked part of the move to Pentagon comments (U)."
+        },
+        {
+          "label": "AMD / Broadcom / Microsoft closes, 20 Nov",
+          "value": "424.39 / 304.41 / 484.52",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; −13.25% / −12.19% / −2.77% (d)."
+        },
+        {
+          "label": "CoreWeave 5y CDS, 20 Nov (intraday high)",
+          "value": "1232.6",
+          "unit": "bp",
+          "quality": "U",
+          "note": "Press report citing ICE Data Services: early intraday high, widened by as much as 76.2bp. Later the same day higher intraday levels were reported (about 1,256.8bp, +100.5bp; U). No verified closing print."
+        },
+        {
+          "label": "Oracle 5y CDS, 20 Nov (intraday high)",
+          "value": "327.9",
+          "unit": "bp",
+          "quality": "U",
+          "note": "Same report: early intraday high, up by as much as 4.2bp, highest since 20 Oct; later intraday levels of about 341.5bp (+17.7bp) were reported (U). Alphabet 5y reported at a record 93.7bp, later about 94.9bp (U). No verified closing print."
+        },
+        {
+          "label": "CoreWeave 9% notes due 2031, 20 Nov",
+          "value": "~80",
+          "unit": "cents per dollar",
+          "quality": "U",
+          "note": "Press report citing TRACE, about 2 points lower around 10:35 New York time. Later reported near 78.4 cents (U)."
+        }
+      ],
+      "links": [
+        "https://finance.yahoo.com/quote/NVDA/history",
+        "https://finance.yahoo.com/quote/CRWV/history",
+        "https://finance.yahoo.com/quote/NBIS/history",
+        "https://finance.yahoo.com/quote/ORCL/history",
+        "https://aiweekly.co/alerts/coreweave-five-year-cds-blows-out-to-1233bp-as-ai-credit-trade-cracks-oracle",
+        "https://www.headliner.nl/artikelen/ai-verkoopgolf-tilt-kredietrisicomaatstaven-oracle-coreweave-grote-techbedrijven-265839"
+      ],
+      "notes": "US markets were closed 21–22 Nov. Next sessions: Tokyo Monday 23 Nov (SoftBank close only after 07:30 CET) and US Monday 23 Nov. No verified closing CDS print; the CDS levels shown are early intraday highs that were later exceeded intraday."
+    },
     {
       "id": "softbank-tokyo-selloff-2026-11-20",
       "node": "SoftBank / OpenAI (equity mark)",
@@ -2270,6 +2423,7 @@
     }
   ],
   "caveats": [
+    "22 Nov AM: US closes for 20 Nov are Yahoo historical daily closes (V); changes are (d). CoreWeave 1,232.6bp, Oracle 327.9bp and Alphabet 93.7bp 5y CDS are intraday highs reported by the press citing ICE Data Services (U), not verified closing prints. CoreWeave 2031 notes near 80 cents are a press report citing TRACE (U). Oracle’s 20 Nov statement is V; vendor-financing amounts and counterparties are undisclosed. Reports that Nvidia may backstop Oracle leases are unconfirmed (U). Recherche-Spezialist has not yet checked this scan.",
     "20 Nov AM: full scan since 18 Nov 05:40 CET. Three items added (SoftBank 20 Nov Tokyo close; Anthropic 19 Nov debut plus loop sell-off; Anthropic 18 Nov IPO pricing) and the 18 Nov after-hours neocloud item updated with official 18 Nov regular-session closes. All US closes are from Nasdaq historical data (V); SoftBank 3,025 yen is the Yahoo historical Tokyo close after 07:30 CET (V); changes are (d). Anthropic pricing, share counts, net proceeds ($104.8bn / $117.0bn with option), Amazon 14.6% and Google 13.4% of outstanding capital stock, the $26.0bn placement split and the Google 2026 NPA reduction from $20.0bn to $10.0bn are V from the company release, FWP and 424B4. CNBC fully diluted market-cap figures (~$1.5tn at pricing, ~$1.8tn at the first close) are U and are not treated as V; the 424B4 does not define fully diluted market cap. A CNBC figure for SoftBank's 'invested' amount in OpenAI is not published here; SoftBank's last disclosed fair value remains $99.6bn (V, Q2). EDGAR through the morning of 20 Nov: no Nvidia Q3 FY27 10-Q; no CoreWeave 8-K on the reported ~$4bn Meta-secured loan; no Oracle 8-K after 4 Nov. No publishable dated CDS print after 13 Nov (U); unnamed-vendor model values are not used. ING data-centre loan bids were due 19 Nov; no results have been published (U). This scan was not independently checked by Recherche-Spezialist.",
     "18 Nov AM, updated after the independent check (~05:35 CET): Nvidia Q3 FY27 8-K (acc. 0001045810-26-000088, accepted 17 Nov 22:20 CET) figures hold and the Watch tier is unchanged; no errors found. Guarantees $118.0bn (V) include a new $9.5bn power-and-systems credit-support line whose counterparties and structure are not disclosed in the 8-K (U); the Q3 10-Q is not yet filed. The $32bn neocloud agreements are the same category formerly labelled 'AI cloud agreements' ($36bn at 26 Jul), so the comparison is valid (V, footnote); Q2's separate $20bn 'data center leases not commenced for third party' line is no longer shown separately in Q3. Commitments total $518bn (V), including supply $390bn (from $279bn) and cloud plus leases $102bn (from $74bn); the Q3 lease line of $74bn is not the same as last quarter's combined $74bn cloud-plus-leases figure. The $65.5bn figure is only the 'non-marketable securities' line, not all equity stakes. Two direct customers accounted for 18% and 17% of receivables (supplemental exhibit, V). Call quotes on staying 'disciplined and selective' and 'rigorously evaluating future investments, commitments, and guarantees' are V from a third-party transcript, not from the 8-K. After-hours last prices at ~01:59 CET (d, not closes): CRWV +9.0%, NBIS +11.2%, IREN +10.1%. The regular session of 18 Nov is the close that matters. Independently checked by Recherche-Spezialist.",
     "17 Nov AM, updated after the independent check (05:41 CET): the 3,204 yen / −6.21% SoftBank Group print is the Tokyo morning-session end (03:30 CET), not a close (U). The prior close of 3,416 yen on 16 Nov is V; the −6.21% change is (d). At 05:25 CET the share was 3,261 yen (−4.54%, d, U). Tokyo's regular session ends at 07:30 CET. Official 16 Nov US closes (Nasdaq/Yahoo historical, V): CoreWeave $49.88 (−6.12%, d) and Nvidia $156.14 (−4.12%, d). Earlier article-ticker snapshots that had been used as 16 Nov closes have been replaced with the historical closes. A previously cited Japanese price-page source returned 404 and has been removed. EDGAR since 16 Nov 16:17 CET: no 8-K/6-K at Nvidia, Oracle, CoreWeave or Nebius (V). No dated CDS print after 13 Nov is publishable (U); 16 Nov single-name figures for Oracle and Nvidia are unnamed-vendor model values, not prints, and are not published here. CoreWeave's reported ~$4bn Meta-secured loan still has no dated launch or pricing (U).",
