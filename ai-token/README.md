@@ -11,6 +11,7 @@ This folder is the publish set. Do **not** invent or refresh figures here: each 
 | `index.html` | The page (HTML + CSS + vanilla JS, Chart.js 4.4.1 via CDN). Embeds a fallback copy of both feeds and, when served over HTTP, tries to fetch the JSON files. |
 | `data/circular_financing.json` | Feed owned by the AI Circular Financing Alert Bot (`eb77e684-7673-4ac6-b399-3377e0af4258`). |
 | `data/token_demand.json` | Feed owned by the Token Demand Bot (`1ff4ca99-21f4-48d1-a702-c2ad3bc5fe5d`). |
+| `data/hl_weekend.json` | Weekend perp indications panel (Hyperliquid trade.xyz perps vs Friday official closes, plus Nasdaq-100 benchmark row). Owner: AI ALERT Bot. Refreshed every Monday 07:00 Europe/Zurich. |
 | `README.md` | This file (schema and update rules). |
 
 Screenshots in `screens/` and the generator in `_build/` are working files, not required on GitHub Pages.
@@ -97,6 +98,10 @@ Recommended top-level keys:
 The page charts whatever series are present and leaves a “no data” notice if a series is missing. It does not invent points. Public-safe Token Demand pack charts are redrawn in Chart.js from these series; screenshots of third-party documents or sites and charts built on credit-terminal or licensed prints are not included.
 
 The overview (section 1) also shows the Hyperliquid implied-valuation and per-share charts, plus pack charts 01 and 04, on separate canvas IDs. Pack chart 01 is OpenRouter weekly token volume and growth. Pack chart 04 is Ramp price per million tokens and heavy-user PEPM. The same charts remain in section 3.
+
+### `data/hl_weekend.json` (owner: AI ALERT Bot)
+
+Feed `hl_weekend_perps`, schema 1.0. Keys: `as_of`, `timezone`, `title`, `source_primary`, `source_secondary`, `guide_snapshot`, `close_source`, `selection_rule`, `rows[]` (10 AI names ranked by 24h volume; per row `ticker`, `name`, `coin`, `perp_mark`, `perp_oracle`, `perp_mid`, `last_trade_px`, `last_trade_time`, `official_close`(+`_date`, `_source`, `_quality` V or (d)), `move_vs_close_pct` (d), `volume_24h_usd`, `open_interest_usd`, `funding_1h`, `guide_price`, `guide_vs_api_pct`; SoftBank also `official_close_local`, `fx_usdjpy`), `benchmark` (same fields for xyz:XYZ100 vs ^NDX), `ai_median_move_pct` (d), `median_sentence`, `caveats[]` (merged into the panel's «Datenlage und Quellen – Vorbehalte» block). Only the AI ALERT Bot writes this file; `_build/embed_data.py` embeds it as `hlWeekend`. The panel replaced the Anthropic per-share (pre-IPO) chart. Quality labels as above; synthetic perps, research only, not investment advice.
 
 ## Public-page leak check
 
