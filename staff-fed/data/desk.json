@@ -22,7 +22,7 @@
     "status": "current",
     "dot": "green",
     "label": "Data refreshed 23 Nov 2026, 07:31 Europe/Zurich",
-    "banner": "<b>Data refreshed 23 Nov 2026, 07:31 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 22 Nov 2026, 14:50 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 22 Nov</span> Leading-indicator charts redrawn 17 Nov 2026, 07:17:56 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026; the November CPI figure in the commentary is an unsealed research reading.",
+    "banner": "<b>Data refreshed 23 Nov 2026, 07:31 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 22 Nov 2026, 14:50 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 22 Nov</span> Leading-indicator charts redrawn 23 Nov 2026, 07:26 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026; the November CPI figure in the commentary is an unsealed research reading.",
     "data_refreshed_at": "2026-11-23T07:31:12",
     "data_refreshed_display": "23 Nov 2026, 07:31 Europe/Zurich",
     "commentary_older_badge": "Commentary older than data – as of 22 Nov"
@@ -619,16 +619,16 @@
     "Q3 credit-card 90+ delinquency 12.9% remains U, not re-verified.",
     "Atlanta GDPNow and the New York Fed Staff Nowcast are model outputs, not official FOMC forecasts. Taylor figures are carried, not recalculated, and are not optimal-policy estimates.",
     "The US CPI nowcast-versus-actual chart and its error statistics come from the staff inflation-nowcast model’s already-produced pseudo out-of-sample backtest of 6 Nov 2026, 10:46 Europe/Zurich. That backtest uses revised (current-vintage) history, not a real-time vintage, and is not a track record of the staff-judgment nowcasts in the table. It ends at September 2026 and does not include the October CPI released on 10 Nov.",
-    "Leading-indicator charts on this page are as of 17 Nov 2026, 07:17:56 Europe/Zurich, redrawn from the leading_indicators tidy pull of the same stamp (public sources only). They were originally added from the Fed Staff Desk note leading_indicators_2026-11-12.md, after the 07:40 cutoff on 12 Nov. Every chart carries a source credit and a “Shown without endorsement by …” line.",
+    "Leading-indicator charts on this page are as of 23 Nov 2026, 07:26 Europe/Zurich, redrawn from the leading_indicators tidy pull of the same date (public sources only). They were originally added from the Fed Staff Desk note leading_indicators_2026-11-12.md, after the 07:40 cutoff on 12 Nov. Every chart carries a source credit and a “Shown without endorsement by …” line. The best-lag correlation boxes inside the charts are carried from the 12 Nov analysis and were not recomputed on the 23 Nov data.",
     "Several full-sample leads on the leading-indicator charts are driven by 2020–23. Where the pre-pandemic lead is the economically meaningful one and the full-sample best lag is contemporaneous under the 2020 spike, the chart is shifted by the pre-pandemic lead and says so. The 10-year minus 3-month Treasury spread is not shifted, because its linear correlation with quarterly real GDP growth is near zero (d).",
     "The Chicago Fed National Financial Conditions Index (NFCI) and its nonfinancial-leverage subindex are shown as the latest vintage only (FRED vintage 12 Nov 2026). There is no real-time vintage test.",
     "There is no October 2026 year-on-year figure for CPI (headline or core) or for import prices excluding fuels, because October 2025 is missing at source. Those gaps are not imputed and are hatched on the charts. The October 2026 import-price level was not in the 17:24 delivery.",
     "The Richmond survey chart is a staff chart of the published manufacturing and non-manufacturing price series, plus an equal-weight staff construction (d) of prices received in months where both sectors exist. It is not an official index and is not given an official index name.",
     "The 1-year expected inflation series is a Federal Reserve Bank of Cleveland model product (DOI: https://doi.org/10.26509/frbc-infexp), shown without endorsement by the Bank, for noncommercial use. This page charts only the published output.",
     "The Atlanta Business Inflation Expectations (BIE) year-ahead unit-cost series is shown without endorsement by the Federal Reserve Bank of Atlanta, for noncommercial use.",
-    "The last initial-claims week on the labour leading-indicator charts, ended 7 Nov 2026 (weekly 200,000 and 4-week average 195,250), is an advance figure, scheduled to be revised on 19 November 2026. The morning note at 07:40 had recorded that week as still unpublished.",
+    "The last initial-claims week on the labour leading-indicator chart, ended 14 Nov 2026 (weekly 203,000 and 4-week average 197,750), is an advance figure and is subject to revision. The week ended 7 Nov was revised on 19 Nov 2026 (weekly 200,000 to 202,000; 4-week average 195,250 to 195,750).",
     "November 2026 monthly averages for the 5-year breakeven and the 10-year minus 3-month spread use n=10 trading days through 16 Nov (incomplete, d). The November NFCI and leverage averages use n=1 week (6 Nov).",
-    "Data and sources – caveats (leading indicators, 17 Nov 2026 pull): new observations versus the 16 Nov charts are T5YIE (last 16 Nov 2026, 2.25) and T10Y3M (last 16 Nov 2026, 0.78). No new observation for GSCPI (Oct 2026), Atlanta BIE (17 Oct 2026), Richmond survey prices (Oct 2026), import prices excluding fuels (Sep 2026), the Federal Reserve Bank of Cleveland 1-year expected inflation series (Nov 2026), ECI wages (Q3 2026 / July), initial claims and the 4-week average (week ended 7 Nov 2026, advance, revision due 19 Nov), temporary-help employment and manufacturing hours (Oct 2026), JOLTS openings (Sep 2026), NFCI and nonfinancial leverage (week ended 6 Nov 2026), or building permits and housing starts (Sep 2026). The staff (d) November monthly averages of T5YIE and T10Y3M were revised because the incomplete month now has n=10 trading days through 16 Nov. No series in this pack is missing after the pull.",
+    "Data and sources – caveats (leading indicators, 23 Nov 2026 pull): new observations versus the 17 Nov charts are T5YIE (last 20 Nov 2026, 2.18), T10Y3M (last 20 Nov 2026, 0.60), initial claims and the 4-week average (week ended 14 Nov 2026, advance), NFCI and nonfinancial leverage (week ended 13 Nov 2026), the Atlanta Fed BIE (14 Nov 2026 survey, 2.51%), and building permits and housing starts (Oct 2026: 1,295k and 1,309k). Revised: claims for the week ended 7 Nov (ICSA 200,000 to 202,000; IC4WSA 195,250 to 195,750), NFCI for the week of 6 Nov (-0.462 to -0.473) and housing starts for Sep 2026 (1,221k to 1,191k). The staff (d) November monthly averages of T5YIE (2.28%) and T10Y3M (0.71%) now use n=14 trading days through 20 Nov, and the NFCI and leverage averages use n=2 weeks; all are incomplete months. No new observation for GSCPI (Oct 2026), Richmond survey prices (Oct 2026), the Federal Reserve Bank of Cleveland 1-year expected inflation series (Nov 2026; 3.04), ECI wages (Q3 2026 / July), temporary-help employment and manufacturing hours (Oct 2026), JOLTS openings (Sep 2026) or SLOOS (Oct 2026). Import prices excluding fuels now have an Oct 2026 level of 138.5, but y/y stays n/a because Oct 2025 is a source gap; the chart still ends at Sep 2026 y/y. October core PCE is not yet out (due 25 Nov). No series in this pack is missing after the pull.",
     "Correlations on the leading-indicator charts are pairwise-complete Pearson (d) and are not a forecast evaluation. Correlation is not causation. Lead stability is not assumed.",
     "10-year Treasury composition charts are from the Fed Staff Desk note ust10y_decomposition_charts_2026-11-12.md, redrawn from the 17 Nov 2026, 07:17:21 Europe/Zurich tidy pull. H.15 and NY Fed ACM run through 13 November 2026; Board Kim-Wright through 6 November 2026. 11 November was Veterans Day (Board closed; no H.15). Treasury’s own daily CSVs already show 16 November (nominal 5.12, real 2.92, difference 2.20) — a verified figure from this pull, used here only as a caveat and not shown on the public charts.",
     "The 10-year breakeven on every public composition chart is a staff calculation (d): DGS10 minus DFII10, same H.15 date and vintage. FRED T10YIE is not used. On all 5,971 common H.15 days, 2 January 2003–13 November 2026, the staff breakeven equals DGS10 minus DFII10 (max absolute residual 0 within floating-point rounding). The identity does not hold across mixed close dates.",
@@ -675,52 +675,52 @@
     "No primary transcript for Hammack, Williams or Kashkari remarks in the window."
   ],
   "leading_indicators": {
-    "hint": "Staff charts and staff reads versus the 6 Nov baseline. As of 2026-11-23 07:31:00 Europe/Zurich. Source: leading_indicators tidy (Research Manager). Public sources only.",
-    "as_of": "2026-11-23T07:31:06+01:00",
-    "as_of_display": "2026-11-23 07:31:00 Europe/Zurich",
+    "hint": "Staff charts and staff reads versus the 6 Nov baseline. As of 2026-11-23 07:26:33 Europe/Zurich. Source: leading_indicators tidy (Research Manager, weekly refresh). Public sources only.",
+    "as_of": "2026-11-23T07:26:33+01:00",
+    "as_of_display": "2026-11-23 07:26:33 Europe/Zurich",
     "source": "leading_indicators_2026-11-12.md",
     "blocks": [
       {
         "id": "inflation",
         "title": "Inflation",
-        "read": "Mixed, not a clean easing versus the 6 Nov 3.2% core baseline. Market breakevens and BIE are softer than the baseline; Richmond survey prices and import prices are firmer; GSCPI is still tight but off its September high; Cleveland is near the baseline.",
+        "read": "Mixed, not a clean easing versus the 6 Nov 3.2% core baseline. The 5-year breakeven is softer (T5YIE 2.18 on 20 Nov, from 2.25 on 10 Nov); the Atlanta Fed BIE year-ahead unit-cost mean rose to 2.51% in the November survey (from 2.30% in October); Richmond survey prices and import prices are firmer; GSCPI is still tight but off its September high; Cleveland is near the baseline.",
         "charts": [
           {
             "file": "charts/leading_gscpi.png",
             "title": "NY Fed GSCPI (advanced 12 months, d) vs core PCE inflation",
-            "caption": "© 2026 Federal Reserve Bank of New York, Global Supply Chain Pressure Index (GSCPI), https://www.newyorkfed.org/research/policy/gscpi (accessed 17 November 2026; official xls 1998-01 to 2026-10). Shown without endorsement by the Federal Reserve Bank of New York. Content from the New York Fed is subject to the Terms of Use at newyorkfed.org. The New York Fed does not endorse this page or its conclusions. Core / headline PCE: BEA via FRED (PCEPILFE, PCEPI), y/y is a staff construction (d)."
+            "caption": "© 2026 Federal Reserve Bank of New York, Global Supply Chain Pressure Index (GSCPI), https://www.newyorkfed.org/research/policy/gscpi (accessed 23 November 2026; official xls 1998-01 to 2026-10). Shown without endorsement by the Federal Reserve Bank of New York. Content from the New York Fed is subject to the Terms of Use at newyorkfed.org. The New York Fed does not endorse this page or its conclusions. Core / headline PCE: BEA via FRED (PCEPILFE, PCEPI), y/y is a staff construction (d)."
           },
           {
             "file": "charts/leading_atlbie.png",
             "title": "Atlanta Fed BIE year-ahead unit-cost mean (advanced 2 months, d) vs core inflation",
-            "caption": "Source: Federal Reserve Bank of Atlanta, Business Inflation Expectations (BIE) Survey, https://www.atlantafed.org/research-and-data/surveys/business-inflation-expectations (accessed 17 November 2026). Shown without endorsement by the Federal Reserve Bank of Atlanta. The Federal Reserve Bank of Atlanta does not endorse this page or its conclusions. Views expressed here are the author's own and are not necessarily those of the Bank or the Federal Reserve System. Noncommercial use (Atlanta Fed terms). Core PCE / core CPI: BEA / BLS via FRED; y/y is a staff construction (d)."
+            "caption": "Source: Federal Reserve Bank of Atlanta, Business Inflation Expectations (BIE) Survey, https://www.atlantafed.org/research-and-data/surveys/business-inflation-expectations (accessed 23 November 2026). Shown without endorsement by the Federal Reserve Bank of Atlanta. The Federal Reserve Bank of Atlanta does not endorse this page or its conclusions. Views expressed here are the author's own and are not necessarily those of the Bank or the Federal Reserve System. Noncommercial use (Atlanta Fed terms). Core PCE / core CPI: BEA / BLS via FRED; y/y is a staff construction (d)."
           },
           {
             "file": "charts/leading_richmond.png",
             "title": "Staff chart of Richmond Fed survey price series vs core PCE inflation",
-            "caption": "Source: Federal Reserve Bank of Richmond, Manufacturing Survey, https://www.richmondfed.org/region_communities/regional_data_analysis/business_surveys/manufacturing; Non-Manufacturing Survey, https://www.richmondfed.org/region_communities/regional_data_analysis/business_surveys/non-manufacturing (accessed 17 November 2026; official historical xlsx). Shown without endorsement by the Federal Reserve Bank of Richmond. The Federal Reserve Bank of Richmond does not endorse this page or its conclusions. Any conclusions drawn here are the author's own and are not to be attributed to the Bank or the Federal Reserve System."
+            "caption": "Source: Federal Reserve Bank of Richmond, Manufacturing Survey, https://www.richmondfed.org/region_communities/regional_data_analysis/business_surveys/manufacturing; Non-Manufacturing Survey, https://www.richmondfed.org/region_communities/regional_data_analysis/business_surveys/non-manufacturing (accessed 23 November 2026; official historical xlsx). Shown without endorsement by the Federal Reserve Bank of Richmond. The Federal Reserve Bank of Richmond does not endorse this page or its conclusions. Any conclusions drawn here are the author's own and are not to be attributed to the Bank or the Federal Reserve System."
           },
           {
             "file": "charts/leading_expinf1yr.png",
             "title": "Federal Reserve Bank of Cleveland 1-year expected inflation vs core CPI and core PCE",
-            "caption": "Source: Federal Reserve Bank of Cleveland, Inflation Expectations, https://doi.org/10.26509/frbc-infexp (accessed 17 November 2026). Series EXPINF1YR retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/EXPINF1YR, 17 November 2026 (FRED vintage 2026-11-10 3:01 PM CST, as delivered by Research). Shown without endorsement by the Federal Reserve Bank of Cleveland. The Federal Reserve Bank of Cleveland does not endorse this page or its conclusions. Any conclusions drawn here are the author's own and are not to be attributed to the Bank or the Federal Reserve System. Noncommercial use."
+            "caption": "Source: Federal Reserve Bank of Cleveland, Inflation Expectations, https://doi.org/10.26509/frbc-infexp (accessed 23 November 2026). Series EXPINF1YR retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/EXPINF1YR, 23 November 2026 (FRED vintage 2026-11-10 3:01 PM CST, as delivered by Research). Shown without endorsement by the Federal Reserve Bank of Cleveland. The Federal Reserve Bank of Cleveland does not endorse this page or its conclusions. Any conclusions drawn here are the author's own and are not to be attributed to the Bank or the Federal Reserve System. Noncommercial use."
           },
           {
             "file": "charts/leading_irexfuels.png",
             "title": "Import prices ex-fuels y/y (advanced 3 months, d) vs core and headline PCE",
-            "caption": "Source: U.S. Bureau of Labor Statistics, Import Price Index (End Use): All Imports Excluding Fuels [IREXFUELS], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/IREXFUELS, 17 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source. PCE: BEA via FRED; y/y is a staff construction (d).",
+            "caption": "Source: U.S. Bureau of Labor Statistics, Import Price Index (End Use): All Imports Excluding Fuels [IREXFUELS], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/IREXFUELS, 23 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source. PCE: BEA via FRED; y/y is a staff construction (d).",
             "companion": true
           },
           {
             "file": "charts/leading_t5yie.png",
             "title": "5-year breakeven inflation (advanced 3 months, d) vs core PCE",
-            "caption": "Source: Federal Reserve Bank of St. Louis, 5-Year Breakeven Inflation Rate [T5YIE], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/T5YIE, 17 November 2026. Shown without endorsement by the Federal Reserve Bank of St. Louis. T5YIE is derived from Treasury nominal and TIPS yields (Fed H.15 / U.S. Treasury). Core PCE: BEA via FRED; y/y is a staff construction (d). Monthly average is a staff construction (d): mean of non-missing daily observations in the calendar month.",
+            "caption": "Source: Federal Reserve Bank of St. Louis, 5-Year Breakeven Inflation Rate [T5YIE], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/T5YIE, 23 November 2026. Shown without endorsement by the Federal Reserve Bank of St. Louis. T5YIE is derived from Treasury nominal and TIPS yields (Fed H.15 / U.S. Treasury). Core PCE: BEA via FRED; y/y is a staff construction (d). Monthly average is a staff construction (d): mean of non-missing daily observations in the calendar month.",
             "companion": true
           },
           {
             "file": "charts/leading_eciwag.png",
             "title": "ECI private-industry wages and salaries y/y vs core PCE (quarterly)",
-            "caption": "Source: U.S. Bureau of Labor Statistics, Employment Cost Index: Wages and Salaries: Private Industry Workers [ECIWAG], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/ECIWAG, 17 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source. Core PCE / core CPI: BEA / BLS via FRED. ECI y/y and the quarterly mean of monthly PCE/CPI y/y are staff constructions (d).",
+            "caption": "Source: U.S. Bureau of Labor Statistics, Employment Cost Index: Wages and Salaries: Private Industry Workers [ECIWAG], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/ECIWAG, 23 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source. Core PCE / core CPI: BEA / BLS via FRED. ECI y/y and the quarterly mean of monthly PCE/CPI y/y are staff constructions (d).",
             "companion": true
           },
           {
@@ -748,54 +748,54 @@
       {
         "id": "labour",
         "title": "Labour",
-        "read": "Labour indicators are consistent with a still-firm labour market at the 4.1% UR baseline. Nothing here is a clear softening that would undermine the 6 Nov tightening bias on labour-market grounds.",
+        "read": "Labour indicators are consistent with a still-firm labour market at the 4.1% UR baseline. Initial claims remain low: the 4-week average was 197,750 in the week ended 14 Nov (advance), up slightly from 195,750 for the week ended 7 Nov (revised). Nothing here is a clear softening that would undermine the 6 Nov tightening bias on labour-market grounds.",
         "charts": [
           {
             "file": "charts/leading_claims.png",
             "title": "Initial claims, 4-week average (advanced 8 months, d) vs the unemployment rate",
-            "caption": "Source: U.S. Employment and Training Administration, 4-Week Moving Average of Initial Claims [IC4WSA] and Initial Claims [ICSA], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/IC4WSA and https://fred.stlouisfed.org/series/ICSA, 17 November 2026. Shown without endorsement by the U.S. Department of Labor or the Federal Reserve Bank of St. Louis. Unemployment rate: BLS via FRED [UNRATE]. IC4WSA is the published 4-week average, not a staff calculation. Monthly average is a staff construction (d)."
+            "caption": "Source: U.S. Employment and Training Administration, 4-Week Moving Average of Initial Claims [IC4WSA] and Initial Claims [ICSA], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/IC4WSA and https://fred.stlouisfed.org/series/ICSA, 23 November 2026. Shown without endorsement by the U.S. Department of Labor or the Federal Reserve Bank of St. Louis. Unemployment rate: BLS via FRED [UNRATE]. IC4WSA is the published 4-week average, not a staff calculation. Monthly average is a staff construction (d)."
           },
           {
             "file": "charts/leading_temphelps.png",
             "title": "Temporary-help employment y/y (advanced 5 months, d) vs nonfarm payrolls y/y",
-            "caption": "Source: U.S. Bureau of Labor Statistics, All Employees, Temporary Help Services [TEMPHELPS] and All Employees, Total Nonfarm [PAYEMS], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/TEMPHELPS and https://fred.stlouisfed.org/series/PAYEMS, 17 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source. y/y figures are staff constructions (d)."
+            "caption": "Source: U.S. Bureau of Labor Statistics, All Employees, Temporary Help Services [TEMPHELPS] and All Employees, Total Nonfarm [PAYEMS], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/TEMPHELPS and https://fred.stlouisfed.org/series/PAYEMS, 23 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source. y/y figures are staff constructions (d)."
           },
           {
             "file": "charts/leading_jtsjor.png",
             "title": "JOLTS job-openings rate (advanced 5 months, d) vs the unemployment rate",
-            "caption": "Source: U.S. Bureau of Labor Statistics, Job Openings: Total Nonfarm [JTSJOR] and Unemployment Rate [UNRATE], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/JTSJOR and https://fred.stlouisfed.org/series/UNRATE, 17 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source."
+            "caption": "Source: U.S. Bureau of Labor Statistics, Job Openings: Total Nonfarm [JTSJOR] and Unemployment Rate [UNRATE], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/JTSJOR and https://fred.stlouisfed.org/series/UNRATE, 23 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source."
           },
           {
             "file": "charts/leading_awhman.png",
             "title": "Manufacturing weekly hours, 3-month average (advanced 2 months, d) vs payrolls y/y",
-            "caption": "Source: U.S. Bureau of Labor Statistics, Average Weekly Hours of Production and Nonsupervisory Employees, Manufacturing [AWHMAN] and All Employees, Total Nonfarm [PAYEMS], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/AWHMAN and https://fred.stlouisfed.org/series/PAYEMS, 17 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source. 3-month average and y/y are staff constructions (d)."
+            "caption": "Source: U.S. Bureau of Labor Statistics, Average Weekly Hours of Production and Nonsupervisory Employees, Manufacturing [AWHMAN] and All Employees, Total Nonfarm [PAYEMS], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/AWHMAN and https://fred.stlouisfed.org/series/PAYEMS, 23 November 2026. Shown without endorsement by the U.S. Bureau of Labor Statistics or the Federal Reserve Bank of St. Louis. BLS publications are in the public domain; please cite BLS as the source. 3-month average and y/y are staff constructions (d)."
           }
         ]
       },
       {
         "id": "growth",
         "title": "Growth",
-        "read": "Financial conditions and the curve are consistent with continued expansion around the 3.0% Q4 baseline; housing is a soft spot; there is no inversion and no credit crunch.",
+        "read": "Financial conditions and the curve are consistent with continued expansion around the 3.0% Q4 baseline; the 10-year minus 3-month spread narrowed to 0.60 on 20 Nov (0.78 on 16 Nov) but is not inverted; NFCI was -0.478 for the week of 13 Nov (looser than average); housing is mixed in October (permits 1,295k, -8.7% y/y; starts 1,309k, +2.8% y/y); there is no inversion and no credit crunch.",
         "charts": [
           {
             "file": "charts/leading_t10y3m.png",
             "title": "Treasury 10-year minus 3-month yield spread vs real GDP growth",
-            "caption": "Source: Federal Reserve Board / U.S. Treasury, 10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity [T10Y3M], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/T10Y3M, 17 November 2026. Shown without endorsement by the Federal Reserve Board, the U.S. Treasury, or the Federal Reserve Bank of St. Louis. Real GDP: BEA, Real Gross Domestic Product, Percent Change from Preceding Period [A191RL1Q225SBEA], published SAAR (FRED notes confirmed). Monthly average is a staff construction (d)."
+            "caption": "Source: Federal Reserve Board / U.S. Treasury, 10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity [T10Y3M], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/T10Y3M, 23 November 2026. Shown without endorsement by the Federal Reserve Board, the U.S. Treasury, or the Federal Reserve Bank of St. Louis. Real GDP: BEA, Real Gross Domestic Product, Percent Change from Preceding Period [A191RL1Q225SBEA], published SAAR (FRED notes confirmed). Monthly average is a staff construction (d)."
           },
           {
             "file": "charts/leading_drtscilm.png",
             "title": "SLOOS C&I lending standards (large and middle-market firms) vs real GDP growth",
-            "caption": "Source: Board of Governors of the Federal Reserve System, Senior Loan Officer Opinion Survey on Bank Lending Practices, Net Percentage of Domestic Banks Tightening Standards for Commercial and Industrial Loans to Large and Middle-Market Firms [DRTSCILM], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/DRTSCILM, 17 November 2026. Board original: https://www.federalreserve.gov/data/sloos.htm (October 2026 release, last update 2 November 2026). Shown without endorsement by the Board of Governors of the Federal Reserve System or the Federal Reserve Bank of St. Louis. Real GDP: BEA [A191RL1Q225SBEA], published SAAR."
+            "caption": "Source: Board of Governors of the Federal Reserve System, Senior Loan Officer Opinion Survey on Bank Lending Practices, Net Percentage of Domestic Banks Tightening Standards for Commercial and Industrial Loans to Large and Middle-Market Firms [DRTSCILM], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/DRTSCILM, 23 November 2026. Board original: https://www.federalreserve.gov/data/sloos.htm (October 2026 release, last update 2 November 2026). Shown without endorsement by the Board of Governors of the Federal Reserve System or the Federal Reserve Bank of St. Louis. Real GDP: BEA [A191RL1Q225SBEA], published SAAR."
           },
           {
             "file": "charts/leading_nfci.png",
             "title": "Chicago Fed NFCI and nonfinancial-leverage subindex vs real GDP growth",
-            "caption": "Source: Federal Reserve Bank of Chicago, Chicago Fed National Financial Conditions Index [NFCI] and Chicago Fed National Financial Conditions Index Nonfinancial Leverage Subindex [NFCINONFINLEVERAGE], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/NFCI and https://fred.stlouisfed.org/series/NFCINONFINLEVERAGE, 17 November 2026. Shown without endorsement by the Federal Reserve Bank of Chicago or the Federal Reserve Bank of St. Louis. FRED's title misspells Leveral; the ID is NFCINONFINLEVERAGE. Real GDP: BEA [A191RL1Q225SBEA], published SAAR. Monthly averages are staff constructions (d): mean of Friday observations in the calendar month."
+            "caption": "Source: Federal Reserve Bank of Chicago, Chicago Fed National Financial Conditions Index [NFCI] and Chicago Fed National Financial Conditions Index Nonfinancial Leverage Subindex [NFCINONFINLEVERAGE], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/NFCI and https://fred.stlouisfed.org/series/NFCINONFINLEVERAGE, 23 November 2026. Shown without endorsement by the Federal Reserve Bank of Chicago or the Federal Reserve Bank of St. Louis. FRED's title misspells Leveral; the ID is NFCINONFINLEVERAGE. Real GDP: BEA [A191RL1Q225SBEA], published SAAR. Monthly averages are staff constructions (d): mean of Friday observations in the calendar month."
           },
           {
             "file": "charts/leading_permit_houst.png",
             "title": "Building permits and housing starts vs real GDP growth",
-            "caption": "Source: U.S. Census Bureau, New Privately-Owned Housing Units Authorized in Permit-Issuing Places [PERMIT] and New Privately-Owned Housing Units Started [HOUST], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/PERMIT and https://fred.stlouisfed.org/series/HOUST, 17 November 2026. Shown without endorsement by the U.S. Census Bureau or the Federal Reserve Bank of St. Louis. Real GDP: BEA [A191RL1Q225SBEA], published SAAR. 3-month averages and y/y are staff constructions (d)."
+            "caption": "Source: U.S. Census Bureau, New Privately-Owned Housing Units Authorized in Permit-Issuing Places [PERMIT] and New Privately-Owned Housing Units Started [HOUST], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/PERMIT and https://fred.stlouisfed.org/series/HOUST, 23 November 2026. Shown without endorsement by the U.S. Census Bureau or the Federal Reserve Bank of St. Louis. Real GDP: BEA [A191RL1Q225SBEA], published SAAR. 3-month averages and y/y are staff constructions (d)."
           }
         ]
       }
@@ -887,7 +887,7 @@
     "data_as_of": "2026-11-23",
     "commentary_as_of": "22 Nov 2026, 14:50 Europe/Zurich",
     "stamp": "Data refreshed 2026-11-23, commentary as of 22 Nov 2026, 14:50 Europe/Zurich",
-    "latest": "leading charts redrawn 2026-11-23 07:31:00 Europe/Zurich; DGS10 5.04 on 2026-11-19 (V)"
+    "latest": "leading charts redrawn 2026-11-23 07:26:33 Europe/Zurich; DGS10 5.04 on 2026-11-19 (V)"
   },
   "fedspeak_barometer": {
     "title": "Fedspeak hawk–dove barometer",
