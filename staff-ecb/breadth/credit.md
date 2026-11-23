@@ -8,4 +8,4 @@ Adapted from Eurostat, datasets PRC_HICP_MANR, PRC_HICP_MIDX, PRC_HICP_INW, PRC_
 
 Licence: Commission Decision 2011/833/EU. Copyright notice: https://ec.europa.eu/eurostat/web/main/help/copyright-notice
 
-Verified against: `/docs/LICENCE.md` in snapshot `20261113T191620Z_breadth_ea`.
+Verified against: `/docs/LICENCE.md` in snapshot `20261123T075245Z_breadth_ea`.

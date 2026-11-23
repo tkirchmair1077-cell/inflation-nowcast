@@ -1,10 +1,10 @@
 # Inflation breadth — UK (v1, public package)
 
-- **Data date:** 2026-09 (monthly)
-- **Share above threshold:** 53.2% (d, unrounded 53.233700)
-- **Share below threshold:** 28.1% (d, unrounded 28.134930)
-- **Diffusion (above − below):** +25.1 pp (d)
-- **Z-score of diffusion vs 2011–2019:** +0.93 (d)
+- **Data date:** 2026-10 (monthly)
+- **Share above threshold:** 54.6% (d, unrounded 54.608200)
+- **Share below threshold:** 35.5% (d, unrounded 35.453480)
+- **Diffusion (above − below):** +19.2 pp (d)
+- **Z-score of diffusion vs 2011–2019:** +0.72 (d)
 - **Thresholds:** strict > 3% / < 1%
 - **Component count (n used / n target):** 86 / 86
 - **Breaks / sample notes:** Class-level CPI weights from 2005. No classification splice. Table 38 is analytical, not accredited official statistics.

@@ -8,4 +8,4 @@ This package is a reshape of official cells plus authors' calculations (d). It i
 
 e-Stat Terms of Use (English): https://www.e-stat.go.jp/en/terms-of-use (accessed 13 November 2026, as recorded in the snapshot).
 
-Verified against: `/docs/LICENCE.md` in snapshot `20261113T184418Z_breadth_jp`.
+Verified against: `/docs/LICENCE.md` in snapshot `20261123T075113Z_breadth_jp`.

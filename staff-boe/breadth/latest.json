@@ -1,17 +1,17 @@
 {
   "country": "UK",
   "desk": "staff-boe",
-  "data_date": "2026-09",
-  "data_date_iso": "2026-09",
+  "data_date": "2026-10",
+  "data_date_iso": "2026-10",
   "frequency": "monthly",
-  "share_above": 53.2337,
-  "share_above_1dp": 53.2,
-  "share_below": 28.13493,
-  "share_below_1dp": 28.1,
-  "diffusion": 25.09877,
-  "diffusion_1dp": 25.1,
-  "z_vs_2011_2019": 0.930601,
-  "z_vs_2011_2019_2dp": 0.93,
+  "share_above": 54.6082,
+  "share_above_1dp": 54.6,
+  "share_below": 35.45348,
+  "share_below_1dp": 35.5,
+  "diffusion": 19.15472,
+  "diffusion_1dp": 19.2,
+  "z_vs_2011_2019": 0.719415,
+  "z_vs_2011_2019_2dp": 0.72,
   "thresholds": "strict > 3% / < 1%",
   "n_used": 86,
   "n_target": 86,
@@ -21,7 +21,7 @@
     "official_indexes_and_weights": "V"
   },
   "snapshot_ids": [
-    "20261113T182124Z_breadth_uk"
+    "20261123T075040Z_breadth_uk"
   ],
   "research_status": "research prototype; not sealed; not a trade input"
 }
