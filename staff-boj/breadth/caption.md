@@ -1,10 +1,10 @@
 # Inflation breadth — JP (v1, public package)
 
-- **Data date:** 2026-09 (monthly)
-- **Share above threshold:** 50.2% (d, unrounded 50.188171)
-- **Share below threshold:** 12.9% (d, unrounded 12.858208)
-- **Diffusion (above − below):** +37.3 pp (d)
-- **Z-score of diffusion vs 2011–2019:** +2.47 (d)
+- **Data date:** 2026-10 (monthly)
+- **Share above threshold:** 52.0% (d, unrounded 52.032259)
+- **Share below threshold:** 11.1% (d, unrounded 11.130657)
+- **Diffusion (above − below):** +40.9 pp (d)
+- **Z-score of diffusion vs 2011–2019:** +2.62 (d)
 - **Thresholds:** strict > 2% / < 0%, 3-month trailing average of monthly shares
 - **Component count (n used / n target):** 104 / 104
 - **Breaks / sample notes:** The plotted shares are a 3-month trailing average of monthly shares. Official 2005 weights are n/a; 2010 weights are held through December 2010 (j). No concordance between classification vintages was invented. Fresh food and energy are included; memorandum items are excluded.

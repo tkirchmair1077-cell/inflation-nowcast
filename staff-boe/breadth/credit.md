@@ -6,4 +6,4 @@ Office for National Statistics, Consumer price inflation, detailed reference tab
 
 Licence: Open Government Licence v3.0, https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 
-Verified against: `/docs/LICENCE.md` in snapshot `20261113T182124Z_breadth_uk`. Table 38 is an analytical series, not accredited official statistics.
+Verified against: `/docs/LICENCE.md` in snapshot `20261123T075040Z_breadth_uk`. Table 38 is an analytical series, not accredited official statistics.
