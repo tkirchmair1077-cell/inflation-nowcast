@@ -21,11 +21,11 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Data refreshed 19 Nov 2026, 06:48 Europe/Zurich",
-    "banner": "<b>Data refreshed 19 Nov 2026, 06:48 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 22 Nov 2026, 14:50 Europe/Zurich.</span> Leading-indicator charts redrawn 17 Nov 2026, 07:17:56 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026; the November CPI figure in the commentary is an unsealed research reading.",
-    "data_refreshed_at": "2026-11-19T06:48:24",
-    "data_refreshed_display": "19 Nov 2026, 06:48 Europe/Zurich",
-    "commentary_older_badge": ""
+    "label": "Data refreshed 23 Nov 2026, 07:31 Europe/Zurich",
+    "banner": "<b>Data refreshed 23 Nov 2026, 07:31 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 22 Nov 2026, 14:50 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 22 Nov</span> Leading-indicator charts redrawn 17 Nov 2026, 07:17:56 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026; the November CPI figure in the commentary is an unsealed research reading.",
+    "data_refreshed_at": "2026-11-23T07:31:12",
+    "data_refreshed_display": "23 Nov 2026, 07:31 Europe/Zurich",
+    "commentary_older_badge": "Commentary older than data – as of 22 Nov"
   },
   "summary": {
     "heading": "Current state",
@@ -675,9 +675,9 @@
     "No primary transcript for Hammack, Williams or Kashkari remarks in the window."
   ],
   "leading_indicators": {
-    "hint": "Staff charts and staff reads versus the 6 Nov baseline. As of 2026-11-17 07:17:56 Europe/Zurich. Source: leading_indicators tidy (Research Manager). Public sources only.",
-    "as_of": "2026-11-17T07:17:56+01:00",
-    "as_of_display": "2026-11-17 07:17:56 Europe/Zurich",
+    "hint": "Staff charts and staff reads versus the 6 Nov baseline. As of 2026-11-23 07:31:00 Europe/Zurich. Source: leading_indicators tidy (Research Manager). Public sources only.",
+    "as_of": "2026-11-23T07:31:06+01:00",
+    "as_of_display": "2026-11-23 07:31:00 Europe/Zurich",
     "source": "leading_indicators_2026-11-12.md",
     "blocks": [
       {
@@ -884,10 +884,10 @@
     ]
   },
   "data_refresh": {
-    "data_as_of": "2026-11-19",
+    "data_as_of": "2026-11-23",
     "commentary_as_of": "22 Nov 2026, 14:50 Europe/Zurich",
-    "stamp": "Data refreshed 2026-11-19, commentary as of 22 Nov 2026, 14:50 Europe/Zurich",
-    "latest": "leading charts redrawn 2026-11-17 07:17:56 Europe/Zurich; DGS10 5.04 on 2026-11-19 (V)"
+    "stamp": "Data refreshed 2026-11-23, commentary as of 22 Nov 2026, 14:50 Europe/Zurich",
+    "latest": "leading charts redrawn 2026-11-23 07:31:00 Europe/Zurich; DGS10 5.04 on 2026-11-19 (V)"
   },
   "fedspeak_barometer": {
     "title": "Fedspeak hawk–dove barometer",
