@@ -108,16 +108,16 @@
       "id": "pce-nowcast",
       "category": "inflation",
       "variable": "US PCE / core PCE, m/m SA (research nowcast)",
-      "value": "0.41 / 0.40",
+      "value": "0.346 / 0.330",
       "unit": "%",
       "quality": "d",
-      "status": "Auditor YELLOW (12 Nov) — Sealed research nowcast, stage B1, not signed off / no B2",
+      "status": "Auditor GREEN (23 Nov) — Sealed research nowcast, stage B2 (post-CPI, post-PPI)",
       "period": "Oct 2026",
       "interval": "–",
       "prior": "–",
-      "source": "Inflation Nowcasts page, NOWCAST_DATA (inline on the live page)",
-      "as_of": "SEALED 11 Nov 2026 09:48 Zurich, stage B1",
-      "rationale": "SEALED 11 Nov 2026 09:48 Zurich, stage B1 (after CPI, before PPI); local hash chain, SHA de1e6c24… (d). Not certified, not an official forecast. BEA release: 25 Nov 2026.",
+      "source": "Own PCE bridge nowcast, sealed stage B2 (local hash chain record #4)",
+      "as_of": "SEALED 23 Nov 2026 08:28 Zurich, stage B2",
+      "rationale": "SEALED 23 Nov 2026 08:28 Zurich, stage B2 (after CPI and the 13 Nov PPI); local hash chain, SHA a4a0693f… (d). Auditor sign-off GREEN 23 Nov 2026. Not certified, not an official forecast. BEA release: 25 Nov 2026.",
       "headline": false,
       "kpi_group": "inflation_nowcast",
       "kpi_label": "PCE",
@@ -125,31 +125,30 @@
       "core_label": "Core PCE (ex food & energy)",
       "nowcast": {
         "headline": {
-          "mm": 0.41,
-          "yy": 3.9163
+          "mm": 0.346,
+          "yy": 3.8537
         },
         "core": {
-          "mm": 0.4,
-          "yy": 3.3487
+          "mm": 0.33,
+          "yy": 3.2786
         }
       },
-      "status_flag": "YELLOW",
-      "status_label": "Auditor YELLOW, not signed off",
-      "status_note": "Sealed research nowcast, Auditor rating YELLOW (12 Nov), not signed off / no B2",
+      "status_flag": "GREEN",
+      "status_label": "Auditor GREEN (23 Nov), stage B2",
+      "status_note": "Sealed research nowcast, stage B2, Auditor sign-off GREEN (23 Nov). Research estimate, not validated for trading.",
       "release": {
         "reference": "Oct 2026",
         "dateLabel": "BEA release 25 Nov 2026"
       },
       "actual": null,
       "card_notes": [
-        "SEALED 11 Nov 2026 09:48 Zurich, stage B1 (after CPI, before PPI); local hash chain, SHA de1e6c24… (d). Not certified, not an official forecast.",
-        "Unrounded: headline 0.4066 (80% band 0.321 … 0.492), core 0.3983 (band 0.308 … 0.488). y/y derived (d): headline 3.92, core 3.35.",
-        "About 30% of the weight is not CPI-driven in B1 (PPI units are AR(1) placeholders until the 13 Nov PPI). A separate B2 record follows after the PPI. BEA release: 25 Nov 2026 14:30 Zurich (V).",
-        "No post-PPI B2 record is in the 19 Nov files; the B1 figure is shown as sealed and pre-PPI. October PPI came in softer at the headline level than the B1 placeholders assumed."
+        "SEALED 23 Nov 2026 08:28 Zurich, stage B2 (after CPI and PPI): 0.346 / 0.330 % m/m, rounded to 1 dp +0.3 / +0.3; local hash chain, SHA a4a0693f… (d). Auditor GREEN 23 Nov. Not certified, not an official forecast.",
+        "Unrounded: headline 0.3461 (80% band 0.213 … 0.479), core 0.3302 (band 0.195 … 0.466). y/y derived (d): headline 3.85, core 3.28.",
+        "B2 is 0.06 pp (headline) / 0.07 pp (core) below the earlier stage B1 of 11 Nov (0.41 / 0.40, kept as track record). October PPI first prints (13 Nov, preliminary, NSA, N1-adjusted in the model) replaced placeholders, mainly airfares and health care. About 11.0% (core 12.4%) of the weight has no price input this month. BEA release: 25 Nov 2026 14:30 Zurich (V)."
       ],
       "page_url": "../",
       "page_label": "Main nowcast page",
-      "cardCaption": "Stage B1 (post-CPI) · SEALED"
+      "cardCaption": "Stage B2 (post-CPI, post-PPI) · SEALED"
     },
     {
       "id": "ppi-nowcast",
@@ -608,7 +607,7 @@
   "charts_note": "",
   "caveats": [
     "Commentary written 19 Nov 2026, ~08:30 Europe/Zurich (CET), from the Research Manager refresh of 19 Nov 06:44–06:48 and earlier staff notes; no new fetch. (d) = own derivation; own estimate = staff judgment; V = from a primary source (official file, FRED or H.15) in that pull or in a dated earlier staff note; U = secondary or not independently re-checked.",
-    "MISSING / NOT RE-CHECKED: no New York Fed Staff Nowcast after 6 Nov in the files used; claims for the week ended 14 Nov (due 19 Nov, 14:30 Zurich); no post-PPI sealed PCE nowcast (B2); market-implied December policy odds are not shown. GDPNow: the FRED value 3.2093 is the latest vintage in the 19 Nov pull, but its Atlanta update date was not re-verified; a desk read of the Atlanta page text on 18 Nov had shown 3.4% for 17 Nov. The two readings are not reconciled; 3.2 is shown as the newer file value.",
+    "MISSING / NOT RE-CHECKED: no New York Fed Staff Nowcast after 6 Nov in the files used; claims for the week ended 14 Nov (due 19 Nov, 14:30 Zurich); market-implied December policy odds are not shown. GDPNow: the FRED value 3.2093 is the latest vintage in the 19 Nov pull, but its Atlanta update date was not re-verified; a desk read of the Atlanta page text on 18 Nov had shown 3.4% for 17 Nov. The two readings are not reconciled; 3.2 is shown as the newer file value.",
     "Fedspeak barometer: scores are staff judgment (d) on a simple −2 to +2 scale, equal weights, latest remark per speaker, 5–18 Nov. Hammack, Williams and Kashkari are scored from press reports, not transcripts (U). Waller's 18 Nov and Goolsbee's 13 Nov views are from live CNBC interviews as reported by CNBC (video not reviewed by the staff). The 2026 voter list is taken from the October minutes voting record (V). There is no speech-based barometer for the 27–28 Oct FOMC; the direction on the tile compares with the voters' revealed positions at that meeting (hold = 0, dissent for +25 bp = +1, minutes V), which is a different basis (indicative only).",
     "Market pricing: from press reports dated 18 Nov 2026 of a third-party futures-based probability gauge (about 95% for +25 bp and 5% for +50 bp; one other report gives 99.9% for +25 bp). The source page itself was not read. A rival 13 Nov report gave more than 10% for +50 bp. Treat as indicative only.",
     "December call weights (about 70/30/under 5) are staff judgment, re-derived 19 Nov, and replace the 13 Nov weights (60/25/15 for +25 / hold / +50), which overstated the chance of a hold.",
