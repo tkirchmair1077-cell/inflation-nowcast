@@ -21,10 +21,10 @@
   "freshness": {
     "status": "stale",
     "dot": "red",
-    "label": "Data refreshed 17 Nov 2026, 08:39 Europe/Zurich",
-    "banner": "<b>Data refreshed 17 Nov 2026, 08:39 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 1. Nov. 2026.</span> <span class=\"commentary-older\">Commentary older than data – as of 1 Nov</span> Kein neuer Desk-Stand bis zum 12. November. Der Nominallohn-Nowcast für September bezog sich auf die Veröffentlichung am 6.11.; BIP Q3 ist für den 16.11. (08:50 JST) und der nationale VPI Oktober für den 20.11. (08:30 JST) vorgesehen.",
-    "data_refreshed_at": "2026-11-17T08:39:52",
-    "data_refreshed_display": "17 Nov 2026, 08:39 Europe/Zurich",
+    "label": "Data refreshed 26 Nov 2026, 07:32 Europe/Zurich",
+    "banner": "<b>Data refreshed 26 Nov 2026, 07:32 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 1. Nov. 2026.</span> <span class=\"commentary-older\">Commentary older than data – as of 1 Nov</span> Kein neuer Desk-Stand bis zum 12. November. Der Nominallohn-Nowcast für September bezog sich auf die Veröffentlichung am 6.11.; BIP Q3 ist für den 16.11. (08:50 JST) und der nationale VPI Oktober für den 20.11. (08:30 JST) vorgesehen.",
+    "data_refreshed_at": "2026-11-26T07:32:32",
+    "data_refreshed_display": "26 Nov 2026, 07:32 Europe/Zurich",
     "commentary_older_badge": "Commentary older than data – as of 1 Nov"
   },
   "summary": {
@@ -381,9 +381,9 @@
     "Kein Inflations-Nowcast-gegen-Ist-Backtest-Chart: der Erstlauf vom 1. November 2026 hat keine gespeicherte Nowcast-Ist-Zeitreihe hinterlassen, nur eine kleine Kalibrierungsstichprobe (n=11)."
   ],
   "data_refresh": {
-    "data_as_of": "2026-11-12",
+    "data_as_of": "2026-11-26",
     "commentary_as_of": "1. Nov. 2026",
-    "stamp": "Data refreshed 2026-11-12, commentary as of 1. Nov. 2026",
-    "latest": "official import y/y Oct 24.8 (date 2026-10-01); charts copied: leading_inflation_outlook_imports.png, leading_employment_di_jobs.png"
+    "stamp": "Data refreshed 2026-11-26, commentary as of 1. Nov. 2026",
+    "latest": "official import y/y Oct 24.8 (date 2026-10-01); charts copied: leading_inflation_outlook_imports.png, leading_employment_di_jobs.png; inflation breadth (d) data 2026-10"
   }
 }
