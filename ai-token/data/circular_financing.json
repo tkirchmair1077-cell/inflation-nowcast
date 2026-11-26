@@ -5,15 +5,15 @@
     "name": "AI Circular Financing Alert Bot",
     "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
   },
-  "as_of": "2026-11-25T05:40:00+01:00",
+  "as_of": "2026-11-26T05:50:00+01:00",
   "timezone": "Europe/Zurich",
   "title": "Circular Financing Watch, as of Fri 20 Nov 2026 ~09:50 Europe/Zurich",
   "status": {
-    "current_user_alert": "Elevated (20 Nov, updated 25 Nov): after the 23 Nov relief rally, loop stocks fell again on 24 Nov — CRWV 42.60 (-11.9%), NBIS -10.7%, AMD -8.9%, ANT -6.5%, NVDA -5.9%, ORCL -3.7% (V, changes d). AMD S-3ASR (23 Nov, V) registers 160m warrant shares each for OpenAI and Meta, vesting on GPU purchases. Elevated kept; no verified post-20 Nov CDS close; Critical not met. Watch (20 Nov) SoftBank and Watch (18 Nov) Nvidia stand.",
-    "current_user_alert_as_of": "2026-11-25T05:40:00+01:00",
-    "summary": "Morning scan 25 Nov (covers 24 Nov US session). One item added: loop re-sell-off plus AMD warrant-share registration (tone negative). Independently checked by Recherche-Spezialist on 25 Nov; ownership wording narrowed to OpenAI and Meta.",
-    "last_scan": "2026-11-25T05:40:00+01:00",
-    "last_independent_check": "2026-11-25T05:37:00+01:00",
+    "current_user_alert": "Elevated (20 Nov, updated 26 Nov): S&P placed Nvidia's AA ratings on CreditWatch Negative on 25 Nov over governance and key-man risk (V). Loop stocks fell further on 25 Nov: ORCL 103.88 (-5.1%), NVDA 149.30 (-3.9%), NBIS -2.7%; SoftBank closed -14.8% in Tokyo (V, changes d). CoreWeave CDS widening and record-low bonds are press-reported (U). Elevated kept; Critical not met.",
+    "current_user_alert_as_of": "2026-11-26T05:50:00+01:00",
+    "summary": "On 25 Nov S&P Global Ratings placed Nvidia's AA issuer and senior unsecured ratings on CreditWatch Negative, citing management and governance questions including board independence and key-man risk, with a possible one-notch downgrade within 90 days (V, S&P). Loop stocks fell again on 25 Nov: Oracle closed at $103.88 (-5.1%), Nvidia $149.30 (-3.9%), Nebius $84.99 (-2.7%) and AMD $406.03 (-1.8%), while CoreWeave was flat at $42.57 (V, Yahoo historical; changes d). SoftBank Group, the main listed OpenAI proxy, closed 25 Nov in Tokyo at 2,696.5 yen, down 14.8% (V; change d). Press reports say CoreWeave's five-year CDS posted its largest-ever rise on 25 Nov and its 2031 bond yields about 18% (coupon reported inconsistently), while banks prepare a $4.5bn Meta-backed GPU loan at 7-7.5% initial talk, with an investment-grade rating expected but not yet assigned (U). The closes and the S&P action were independently checked by Recherche-Spezialist on 26 Nov. No dated vendor CDS close after 20 Nov has been verified, and there is no verified OpenAI funding friction, so the alert stays Elevated, not Critical.",
+    "last_scan": "2026-11-26T05:50:00+01:00",
+    "last_independent_check": "2026-11-26T05:36:00+01:00",
     "outstanding_watches": [
       {
         "date": "2026-11-24",
@@ -172,11 +172,152 @@
     ]
   },
   "summary": {
-    "as_of": "2026-11-25T05:40:00+01:00",
-    "text": "After the 23 Nov relief rally on Nvidia's reinstatement of Jensen Huang (V, Nvidia 8-K), loop stocks fell again on 24 Nov: CoreWeave closed at $42.60 (-11.9%), Nebius $87.31 (-10.7%), AMD $413.27 (-8.9%), Nvidia $155.38 (-5.9%) and Oracle $109.50 (-3.7%) (V, Yahoo historical; changes d). On 23 Nov AMD filed a resale registration covering 160 million warrant shares each for OpenAI and Meta at $0.01, which vest only as those customers buy AMD Instinct GPUs (up to 6 GW for OpenAI) and AMD's share price reaches targets up to $600 (V, AMD S-3ASR); AMD receives no proceeds. SoftBank Group, the main listed OpenAI proxy, traded about 14% lower in Tokyo early on 25 Nov (U, intraday, not a close). The last daily close found for Oracle five-year CDS is still 328.5bp on 20 Nov (U), and no credit print after 20 Nov is verified. The 12 Nov Elevated alert therefore stands with its equity-mark leg re-widening; Critical is not met because there is no verified OpenAI funding friction.",
-    "source": "AI Alert morning scan 25 Nov 2026 (~05:40 Europe/Zurich): Yahoo historical closes 20–24 Nov; AMD S-3ASR (SEC, 23 Nov); Nvidia 8-K (event 22 Nov); Investing.com Oracle CDS history. Independently checked by Recherche-Spezialist on 25 Nov 2026."
+    "text": "On 25 Nov S&P Global Ratings placed Nvidia's AA issuer and senior unsecured ratings on CreditWatch Negative, citing management and governance questions including board independence and key-man risk, with a possible one-notch downgrade within 90 days (V, S&P). Loop stocks fell again on 25 Nov: Oracle closed at $103.88 (-5.1%), Nvidia $149.30 (-3.9%), Nebius $84.99 (-2.7%) and AMD $406.03 (-1.8%), while CoreWeave was flat at $42.57 (V, Yahoo historical; changes d). SoftBank Group, the main listed OpenAI proxy, closed 25 Nov in Tokyo at 2,696.5 yen, down 14.8% (V; change d). Press reports say CoreWeave's five-year CDS posted its largest-ever rise on 25 Nov and its 2031 bond yields about 18% (coupon reported inconsistently), while banks prepare a $4.5bn Meta-backed GPU loan at 7-7.5% initial talk, with an investment-grade rating expected but not yet assigned (U). No dated vendor CDS close after 20 Nov has been verified, and there is no verified OpenAI funding friction, so the alert stays Elevated, not Critical.",
+    "as_of": "2026-11-26T05:50:00+01:00",
+    "source": "AI ALERT Bot morning scan 26 Nov 2026; S&P Global Ratings, Yahoo Finance historical prices, press reports (U); closes and S&P action independently checked by Recherche-Spezialist on 26 Nov 2026"
   },
   "items": [
+    {
+      "id": "nvda-sp-creditwatch-negative-2026-11-25",
+      "node": "Nvidia (hub supplier) / CoreWeave / Oracle / SoftBank (rating action, credit, equity marks)",
+      "type": "rating_action_credit_market",
+      "title": "S&P places Nvidia's AA ratings on CreditWatch Negative (25 Nov); CoreWeave 5y CDS reportedly posts its biggest-ever rise while banks prepare a $4.5bn Meta-backed GPU loan; Oracle -5.1%, SoftBank closes -14.8%",
+      "as_of": "2026-11-25",
+      "event_time": "2026-11-25T22:00:00+01:00",
+      "tier_relevance": "Material update to the 20 Nov Elevated alert: first official rating-agency flag on the hub supplier (V, S&P primary), plus press-reported CoreWeave credit widening (U) and continued Oracle/SoftBank equity weakness (V). Elevated kept. Critical not met: the S&P action is driven by governance and key-man risk, not by loop demand; no verified OpenAI funding friction; no verified dated CDS close.",
+      "tone": "negative",
+      "tone_source": "bot",
+      "relationship": "Nvidia is the main equity investor, vendor and backstop provider in the loop. A weaker hub credit (rating watch, possible one-notch cut to AA-) does not change its liquidity much but adds a governance/disclosure channel: S&P names questions about China-exposure disclosures and export controls. CoreWeave's new Meta-backed GPU loan shows lenders still fund contracted capacity at investment-grade terms (7-7.5% talk, U) while its unsecured bonds yield about 18% (U), i.e. credit is being priced by counterparty, not by the neocloud.",
+      "counterparties": [
+        "Nvidia",
+        "CoreWeave",
+        "Meta",
+        "Oracle",
+        "SoftBank",
+        "Nebius",
+        "AMD",
+        "Microsoft"
+      ],
+      "figures": [
+        {
+          "label": "S&P rating action on Nvidia, 25 Nov",
+          "value": "'AA' issuer and senior unsecured ratings placed on CreditWatch Negative; possible downgrade within 90 days, expected limited to one notch unless investigations or disclosures harm reputation or business prospects; S&P also revised its management and governance modifier to neutral from positive",
+          "unit": "rating",
+          "quality": "V",
+          "note": "S&P Global Ratings research update, 25 Nov 2026"
+        },
+        {
+          "label": "Moody's on Nvidia",
+          "value": "Aa1; outlook cut to stable from positive on 18 Nov (CNBC, U); on 25 Nov Moody's said Aa1/stable is unaffected by Huang's return (Reuters, U). No Fitch action found",
+          "unit": "rating",
+          "quality": "U",
+          "note": "press reports"
+        },
+        {
+          "label": "CoreWeave Meta-backed loan (planned)",
+          "value": "$4.5bn, secured by GPUs for Meta at Dalton, Georgia; proceeds in escrow; initial yield talk 7-7.5%; expected investment-grade rating; launch as soon as week of 30 Nov",
+          "unit": "USD",
+          "quality": "U",
+          "note": "Bloomberg via Yahoo, anonymous sources, 25 Nov; IG rating expected, not yet assigned; terms could change"
+        },
+        {
+          "label": "CoreWeave 5y CDS / 2031 bond, 25 Nov",
+          "value": "CDS rise reported as the largest ever, implying >70% 5-year default probability (ICE via Bloomberg, no level); 2031 bond at record low, ~18% yield (TRACE per Bloomberg, no price). Last dated CDS level found: 1,314bp in the 24 Nov US session (S&P Global MI via Reuters), not a close",
+          "unit": "bp / %",
+          "quality": "U",
+          "note": "press source claims, no dated vendor close; coupon differs between sources (9% per Bloomberg, 9.75% per CNBC)"
+        },
+        {
+          "label": "ORCL close 25 Nov",
+          "value": "103.88 (-5.13% vs 109.5 on 24 Nov)",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; change d"
+        },
+        {
+          "label": "NVDA close 25 Nov",
+          "value": "149.3 (-3.91% vs 155.38 on 24 Nov)",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; change d"
+        },
+        {
+          "label": "NBIS close 25 Nov",
+          "value": "84.99 (-2.66% vs 87.31 on 24 Nov)",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; change d"
+        },
+        {
+          "label": "AMD close 25 Nov",
+          "value": "406.03 (-1.75% vs 413.27 on 24 Nov)",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; change d"
+        },
+        {
+          "label": "CRWV close 25 Nov",
+          "value": "42.57 (-0.07% vs 42.6 on 24 Nov)",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; change d"
+        },
+        {
+          "label": "ANT close 25 Nov",
+          "value": "82.79 (+1.07% vs 81.91 on 24 Nov)",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Yahoo historical; change d"
+        },
+        {
+          "label": "SoftBank 9984.T close 25 Nov",
+          "value": "2696.5 (-14.83% vs 3166 on 24 Nov)",
+          "unit": "JPY",
+          "quality": "V",
+          "note": "Yahoo historical; change d. 26 Nov Tokyo price ~2975 at 05:45 CET is intraday (U), not a close"
+        },
+        {
+          "label": "AVGO / MSFT 25 Nov",
+          "value": "-0.07% / -1.25%",
+          "unit": "%",
+          "quality": "(d)",
+          "note": "from Yahoo historical closes"
+        }
+      ],
+      "sources": [
+        {
+          "title": "S&P Global Ratings: NVIDIA Corp. 'AA' Ratings Placed On CreditWatch Negative (25 Nov 2026)",
+          "url": "https://spratings.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3667832",
+          "kind": "primary"
+        },
+        {
+          "title": "Reuters via Investing.com: S&P places Nvidia on CreditWatch Negative",
+          "url": "https://www.investing.com/news/stock-market-news/sp-global-places-nvidia-rating-on-creditwatch-negative-on-rising-management-and-governance-risks-5051352",
+          "kind": "news"
+        },
+        {
+          "title": "Yahoo Finance: CoreWeave's banks to sell $4.5 billion Meta-tied loan (25 Nov 2026)",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-banks-sell-4-5-172523161.html",
+          "kind": "news"
+        },
+        {
+          "title": "Yahoo Finance historical prices ORCL",
+          "url": "https://finance.yahoo.com/quote/ORCL/history/",
+          "kind": "primary"
+        },
+        {
+          "title": "Yahoo Finance historical prices NVDA",
+          "url": "https://finance.yahoo.com/quote/NVDA/history/",
+          "kind": "primary"
+        },
+        {
+          "title": "Yahoo Finance historical prices 9984.T",
+          "url": "https://finance.yahoo.com/quote/9984.T/history/",
+          "kind": "primary"
+        }
+      ],
+      "notes": "Independently checked by Recherche-Spezialist on 26 Nov 2026 (closes and S&P action confirmed against primary sources; CoreWeave loan, CDS and bond figures remain press source claims). US markets are closed on 26 Nov (Thanksgiving). SoftBank 26 Nov price is intraday until the Tokyo close (07:30 CET). No verified vendor CDS close after 20 Nov: ORCL ~356bp and NVDA up to 147bp were reported for 24-25 Nov (U, press), not closes."
+    },
     {
       "id": "loop-resell-off-amd-warrant-registration-2026-11-24",
       "node": "Nvidia / neoclouds / Oracle / AMD-OpenAI / SoftBank (equity marks, supplier warrants)",
