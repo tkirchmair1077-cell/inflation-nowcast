@@ -21,10 +21,10 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Data refreshed 23 Nov 2026, 07:30 Europe/Zurich",
-    "banner": "<b>Data refreshed 23 Nov 2026, 07:30 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 22 Nov 2026, 14:50 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 22 Nov</span>",
-    "data_refreshed_at": "2026-11-23T07:30:54",
-    "data_refreshed_display": "23 Nov 2026, 07:30 Europe/Zurich",
+    "label": "Data refreshed 26 Nov 2026, 07:32 Europe/Zurich",
+    "banner": "<b>Data refreshed 26 Nov 2026, 07:32 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 22 Nov 2026, 14:50 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 22 Nov</span>",
+    "data_refreshed_at": "2026-11-26T07:32:34",
+    "data_refreshed_display": "26 Nov 2026, 07:32 Europe/Zurich",
     "commentary_older_badge": "Commentary older than data – as of 22 Nov"
   },
   "summary": {
@@ -577,9 +577,9 @@
     ]
   },
   "data_refresh": {
-    "data_as_of": "2026-11-23",
+    "data_as_of": "2026-11-26",
     "commentary_as_of": "22 Nov 2026, 14:50 Europe/Zurich",
-    "stamp": "Data refreshed 2026-11-23, commentary as of 22 Nov 2026, 14:50 Europe/Zurich",
-    "latest": "ECB public leading charts redrawn 2026-11-13 07:03:13 Europe/Zurich; ecb:YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y last 2026-11-19=3.4415130227; ecb:YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_3M last 2026-11-19=2.6661574177; ecb:CISS.D.U2.Z0Z.4F.EC.SS_CIN.IDX last 2026-11-19=0.009462216765937262 (daily keys; leading charts not redrawn until the weekly panel is rebuilt)"
+    "stamp": "Data refreshed 2026-11-26, commentary as of 22 Nov 2026, 14:50 Europe/Zurich",
+    "latest": "ECB public leading charts redrawn 2026-11-13 07:03:13 Europe/Zurich; ecb:YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y last 2026-11-24=3.3120809567; ecb:YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_3M last 2026-11-24=2.6920571029; ecb:CISS.D.U2.Z0Z.4F.EC.SS_CIN.IDX last 2026-11-24=0.028929188884891373 (daily keys; leading charts not redrawn until the weekly panel is rebuilt)"
   }
 }

@@ -21,10 +21,10 @@
   "freshness": {
     "status": "current",
     "dot": "green",
-    "label": "Data refreshed 24 Nov 2026, 07:26 Europe/Zurich",
-    "banner": "<b>Data refreshed 24 Nov 2026, 07:26 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 22 Nov 2026, 14:50 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 22 Nov</span> Leading-indicator charts redrawn 23 Nov 2026, 07:26 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026; the November CPI figure in the commentary is an unsealed research reading.",
-    "data_refreshed_at": "2026-11-24T07:26:52",
-    "data_refreshed_display": "24 Nov 2026, 07:26 Europe/Zurich",
+    "label": "Data refreshed 26 Nov 2026, 07:32 Europe/Zurich",
+    "banner": "<b>Data refreshed 26 Nov 2026, 07:32 Europe/Zurich.</b> <span class=\"commentary-as-of\">Commentary as of 22 Nov 2026, 14:50 Europe/Zurich.</span> <span class=\"commentary-older\">Commentary older than data – as of 22 Nov</span> Leading-indicator charts redrawn 23 Nov 2026, 07:26 Europe/Zurich. Inflation nowcasts (CPI, PCE, PPI) are the sealed figures on the main nowcast page, as of 11 Nov 2026; the November CPI figure in the commentary is an unsealed research reading.",
+    "data_refreshed_at": "2026-11-26T07:32:47",
+    "data_refreshed_display": "26 Nov 2026, 07:32 Europe/Zurich",
     "commentary_older_badge": "Commentary older than data – as of 22 Nov"
   },
   "summary": {
@@ -801,9 +801,9 @@
     ]
   },
   "ust10y_decomposition": {
-    "hint": "H.15 and NY Fed ACM through 20 Nov 2026; Board Kim-Wright through 13 Nov 2026. Source: Research Manager ust10y tidy. Fetched 24 Nov 2026, 06:45:26 Europe/Zurich.",
-    "as_of": "2026-11-20",
-    "as_of_display": "H.15 and ACM 20 Nov 2026; Kim-Wright 13 Nov 2026",
+    "hint": "H.15 and NY Fed ACM through 24 Nov 2026; Board Kim-Wright through 20 Nov 2026. Source: Research Manager ust10y tidy. Fetched 24 Nov 2026, 06:45:26 Europe/Zurich.",
+    "as_of": "2026-11-24",
+    "as_of_display": "H.15 and ACM 24 Nov 2026; Kim-Wright 20 Nov 2026",
     "source": "ust10y_decomposition_charts_2026-11-12.md",
     "read": "Over the latest H.15 session (18–19 November) the 10-year fell 3 bp (5.07% to 5.04%): the real yield was unchanged (2.88%) and the staff breakeven (d) fell 3 bp (2.19% to 2.16%). In ACM terms the expected-rate component fell about 2 bp (4.34% to 4.32%) and the term premium rose less than 1 bp (0.69% to 0.70%) (d). Kim-Wright, weekly, shows a term premium of 0.99% on 13 November. Over the week (12–19 November) the 10-year fell 6 bp (5.10% to 5.04%), real +2 bp, staff breakeven −8 bp. Over the month (20 October–19 November) the 10-year fell 8 bp (5.12% to 5.04%), real +11 bp, staff breakeven −19 bp. Term-premium levels differ by model, so Split B depends on the model.",
     "blocks": [
@@ -883,10 +883,10 @@
     ]
   },
   "data_refresh": {
-    "data_as_of": "2026-11-23",
+    "data_as_of": "2026-11-24",
     "commentary_as_of": "22 Nov 2026, 14:50 Europe/Zurich",
-    "stamp": "Data refreshed 2026-11-23, commentary as of 22 Nov 2026, 14:50 Europe/Zurich",
-    "latest": "leading charts redrawn 2026-11-23 07:26:33 Europe/Zurich; DGS10 4.92 on 2026-11-20 (V)"
+    "stamp": "Data refreshed 2026-11-24, commentary as of 22 Nov 2026, 14:50 Europe/Zurich",
+    "latest": "leading charts redrawn 2026-11-23 07:26:33 Europe/Zurich; DGS10 4.91 on 2026-11-24 (V)"
   },
   "fedspeak_barometer": {
     "title": "Fedspeak hawk–dove barometer",
