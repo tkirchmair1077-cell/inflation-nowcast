@@ -5,15 +5,15 @@
     "name": "AI Circular Financing Alert Bot",
     "id": "eb77e684-7673-4ac6-b399-3377e0af4258"
   },
-  "as_of": "2026-11-26T05:50:00+01:00",
+  "as_of": "2026-11-27T06:00:00+01:00",
   "timezone": "Europe/Zurich",
   "title": "Circular Financing Watch, as of Fri 20 Nov 2026 ~09:50 Europe/Zurich",
   "status": {
-    "current_user_alert": "Elevated (20 Nov, updated 26 Nov): S&P placed Nvidia's AA ratings on CreditWatch Negative on 25 Nov over governance and key-man risk (V). Loop stocks fell further on 25 Nov: ORCL 103.88 (-5.1%), NVDA 149.30 (-3.9%), NBIS -2.7%; SoftBank closed -14.8% in Tokyo (V, changes d). CoreWeave CDS widening and record-low bonds are press-reported (U). Elevated kept; Critical not met.",
-    "current_user_alert_as_of": "2026-11-26T05:50:00+01:00",
-    "summary": "On 25 Nov S&P Global Ratings placed Nvidia's AA issuer and senior unsecured ratings on CreditWatch Negative, citing management and governance questions including board independence and key-man risk, with a possible one-notch downgrade within 90 days (V, S&P). Loop stocks fell again on 25 Nov: Oracle closed at $103.88 (-5.1%), Nvidia $149.30 (-3.9%), Nebius $84.99 (-2.7%) and AMD $406.03 (-1.8%), while CoreWeave was flat at $42.57 (V, Yahoo historical; changes d). SoftBank Group, the main listed OpenAI proxy, closed 25 Nov in Tokyo at 2,696.5 yen, down 14.8% (V; change d). Press reports say CoreWeave's five-year CDS posted its largest-ever rise on 25 Nov and its 2031 bond yields about 18% (coupon reported inconsistently), while banks prepare a $4.5bn Meta-backed GPU loan at 7-7.5% initial talk, with an investment-grade rating expected but not yet assigned (U). The closes and the S&P action were independently checked by Recherche-Spezialist on 26 Nov. No dated vendor CDS close after 20 Nov has been verified, and there is no verified OpenAI funding friction, so the alert stays Elevated, not Critical.",
-    "last_scan": "2026-11-26T05:50:00+01:00",
-    "last_independent_check": "2026-11-26T05:36:00+01:00",
+    "current_user_alert": "Elevated (20 Nov, updated 27 Nov): Citi and JPMorgan are reported to be marketing AI loan portfolios, partly via synthetic risk transfer (26 Nov, U). The Fed's 13 Nov FSR and Gov. Barr (16 Nov) flag circular financing and >$3tn of off-balance-sheet AI obligations (V). S&P CreditWatch Negative on Nvidia (25 Nov, V) stands. SoftBank +7.3% on 26 Nov (V). Critical not met.",
+    "current_user_alert_as_of": "2026-11-27T06:00:00+01:00",
+    "summary": "Banks including Citi and JPMorgan are reported to be marketing portfolios of AI-related loans, in some cases through synthetic risk transfers that keep the loans on balance sheet and shift loss risk to investors; the single press source says some banks do it to free room for more lending (Semafor, 26 Nov, U). The Federal Reserve's 13 Nov Financial Stability Report puts advanced-computing borrowing at about 31% of 2026 nonfinancial investment-grade issuance and outstanding public advanced-computing debt above $1.1 trillion, and Governor Barr said on 16 Nov that off-balance-sheet AI obligations such as leases and residual value guarantees exceed $3 trillion in maximum nominal value, naming circular financing as an amplifier (V, Federal Reserve). S&P's 25 Nov CreditWatch Negative on Nvidia's AA ratings over governance risk stands (V, S&P). SoftBank Group, the main listed OpenAI proxy, rebounded 7.3% to 2,894 yen in Tokyo on 26 Nov after its 14.8% drop the day before (V, Yahoo historical; change d), and US markets were closed on 26 Nov for Thanksgiving. No dated vendor CDS close after 20 Nov and no OpenAI funding friction have been verified, so the alert stays Elevated, not Critical.",
+    "last_scan": "2026-11-27T06:00:00+01:00",
+    "last_independent_check": "2026-11-27T05:41:00+01:00",
     "outstanding_watches": [
       {
         "date": "2026-11-24",
@@ -172,11 +172,58 @@
     ]
   },
   "summary": {
-    "text": "On 25 Nov S&P Global Ratings placed Nvidia's AA issuer and senior unsecured ratings on CreditWatch Negative, citing management and governance questions including board independence and key-man risk, with a possible one-notch downgrade within 90 days (V, S&P). Loop stocks fell again on 25 Nov: Oracle closed at $103.88 (-5.1%), Nvidia $149.30 (-3.9%), Nebius $84.99 (-2.7%) and AMD $406.03 (-1.8%), while CoreWeave was flat at $42.57 (V, Yahoo historical; changes d). SoftBank Group, the main listed OpenAI proxy, closed 25 Nov in Tokyo at 2,696.5 yen, down 14.8% (V; change d). Press reports say CoreWeave's five-year CDS posted its largest-ever rise on 25 Nov and its 2031 bond yields about 18% (coupon reported inconsistently), while banks prepare a $4.5bn Meta-backed GPU loan at 7-7.5% initial talk, with an investment-grade rating expected but not yet assigned (U). No dated vendor CDS close after 20 Nov has been verified, and there is no verified OpenAI funding friction, so the alert stays Elevated, not Critical.",
-    "as_of": "2026-11-26T05:50:00+01:00",
-    "source": "AI ALERT Bot morning scan 26 Nov 2026; S&P Global Ratings, Yahoo Finance historical prices, press reports (U); closes and S&P action independently checked by Recherche-Spezialist on 26 Nov 2026"
+    "text": "Banks including Citi and JPMorgan are reported to be marketing portfolios of AI-related loans, in some cases through synthetic risk transfers that keep the loans on balance sheet and shift loss risk to investors; the single press source says some banks do it to free room for more lending (Semafor, 26 Nov, U). The Federal Reserve's 13 Nov Financial Stability Report puts advanced-computing borrowing at about 31% of 2026 nonfinancial investment-grade issuance and outstanding public advanced-computing debt above $1.1 trillion, and Governor Barr said on 16 Nov that off-balance-sheet AI obligations such as leases and residual value guarantees exceed $3 trillion in undiscounted maximum nominal value, naming circular financing as an amplifier (V, Federal Reserve). S&P's 25 Nov CreditWatch Negative on Nvidia's AA ratings over governance risk stands (V, S&P). SoftBank Group, the main listed OpenAI proxy, rebounded 7.3% to 2,894 yen in Tokyo on 26 Nov after its 14.8% drop the day before (V, Yahoo historical; change d), and US markets were closed on 26 Nov for Thanksgiving. No dated vendor CDS close after 20 Nov and no OpenAI funding friction have been verified, so the alert stays Elevated, not Critical.",
+    "as_of": "2026-11-27T06:00:00+01:00",
+    "source": "AI ALERT Bot morning scan 27 Nov 2026; Federal Reserve Board (FSR 13 Nov, Barr speech 16 Nov), Yahoo Finance historical prices, press report (U); independently checked by Recherche-Spezialist on 27 Nov 2026"
   },
   "items": [
+    {
+      "id": "banks-shop-ai-loan-portfolios-srt-2026-11-26",
+      "node": "Bank lenders to the AI build-out / CoreWeave and neoclouds (credit risk transfer)",
+      "type": "credit_market",
+      "title": "Citi and JPMorgan reportedly market portfolios of AI-related loans, partly via synthetic risk transfer (26 Nov); SoftBank rebounds +7.3% in Tokyo",
+      "as_of": "2026-11-26",
+      "event_time": "2026-11-26T14:42:00+01:00",
+      "tier_relevance": "Material update to the 20 Nov Elevated alert: lenders to the build-out are reported to be shedding or hedging AI loan exposure (U, single press source with anonymous sources), on top of the official Fed flag on circular financing (V, see 16 Nov item). Elevated kept. Critical not met: no verified OpenAI funding friction and no verified dated vendor CDS close after 20 Nov.",
+      "tone": "negative",
+      "tone_source": "bot",
+      "relationship": "Bank credit is the outer funding layer of the loop: neocloud GPU loans and data-center construction loans are often backed by hyperscaler or supplier contracts and guarantees. If banks transfer first-loss risk to investors (synthetic risk transfer), lending capacity can stay open, but the risk moves to less transparent holders. The report says some banks do it to lend more, not to pull back, so the signal is ambiguous.",
+      "counterparties": [
+        "Citi",
+        "JPMorgan",
+        "CoreWeave",
+        "SoftBank"
+      ],
+      "figures": [
+        {
+          "label": "AI loan portfolios marketed, 26 Nov",
+          "value": "Citi and JPMorgan among banks marketing portfolios of AI-related loans; some structures keep loans on balance sheet and shift loss risk to investors (synthetic risk transfer); no sizes given",
+          "unit": "text",
+          "quality": "U",
+          "note": "single press exclusive (Semafor, Ellen DiMauro, 26 Nov 08:42 EST) citing people familiar with the deals; SRT only 'in some instances', bank not specified; Citi declined to comment, JPMorgan did not immediately respond (Benzinga); no second independent source found"
+        },
+        {
+          "label": "SoftBank 9984.T close 26 Nov",
+          "value": "2894.0 (+7.32% vs 2696.5 on 25 Nov)",
+          "unit": "JPY",
+          "quality": "V",
+          "note": "Yahoo historical; change d. 27 Nov Tokyo price at ~05:50 CET is intraday, not a close"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Semafor, 26 Nov 2026: Banks look to dump AI debt",
+          "url": "https://www.semafor.com/article/11/26/2026/banks-look-to-dump-ai-debt",
+          "kind": "secondary"
+        },
+        {
+          "title": "Yahoo Finance historical prices 9984.T",
+          "url": "https://finance.yahoo.com/quote/9984.T/history/",
+          "kind": "primary"
+        }
+      ],
+      "notes": "US equity and bond markets were closed on 26 Nov (Thanksgiving); no new US closes. CoreWeave bond prices dated 26 Nov on bond-quote aggregator pages are not used (market closed that day). Independently checked by Recherche-Spezialist on 27 Nov 2026: the Semafor article is confirmed, but it remains a single source (other outlets only re-report it); no sizes, borrowers, buyers or closed deals are disclosed. SoftBank close confirmed."
+    },
     {
       "id": "nvda-sp-creditwatch-negative-2026-11-25",
       "node": "Nvidia (hub supplier) / CoreWeave / Oracle / SoftBank (rating action, credit, equity marks)",
@@ -1135,6 +1182,67 @@
         "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000065/",
         "https://www.nasdaq.com/market-activity/stocks/crwv/historical"
       ]
+    },
+    {
+      "id": "fed-fsr-barr-circular-financing-flag-2026-11-16",
+      "node": "Macro / official flags (Federal Reserve) - hyperscalers, Nvidia, AI labs, neoclouds",
+      "type": "official_flag",
+      "title": "Federal Reserve FSR (13 Nov) and Governor Barr (16 Nov) name circular financing networks as a financial-stability amplifier; off-balance-sheet AI obligations estimated above $3 trillion",
+      "as_of": "2026-11-16",
+      "event_time": "2026-11-16T12:00:00+01:00",
+      "tier_relevance": "Official-flag category. First recorded in this feed on 27 Nov (not captured in earlier scans). Supports, but does not by itself raise, the Elevated tier.",
+      "tone": "negative",
+      "tone_source": "bot",
+      "relationship": "The Fed describes the loop directly: hyperscalers and GPU makers invest equity in LLM labs and cloud start-ups, which spend it on compute from the investors, and larger firms guarantee the resale value of collateral in asset-based financings of weaker firms. Barr says the weaker firms must eventually replace supplier funding with paying-customer revenue, and that these channels could amplify a repricing of AI investments. He compares the debt growth with the late-1990s telecom cycle.",
+      "counterparties": [
+        "Hyperscalers",
+        "Nvidia",
+        "LLM labs",
+        "Neoclouds"
+      ],
+      "figures": [
+        {
+          "label": "Off-balance-sheet obligations (max nominal)",
+          "value": ">$3 trillion (long-term contracts, leases, residual value guarantees, energy contracts)",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Fed FSR estimate as cited by Gov. Barr, 16 Nov 2026"
+        },
+        {
+          "label": "On-balance-sheet debt, seven largest AI firms",
+          "value": ">$800bn expected before end-2026",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Barr speech, 16 Nov 2026"
+        },
+        {
+          "label": "Equity investments in LLM labs and cloud start-ups",
+          "value": ">$100bn cumulative by hyperscalers and GPU producers",
+          "unit": "USD",
+          "quality": "V",
+          "note": "Barr speech, 16 Nov 2026"
+        },
+        {
+          "label": "Advanced-computing share of nonfinancial IG issuance",
+          "value": "about 31% in 2026, from <6% in 2023; outstanding public advanced-computing debt >$1.1 trillion (Oct 2026)",
+          "unit": "% / USD",
+          "quality": "V",
+          "note": "Fed Financial Stability Report, 13 Nov 2026"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Federal Reserve Board: Governor Barr, Some Potential Financial Stability Implications of AI (16 Nov 2026)",
+          "url": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
+          "kind": "primary"
+        },
+        {
+          "title": "Federal Reserve Board: Financial Stability Report (13 Nov 2026)",
+          "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
+          "kind": "primary"
+        }
+      ],
+      "notes": "Fed estimates are maxima of nominal obligations, not expected losses. Not yet compared with the IMF and BIS context anchors. Independently checked by Recherche-Spezialist on 27 Nov 2026 against the primary documents (FSR Box 2.2, p.23; Barr speech): figures hold. The >$3tn is a potential maximum nominal value, undiscounted (footnote 5), not comparable to on-balance-sheet debt; the >$800bn is a year-end forecast; the >$100bn is cumulative equity investment in LLM labs and cloud start-ups."
     },
     {
       "id": "tensorwave-openai-amd-457mw",
