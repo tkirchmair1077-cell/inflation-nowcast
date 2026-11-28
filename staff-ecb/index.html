@@ -247,7 +247,7 @@ footer{margin:10px 0 48px}
 
 </head>
 <body>
-<nav id="sitenav" aria-label="Pages"><a href="/inflation-nowcast/">Nowcasts</a><a href="/inflation-nowcast/staff/">Staff</a><a href="/inflation-nowcast/staff-fed/">Fed</a><a href="/inflation-nowcast/staff-ecb/" class="active" aria-current="page">ECB</a><a href="/inflation-nowcast/staff-snb/">SNB</a><a href="/inflation-nowcast/ai-token/">AI / Token</a></nav>
+<nav id="sitenav" aria-label="Pages"><a href="/inflation-nowcast/">Nowcasts</a><a href="/inflation-nowcast/staff/">Staff</a><a href="/inflation-nowcast/staff-fed/">Fed</a><a href="/inflation-nowcast/staff-ecb/" class="active" aria-current="page">ECB</a><a href="/inflation-nowcast/staff-snb/">SNB</a><a href="/inflation-nowcast/consumer-health/">Consumer Health</a><a href="/inflation-nowcast/ai-token/">AI / Token</a></nav>
 <header class="top">
   <div class="top-inner">
     <div class="brand">
@@ -693,6 +693,7 @@ function navHtml(desk, L){
     {href:"../staff-boe/", label:"BoE", id:"boe"},
     {href:"../staff-boj/", label:"BoJ", id:"boj"},
     {href:"../staff-snb/", label:"SNB", id:"snb"}
+    {href:"../consumer-health/", label:"Consumer Health", id:""}
   ];
   return items.map(it => {
     if (it.sep) return `<span class="sep"></span>`;
